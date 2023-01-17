@@ -13,11 +13,6 @@
     "sass": "^1.26.12"
   },
   "dependencies": {
-    "@andresclua/jsutil": "^2.0.4",
-    "curtainsjs": "^8.1.4",
-    "gsap": "file:gsap-bonus.tgz",
-    "gsap-bonus.tgz": "./gsap-bonus.tgz",
-    "imagesloaded": "^4.1.4",
-    "virtual-scroll": "^1.5.2"
+    "@andresclua/jsutil": "^2.0.4"
   }
 }

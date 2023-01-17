@@ -1,0 +1,10 @@
+.g--btn-1{
+    @include make-btn-1(
+        $font: b,
+        $border-width: 1px,
+        $border-color: map-get($color-options, a),
+        $text-color: map-get($color-options, a),
+        $border-color-hover: map-get($color-options, g),
+        $text-color-hover: map-get($color-options, g),
+    );
+}

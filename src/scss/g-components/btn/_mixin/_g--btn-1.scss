@@ -1,0 +1,31 @@
+@mixin make-btn-1(
+    $font,
+    $border-width,
+    $border-color,
+    $text-color,
+    $border-color-hover,
+    $text-color-hover,
+) {
+    @extend .f--font-#{$font} !optional;
+    padding: $measure $measure*3;
+    border-radius: 200px;
+    text-decoration: none;
+    display: inline-block;
+    border: $border-width solid $border-color;
+    color: $text-color;
+    background-color: transparent;
+    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
+    @media all and ($viewport-type: $mobile) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    @media (hover: hover) {
+        &:hover ,
+        &:focus ,
+        &:active {
+            border-color: $border-color-hover;
+            color: $text-color-hover;
+        }
+    }
+}

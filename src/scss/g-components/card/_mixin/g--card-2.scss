@@ -1,0 +1,27 @@
+@mixin make-card-2(
+    $border-width,
+    $border-color,
+    $title-font,
+    $title-color,
+    $subtitle-font,
+    $subtitle-color,
+) {
+    border: $border-width solid $border-color;
+    padding: $measure*7 $measure*5;
+    &__media{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        @include make-bt-1();
+    }
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        color: $title-color;
+        @include make-bt-1();
+    }
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        color: $subtitle-color;
+    }
+}

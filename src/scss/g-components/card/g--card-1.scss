@@ -1,0 +1,9 @@
+.g--card-1{
+    @include make-card-1(
+        $background-color: rgba(map-get($color-options, a), .5),
+        $title-font: b,
+        $title-color: map-get($color-options, a),
+        $subtitle-font: d,
+        $subtitle-color: map-get($color-options, a),
+    );
+}

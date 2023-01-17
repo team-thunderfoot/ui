@@ -1,0 +1,10 @@
+.g--card-2{
+    @include make-card-2(
+        $border-width: 1px,
+        $border-color: map-get($color-options, a),
+        $title-font: b,
+        $title-color: map-get($color-options, a),
+        $subtitle-font: d,
+        $subtitle-color: map-get($color-options, a),
+    );
+}

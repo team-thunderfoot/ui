@@ -2064,7 +2064,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-.f--font-b, .g--btn-4, .g--btn-3, .g--btn-2, .g--btn-1 {
+.f--font-b, .g--card-2__title, .g--card-1__title, .g--btn-4, .g--btn-3, .g--btn-2, .g--btn-1 {
   font-family: "Red Hat Display", sans-serif;
   letter-spacing: normal;
   line-height: 3.94rem;
@@ -2072,13 +2072,13 @@ select:-webkit-autofill:focus {
   font-size: 3.125rem;
 }
 @media all and (max-width: 1300px) {
-  .f--font-b, .g--btn-4, .g--btn-3, .g--btn-2, .g--btn-1 {
+  .f--font-b, .g--card-2__title, .g--card-1__title, .g--btn-4, .g--btn-3, .g--btn-2, .g--btn-1 {
     line-height: 2.68rem;
     font-size: 2.25rem;
   }
 }
 @media all and (max-width: 580px) {
-  .f--font-b, .g--btn-4, .g--btn-3, .g--btn-2, .g--btn-1 {
+  .f--font-b, .g--card-2__title, .g--card-1__title, .g--btn-4, .g--btn-3, .g--btn-2, .g--btn-1 {
     line-height: normal;
     font-size: 1.75rem;
   }
@@ -2098,7 +2098,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-.f--font-d {
+.f--font-d, .g--card-2__subtitle, .g--card-1__subtitle {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   letter-spacing: normal;
@@ -2107,7 +2107,7 @@ select:-webkit-autofill:focus {
   font-size: 1.375rem;
 }
 @media all and (max-width: 810px) {
-  .f--font-d {
+  .f--font-d, .g--card-2__subtitle, .g--card-1__subtitle {
     line-height: 1.75rem;
     font-size: 1.25rem;
   }
@@ -2373,6 +2373,64 @@ select:-webkit-autofill:focus {
     color: #F8F8F8;
     background-color: #1A191D;
   }
+}
+
+.g--card-1 {
+  background-color: rgba(26, 25, 29, 0.5);
+  padding: 3.5rem 2.5rem;
+}
+.g--card-1__media {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+@media all and (max-width: 810px) {
+  .g--card-1__media {
+    margin-bottom: 0.5rem;
+  }
+}
+.g--card-1__title {
+  color: #1A191D;
+  margin-bottom: 1rem;
+}
+@media all and (max-width: 810px) {
+  .g--card-1__title {
+    margin-bottom: 0.5rem;
+  }
+}
+.g--card-1__subtitle {
+  color: #1A191D;
+}
+
+.g--card-2 {
+  border: 1px solid #1A191D;
+  padding: 3.5rem 2.5rem;
+}
+.g--card-2__media {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+@media all and (max-width: 810px) {
+  .g--card-2__media {
+    margin-bottom: 0.5rem;
+  }
+}
+.g--card-2__title {
+  color: #1A191D;
+  margin-bottom: 1rem;
+}
+@media all and (max-width: 810px) {
+  .g--card-2__title {
+    margin-bottom: 0.5rem;
+  }
+}
+.g--card-2__subtitle {
+  color: #1A191D;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */

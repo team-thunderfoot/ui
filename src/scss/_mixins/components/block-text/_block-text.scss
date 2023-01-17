@@ -1,32 +1,32 @@
-@mixin make-bt-1 {
+@mixin make-bt-a {
     margin-bottom: $measure * 2;
     @media all and ($viewport-type: $tablets) {
         margin-bottom: $measure;
     }
 }
 
-@mixin make-bt-2 {
+@mixin make-bt-b {
     margin-bottom: $measure * 3;
     @media all and ($viewport-type: $tablets) {
         margin-bottom: $measure * 2;
     }
 }
 
-@mixin make-bt-3 {
+@mixin make-bt-c {
     margin-bottom: $measure * 4;
     @media all and ($viewport-type: $tablets) {
         margin-bottom: $measure * 3;
     }
 }
 
-@mixin make-bt-4 {
+@mixin make-bt-d {
     margin-bottom: $measure * 6;
     @media all and ($viewport-type: $tablets) {
         margin-bottom: $measure * 4;
     }
 }
 
-@mixin make-bt-5 {
+@mixin make-bt-e {
     margin-bottom: $measure * 7;
     @media all and ($viewport-type: $tablets) {
         margin-bottom: $measure * 5;

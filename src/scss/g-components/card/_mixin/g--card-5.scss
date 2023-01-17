@@ -1,33 +1,39 @@
 @mixin make-card-5(
-    $background-color,
     $title-font,
-    $title-color,
     $subtitle-font,
-    $subtitle-color,
-    $link-font,
-    $link-color,
+    $link-class,
 ) {
-    background-color: $background-color;
     padding: $measure*7 $measure*5;
     position: relative;
     &__media{
-        width: 100px;
+        width: auto;
         height: 100px;
-        border-radius: 50%;
         object-fit: cover;
-        @include make-bt-1();
+        @include make-bt-a();
     }
     &__title{
         @extend .f--font-#{$title-font} !optional;
-        color: $title-color;
-        @include make-bt-1();
+        @include make-bt-a();
     }
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
-        color: $subtitle-color;
+        @include make-bt-a();
     }
     &__link{
-        @extend .f--font-#{$link-font} !optional;
-        color: $link-color;
+        @extend .#{$link-class} !optional;
+    }
+}
+
+@mixin make-card-5-color(
+    $background-color,
+    $title-color,
+    $subtitle-color,
+) {
+    background-color: $background-color;
+    &__title{
+        color: $title-color;
+    }
+    &__subtitle{
+        color: $subtitle-color;
     }
 }

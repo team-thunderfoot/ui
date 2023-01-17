@@ -2,6 +2,8 @@
     @include make-btn-4(
         $font: b,
         $border-width: 1px,
+    );
+    @include make-btn-4-color(
         $border-color: map-get($color-options, a),
         $text-color: map-get($color-options, a),
         $background-color: transparent,

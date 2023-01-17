@@ -1,6 +1,22 @@
-@mixin make-btn-4(
+@mixin make-btn-2(
     $font,
     $border-width,
+) {
+    @extend .f--font-#{$font} !optional;
+    padding: $measure $measure*3;
+    border-radius: 200px;
+    text-decoration: none;
+    display: inline-block;
+    border: $border-width solid;
+    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+    @media all and ($viewport-type: $mobile) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@mixin make-btn-2-color(
     $border-color,
     $text-color,
     $background-color,
@@ -8,20 +24,9 @@
     $text-color-hover,
     $background-color-hover,
 ) {
-    @extend .f--font-#{$font} !optional;
-    padding: $measure $measure*3;
-    border-radius: 0;
-    text-decoration: none;
-    display: inline-block;
-    border: $border-width solid $border-color;
+    border-color: $border-color;
     color: $text-color;
     background-color: $background-color;
-    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
-    @media all and ($viewport-type: $mobile) {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
     @media (hover: hover) {
         &:hover ,
         &:focus ,

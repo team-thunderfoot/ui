@@ -2136,7 +2136,7 @@ select:-webkit-autofill:focus {
   /*this font does not have responsive option */
 }
 
-.f--font-f, .g--card-5__link, .g--card-5__subtitle, .g--card-4__wrapper__subtitle, .g--card-3__subtitle {
+.f--font-f, .g--card-5__subtitle, .g--card-4__wrapper__subtitle, .g--card-3__subtitle {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   line-height: 1.5rem;
@@ -2205,74 +2205,74 @@ select:-webkit-autofill:focus {
   font-style: italic;
   font-display: swap;
 }
-.g--section-1 {
+.b--section-a {
   padding: 7.5rem 0;
 }
 @media all and (max-width: 810px) {
-  .g--section-1 {
+  .b--section-a {
     padding: 5rem 0;
   }
 }
 
-.g--section-2 {
+.b--section-b {
   padding: 7.5rem 0 0;
 }
 @media all and (max-width: 810px) {
-  .g--section-2 {
+  .b--section-b {
     padding: 5rem 0 0;
   }
 }
 
-.g--section-3 {
+.b--section-c {
   padding: 0 0 7.5rem;
 }
 @media all and (max-width: 810px) {
-  .g--section-3 {
+  .b--section-c {
     padding: 0 0 5rem;
   }
 }
 
-.g--bt-1 {
+.b--bt-a {
   margin-bottom: 1rem;
 }
 @media all and (max-width: 810px) {
-  .g--bt-1 {
+  .b--bt-a {
     margin-bottom: 0.5rem;
   }
 }
 
-.g--bt-2 {
+.b--bt-b {
   margin-bottom: 1.5rem;
 }
 @media all and (max-width: 810px) {
-  .g--bt-2 {
+  .b--bt-b {
     margin-bottom: 1rem;
   }
 }
 
-.g--bt-3 {
+.b--bt-c {
   margin-bottom: 2rem;
 }
 @media all and (max-width: 810px) {
-  .g--bt-3 {
+  .b--bt-c {
     margin-bottom: 1.5rem;
   }
 }
 
-.g--bt-4 {
+.b--bt-d {
   margin-bottom: 3rem;
 }
 @media all and (max-width: 810px) {
-  .g--bt-4 {
+  .b--bt-d {
     margin-bottom: 2rem;
   }
 }
 
-.g--bt-5 {
+.b--bt-e {
   margin-bottom: 3.5rem;
 }
 @media all and (max-width: 810px) {
-  .g--bt-5 {
+  .b--bt-e {
     margin-bottom: 2.5rem;
   }
 }
@@ -2282,10 +2282,11 @@ select:-webkit-autofill:focus {
   border-radius: 200px;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid #1A191D;
-  color: #1A191D;
+  border: 1px solid;
   background-color: transparent;
   transition: border-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+  border-color: #1A191D;
+  color: #1A191D;
 }
 @media all and (max-width: 580px) {
   .g--btn-1 {
@@ -2306,10 +2307,11 @@ select:-webkit-autofill:focus {
   border-radius: 200px;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid #1A191D;
+  border: 1px solid;
+  transition: border-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), background-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+  border-color: #1A191D;
   color: #1A191D;
   background-color: transparent;
-  transition: border-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), background-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 @media all and (max-width: 580px) {
   .g--btn-2 {
@@ -2331,10 +2333,11 @@ select:-webkit-autofill:focus {
   border-radius: 0;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid #1A191D;
-  color: #1A191D;
+  border: 1px solid;
   background-color: transparent;
   transition: border-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+  border-color: #1A191D;
+  color: #1A191D;
 }
 @media all and (max-width: 580px) {
   .g--btn-3 {
@@ -2355,10 +2358,11 @@ select:-webkit-autofill:focus {
   border-radius: 0;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid #1A191D;
+  border: 1px solid;
+  transition: border-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), background-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+  border-color: #1A191D;
   color: #1A191D;
   background-color: transparent;
-  transition: border-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9), background-color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 @media all and (max-width: 580px) {
   .g--btn-4 {
@@ -2375,14 +2379,24 @@ select:-webkit-autofill:focus {
   }
 }
 
+.g--link-1, .g--card-5__link {
+  text-decoration: underline;
+  color: #1A191D;
+}
+@media (hover: hover) {
+  .g--link-1:hover, .g--card-5__link:hover, .g--link-1:focus, .g--card-5__link:focus, .g--link-1:active, .g--card-5__link:active {
+    text-decoration: none;
+  }
+}
+
 .g--card-1 {
-  background-color: rgba(26, 25, 29, 0.5);
   padding: 3.5rem 2.5rem;
+  background-color: rgba(26, 25, 29, 0.5);
 }
 .g--card-1__media {
-  width: 100px;
+  display: block;
+  width: auto;
   height: 100px;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -2392,7 +2406,6 @@ select:-webkit-autofill:focus {
   }
 }
 .g--card-1__title {
-  color: #1A191D;
   margin-bottom: 1rem;
 }
 @media all and (max-width: 810px) {
@@ -2400,18 +2413,22 @@ select:-webkit-autofill:focus {
     margin-bottom: 0.5rem;
   }
 }
+.g--card-1__title {
+  color: #1A191D;
+}
 .g--card-1__subtitle {
   color: #1A191D;
 }
 
 .g--card-2 {
-  border: 1px solid #1A191D;
+  border: 1px solid;
   padding: 3.5rem 2.5rem;
+  border-color: #1A191D;
 }
 .g--card-2__media {
-  width: 100px;
+  display: block;
+  width: auto;
   height: 100px;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -2421,13 +2438,15 @@ select:-webkit-autofill:focus {
   }
 }
 .g--card-2__title {
-  color: #1A191D;
   margin-bottom: 1rem;
 }
 @media all and (max-width: 810px) {
   .g--card-2__title {
     margin-bottom: 0.5rem;
   }
+}
+.g--card-2__title {
+  color: #1A191D;
 }
 .g--card-2__subtitle {
   color: #1A191D;
@@ -2437,9 +2456,8 @@ select:-webkit-autofill:focus {
   padding: 3.5rem 2.5rem;
 }
 .g--card-3__media {
-  width: 100px;
+  width: auto;
   height: 100px;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -2449,7 +2467,6 @@ select:-webkit-autofill:focus {
   }
 }
 .g--card-3__title {
-  color: #1A191D;
   margin-bottom: 1rem;
 }
 @media all and (max-width: 810px) {
@@ -2457,12 +2474,14 @@ select:-webkit-autofill:focus {
     margin-bottom: 0.5rem;
   }
 }
+.g--card-3__title {
+  color: #1A191D;
+}
 .g--card-3__subtitle {
   color: #1A191D;
 }
 
 .g--card-4 {
-  background-image: url("https://picsum.photos/600/800");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2476,7 +2495,6 @@ select:-webkit-autofill:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(248, 248, 248, 0.5);
   z-index: 0;
 }
 .g--card-4__wrapper {
@@ -2484,9 +2502,9 @@ select:-webkit-autofill:focus {
   z-index: 1;
 }
 .g--card-4__wrapper__media {
-  width: 100px;
+  display: block;
+  width: auto;
   height: 100px;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -2496,7 +2514,6 @@ select:-webkit-autofill:focus {
   }
 }
 .g--card-4__wrapper__title {
-  color: #1A191D;
   margin-bottom: 1rem;
 }
 @media all and (max-width: 810px) {
@@ -2504,19 +2521,42 @@ select:-webkit-autofill:focus {
     margin-bottom: 0.5rem;
   }
 }
+.g--card-4::before {
+  background: rgba(248, 248, 248, 0.5);
+}
+.g--card-4__wrapper__title {
+  color: #1A191D;
+}
 .g--card-4__wrapper__subtitle {
   color: #1A191D;
 }
+.g--card-4--second::before {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(26, 25, 29, 0.5));
+}
+.g--card-4--second__wrapper__title {
+  color: #FF6666;
+}
+.g--card-4--second__wrapper__subtitle {
+  color: #F8F8F8;
+}
+.g--card-4--second.g--card-4 .g--card-4::before {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(26, 25, 29, 0.5));
+}
+.g--card-4--second.g--card-4 .g--card-4__wrapper__title {
+  color: #FF6666;
+}
+.g--card-4--second.g--card-4 .g--card-4__wrapper__subtitle {
+  color: #F8F8F8;
+}
 
 .g--card-5 {
-  background-color: #FF6666;
   padding: 3.5rem 2.5rem;
   position: relative;
+  background-color: #FF6666;
 }
 .g--card-5__media {
-  width: 100px;
+  width: auto;
   height: 100px;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -2526,7 +2566,6 @@ select:-webkit-autofill:focus {
   }
 }
 .g--card-5__title {
-  color: #1A191D;
   margin-bottom: 1rem;
 }
 @media all and (max-width: 810px) {
@@ -2535,9 +2574,17 @@ select:-webkit-autofill:focus {
   }
 }
 .g--card-5__subtitle {
+  margin-bottom: 1rem;
+}
+@media all and (max-width: 810px) {
+  .g--card-5__subtitle {
+    margin-bottom: 0.5rem;
+  }
+}
+.g--card-5__title {
   color: #1A191D;
 }
-.g--card-5__link {
+.g--card-5__subtitle {
   color: #1A191D;
 }
 

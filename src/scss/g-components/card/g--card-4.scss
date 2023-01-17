@@ -1,0 +1,13 @@
+.g--card-4{
+    @include make-card-4(
+        $background-image: 'https://picsum.photos/600/800',
+        $background-size: cover,
+        $background-position: center,
+        $mask-color: map-get($color-options, b),
+        $mask-opacity: .5,
+        $title-font: c,
+        $title-color: map-get($color-options, a),
+        $subtitle-font: f,
+        $subtitle-color: map-get($color-options, a),
+    );
+}

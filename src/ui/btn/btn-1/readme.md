@@ -22,7 +22,7 @@
 
 ## import
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/btn/_make-g--btn-1';
+@import '@teamthunderfoot/ui/src/ui/g-components/btn/btn-1/_make-g--btn-1';
 .g--btn-1{
     @include make-btn-1(
         $font: b,
@@ -38,6 +38,6 @@
 ```
 
 ## layout
-![alt text][btn-a]
+![alt text][btn-1]
 
 [btn-a]: /src/img/global-components/btn/btn-1.svg 

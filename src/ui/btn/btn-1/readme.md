@@ -40,4 +40,4 @@
 ## layout
 ![alt text][btn-a]
 
-[btn-a]: /src/img/global-components/btn/btn-1.png 
+[btn-a]: /src/img/global-components/btn/btn-1.svg 

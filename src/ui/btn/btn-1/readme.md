@@ -1,4 +1,4 @@
-# BTN-1
+# Btn-1
 
 Html for a button
 

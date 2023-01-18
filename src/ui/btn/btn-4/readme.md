@@ -9,7 +9,7 @@ Html for a button
 Html for a link
 
 ```sh
-<a href="#" class="g--btn-4">button 4</a>
+<a href="#" class="g--btn-4" target="_blank" rel="noopener noreferrer">button 4</a>
 ```
 
 ## editable variables

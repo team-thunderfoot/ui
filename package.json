@@ -6,11 +6,18 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel -p 3003 ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html",
+    "postinstall": "link-module-alias",
+    "preinstall": "command -v link-module-alias && link-module-alias clean || true"
+  },
+  "_moduleAliases": {
+    "make-g-btn-1" : "src/ui/btn/btn-1/_make-g--btn-1.scss"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "link-module-alias": "^1.2.0"
+  }
 }

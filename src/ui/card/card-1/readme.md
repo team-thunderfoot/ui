@@ -11,7 +11,7 @@
 ```
 
 ## editable variables
-- $title-font:
+- $title-font
 - $subtitle-font
 - $background-color
 - $title-color

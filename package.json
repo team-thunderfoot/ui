@@ -3,22 +3,27 @@
   "version": "0.0.13",
   "main": "index.js",
   "author": "Thunderfoot",
-  "type": "module",
   "license": "MIT",
   "scripts": {
     "dev": "parcel -p 3003 ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./ui/",
     "postinstall": "link-module-alias",
-    "preinstall": "command -v link-module-alias && link-module-alias clean || true"
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "_moduleAliases": {
     "make-g-btn-1": "/ui/src/ui/btn/btn-1/_make-g--btn-1.scss"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.12"
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "sass": "^1.26.12",
+    "shx": "^0.3.4"
   },
   "dependencies": {
-    "link-module-alias": "^1.2.0"
+    "link-module-alias": "^1.2.0",
+    "push-dir": "^0.4.1"
   }
 }

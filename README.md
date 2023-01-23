@@ -15,6 +15,8 @@
 - [g--card-4](src/ui/card/card-4/readme.md)
 - [g--card-5](src/ui/card/card-5/readme.md)
 - [g--card-6](src/ui/card/card-6/readme.md)
+- [g--card-7](src/ui/card/card-7/readme.md)
+- [g--card-8](src/ui/card/card-8/readme.md)
 
 ### Link
 - [g--link-1](src/ui/link/link-1/readme.md)

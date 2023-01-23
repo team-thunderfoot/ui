@@ -5,8 +5,8 @@
   "author": "Thunderfoot",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 3003 ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "dev": "parcel -p 3003 ./src/*.html",
+    "build": "parcel build ./src/*.html",
     "postinstall": "link-module-alias",
     "preinstall": "command -v link-module-alias && link-module-alias clean || true"
   },

@@ -1,0 +1,41 @@
+@mixin make-card-6(
+    $border-width,    
+    $title-font,
+    $subtitle-font,
+    $link-class,
+) {
+    border: $border-width solid;
+    padding: $measure*7 $measure*5;
+    position: relative;
+    &__media{
+        width: auto;
+        height: 100px;
+        object-fit: cover;
+        @include make-bt-a();
+    }
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        @include make-bt-a();
+    }
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        @include make-bt-a();
+    }
+    &__link{
+        @extend .#{$link-class} !optional;
+    }
+}
+
+@mixin make-card-6-color(
+    $border-color,
+    $title-color,
+    $subtitle-color,
+) {
+    border-color: $border-color;
+    &__title{
+        color: $title-color;
+    }
+    &__subtitle{
+        color: $subtitle-color;
+    }
+}

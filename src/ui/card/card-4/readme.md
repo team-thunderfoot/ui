@@ -4,22 +4,22 @@
 
 ```sh
 <div class="g--card-4" style="background-image: url(https://picsum.photos/600/800);">
-<div class="g--card-4__wrapper">
-    <img src="https://picsum.photos/200" alt="" class="g--card-4__wrapper__media">
-    <h3 class="g--card-4__wrapper__title">Card 4</h3>
-    <p class="g--card-4__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
-</div>
+    <div class="g--card-4__wrapper">
+        <img src="https://picsum.photos/200" alt="" class="g--card-4__wrapper__media">
+        <h3 class="g--card-4__wrapper__title">Card 4</h3>
+        <p class="g--card-4__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+    </div>
 </div>
 ```
 
 ## editable variables
-- $background-size,
-- $background-position,
-- $title-font,
-- $subtitle-font,
-- $mask-color,
-- $title-color,
-- $subtitle-color,
+- $background-size
+- $background-position
+- $title-font
+- $subtitle-font
+- $mask-color
+- $title-color
+- $subtitle-color
 
 ## import
 ```sh

@@ -11,10 +11,10 @@
 ```
 
 ## editable variables
-- $title-font,
-- $subtitle-font,
-- $title-color,
-- $subtitle-color,
+- $title-font
+- $subtitle-font
+- $title-color
+- $subtitle-color
 
 
 ## import

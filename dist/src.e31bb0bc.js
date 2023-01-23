@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -142,7 +142,7 @@ function getBaseURL(url) {
 }
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 function updateLink(link) {
   var newLink = link.cloneNode();
@@ -168,11 +168,11 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"index.scss":[function(require,module,exports) {
+},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"index.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts/redhatdisplay/RedHatDisplay-Bold.eot":[["RedHatDisplay-Bold.0511701c.eot","fonts/redhatdisplay/RedHatDisplay-Bold.eot"],"fonts/redhatdisplay/RedHatDisplay-Bold.eot"],"./fonts/redhatdisplay/RedHatDisplay-Bold.woff":[["RedHatDisplay-Bold.1e46b31f.woff","fonts/redhatdisplay/RedHatDisplay-Bold.woff"],"fonts/redhatdisplay/RedHatDisplay-Bold.woff"],"./fonts/redhatdisplay/RedHatDisplay-Bold.ttf":[["RedHatDisplay-Bold.32b882b5.ttf","fonts/redhatdisplay/RedHatDisplay-Bold.ttf"],"fonts/redhatdisplay/RedHatDisplay-Bold.ttf"],"./fonts/worksans/WorkSans-SemiBold.eot":[["WorkSans-SemiBold.2cb7fab8.eot","fonts/worksans/WorkSans-SemiBold.eot"],"fonts/worksans/WorkSans-SemiBold.eot"],"./fonts/worksans/WorkSans-SemiBold.woff":[["WorkSans-SemiBold.e279a43d.woff","fonts/worksans/WorkSans-SemiBold.woff"],"fonts/worksans/WorkSans-SemiBold.woff"],"./fonts/worksans/WorkSans-SemiBold.ttf":[["WorkSans-SemiBold.1bf36a13.ttf","fonts/worksans/WorkSans-SemiBold.ttf"],"fonts/worksans/WorkSans-SemiBold.ttf"],"./fonts/worksans/WorkSans-SemiBoldItalic.eot":[["WorkSans-SemiBoldItalic.7389616c.eot","fonts/worksans/WorkSans-SemiBoldItalic.eot"],"fonts/worksans/WorkSans-SemiBoldItalic.eot"],"./fonts/worksans/WorkSans-SemiBoldItalic.woff":[["WorkSans-SemiBoldItalic.62f86eb2.woff","fonts/worksans/WorkSans-SemiBoldItalic.woff"],"fonts/worksans/WorkSans-SemiBoldItalic.woff"],"./fonts/worksans/WorkSans-SemiBoldItalic.ttf":[["WorkSans-SemiBoldItalic.13da97b3.ttf","fonts/worksans/WorkSans-SemiBoldItalic.ttf"],"fonts/worksans/WorkSans-SemiBoldItalic.ttf"],"./fonts/worksans/WorkSans-Light.eot":[["WorkSans-Light.14b40bc1.eot","fonts/worksans/WorkSans-Light.eot"],"fonts/worksans/WorkSans-Light.eot"],"./fonts/worksans/WorkSans-Light.woff":[["WorkSans-Light.ad258078.woff","fonts/worksans/WorkSans-Light.woff"],"fonts/worksans/WorkSans-Light.woff"],"./fonts/worksans/WorkSans-Light.ttf":[["WorkSans-Light.1e8824ad.ttf","fonts/worksans/WorkSans-Light.ttf"],"fonts/worksans/WorkSans-Light.ttf"],"./fonts/worksans/WorkSans-LightItalic.eot":[["WorkSans-LightItalic.e8b28749.eot","fonts/worksans/WorkSans-LightItalic.eot"],"fonts/worksans/WorkSans-LightItalic.eot"],"./fonts/worksans/WorkSans-LightItalic.woff":[["WorkSans-LightItalic.6fb4628d.woff","fonts/worksans/WorkSans-LightItalic.woff"],"fonts/worksans/WorkSans-LightItalic.woff"],"./fonts/worksans/WorkSans-LightItalic.ttf":[["WorkSans-LightItalic.b2fd3f69.ttf","fonts/worksans/WorkSans-LightItalic.ttf"],"fonts/worksans/WorkSans-LightItalic.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./fonts/redhatdisplay/RedHatDisplay-Bold.eot":[["RedHatDisplay-Bold.0511701c.eot","fonts/redhatdisplay/RedHatDisplay-Bold.eot"],"fonts/redhatdisplay/RedHatDisplay-Bold.eot"],"./fonts/redhatdisplay/RedHatDisplay-Bold.woff":[["RedHatDisplay-Bold.1e46b31f.woff","fonts/redhatdisplay/RedHatDisplay-Bold.woff"],"fonts/redhatdisplay/RedHatDisplay-Bold.woff"],"./fonts/redhatdisplay/RedHatDisplay-Bold.ttf":[["RedHatDisplay-Bold.32b882b5.ttf","fonts/redhatdisplay/RedHatDisplay-Bold.ttf"],"fonts/redhatdisplay/RedHatDisplay-Bold.ttf"],"./fonts/worksans/WorkSans-SemiBold.eot":[["WorkSans-SemiBold.2cb7fab8.eot","fonts/worksans/WorkSans-SemiBold.eot"],"fonts/worksans/WorkSans-SemiBold.eot"],"./fonts/worksans/WorkSans-SemiBold.woff":[["WorkSans-SemiBold.e279a43d.woff","fonts/worksans/WorkSans-SemiBold.woff"],"fonts/worksans/WorkSans-SemiBold.woff"],"./fonts/worksans/WorkSans-SemiBold.ttf":[["WorkSans-SemiBold.1bf36a13.ttf","fonts/worksans/WorkSans-SemiBold.ttf"],"fonts/worksans/WorkSans-SemiBold.ttf"],"./fonts/worksans/WorkSans-SemiBoldItalic.eot":[["WorkSans-SemiBoldItalic.7389616c.eot","fonts/worksans/WorkSans-SemiBoldItalic.eot"],"fonts/worksans/WorkSans-SemiBoldItalic.eot"],"./fonts/worksans/WorkSans-SemiBoldItalic.woff":[["WorkSans-SemiBoldItalic.62f86eb2.woff","fonts/worksans/WorkSans-SemiBoldItalic.woff"],"fonts/worksans/WorkSans-SemiBoldItalic.woff"],"./fonts/worksans/WorkSans-SemiBoldItalic.ttf":[["WorkSans-SemiBoldItalic.13da97b3.ttf","fonts/worksans/WorkSans-SemiBoldItalic.ttf"],"fonts/worksans/WorkSans-SemiBoldItalic.ttf"],"./fonts/worksans/WorkSans-Light.eot":[["WorkSans-Light.14b40bc1.eot","fonts/worksans/WorkSans-Light.eot"],"fonts/worksans/WorkSans-Light.eot"],"./fonts/worksans/WorkSans-Light.woff":[["WorkSans-Light.ad258078.woff","fonts/worksans/WorkSans-Light.woff"],"fonts/worksans/WorkSans-Light.woff"],"./fonts/worksans/WorkSans-Light.ttf":[["WorkSans-Light.1e8824ad.ttf","fonts/worksans/WorkSans-Light.ttf"],"fonts/worksans/WorkSans-Light.ttf"],"./fonts/worksans/WorkSans-LightItalic.eot":[["WorkSans-LightItalic.e8b28749.eot","fonts/worksans/WorkSans-LightItalic.eot"],"fonts/worksans/WorkSans-LightItalic.eot"],"./fonts/worksans/WorkSans-LightItalic.woff":[["WorkSans-LightItalic.6fb4628d.woff","fonts/worksans/WorkSans-LightItalic.woff"],"fonts/worksans/WorkSans-LightItalic.woff"],"./fonts/worksans/WorkSans-LightItalic.ttf":[["WorkSans-LightItalic.b2fd3f69.ttf","fonts/worksans/WorkSans-LightItalic.ttf"],"fonts/worksans/WorkSans-LightItalic.ttf"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./index.scss");
@@ -201,7 +201,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54070" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63698" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

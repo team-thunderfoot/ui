@@ -11,7 +11,7 @@
     "preinstall": "command -v link-module-alias && link-module-alias clean || true"
   },
   "_moduleAliases": {
-    "make-g-btn-1" : "/ui/src/ui/btn/btn-1/_make-g--btn-1.scss"
+    "make-g-btn-1": "/ui/src/ui/btn/btn-1/_make-g--btn-1.scss"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",

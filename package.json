@@ -3,6 +3,7 @@
   "version": "0.0.13",
   "main": "index.js",
   "author": "Thunderfoot",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "dev": "parcel -p 3003 ./src/index.html",

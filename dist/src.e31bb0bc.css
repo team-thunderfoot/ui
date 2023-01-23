@@ -2457,7 +2457,7 @@ select:-webkit-autofill:focus {
 }
 
 .g--card-3 {
-  padding: 3.5rem 2.5rem;
+  padding: 0 1rem;
 }
 .g--card-3__media {
   width: auto;

@@ -8,6 +8,10 @@
 - [g--btn-03](/src/ui/btn/btn-03/readme.md)
 - [g--btn-04](/src/ui/btn/btn-04/readme.md)
 
+### Link
+- [g--link-01](src/ui/link/link-01/readme.md)
+- [g--link-02](src/ui/link/link-02/readme.md)
+
 ### Card
 - [g--card-01](src/ui/card/card-01/readme.md)
 - [g--card-02](src/ui/card/card-02/readme.md)
@@ -20,5 +24,3 @@
 - [g--card-09](src/ui/card/card-09/readme.md)
 - [g--card-10](src/ui/card/card-10/readme.md)
 
-### Link
-- [g--link-01](src/ui/link/link-01/readme.md)

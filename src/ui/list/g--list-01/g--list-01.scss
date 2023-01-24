@@ -1,0 +1,5 @@
+.g--list-01 {
+    &__list-item {
+        @include make-list-01();
+    }
+}

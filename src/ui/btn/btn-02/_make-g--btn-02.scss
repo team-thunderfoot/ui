@@ -1,0 +1,39 @@
+@mixin make-btn-02(
+    $font,
+    $border-width,
+) {
+    @extend .f--font-#{$font} !optional;
+    padding: $measure $measure*3;
+    border-radius: 200px;
+    text-decoration: none;
+    display: inline-block;
+    border: $border-width solid;
+    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+    @media all and ($viewport-type: $mobile) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@mixin make-btn-02-color(
+    $border-color,
+    $text-color,
+    $background-color,
+    $border-color-hover,
+    $text-color-hover,
+    $background-color-hover,
+) {
+    border-color: $border-color;
+    color: $text-color;
+    background-color: $background-color;
+    @media (hover: hover) {
+        &:hover ,
+        &:focus ,
+        &:active {
+            border-color: $border-color-hover;
+            color: $text-color-hover;
+            background-color: $background-color-hover;
+        }
+    }
+}

@@ -1,8 +1,6 @@
-@mixin make-card-10(
+@mixin make-card-09(
     $title-font,
-    $border-width
 ) {
-    border: $border-width solid;
     padding: $measure*7 $measure*5;
     &__media{
         display: block;
@@ -16,11 +14,11 @@
     }
 }
 
-@mixin make-card-10-color(
-    $border-color,
+@mixin make-card-09-color(
+    $background-color,
     $title-color,
 ) {
-    border-color: $border-color;
+    background-color: $background-color;
     &__title{
         color: $title-color;
     }

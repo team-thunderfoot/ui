@@ -1,0 +1,6 @@
+@mixin make-sp-5 {
+    margin-bottom: $measure * 7;
+    @media all and ($viewport-type: $tablets) {
+        margin-bottom: $measure * 5;
+    }
+}

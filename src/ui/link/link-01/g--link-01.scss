@@ -1,0 +1,6 @@
+.g--link-01{
+    @include make-link-01();
+    @include make-link-01-color(
+        $text-color: map-get($color-options, a),
+    );
+}

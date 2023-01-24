@@ -1,0 +1,6 @@
+@mixin make-section-03 {
+    padding: 0 0 $measure * 15;
+    @media all and ($viewport-type: $tablets) {
+      padding: 0 0 $measure * 10;
+    }
+  }

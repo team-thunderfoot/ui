@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     padding: $measure*7 $measure*5;
     position: relative;
+    width: 100%;
     &::before{
         content: '';
         position: absolute;

@@ -3,9 +3,9 @@
 ## Html for a card
 
 ```sh
-<div class="g--card-04" style="background-image: url(https://picsum.photos/600/800);">
+<div class="g--card-04" style="background-image: url(./img/global-components/card/card-bg-placeholder.jpg);">
     <div class="g--card-04__wrapper">
-        <img src="https://picsum.photos/200" alt="" class="g--card-04__wrapper__media">
+        <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-04__wrapper__media">
         <h3 class="g--card-04__wrapper__title">Card 04</h3>
         <p class="g--card-04__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
     </div>

@@ -4,7 +4,7 @@
 
 ```sh
 <div class="g--card-02">
-    <img src="https://picsum.photos/200" alt="" class="g--card-02__media">
+    <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-02__media">
     <h3 class="g--card-02__title">Card 02</h3>
     <p class="g--card-02__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
 </div>

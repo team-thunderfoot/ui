@@ -1,0 +1,23 @@
+@mixin make-pill-01($font) {
+    @extend .f--font-#{$font} !optional;
+    padding: $measure $measure * 2;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: all $time-b $ease-standard-a;
+}
+
+@mixin make-pill-01-color($background-color, $background-color-hover, $text-color, $text-color-hover) {
+    background: $background-color;
+    color: $text-color;
+
+    @media (hover : hover) {
+        &:hover ,
+        &:focus ,
+        &:active {
+            background: $background-color-hover;
+            color: $text-color-hover;
+        }
+    }
+}

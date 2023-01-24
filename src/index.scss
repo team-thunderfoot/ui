@@ -4,16 +4,19 @@
 @import './scss/foundation/foundation.scss';
 
 //* section
-@import './scss/components/section/b--section-a.scss';
-@import './scss/components/section/b--section-b.scss';
-@import './scss/components/section/b--section-c.scss';
+@import './ui/section/section-01/make-g--section-01';
+@import './ui/section/section-01/g--section-01.scss';
+@import './ui/section/section-02/make-g--section-02';
+@import './ui/section/section-02/g--section-02.scss';
+@import './ui/section/section-03/make-g--section-03';
+@import './ui/section/section-03/g--section-03.scss';
 
 //* spacing
 @import './ui/spacing/sp-01/make-g--sp-01';
 @import './ui/spacing/sp-01/g--sp-01.scss';
 @import './ui/spacing/sp-02/make-g--sp-02';
 @import './ui/spacing/sp-02/g--sp-02.scss';
-@import './ui/spacing/sp-03/make--g--sp-03';
+@import './ui/spacing/sp-03/make-g--sp-03';
 @import './ui/spacing/sp-03/g--sp-03.scss';
 @import './ui/spacing/sp-04/make-g--sp-04';
 @import './ui/spacing/sp-04/g--sp-04.scss';

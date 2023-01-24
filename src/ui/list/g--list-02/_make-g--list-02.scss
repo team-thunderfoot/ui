@@ -1,0 +1,10 @@
+@mixin make-list-02() {
+    display: block;
+    margin-bottom: $measure * 3;
+    @media all and ($viewport-type: $tablets) {
+        display: block;
+        &:not(:last-child) {
+            margin-bottom: $measure * 2;
+        }
+    }
+}

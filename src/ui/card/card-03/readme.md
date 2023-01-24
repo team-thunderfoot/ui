@@ -1,9 +1,9 @@
-# Card-003
+# Card-03
 
 ## Html for a card
 
 ```sh
-<div class="g--card-003">
+<div class="g--card-03">
     <img src="https://picsum.photos/200" alt="" class="g--card-03__media">
     <h3 class="g--card-03__title">Card 03</h3>
     <p class="g--card-03__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>

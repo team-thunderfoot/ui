@@ -7,6 +7,7 @@
     $text-color-hover
 ) {
     color: $text-color;
+    transition: color $ease-standard-a $time-b;
     @media (hover: hover) {
         &:hover ,
         &:focus ,

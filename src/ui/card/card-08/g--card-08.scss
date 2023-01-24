@@ -4,7 +4,7 @@
         $background-position: center,
         $title-font: c,
         $subtitle-font: f,
-        $link-class: g--link-1
+        $link-class: g--link-01
     );
     @include make-card-08-color(
         $mask-color: rgba(map-get($color-options, b), .5),

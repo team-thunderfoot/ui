@@ -11,9 +11,6 @@
     "postinstall": "link-module-alias",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
-  "_moduleAliases": {
-    "make-g-btn-1": "/ui/src/ui/btn/btn-1/_make-g--btn-1.scss"
-  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3",

@@ -14,6 +14,10 @@
 - [g--sp-04](/src/ui/spacing/sp-04/readme.md)
 - [g--sp-05](/src/ui/spacing/sp-05/readme.md)
 
+### Link
+- [g--link-01](src/ui/link/link-01/readme.md)
+- [g--link-02](src/ui/link/link-02/readme.md)
+
 ### List
 - [g--list-01](src/ui/list/list-01/readme.md)
 - [g--list-02](src/ui/list/list-02/readme.md)
@@ -23,10 +27,6 @@
 - [g--btn-02](/src/ui/btn/btn-02/readme.md)
 - [g--btn-03](/src/ui/btn/btn-03/readme.md)
 - [g--btn-04](/src/ui/btn/btn-04/readme.md)
-
-### Link
-- [g--link-01](src/ui/link/link-01/readme.md)
-- [g--link-02](src/ui/link/link-02/readme.md)
 
 ### Card
 - [g--card-01](src/ui/card/card-01/readme.md)

@@ -1,0 +1,10 @@
+.g--card-03{
+    @include make-card-03(
+        $title-font: c,
+        $subtitle-font: f,
+    );
+    @include make-card-03-color(
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

@@ -1,0 +1,11 @@
+.g--card-07{
+    @include make-card-07(
+        $title-font: c,
+        $subtitle-font: f,
+        $link-class: g--link-1,
+    );
+    @include make-card-07-color(
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

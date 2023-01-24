@@ -1,8 +1,7 @@
-@mixin make-card-10(
+@mixin make-card-01(
     $title-font,
-    $border-width
+    $subtitle-font,
 ) {
-    border: $border-width solid;
     padding: $measure*7 $measure*5;
     &__media{
         display: block;
@@ -13,15 +12,23 @@
     }
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @include make-sp-1();
+    }
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
     }
 }
 
-@mixin make-card-10-color(
-    $border-color,
+@mixin make-card-01-color(
+    $background-color,
     $title-color,
+    $subtitle-color,
 ) {
-    border-color: $border-color;
+    background-color: $background-color;
     &__title{
         color: $title-color;
+    }
+    &__subtitle{
+        color: $subtitle-color;
     }
 }

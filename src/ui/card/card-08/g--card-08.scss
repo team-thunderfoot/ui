@@ -1,0 +1,14 @@
+.g--card-08{
+    @include make-card-08(
+        $background-size: cover,
+        $background-position: center,
+        $title-font: c,
+        $subtitle-font: f,
+        $link-class: g--link-1
+    );
+    @include make-card-08-color(
+        $mask-color: rgba(map-get($color-options, b), .5),
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

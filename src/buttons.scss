@@ -1,0 +1,31 @@
+@import './scss/_var/vars.scss';
+@import './scss/_mixins/mixins.scss';
+
+@import './scss/foundation/foundation.scss';
+
+//* section
+@import './scss/components/section/b--section-a.scss';
+@import './scss/components/section/b--section-b.scss';
+@import './scss/components/section/b--section-c.scss';
+
+//* block-text
+@import './ui/spacing/sp-1/make-g--sp-1';
+@import './ui/spacing/sp-1/g--sp-1.scss';
+@import './ui/spacing/sp-2/make-g--sp-2';
+@import './ui/spacing/sp-2/g--sp-2.scss';
+@import './ui/spacing/sp-3/make--g--sp-3';
+@import './ui/spacing/sp-3/g--sp-3.scss';
+@import './ui/spacing/sp-4/make-g--sp-4';
+@import './ui/spacing/sp-4/g--sp-4.scss';
+@import './ui/spacing/sp-5/make-g--sp-5';
+@import './ui/spacing/sp-5/g--sp-5.scss';
+
+//* btn
+@import './ui/btn/btn-01/make-g--btn-01';
+@import './ui/btn/btn-01/g--btn-01.scss';
+@import './ui/btn/btn-02/make-g--btn-02';
+@import './ui/btn/btn-02/g--btn-02.scss';
+@import './ui/btn/btn-03/make-g--btn-03';
+@import './ui/btn/btn-03/g--btn-03.scss';
+@import './ui/btn/btn-04/make-g--btn-04';
+@import './ui/btn/btn-04/g--btn-04.scss';

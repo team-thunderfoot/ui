@@ -7,7 +7,7 @@
         width: auto;
         height: 100px;
         object-fit: cover;
-        @include make-sp-1();
+        @include make-sp-01();
     }
     &__title{
         @extend .f--font-#{$title-font} !optional;

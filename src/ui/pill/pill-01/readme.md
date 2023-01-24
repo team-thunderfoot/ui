@@ -36,7 +36,8 @@
 }
 ```
 
-<!-- ## layout
+## layout
+
 ![alt text][pill-01]
 
-[pill-01]: /src/img/global-components/pill/pill-01.svg  -->
+[pill-01]: /src/img/global-components/pill/pill-01.png

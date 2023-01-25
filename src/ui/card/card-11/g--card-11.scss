@@ -1,0 +1,8 @@
+.g--card-11{
+    @include make-card-11(
+        $title-font: c,
+    );
+    @include make-card-11-color(
+        $title-color: map-get($color-options, a),
+    );
+}

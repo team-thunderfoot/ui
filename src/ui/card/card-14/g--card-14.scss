@@ -1,0 +1,11 @@
+.g--card-14{
+    @include make-card-14(
+        $border-width: 1px,    
+        $title-font: c,
+        $link-class: g--link-01,
+    );
+    @include make-card-14-color(
+        $border-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+    );
+}

@@ -6,7 +6,6 @@
 <div class="g--card-19">
     <img src="/src/img/global-components/card/card-img-placeholder.png" alt="" class="g--card-19__media">
     <p class="g--card-19__title">Card 19</p>
-    <a href="" class="g--card-19__link">This is a link</a>
 </div>
 ```
 

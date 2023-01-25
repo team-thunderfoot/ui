@@ -1,0 +1,10 @@
+.g--card-18{
+    @include make-card-18(
+        $border-width: 1px,    
+        $title-font: f,
+    );
+    @include make-card-18-color(
+        $border-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+    );
+}

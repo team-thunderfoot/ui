@@ -7,4 +7,11 @@
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
     );
+
+    &--second {
+        @include make-card-03-color(
+            $title-color: map-get($color-options, e),
+            $subtitle-color: map-get($color-options, g),
+        );
+    }
 }

@@ -41,9 +41,12 @@
     &::before{
         background: $mask-color;
     }
-    &__wrapper{
-        &__title{
-            color: $title-color;
+    
+    .g--card-20 {
+        &__wrapper{
+            &__title{
+                color: $title-color;
+            }
         }
     }
 }

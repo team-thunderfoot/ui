@@ -23,7 +23,10 @@
     $title-color,
 ) {
     border-color: $border-color;
-    &__title{
-        color: $title-color;
+    
+    .g--card-18 {
+        &__title{
+            color: $title-color;
+        }
     }
 }

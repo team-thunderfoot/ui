@@ -18,7 +18,9 @@
 @mixin make-card-11-color(
     $title-color,
 ) {
-    &__title{
-        color: $title-color;
+    .g--card-11 {
+        &__title{
+            color: $title-color;
+        }
     }
 }

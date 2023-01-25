@@ -11,4 +11,12 @@
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
     );
+
+    &--second {
+        @include make-card-08-color(
+        $mask-color: rgba(map-get($color-options, b), .5),
+        $title-color: map-get($color-options, g),
+        $subtitle-color: map-get($color-options, e),
+    );
+    }
 }

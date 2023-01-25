@@ -28,10 +28,12 @@
     $subtitle-color,
 ) {
     border-color: $border-color;
-    &__title{
-        color: $title-color;
-    }
-    &__subtitle{
-        color: $subtitle-color;
+    .g--card-02 {
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
     }
 }

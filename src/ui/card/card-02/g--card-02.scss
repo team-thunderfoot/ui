@@ -9,4 +9,12 @@
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
     );
+
+    &--second {
+        @include make-card-02-color(
+        $border-color: map-get($color-options, g),
+        $title-color: map-get($color-options, e),
+        $subtitle-color: map-get($color-options, e),
+    );
+    }
 }

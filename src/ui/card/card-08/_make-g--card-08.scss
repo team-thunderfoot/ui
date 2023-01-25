@@ -52,12 +52,15 @@
     &::before{
         background: $mask-color;
     }
-    &__wrapper{
-        &__title{
-            color: $title-color;
-        }
-        &__subtitle{
-            color: $subtitle-color;
+    
+    .g--card-08 {
+        &__wrapper{
+            &__title{
+                color: $title-color;
+            }
+            &__subtitle{
+                color: $subtitle-color;
+            }
         }
     }
 }

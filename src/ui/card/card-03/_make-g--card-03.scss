@@ -24,10 +24,12 @@
     $title-color,
     $subtitle-color,
 ) {
-    &__title{
-        color: $title-color;
-    }
-    &__subtitle{
-        color: $subtitle-color;
+    .g--card-03 {
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
     }
 }

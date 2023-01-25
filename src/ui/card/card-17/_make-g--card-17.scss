@@ -21,8 +21,11 @@
     $title-color,
 ) {
     background-color: $background-color;
-    &__title{
-        color: $title-color;
+    
+    .g--card-17 {
+        &__title{
+            color: $title-color;
+        }
     }
 
 }

@@ -32,10 +32,13 @@
     $subtitle-color,
 ) {
     background-color: $background-color;
-    &__title{
-        color: $title-color;
-    }
-    &__subtitle{
-        color: $subtitle-color;
+    
+    .g--card-05 {
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
     }
 }

@@ -1,21 +1,26 @@
 {
   "name": "@teamthunderfoot/ui",
   "version": "0.0.16",
-  "source": ["src/index.html", "src/buttons.html", "src/cards.html"],
+  "source": [
+    "src/index.html",
+    "src/buttons.html",
+    "src/cards.html"
+  ],
   "author": "Thunderfoot",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 3003 ./src/*.html",
-    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
-    "build": "parcel build ./src/index.html --public-url ./",
+    "dev": "parcel -p 3003 ./src/index.html ./src/buttons.html ./src/cards.html",
+    "build-dev": "parcel build ./src/index.html ./src/buttons.html ./src/cards.html --no-optimize --public-url ./",
+    "build": "parcel build ./src/index.html ./src/buttons.html ./src/cards.html --public-url ./",
     "postinstall": "link-module-alias",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.8.3",
-    "sass": "^1.26.12",
-    "gh-pages": "^5.0.0"
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.26.12"
   },
   "dependencies": {
     "blazy": "^1.8.2",

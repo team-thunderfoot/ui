@@ -1,0 +1,12 @@
+.g--card-16{
+    @include make-card-16(
+        $background-size: cover,
+        $background-position: center,
+        $title-font: c,
+        $link-class: g--link-01
+    );
+    @include make-card-16-color(
+        $mask-color: rgba(map-get($color-options, b), .5),
+        $title-color: map-get($color-options, a),
+    );
+}

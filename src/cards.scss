@@ -48,10 +48,18 @@
 @import './ui/card/card-11/g--card-11.scss';
 @import './ui/card/card-12/make-g--card-12';
 @import './ui/card/card-12/g--card-12.scss';
+@import './ui/card/card-16/make-g--card-16';
+@import './ui/card/card-16/g--card-16.scss';
 
 //* lazy
 @import './ui/lazy/make-g--lazy-01';
 @import './ui/lazy/g--lazy-01.scss';
+
+//* link
+@import './ui/link/link-01/make-g--link-01';
+@import './ui/link/link-01/g--link-01.scss';
+@import './ui/link/link-02/make-g--link-02';
+@import './ui/link/link-02/g--link-02.scss';
 
 //* list
 @import './ui/list/g--list-01/make-g--list-01';

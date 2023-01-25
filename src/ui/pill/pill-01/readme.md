@@ -23,14 +23,15 @@
 ## use
 
 ```sh
-.g--pill-01 {
-    @include make-pill-01($font: b);
-
+.g--pill-01{
+    @include make-pill-01(
+        $font: d,
+    );
     @include make-pill-01-color(
-        $background-color: map-get($color-options: b),
-        $background-color-hover:  map-get($color-options: a),
-        $text-color:  map-get($color-options: a),
-        $text-color-hove:  map-get($color-options: b)
+        $background-color: map-get($color-options, d),
+        $text-color: map-get($color-options, a),
+        $background-color-hover: map-get($color-options, a),
+        $text-color-hover: map-get($color-options, d),
     );
 }
 ```

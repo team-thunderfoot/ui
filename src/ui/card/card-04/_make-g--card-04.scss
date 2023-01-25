@@ -40,22 +40,21 @@
 }
 
 @mixin make-card-04-color(
+    $title-color,
+    $subtitle-color,
     $mask-color,
 ) {
     &::before{
         background: $mask-color;
     }
-}
-@mixin make-card-04-inside-color(
-    $title-color,
-    $subtitle-color,
-) {
-    &__wrapper{
-        &__title{
-            color: $title-color;
-        }
-        &__subtitle{
-            color: $subtitle-color;
+    .g--card-04 {
+        &__wrapper{
+            &__title{
+                color: $title-color;
+            }
+            &__subtitle{
+                color: $subtitle-color;
+            }
         }
     }
 }

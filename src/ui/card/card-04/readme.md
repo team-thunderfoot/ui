@@ -13,6 +13,7 @@
 ```
 
 ## editable variables
+
 - $background-size
 - $background-position
 - $title-font
@@ -22,6 +23,7 @@
 - $subtitle-color
 
 ## use
+
 ```sh
 .g--card-04{
     @include make-card-04(
@@ -41,18 +43,12 @@
             $title-color: map-get($color-options, f),
             $subtitle-color: map-get($color-options, b),
         );
-        &.g--card-04 .g--card-04{
-            @include make-card-04-color(
-                $mask-color: linear-gradient(rgba(map-get($color-options, d), .5), rgba(map-get($color-options, a), .5)),
-                $title-color: map-get($color-options, f),
-                $subtitle-color: map-get($color-options, b),
-            );
-        }
     }
 }
 ```
 
 ## layout
+
 ![alt text][card-04]
 
-[card-04]: /src/img/global-components/card/card-04.png 
+[card-04]: /src/img/global-components/card/card-04.png

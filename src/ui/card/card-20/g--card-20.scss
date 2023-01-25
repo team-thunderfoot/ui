@@ -1,0 +1,11 @@
+.g--card-20{
+    @include make-card-20(
+        $background-size: cover,
+        $background-position: center,
+        $title-font: f,
+    );
+    @include make-card-20-color(
+        $mask-color: rgba(map-get($color-options, b), .5),
+        $title-color: map-get($color-options, a),
+    );
+}

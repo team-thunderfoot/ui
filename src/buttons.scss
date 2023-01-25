@@ -3,22 +3,18 @@
 
 @import './scss/foundation/foundation.scss';
 
+@import './mixins.scss';
+
 //* section
-@import './ui/section/section-02/make-g--section-02';
 @import './ui/section/section-02/g--section-02.scss';
 
 //* spacing
-@import './ui/spacing/sp-01/make-g--sp-01';
 @import './ui/spacing/sp-01/g--sp-01.scss';
 
 //* btn
-@import './ui/btn/btn-01/make-g--btn-01';
 @import './ui/btn/btn-01/g--btn-01.scss';
-@import './ui/btn/btn-02/make-g--btn-02';
 @import './ui/btn/btn-02/g--btn-02.scss';
-@import './ui/btn/btn-03/make-g--btn-03';
 @import './ui/btn/btn-03/g--btn-03.scss';
-@import './ui/btn/btn-04/make-g--btn-04';
 @import './ui/btn/btn-04/g--btn-04.scss';
 
 

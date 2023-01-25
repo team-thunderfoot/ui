@@ -11,7 +11,6 @@
 
 ## editable variables
 - $title-font
-- $link-class
 - $title-color
 
 ## use

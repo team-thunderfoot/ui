@@ -16,7 +16,6 @@
 - $title-color
 - $subtitle-color
 
-
 ## use
 ```sh
 .g--card-03{

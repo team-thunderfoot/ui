@@ -12,10 +12,8 @@
 
 ## editable variables
 - $title-font
-- $subtitle-font
 - $link-class
 - $title-color
-- $subtitle-color
 
 ## import
 ```sh

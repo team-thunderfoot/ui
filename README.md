@@ -48,6 +48,7 @@
 - [g--card-11](src/ui/card/card-11/readme.md)
 - [g--card-12](src/ui/card/card-12/readme.md)
 - [g--card-16](src/ui/card/card-16/readme.md)
+- [g--card-19](src/ui/card/card-19/readme.md)
 - [g--card-20](src/ui/card/card-20/readme.md)
 
 ### Pill

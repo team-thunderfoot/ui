@@ -23,9 +23,8 @@
 - $title-color
 - $subtitle-color
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-08/_make-g--card-08';
 .g--card-08{
     @include make-card-08(
         $background-size: cover,

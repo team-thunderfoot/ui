@@ -20,10 +20,9 @@
 - $background-color-hover
 - $text-color-hover
 
-## import
+## use
 
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/pill/pill-01/_make-g--pill-01';
 .g--pill-01 {
     @include make-pill-01($font: b);
 

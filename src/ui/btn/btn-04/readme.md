@@ -22,9 +22,8 @@
 - $text-color-hover
 - $background-color-hover
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/btn/btn-04/_make-g--btn-04';
 .g--btn-04{
     @include make-btn-04(
         $font: b,

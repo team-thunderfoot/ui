@@ -17,9 +17,8 @@
 - $subtitle-color
 
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-03/_make-g--card-03';
 .g--card-03{
     @include make-card-03(
         $title-font: c,

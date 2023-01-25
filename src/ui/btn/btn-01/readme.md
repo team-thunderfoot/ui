@@ -20,9 +20,8 @@
 - $border-color-hover
 - $text-color-hover
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/btn/btn-01/_make-g--btn-01';
 .g--btn-01{
     @include make-btn-01(
         $font: b,

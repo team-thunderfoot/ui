@@ -12,9 +12,8 @@
 </ul>
 ```
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/list/list-01/_make-g--list-01';
 .g--list-01 {
     &__list-item {
         @include make-list-01();

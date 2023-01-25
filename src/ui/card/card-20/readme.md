@@ -18,9 +18,8 @@
 - $mask-color
 - $title-color
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-20/_make-g--card-20';
 .g--card-20{
     @include make-card-20(
         $background-size: cover,

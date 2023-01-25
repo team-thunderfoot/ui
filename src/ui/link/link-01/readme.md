@@ -16,9 +16,8 @@
 - $text-color
 
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/link/link-01/_make-g--link-01';
 .g--link-01{
     @include make-link-01();
     @include make-link-01-color(

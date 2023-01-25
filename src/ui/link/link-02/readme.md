@@ -17,9 +17,8 @@
 - $text-color-hover
 
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/link/link-02/_make-g--link-02';
 .g--link-02{
     @include make-link-02();
     @include make-link-02-color(

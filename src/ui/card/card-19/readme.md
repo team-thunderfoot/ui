@@ -14,9 +14,8 @@
 - $link-class
 - $title-color
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-19/_make-g--card-19';
 .g--card-19{
     @include make-card-19(
         $title-font: f,

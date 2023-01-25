@@ -17,9 +17,8 @@
 - $border-color
 - $title-color
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-14/_make-g--card-14';
 .g--card-14{
     @include make-card-14(
         $border-width: 1px,    

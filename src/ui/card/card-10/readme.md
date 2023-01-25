@@ -15,9 +15,8 @@
 - $border-color
 - $title-color
 
-## import
+## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-10/_make-g--card-10';
 .g--card-10{
     @include make-card-10(
         $title-font: c,

@@ -1,0 +1,13 @@
+.g--card-06{
+    @include make-card-06(
+        $border-width: 1px,    
+        $title-font: c,
+        $subtitle-font: f,
+        $link-class: g--link-01,
+    );
+    @include make-card-06-color(
+        $border-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

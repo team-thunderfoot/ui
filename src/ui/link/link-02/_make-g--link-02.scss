@@ -1,0 +1,18 @@
+@mixin make-link-02() {
+    text-decoration: underline;
+}
+
+@mixin make-link-02-color(
+    $text-color,
+    $text-color-hover
+) {
+    color: $text-color;
+    transition: color $ease-standard-a $time-b;
+    @media (hover: hover) {
+        &:hover ,
+        &:focus ,
+        &:active {
+            color: $text-color-hover;
+        }
+    }
+}

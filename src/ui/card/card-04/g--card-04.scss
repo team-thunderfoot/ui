@@ -1,0 +1,27 @@
+.g--card-04{
+    @include make-card-04(
+        $background-size: cover,
+        $background-position: center,
+        $title-font: c,
+        $subtitle-font: f,
+    );
+    @include make-card-04-color(
+        $mask-color: rgba(map-get($color-options, b), .5),
+    );
+    @include make-card-04-inside-color(
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+    // ! we need to improve this
+    &--second{
+        @include make-card-04-color(
+            $mask-color: linear-gradient(rgba(map-get($color-options, d), .5), rgba(map-get($color-options, a), .5)),
+        );
+    }
+    &--second &{
+        @include make-card-04-inside-color(
+            $title-color: map-get($color-options, f),
+            $subtitle-color: map-get($color-options, b),
+        );
+    }
+}

@@ -1,23 +1,25 @@
 {
   "name": "@teamthunderfoot/ui",
-  "version": "0.0.15",
-  "main": "index.js",
+  "version": "0.0.13",
+  "source": "src/index.html",
   "author": "Thunderfoot",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 3003 ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "dev": "parcel -p 3003 ./src/index.html ./src/pages/*.html",
+    "build-dev": "parcel build ./src/index.html ./src/pages/*.html --no-optimize --public-url ./",
+    "build": "parcel build ./src/index.html ./src/pages/*.html --public-url ./",
     "postinstall": "link-module-alias",
-    "preinstall": "command -v link-module-alias && link-module-alias clean || true"
-  },
-  "_moduleAliases": {
-    "make-g-btn-1" : "/ui/src/ui/btn/btn-1/_make-g--btn-1.scss"
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.12"
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "sass": "^1.26.12",
+    "gh-pages": "^5.0.0"
   },
   "dependencies": {
-    "link-module-alias": "^1.2.0"
+    "blazy": "^1.8.2",
+    "link-module-alias": "^1.2.0",
+    "push-dir": "^0.4.1"
   }
 }

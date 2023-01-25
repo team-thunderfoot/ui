@@ -5,7 +5,7 @@
 ```sh
 <div class="g--card-11">
     <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-11__media">
-    <h3 class="g--card-11__title">Card 10</h3>
+    <h3 class="g--card-11__title">Card 11</h3>
 </div>
 ```
 

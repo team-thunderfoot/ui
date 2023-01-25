@@ -49,6 +49,7 @@
 - [g--card-12](src/ui/card/card-12/readme.md)
 - [g--card-14](src/ui/card/card-14/readme.md)
 - [g--card-16](src/ui/card/card-16/readme.md)
+- [g--card-18](src/ui/card/card-18/readme.md)
 - [g--card-19](src/ui/card/card-19/readme.md)
 - [g--card-20](src/ui/card/card-20/readme.md)
 

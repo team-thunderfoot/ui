@@ -20,7 +20,6 @@
 
 ## use
 ```sh
-@import '@teamthunderfoot/ui/src/ui/g-components/card/card-07/_make-g--card-07';
 .g--card-07{
     @include make-card-07(
         $title-font: c,

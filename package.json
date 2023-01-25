@@ -1,7 +1,7 @@
 {
   "name": "@teamthunderfoot/ui",
   "version": "0.0.16",
-  "source": ["src/index.html", "src/pages/*.html"],
+  "source": ["src/index.html", "src/pages/buttons.html", "src/pages/cards.html"],
   "author": "Thunderfoot",
   "license": "MIT",
   "scripts": {

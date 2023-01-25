@@ -4,24 +4,12 @@
 @import './scss/foundation/foundation.scss';
 
 //* section
-@import './ui/section/section-01/make-g--section-01';
-@import './ui/section/section-01/g--section-01.scss';
 @import './ui/section/section-02/make-g--section-02';
 @import './ui/section/section-02/g--section-02.scss';
-@import './ui/section/section-03/make-g--section-03';
-@import './ui/section/section-03/g--section-03.scss';
 
 //* spacing
 @import './ui/spacing/sp-01/make-g--sp-01';
 @import './ui/spacing/sp-01/g--sp-01.scss';
-@import './ui/spacing/sp-02/make-g--sp-02';
-@import './ui/spacing/sp-02/g--sp-02.scss';
-@import './ui/spacing/sp-03/make-g--sp-03';
-@import './ui/spacing/sp-03/g--sp-03.scss';
-@import './ui/spacing/sp-04/make-g--sp-04';
-@import './ui/spacing/sp-04/g--sp-04.scss';
-@import './ui/spacing/sp-05/make-g--sp-05';
-@import './ui/spacing/sp-05/g--sp-05.scss';
 
 //* spacing
 @import './ui/spacing/sp-01/make-g--sp-01';
@@ -64,6 +52,7 @@
 //* lazy
 @import './ui/lazy/make-g--lazy-01';
 @import './ui/lazy/g--lazy-01.scss';
+<<<<<<< HEAD
 
 //* list
 @import './ui/list/g--list-01/make-g--list-01';
@@ -74,3 +63,16 @@
 //* pill
 @import './ui/pill/pill-01/make-g--pill-01';
 @import './ui/pill/pill-01/g--pill-01.scss';
+||||||| c65c693
+
+//* list
+@import './ui/list/g--list-01/make-g--list-01';
+@import './ui/list/g--list-01/g--list-01.scss';
+@import './ui/list/g--list-02/make-g--list-02';
+@import './ui/list/g--list-02/g--list-02.scss';
+
+//pill
+@import './ui/pill/pill-01/make-g--pill-01';
+@import './ui/pill/pill-01/g--pill-01.scss';
+=======
+>>>>>>> ddb2c732797d99538d4d680a65b38ce65c66b081

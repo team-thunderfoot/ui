@@ -1,0 +1,8 @@
+.g--card-19{
+    @include make-card-19(
+        $title-font: f,
+    );
+    @include make-card-19-color(
+        $title-color: map-get($color-options, a),
+    );
+}

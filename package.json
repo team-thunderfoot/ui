@@ -5,9 +5,9 @@
   "author": "Thunderfoot",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 3003 ./src/index.html ./src/pages/*.html",
-    "build-dev": "parcel build ./src/index.html ./src/pages/*.html --no-optimize --public-url ./",
-    "build": "parcel build ./src/index.html ./src/pages/*.html --public-url ./",
+    "dev": "parcel -p 3003 ./src/*.html",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "build": "parcel build ./src/index.html --public-url ./",
     "postinstall": "link-module-alias",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },

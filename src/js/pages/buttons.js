@@ -1,1 +1,1 @@
-import "/src/buttons.scss";
+import "/src/index.scss";

@@ -37,6 +37,7 @@
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
     );
+    // ! we need to improve this
     &--second{
         @include make-card-04-color(
             $mask-color: linear-gradient(rgba(map-get($color-options, d), .5), rgba(map-get($color-options, a), .5)),

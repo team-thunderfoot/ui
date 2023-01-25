@@ -1,13 +1,17 @@
 {
   "name": "@teamthunderfoot/ui",
   "version": "0.0.16",
-  "source": ["src/index.html", "src/pages/buttons.html", "src/pages/cards.html"],
+  "source": [
+    "src/index.html",
+    "src/buttons.html",
+    "src/cards.html"
+  ],
   "author": "Thunderfoot",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 3003 ./src/index.html ./src/pages/buttons.html ./src/pages/cards.html",
-    "build-dev": "parcel build ./src/index.html ./src/pages/buttons.html ./src/pages/cards.html --no-optimize --public-url ./",
-    "build": "parcel build ./src/index.html ./src/pages/buttons.html ./src/pages/cards.html --public-url ./",
+    "dev": "parcel -p 3003 ./src/index.html ./src/buttons.html ./src/cards.html",
+    "build-dev": "parcel build ./src/index.html ./src/buttons.html ./src/cards.html --no-optimize --public-url ./",
+    "build": "parcel build ./src/index.html ./src/buttons.html ./src/cards.html --public-url ./",
     "postinstall": "link-module-alias",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },

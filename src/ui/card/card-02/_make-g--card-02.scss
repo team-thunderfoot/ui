@@ -1,11 +1,15 @@
 @mixin make-card-02(
     $border-width,
+    $border-radius: false,
     $title-font,
     $subtitle-font,
 ) {
     border: $border-width solid;
     padding: $measure*7 $measure*5;
     width: 100%;
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
     &__media{
         display: block;
         width: auto;
@@ -19,9 +23,9 @@
     &__title{
         @extend .f--font-#{$title-font} !optional;
         margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
-    }
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
     }
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
@@ -30,10 +34,14 @@
 
 @mixin make-card-02-color(
     $border-color,
+    $background-color: false,
     $title-color,
     $subtitle-color,
 ) {
     border-color: $border-color;
+    @if $background-color {
+        background-color: $background-color;
+    }
     .g--card-02 {
         &__title{
             color: $title-color;

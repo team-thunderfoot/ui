@@ -12,9 +12,10 @@
 
     &--second {
         @include make-card-02-color(
-        $border-color: map-get($color-options, g),
-        $title-color: map-get($color-options, e),
-        $subtitle-color: map-get($color-options, e),
+        $border-color: map-get($color-options, c),
+        $background-color: rgba(map-get($color-options, c), .5),
+        $title-color: map-get($color-options, b),
+        $subtitle-color: map-get($color-options, b),
     );
     }
 }

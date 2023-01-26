@@ -8,10 +8,19 @@
     transition: all $time-b $ease-standard-a;
 }
 
-@mixin make-pill-01-color($background-color, $background-color-hover, $text-color, $text-color-hover) {
+@mixin make-pill-01-color($background-color, $background-color-hover, $text-color, $text-color-hover, $hover: false) {
     background: $background-color;
     color: $text-color;
-
+    @if $hover {
+        @media (hover : hover) {
+            &:hover ,
+            &:focus ,
+            &:active {
+                background: $background-color-hover;
+                color: $text-color-hover;
+            }
+        }
+    }
     @media (hover : hover) {
         &:hover ,
         &:focus ,
@@ -21,3 +30,4 @@
         }
     }
 }
+

@@ -1,9 +1,30 @@
+//* project vars/mixins
 @import './scss/_var/vars.scss';
 @import './scss/_mixins/mixins.scss';
 
+//* project foundations
 @import './scss/foundation/foundation.scss';
 
+//* project utilities
+@import './scss/utilities/utilities.scss';
+
+//* global components mixins
 @import './mixins.scss';
+
+//* lazy
+@import './ui/lazy/lazy-01/g--lazy-01.scss';
+
+//* section
+@import './scss/components/section/c--section-a.scss';
+@import './scss/components/section/c--section-b.scss';
+@import './scss/components/section/c--section-c.scss';
+
+//* spacing
+@import './scss/components/spacing/c--sp-a.scss';
+@import './scss/components/spacing/c--sp-b.scss';
+@import './scss/components/spacing/c--sp-c.scss';
+@import './scss/components/spacing/c--sp-d.scss';
+@import './scss/components/spacing/c--sp-e.scss';
 
 //* card
 @import './ui/card/card-01/g--card-01.scss';
@@ -26,17 +47,3 @@
 @import './ui/card/card-18/g--card-18.scss';
 @import './ui/card/card-19/g--card-19.scss';
 @import './ui/card/card-20/g--card-20.scss';
-
-//* lazy
-@import './ui/lazy/lazy-01/g--lazy-01.scss';
-
-//* link
-@import './ui/link/link-01/g--link-01.scss';
-@import './ui/link/link-02/g--link-02.scss';
-
-//* list
-@import './ui/list/g--list-01/g--list-01.scss';
-@import './ui/list/g--list-02/g--list-02.scss';
-
-//* pill
-@import './ui/pill/pill-01/g--pill-01.scss';

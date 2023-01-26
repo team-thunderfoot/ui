@@ -4,11 +4,9 @@
 
 ![alt text][pill-01]
 
-[pill-01]: /src/img/global-components/pill/pill-01.png
+[pill-01]: /src/img/global-components/pill/g--pill-01.png
 
 ## Editable variables
-
-#### By Default
 
 - $font
 - $background-color
@@ -20,8 +18,8 @@
 
 - $background-color
 - $text-color
-- $background-color-hover: false by default
-- $text-color-hover: false by default
+- $background-color-hover
+- $text-color-hover
 
 ## Html for a pill
 

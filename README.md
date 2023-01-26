@@ -2,12 +2,6 @@
 
 ## UI with our most used components
 
-### Section
-
-- [g--section-01](/src/ui/section/section-01/readme.md)
-- [g--section-02](/src/ui/section/section-02/readme.md)
-- [g--section-03](/src/ui/section/section-03/readme.md)
-
 ### Link
 
 - [g--link-01](src/ui/link/link-01/readme.md)
@@ -21,7 +15,6 @@
 ### Btn
 
 - [g--btn-01](/src/ui/btn/btn-01/readme.md)
-- [g--btn-02](/src/ui/btn/btn-02/readme.md)
 - [g--btn-03](/src/ui/btn/btn-03/readme.md)
 - [g--btn-04](/src/ui/btn/btn-04/readme.md)
 

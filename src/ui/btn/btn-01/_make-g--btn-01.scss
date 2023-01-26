@@ -4,12 +4,11 @@
 ) {
     @extend .f--font-#{$font} !optional;
     padding: $measure $measure*3;
-    border-radius: 200px;
     text-decoration: none;
     display: inline-block;
     border: $border-width solid;
-    background-color: transparent;
-    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
+    border-radius: 200px;
+
     @media all and ($viewport-type: $mobile) {
         display: block;
         width: 100%;
@@ -20,11 +19,14 @@
 @mixin make-btn-01-color(
     $border-color,
     $text-color,
+    $background-color: false,
     $border-color-hover,
     $text-color-hover,
+    $background-color-hover: false,
 ) {
     border-color: $border-color;
     color: $text-color;
+
     @media (hover: hover) {
         &:hover ,
         &:focus ,
@@ -33,4 +35,23 @@
             color: $text-color-hover;
         }
     }
+
+    @if $background-color {
+        background-color: $background-color;
+    }
+
+    @if $background-color-hover {
+        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+
+        @media (hover: hover) {
+            &:hover ,
+            &:focus ,
+            &:active {
+                background-color: $background-color-hover;
+            }
+        }
+    } @else {
+        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
+    }
+
 }

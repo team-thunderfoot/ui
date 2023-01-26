@@ -1,4 +1,4 @@
-@mixin make-btn-03(
+@mixin make-btn-02(
     $font,
     $border-width,
 ) {
@@ -8,20 +8,21 @@
     text-decoration: none;
     display: inline-block;
     border: $border-width solid;
-    background-color: transparent;
+    text-align: center;
     transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
     @media all and ($viewport-type: $mobile) {
         display: block;
         width: 100%;
-        text-align: center;
     }
 }
 
-@mixin make-btn-03-color(
+@mixin make-btn-02-color(
     $border-color,
     $text-color,
+    $background-color: false,
     $border-color-hover,
     $text-color-hover,
+    $background-color-hover: false,
 ) {
     border-color: $border-color;
     color: $text-color;
@@ -32,5 +33,22 @@
             border-color: $border-color-hover;
             color: $text-color-hover;
         }
+    }
+    @if $background-color {
+        background-color: $background-color;
+    }
+
+    @if $background-color-hover {
+        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+
+        @media (hover: hover) {
+            &:hover ,
+            &:focus ,
+            &:active {
+                background-color: $background-color-hover;
+            }
+        }
+    } @else {
+        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
     }
 }

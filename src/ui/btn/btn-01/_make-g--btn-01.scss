@@ -8,11 +8,11 @@
     display: inline-block;
     border: $border-width solid;
     border-radius: 200px;
+    text-align: center;
 
     @media all and ($viewport-type: $mobile) {
         display: block;
         width: 100%;
-        text-align: center;
     }
 }
 

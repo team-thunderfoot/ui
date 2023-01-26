@@ -1,9 +1,13 @@
 @mixin make-card-01(
     $title-font,
     $subtitle-font,
+    $border-radius: false
 ) {
     padding: $measure*7 $measure*5;
     width: 100%;
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
     &__media{
         display: block;
         width: auto;

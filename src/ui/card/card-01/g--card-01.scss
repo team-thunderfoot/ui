@@ -11,8 +11,8 @@
 
     &--second {
         @include make-card-01-color(
-        $background-color: rgba(map-get($color-options, e), .5),
-        $title-color: map-get($color-options, g),
+        $background-color: rgba(map-get($color-options, h), .5),
+        $title-color: map-get($color-options, f),
         $subtitle-color: map-get($color-options, g),
         );
     }

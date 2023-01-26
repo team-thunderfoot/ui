@@ -8,14 +8,6 @@
 - [g--section-02](/src/ui/section/section-02/readme.md)
 - [g--section-03](/src/ui/section/section-03/readme.md)
 
-### Spacing
-
-- [g--sp-01](/src/ui/spacing/sp-01/readme.md)
-- [g--sp-02](/src/ui/spacing/sp-02/readme.md)
-- [g--sp-03](/src/ui/spacing/sp-03/readme.md)
-- [g--sp-04](/src/ui/spacing/sp-04/readme.md)
-- [g--sp-05](/src/ui/spacing/sp-05/readme.md)
-
 ### Link
 
 - [g--link-01](src/ui/link/link-01/readme.md)

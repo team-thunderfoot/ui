@@ -10,11 +10,17 @@
         width: auto;
         height: 100px;
         object-fit: cover;
-        @include make-sp-01();
+        margin-bottom: $measure * 2;
+    @media all and ($viewport-type: $tablets) {
+        margin-bottom: $measure;
+    }
     }
     &__title{
         @extend .f--font-#{$title-font} !optional;
-        @include make-sp-01();
+        margin-bottom: $measure * 2;
+    @media all and ($viewport-type: $tablets) {
+        margin-bottom: $measure;
+    }
     }
     &__link{
         @extend .#{$link-class} !optional;

@@ -10,7 +10,6 @@
     "dev": "parcel -p 3003 ./src/*.html",
     "build-dev": "parcel build ./src/*.html --no-optimize --public-url ./",
     "build": "parcel build ./src/*.html --public-url ./",
-    "postinstall": "link-module-alias",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {

@@ -1,5 +1,18 @@
 # Link-01
 
+## layout
+![alt text][link-01]
+
+[link-01]: /src/img/global-components/link/link-01.png 
+
+## editable variables
+
+- $text-color
+
+### For Modifiers
+
+- $text-color
+
 ## Html for a button
 
 ```sh
@@ -12,9 +25,6 @@
 <a href="#" class="g--link-01" target="_blank" rel="noopener noreferrer">link 01 link</a>
 ```
 
-## editable variables
-- $text-color
-
 
 ## use
 ```sh
@@ -25,8 +35,3 @@
     );
 }
 ```
-
-## layout
-![alt text][link-01]
-
-[link-01]: /src/img/global-components/link/link-01.png 

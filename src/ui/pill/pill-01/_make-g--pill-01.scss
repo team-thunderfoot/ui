@@ -8,25 +8,27 @@
     transition: all $time-b $ease-standard-a;
 }
 
-@mixin make-pill-01-color($background-color, $background-color-hover, $text-color, $text-color-hover, $hover: false) {
+@mixin make-pill-01-color($background-color, $background-color-hover: false, $text-color, $text-color-hover: false) {
     background: $background-color;
     color: $text-color;
-    @if $hover {
+
+    @if $background-color-hover {
         @media (hover : hover) {
             &:hover ,
             &:focus ,
             &:active {
                 background: $background-color-hover;
-                color: $text-color-hover;
             }
         }
     }
-    @media (hover : hover) {
-        &:hover ,
-        &:focus ,
-        &:active {
-            background: $background-color-hover;
-            color: $text-color-hover;
+    
+    @if $text-color-hover {
+        @media (hover : hover) {
+            &:hover ,
+            &:focus ,
+            &:active {
+                color: $text-color-hover;
+            }
         }
     }
 }

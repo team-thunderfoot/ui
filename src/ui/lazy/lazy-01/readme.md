@@ -7,7 +7,7 @@
 ```
 
 ## use
-We have to add alt text to make it work properly. If we want, we can add src with a placeholder image.
+You have to add alt text to make it work properly. You can add src with a placeholder image.
 ```sh
 @import '@/node_modules/@teamthunderfoot/ui/src/ui/lazy/g--lazy-01';
 ```

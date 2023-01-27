@@ -10,7 +10,7 @@
 
 ```sh
 <div class="g--card-03">
-    <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-03__media">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-03__media g--lazy-01">
     <h3 class="g--card-03__title">Card 03</h3>
     <p class="g--card-03__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
 </div>
@@ -22,16 +22,16 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
-- $title-font
+- $subtitle-color
 - $subtitle-font
 - $text-align: false by default
 - $title-color
-- $subtitle-color
+- $title-font
 
 ### For modifiers
 
-- $title-color
 - $subtitle-color
+- $title-color
 
 ## Use
 
@@ -40,6 +40,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-03(
         $title-font: c,
         $subtitle-font: f,
+        // $text-align: center
     );
     @include make-card-03-color(
         $title-color: map-get($color-options, a),

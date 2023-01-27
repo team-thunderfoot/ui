@@ -1,11 +1,17 @@
 # Card-04
 
+## Layout
+
+![alt text][card-04]
+
+[card-04]: /src/img/global-components/card/card-04.png
+
 ## Html for a card
 
 ```sh
-<div class="g--card-04" style="background-image: url(./img/global-components/card/card-bg-placeholder.jpg);">
+<div class="g--card-04" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
     <div class="g--card-04__wrapper">
-        <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-04__wrapper__media">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-04__wrapper__media g--lazy-01">
         <h3 class="g--card-04__wrapper__title">Card 04</h3>
         <p class="g--card-04__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
     </div>
@@ -16,17 +22,24 @@
 
 It is not necessary to add aspect-ratio because the images have height in the css.
 
-## editable variables
+## Editable variables
 
-- $background-size
 - $background-position
-- $title-font
-- $subtitle-font
+- $background-size
+- $border-radius: false by default
 - $mask-color
-- $title-color
 - $subtitle-color
+- $subtitle-font
+- $text-align: false by default
+- $title-color
+- $title-font
 
-## use
+### For modifiers
+
+- $subtitle-color
+- $title-color
+
+## Use
 
 ```sh
 .g--card-04{
@@ -41,19 +54,5 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
     );
-    // ! we need to improve this
-    &--second{
-        @include make-card-04-color(
-            $mask-color: linear-gradient(rgba(map-get($color-options, d), .5), rgba(map-get($color-options, a), .5)),
-            $title-color: map-get($color-options, f),
-            $subtitle-color: map-get($color-options, b),
-        );
-    }
 }
 ```
-
-## layout
-
-![alt text][card-04]
-
-[card-04]: /src/img/global-components/card/card-04.png

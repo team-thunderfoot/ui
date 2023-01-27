@@ -13,11 +13,10 @@ Import all mixins before any global component
 ```
 
 ### Wordpres
-Import in webpack.dev.js globally
+Import in webpack.dev.js globally, same as mixins and vars
 ```sh
 path.resolve(
-    __dirname,
-    "./node_modules/@teamthunderfoot/ui/src/mixins.scss"
+    __dirname, "./node_modules/@teamthunderfoot/ui/src/mixins.scss"
 ),
 ```
 

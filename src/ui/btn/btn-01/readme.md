@@ -8,7 +8,7 @@
 [btn-01]: /src/img/global-components/btn/g--btn-01.png
 [btn-01--second]: /src/img/global-components/btn/g--btn-01--second.png
 
-## editable variables
+## Editable variables
 
 - $font
 - $border-width
@@ -23,10 +23,10 @@
 
 - $border-color
 - $text-color
-- $background-color: false by default
+- $background-color
 - $border-color-hover
 - $text-color-hover
-- $background-color-hover: false by default
+- $background-color-hover
 
 ## Html for a button
 
@@ -40,7 +40,7 @@
 <a href="#" class="g--btn-01" target="_blank" rel="noopener noreferrer">button 01</a>
 ```
 
-## use
+## Use
 
 ```sh
 .g--btn-01{

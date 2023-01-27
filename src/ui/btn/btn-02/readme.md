@@ -1,12 +1,12 @@
 # Btn-02
 
-## layout
+## Layout
 
 ![alt text][btn-02]
 
 [btn-02]: /src/img/global-components/btn/g--btn-02.png
 
-## editable variables
+## Editable variables
 
 - $font
 - $border-width
@@ -21,10 +21,10 @@
 
 - $border-color
 - $text-color
-- $background-color: false by default
+- $background-color
 - $border-color-hover
 - $text-color-hover
-- $background-color-hover: false by default
+- $background-color-hover
 
 ## Html for a button
 
@@ -38,7 +38,7 @@
 <a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">button 02</a>
 ```
 
-## use
+## Use
 
 ```sh
 .g--btn-02{

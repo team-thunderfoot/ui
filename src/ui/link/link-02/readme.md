@@ -1,15 +1,18 @@
 # Link-02
 
-## layout
+## Layout
+
 ![alt text][link-02]
 
-[link-02]: /src/img/global-components/link/link-02.png 
+[link-02]: /src/img/global-components/link/link-02.png
 
-## editable variables
+## Editable variables
+
 - $text-color
 - $text-color-hover
 
 ### For Modifiers
+
 - $text-color
 - $text-color-hover
 
@@ -25,8 +28,8 @@
 <a href="#" class="g--link-02" target="_blank" rel="noopener noreferrer">link 02 link</a>
 ```
 
+## Use
 
-## use
 ```sh
 .g--link-02{
     @include make-link-02();

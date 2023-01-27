@@ -1,11 +1,12 @@
 # Link-01
 
-## layout
+## Layout
+
 ![alt text][link-01]
 
-[link-01]: /src/img/global-components/link/link-01.png 
+[link-01]: /src/img/global-components/link/link-01.png
 
-## editable variables
+## Editable variables
 
 - $text-color
 
@@ -25,8 +26,8 @@
 <a href="#" class="g--link-01" target="_blank" rel="noopener noreferrer">link 01 link</a>
 ```
 
+## Use
 
-## use
 ```sh
 .g--link-01{
     @include make-link-01();

@@ -1,7 +1,7 @@
 # Thunderfoot Global Components
 
 ## Use
-imstall package
+Install package
 ```sh
 npm i @teamthunderfoot/ui
 ```

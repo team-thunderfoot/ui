@@ -1,5 +1,11 @@
 # Card-03
 
+## Layout
+
+![alt text][card-03]
+
+[card-03]: /src/img/global-components/card/card-03.png
+
 ## Html for a card
 
 ```sh
@@ -14,10 +20,11 @@
 
 It is not necessary to add aspect-ratio because the images have height in the css.
 
-## editable variables
+## Editable variables
 
 - $title-font
 - $subtitle-font
+- $text-align: false by default
 - $title-color
 - $subtitle-color
 
@@ -26,7 +33,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $title-color
 - $subtitle-color
 
-## use
+## Use
 
 ```sh
 .g--card-03{
@@ -40,9 +47,3 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     );
 }
 ```
-
-## layout
-
-![alt text][card-03]
-
-[card-03]: /src/img/global-components/card/card-03.png

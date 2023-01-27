@@ -1,9 +1,29 @@
 @mixin make-card-03(
     $title-font,
     $subtitle-font,
+    $text-align: false
 ) {
     padding: 0 $measure*2;
     width: 100%;
+    @if $text-align == "center" {
+        text-align: center;
+
+        &__media {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @if $text-align == "left" {
+        text-align: left;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        &__media {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
     &__media{
         display: block;
         width: auto;

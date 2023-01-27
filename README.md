@@ -1,5 +1,26 @@
 # Thunderfoot Global Components
 
+## Use
+Install package
+```sh
+npm i @teamthunderfoot/ui
+```
+
+### Vue/nuxt
+Import all mixins before any global component
+```sh
+@import '@/node_modules/@teamthunderfoot/ui/src/mixins';
+```
+
+### Wordpres
+Import in webpack.dev.js globally
+```sh
+path.resolve(
+    __dirname,
+    "./node_modules/@teamthunderfoot/ui/src/mixins.scss"
+),
+```
+
 ## UI with our most used components
 
 ### Link

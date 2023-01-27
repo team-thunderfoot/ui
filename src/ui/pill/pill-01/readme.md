@@ -43,8 +43,8 @@
     @include make-pill-01-color(
         $background-color: map-get($color-options, d),
         $text-color: map-get($color-options, a),
-        $background-color-hover: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, d),
+        // $background-color-hover: default,
+        // $text-color-hover: default,
     );
 }
 ```

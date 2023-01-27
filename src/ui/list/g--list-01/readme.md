@@ -1,5 +1,15 @@
 # List-01
 
+## Layout
+
+![alt text][list-01]
+
+[list-01]: /src/img/global-components/list/list-01.png
+
+## Editable variables
+
+- None
+
 ## Html for a list
 
 ```sh
@@ -12,7 +22,8 @@
 </ul>
 ```
 
-## use
+## Use
+
 ```sh
 .g--list-01 {
     &__list-item {
@@ -20,8 +31,3 @@
     }
 }
 ```
-
-## layout
-![alt text][list-01]
-
-[list-01]: /src/img/global-components/list/list-01.png 

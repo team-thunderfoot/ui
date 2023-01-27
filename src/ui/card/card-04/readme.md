@@ -12,6 +12,10 @@
 </div>
 ```
 
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio because the images have height in the css.
+
 ## editable variables
 
 - $background-size

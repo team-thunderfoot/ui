@@ -1,5 +1,11 @@
 # Card-02
 
+## Layout
+
+![alt text][card-02]
+
+[card-02]: /src/img/global-components/card/card-02.png
+
 ## Html for a card
 
 ```sh
@@ -10,15 +16,28 @@
 </div>
 ```
 
-## editable variables
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio because the images have height in the css.
+
+## Editable variables
+
 - $border-width
 - $title-font
 - $subtitle-font
+- $text-align: false by default
 - $border-color
 - $title-color
 - $subtitle-color
 
-## use
+### For modifiers
+
+- $background-color
+- $title-color
+- $subtitle-color
+
+## Use
+
 ```sh
 .g--card-2{
     @include make-card-02(
@@ -33,8 +52,3 @@
     );
 }
 ```
-
-## layout
-![alt text][card-02]
-
-[card-02]: /src/img/global-components/card/card-02.png 

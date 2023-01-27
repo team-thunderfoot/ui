@@ -10,13 +10,24 @@
 </div>
 ```
 
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio because the images have height in the css.
+
 ## editable variables
+
 - $title-font
 - $subtitle-font
 - $title-color
 - $subtitle-color
 
+### For modifiers
+
+- $title-color
+- $subtitle-color
+
 ## use
+
 ```sh
 .g--card-03{
     @include make-card-03(
@@ -31,6 +42,7 @@
 ```
 
 ## layout
+
 ![alt text][card-03]
 
-[card-03]: /src/img/global-components/card/card-03.png 
+[card-03]: /src/img/global-components/card/card-03.png

@@ -3,12 +3,32 @@
     $border-radius: false,
     $title-font,
     $subtitle-font,
+    $text-align: false
 ) {
     border: $border-width solid;
     padding: $measure*7 $measure*5;
     width: 100%;
     @if $border-radius {
         border-radius: $border-radius;
+    }
+    @if $text-align == "center" {
+        text-align: center;
+
+        &__media {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @if $text-align == "left" {
+        text-align: left;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        &__media {
+            margin-left: auto;
+            margin-right: 0;
+        }
     }
     &__media{
         display: block;

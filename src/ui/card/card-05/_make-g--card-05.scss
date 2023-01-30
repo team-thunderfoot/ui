@@ -4,6 +4,9 @@
     $subtitle-font,
     $title-font,
 ) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: $measure*7 $measure*5;
     position: relative;
     width: 100%;
@@ -17,7 +20,7 @@
         height: 100px;
         margin-bottom: $measure * 2;
         object-fit: cover;
-        width: auto;
+        width: 100px;
     
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure;
@@ -44,6 +47,7 @@
 
     &__link{
         @extend .#{$link-class} !optional;
+        margin-top: auto;
     }
 }
 

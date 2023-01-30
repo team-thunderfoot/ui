@@ -1,31 +1,45 @@
 # Card-11
 
+## Layout
+
+![alt text][card-11]
+
+[card-11]: /src/img/global-components/card/card-11.png
+
 ## Html for a card
 
 ```sh
 <div class="g--card-11">
-    <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-11__media">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="placeholder" class="g--card-11__media g--lazy-01">
     <h3 class="g--card-11__title">Card 11</h3>
 </div>
 ```
 
-## editable variables
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio because the images have height in the css.
+
+## Editable variables
+
+- $text-align: false by default
+- $title-color
 - $title-font
+
+### For modifiers
+
+- $text-align
 - $title-color
 
 ## use
+
 ```sh
 .g--card-11{
     @include make-card-11(
         $title-font: c,
     );
-    @include make-card-11-color(
+    @include make-card-11-modifier(
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }
 ```
-
-## layout
-![alt text][card-11]
-
-[card-11]: /src/img/global-components/card/card-11.png 

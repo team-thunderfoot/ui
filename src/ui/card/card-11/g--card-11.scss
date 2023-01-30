@@ -2,7 +2,8 @@
     @include make-card-11(
         $title-font: c,
     );
-    @include make-card-11-color(
+    @include make-card-11-modifier(
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }

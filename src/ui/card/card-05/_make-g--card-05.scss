@@ -49,6 +49,7 @@
 
 @mixin make-card-05-modifier(
     $background-color,
+    $link-class-modifier: false
     $subtitle-color,
     $text-align: false,
     $title-color,
@@ -89,9 +90,16 @@
     }
 
     .g--card-05 {
+        @if $link-class-modifier {
+            &__link{
+                @extend .#{$link-class-modifier} !optional;
+            }
+        }
+
         &__title{
             color: $title-color;
         }
+
         &__subtitle{
             color: $subtitle-color;
         }

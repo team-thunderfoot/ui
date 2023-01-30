@@ -26,6 +26,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $background-color
 - $border-radius: false by default
 - $link-class
+- $link-class-modifier: false by default
 - $subtitle-color
 - $subtitle-font
 - $text-align: false by default
@@ -40,6 +41,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $title-color
 
 ## Use
+
+To use it we have to import the css of the $link-class in the entry
 
 ```sh
 .g--card-05{

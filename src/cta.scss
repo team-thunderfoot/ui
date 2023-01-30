@@ -1,0 +1,43 @@
+//* project vars/mixins
+@import './scss/_var/vars.scss';
+@import './scss/_mixins/mixins.scss';
+
+//* project foundations
+@import './scss/foundation/foundation.scss';
+
+//* project utilities
+@import './scss/utilities/utilities.scss';
+
+//* global components mixins
+@import './mixins.scss';
+
+//* lazy
+@import './ui/lazy/lazy-01/g--lazy-01.scss';
+
+//* section
+@import './scss/components/section/c--section-a.scss';
+@import './scss/components/section/c--section-b.scss';
+@import './scss/components/section/c--section-c.scss';
+
+//* spacing
+@import './scss/components/spacing/c--sp-a.scss';
+@import './scss/components/spacing/c--sp-b.scss';
+@import './scss/components/spacing/c--sp-c.scss';
+@import './scss/components/spacing/c--sp-d.scss';
+@import './scss/components/spacing/c--sp-e.scss';
+
+//* gap
+@import './scss/components/gap/c--gap-a.scss';
+@import './scss/components/gap/c--gap-b.scss';
+@import './scss/components/gap/c--gap-c.scss';
+@import './scss/components/gap/c--gap-d.scss';
+@import './scss/components/gap/c--gap-e.scss';
+
+//* btn
+@import './ui/btn/btn-02/g--btn-02.scss';
+
+//* cta
+@import './ui/cta/cta-01/g--cta-01.scss';
+
+//* link
+@import './ui/link/link-01/g--link-01.scss';

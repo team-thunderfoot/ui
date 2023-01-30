@@ -4,7 +4,7 @@ $justify-properties: (
   // space-evenly:space-evenly,
   // flex-start:flex-start,
   // flex-end:flex-end,
-  // center: center
+  center: center
 );
 
 @mixin flex-justifycontent($justify-prop, $breakpoints) {

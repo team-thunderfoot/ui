@@ -6,5 +6,6 @@
     @include make-cta-01-modifier(
         $title-color: map-get($color-options, a),
         $background-color: map-get($color-options, e),
+        $btn-class-modifier: g--btn-02--second
     );
 }

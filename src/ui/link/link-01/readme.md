@@ -31,7 +31,7 @@
 ```sh
 .g--link-01{
     @include make-link-01();
-    @include make-link-01-color(
+    @include make-link-01-modifier(
         $text-color: map-get($color-options, a),
     );
 }

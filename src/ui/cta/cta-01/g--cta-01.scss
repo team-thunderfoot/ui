@@ -1,0 +1,10 @@
+.g--cta-01{
+    @include make-cta-01(
+        $title-font: b,
+        $btn-class: g--btn-02,
+    );
+    @include make-cta-01-modifier(
+        $title-color: map-get($color-options, a),
+        $background-color: map-get($color-options, e),
+    );
+}

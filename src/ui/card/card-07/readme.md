@@ -24,6 +24,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ## Editable variables
 
 - $link-class
+- $link-class-modifier: false by default
 - $subtitle-color
 - $subtitle-font
 - $text-align: false by default

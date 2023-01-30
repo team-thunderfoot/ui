@@ -29,6 +29,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $background-size
 - $border-radius: false by default
 - $link-class
+- $link-class-modifier: false by default
 - $mask-color
 - $subtitle-color
 - $subtitle-font,

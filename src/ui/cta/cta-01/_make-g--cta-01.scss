@@ -23,11 +23,17 @@
 @mixin make-cta-01-modifier(
     $title-color,
     $background-color,
+    $btn-class-modifier: false
 ) {
     background-color: $background-color;
     .g--cta-01{
         &__title{
             color: $title-color;
+        }
+        @if $btn-class-modifier {
+            &__btn{
+                @extend .#{$btn-class-modifier} !optional;
+            }
         }
     }
 }

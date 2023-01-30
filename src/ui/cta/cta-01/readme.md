@@ -1,60 +1,53 @@
-# Btn-01
+# Cta-01
 
 ## layout
 
-![alt text][btn-01]
-![alt text][btn-01--second]
+![alt text][cta-01]
 
-[btn-01]: /src/img/global-components/btn/g--btn-01.png
-[btn-01--second]: /src/img/global-components/btn/g--btn-01--second.png
+[btn-01]: /src/img/global-components/cta/g--cta-01.png
 
 ## Editable variables
 
-- $font
-- $border-width
-- $border-color
-- $text-color
-- $background-color: false by default
-- $border-color-hover
-- $text-color-hover
-- $background-color-hover: false by default
+- $title-font
+- $btn-class
+- $title-color
+- $background-color
+- $btn-class-modifier: false by default
 
 ### For Modifiers
 
-- $border-color
-- $text-color
+- $title-color
 - $background-color
-- $border-color-hover
-- $text-color-hover
-- $background-color-hover
+- $btn-class-modifier
 
-## Html for a button
+## Html
 
 ```sh
-<button class="g--btn-01">button 01</button>
-```
-
-## Html for a link
-
-```sh
-<a href="#" class="g--btn-01" target="_blank" rel="noopener noreferrer">button 01</a>
+<section class="g--cta-01">
+    <div class="f--container">
+        <div class="f--row justify-content--center">
+            <div class="f--col-8 f--col-tabletm-10 f--col-mobile-12">
+                <h2 class="g--cta-01__title">CTA-01 This is the Contact call to action</h2>
+                <a href="#" class="g--cta-01__btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
 ```
 
 ## Use
+To use it we have to include the css of the $btn-class in the entry
 
 ```sh
-.g--btn-01{
-    @include make-btn-01(
-        $font: c,
-        $border-width: 1px,
+.g--cta-01{
+    @include make-cta-01(
+        $title-font: b,
+        $btn-class: g--btn-02,
     );
-    @include make-btn-01-modifier(
-        $border-color: map-get($color-options, a),
-        $text-color: map-get($color-options, a),
-        $border-color-hover: map-get($color-options, g),
-        $text-color-hover: map-get($color-options, g),
-        // $background-color: default,
-        // $background-color-hover: default
+    @include make-cta-01-modifier(
+        $title-color: map-get($color-options, a),
+        $background-color: map-get($color-options, e),
+        // $btn-class-modifier: default
     );
 }
 ```

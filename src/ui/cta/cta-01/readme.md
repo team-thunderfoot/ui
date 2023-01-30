@@ -48,7 +48,7 @@
         $font: c,
         $border-width: 1px,
     );
-    @include make-btn-01-color(
+    @include make-btn-01-modifier(
         $border-color: map-get($color-options, a),
         $text-color: map-get($color-options, a),
         $border-color-hover: map-get($color-options, g),

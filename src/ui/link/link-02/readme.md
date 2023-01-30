@@ -33,7 +33,7 @@
 ```sh
 .g--link-02{
     @include make-link-02();
-    @include make-link-02-color(
+    @include make-link-02-modifier(
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g)
     );

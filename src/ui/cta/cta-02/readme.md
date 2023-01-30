@@ -38,7 +38,7 @@
 ```
 
 ## Use
-To use it we have to include the css of the $btn-class in the entry
+To use it we have to import the css of the $btn-class in the entry
 
 ```sh
 .g--cta-02{

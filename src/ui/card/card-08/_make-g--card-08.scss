@@ -1,65 +1,119 @@
 @mixin make-card-08(
-    $background-size,
     $background-position,
-    $title-font,
+    $background-size,
+    $border-radius: false,
+    $link-class,
     $subtitle-font,
-    $link-class
+    $title-font,
 ) {
-    background-size: $background-size;
     background-position: $background-position;
     background-repeat: no-repeat;
+    background-size: $background-size;
     padding: $measure*7 $measure*5;
     position: relative;
     width: 100%;
+
     &::before{
         content: '';
+        height: 100%;
+        left: 0;
         position: absolute;
         top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
         z-index: 0;
     }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
     &__wrapper{
         position: relative;
         z-index: 1;
+
         &__media{
             display: block;
-            width: auto;
             height: 100px;
-            object-fit: cover;
             margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
-    }
+            object-fit: cover;
+            width: auto;
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
         }
+
         &__title{
             @extend .f--font-#{$title-font} !optional;
             margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
-    }
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
         }
+
         &__subtitle{
             @extend .f--font-#{$subtitle-font} !optional;
             margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
-    }
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
         }
+
         &__link{
             @extend .#{$link-class} !optional;
         }
     }
 }
 
-@mixin make-card-08-color(
+@mixin make-card-08-modifier(
     $mask-color,
-    $title-color,
     $subtitle-color,
+    $text-align: false,
+    $title-color,
 ) {
     &::before{
         background: $mask-color;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-08 {
+            &__wrapper {
+                &__media {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-08 {
+            &__wrapper {
+                &__media {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-08 {
+            &__wrapper {
+                &__media {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
     }
     
     .g--card-08 {

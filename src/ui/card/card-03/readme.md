@@ -31,6 +31,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ### For modifiers
 
 - $subtitle-color
+- $text-align
 - $title-color
 
 ## Use
@@ -38,13 +39,12 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ```sh
 .g--card-03{
     @include make-card-03(
-        $title-font: c,
         $subtitle-font: f,
-        // $text-align: center
+        $title-font: c,
     );
     @include make-card-03-modifier(
-        $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
         // $text-align: default
     );
 }

@@ -1,5 +1,11 @@
 # Card-09
 
+## Layout
+
+![alt text][card-09]
+
+[card-09]: /src/img/global-components/card/card-09.png
+
 ## Html for a card
 
 ```sh
@@ -9,25 +15,36 @@
 </div>
 ```
 
-## editable variables
-- $title-font
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio because the images have height in the css.
+
+## Editable variables
+
 - $background-color
+- $border-radius: false by default
+- $text-align: false by default
+- $title-color
+- $title-font
+
+### For modifiers
+
+- $background-color
+- $text-align
 - $title-color
 
-## use
+## Use
+
 ```sh
 .g--card-09{
     @include make-card-09(
         $title-font: c,
+        // $border-radius: default
     );
-    @include make-card-09-color(
+    @include make-card-09-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }
 ```
-
-## layout
-![alt text][card-09]
-
-[card-09]: /src/img/global-components/card/card-09.png 

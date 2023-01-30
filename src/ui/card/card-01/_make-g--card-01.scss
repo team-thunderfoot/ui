@@ -74,6 +74,13 @@
     }
     @if $text-align == "left" {
         text-align: left;
+
+        .g--card-01 {
+            &__media {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
     }
     @if $text-align == "right" {
         text-align: right;

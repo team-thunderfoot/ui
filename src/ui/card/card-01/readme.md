@@ -34,6 +34,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 - $background-color
 - $subtitle-color
+- $text-align
 - $title-color
 
 ## Use
@@ -43,12 +44,14 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-01(
         $title-font: b,
         $subtitle-font: d,
-        // $border-radius: default
+        // $border-radius: default,
+        // $text-align: default
     );
     @include make-card-01-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        // $text-align: default
     );
 }
 ```

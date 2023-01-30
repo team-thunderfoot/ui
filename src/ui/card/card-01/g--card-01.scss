@@ -2,7 +2,7 @@
     @include make-card-01(
         $title-font: b,
         $subtitle-font: d,
-        $border-radius: 8px
+        $border-radius: 8px,
     );
     @include make-card-01-modifier(
         $background-color: rgba(map-get($color-options, a), .5),

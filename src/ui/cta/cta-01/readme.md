@@ -4,7 +4,7 @@
 
 ![alt text][cta-01]
 
-[cta-01]: /src/img/global-components/cta/g--cta-01.png
+[cta-01]: /src/img/global-components/cta/g--cta-01.jpg
 
 ## Html
 

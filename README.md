@@ -42,6 +42,10 @@ path.resolve(
 - [g--card-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-01/readme.md)
 - [g--card-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-02/readme.md)
 
+### Cta
+
+- [g--cta-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-01/readme.md)
+
 ### Pill
 
 - [g--pill-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/pill/pill-01/readme.md)

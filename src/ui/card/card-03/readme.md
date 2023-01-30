@@ -42,9 +42,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $subtitle-font: f,
         // $text-align: center
     );
-    @include make-card-03-color(
+    @include make-card-03-modifier(
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        // $text-align: default
     );
 }
 ```

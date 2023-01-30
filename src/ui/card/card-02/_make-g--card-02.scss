@@ -1,34 +1,14 @@
 @mixin make-card-02(
-    $border-width,
     $border-radius: false,
-    $title-font,
+    $border-width,
     $subtitle-font,
-    $text-align: false
+    $title-font,
 ) {
     border: $border-width solid;
     padding: $measure*7 $measure*5;
     width: 100%;
     @if $border-radius {
         border-radius: $border-radius;
-    }
-    @if $text-align == "center" {
-        text-align: center;
-
-        &__media {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    @if $text-align == "left" {
-        text-align: left;
-    }
-    @if $text-align == "right" {
-        text-align: right;
-
-        &__media {
-            margin-left: auto;
-            margin-right: 0;
-        }
     }
     &__media{
         display: block;
@@ -52,16 +32,52 @@
     }
 }
 
-@mixin make-card-02-color(
-    $border-color,
+@mixin make-card-02-modifier(
     $background-color: false,
-    $title-color,
+    $border-color,
     $subtitle-color,
+    $text-align: false,
+    $title-color,
 ) {
     border-color: $border-color;
+
     @if $background-color {
         background-color: $background-color;
     }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-02 {
+            &__media {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-02 {
+            &__media {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-02 {
+            &__media {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+        
+    }
+
     .g--card-02 {
         &__title{
             color: $title-color;

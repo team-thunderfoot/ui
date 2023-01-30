@@ -22,20 +22,20 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
+- $border-color
+- $border-radius: false by default
 - $border-width
-- $title-font
+- $subtitle-color
 - $subtitle-font
 - $text-align: false by default
-- $border-radius: false by default
-- $border-color
 - $title-color
-- $subtitle-color
+- $title-font
 
 ### For modifiers
 
 - $background-color
-- $title-color
 - $subtitle-color
+- $title-color
 
 ## Use
 
@@ -50,6 +50,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $border-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        // $text-align: default
     );
 }
 ```

@@ -1,11 +1,13 @@
 .g--card-07{
     @include make-card-07(
-        $title-font: c,
-        $subtitle-font: f,
         $link-class: g--link-01,
+        $subtitle-font: f,
+        $title-font: c,
     );
-    @include make-card-07-color(
-        $title-color: map-get($color-options, a),
+
+    @include make-card-07-modifier(
         $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }

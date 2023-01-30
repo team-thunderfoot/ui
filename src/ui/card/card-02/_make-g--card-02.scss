@@ -7,26 +7,32 @@
     border: $border-width solid;
     padding: $measure*7 $measure*5;
     width: 100%;
+
     @if $border-radius {
         border-radius: $border-radius;
     }
+
     &__media{
         display: block;
-        width: auto;
         height: 100px;
+        margin-bottom: $measure * 2;
         object-fit: cover;
-        margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
-    }
-    }
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        margin-bottom: $measure * 2;
+        width: auto;
+
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure;
         }
     }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure * 2;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+    
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
     }
@@ -75,7 +81,6 @@
                 margin-right: 0;
             }
         }
-        
     }
 
     .g--card-02 {

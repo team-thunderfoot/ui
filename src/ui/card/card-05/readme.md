@@ -1,41 +1,59 @@
 # Card-05
 
+## Layout
+
+![alt text][card-05]
+
+[card-05]: /src/img/global-components/card/card-05.png
+
 ## Html for a card
 
 ```sh
 <div class="g--card-05">
-    <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-05__media">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-05__media g--lazy-01">
     <h3 class="g--card-05__title">Card 05</h3>
     <p class="g--card-05__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
     <a href="" class="g--card-05__link">This is a link</a>
 </div>
 ```
 
-## editable variables
-- $title-font
-- $subtitle-font
-- $link-class
-- $background-color
-- $title-color
-- $subtitle-color
+##### \*Aspect Ratio
 
-## use
+It is not necessary to add aspect-ratio because the images have height in the css.
+
+## Editable variables
+
+- $background-color
+- $border-radius: false by default
+- $link-class
+- $subtitle-color
+- $subtitle-font
+- $text-align: false by default
+- $title-color
+- $title-font
+
+### For modifiers
+
+- $background-color
+- $subtitle-color
+- $text-align
+- $title-color
+
+## Use
+
 ```sh
 .g--card-05{
     @include make-card-05(
-        $title-font: c,
+        $link-class: g--link-01,
         $subtitle-font: f,
-        $link-class: g--link-1,
+        $title-font: c,
+        // $border-radius: default
     );
-    @include make-card-05-color(
+    @include make-card-05-modifier(
         $background-color: map-get($color-options, f),
-        $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        //$text-aling: default
     );
 }
 ```
-
-## layout
-![alt text][card-05]
-
-[card-05]: /src/img/global-components/card/card-05.png 

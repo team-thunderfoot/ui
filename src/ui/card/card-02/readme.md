@@ -45,13 +45,15 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-2{
     @include make-card-02(
         $border-width: 1px,
-        $subtitle-font: d,
         $title-font: b,
+        $subtitle-font: d,
+        // $border-radius: default,
     );
-    @include make-card-02-color(
+    @include make-card-02-modifier(
         $border-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+        // $background-color: default,
         // $text-align: default
     );
 }

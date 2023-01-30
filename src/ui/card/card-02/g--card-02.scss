@@ -3,12 +3,13 @@
         $border-width: 1px,
         $title-font: b,
         $subtitle-font: d,
-        // $text-align: default
+        // $border-radius: default,
     );
     @include make-card-02-modifier(
         $border-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        // $background-color: default,
         // $text-align: default
     );
 

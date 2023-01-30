@@ -6,10 +6,6 @@
 
 [list-01]: /src/img/global-components/list/list-01.png
 
-## Editable variables
-
-- None
-
 ## Html for a list
 
 ```sh
@@ -21,6 +17,10 @@
     <li class="g--list-01__list-item">list 01 item</li>
 </ul>
 ```
+
+## Editable variables
+
+- None
 
 ## Use
 

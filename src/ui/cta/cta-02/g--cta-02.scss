@@ -7,6 +7,7 @@
     );
     @include make-cta-02-modifier(
         $mask-color: rgba(map-get($color-options, a), .5),
+        $text-align: center,
         $title-color: map-get($color-options, b),
     );
 }

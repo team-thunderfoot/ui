@@ -7,8 +7,8 @@
     background-size: $background-size;
     background-position: $background-position;
     padding: $measure * 20 0;
-    text-align: center;
     position: relative;
+    text-align: center;
     @media all and ($viewport-type: $tablets) {
         padding: $measure * 15 0;
     }

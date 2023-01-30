@@ -6,6 +6,18 @@
 
 [pill-01]: /src/img/global-components/pill/g--pill-01.png
 
+## Html for a pill
+
+```sh
+<div class="g--pill-01">pill 01</div>
+```
+
+## Html for a link
+
+```sh
+<a href="#" class="g--pill-01" target="_blank" rel="noopener noreferrer">pill 01</a>
+```
+
 ## Editable variables
 
 - $background-color
@@ -20,18 +32,6 @@
 - $background-color-hover
 - $text-color
 - $text-color-hover
-
-## Html for a pill
-
-```sh
-<div class="g--pill-01">pill 01</div>
-```
-
-## Html for a link
-
-```sh
-<a href="#" class="g--pill-01" target="_blank" rel="noopener noreferrer">pill 01</a>
-```
 
 ## Use
 

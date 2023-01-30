@@ -12,6 +12,10 @@
 </ul>
 ```
 
+## Editable variables
+
+- None
+
 ## use
 ```sh
 .g--list-02 {

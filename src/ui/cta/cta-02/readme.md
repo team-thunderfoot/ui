@@ -6,6 +6,21 @@
 
 [cta-02]: /src/img/global-components/cta/g--cta-02.png
 
+## Html
+
+```sh
+<section class="g--cta-02" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
+    <div class="f--container">
+        <div class="f--row justify-content--center">
+            <div class="f--col-8 f--col-tabletm-10 f--col-mobile-12">
+                <h2 class="g--cta-02__title">CTA-01 This is the Contact call to action</h2>
+                <a href="#" class="g--cta-02__btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
 ## Editable variables
 
 - $background-size
@@ -21,21 +36,6 @@
 - $mask-color
 - $title-color
 - $btn-class-modifier
-
-## Html
-
-```sh
-<section class="g--cta-02" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
-    <div class="f--container">
-        <div class="f--row justify-content--center">
-            <div class="f--col-8 f--col-tabletm-10 f--col-mobile-12">
-                <h2 class="g--cta-02__title">CTA-01 This is the Contact call to action</h2>
-                <a href="#" class="g--cta-02__btn">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</section>
-```
 
 ## Use
 To use it we have to import the css of the $btn-class in the entry

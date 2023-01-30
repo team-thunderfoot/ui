@@ -43,13 +43,13 @@
 ```sh
 .g--btn-02{
     @include make-btn-02(
-        $font: c,
         $border-width: 1px,
+        $font: c,
     );
     @include make-btn-02-modifier(
         $border-color: map-get($color-options, a),
-        $text-color: map-get($color-options, a),
         $border-color-hover: map-get($color-options, g),
+        $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g),
         // $background-color: default,
         // $background-color-hover: defaullt

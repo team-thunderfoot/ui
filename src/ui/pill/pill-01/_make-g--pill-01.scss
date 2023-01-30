@@ -1,10 +1,10 @@
 @mixin make-pill-01($font) {
     @extend .f--font-#{$font} !optional;
-    padding: $measure $measure * 2;
     border-radius: 100px;
-    text-decoration: none;
     display: inline-block;
+    padding: $measure $measure * 2;
     text-align: center;
+    text-decoration: none;
     transition: all $time-b $ease-standard-a;
 }
 

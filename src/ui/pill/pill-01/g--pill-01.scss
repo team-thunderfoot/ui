@@ -4,8 +4,8 @@
     );
     @include make-pill-01-modifier(
         $background-color: map-get($color-options, d),
-        $text-color: map-get($color-options, a),
         $background-color-hover: map-get($color-options, a),
+        $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, d),
     );
 }

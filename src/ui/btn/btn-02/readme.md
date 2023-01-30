@@ -6,6 +6,18 @@
 
 [btn-02]: /src/img/global-components/btn/g--btn-02.png
 
+## Html for a button
+
+```sh
+<button class="g--btn-02">button 02</button>
+```
+
+## Html for a link
+
+```sh
+<a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">button 02</a>
+```
+
 ## Editable variables
 
 - $background-color: false by default
@@ -25,18 +37,6 @@
 - $border-color-hover
 - $text-color
 - $text-color-hover
-
-## Html for a button
-
-```sh
-<button class="g--btn-02">button 02</button>
-```
-
-## Html for a link
-
-```sh
-<a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">button 02</a>
-```
 
 ## Use
 

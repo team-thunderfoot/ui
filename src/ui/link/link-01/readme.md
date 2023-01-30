@@ -6,14 +6,6 @@
 
 [link-01]: /src/img/global-components/link/link-01.png
 
-## Editable variables
-
-- $text-color
-
-### For Modifiers
-
-- $text-color
-
 ## Html for a button
 
 ```sh
@@ -25,6 +17,14 @@
 ```sh
 <a href="#" class="g--link-01" target="_blank" rel="noopener noreferrer">link 01 link</a>
 ```
+
+## Editable variables
+
+- $text-color
+
+### For Modifiers
+
+- $text-color
 
 ## Use
 

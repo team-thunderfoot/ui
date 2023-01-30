@@ -8,17 +8,17 @@
 
 ## Editable variables
 
-- $font
 - $background-color
-- $text-color
 - $background-color-hover: false by default
+- $font
+- $text-color
 - $text-color-hover: false by default
 
 #### For Modifiers
 
 - $background-color
-- $text-color
 - $background-color-hover
+- $text-color
 - $text-color-hover
 
 ## Html for a pill
@@ -40,7 +40,7 @@
     @include make-pill-01(
         $font: d,
     );
-    @include make-pill-01-color(
+    @include make-pill-01-modifier(
         $background-color: map-get($color-options, d),
         $text-color: map-get($color-options, a),
         // $background-color-hover: default,

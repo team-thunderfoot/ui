@@ -1,29 +1,9 @@
 @mixin make-card-03(
     $title-font,
-    $subtitle-font,
-    $text-align: false
+    $subtitle-font
 ) {
     padding: 0 $measure*2;
     width: 100%;
-    @if $text-align == "center" {
-        text-align: center;
-
-        &__media {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    @if $text-align == "left" {
-        text-align: left;
-    }
-    @if $text-align == "right" {
-        text-align: right;
-
-        &__media {
-            margin-left: auto;
-            margin-right: 0;
-        }
-    }
     &__media{
         display: block;
         width: auto;
@@ -46,10 +26,44 @@
     }
 }
 
-@mixin make-card-03-color(
-    $title-color,
+@mixin make-card-03-modifier(
     $subtitle-color,
+    $text-align: false,
+    $title-color,
 ) {
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-03 {
+            &__media {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-03 {
+            &__media {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-03 {
+            &__media {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+        
+    }
+
     .g--card-03 {
         &__title{
             color: $title-color;

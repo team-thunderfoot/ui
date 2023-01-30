@@ -3,13 +3,14 @@
         $title-font: c,
         $subtitle-font: f,
     );
-    @include make-card-03-color(
+    @include make-card-03-modifier(
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $text-align: default
     );
 
     &--second {
-        @include make-card-03-color(
+        @include make-card-03-modifier(
             $title-color: map-get($color-options, e),
             $subtitle-color: map-get($color-options, g),
         );

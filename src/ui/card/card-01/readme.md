@@ -22,19 +22,19 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
-- $title-font
-- $subtitle-font
-- $border-radius: false by default
-- $text-align: false by default
 - $background-color
-- $title-color
+- $border-radius: false by default
 - $subtitle-color
+- $subtitle-font
+- $text-align: false by default
+- $title-color
+- $title-font
 
 ### For modifiers
 
 - $background-color
-- $title-color
 - $subtitle-color
+- $title-color
 
 ## Use
 
@@ -45,7 +45,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $subtitle-font: d,
         // $border-radius: default
     );
-    @include make-card-01-color(
+    @include make-card-01-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),

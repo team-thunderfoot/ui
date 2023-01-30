@@ -10,23 +10,23 @@
 
 ## Editable variables
 
-- $font
-- $border-width
-- $border-color
-- $text-color
 - $background-color: false by default
-- $border-color-hover
-- $text-color-hover
 - $background-color-hover: false by default
+- $border-color
+- $border-width
+- $border-color-hover
+- $font
+- $text-color
+- $text-color-hover
 
 ### For Modifiers
 
-- $border-color
-- $text-color
 - $background-color
-- $border-color-hover
-- $text-color-hover
 - $background-color-hover
+- $border-color
+- $border-color-hover
+- $text-color
+- $text-color-hover
 
 ## Html for a button
 
@@ -48,7 +48,7 @@
         $font: c,
         $border-width: 1px,
     );
-    @include make-btn-01-color(
+    @include make-btn-01-modifier(
         $border-color: map-get($color-options, a),
         $text-color: map-get($color-options, a),
         $border-color-hover: map-get($color-options, g),

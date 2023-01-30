@@ -1,0 +1,12 @@
+.g--cta-02{
+    @include make-cta-02(
+        $background-size: cover,
+        $background-position: center,
+        $title-font: b,
+        $btn-class: g--btn-02,
+    );
+    @include make-cta-02-modifier(
+        $mask-color: rgba(map-get($color-options, a), .5),
+        $title-color: map-get($color-options, b),
+    );
+}

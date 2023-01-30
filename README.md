@@ -45,6 +45,7 @@ path.resolve(
 ### Cta
 
 - [g--cta-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-01/readme.md)
+- [g--cta-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-02/readme.md)
 
 ### Pill
 

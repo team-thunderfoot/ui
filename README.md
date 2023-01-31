@@ -46,6 +46,10 @@ path.resolve(
 - [g--cta-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-02/readme.md)
 - [g--cta-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-03/readme.md)
 
+### Lazy
+
+- [g--lazy-01](https://github.com/team-thunderfoot/ui/tree/main/src/ui/lazy/lazy-01)
+
 ### Link
 
 - [g--link-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-01/readme.md)

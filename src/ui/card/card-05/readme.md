@@ -56,6 +56,7 @@ To use it we have to import the css of the $link-class in the entry
         $background-color: map-get($color-options, f),
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        // $link-class-modifier: default,
         //$text-align: default
     );
 }

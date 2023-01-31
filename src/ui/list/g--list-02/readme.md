@@ -1,5 +1,11 @@
 # List-02
 
+## Layout
+
+![alt text][list-02]
+
+[list-02]: /src/img/global-components/list/list-02.png
+
 ## Html for a list
 
 ```sh
@@ -16,7 +22,8 @@
 
 - None
 
-## use
+## Use
+
 ```sh
 .g--list-02 {
     &__list-item {
@@ -24,8 +31,3 @@
     }
 }
 ```
-
-## layout
-![alt text][list-02]
-
-[list-02]: /src/img/global-components/list/list-02.png 

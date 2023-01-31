@@ -10,7 +10,7 @@
 
 ```sh
 <div class="g--card-02">
-    <img src="./img/global-components/card/card-img-placeholder.png" alt="" class="g--card-02__media">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-02__media g--lazy-01">
     <h3 class="g--card-02__title">Card 02</h3>
     <p class="g--card-02__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
 </div>

@@ -8,6 +8,31 @@
 
 ## use
 You have to add alt text to make it work properly. You can add src with a placeholder image.
+You have to import CSS:
 ```sh
 @import '@/node_modules/@teamthunderfoot/ui/src/ui/lazy/g--lazy-01';
+```
+And import JS:
+```sh
+/**
+ * Lazy Loading
+ */
+import Blazy from "blazy";
+
+class Index {
+  constructor() {
+    this.init();
+  }
+  init() {
+    // lazy loading for images
+    new Blazy({
+      selector: ".g--lazy-01",
+      successClass: "g--lazy-01--is-loaded",
+      errorClass: "g--lazy-01--is-error",
+    });
+  }
+}
+
+export default Index;
+new Index();
 ```

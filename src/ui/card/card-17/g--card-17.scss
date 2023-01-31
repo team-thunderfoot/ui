@@ -1,9 +1,11 @@
 .g--card-17{
     @include make-card-17(
         $title-font: f,
+        // $border-radius: default,
     );
-    @include make-card-17-color(
+    @include make-card-17-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }

@@ -1,48 +1,98 @@
 @mixin make-card-20(
-    $background-size,
     $background-position,
+    $background-size,
+    $border-radius: false,
     $title-font,
 ) {
-    background-size: $background-size;
     background-position: $background-position;
     background-repeat: no-repeat;
+    background-size: $background-size;
     padding: $measure*7 $measure*5;
     position: relative;
     width: 100%;
+
     &::before{
         content: '';
+        height: 100%;
+        left: 0;
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         z-index: 0;
+        width: 100%;
     }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
     &__wrapper{
         position: relative;
         z-index: 1;
+
         &__media{
             display: block;
             width: auto;
             height: 100px;
             object-fit: cover;
             margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
-    }
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
         }
+
         &__title{
             @extend .f--font-#{$title-font} !optional;
         }
     }
 }
 
-@mixin make-card-20-color(
+@mixin make-card-20-modifier(
     $mask-color,
+    $text-align: false,
     $title-color,
 ) {
     &::before{
         background: $mask-color;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-20 {
+            &__wrapper {
+                &__media {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-20 {
+            &__wrapper {
+                &__media {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-20 {
+            &__wrapper {
+                &__media {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
     }
     
     .g--card-20 {

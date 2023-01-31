@@ -2,11 +2,13 @@
     @include make-card-16(
         $background-size: cover,
         $background-position: center,
+        $link-class: g--link-01,
         $title-font: c,
-        $link-class: g--link-01
+        // $border-radius: default,
     );
-    @include make-card-16-color(
+    @include make-card-16-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }

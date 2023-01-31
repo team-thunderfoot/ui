@@ -1,9 +1,10 @@
 .g--card-15{
     @include make-card-15(
-        $title-font: c,
         $link-class: g--link-01,
+        $title-font: c,
     );
-    @include make-card-15-color(
+    @include make-card-15-modifier(
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }

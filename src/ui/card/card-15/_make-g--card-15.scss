@@ -1,35 +1,77 @@
 @mixin make-card-15(
-    $title-font,
     $link-class,
+    $title-font,
 ) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 0 $measure*2;
     position: relative;
     width: 100%;
+
     &__media{
         display: block;
-        width: auto;
         height: 100px;
-        object-fit: cover;
         margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
+        object-fit: cover;
+        width: 100px;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
     }
-    }
+
     &__title{
         @extend .f--font-#{$title-font} !optional;
         margin-bottom: $measure * 2;
-    @media all and ($viewport-type: $tablets) {
-        margin-bottom: $measure;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
     }
-    }
+
     &__link{
         @extend .#{$link-class} !optional;
+        margin-top: auto;
     }
 }
 
-@mixin make-card-15-color(
+@mixin make-card-15-modifier(
+    $text-align: false,
     $title-color,
 ) {
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-15 {
+            &__media {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-15 {
+            &__media {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-15 {
+            &__media {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
     .g--card-15 {
         &__title{
             color: $title-color;

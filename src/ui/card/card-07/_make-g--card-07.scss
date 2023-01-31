@@ -48,8 +48,8 @@
 
 @mixin make-card-07-modifier(
     $subtitle-color,
-    $text-align: false,
     $title-color,
+    $text-align: false,
 ) {
     @if $text-align == "center" {
         text-align: center;

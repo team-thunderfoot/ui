@@ -1,8 +1,8 @@
 @mixin make-card-02(
-    $border-radius: false,
     $border-width,
     $subtitle-font,
     $title-font,
+    $border-radius: false,
 ) {
     border: $border-width solid;
     padding: $measure*7 $measure*5;
@@ -39,11 +39,11 @@
 }
 
 @mixin make-card-02-modifier(
-    $background-color: false,
     $border-color,
     $subtitle-color,
-    $text-align: false,
     $title-color,
+    $text-align: false,
+    $background-color: false,
 ) {
     border-color: $border-color;
 

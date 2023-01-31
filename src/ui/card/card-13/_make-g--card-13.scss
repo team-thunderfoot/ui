@@ -1,7 +1,7 @@
 @mixin make-card-13(
-    $border-radius: false,
     $link-class,
     $title-font,
+    $border-radius: false,
 ) {
     display: flex;
     flex-direction: column;
@@ -43,9 +43,9 @@
 
 @mixin make-card-13-modifier(
     $background-color,
+    $title-color,
     $link-class-modifier: false,
     $text-align: false,
-    $title-color,
 ) {
     background-color: $background-color;
 

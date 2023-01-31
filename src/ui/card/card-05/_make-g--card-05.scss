@@ -1,8 +1,8 @@
 @mixin make-card-05(
-    $border-radius: false,
     $link-class,
     $subtitle-font,
     $title-font,
+    $border-radius: false,
 ) {
     display: flex;
     flex-direction: column;
@@ -53,10 +53,10 @@
 
 @mixin make-card-05-modifier(
     $background-color,
-    $link-class-modifier: false,
     $subtitle-color,
-    $text-align: false,
     $title-color,
+    $link-class-modifier: false,
+    $text-align: false,
 ) {
     background-color: $background-color;
     

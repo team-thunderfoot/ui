@@ -1,37 +1,46 @@
 @mixin make-cta-03(
-    $border-radius: false,
-    $title-font,
-    $subtitle-font,
     $btn-class,
+    $subtitle-font,
+    $title-font,
+    $border-radius: false,
 ) {
     padding: $measure * 10 $measure * 30 $measure * 10 $measure * 10;
+
     @if $border-radius {
         border-radius: $border-radius;
         overflow: hidden;
     }
+
     @media all and ($viewport-type: $tabletl) {
         padding: $measure * 5 $measure * 25 $measure * 5 $measure * 5;
     }
+
     @media all and ($viewport-type: $tabletm) {
         padding-right: $measure * 20;
     }
+
     @media all and ($viewport-type: $tablets) {
         padding-right: $measure * 5;
     }
+
     &__title{
         @extend .f--font-#{$title-font} !optional;
         margin-bottom: $measure*3;
+
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 2;
         }
     }
+
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
         margin-bottom: $measure*6;
+        
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 4;
         }
     }
+
     &__btn{
         @extend .#{$btn-class} !optional;
     }
@@ -39,65 +48,78 @@
 
 @mixin make-cta-03-modifier(
     $background-color,
-    $text-align: false,
-    $title-color,
     $subtitle-color,
-    $btn-class-modifier: false
+    $title-color,
+    $btn-class-modifier: false,
+    $text-align: false,
 ) {
     background-color: $background-color;
+
     @if $text-align == "center" {
         padding-left: $measure * 15;
         padding-right: $measure * 15;
         text-align: center;
+
         @media all and ($viewport-type: $tabletl) {
             padding-left: $measure * 10;
             padding-right: $measure * 10;
         }
+
         @media all and ($viewport-type: $tablets) {
             padding-left: $measure * 5;
             padding-right: $measure * 5;
         }
-        
     }
+
     @if $text-align == "left" {
         padding-left: $measure * 10;
         padding-right: $measure * 30;
         text-align: left;
+
         @media all and ($viewport-type: $tabletl) {
             padding-left: $measure * 5;
             padding-right: $measure * 25;
         }
+
         @media all and ($viewport-type: $tabletm) {
             padding-right: $measure * 20;
         }
+
         @media all and ($viewport-type: $tablets) {
             padding-left: $measure * 5;
             padding-right: $measure * 5;
         }
     }
+
     @if $text-align == "right" {
         padding-left: $measure * 30;
         padding-right: $measure * 10;
         text-align: right;
+
         @media all and ($viewport-type: $tabletl) {
             padding-left: $measure * 25;
             padding-right: $measure * 5;
         }
+
         @media all and ($viewport-type: $tabletm) {
             padding-left: $measure * 20;
         }
+
         @media all and ($viewport-type: $tablets) {
             padding-left: $measure * 5;
             padding-right: $measure * 5;
         }
     }
+
     .g--cta-03{
         &__title{
             color: $title-color;
         }
+
         &__subtitle{
             color: $subtitle-color;
         }
+        
         @if $btn-class-modifier {
             &__btn{
                 @extend .#{$btn-class-modifier} !optional;

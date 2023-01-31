@@ -37,8 +37,8 @@
 }
 
 @mixin make-card-15-modifier(
-    $text-align: false,
     $title-color,
+    $text-align: false,
 ) {
     @if $text-align == "center" {
         text-align: center;

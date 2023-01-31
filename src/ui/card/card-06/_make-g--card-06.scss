@@ -1,9 +1,9 @@
 @mixin make-card-06(
-    $border-radius: false,
     $border-width,    
     $link-class,
     $subtitle-font,
     $title-font,
+    $border-radius: false,
 ) {
     border: $border-width solid;
     display: flex;
@@ -52,11 +52,11 @@
 }
 
 @mixin make-card-06-modifier(
-    $background-color: false,
     $border-color,
     $subtitle-color,
-    $text-align: false,
     $title-color,
+    $background-color: false,
+    $text-align: false,
 ) {
     border-color: $border-color;
 

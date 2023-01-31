@@ -1,8 +1,8 @@
 @mixin make-card-14(
     $border-width,    
-    $border-radius: false,
     $link-class,
     $title-font,
+    $border-radius: false,
 ) {
     border: $border-width solid;
     display: flex;
@@ -42,10 +42,10 @@
 }
 
 @mixin make-card-14-modifier(
-    $background-color: false,
     $border-color,
-    $text-align: false,
     $title-color,
+    $background-color: false,
+    $text-align: false,
 ) {
     border-color: $border-color;
 

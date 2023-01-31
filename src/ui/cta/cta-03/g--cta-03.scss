@@ -1,15 +1,15 @@
 .g--cta-03{
     @include make-cta-03(
         $border-radius: $border-radius-a,
-        $title-font: b,
-        $subtitle-font: d,
         $btn-class: g--btn-02,
+        $subtitle-font: d,
+        $title-font: b,
     );
     @include make-cta-03-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
+        $btn-class-modifier: g--btn-02--second,
+        $subtitle-color: map-get($color-options, b),
         $text-align: left,
         $title-color: map-get($color-options, b),
-        $subtitle-color: map-get($color-options, b),
-        $btn-class-modifier: g--btn-02--second
     );
 }

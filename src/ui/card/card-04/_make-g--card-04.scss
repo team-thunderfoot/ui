@@ -1,9 +1,9 @@
 @mixin make-card-04(
     $background-position,
     $background-size,
-    $border-radius: false,
     $subtitle-font,
     $title-font,
+    $border-radius: false,
 ) {
     background-position: $background-position;
     background-repeat: no-repeat;
@@ -60,8 +60,8 @@
 @mixin make-card-04-modifier(
     $mask-color,
     $subtitle-color,
-    $text-align: false,
     $title-color,
+    $text-align: false,
 ) {
     &::before{
         background: $mask-color;

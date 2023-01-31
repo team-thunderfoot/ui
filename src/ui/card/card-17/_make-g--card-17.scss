@@ -1,6 +1,6 @@
 @mixin make-card-17(
-    $border-radius: false,
     $title-font,
+    $border-radius: false,
 ) {
     padding: $measure*7 $measure*5;
     position: relative;
@@ -29,8 +29,8 @@
 
 @mixin make-card-17-modifier(
     $background-color,
-    $text-align: false,
     $title-color,
+    $text-align: false,
 ) {
     background-color: $background-color;
 

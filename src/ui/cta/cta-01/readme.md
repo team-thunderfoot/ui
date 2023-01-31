@@ -1,6 +1,6 @@
 # Cta-01
 
-## layout
+## Layout
 
 ![alt text][cta-01]
 
@@ -23,19 +23,20 @@
 
 ## Editable variables
 
-- $title-font
-- $btn-class
-- $title-color
 - $background-color
+- $btn-class
 - $btn-class-modifier: false by default
+- $title-color
+- $title-font
 
 ### For Modifiers
 
-- $title-color
 - $background-color
 - $btn-class-modifier
+- $title-color
 
 ## Use
+
 To use it we have to import the css of the $btn-class in the entry
 
 ```sh

@@ -17,12 +17,12 @@
 }
 
 @mixin make-btn-02-modifier(
-    $background-color: false,
-    $background-color-hover: false,
     $border-color,
     $border-color-hover,
     $text-color,
     $text-color-hover,
+    $background-color: false,
+    $background-color-hover: false,
 ) {
     border-color: $border-color;
     color: $text-color;

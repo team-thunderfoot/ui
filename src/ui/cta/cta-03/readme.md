@@ -1,6 +1,6 @@
 # Cta-03
 
-## layout
+## Layout
 
 ![alt text][cta-03]
 
@@ -18,25 +18,26 @@
 
 ## Editable variables
 
-- $border-radius: false by default
-- $title-font
-- $subtitle-font
-- $btn-class
 - $background-color
+- $border-radius: false by default
+- $btn-class
+- $btn-class-modifier: false by default
+- $subtitle-color,
+- $subtitle-font
 - $text-align: false by default
 - $title-color
-- $subtitle-color,
-- $btn-class-modifier: false by default
+- $title-font
 
 ### For Modifiers
 
 - $background-color
+- $btn-class-modifier: false by default
+- $subtitle-color,
 - $text-align
 - $title-color
-- $subtitle-color,
-- $btn-class-modifier: false by default
 
 ## Use
+
 To use it we have to import the css of the $btn-class in the entry
 
 ```sh

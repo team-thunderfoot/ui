@@ -39,12 +39,26 @@ path.resolve(
 - [g--card-08](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-08/readme.md)
 - [g--card-09](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-09/readme.md)
 - [g--card-10](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-10/readme.md)
+- [g--card-11](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-11/readme.md)
+- [g--card-12](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-12/readme.md)
+- [g--card-13](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-13/readme.md)
+- [g--card-14](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-14/readme.md)
+- [g--card-15](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-15/readme.md)
+- [g--card-16](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-16/readme.md)
+- [g--card-17](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-17/readme.md)
+- [g--card-18](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-18/readme.md)
+- [g--card-19](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-19/readme.md)
+- [g--card-20](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-20/readme.md)
 
 ### Cta
 
 - [g--cta-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-01/readme.md)
 - [g--cta-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-02/readme.md)
 - [g--cta-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-03/readme.md)
+
+### Lazy
+
+- [g--lazy-01](https://github.com/team-thunderfoot/ui/tree/main/src/ui/lazy/lazy-01)
 
 ### Link
 

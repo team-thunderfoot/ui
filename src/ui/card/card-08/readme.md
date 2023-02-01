@@ -59,6 +59,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $mask-color: rgba(map-get($color-options, b), .5),
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        // $link-class-modifier: default,
         // $text-align: default
     );
 }

@@ -52,6 +52,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $border-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         // $background-color: default,
+        // $link-class-modifier: default,
         // $text-align: default
     );
 }

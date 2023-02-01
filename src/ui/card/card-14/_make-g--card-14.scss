@@ -45,6 +45,7 @@
     $border-color,
     $title-color,
     $background-color: false,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     border-color: $border-color;
@@ -86,6 +87,12 @@
     }
     
     .g--card-14 {
+        @if $link-class-modifier {
+            &__link{
+                @extend .#{$link-class-modifier} !optional;
+            }
+        }
+        
         &__title{
             color: $title-color;
         }

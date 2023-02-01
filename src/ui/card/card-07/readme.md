@@ -50,6 +50,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-07-modifier(
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        // $link-class-modifier: default,
         // $text-align: default
     );
 }

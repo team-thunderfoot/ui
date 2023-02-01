@@ -53,6 +53,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-16-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
+        // $link-class-modifier: default
         // $text-align: default
     );
 }

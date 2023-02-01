@@ -65,6 +65,7 @@
 @mixin make-card-16-modifier(
     $mask-color,
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     &::before{
@@ -111,6 +112,12 @@
     
     .g--card-16 {
         &__wrapper{
+            @if $link-class-modifier {
+                &__link{
+                    @extend .#{$link-class-modifier} !optional;
+                }
+            }
+
             &__title{
                 color: $title-color;
             }

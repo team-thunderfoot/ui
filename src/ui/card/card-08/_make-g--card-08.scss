@@ -77,6 +77,7 @@
     $mask-color,
     $subtitle-color,
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     &::before{
@@ -123,6 +124,12 @@
     
     .g--card-08 {
         &__wrapper{
+            @if $link-class-modifier {
+                &__link{
+                    @extend .#{$link-class-modifier} !optional;
+                }
+            }
+            
             &__title{
                 color: $title-color;
             }

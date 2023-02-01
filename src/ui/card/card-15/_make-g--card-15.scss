@@ -38,6 +38,7 @@
 
 @mixin make-card-15-modifier(
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     @if $text-align == "center" {
@@ -73,6 +74,12 @@
     }
 
     .g--card-15 {
+        @if $link-class-modifier {
+            &__link{
+                @extend .#{$link-class-modifier} !optional;
+            }
+        }
+        
         &__title{
             color: $title-color;
         }

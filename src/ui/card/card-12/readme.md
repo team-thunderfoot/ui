@@ -11,7 +11,7 @@
 ```sh
 <div class="g--card-12" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
     <div class="g--card-12__wrapper">
-    <img src="/src/img/global-components/card/card-img-placeholder.png" alt="" class="g--card-12__wrapper__media">
+    <img src="/src/img/global-components/card/card-img-placeholder.png" alt="" class="g--card-12__wrapper__media g--lazy-01">
     <h3 class="g--card-12__wrapper__title">Card 12</h3>
     </div>
 </div>

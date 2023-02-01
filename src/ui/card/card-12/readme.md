@@ -1,5 +1,11 @@
 # Card-12
 
+## Layout
+
+![alt text][card-12]
+
+[card-12]: /src/img/global-components/card/card-12.png
+
 ## Html for a card
 
 ```sh
@@ -11,29 +17,36 @@
 </div>
 ```
 
-## editable variables
-- $background-size
+## Editable variables
+
 - $background-position
-- $title-font
+- $background-size
+- $border-radius: false by default
 - $mask-color
+- $text-align: false by default
+- $title-color
+- $title-font
+
+### For modifiers
+
+- $subtitle-color
+- $text-align
 - $title-color
 
-## use
+## Use
+
 ```sh
 .g--card-12{
     @include make-card-12(
-        $background-size: cover,
         $background-position: center,
+        $background-size: cover,
         $title-font: c,
+        // $border-radius: default,
     );
-    @include make-card-12-color(
+    @include make-card-12-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }
 ```
-
-## layout
-![alt text][card-12]
-
-[card-12]: /src/img/global-components/card/card-12.png 

@@ -1,0 +1,70 @@
+$space-values: (
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  10
+) !default;
+
+@mixin make-spaces($values, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0, set it global without media queries
+    @if ($breakpoint-value == 0) {
+      @each $value in $values {
+        .f--row--gy-#{$value} {
+          row-gap: calc(#{$value}*#{$measure});
+        }
+      }
+    }
+    // breakpoint values that not equal to 0
+    @else {
+      @media screen and ($viewport-type: $breakpoint-value) {
+        @each $value in $values {
+          .f--row--gy-#{$breakpoint-name}-#{$value} {
+            row-gap: calc(#{$value}*#{$measure});
+          }
+        }
+      }
+    }
+  }
+}
+@include make-spaces($space-values, $breakpoints-grid);
+
+
+// @mixin make-spaces($values, $breakpoints) {
+//   @each $breakpoint-name, $breakpoint-value in $breakpoints {
+//     // if xs value = 0, set it global without media queries
+//     @if ($breakpoint-value == 0) {
+//       @each $value in $values {
+//         .f--row--gx-#{$value} {
+//           margin-left: calc(#{$value} * #{$measure} * .5 * -1);
+//           margin-right: calc(#{$value} * #{$measure} * .5 * -1);
+//           & > [class^="f--col"],
+//           & > [class*="f--col-"] {
+//               padding-right: calc(#{$value}*#{$measure}*.5);
+//               padding-left: calc(#{$value}*#{$measure}*.5);
+//           }
+//         }
+//       }
+//     }
+//     // breakpoint values that not equal to 0
+//     @else {
+//       @media screen and ($viewport-type: $breakpoint-value) {
+//         @each $value in $values {
+//           .f--row--gx-#{$breakpoint-name}-#{$value} {
+//             margin-left: calc(#{$value} * #{$measure} * .5 * -1);
+//             margin-right: calc(#{$value} * #{$measure} * .5 * -1);
+//             & > [class^="f--col"],
+//             & > [class*="f--col-"] {
+//                 padding-right: calc(#{$value}*#{$measure}*.5);
+//                 padding-left: calc(#{$value}*#{$measure}*.5);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// @include make-spaces($space-values, $breakpoints-grid);

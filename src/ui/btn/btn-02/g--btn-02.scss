@@ -20,4 +20,15 @@
             $text-color-hover: map-get($color-options, b),
         );
     }
+
+    &--third {
+        @include make-btn-02-modifier(
+            $background-color: map-get($color-options, a),
+            $background-color-hover: transparent,
+            $border-color: map-get($color-options, a),
+            $border-color-hover: map-get($color-options, a),
+            $text-color: map-get($color-options, b),
+            $text-color-hover: map-get($color-options, a),
+        );
+    }
 }

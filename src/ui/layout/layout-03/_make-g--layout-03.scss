@@ -1,4 +1,4 @@
-@mixin make-layout-02(
+@mixin make-layout-03(
     $subtitle-font,
     $title-font,
 ) {
@@ -8,7 +8,8 @@
     @media all and ($viewport-type: $tablets) {
         padding: $measure * 10 0;
     }
-
+    &__media{}
+    &__meta{}
     &__title{
         @extend .f--font-#{$title-font} !optional;
         margin-bottom: $measure*4;
@@ -20,9 +21,10 @@
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
     }
+    &__btn{}
 }
 
-@mixin make-layout-02-modifier(
+@mixin make-layout-03-modifier(
     $subtitle-color,
     $title-color,
     $background-color: false,
@@ -41,12 +43,15 @@
         text-align: right;
     }
 
-    .g--layout-02{
+    .g--cta-01{
+        &__media{}
+        &__meta{}
         &__title{
             color: $title-color;
         }
         &__subtitle{
             color: $subtitle-color;
         }
+        &__btn{}
     }
 }

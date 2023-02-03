@@ -1,0 +1,12 @@
+.g--layout-02{
+    @include make-layout-02(
+        $title-font: a,
+        $subtitle-font: f,
+    );
+    @include make-layout-02-modifier(
+        // $background-color: map-get($color-options, e),
+        // $text-align: center,
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

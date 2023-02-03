@@ -5,7 +5,7 @@
         $subtitle-font: d,
     );
     @include make-layout-01-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: map-get($color-options, d),
         // $text-align: center,
         $btn-class-modifier: g--btn-02--second,
         $title-color: map-get($color-options, a),

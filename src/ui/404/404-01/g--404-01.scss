@@ -1,0 +1,13 @@
+.g--404-01 {
+    @include make-404-01(
+        $btn-class: g--btn-02,
+        $min-height: calc(100vh - 109px),
+        $title-font: c,
+    );
+    @include make-404-01-modifier(
+        $title-color: map-get($color-options, a),
+        // $background-color: default,
+        $btn-class-modifier: g--btn-02--second,
+        // $text-align: default
+    );
+}

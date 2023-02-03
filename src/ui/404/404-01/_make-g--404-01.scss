@@ -1,0 +1,118 @@
+@mixin make-404-01(
+    $btn-class,
+    $min-height,
+    $title-font,
+
+) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: $min-height;
+    padding: $measure * 15 0;
+    text-align: center;
+
+    // @media all and ($viewport-type: $tabletm) {
+    //     min-height: $min-height-tabletm
+    // }
+
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 10 0;
+    }
+    
+    // @media all and ($viewport-type: $mobile) {
+    //     min-height: $min-height-mobile;
+    // }
+
+    &__media {
+        display: block;
+        width: auto;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: $measure * 4;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure * 4;
+    }
+
+    &__subtitle {
+        margin-bottom: $measure * 4;
+    }
+
+    &__btn {
+        @extend .#{$btn-class} !optional;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@mixin make-404-01-modifier(
+    $title-color,
+    $background-color: false,
+    $btn-class-modifier: false,
+    $text-align: false
+) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--404-01 {
+            &__media {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &__btn{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--404-01 {
+            &__media {
+                margin-left: 0;
+                margin-right: auto;
+            }
+            &__btn{
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--404-01 {
+            &__media {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            &__btn{
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .g--404-01 {
+        &__title {
+            color: $title-color;
+        }
+
+        @if $btn-class-modifier {
+            &__btn{
+                @extend .#{$btn-class-modifier} !optional;
+            }
+        }
+    }
+}

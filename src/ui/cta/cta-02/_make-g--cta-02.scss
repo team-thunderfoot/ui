@@ -35,6 +35,8 @@
 
     &__btn{
         @extend .#{$btn-class} !optional;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

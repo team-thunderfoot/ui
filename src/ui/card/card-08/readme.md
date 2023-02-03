@@ -55,7 +55,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $title-font: c,
         // $border-radius: default,
     );
-    @include make-card-08-color(
+    @include make-card-08-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),

@@ -3,7 +3,7 @@ $align-properties:(
   // stretch:stretch,
   // flex-start:flex-start,
   // flex-end:flex-end,
-  // center:center
+  center:center
 );
 
 @mixin flex-alignitems($align-prop,$breakpoints){

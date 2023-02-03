@@ -1,57 +1,148 @@
 @mixin make-layout-03(
-    $subtitle-font,
+    $img-border-radius: false,
+    $meta-font,
     $title-font,
+    $subtitle-font,
+    $btn-class
 ) {
     padding: $measure * 15 0;
-    text-align: center;
 
     @media all and ($viewport-type: $tablets) {
         padding: $measure * 10 0;
     }
-    &__media{}
-    &__meta{}
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        margin-bottom: $measure*4;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure * 3;
+    &__media-wrapper{
+        width: 100%;
+        position: relative;
+        min-height: 500px;
+        @if $img-border-radius {
+            border-radius: $img-border-radius;
+            overflow: hidden
+        }
+        @media all and ($viewport-type: $mobile) {
+            min-height: 0;
+            height: auto;
+        }
+        &__media{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
     }
-    &__subtitle{
-        @extend .f--font-#{$subtitle-font} !optional;
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: $measure*7 0;
+        &__meta{
+            @extend .f--font-#{$meta-font} !optional;
+            margin-bottom: $measure * 7;
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 5;
+            }
+        }
+        &__title{
+            @extend .f--font-#{$title-font} !optional;
+            margin-bottom: $measure*4;
+    
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 3;
+            }
+        }
+        &__subtitle{
+            @extend .f--font-#{$subtitle-font} !optional;
+            margin-bottom: $measure*4;
+    
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 3;
+            }
+        }
+        &__ft{
+            &__btn{
+                @extend .#{$btn-class} !optional;
+                width: fit-content;
+                @media all and ($viewport-type: $mobile) {
+                    margin-bottom: $measure * 3;
+                }
+            }
+        }
     }
-    &__btn{}
 }
 
 @mixin make-layout-03-modifier(
-    $subtitle-color,
+    $meta-color,
     $title-color,
+    $subtitle-color,
     $background-color: false,
-    $text-align: false
+    $text-align: false,
+    $btn-class-modifier: false,
 ) {
     @if $background-color {
         background-color: $background-color;
     }
     @if $text-align == "center" {
         text-align: center;
+        .g--layout-03{
+            &__wrapper{
+                &__ft{
+                    &__btn{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
     }
     @if $text-align == "left" {
         text-align: left;
+        .g--layout-03{
+            &__wrapper{
+                &__ft{
+                    &__btn{
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
     }
     @if $text-align == "right" {
         text-align: right;
+        .g--layout-03{
+            &__wrapper{
+                &__ft{
+                    &__btn{
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
     }
 
-    .g--cta-01{
+    .g--layout-03{
         &__media{}
-        &__meta{}
-        &__title{
-            color: $title-color;
+        &__wrapper{
+            &__meta{
+                color: $meta-color;
+            }
+            &__title{
+                color: $title-color;
+            }
+            &__subtitle{
+                color: $subtitle-color;
+            }
+            &__ft{
+                @if $btn-class-modifier {
+                    &__btn{
+                        @extend .#{$btn-class-modifier} !optional;
+                    }
+                }
+            }
         }
-        &__subtitle{
-            color: $subtitle-color;
-        }
-        &__btn{}
     }
 }

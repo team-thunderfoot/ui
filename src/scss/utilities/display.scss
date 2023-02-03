@@ -7,7 +7,7 @@ $display-properties:(
   // table:table,
   // table-cell:table-cell,
   // table-row:table-row,
-  // flex:flex
+  flex:flex
   // inline-flex:inline-flex
 );
 @mixin display-alignment($display-prop,$breakpoints){

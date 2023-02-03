@@ -1,11 +1,15 @@
-.g--layout-02{
-    @include make-layout-02(
-        $title-font: a,
+.g--layout-03{
+    @include make-layout-03(
+        $img-border-radius: $measure*4,
+        $meta-font: g,
+        $title-font: c,
         $subtitle-font: f,
+        $btn-class: g--btn-01
     );
-    @include make-layout-02-modifier(
+    @include make-layout-03-modifier(
         // $background-color: map-get($color-options, e),
         // $text-align: center,
+        $meta-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
     );

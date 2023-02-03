@@ -1,0 +1,14 @@
+.g--layout-01{
+    @include make-layout-01(
+        $btn-class: g--btn-01,
+        $title-font: b,
+        $subtitle-font: d,
+    );
+    @include make-layout-01-modifier(
+        $background-color: map-get($color-options, e),
+        // $text-align: center,
+        $btn-class-modifier: g--btn-02--second,
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

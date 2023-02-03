@@ -1,0 +1,93 @@
+@mixin make-layout-01(
+    $btn-class,
+    $subtitle-font,
+    $title-font,
+) {
+    padding: $measure * 15 0;
+    text-align: center;
+
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 10 0;
+    }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure*4;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 3;
+        }
+    }
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        margin-bottom: $measure*4;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 3;
+        }
+    }
+
+    &__btn{
+        @extend .#{$btn-class} !optional;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@mixin make-layout-01-modifier(
+    $subtitle-color,
+    $title-color,
+    $background-color: false,
+    $btn-class-modifier: false,
+    $text-align: false
+) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--layout-01 {
+            &__btn{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--layout-01 {
+            &__btn{
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--layout-01 {
+            &__btn{
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .g--cta-01{
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
+        
+        @if $btn-class-modifier {
+            &__btn{
+                @extend .#{$btn-class-modifier} !optional;
+            }
+        }
+    }
+}

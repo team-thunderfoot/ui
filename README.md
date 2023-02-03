@@ -13,11 +13,9 @@ Import all mixins before any global component
 ```
 
 ### Wordpres
-Import in webpack.dev.js globally, same as mixins and vars
+Create one SCSS entry for each JS entry and import global mixins before any global component
 ```sh
-path.resolve(
-    __dirname, "./node_modules/@teamthunderfoot/ui/src/mixins.scss"
-),
+@import '@/node_modules/@teamthunderfoot/ui/src/mixins';
 ```
 
 ## UI with our most used components
@@ -56,9 +54,13 @@ path.resolve(
 - [g--cta-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-02/readme.md)
 - [g--cta-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-03/readme.md)
 
+### Layout
+
+- [g--layout-01](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-01/readme.md)
+
 ### Lazy
 
-- [g--lazy-01](https://github.com/team-thunderfoot/ui/tree/main/src/ui/lazy/lazy-01)
+- [g--lazy-01](https://github.com/team-thunderfoot/ui/tree/main/src/ui/lazy/lazy-01/readme.md)
 
 ### Link
 

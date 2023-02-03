@@ -69,6 +69,11 @@
             padding-left: $measure * 5;
             padding-right: $measure * 5;
         }
+
+        &__btn {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     @if $text-align == "left" {
@@ -89,6 +94,11 @@
             padding-left: $measure * 5;
             padding-right: $measure * 5;
         }
+
+        &__btn {
+            margin-left: 0;
+            margin-right: auto;
+        }
     }
 
     @if $text-align == "right" {
@@ -108,6 +118,11 @@
         @media all and ($viewport-type: $tablets) {
             padding-left: $measure * 5;
             padding-right: $measure * 5;
+        }
+
+        &__btn {
+            margin-left: auto;
+            margin-right: 0;
         }
     }
 

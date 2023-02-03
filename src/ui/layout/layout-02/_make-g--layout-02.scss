@@ -1,0 +1,52 @@
+@mixin make-layout-02(
+    $subtitle-font,
+    $title-font,
+) {
+    padding: $measure * 15 0;
+    text-align: center;
+
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 10 0;
+    }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure*4;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 3;
+        }
+    }
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+    }
+}
+
+@mixin make-layout-02-modifier(
+    $subtitle-color,
+    $title-color,
+    $background-color: false,
+    $text-align: false
+) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+    @if $text-align == "center" {
+        text-align: center;
+    }
+    @if $text-align == "left" {
+        text-align: left;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--cta-01{
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
+    }
+}

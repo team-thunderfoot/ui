@@ -57,7 +57,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 ```sh
 .g--layout-04{
     @include make-layout-04(
-        $img-border-radius: $measure*4,
+        // $img-border-radius: default,
         $meta-font: g,
         $title-font: c,
         $subtitle-font: f,

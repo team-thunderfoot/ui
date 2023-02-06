@@ -2,8 +2,43 @@
     $btn-class,
     $min-height,
     $title-font,
+    $min-height-desktop: false,
+    $min-height-tabletl: false,
+    $min-height-tabletm: false,
+    $min-height-tablets: false,
+    $min-height-mobile: false
 
 ) {
+    @if $min-height-desktop {
+        @media all and ($viewport-type: $desktop) {
+            min-height: $min-height-desktop;
+        }
+    }
+
+    @if $min-height-tabletl {
+        @media all and ($viewport-type: $tabletl) {
+            min-height: $min-height-tabletl;
+        }
+    }
+
+    @if $min-height-tabletm {
+        @media all and ($viewport-type: $tabletm) {
+            min-height: $min-height-tabletm;
+        }
+    }
+
+    @if $min-height-tablets {
+        @media all and ($viewport-type: $tablets) {
+            min-height: $min-height-tablets;
+        }
+    }
+
+    @if $min-height-mobile {
+        @media all and ($viewport-type: $mobile) {
+            min-height: $min-height-mobile;
+        }
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,17 +47,9 @@
     padding: $measure * 15 0;
     text-align: center;
 
-    // @media all and ($viewport-type: $tabletm) {
-    //     min-height: $min-height-tabletm
-    // }
-
     @media all and ($viewport-type: $tablets) {
         padding: $measure * 10 0;
     }
-    
-    // @media all and ($viewport-type: $mobile) {
-    //     min-height: $min-height-mobile;
-    // }
 
     &__media {
         display: block;

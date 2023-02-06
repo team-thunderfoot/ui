@@ -3,6 +3,11 @@
         $btn-class: g--btn-02,
         $min-height: calc(100vh - 109px),
         $title-font: c,
+        // $min-height-desktop: default,
+        // $min-height-tabletl: default,
+        // $min-height-tabletm: default,
+        // $min-height-tablets: default,
+        // $min-height-mobile: default
     );
     @include make-404-01-modifier(
         $title-color: map-get($color-options, a),

@@ -58,6 +58,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--layout-01](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-01/readme.md)
 - [g--layout-02](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-02/readme.md)
+- [g--layout-03](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-03/readme.md)
 
 ### Lazy
 

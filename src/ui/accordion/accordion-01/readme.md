@@ -51,7 +51,6 @@
         $border-color: map-get($color-options, a),
         $icon-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $background-color-hd: default,
     );
 }
 ```

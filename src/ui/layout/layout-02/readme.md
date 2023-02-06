@@ -4,7 +4,7 @@
 
 ![alt text][layout-02]
 
-[layout-02]: /src/img/global-components/layout/layout-02.jpg
+[layout-02]: /src/img/global-components/layout/layout-02.png
 
 ## Html
 

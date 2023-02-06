@@ -29,7 +29,7 @@
     &__bd {
         max-height: 0;
         overflow: hidden;
-        transition: max-height $time-c $ease-entrance-a;
+        transition: max-height $time-c cubic-bezier(0,1,0,1);
 
         &__content {
             padding: 0 $measure * 4 $measure * 3;
@@ -46,7 +46,7 @@
 
         &__bd {
             max-height: 99em;
-            transition: max-height $time-c $ease-exit-a;
+            transition: max-height $time-c cubic-bezier(1,0,1,0);
         }
     }
 }

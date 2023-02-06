@@ -1,20 +1,31 @@
-# Layout-02
+# Layout-03
 
 ## Layout
 
-![alt text][layout-02]
+![alt text][layout-03]
 
-[layout-02]: /src/img/global-components/layout/layout-02.jpg
+[layout-03]: /src/img/global-components/layout/layout-03.png
 
 ## Html
 
 ```sh
-<section class="g--layout-02">
+<section class="g--layout-03">
     <div class="f--container">
-        <div class="f--row justify-content--center">
-            <div class="f--col-8 f--col-tabletm-10 f--col-mobile-12">
-                <h2 class="g--layout-02__title">Layout 02</h2>
-                <p class="g--layout-02__subtitle">Lorem ipsum dolor sit amet consectetur. Montes massa tellus massa libero mattis. Tempus orci felis augue suspendisse massa quam. Elementum vitae neque ac enim eros. Sed feugiat a facilisis tellus pulvinar viverra.</p>
+        <div class="f--row">
+            <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
+                <div class="g--layout-03__media-wrapper">
+                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--layout-03__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
+                </div>
+            </div>
+            <div class="f--col-5 f--offset-1 f--col-tabletm-6 f--offset-tabletm-0 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
+                <div class="g--layout-03__wrapper">
+                    <p class="g--layout-03__wrapper__meta">Lorem Ipsum</p>
+                    <h2 class="g--layout-03__wrapper__title">Lorem ipsum dolor sit amet consectetur.</h2>
+                    <p class="g--layout-03__wrapper__subtitle">Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie vulputate venenatis velit.</p>
+                    <div class="g--layout-03__wrapper__ft">
+                        <a href="#" class="g--layout-03__wrapper__ft__btn" target="_blank" rel="noopener noreferrer">Button</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,33 +34,48 @@
 
 ## Editable variables
 
-- $background-color: false by default
-- $subtitle-font
-- $subtitle-color
-- $text-align: false by default
-- $title-color
+- $img-border-radius: false by default
+- $meta-font
 - $title-font
+- $subtitle-font
+- $btn-class
+- $meta-color
+- $title-color
+- $subtitle-color
+- $background-color: false by default
+- $text-align: false by default
+- $btn-class-modifier: false by default
 
 ### For Modifiers
 
-- $background-color
-- $subtitle-color
-- $text-align
+- $meta-color
 - $title-color
+- $subtitle-color
+- $background-color
+- $text-align
+- $btn-class-modifier
 
 ## Use
 
+To see it correctly we have to make sure display--flex in utilities is included in the project.
+For the image, we have to add width, height and aspect ratio dynamically.
+
 ```sh
-.g--layout-02{
-    @include make-layout-02(
-        $subtitle-font: d,
-        $title-font: b,
+.g--layout-03{
+    @include make-layout-03(
+        // $img-border-radius: default,
+        $meta-font: g,
+        $title-font: c,
+        $subtitle-font: f,
+        $btn-class: g--btn-01
     );
-    @include make-layout-02-modifier(
+    @include make-layout-03-modifier(
         // $background-color: default,
-        $subtitle-color: map-get($color-options, a),
         // $text-align: default,
+        $meta-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+        // $btn-class-modifier: default,
     );
 }
 ```

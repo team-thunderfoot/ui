@@ -1,0 +1,15 @@
+.g--layout-04{
+    @include make-layout-04(
+        // $img-border-radius: $measure*4,
+        $meta-font: f,
+        $title-font: c,
+        $subtitle-font: d,
+    );
+    @include make-layout-04-modifier(
+        $background-color: map-get($color-options, d),
+        // $text-align: center,
+        $meta-color: map-get($color-options, g),
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

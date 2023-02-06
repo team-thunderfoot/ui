@@ -1,9 +1,8 @@
-@mixin make-layout-03(
+@mixin make-layout-04(
     $img-border-radius: false,
     $meta-font,
     $title-font,
-    $subtitle-font,
-    $btn-class
+    $subtitle-font
 ) {
     padding: $measure * 15 0;
 
@@ -64,73 +63,31 @@
         }
         &__subtitle{
             @extend .f--font-#{$subtitle-font} !optional;
-            margin-bottom: $measure*4;
-    
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 3;
-            }
-        }
-        &__ft{
-            &__btn{
-                @extend .#{$btn-class} !optional;
-                width: fit-content;
-            }
         }
     }
 }
 
-@mixin make-layout-03-modifier(
+@mixin make-layout-04-modifier(
     $meta-color,
     $title-color,
     $subtitle-color,
     $background-color: false,
     $text-align: false,
-    $btn-class-modifier: false,
 ) {
     @if $background-color {
         background-color: $background-color;
     }
     @if $text-align == "center" {
         text-align: center;
-        .g--layout-03{
-            &__wrapper{
-                &__ft{
-                    &__btn{
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
     }
     @if $text-align == "left" {
         text-align: left;
-        .g--layout-03{
-            &__wrapper{
-                &__ft{
-                    &__btn{
-                        margin-left: 0;
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
     }
     @if $text-align == "right" {
         text-align: right;
-        .g--layout-03{
-            &__wrapper{
-                &__ft{
-                    &__btn{
-                        margin-left: auto;
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
     }
 
-    .g--layout-03{
+    .g--layout-04{
         &__media{}
         &__wrapper{
             &__meta{
@@ -141,13 +98,6 @@
             }
             &__subtitle{
                 color: $subtitle-color;
-            }
-            &__ft{
-                @if $btn-class-modifier {
-                    &__btn{
-                        @extend .#{$btn-class-modifier} !optional;
-                    }
-                }
             }
         }
     }

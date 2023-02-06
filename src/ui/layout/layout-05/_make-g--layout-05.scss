@@ -1,42 +1,14 @@
-@mixin make-layout-03(
-    $img-border-radius: false,
+@mixin make-layout-05(
     $meta-font,
     $title-font,
     $subtitle-font,
-    $btn-class
+    $btn-class,
+    $img-border-radius: false,
 ) {
     padding: $measure * 15 0;
 
     @media all and ($viewport-type: $tablets) {
         padding: $measure * 10 0;
-    }
-    &__media-wrapper{
-        width: 100%;
-        position: relative;
-        min-height: 500px;
-        @if $img-border-radius {
-            border-radius: $img-border-radius;
-            overflow: hidden
-        }
-        @media all and ($viewport-type: $tablets) {
-            min-height: 0;
-            height: auto;
-            margin-bottom: $measure*5;
-        }
-        &__media{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            @media all and ($viewport-type: $tablets) {
-                position: relative;
-                top: auto;
-                left: auto;
-            }
-        }
     }
     &__wrapper{
         width: 100%;
@@ -46,6 +18,7 @@
         padding: $measure*7 0;
         @media all and ($viewport-type: $tablets) {
             padding: 0;
+            margin-bottom: $measure*5;
         }
         &__meta{
             @extend .f--font-#{$meta-font} !optional;
@@ -77,9 +50,36 @@
             }
         }
     }
+    &__media-wrapper{
+        width: 100%;
+        position: relative;
+        min-height: 500px;
+        @if $img-border-radius {
+            border-radius: $img-border-radius;
+            overflow: hidden
+        }
+        @media all and ($viewport-type: $tablets) {
+            min-height: 0;
+            height: auto;
+        }
+        &__media{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            @media all and ($viewport-type: $tablets) {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
 }
 
-@mixin make-layout-03-modifier(
+@mixin make-layout-05-modifier(
     $meta-color,
     $title-color,
     $subtitle-color,
@@ -92,7 +92,7 @@
     }
     @if $text-align == "center" {
         text-align: center;
-        .g--layout-03{
+        .g--layout-05{
             &__wrapper{
                 &__ft{
                     &__btn{
@@ -105,7 +105,7 @@
     }
     @if $text-align == "left" {
         text-align: left;
-        .g--layout-03{
+        .g--layout-05{
             &__wrapper{
                 &__ft{
                     &__btn{
@@ -118,7 +118,7 @@
     }
     @if $text-align == "right" {
         text-align: right;
-        .g--layout-03{
+        .g--layout-05{
             &__wrapper{
                 &__ft{
                     &__btn{
@@ -130,8 +130,7 @@
         }
     }
 
-    .g--layout-03{
-        &__media{}
+    .g--layout-05{
         &__wrapper{
             &__meta{
                 color: $meta-color;

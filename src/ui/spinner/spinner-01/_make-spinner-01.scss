@@ -26,9 +26,10 @@
 }
 
 @mixin make-spinner-01-modifier(
-    $spinner-color
+    $spinner-color,
+    $background-color
 ) {
-    border-color: $spinner-color $spinner-color $spinner-color transparent;
+    border-color: $spinner-color $spinner-color $spinner-color $background-color;
 
     &:before, &:after {
         background-color: $spinner-color;

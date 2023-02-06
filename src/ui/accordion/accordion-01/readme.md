@@ -26,7 +26,6 @@
 
 ## Editable variables
 
-- $background-color-hd: false by default
 - $border-color
 - $border-width
 - $icon-color
@@ -35,7 +34,6 @@
 
 ### For modifiers
 
-- $background-color-hd
 - $border-color
 - $icon-color
 - $title-color
@@ -56,4 +54,69 @@
         // $background-color-hd: default,
     );
 }
+```
+
+## Install the package
+
+```sh
+npm i @andresclua/accordion
+```
+
+### JS
+
+Import the package and initialize it.
+
+```sh
+import Accordion from "@andresclua/accordion";
+
+
+const accordion = new Accordion({
+  accActive: "accordion-1", //id of the initially active accordion
+  accActiveClass: "g--accordion-01--is-active", //class for the active accordion
+  accClose: true, //preset if the accordion should start closed
+  accAllOpen: false, //preset if all accordion items should start open
+  accTrigger: "tf-ds-acc-target", //class for all links that trigger an accordion item
+  accBody: "tf-ds-acc-body", //class for the accordion body
+  onChange: () => {
+    //do something
+  },
+});
+```
+
+### Nuxt
+
+1- Create a file accordion.js inside plugins folder & add this.
+
+```sh
+import Accordion from '@andresclua/accordion';
+
+export default ({ app }, inject) => {
+    inject('Accordion', data => new Accordion(data) );
+};
+```
+
+2- Reference in your nuxt.config.js
+
+```sh
+plugins: [
+    { src: '~/plugins/accordion.js', ssr: false }
+  ]
+```
+
+3- Use it in your .vue file
+
+```sh
+mounted() {
+   const accordion = this.$Accordion({
+        accActive : 'accordion-1', //id of the initially active accordion
+        accActiveClass : 'b--accordion-a--is-active', //class for the active accordion
+        accClose : true, //preset if the accordion should start closed
+        accAllOpen : false, //preset if all accordion items should start open
+        accTrigger : 'tf-ds-acc-target', //class for all links that trigger an accordion item
+        accBody : 'tf-ds-acc-body', //class for the accordion body
+        onChange : () =>{
+            //do something
+        }
+    });
+},
 ```

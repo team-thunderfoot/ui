@@ -55,15 +55,11 @@
     $border-color,
     $icon-color,
     $title-color,
-    $background-color-hd: false,
 ) {
     border-color: $border-color;
 
     .g--accordion-01 {
         &__hd {
-            @if $background-color-hd {
-                background-color: $background-color-hd;
-            }
 
             &__title {
                 color: $title-color;

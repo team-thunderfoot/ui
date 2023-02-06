@@ -57,6 +57,8 @@
 
 ## Install the package
 
+[@andresclua/accordion](https://www.jsdelivr.com/package/npm/@andresclua/accordion)
+
 ```sh
 npm i @andresclua/accordion
 ```

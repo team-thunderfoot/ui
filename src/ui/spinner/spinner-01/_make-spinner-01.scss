@@ -1,0 +1,46 @@
+@mixin make-spinner-01() {
+    border: $measure solid;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    height: $measure * 6;
+    width: $measure * 6;
+    animation: spinner 1.5s infinite;
+
+    &:before, &:after {
+        content: '';
+        width: $measure;
+        height: $measure;
+        border-radius: 50%;
+        position: absolute;
+        left: -2px;
+    }
+
+    &:before {
+        top: -2px;
+    }
+      
+    &:after {
+        bottom: -2px;
+    }
+}
+
+@mixin make-spinner-01-modifier(
+    $spinner-color
+) {
+    border-color: $spinner-color $spinner-color $spinner-color transparent;
+
+    &:before, &:after {
+        background-color: $spinner-color;
+    }
+}
+
+@keyframes spinner {
+	0% {
+        transform: rotate(0deg);
+    }
+
+	100% { 
+        transform: rotate(360deg);
+    }
+}

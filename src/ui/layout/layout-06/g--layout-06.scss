@@ -1,0 +1,15 @@
+.g--layout-06{
+    @include make-layout-06(
+        $meta-font: f,
+        $title-font: b,
+        $subtitle-font: f,
+        // $img-border-radius: $measure*4,
+    );
+    @include make-layout-06-modifier(
+        $background-color: map-get($color-options, d),
+        // $text-align: right,
+        $meta-color: map-get($color-options, f),
+        $title-color: map-get($color-options, c),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

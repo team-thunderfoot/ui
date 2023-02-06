@@ -19,7 +19,6 @@
 @import './scss/components/section/c--section-b.scss';
 @import './scss/components/section/c--section-c.scss';
 
-
 //* spacing
 @import './scss/components/spacing/c--sp-a.scss';
 @import './scss/components/spacing/c--sp-b.scss';
@@ -34,11 +33,8 @@
 @import './scss/components/gap/c--gap-d.scss';
 @import './scss/components/gap/c--gap-e.scss';
 
-//* btn
-@import './ui/btn/btn-02/g--btn-02.scss';
-
-//* 404
-@import "./ui/404/404-01/g--404-01.scss";
-
 //* link
 @import './ui/link/link-01/g--link-01.scss';
+
+//* accordion
+@import './ui/accordion/accordion-01/g--accordion-01.scss';

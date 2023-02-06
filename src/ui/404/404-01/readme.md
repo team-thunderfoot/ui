@@ -2,9 +2,9 @@
 
 ## Layout
 
-![alt text][layout-01]
+![alt text][404-01]
 
-[layout-01]: /src/img/global-components/404/404-01.png
+[404-01]: /src/img/global-components/404/404-01.png
 
 ## Html
 

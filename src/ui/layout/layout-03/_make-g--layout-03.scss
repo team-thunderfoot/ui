@@ -18,9 +18,10 @@
             border-radius: $img-border-radius;
             overflow: hidden
         }
-        @media all and ($viewport-type: $mobile) {
+        @media all and ($viewport-type: $tablets) {
             min-height: 0;
             height: auto;
+            margin-bottom: $measure*5;
         }
         &__media{
             position: absolute;
@@ -30,6 +31,11 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            @media all and ($viewport-type: $tablets) {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
         }
     }
     &__wrapper{
@@ -38,6 +44,9 @@
         flex-direction: column;
         justify-content: center;
         padding: $measure*7 0;
+        @media all and ($viewport-type: $tablets) {
+            padding: 0;
+        }
         &__meta{
             @extend .f--font-#{$meta-font} !optional;
             margin-bottom: $measure * 7;

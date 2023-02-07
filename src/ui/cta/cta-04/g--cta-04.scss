@@ -1,0 +1,17 @@
+.g--cta-04{
+    @include make-cta-04(
+        $border-radius: $border-radius-a,
+        $background-position: left top,
+        $background-size: cover,
+        $title-font: b,
+        $subtitle-font: e,
+        $btn-class: g--btn-01,
+    );
+    @include make-cta-04-modifier(
+        $mask-color: rgba(map-get($color-options, a), .5),
+        $text-align: center,
+        $title-color: map-get($color-options, b),
+        $subtitle-color: map-get($color-options, b),
+        $btn-class-modifier: g--btn-01--second,
+    );
+}

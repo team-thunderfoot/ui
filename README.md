@@ -20,6 +20,14 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 ## UI with our most used components
 
+### 404
+
+- [g--404-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/404/404-01/readme.md)
+
+### Accordion
+
+- [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)
+
 ### Btn
 
 - [g--btn-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-01/readme.md)
@@ -48,12 +56,18 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--card-19](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-19/readme.md)
 - [g--card-20](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-20/readme.md)
 - [g--card-50](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-50/readme.md)
+- [g--card-57](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-57/readme.md)
 
 ### Cta
 
 - [g--cta-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-01/readme.md)
 - [g--cta-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-02/readme.md)
 - [g--cta-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-03/readme.md)
+
+### Icon
+
+- [g--icon-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/icon/icon-01/readme.md)
+- [g--icon-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/icon/icon-02/readme.md)
 
 ### Layout
 
@@ -81,3 +95,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 ### Pill
 
 - [g--pill-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/pill/pill-01/readme.md)
+
+### Spinner
+
+- [g--spinner-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/spinner/spinner-01/readme.md)

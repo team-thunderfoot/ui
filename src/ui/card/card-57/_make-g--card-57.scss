@@ -1,0 +1,54 @@
+@mixin make-card-57(
+    $img-border-radius: false,
+    $title-font,
+    $subtitle-font,
+) {
+    padding: 0 $measure*4;
+    &__media{
+        margin-bottom: $measure * 2;
+        height: 250px;
+        width: 100%;
+        display: block;
+        @if $img-border-radius {
+            border-radius: $border-radius;
+            overflow: hidden;
+        }
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+        @media all and ($viewport-type: $mobile) {
+            height: auto;
+        }
+    }
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+    }
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+    }
+}
+
+@mixin make-card-57-modifier(
+    $text-align: false,
+    $title-color,
+    $subtitle-color,
+) {
+    @if $text-align == "center" {
+        text-align: center;
+    }
+    @if $text-align == "left" {
+        text-align: left;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+    }
+    
+    .g--card-57 {
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
+    }
+}

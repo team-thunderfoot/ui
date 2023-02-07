@@ -1,0 +1,12 @@
+.g--card-57{
+    @include make-card-57(
+        // $img-border-radius: default,
+        $title-font: d,
+        $subtitle-font: f,
+    );
+    @include make-card-57-modifier(
+        // $text-align: default,
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+    );
+}

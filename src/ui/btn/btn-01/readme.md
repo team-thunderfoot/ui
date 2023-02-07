@@ -1,6 +1,6 @@
 # Btn-01
 
-## layout
+## Layout
 
 ![alt text][btn-01]
 ![alt text][btn-01--second]

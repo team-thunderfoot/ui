@@ -1,52 +1,49 @@
-.g--icon-01 {
-    width: $measure * 6;
-    height: $measure * 6;
-    border: 1px solid;
-    border-color: map-get($color-options, a );
-    border-radius: 100%;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    transition: all $time-a $ease-standard-a;
+.g--icon-02 {
+    @include make-icon-02(
+        $border-width: 1px,
+        $width: $measure * 6,
+        $height: $measure * 6
+    );
 
-    @media (hover : hover) {
-        &:hover {
-            border-color: map-get($color-options, g );
-        }
+    @include make-icon-02-modifier(
+        $background-color: transparent,
+        $border-color: map-get($color-options, a ),
+        $path-fill-color: map-get($color-options, a ),
+        // $background-color-hover: default,
+        $border-color-hover: map-get($color-options, g ),
+        $path-fill-color-hover: map-get($color-options, g ),
+    );
 
-        &:hover & {
-            &__artwork {
-                path {
-                    fill: map-get($color-options, g )
-                }
-            }
-        }
+    &--second {
+        @include make-icon-02-modifier(
+            $background-color: transparent,
+            $border-color: map-get($color-options, a ),
+            $path-fill-color: map-get($color-options, a ),
+            $background-color-hover: map-get($color-options, a ),
+            $border-color-hover: map-get($color-options, a ),
+            $path-fill-color-hover: map-get($color-options, b ),
+        );
     }
 
-    &__artwork {
-        path {
-            fill: map-get($color-options, a )
-        }
-        transition: all $time-b $ease-standard-a;
+    &--third {
+        @include make-icon-02-modifier(
+            $background-color: map-get($color-options, a ),
+            $border-color: map-get($color-options, a ),
+            $path-fill-color: map-get($color-options, b ),
+            $background-color-hover: map-get($color-options, g ),
+            $border-color-hover: map-get($color-options, g ),
+            $path-fill-color-hover: map-get($color-options, b ),
+        );
     }
 
-    // &--second {
-
-    //     @media (hover : hover) {
-    //         &:hover {
-    //             background: map-get($color-options, a );
-    //         }
-    
-    //         &:hover & {
-    //             &__artwork {
-    //                 path {
-    //                     fill: map-get($color-options, b )
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    &--fourth {
+        @include make-icon-02-modifier(
+            $background-color: map-get($color-options, a ),
+            $border-color: map-get($color-options, a ),
+            $path-fill-color: map-get($color-options, b ),
+            $background-color-hover: transparent,
+            $border-color-hover: map-get($color-options, a ),
+            $path-fill-color-hover: map-get($color-options, a ),
+        );
+    }
 }

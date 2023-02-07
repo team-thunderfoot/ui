@@ -17,7 +17,6 @@
     $icon-class-modifier: false
 ) {
     .g--social-01 {
-
         @if $icon-class-modifier {
             &__item {
                 @extend .#{$icon-class-modifier} !optional;

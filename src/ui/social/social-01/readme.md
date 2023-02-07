@@ -4,7 +4,7 @@
 
 ![alt text][social-01]
 
-[social-01]: /src/img/global-components/icon/icon-01/g--icon-01.png
+[social-01]: /src/img/global-components/social/g--social-01.png
 
 ## Html
 

@@ -1,7 +1,6 @@
-.g--spinner-01{
+.g--spinner-01 {
     @include make-spinner-01();
     @include make-spinner-01-modifier(
-        $spinner-color: map-get($color-options, g),
-        $background-color: transparent
+        $spinner-color: map-get($color-options, g)
     );
 }

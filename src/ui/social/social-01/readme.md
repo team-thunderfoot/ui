@@ -25,7 +25,7 @@
 
 ## Editable variables
 
-- $icon-class:
+- $icon-class
 - $icon-class-modifier: false by default
 
 ### For Modifiers

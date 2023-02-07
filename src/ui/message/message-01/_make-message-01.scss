@@ -1,0 +1,23 @@
+@mixin make-message-01(
+    $text-font
+) {
+    padding: $measure * 10;
+    text-align: center;
+
+    &__content {
+        @extend .f--font-#{$text-font} !optional;
+    }
+}
+
+@mixin make-message-01-modifier(
+    $background-color,
+    $text-color,
+) {
+    background: $background-color;
+
+    .g--message-01 {
+        &__content {
+            color: $text-color;
+        }
+    }
+}

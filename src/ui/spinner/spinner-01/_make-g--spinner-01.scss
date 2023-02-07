@@ -1,38 +1,16 @@
 @mixin make-spinner-01() {
-    border: $measure solid;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    height: $measure * 6;
-    width: $measure * 6;
-    animation: spinner 1.5s infinite;
-
-    &:before, &:after {
-        content: '';
-        width: $measure;
-        height: $measure;
-        border-radius: 50%;
-        position: absolute;
-        left: -2px;
-    }
-
-    &:before {
-        top: -2px;
-    }
-      
-    &:after {
-        bottom: -2px;
+    svg {
+        animation: spinner 1.5s infinite;
     }
 }
 
 @mixin make-spinner-01-modifier(
     $spinner-color,
-    $background-color
 ) {
-    border-color: $spinner-color $spinner-color $spinner-color $background-color;
-
-    &:before, &:after {
-        background-color: $spinner-color;
+    svg {
+        path {
+            fill: $spinner-color
+        }
     }
 }
 

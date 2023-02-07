@@ -12,13 +12,6 @@
     position: relative;
     height: $height;
     width: $width;
-    
-
-    &__artwork {
-        path {
-            
-        }
-    }
 }
 
 @mixin make-icon-01-modifier(
@@ -32,6 +25,12 @@
     background-color: $background-color;
     border-color: $border-color;
     transition: $border-color $time-b $ease-standard-a;
+    svg {
+        path {
+            fill: $path-fill-color;
+            transition: fill $time-b $ease-standard-a;
+        }
+    }
 
     @if $background-color-hover {
         transition: border-color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
@@ -52,24 +51,12 @@
         &:focus,
         &:active {
             border-color: $border-color-hover;
-        
-            .g--icon-01 {
-                &__artwork {
-                    path {
-                        fill: $path-fill-color-hover;
-                    }
+
+            svg {
+                path {
+                    fill: $path-fill-color-hover;
                 }
             }
         }
     }
-
-    .g--icon-01 {
-        &__artwork {
-            path {
-                fill: $path-fill-color;
-                transition: fill $time-b $ease-standard-a;
-            }
-        }
-    }
-
 }

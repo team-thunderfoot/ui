@@ -1,0 +1,27 @@
+@mixin make-social-01(
+    $icon-class
+) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__item{
+        @extend .#{$icon-class} !optional;
+        &:not(:last-child){
+            margin-right: $measure * 2;
+        }
+    }
+}
+
+@mixin make-social-01-modifier(
+    $icon-class-modifier: false
+) {
+    .g--social-01 {
+
+        @if $icon-class-modifier {
+            &__item {
+                @extend .#{$icon-class-modifier} !optional;
+            }
+        }
+    }
+}

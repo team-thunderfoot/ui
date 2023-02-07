@@ -23,6 +23,21 @@
 ) {
     background-color: $background-color;
     border-color: $border-color;
+    transition: $border-color $time-b $ease-standard-a;
+
+    @if $background-color-hover {
+        transition: border-color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+
+        @media (hover: hover) {
+            &:hover ,
+            &:focus ,
+            &:active {
+                background-color: $background-color-hover;
+            }
+        }
+    } @else {
+        transition: border-color $time-b $ease-standard-a;
+    }
 
     @media (hover : hover) {
         &:hover,
@@ -40,24 +55,13 @@
         }
     }
 
-    @if $background-color-hover {
-        transition: border-color $time-a $ease-standard-a, fill $time-b $ease-standard-a, background-color $time-a $ease-standard-a;
-
-        @media (hover: hover) {
-            &:hover ,
-            &:focus ,
-            &:active {
-                background-color: $background-color-hover;
-            }
-        }
-    } @else {
-        transition: border-color $time-a $ease-standard-a, fill $time-a $ease-standard-a;
-    }
+    
 
     .g--icon-02 {
         &__artwork {
             path {
                 fill: $path-fill-color;
+                transition: fill $time-b $ease-standard-a;
             }
         }
     }

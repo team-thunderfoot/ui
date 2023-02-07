@@ -85,6 +85,9 @@
     }
     @if $text-align == "right" {
         text-align: right;
+        @media all and ($viewport-type: $tablets) {
+            text-align: left;
+        }
     }
 
     .g--layout-04{

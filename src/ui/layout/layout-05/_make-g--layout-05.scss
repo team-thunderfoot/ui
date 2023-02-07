@@ -118,12 +118,19 @@
     }
     @if $text-align == "right" {
         text-align: right;
+        @media all and ($viewport-type: $tablets) {
+            text-align: left;
+        }
         .g--layout-05{
             &__wrapper{
                 &__ft{
                     &__btn{
                         margin-left: auto;
                         margin-right: 0;
+                        @media all and ($viewport-type: $tablets) {
+                            margin-left: 0;
+                            margin-right: auto;
+                        }
                     }
                 }
             }

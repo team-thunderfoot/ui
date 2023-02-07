@@ -34,6 +34,8 @@
 
 ## Use
 
+To use it we have to import the css of the $icon-class in the entry
+
 ```sh
 .g--social-01{
     @include make-social-01(

@@ -6,6 +6,10 @@
     text-align: center;
     border: $border-width solid;
 
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 10 $measure * 5;
+    }
+
     &__content {
         @extend .f--font-#{$text-font} !optional;
     }

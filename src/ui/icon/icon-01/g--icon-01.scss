@@ -1,8 +1,8 @@
 .g--icon-01 {
     @include make-icon-01(
         $border-width: 1px,
-        $width: $measure * 6,
-        $height: $measure * 6
+        $width: $measure * 5,
+        $height: $measure * 5
     );
 
     @include make-icon-01-modifier(

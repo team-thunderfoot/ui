@@ -4,7 +4,7 @@
     padding: $measure * 10 $measure * 15;
     text-align: center;
 
-    @media all and ($viewport-type: $tablets) {
+    @media all and ($viewport-type: $tabletm) {
         padding: $measure * 10 $measure * 5;
     }
 

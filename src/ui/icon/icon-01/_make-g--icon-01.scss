@@ -9,12 +9,13 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    padding: $measure * 1.5;
     position: relative;
     height: $height;
     width: $width;
     svg {
-        width: calc(100% - #{$measure} * 3);
-        height: calc(100% - #{$measure} * 3);
+        // width: calc(100% - #{$measure} * 3);
+        // height: calc(100% - #{$measure} * 3);
     }
 }
 

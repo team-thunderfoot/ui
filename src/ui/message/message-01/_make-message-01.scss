@@ -1,7 +1,7 @@
 @mixin make-message-01(
     $text-font
 ) {
-    padding: $measure * 10;
+    padding: $measure * 10 $measure * 15;
     text-align: center;
 
     &__content {
@@ -10,10 +10,12 @@
 }
 
 @mixin make-message-01-modifier(
-    $background-color,
     $text-color,
+    $background-color: false,
 ) {
-    background: $background-color;
+    @if $background-color {
+        background-color: $background-color;
+    }
 
     .g--message-01 {
         &__content {

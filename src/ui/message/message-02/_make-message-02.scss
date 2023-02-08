@@ -1,7 +1,25 @@
-@mixin make-message-01() {
+@mixin make-message-02(
+    $border-width,
+    $text-font
+) {
+    padding: $measure * 10 $measure * 15;
+    text-align: center;
+    border: $border-width solid;
 
+    &__content {
+        @extend .f--font-#{$text-font} !optional;
+    }
 }
 
-@mixin make-message-01-modifier() {
-    
+@mixin make-message-02-modifier(
+    $border-color,
+    $text-color,
+) {
+    border-color: $border-color;
+
+    .g--message-01 {
+        &__content {
+            color: $text-color;
+        }
+    }
 }

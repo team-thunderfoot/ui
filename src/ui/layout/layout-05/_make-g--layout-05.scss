@@ -1,8 +1,8 @@
 @mixin make-layout-05(
-    $meta-font,
-    $title-font,
-    $subtitle-font,
     $btn-class,
+    $meta-font,
+    $subtitle-font,
+    $title-font,
     $img-border-radius: false,
 ) {
     padding: $measure * 15 0;
@@ -10,23 +10,28 @@
     @media all and ($viewport-type: $tablets) {
         padding: $measure * 10 0;
     }
+
     &__wrapper{
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: $measure*7 0;
+        width: 100%;
+
         @media all and ($viewport-type: $tablets) {
             padding: 0;
             margin-bottom: $measure*5;
         }
+
         &__meta{
             @extend .f--font-#{$meta-font} !optional;
             margin-bottom: $measure * 7;
+
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure * 5;
             }
         }
+
         &__title{
             @extend .f--font-#{$title-font} !optional;
             margin-bottom: $measure*4;
@@ -35,6 +40,7 @@
                 margin-bottom: $measure * 3;
             }
         }
+
         &__subtitle{
             @extend .f--font-#{$subtitle-font} !optional;
             margin-bottom: $measure*4;
@@ -43,25 +49,31 @@
                 margin-bottom: $measure * 3;
             }
         }
+
         &__ft{
             &__btn{
                 @extend .#{$btn-class} !optional;
+                margin-left: 0;
+                margin-right: auto;
                 width: fit-content;
             }
         }
     }
     &__media-wrapper{
-        width: 100%;
-        position: relative;
         min-height: 500px;
+        position: relative;
+        width: 100%;
+
         @if $img-border-radius {
             border-radius: $img-border-radius;
             overflow: hidden
         }
+
         @media all and ($viewport-type: $tablets) {
-            min-height: 0;
             height: auto;
+            min-height: 0;
         }
+
         &__media{
             position: absolute;
             top: 0;
@@ -70,6 +82,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+
             @media all and ($viewport-type: $tablets) {
                 position: relative;
                 top: auto;
@@ -81,60 +94,13 @@
 
 @mixin make-layout-05-modifier(
     $meta-color,
-    $title-color,
     $subtitle-color,
+    $title-color,
     $background-color: false,
-    $text-align: false,
     $btn-class-modifier: false,
 ) {
     @if $background-color {
         background-color: $background-color;
-    }
-    @if $text-align == "center" {
-        text-align: center;
-        .g--layout-05{
-            &__wrapper{
-                &__ft{
-                    &__btn{
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
-    }
-    @if $text-align == "left" {
-        text-align: left;
-        .g--layout-05{
-            &__wrapper{
-                &__ft{
-                    &__btn{
-                        margin-left: 0;
-                        margin-right: auto;
-                    }
-                }
-            }
-        }
-    }
-    @if $text-align == "right" {
-        text-align: right;
-        @media all and ($viewport-type: $tablets) {
-            text-align: left;
-        }
-        .g--layout-05{
-            &__wrapper{
-                &__ft{
-                    &__btn{
-                        margin-left: auto;
-                        margin-right: 0;
-                        @media all and ($viewport-type: $tablets) {
-                            margin-left: 0;
-                            margin-right: auto;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     .g--layout-05{
@@ -142,12 +108,15 @@
             &__meta{
                 color: $meta-color;
             }
+
             &__title{
                 color: $title-color;
             }
+
             &__subtitle{
                 color: $subtitle-color;
             }
+            
             &__ft{
                 @if $btn-class-modifier {
                     &__btn{

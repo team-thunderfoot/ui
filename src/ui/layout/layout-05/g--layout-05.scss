@@ -1,17 +1,16 @@
 .g--layout-05{
     @include make-layout-05(
-        $meta-font: g,
-        $title-font: c,
-        $subtitle-font: f,
         $btn-class: g--btn-01,
         $img-border-radius: $measure*4,
+        $meta-font: g,
+        $subtitle-font: f,
+        $title-font: c,
     );
     @include make-layout-05-modifier(
-        // $background-color: map-get($color-options, e),
-        $text-align: right,
         $meta-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $background-color: map-get($color-options, e),
         // $btn-class-modifier: g--btn-01--second,
     );
 }

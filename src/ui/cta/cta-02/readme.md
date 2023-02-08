@@ -28,6 +28,7 @@
 - $btn-class
 - $btn-class-modifier: false by default
 - $mask-color
+- $text-align: false by default
 - $title-color
 - $title-font
 
@@ -35,6 +36,7 @@
 
 - $btn-class-modifier
 - $mask-color
+- $text-align
 - $title-color
 
 ## Use

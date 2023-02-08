@@ -26,6 +26,7 @@
 - $background-color
 - $btn-class
 - $btn-class-modifier: false by default
+- $text-align: false by default
 - $title-color
 - $title-font
 
@@ -33,6 +34,7 @@
 
 - $background-color
 - $btn-class-modifier
+- $text-align
 - $title-color
 
 ## Use
@@ -48,7 +50,8 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-cta-01-modifier(
         $title-color: map-get($color-options, a),
         $background-color: map-get($color-options, e),
-        // $btn-class-modifier: default
+        // $btn-class-modifier: default,
+        // $text-align: default
     );
 }
 ```

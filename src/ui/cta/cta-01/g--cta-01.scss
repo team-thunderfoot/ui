@@ -7,5 +7,6 @@
         $background-color: map-get($color-options, e),
         $btn-class-modifier: g--btn-02--second,
         $title-color: map-get($color-options, a),
+        // $text-align: default
     );
 }

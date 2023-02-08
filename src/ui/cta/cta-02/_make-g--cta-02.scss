@@ -6,12 +6,20 @@
 ) {
     background-position: $background-position;
     background-size: $background-size;
-    padding: $measure * 20 0;
+    padding: $measure * 20 $measure * 30;
     position: relative;
     text-align: center;
 
-    @media all and ($viewport-type: $tablets) {
-        padding: $measure * 15 0;
+    @media all and ($viewport-type: $tabletl) {
+        padding: $measure * 20 $measure * 20;
+    }
+
+    @media all and ($viewport-type: $tabletm) {
+        padding: $measure * 10;
+    }
+
+    @media all and ($viewport-type: $mobile) {
+        padding: $measure * 7;
     }
 
     &::before{
@@ -43,10 +51,43 @@
 @mixin make-cta-02-modifier(
     $mask-color,
     $title-color,
-    $btn-class-modifier: false
+    $btn-class-modifier: false,
+    $text-align: false
 ) {
     &::before{
         background: $mask-color;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--cta-02 {
+            &__btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--cta-02 {
+            &__btn {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--cta-02 {
+            &__btn {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
     }
 
     .g--cta-02{

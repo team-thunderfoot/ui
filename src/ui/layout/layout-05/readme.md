@@ -61,10 +61,10 @@ For the image, we have to add width, height and aspect ratio dynamically.
 ```sh
 .g--layout-05{
     @include make-layout-05(
-        $meta-font: g,
-        $title-font: c,
-        $subtitle-font: f,
         $btn-class: g--btn-01,
+        $meta-font: g,
+        $subtitle-font: f,
+        $title-font: c,
         // $img-border-radius: default,
     );
     @include make-layout-05-modifier(

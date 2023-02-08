@@ -51,11 +51,11 @@ To use it we have to import the css of the $btn-class in the entry
         $title-font: b,
     );
     @include make-layout-01-modifier(
+        $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
         // $background-color: default,
         // $btn-class-modifier: default,
-        $subtitle-color: map-get($color-options, a),
         // $text-align: default,
-        $title-color: map-get($color-options, a),
     );
 }
 ```

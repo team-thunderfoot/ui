@@ -10,14 +10,8 @@
 
 ```sh
 <section class="g--cta-01">
-    <div class="f--container">
-        <div class="f--row justify-content--center">
-            <div class="f--col-8 f--col-tabletm-10 f--col-mobile-12">
-                <h2 class="g--cta-01__title">CTA-01 This is the Contact call to action</h2>
-                <a href="#" class="g--cta-01__btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
-            </div>
-        </div>
-    </div>
+    <h2 class="g--cta-01__title">CTA-01 This is the Contact call to action</h2>
+    <a href="#" class="g--cta-01__btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
 </section>
 ```
 

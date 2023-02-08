@@ -1,8 +1,8 @@
 @mixin make-layout-04(
-    $img-border-radius: false,
     $meta-font,
     $subtitle-font,
     $title-font,
+    $img-border-radius: false,
 ) {
     padding: $measure * 15 0;
 

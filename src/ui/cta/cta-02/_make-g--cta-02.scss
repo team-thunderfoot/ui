@@ -35,6 +35,7 @@
     &__title{
         @extend .f--font-#{$title-font} !optional;
         margin-bottom: $measure*6;
+        position: relative;
 
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 4;

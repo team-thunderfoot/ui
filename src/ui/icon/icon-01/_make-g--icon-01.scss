@@ -13,8 +13,8 @@
     height: $height;
     width: $width;
     svg {
-        width: calc(100% - #{$measure} * 3);
-        height: calc(100% - #{$measure} * 3);
+        width: calc(100% - #{$measure} * 2);
+        height: calc(100% - #{$measure} * 2);
     }
 }
 

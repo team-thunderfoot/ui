@@ -24,9 +24,8 @@
 ## Editable variables
 
 - $background-color: false by default
-- $subtitle-font
 - $subtitle-color
-- $text-align: false by default
+- $subtitle-font
 - $title-color
 - $title-font
 
@@ -34,7 +33,6 @@
 
 - $background-color
 - $subtitle-color
-- $text-align
 - $title-color
 
 ## Use
@@ -42,14 +40,13 @@
 ```sh
 .g--layout-02{
     @include make-layout-02(
-        $subtitle-font: d,
-        $title-font: b,
+        $subtitle-font: f,
+        $title-font: a,
     );
     @include make-layout-02-modifier(
-        // $background-color: default,
         $subtitle-color: map-get($color-options, a),
-        // $text-align: default,
         $title-color: map-get($color-options, a),
+        // $background-color: map-get($color-options, e),
     );
 }
 ```

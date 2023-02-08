@@ -26,19 +26,9 @@
     $subtitle-color,
     $title-color,
     $background-color: false,
-    $text-align: false
 ) {
     @if $background-color {
         background-color: $background-color;
-    }
-    @if $text-align == "center" {
-        text-align: center;
-    }
-    @if $text-align == "left" {
-        text-align: left;
-    }
-    @if $text-align == "right" {
-        text-align: right;
     }
 
     .g--layout-02{

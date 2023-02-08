@@ -64,6 +64,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--cta-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-02/readme.md)
 - [g--cta-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-03/readme.md)
 - [g--cta-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-04/readme.md)
+- [g--cta-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-05/readme.md)
 
 ### Icon
 

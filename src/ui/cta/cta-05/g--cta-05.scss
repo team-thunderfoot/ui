@@ -1,0 +1,15 @@
+.g--cta-05{
+    @include make-cta-05(
+        // $border-radius: default,
+        $title-font: d,
+        $subtitle-font: f,
+        $btn-class: g--btn-02
+    );
+    @include make-cta-05-modifier(
+        $background-color: rgba(map-get($color-options, a), .1),
+        // $text-align: default,
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+        // $btn-class-modifier: default
+    );
+}

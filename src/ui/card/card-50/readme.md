@@ -26,35 +26,32 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
 
-- $border-radius: false by default
-- $title-font
-- $subtitle-font
 - $background-color: false by default
-- $text-align: false by default
-- $title-color
+- $border-radius: false by default
 - $subtitle-color
+- $subtitle-font
+- $title-color
+- $title-font
 
 ### For modifiers
 
 - $background-color
-- $text-align
-- $title-color
 - $subtitle-color
+- $title-color
 
 ## use
 
 ```sh
 .g--card-50{
     @include make-card-50(
-        // $border-radius: default,
-        $title-font: d,
         $subtitle-font: f,
+        $title-font: d,
+        // $border-radius: default,
     );
     @include make-card-50-modifier(
-        // $background-color: default,
-        // $text-align: default,
-        $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $background-color: default,
     );
 }
 ```

@@ -31,23 +31,21 @@
 
 ## Editable variables
 
-- $meta-font
-- $title-font
-- $subtitle-font
+- $background-color: false by default
 - $img-border-radius: false by default
 - $meta-color
-- $title-color
+- $meta-font
 - $subtitle-color
-- $background-color: false by default
-- $text-align: false by default
+- $subtitle-font
+- $title-color
+- $title-font
 
 ### For Modifiers
 
-- $meta-color
-- $title-color
-- $subtitle-color
 - $background-color
-- $text-align
+- $meta-color
+- $subtitle-color
+- $title-color
 
 ## Use
 
@@ -58,16 +56,15 @@ For the image, we have to add width, height and aspect ratio dynamically.
 .g--layout-06{
     @include make-layout-06(
         $meta-font: g,
-        $title-font: c,
         $subtitle-font: f,
+        $title-font: c,
         // $img-border-radius: default,
     );
     @include make-layout-06-modifier(
-        // $background-color: default,
-        // $text-align: default,
         $meta-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $background-color: default,
     );
 }
 ```

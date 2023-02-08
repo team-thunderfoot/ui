@@ -29,7 +29,6 @@
 - $btn-class-modifier: false by default
 - $subtitle-font
 - $subtitle-color
-- $text-align: false by default
 - $title-color
 - $title-font
 
@@ -38,7 +37,6 @@
 - $background-color
 - $btn-class-modifier
 - $subtitle-color
-- $text-align
 - $title-color
 
 ## Use

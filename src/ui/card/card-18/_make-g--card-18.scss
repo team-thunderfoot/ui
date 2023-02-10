@@ -38,7 +38,7 @@
     border-color: $border-color;
 
     @if $background-color {
-        background-color: $background-color;
+        background: $background-color;
     }
 
     @if $text-align == "center" {

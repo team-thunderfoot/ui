@@ -35,17 +35,17 @@
         }
     }
     @if $background-color {
-        background-color: $background-color;
+        background: $background-color;
     }
 
     @if $background-color-hover {
-        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a;
 
         @media (hover: hover) {
             &:hover ,
             &:focus ,
             &:active {
-                background-color: $background-color-hover;
+                background: $background-color-hover;
             }
         }
     } @else {

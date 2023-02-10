@@ -100,7 +100,7 @@
     $btn-class-modifier: false,
 ) {
     @if $background-color {
-        background-color: $background-color;
+        background: $background-color;
     }
 
     .g--layout-05{

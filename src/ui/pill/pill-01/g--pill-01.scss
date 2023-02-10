@@ -1,6 +1,6 @@
 .g--pill-01{
     @include make-pill-01(
-        $font: d,
+        $font: g,
     );
     @include make-pill-01-modifier(
         $background-color: map-get($color-options, d),

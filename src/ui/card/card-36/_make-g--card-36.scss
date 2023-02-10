@@ -1,0 +1,150 @@
+@mixin make-card-36(
+    $pill-class,
+    $tagline-font,
+    $title-font,
+    $border-radius: false
+) {
+    padding: $measure * 6 $measure * 5;
+    width: 100%;
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    &__tagline {
+        @extend .f--font-#{$tagline-font} !optional;
+        margin-bottom: $measure * 3;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 2;
+        }
+    }
+
+    &__title {
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure * 3;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 2;
+        }
+    }
+
+    &__pill {
+        @extend .#{$pill-class} !optional;
+        margin-top: auto;
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+@mixin make-card-36-modifier(
+    $background-color,
+    $tagline-color,
+    $title-color,
+    $background-color-hover: false,
+    $pill-class-modifier: false,
+    $text-align: false,
+    $title-color-hover: false,
+) {
+    background: $background-color;
+
+    @if $background-color-hover and $title-color-hover {
+        transition: background $time-b $ease-standard-a;
+
+        &__title {
+            transition: color $time-b $ease-standard-a;
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $background-color-hover;
+
+                .g--card-36 {
+                    &__title {
+                        color: $title-color-hover;
+                    }
+                }
+            }
+        }
+
+    } @else if $background-color-hover {
+        transition: background $time-b $ease-standard-a;
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $background-color-hover;
+            }
+        }
+    } @else if $title-color-hover {
+        &__title {
+            transition: color $time-b $ease-standard-a;
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-36 {
+                    &__title {
+                        color: $title-color-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-36 {
+            &__pill {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-36 {
+            &__pill {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-36 {
+            &__pill {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .g--card-36 {
+        @if $pill-class-modifier {
+            &__pill {
+                @extend .#{$pill-class-modifier} !optional;
+            }
+        }
+
+        &__tagline {
+            color: $tagline-color;
+        }
+
+        &__title {
+            color: $title-color;
+        }
+
+        
+    }
+}

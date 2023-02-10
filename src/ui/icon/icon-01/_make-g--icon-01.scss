@@ -27,7 +27,7 @@
     $path-fill-color-hover,
     $background-color-hover: false,
 ) {
-    background-color: $background-color;
+    background: $background-color;
     border-color: $border-color;
     transition: $border-color $time-b $ease-standard-a;
     svg {
@@ -38,13 +38,13 @@
     }
 
     @if $background-color-hover {
-        transition: border-color $time-b $ease-standard-a, background-color $time-b $ease-standard-a;
+        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
 
         @media (hover: hover) {
             &:hover ,
             &:focus ,
             &:active {
-                background-color: $background-color-hover;
+                background: $background-color-hover;
             }
         }
     } @else {

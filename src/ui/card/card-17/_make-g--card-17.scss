@@ -32,7 +32,7 @@
     $title-color,
     $text-align: false,
 ) {
-    background-color: $background-color;
+    background: $background-color;
 
     @if $text-align == "center" {
         text-align: center;

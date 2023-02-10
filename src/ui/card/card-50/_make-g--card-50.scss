@@ -62,7 +62,7 @@
     $background-color: false,
 ) {
     @if $background-color {
-        background-color: $background-color;   
+        background: $background-color;   
     }
     
     .g--card-50 {

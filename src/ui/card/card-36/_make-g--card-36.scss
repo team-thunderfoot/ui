@@ -1,6 +1,6 @@
 @mixin make-card-36(
     $pill-class,
-    $tagline-font,
+    $meta-font,
     $title-font,
     $border-radius: false
 ) {
@@ -11,8 +11,8 @@
         border-radius: $border-radius;
     }
 
-    &__tagline {
-        @extend .f--font-#{$tagline-font} !optional;
+    &__meta {
+        @extend .f--font-#{$meta-font} !optional;
         margin-bottom: $measure * 3;
 
         @media all and ($viewport-type: $tablets) {
@@ -39,7 +39,7 @@
 
 @mixin make-card-36-modifier(
     $background-color,
-    $tagline-color,
+    $meta-color,
     $title-color,
     $background-color-hover: false,
     $pill-class-modifier: false,
@@ -137,8 +137,8 @@
             }
         }
 
-        &__tagline {
-            color: $tagline-color;
+        &__meta {
+            color: $meta-color;
         }
 
         &__title {

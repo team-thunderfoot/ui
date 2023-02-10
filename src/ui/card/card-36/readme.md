@@ -10,7 +10,7 @@
 
 ```sh
 <div class="g--card-36">
-    <p class="g--card-36__tagline">Jan 5, 2023</p>
+    <p class="g--card-36__meta">Jan 5, 2023</p>
     <p class="g--card-36__title"> Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
     <div class="g--card-36__pill">Category</div>
 </div>
@@ -23,8 +23,8 @@
 - $border-radius: false by default
 - $pill-class
 - $pill-class-modifier: false by default
-- $tagline-color
-- $tagline-font
+- $meta-color
+- $meta-font
 - $text-align: false by default
 - $title-color
 - $title-color-hover
@@ -35,7 +35,7 @@
 - $background-color
 - $background-color-hover
 - $pill-class-modifier: false by default
-- $tagline-color
+- $meta-color
 - $text-align
 - $title-color
 - $title-color-hover
@@ -45,14 +45,14 @@
 ```sh
 .g--card-36 {
     @include make-card-36(
-        $tagline-font: g,
+        $meta-font: g,
         $title-font: f,
         $pill-class: g--pill-01,
         // $border-radius: default
     );
     @include make-card-36-modifier(
         $background-color: map-get($color-options, e),
-        $tagline-color: map-get($color-options, a),
+        $meta-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         // $title-color-hover: default,
         // $background-color-hover: default

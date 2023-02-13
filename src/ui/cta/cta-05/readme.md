@@ -21,6 +21,10 @@
 </div>
 ```
 
+##### \*Aspect Ratio
+
+For the image, we have to add width, height and aspect ratio dynamically.
+
 ## Editable variables
 
 - $border-radius: false by default

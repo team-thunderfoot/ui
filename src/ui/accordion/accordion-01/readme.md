@@ -110,7 +110,7 @@ plugins: [
 mounted() {
    const accordion = this.$Accordion({
         accActive : 'accordion-1', //id of the initially active accordion
-        accActiveClass : 'b--accordion-a--is-active', //class for the active accordion
+        accActiveClass : 'g--accordion-01--is-active', //class for the active accordion
         accClose : true, //preset if the accordion should start closed
         accAllOpen : false, //preset if all accordion items should start open
         accTrigger : 'tf-ds-acc-target', //class for all links that trigger an accordion item

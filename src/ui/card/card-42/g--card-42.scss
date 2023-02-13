@@ -1,0 +1,17 @@
+.g--card-42 {
+    @include make-card-42(
+        $meta-font: g,
+        $pill-class: g--pill-01,
+        $title-font: f,
+        // $border-radius: default
+    );
+    @include make-card-42-modifier(
+        $background-color: map-get($color-options, e),
+        $meta-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $background-color-hover: default,
+        // $pill-class-modifier: default,
+        // $text-align: default,
+        // $title-color-hover: default
+    );
+}

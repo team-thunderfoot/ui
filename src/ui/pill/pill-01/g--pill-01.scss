@@ -8,4 +8,13 @@
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, d),
     );
+
+    &--second {
+        @include make-pill-01-modifier(
+        $background-color: map-get($color-options, d),
+        // $background-color-hover: default,
+        $text-color: map-get($color-options, a),
+        // $text-color-hover: map-get($color-options, d),
+    );
+    }
 }

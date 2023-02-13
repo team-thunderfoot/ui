@@ -10,9 +10,16 @@
 
 ```sh
 <div class="g--card-36">
-    <p class="g--card-36__meta">Jan 5, 2023</p>
-    <p class="g--card-36__title"> Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
-    <div class="g--card-36__pill">Category</div>
+    <div class="g--card-36__wrapper">
+    <p class="g--card-36__wrapper__meta">
+        Jan 5, 2023
+    </p>
+    <p class="g--card-36__wrapper__title">
+        Card 36 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.
+    </p>
+    <div class="g--card-36__wrapper__pill">Category</div>
+    <div class="g--card-36__wrapper__pill">Category</div>
+    </div>
 </div>
 ```
 

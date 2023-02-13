@@ -1,5 +1,4 @@
-@mixin make-card-42(
-    $meta-font,
+@mixin make-card-54(
     $pill-class,
     $title-font,
     $border-radius: false,
@@ -20,11 +19,6 @@
     &__wrapper {
         padding: $measure * 6 $measure * 5;
 
-        &__meta {
-            @extend .f--font-#{$meta-font} !optional;
-            margin-bottom: $measure * 3;
-        }
-
         &__title {
             @extend .f--font-#{$title-font} !optional;
             margin-bottom: $measure * 3;
@@ -41,9 +35,8 @@
     }
 }
 
-@mixin make-card-42-modifier(
+@mixin make-card-54-modifier(
     $background-color,
-    $meta-color,
     $title-color,
     $background-color-hover: false,
     $pill-class-modifier: false,
@@ -53,7 +46,7 @@
 
     @if $background-color-hover and $title-color-hover {
         
-        .g--card-42 {
+        .g--card-54 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
     
@@ -68,7 +61,7 @@
             &:focus,
             &:active {
 
-                .g--card-42 {
+                .g--card-54 {
                     &__wrapper {
                         background: $background-color-hover;
 
@@ -82,7 +75,7 @@
 
     } @else if $background-color-hover {
 
-        .g--card-42 {
+        .g--card-54 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
             }
@@ -93,7 +86,7 @@
             &:focus,
             &:active {
                 
-                .g--card-42 {
+                .g--card-54 {
                     &__wrapper {
                         background: $background-color-hover;
                     }
@@ -102,7 +95,7 @@
         }
     } @else if $title-color-hover {
 
-        .g--card-42  {
+        .g--card-54  {
             &__wrapper {
                 &__title {
                     transition: color $time-b $ease-standard-a;
@@ -114,7 +107,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-42 {
+                .g--card-54 {
                     &__wrapper {
                         &__title {
                             color: $title-color-hover;
@@ -126,7 +119,7 @@
     }
 
     @if $text-align == "center" {
-        .g--card-42 {
+        .g--card-54 {
             &__wrapper {
                 text-align: center;
 
@@ -139,7 +132,7 @@
     }
 
     @if $text-align == "left" {
-        .g--card-42 {
+        .g--card-54 {
             &__wrapper {
                 text-align: left;
 
@@ -152,7 +145,7 @@
     }
 
     @if $text-align == "right" {
-        .g--card-42 {
+        .g--card-54 {
             &__wrapper {
                 text-align: right;
 
@@ -164,13 +157,9 @@
         }
     }
 
-    .g--card-42 {
+    .g--card-54 {
         &__wrapper {
             background: $background-color;
-
-            &__meta {
-                color: $meta-color;
-            }
 
             &__title {
                 color: $title-color;

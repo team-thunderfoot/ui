@@ -13,8 +13,10 @@
     <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-54__media g--lazy-01 f--ar" width="604" height="340">
     <div class="g--card-54__wrapper">
         <p class="g--card-54__wrapper__title">Card-42 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
-        <div class="g--card-54__wrapper__pill">Category</div>
-        <div class="g--card-54__wrapper__pill">Category</div>
+        <div class="g--card-54__wrapper__list-group">
+            <div class="g--card-54__wrapper__list-group__list-item">Category</div>
+            <div class="g--card-54__wrapper__list-group__list-item">Category</div>
+        </div>
     </div>
 </div>
 ```

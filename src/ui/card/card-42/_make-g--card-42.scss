@@ -5,6 +5,7 @@
     $border-radius: false,
 ) {
     overflow: hidden;
+    text-decoration: none;
     
     @if $border-radius {
         border-radius: $border-radius;

@@ -4,6 +4,7 @@
     $border-radius: false,
 ) {
     overflow: hidden;
+    text-decoration: none;
     
     @if $border-radius {
         border-radius: $border-radius;
@@ -43,13 +44,13 @@
     $text-align: false,
     $title-color-hover: false,
 ) {
+    background: $background-color;
 
     @if $background-color-hover and $title-color-hover {
+        transition: background $time-b $ease-standard-a;
         
         .g--card-54 {
             &__wrapper {
-                transition: background $time-b $ease-standard-a;
-    
                 &__title {
                     transition: color $time-b $ease-standard-a;
                 }
@@ -60,11 +61,10 @@
             &:hover,
             &:focus,
             &:active {
+                background: $background-color-hover;
 
                 .g--card-54 {
                     &__wrapper {
-                        background: $background-color-hover;
-
                         &__title {
                             color: $title-color-hover;
                         }
@@ -74,23 +74,13 @@
         }
 
     } @else if $background-color-hover {
-
-        .g--card-54 {
-            &__wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
+        transition: background $time-b $ease-standard-a;
 
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                
-                .g--card-54 {
-                    &__wrapper {
-                        background: $background-color-hover;
-                    }
-                }
+                background: $background-color-hover;
             }
         }
     } @else if $title-color-hover {
@@ -159,8 +149,6 @@
 
     .g--card-54 {
         &__wrapper {
-            background: $background-color;
-
             &__title {
                 color: $title-color;
             }

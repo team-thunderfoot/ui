@@ -4,6 +4,7 @@
     $title-font,
     $border-radius: false
 ) {
+    padding: $measure * 6 $measure * 5;
     text-decoration: none;
     width: 100%;
 
@@ -11,34 +12,29 @@
         border-radius: $border-radius;
     }
 
-    &__wrapper {
-        padding: $measure * 6 $measure * 5;
-        width: 100%;
+    &__meta {
+        @extend .f--font-#{$meta-font} !optional;
+        margin-bottom: $measure * 3;
 
-        &__meta {
-            @extend .f--font-#{$meta-font} !optional;
-            margin-bottom: $measure * 3;
-    
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 2;
         }
-    
-        &__title {
-            @extend .f--font-#{$title-font} !optional;
-            margin-bottom: $measure * 3;
-    
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
+    }
+
+    &__title {
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure * 3;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 2;
         }
-    
-        &__pill {
-            @extend .#{$pill-class} !optional;
-            margin-top: auto;
-            margin-left: 0;
-            margin-right: auto;
-        }
+    }
+
+    &__pill {
+        @extend .#{$pill-class} !optional;
+        margin-top: auto;
+        margin-left: 0;
+        margin-right: auto;
     }
 }
 
@@ -52,27 +48,24 @@
     $title-color-hover: false,
 ) {
 
+    background: $background-color;
+
     @if $background-color-hover and $title-color-hover {
         transition: background $time-b $ease-standard-a;
 
-        &__wrapper {
-            &__title {
-                transition: color $time-b $ease-standard-a;
-            }
+        &__title {
+            transition: color $time-b $ease-standard-a;
         }
 
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
+                background: $background-color-hover;
 
                 .g--card-36 {
-                    &__wrapper {
-                        background: $background-color-hover;
-
-                        &__title {
-                            color: $title-color-hover;
-                        }
+                    &__title {
+                        color: $title-color-hover;
                     }
                 }
             }
@@ -85,19 +78,13 @@
             &:hover,
             &:focus,
             &:active {
-                
-                .g--card-36 {
-                    &__wrapper {
-                        background: $background-color-hover;
-                    }
-                }
+                background: $background-color-hover;
             }
         }
+        
     } @else if $title-color-hover {
-        &__wrapper {
-            &__title {
-                transition: color $time-b $ease-standard-a;
-            }
+        &__title {
+            transition: color $time-b $ease-standard-a;
         }
 
         @media all and (hover : hover) {
@@ -105,10 +92,8 @@
             &:focus,
             &:active {
                 .g--card-36 {
-                    &__wrapper {
-                        &__title {
-                            color: $title-color-hover;
-                        }
+                    &__title {
+                        color: $title-color-hover;
                     }
                 }
             }
@@ -119,11 +104,9 @@
         text-align: center;
 
         .g--card-36 {
-            &__wrapper {
-                &__pill {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+            &__pill {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
@@ -132,11 +115,9 @@
         text-align: left;
 
         .g--card-36 {
-            &__wrapper {
-                &__pill {
-                    margin-left: 0;
-                    margin-right: auto;
-                }
+            &__pill {
+                margin-left: 0;
+                margin-right: auto;
             }
         }
     }
@@ -145,34 +126,26 @@
         text-align: right;
 
         .g--card-36 {
-            &__wrapper {
-                &__pill {
-                    margin-left: auto;
-                    margin-right: 0;
-                }
+            &__pill {
+                margin-left: auto;
+                margin-right: 0;
             }
         }
     }
 
     .g--card-36 {
         @if $pill-class-modifier {
-            &__wrapper {
-                &__pill {
-                    @extend .#{$pill-class-modifier} !optional;
-                }
+            &__pill {
+                @extend .#{$pill-class-modifier} !optional;
             }
         }
 
-        &__wrapper {
-            background: $background-color;
+        &__meta {
+            color: $meta-color;
+        }
 
-            &__meta {
-                color: $meta-color;
-            }
-    
-            &__title {
-                color: $title-color;
-            }
+        &__title {
+            color: $title-color;
         }
     }
 }

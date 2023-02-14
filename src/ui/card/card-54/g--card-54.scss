@@ -1,7 +1,7 @@
 .g--card-54 {
     @include make-card-54(
         $pill-class: g--pill-01,
-        $title-font: f,
+        $title-font: c,
         // $border-radius: default
     );
     @include make-card-54-modifier(

@@ -45,6 +45,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $link-class: g--link-01,
         $subtitle-font: f,
         $title-font: c,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
 
     @include make-card-07-modifier(

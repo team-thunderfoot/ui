@@ -50,7 +50,9 @@ To use it we have to import the css of the $link-class in the entry
         $link-class: g--link-01,
         $subtitle-font: f,
         $title-font: c,
-        // $border-radius: default
+        // $border-radius: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-card-05-modifier(
         $background-color: map-get($color-options, f),

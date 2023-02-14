@@ -47,6 +47,8 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $subtitle-font: f,
         $title-font: d,
         // $border-radius: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-card-50-modifier(
         $subtitle-color: map-get($color-options, a),

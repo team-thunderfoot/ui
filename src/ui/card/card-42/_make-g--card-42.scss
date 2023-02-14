@@ -3,6 +3,8 @@
     $pill-class,
     $title-font,
     $border-radius: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
 ) {
     overflow: hidden;
     text-decoration: none;
@@ -23,11 +25,17 @@
 
         &__meta {
             @extend .f--font-#{$meta-font} !optional;
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
             margin-bottom: $measure * 3;
         }
 
         &__title {
             @extend .f--font-#{$title-font} !optional;
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
             margin-bottom: $measure * 3;
         }
 

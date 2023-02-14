@@ -45,6 +45,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $background-position: center,
         $title-font: f,
         // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-20-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),

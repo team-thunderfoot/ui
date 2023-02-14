@@ -36,6 +36,8 @@
     @include make-card-27(
         $title-font: c,
         $subtitle-font: f,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-card-27-modifier(
         $title-color: map-get($color-options, a),

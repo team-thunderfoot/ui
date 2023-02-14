@@ -40,6 +40,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-17(
         $title-font: f,
         // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-17-modifier(
         $background-color: rgba(map-get($color-options, a), .5),

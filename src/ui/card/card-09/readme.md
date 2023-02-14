@@ -39,7 +39,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-09{
     @include make-card-09(
         $title-font: c,
-        // $border-radius: default
+        // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-09-modifier(
         $background-color: rgba(map-get($color-options, a), .5),

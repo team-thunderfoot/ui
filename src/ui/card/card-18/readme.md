@@ -43,6 +43,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $border-width: 1px,
         $title-font: f,
         // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-18-modifier(
         $border-color: map-get($color-options, a),

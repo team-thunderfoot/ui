@@ -55,7 +55,9 @@
         $meta-font: g,
         $title-font: f,
         $pill-class: g--pill-01,
-        // $border-radius: default
+        // $border-radius: default,
+        // $meta-font-weight: default,
+        // $title-font-weight: default,
     );
     @include make-card-36-modifier(
         $background-color: map-get($color-options, e),

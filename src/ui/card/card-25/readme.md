@@ -38,6 +38,8 @@
     @include make-card-25(
         $subtitle-font: f,
         $title-font: c,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-card-25-modifier(
         $background-color: transparent,

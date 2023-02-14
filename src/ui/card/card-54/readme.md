@@ -47,7 +47,8 @@
     @include make-card-54(
         $pill-class: g--pill-01,
         $title-font: f,
-        // $border-radius: default
+        // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-54-modifier(
         $background-color: map-get($color-options, e),

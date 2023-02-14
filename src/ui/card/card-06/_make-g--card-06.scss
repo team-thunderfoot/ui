@@ -4,6 +4,8 @@
     $subtitle-font,
     $title-font,
     $border-radius: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
 ) {
     border: $border-width solid;
     display: flex;
@@ -30,6 +32,9 @@
     }
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure * 2;
 
         @media all and ($viewport-type: $tablets) {
@@ -39,6 +44,9 @@
 
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
         margin-bottom: $measure * 2;
 
         @media all and ($viewport-type: $tablets) {

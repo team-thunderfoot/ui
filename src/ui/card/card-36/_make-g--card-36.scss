@@ -2,7 +2,9 @@
     $pill-class,
     $meta-font,
     $title-font,
-    $border-radius: false
+    $border-radius: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
 ) {
     padding: $measure * 6 $measure * 5;
     text-decoration: none;
@@ -14,6 +16,9 @@
 
     &__meta {
         @extend .f--font-#{$meta-font} !optional;
+        @if $meta-font-weight {
+            font-weight: $meta-font-weight;
+        }
         margin-bottom: $measure * 3;
 
         @media all and ($viewport-type: $tablets) {
@@ -23,6 +28,9 @@
 
     &__title {
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure * 3;
 
         @media all and ($viewport-type: $tablets) {

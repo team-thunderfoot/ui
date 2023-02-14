@@ -3,6 +3,7 @@
     $background-size,
     $title-font,
     $border-radius: false,
+    $title-font-weight: false,
 ) {
     background-position: $background-position;
     background-repeat: no-repeat;
@@ -44,6 +45,9 @@
 
         &__title{
             @extend .f--font-#{$title-font} !optional;
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
     }
 }

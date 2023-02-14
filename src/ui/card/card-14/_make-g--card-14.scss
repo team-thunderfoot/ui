@@ -3,6 +3,7 @@
     $link-class,
     $title-font,
     $border-radius: false,
+    $title-font-weight: false,
 ) {
     border: $border-width solid;
     display: flex;
@@ -29,6 +30,9 @@
     }
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure * 2;
 
         @media all and ($viewport-type: $tablets) {

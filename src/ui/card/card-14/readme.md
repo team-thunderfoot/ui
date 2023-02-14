@@ -47,6 +47,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $title-font: c,
         $link-class: g--link-01,
         // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-14-modifier(
         $border-color: map-get($color-options, a),

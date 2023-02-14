@@ -39,7 +39,8 @@
     @include make-card-13(
         $title-font: c,
         $link-class: g--link-01,
-        // $border-radius: default
+        // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-13-modifier(
         $background-color: rgba(map-get($color-options, a), .5),

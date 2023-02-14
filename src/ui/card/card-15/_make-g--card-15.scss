@@ -1,6 +1,7 @@
 @mixin make-card-15(
     $link-class,
     $title-font,
+    $title-font-weight: false,
 ) {
     display: flex;
     flex-direction: column;
@@ -23,6 +24,9 @@
 
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure * 2;
 
         @media all and ($viewport-type: $tablets) {

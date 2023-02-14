@@ -42,6 +42,7 @@
         $background-size: cover,
         $title-font: c,
         // $border-radius: default,
+        // $title-font-weight: default,
     );
     @include make-card-12-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),

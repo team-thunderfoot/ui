@@ -2,6 +2,8 @@
     $subtitle-font,
     $title-font,
     $img-border-radius: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
 ) {
     padding: 0 $measure*4;
 
@@ -27,10 +29,16 @@
 
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
     }
 
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
     }
 }
 

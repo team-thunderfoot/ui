@@ -1,6 +1,7 @@
 @mixin make-card-09(
     $title-font,
     $border-radius: false,
+    $title-font-weight: false,
 ) {
     padding: $measure*7 $measure*5;
     width: 100%;
@@ -23,6 +24,9 @@
 
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
     }
 }
 

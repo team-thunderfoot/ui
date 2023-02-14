@@ -36,6 +36,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-19{
     @include make-card-19(
         $title-font: f,
+        // $title-font-weight: default,
     );
     @include make-card-19-modifier(
         $title-color: map-get($color-options, a),

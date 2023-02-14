@@ -6,9 +6,12 @@
     align-items: center;
 
     &__item{
-        @extend .#{$icon-class} !optional;
         &:not(:last-child){
             margin-right: $measure * 2;
+        }
+
+        &__link {
+            @extend .#{$icon-class} !optional;
         }
     }
 }
@@ -19,7 +22,9 @@
     .g--social-01 {
         @if $icon-class-modifier {
             &__item {
-                @extend .#{$icon-class-modifier} !optional;
+                &__link {
+                    @extend .#{$icon-class-modifier} !optional;
+                }
             }
         }
     }

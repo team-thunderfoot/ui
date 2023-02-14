@@ -10,7 +10,7 @@
         $meta-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         $title-color-hover: map-get($color-options, b),
-        $background-color-hover: map-get($color-options, f) 
+        $background-color-hover: map-get($color-options, f),
         // $pill-class-modifier: default,
         // $text-align: default 
     );

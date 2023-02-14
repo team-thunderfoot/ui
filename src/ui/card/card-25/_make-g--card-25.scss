@@ -1,8 +1,8 @@
-@mixin make-card-27(
+@mixin make-card-25(
     $subtitle-font,
     $title-font,
 ) {
-    padding: 0 $measure*2;
+    padding: $measure * 7 $measure * 2;
     width: 100%;
 
     &__title{
@@ -19,11 +19,14 @@
     }
 }
 
-@mixin make-card-27-modifier(
+@mixin make-card-25-modifier(
+    $background-color,
     $subtitle-color,
     $title-color,
     $text-align: false,
 ) {
+    background: $background-color;
+
     @if $text-align == "center" {
         text-align: center;
     }
@@ -36,7 +39,7 @@
         text-align: right;
     }
 
-    .g--card-27 {
+    .g--card-25 {
         &__title{
             color: $title-color;
         }

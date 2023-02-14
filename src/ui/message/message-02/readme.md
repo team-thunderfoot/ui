@@ -21,6 +21,7 @@
 - $border-color
 - $text-color
 - $text-font
+- $text-font-weight: false by default
 
 ### For Modifiers
 
@@ -33,7 +34,8 @@
 .g--message-02 {
     @include make-message-02(
         $border-width: 1px,
-        $text-font: d
+        $text-font: d,
+        // $text-font-weight: default,
     );
 
     @include make-message-02-modifier(

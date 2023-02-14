@@ -28,6 +28,8 @@
 - $subtitle-font
 - $title-color
 - $title-font
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For Modifiers
 
@@ -42,6 +44,8 @@
     @include make-layout-02(
         $subtitle-font: f,
         $title-font: a,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-layout-02-modifier(
         $subtitle-color: map-get($color-options, a),

@@ -1,6 +1,8 @@
 @mixin make-layout-02(
     $subtitle-font,
     $title-font,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
 ) {
     padding: $measure * 15 0;
     text-align: center;
@@ -11,6 +13,9 @@
 
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure*4;
 
         @media all and ($viewport-type: $tablets) {
@@ -19,6 +24,9 @@
     }
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
     }
 }
 

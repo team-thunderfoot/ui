@@ -32,6 +32,8 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $subtitle-font
 - $title-color
 - $title-font
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For modifiers
 

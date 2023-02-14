@@ -3,6 +3,7 @@
     $background-position,
     $background-size,
     $title-font,
+    $title-font-weight: false,
 ) {
     background-position: $background-position;
     background-size: $background-size;
@@ -34,6 +35,9 @@
 
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure*6;
         position: relative;
 

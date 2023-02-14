@@ -1,6 +1,7 @@
 @mixin make-message-02(
     $border-width,
-    $text-font
+    $text-font,
+    $text-font-weight: false,
 ) {
     padding: $measure * 10 $measure * 15;
     text-align: center;
@@ -12,6 +13,9 @@
 
     &__content {
         @extend .f--font-#{$text-font} !optional;
+        @if $text-font-weight {
+            font-weight: $text-font-weight;
+        }
     }
 }
 

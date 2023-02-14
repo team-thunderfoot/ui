@@ -23,6 +23,8 @@
 - $text-align: false by default
 - $title-color
 - $title-font
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For modifiers
 

@@ -27,6 +27,8 @@
 - $text-align: false by default
 - $title-color
 - $title-font
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For Modifiers
 
@@ -47,6 +49,8 @@ To use it we have to import the css of the $btn-class in the entry
         $title-font: b,
         $subtitle-font: d,
         $btn-class: g--btn-02,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-cta-03-modifier(
         $background-color: rgba(map-get($color-options, a), .5),

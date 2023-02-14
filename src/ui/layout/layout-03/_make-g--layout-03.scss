@@ -4,6 +4,9 @@
     $subtitle-font,
     $title-font,
     $img-border-radius: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
 ) {
     padding: $measure * 15 0;
 
@@ -64,6 +67,9 @@
 
         &__meta{
             @extend .f--font-#{$meta-font} !optional;
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
             margin-bottom: $measure * 7;
 
             @media all and ($viewport-type: $tablets) {
@@ -73,6 +79,9 @@
 
         &__title{
             @extend .f--font-#{$title-font} !optional;
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
             margin-bottom: $measure*4;
     
             @media all and ($viewport-type: $tablets) {
@@ -82,6 +91,9 @@
 
         &__subtitle{
             @extend .f--font-#{$subtitle-font} !optional;
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
             margin-bottom: $measure*4;
     
             @media all and ($viewport-type: $tablets) {

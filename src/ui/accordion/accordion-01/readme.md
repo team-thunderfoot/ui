@@ -31,6 +31,7 @@
 - $icon-color
 - $title-color
 - $title-font
+- $title-font-weight: false by default
 
 ### For modifiers
 
@@ -44,7 +45,8 @@
 .g--accordion-01 {
     @include make-accordion-01(
         $border-width: 1px,
-        $title-font: d
+        $title-font: d,
+        // $title-font-weight: default,
     );
 
     @include make-accordion-01-modifier(

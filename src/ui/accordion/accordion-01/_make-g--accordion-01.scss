@@ -1,6 +1,7 @@
 @mixin make-accordion-01(
     $border-width,
-    $title-font
+    $title-font,
+    $title-font-weight: false,
 ) {
     border-bottom: $border-width solid;
     margin-bottom: $measure * 5;
@@ -16,6 +17,9 @@
 
         &__title {
             @extend .f--font-#{$title-font} !optional;
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
             margin-bottom: 0 !important;
             text-decoration: none !important;
         }

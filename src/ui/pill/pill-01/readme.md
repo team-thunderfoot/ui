@@ -25,6 +25,7 @@
 - $font
 - $text-color
 - $text-color-hover: false by default
+- $font-weight: false by default
 
 #### For Modifiers
 
@@ -39,6 +40,7 @@
 .g--pill-01{
     @include make-pill-01(
         $font: d,
+        // $font-weight: default,
     );
     @include make-pill-01-modifier(
         $background-color: map-get($color-options, d),

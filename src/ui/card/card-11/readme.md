@@ -24,6 +24,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $text-align: false by default
 - $title-color
 - $title-font
+- $title-font-weight: false by default
 
 ### For modifiers
 

@@ -36,6 +36,8 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $title-color
 - $subtitle-color
 - $btn-class-modifier: false by default
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For Modifiers
 
@@ -55,7 +57,9 @@ To use it we have to import the css of the $btn-class in the entry
         // $border-radius: default,
         $title-font: d,
         $subtitle-font: f,
-        $btn-class: g--btn-02
+        $btn-class: g--btn-02,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-cta-05-modifier(
         // $background-color: default,

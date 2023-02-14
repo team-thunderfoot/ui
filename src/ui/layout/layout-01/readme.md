@@ -31,6 +31,8 @@
 - $subtitle-color
 - $title-color
 - $title-font
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For Modifiers
 
@@ -49,6 +51,8 @@ To use it we have to import the css of the $btn-class in the entry
         $btn-class: g--btn-01,
         $subtitle-font: d,
         $title-font: b,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-layout-01-modifier(
         $subtitle-color: map-get($color-options, a),

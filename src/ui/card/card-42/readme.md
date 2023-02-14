@@ -14,8 +14,10 @@
     <div class="g--card-42__wrapper">
     <p class="g--card-42__wrapper__meta">Jan 5, 2023</p>
     <p class="g--card-42__wrapper__title">Card-42 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
-    <div class="g--card-42__wrapper__pill">Category</div>
-    <div class="g--card-42__wrapper__pill">Category</div>
+    <div class="g--card-42__wrapper__list-group">
+        <div class="g--card-42__wrapper__list-group__list-item">Category</div>
+        <div class="g--card-42__wrapper__list-group__list-item">Category</div>
+    </div>
     </div>
 </div>
 ```

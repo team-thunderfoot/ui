@@ -25,6 +25,7 @@
 - $title-font
 - $title-font-weight: false by default
 - $subtitle-font-weight: false by default
+- $border-radius: false by default
 
 ### For modifiers
 
@@ -42,6 +43,7 @@
         $title-font: c,
         // $title-font-weight: default,
         // $subtitle-font-weight: default,
+        // $border-radius: default,
     );
     @include make-card-25-modifier(
         $background-color: transparent,

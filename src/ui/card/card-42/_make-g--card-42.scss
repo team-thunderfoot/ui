@@ -37,12 +37,16 @@
             }
             margin-bottom: $measure * 3;
         }
-
-        &__pill {
-            @extend .#{$pill-class} !optional;
-
-            &:not(:last-child) {
-                margin-right: $measure * 2;
+        &__list-group{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: $measure;
+            &__list-item {
+                @extend .#{$pill-class} !optional;
+    
+                &:not(:last-child) {
+                    margin-right: $measure * 2;
+                }
             }
         }
 
@@ -140,10 +144,11 @@
         .g--card-42 {
             &__wrapper {
                 text-align: center;
-
-                &__pill {
-                    margin-left: auto;
-                    margin-right: auto;
+                &__list-group{
+                    &__list-item{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
                 }
             }
         }
@@ -153,10 +158,11 @@
         .g--card-42 {
             &__wrapper {
                 text-align: left;
-
-                &__pill {
-                    margin-left: 0;
-                    margin-right: auto;
+                &__list-group{
+                    &__list-item{
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
                 }
             }
         }
@@ -166,10 +172,11 @@
         .g--card-42 {
             &__wrapper {
                 text-align: right;
-
-                &__pill {
-                    margin-left: auto;
-                    margin-right: 0;
+                &__list-group{
+                    &__list-item{
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
                 }
             }
         }
@@ -189,8 +196,10 @@
 
         @if $pill-class-modifier {
             &__wrapper {
-                &__pill {
-                    @extend .#{$pill-class-modifier} !optional;
+                &__list-group{
+                    &__list-item{
+                        @extend .#{$pill-class-modifier} !optional;
+                    }
                 }
             }
         }

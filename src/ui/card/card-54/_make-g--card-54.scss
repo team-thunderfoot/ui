@@ -5,7 +5,6 @@
     $title-font-weight: false,
 ) {
     overflow: hidden;
-    text-decoration: none;
     
     @if $border-radius {
         border-radius: $border-radius;
@@ -50,6 +49,9 @@
 ) {
     background: $background-color;
 
+    @if $background-color-hover or $title-color-hover {
+        text-decoration: none;
+    }
     @if $background-color-hover and $title-color-hover {
         transition: background $time-b $ease-standard-a;
         

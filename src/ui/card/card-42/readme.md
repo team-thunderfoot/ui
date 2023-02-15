@@ -35,6 +35,8 @@
 - $title-color
 - $title-color-hover
 - $title-font
+- $meta-font-weight: false by default
+- $title-font-weight: false by default
 
 ### For modifiers
 

@@ -25,6 +25,7 @@
 - $text-align: false by default
 - $title-color
 - $title-font
+- $title-font-weight: false by default
 
 ### For Modifiers
 
@@ -44,6 +45,7 @@ To use it we have to import the css of the $btn-class in the entry
         $background-position: center,
         $title-font: b,
         $btn-class: g--btn-02,
+        // $title-font-weight: default,
     );
     @include make-cta-02-modifier(
         $mask-color: rgba(map-get($color-options, a), .5),

@@ -1,8 +1,12 @@
 @mixin make-btn-02(
     $border-width,
     $font,
+    $font-weight: false,
 ) {
     @extend .f--font-#{$font} !optional;
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
     border: $border-width solid;
     border-radius: 0;
     display: inline-block;

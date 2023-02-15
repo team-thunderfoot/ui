@@ -3,6 +3,8 @@
     $subtitle-font,
     $title-font,
     $border-radius: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
 ) {
     padding: $measure * 15 $measure * 30 $measure * 15 $measure * 10;
 
@@ -25,6 +27,9 @@
 
     &__title{
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure*3;
 
         @media all and ($viewport-type: $tablets) {
@@ -34,6 +39,9 @@
 
     &__subtitle{
         @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
         margin-bottom: $measure*6;
         
         @media all and ($viewport-type: $tablets) {

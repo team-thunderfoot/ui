@@ -32,6 +32,7 @@
 - $title-color
 - $title-color-hover
 - $title-font
+- $title-font-weight: false by default
 
 ### For modifiers
 

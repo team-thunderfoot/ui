@@ -2,11 +2,12 @@
     $btn-class,
     $min-height,
     $title-font,
+    $title-font-weight: false,
     $min-height-desktop: false,
     $min-height-tabletl: false,
     $min-height-tabletm: false,
     $min-height-tablets: false,
-    $min-height-mobile: false
+    $min-height-mobile: false,
 
 ) {
     @if $min-height-desktop {
@@ -63,6 +64,9 @@
 
     &__title {
         @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
         margin-bottom: $measure * 4;
     }
 

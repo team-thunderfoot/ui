@@ -39,6 +39,9 @@
 - $subtitle-font
 - $title-color
 - $title-font
+- $meta-font-weight: false by default
+- $title-font-weight: false by default
+- $subtitle-font-weight: false by default
 
 ### For Modifiers
 
@@ -59,6 +62,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $subtitle-font: f,
         $title-font: c,
         // $img-border-radius: default,
+        // $meta-font-weight: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
     @include make-layout-04-modifier(
         $meta-color: map-get($color-options, a),

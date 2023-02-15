@@ -43,6 +43,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $text-align: false by default
 - $title-color
 - $title-font
+- $title-font-weight: false by default
 
 ### For Modifiers
 
@@ -61,6 +62,7 @@ To use it we have to import the css of the $btn-class in the entry
         $btn-class: g--btn-02,
         $min-height: calc(100vh - 109px),
         $title-font: c,
+        // $title-font-weight: default,
         // $min-height-desktop: default,
         // $min-height-tabletl: default,
         // $min-height-tabletm: default,

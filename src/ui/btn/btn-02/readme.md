@@ -26,6 +26,7 @@
 - $border-width
 - $border-color-hover
 - $font
+- $font-weight: false by default
 - $text-color
 - $text-color-hover
 
@@ -45,6 +46,7 @@
     @include make-btn-02(
         $border-width: 1px,
         $font: c,
+        // $font-weight: default,
     );
     @include make-btn-02-modifier(
         $border-color: map-get($color-options, a),

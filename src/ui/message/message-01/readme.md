@@ -21,6 +21,7 @@
 - $background-color: false by default
 - $text-color
 - $text-font
+- $text-font-weight: false by default
 
 ### For Modifiers
 
@@ -32,7 +33,8 @@
 ```sh
 .g--message-01 {
     @include make-message-01(
-        $text-font: d
+        $text-font: d,
+        // $text-font-weight: default,
     );
 
     @include make-message-01-modifier(

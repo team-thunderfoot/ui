@@ -1,5 +1,11 @@
-@mixin make-pill-01($font) {
+@mixin make-pill-01(
+    $font,
+    $font-weight: false,
+) {
     @extend .f--font-#{$font} !optional;
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
     border-radius: 100px;
     display: inline-block;
     padding: $measure $measure * 2;

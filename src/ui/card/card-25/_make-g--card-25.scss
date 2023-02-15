@@ -5,7 +5,7 @@
     $subtitle-font-weight: false,
     $border-radius: false,
 ) {
-    padding: $measure * 7 $measure * 2;
+    padding: $measure * 7 $measure * 5;
     width: 100%;
     @if $border-radius {
         border-radius: $border-radius;

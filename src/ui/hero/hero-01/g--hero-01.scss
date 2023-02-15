@@ -1,9 +1,15 @@
 .g--hero-01 {
     @include make-hero-01(
-        $title-font: a
+        $header-height-desktop: 96px,
+        $title-font: a,
+        // $header-height-tabletl: default,
+        // $header-height-tabletm: default,
+        // $header-height-tablets: default,
+        // $header-height-mobile: default,
+        // $title-font-weight: default
     );
     @include make-hero-01-modifier(
-        $background-color: map-get($color-options, f),
+        $background-color: map-get($color-options, d),
         $title-color: map-get($color-options, a),
         // $text-align: default
     );

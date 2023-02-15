@@ -1,0 +1,10 @@
+.g--hero-01 {
+    @include make-hero-01(
+        $title-font: a
+    );
+    @include make-hero-01-modifier(
+        $background-color: map-get($color-options, f),
+        $title-color: map-get($color-options, a),
+        // $text-align: default
+    );
+}

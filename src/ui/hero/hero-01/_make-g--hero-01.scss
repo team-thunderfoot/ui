@@ -1,0 +1,49 @@
+@mixin make-hero-01(
+    $title-font
+) {
+    overflow: hidden;
+    width: 100%;
+
+    &__wrapper {
+        padding: $measure * 14 0 $measure * 10;
+
+        &__title {
+            @extend .f--font-#{$title-font} !optional;
+        }
+    }
+
+    &__media {
+        display: block;
+        height: 500px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@mixin make-hero-01-modifier(
+    $background-color,
+    $title-color,
+    $text-align: false
+) {
+    background: $background-color;
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--hero-01 {
+        &__wrapper {
+            &__title {
+                color: $title-color;
+            }
+        }
+    }
+}

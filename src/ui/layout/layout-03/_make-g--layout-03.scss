@@ -8,11 +8,6 @@
     $title-font-weight: false,
     $subtitle-font-weight: false,
 ) {
-    padding: $measure * 15 0;
-
-    @media all and ($viewport-type: $tablets) {
-        padding: $measure * 10 0;
-    }
 
     &__media-wrapper{
         min-height: 500px;
@@ -107,6 +102,10 @@
                 width: fit-content;
                 margin-left: 0;
                 margin-right: auto;
+
+                @media all and ($viewport-type: $mobile) {
+                    width: 100%;
+                }
             }
         }
     }

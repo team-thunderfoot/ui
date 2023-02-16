@@ -1,10 +1,12 @@
-.g--card-19{
-    @include make-card-19(
+.g--card-23{
+    @include make-card-23(
+        $link-class: g--link-01,
         $title-font: f,
         //$title-font-weight: default
     );
-    @include make-card-19-modifier(
+    @include make-card-23-modifier(
         $title-color: map-get($color-options, a),
+        // $link-class-modifier: default,
         // $text-align: default
     );
 }

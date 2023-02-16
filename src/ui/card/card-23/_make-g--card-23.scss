@@ -1,18 +1,11 @@
-@mixin make-card-22(
-    $border-width,
+@mixin make-card-23(
     $link-class,    
     $title-font,
-    $border-radius: false,
     $title-font-weight: false,
 ) {
-    border: $border-width solid;
-    padding: $measure*7 $measure*5;
+    padding: 0 $measure*2;
     position: relative;
     width: 100%;
-
-    @if $border-radius {
-        border-radius: $border-radius;
-    }
 
     &__media{
         display: block;
@@ -25,7 +18,6 @@
             margin-bottom: $measure;
         }
     }
-
     &__title{
         @extend .f--font-#{$title-font} !optional;
         @if $title-font-weight {
@@ -45,23 +37,15 @@
     }
 }
 
-@mixin make-card-22-modifier(
-    $border-color,
-    $title-color,
+@mixin make-card-23-modifier(
     $link-class-modifier: false,
-    $background-color: false,
+    $title-color,
     $text-align: false,
 ) {
-    border-color: $border-color;
-
-    @if $background-color {
-        background: $background-color;
-    }
-
     @if $text-align == "center" {
         text-align: center;
 
-        .g--card-22 {
+        .g--card-23 {
             &__media {
                 margin-left: auto;
                 margin-right: auto;
@@ -72,7 +56,7 @@
     @if $text-align == "left" {
         text-align: left;
 
-        .g--card-22 {
+        .g--card-23 {
             &__media {
                 margin-left: 0;
                 margin-right: auto;
@@ -82,15 +66,15 @@
     @if $text-align == "right" {
         text-align: right;
 
-        .g--card-22 {
+        .g--card-23 {
             &__media {
                 margin-left: auto;
                 margin-right: 0;
             }
         }
     }
-    
-    .g--card-22 {
+
+    .g--card-23 {
         @if $link-class-modifier {
             &__link{
                 @extend .#{$link-class-modifier} !optional;

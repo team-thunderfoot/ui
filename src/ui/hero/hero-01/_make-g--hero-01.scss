@@ -1,22 +1,70 @@
 @mixin make-hero-01(
-    $title-font
+    $title-font,
+    $header-height-desktop,
+    $header-height-tabletl: false,
+    $header-height-tabletm: false,
+    $header-height-tablets: false,
+    $header-height-mobile: false,
+    $title-font-weight: false,
 ) {
-    overflow: hidden;
     width: 100%;
 
     &__wrapper {
-        padding: $measure * 25 0 $measure * 10;
+        padding-bottom: $measure * 10;
+        padding-top: calc(#{$measure} * 14 + #{$header-height-desktop});
+    
+        @if $header-height-tabletl {
+            @media all and ($viewport-type: $tabletl) {
+                padding-top: calc(#{$measure} * 14 + #{$header-height-tabletl});
+            }
+        }
+    
+        @if $header-height-tabletm {
+            @media all and ($viewport-type: $tabletm) {
+                padding-top: calc(#{$measure} * 14 + #{$header-height-tabletm});
+            }
+        }
+    
+        @if $header-height-tablets {
+            @media all and ($viewport-type: $tablets) {
+                padding-top: calc(#{$measure} * 14 + #{$header-height-tablets});
+                padding-bottom: $measure * 5;
+            }
+        }
+    
+        @if $header-height-mobile {
+            @media all and ($viewport-type: $mobile) {
+                padding-top: calc(#{$measure} * 14 + #{$header-height-mobile});
+            }
+        }
 
         &__title {
             @extend .f--font-#{$title-font} !optional;
+
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
     }
 
-    &__media {
-        display: block;
+    &__media-wrapper {
         height: 500px;
-        object-fit: cover;
-        width: 100%;
+        overflow: hidden;
+
+        @media all and ($viewport-type: $tabletm) {
+            height: 400px;
+        }
+
+        @media all and ($viewport-type: $tablets) {
+            height: 300px;
+        }
+
+        &__media {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            min-height: 100%;
+        }
     }
 }
 

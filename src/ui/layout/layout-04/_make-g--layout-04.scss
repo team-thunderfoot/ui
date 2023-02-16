@@ -7,11 +7,6 @@
     $title-font-weight: false,
     $subtitle-font-weight: false,
 ) {
-    padding: $measure * 15 0;
-
-    @media all and ($viewport-type: $tablets) {
-        padding: $measure * 10 0;
-    }
 
     &__media-wrapper{
         min-height: 500px;

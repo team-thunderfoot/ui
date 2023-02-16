@@ -47,15 +47,16 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ```sh
 .g--card-24{
     @include make-card-24(
+        $link-class: g--link-01,
         $background-size: cover,
         $background-position: center,
         $title-font: f,
         // $border-radius: default,
-        // $title-font-weight: default,
     );
     @include make-card-24-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
+        // $link-class-modifier: default,
         // $text-align: default
     );
 }

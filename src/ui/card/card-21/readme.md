@@ -24,7 +24,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 - $background-color
 - $border-radius: false by default
-- $link-class: false by default
+- $link-class
+- $link-class-modifier: false by default
 - $text-align: false by default
 - $title-color
 - $title-font
@@ -33,7 +34,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ### For modifiers
 
 - $background-color
-- $link-class
+- $link-class-modifier
 - $text-align
 - $title-color
 

@@ -1,0 +1,14 @@
+.g--card-21{
+    @include make-card-21(
+        $link-class: g--link-01,
+        $title-font: f,
+        // $border-radius: default
+        // $title-font-weight: default
+    );
+    @include make-card-21-modifier(
+        $background-color: map-get($color-options, f),
+        $title-color: map-get($color-options, a),
+        // $link-class-modifier: default
+        // $text-align: default,
+    );
+}

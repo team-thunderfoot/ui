@@ -1,0 +1,100 @@
+@mixin make-card-21(
+    $link-class,
+    $title-font,
+    $border-radius: false,
+    $title-font-weight: false,
+) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: $measure*7 $measure*5;
+    position: relative;
+    width: 100%;
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    &__media{
+        display: block;
+        height: 100px;
+        margin-bottom: $measure * 2;
+        object-fit: cover;
+        width: 100px;
+    
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
+        margin-bottom: $measure * 2;
+        
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+
+    &__link{
+        @extend .#{$link-class} !optional;
+        margin-top: auto;
+    }
+}
+
+@mixin make-card-21-modifier(
+    $background-color,
+    $title-color,
+    $link-class-modifier: false,
+    $text-align: false,
+) {
+    background: $background-color;
+    
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-21 {
+            &__media {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-21 {
+            &__media {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-21 {
+            &__media {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+        
+    }
+
+    .g--card-21 {
+        @if $link-class-modifier {
+            &__link{
+                @extend .#{$link-class-modifier} !optional;
+            }
+        }
+
+        &__title{
+            color: $title-color;
+        }
+    }
+}

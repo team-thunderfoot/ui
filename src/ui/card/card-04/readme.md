@@ -38,6 +38,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ### For modifiers
 
+- $mask-color
 - $subtitle-color
 - $text-align
 - $title-color

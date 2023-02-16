@@ -30,6 +30,7 @@
 
 ### For modifiers
 
+- $mask-color
 - $subtitle-color
 - $text-align
 - $title-color

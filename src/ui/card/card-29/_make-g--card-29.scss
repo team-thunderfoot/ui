@@ -1,0 +1,82 @@
+@mixin make-card-29(
+    $link-class,
+    $subtitle-font,
+    $title-font,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
+    $border-radius: false,
+) {
+    padding: $measure * 7 $measure * 5;
+    width: 100%;
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
+        margin-bottom: $measure * 2;
+        
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
+
+        margin-bottom: $measure * 2;
+        
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+
+    &__link{
+        @extend .#{$link-class} !optional;
+        margin-top: auto;
+    }
+}
+
+@mixin make-card-29-modifier(
+    $link-class-modifier: false,
+    $background-color,
+    $subtitle-color,
+    $title-color,
+    $text-align: false,
+) {
+    background: $background-color;
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--card-29 {
+
+        @if $link-class-modifier {
+            &__link{
+                @extend .#{$link-class-modifier} !optional;
+            }
+        }
+
+        &__title{
+            color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
+        }
+    }
+}

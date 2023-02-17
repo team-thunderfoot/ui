@@ -1,0 +1,13 @@
+.g--card-29{
+    @include make-card-29(
+        $link-class: g--link-01,
+        $subtitle-font: f,
+        $title-font: c,
+    );
+    @include make-card-29-modifier(
+        $background-color: transparent,
+        $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $text-align: default
+    );
+}

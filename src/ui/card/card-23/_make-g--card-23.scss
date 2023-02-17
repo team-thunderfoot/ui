@@ -38,8 +38,8 @@
 }
 
 @mixin make-card-23-modifier(
-    $link-class-modifier: false,
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     @if $text-align == "center" {

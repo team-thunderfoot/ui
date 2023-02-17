@@ -47,9 +47,9 @@
 @mixin make-card-30-modifier(
     $border-color,
     $background-color,
-    $link-class-modifier: false,
     $subtitle-color,
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     border-color: $border-color;

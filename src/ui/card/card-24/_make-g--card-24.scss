@@ -67,9 +67,9 @@
 }
 
 @mixin make-card-24-modifier(
-    $link-class-modifier: false,
     $mask-color,
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     &::before{

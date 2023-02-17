@@ -44,10 +44,10 @@
 }
 
 @mixin make-card-29-modifier(
-    $link-class-modifier: false,
     $background-color,
     $subtitle-color,
     $title-color,
+    $link-class-modifier: false,
     $text-align: false,
 ) {
     background: $background-color;

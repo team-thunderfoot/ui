@@ -1,10 +1,11 @@
-@mixin make-card-24(
-    $link-class,   
+@mixin make-card-28(
     $background-position,
     $background-size,
     $title-font,
+    $subtitle-font,
     $border-radius: false,
     $title-font-weight: false,
+    $subtitle-font-weight: false
 ) {
     background-position: $background-position;
     background-repeat: no-repeat;
@@ -32,18 +33,6 @@
         position: relative;
         z-index: 1;
 
-        &__media{
-            display: block;
-            width: auto;
-            height: 100px;
-            object-fit: cover;
-            margin-bottom: $measure * 2;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure;
-            }
-        }
-
         &__title{
             @extend .f--font-#{$title-font} !optional;
             @if $title-font-weight {
@@ -57,19 +46,22 @@
             }
         }
 
-        &__link{
-            @extend .#{$link-class} !optional;
-            margin-top: auto;
+        &__subtitle{
+            @extend .f--font-#{$subtitle-font} !optional;
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
+
         }
     }
 
     
 }
 
-@mixin make-card-24-modifier(
+@mixin make-card-28-modifier(
     $mask-color,
     $title-color,
-    $link-class-modifier: false,
+    $subtitle-color,
     $text-align: false,
 ) {
     &::before{
@@ -78,53 +70,25 @@
 
     @if $text-align == "center" {
         text-align: center;
-
-        .g--card-24 {
-            &__wrapper {
-                &__media {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
-        
     }
     @if $text-align == "left" {
         text-align: left;
 
-        .g--card-24 {
-            &__wrapper {
-                &__media {
-                    margin-left: 0;
-                    margin-right: auto;
-                }
-            }
-        }
     }
     @if $text-align == "right" {
         text-align: right;
 
-        .g--card-24 {
-            &__wrapper {
-                &__media {
-                    margin-left: auto;
-                    margin-right: 0;
-                }
-            }
-        }
     }
     
-    .g--card-24 {
+    .g--card-28 {
         &__wrapper{
-
-            @if $link-class-modifier {
-                &__link{
-                    @extend .#{$link-class-modifier} !optional;
-                }
-            }
 
             &__title{
                 color: $title-color;
+            }
+
+            &__subtitle{
+                color: $subtitle-color;
             }
         }
     }

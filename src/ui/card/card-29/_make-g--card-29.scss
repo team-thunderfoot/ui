@@ -1,27 +1,33 @@
-@mixin make-card-23(
-    $link-class,    
+@mixin make-card-29(
+    $link-class,
+    $subtitle-font,
     $title-font,
     $title-font-weight: false,
+    $subtitle-font-weight: false,
+    $border-radius: false,
 ) {
-    padding: 0 $measure*2;
-    position: relative;
+    padding: $measure * 7 $measure * 5;
     width: 100%;
-
-    &__media{
-        display: block;
-        height: 100px;
-        margin-bottom: $measure * 2;
-        object-fit: cover;
-        width: auto;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
-        }
+    @if $border-radius {
+        border-radius: $border-radius;
     }
+
     &__title{
         @extend .f--font-#{$title-font} !optional;
         @if $title-font-weight {
             font-weight: $title-font-weight;
+        }
+        margin-bottom: $measure * 2;
+        
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
         }
 
         margin-bottom: $measure * 2;
@@ -37,44 +43,29 @@
     }
 }
 
-@mixin make-card-23-modifier(
+@mixin make-card-29-modifier(
+    $background-color,
+    $subtitle-color,
     $title-color,
     $link-class-modifier: false,
     $text-align: false,
 ) {
+    background: $background-color;
+
     @if $text-align == "center" {
         text-align: center;
-
-        .g--card-23 {
-            &__media {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        
     }
+
     @if $text-align == "left" {
         text-align: left;
-
-        .g--card-23 {
-            &__media {
-                margin-left: 0;
-                margin-right: auto;
-            }
-        }
     }
+
     @if $text-align == "right" {
         text-align: right;
-
-        .g--card-23 {
-            &__media {
-                margin-left: auto;
-                margin-right: 0;
-            }
-        }
     }
 
-    .g--card-23 {
+    .g--card-29 {
+
         @if $link-class-modifier {
             &__link{
                 @extend .#{$link-class-modifier} !optional;
@@ -83,6 +74,9 @@
 
         &__title{
             color: $title-color;
+        }
+        &__subtitle{
+            color: $subtitle-color;
         }
     }
 }

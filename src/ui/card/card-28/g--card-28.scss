@@ -1,0 +1,17 @@
+.g--card-28{
+    @include make-card-28(
+        $background-size: cover,
+        $background-position: center,
+        $title-font: e,
+        $subtitle-font: f
+        // $border-radius: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default
+    );
+    @include make-card-28-modifier(
+        $mask-color: rgba(map-get($color-options, b), .5),
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+        // $text-align: default
+    );
+}

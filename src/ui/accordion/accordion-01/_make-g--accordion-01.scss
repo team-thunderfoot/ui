@@ -21,10 +21,15 @@
                 font-weight: $title-font-weight;
             }
             margin-bottom: 0 !important;
+            margin-right: $measure * 2;
             text-decoration: none !important;
         }
 
         &__icon {
+            height: $measure * 3;
+            min-height: $measure * 3 importat !important;
+            width: $measure * 2;
+            min-width: $measure * 2 !important;
             transition: transform $time-b $ease-standard-a;
         }
     }
@@ -35,14 +40,14 @@
         transition: max-height $time-c cubic-bezier(0,1,0,1);
 
         &__content {
-            padding: 0 $measure * 4 $measure * 3;
+            padding: 0 $measure * 8 $measure * 3 $measure * 4;
         }
     }
 
     &--is-active & {
         &__hd {
             &__icon {
-                transform: translateY(-50%) rotate(180deg);
+                transform: rotate(180deg);
                 transition: transform $time-b $ease-standard-a;
             }
         }

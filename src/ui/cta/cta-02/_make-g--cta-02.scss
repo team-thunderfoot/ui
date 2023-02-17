@@ -20,7 +20,7 @@
     }
 
     @media all and ($viewport-type: $mobile) {
-        padding: $measure * 7;
+        padding: $measure * 6 $measure * 5;
     }
 
     &::before{

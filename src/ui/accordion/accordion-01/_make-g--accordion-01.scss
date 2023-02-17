@@ -15,6 +15,10 @@
         padding: $measure * 3 $measure * 4;
         width: 100%;
 
+        @media all and ($viewport-type: $tablets) {
+            padding: $measure * 3 $measure * 2;
+        }
+
         &__title {
             @extend .f--font-#{$title-font} !optional;
             @if $title-font-weight {
@@ -41,6 +45,10 @@
 
         &__content {
             padding: 0 $measure * 8 $measure * 3 $measure * 4;
+
+            @media all and ($viewport-type: $tablets) {
+                padding: 0 $measure * 6 $measure * 3 $measure * 2;
+            }
         }
     }
 

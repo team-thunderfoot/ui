@@ -28,6 +28,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 - $background-color: false by default
 - $border-radius: false by default
+- $change-order-responsive: false by default
 - $subtitle-color
 - $subtitle-font
 - $title-color

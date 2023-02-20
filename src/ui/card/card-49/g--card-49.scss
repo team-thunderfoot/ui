@@ -2,6 +2,7 @@
     @include make-card-49(
         $subtitle-font: f,
         $title-font: d,
+        // $change-order-reponsive: default
         // $border-radius: default,
     );
     @include make-card-49-modifier(

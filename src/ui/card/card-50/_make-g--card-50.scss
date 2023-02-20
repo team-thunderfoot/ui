@@ -4,6 +4,7 @@
     $border-radius: false,
     $title-font-weight: false,
     $subtitle-font-weight: false,
+    $change-order-reponsive: false
 ) {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +19,9 @@
 
         @media all and ($viewport-type: $tablets) {
             width: 100%;
-            order: 2;
+            @if $change-order-reponsive {
+                order: 2;
+            }
         }
 
         &__media {
@@ -42,7 +45,9 @@
         @media all and ($viewport-type: $tablets) {
             width: 100%;
             padding: $measure*5;
-            order: 1;
+            @if $change-order-reponsive {
+                order: 1;
+            }
         }
 
         &__title {

@@ -1,9 +1,5 @@
 @mixin make-card-50(
-    $subtitle-font,
-    $title-font,
     $border-radius: false,
-    $title-font-weight: false,
-    $subtitle-font-weight: false,
     $change-order-reponsive: false
 ) {
     display: flex;
@@ -50,45 +46,14 @@
             }
         }
 
-        &__title {
-            @extend .f--font-#{$title-font} !optional;
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
-            margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
-        }
-
-        &__subtitle {
-            @extend .f--font-#{$subtitle-font} !optional;
-            @if $subtitle-font-weight {
-                font-weight: $subtitle-font-weight;
-            }
-        }
     }
 }
 
 @mixin make-card-50-modifier(
-    $subtitle-color,
-    $title-color,
     $background-color: false,
 ) {
     @if $background-color {
         background: $background-color;   
     }
     
-    .g--card-50 {
-        &__wrapper{
-            &__title{
-                color: $title-color;
-            }
-            
-            &__subtitle{
-                color: $subtitle-color;
-            }
-        }
-    }
 }

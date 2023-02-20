@@ -1,13 +1,9 @@
 .g--card-49{
     @include make-card-49(
-        $subtitle-font: f,
-        $title-font: d,
         // $change-order-reponsive: default
         // $border-radius: default,
     );
     @include make-card-49-modifier(
         $background-color: rgba(map-get($color-options, a), .1),
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
     );
 }

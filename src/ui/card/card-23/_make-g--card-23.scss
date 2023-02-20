@@ -3,6 +3,9 @@
     $title-font,
     $title-font-weight: false,
 ) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0 $measure*2;
     position: relative;
     width: 100%;

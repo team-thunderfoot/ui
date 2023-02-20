@@ -14,6 +14,7 @@
     padding: $measure*7 $measure*5;
     position: relative;
     width: 100%;
+    height: 100%;
 
     &::before{
         content: '';
@@ -31,6 +32,8 @@
     }
 
     &__wrapper{
+        display: flex;
+        flex-direction: column;
         position: relative;
         z-index: 1;
 

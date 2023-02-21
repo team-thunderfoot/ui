@@ -9,7 +9,7 @@
 ## Html for a card
 
 ```sh
- <div class="g--card-08" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
+ <div class="g--card-08 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
     <div class="g--card-08__wrapper">
         <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-08__wrapper__media g--lazy-01">
         <h3 class="g--card-08__wrapper__title">Card 08</h3>

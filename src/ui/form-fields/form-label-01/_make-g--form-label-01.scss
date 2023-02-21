@@ -1,0 +1,17 @@
+@mixin make-form-label-01(
+    $label-font,
+    $label-font-weight: false,
+) {
+    @extend .f--font-#{$label-font} !optional;
+    @if $label-font-weight {
+        font-weight: $label-font-weight;
+    }
+    margin-bottom: $measure;
+    display: block;
+}
+
+@mixin make-form-label-01-modifier(
+    $label-color
+) {
+    color: $label-color;
+}

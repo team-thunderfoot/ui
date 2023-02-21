@@ -1,0 +1,61 @@
+@mixin make-form-checkbox-01(
+    $border-radius,
+    $border-width,
+    $font,
+    $font-weight: false
+) {
+    @extend .f--font-#{$font} !optional;
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+    display: block;
+    border: $border-width solid;
+    padding: $measure*.5 $measure;
+    width:100%;
+    border-radius: $border-radius;
+    transition: border-color $time-b $ease-standard-a;
+    @media all and ($viewport-type: $mobile){
+        font-size: 1rem;
+    }
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+        border: $border-width solid;
+    }
+}
+
+@mixin make-form-checkbox-01-modifier(
+    $background-color,
+    $background-color-autofill,
+    $border-color,
+    $border-color-focus,
+    $placeholder-color,
+    $text-color,
+) {
+    border-color: $border-color;
+    background-color: $background-color !important;
+    color: $text-color !important;
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+        border-color: $border-color;
+        -webkit-text-fill-color: $text-color;
+        -webkit-box-shadow: 0 0 0px 1000px $background-color-autofill inset;
+    }
+    &::placeholder{
+        color: $placeholder-color;
+    }
+    &:focus,
+    &:not(:placeholder-shown){
+        border-color: $border-color-focus;
+    }
+}
+
+@mixin make-form-checkbox-01-error(
+    $error-border-color,
+) {
+    border-color: $error-border-color;
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+        border-color: $error-border-color;
+    }
+    &:focus,
+    &:not(:placeholder-shown){
+        border-color: $error-border-color;
+    }
+}

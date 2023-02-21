@@ -1,0 +1,9 @@
+.g--form-label-01{
+    @include make-form-label-01(
+        $label-font: f,
+        // $label-font-weight: default,
+    );
+    @include make-form-label-01-modifier(
+        $label-color: map-get($color-options, a),
+    );
+}

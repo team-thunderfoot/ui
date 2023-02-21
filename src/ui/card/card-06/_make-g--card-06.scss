@@ -7,10 +7,10 @@
     $title-font-weight: false,
     $subtitle-font-weight: false,
 ) {
-    border: $border-width solid;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border: $border-width solid;
     padding: $measure*7 $measure*5;
     position: relative;
     width: 100%;

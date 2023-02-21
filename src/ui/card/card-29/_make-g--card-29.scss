@@ -6,6 +6,8 @@
     $subtitle-font-weight: false,
     $border-radius: false,
 ) {
+    display: flex;
+    flex-direction: column;
     padding: $measure * 7 $measure * 5;
     width: 100%;
     @if $border-radius {

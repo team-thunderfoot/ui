@@ -1,8 +1,7 @@
-@mixin make-form-checkbox-01(
+@mixin make-form-radio-01(
+    $circle-border-width,
+    $circle-width,
     $font,
-    $square-border-radius,
-    $square-border-width,
-    $square-width,
     $font-weight: false,
 ) {
     position: relative;
@@ -16,7 +15,7 @@
         height: 100%;
         z-index: 0;
         padding: 0;
-        &:checked + .g--form-checkbox-01__title::after{
+        &:checked + .g--form-radio-01__title::after{
             opacity: 1;
         }
     }
@@ -27,7 +26,7 @@
         }
         position: relative;
         display: block;
-        padding-left: calc(#{$measure} + #{$square-width});
+        padding-left: calc(#{$measure} + #{$circle-width});
         cursor: pointer;
         &::before{
             content: '';
@@ -35,57 +34,58 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            height: $square-width;
-            width: $square-width;
-            border: $square-border-width solid;
-            border-radius: $square-border-radius;
+            height: $circle-width;
+            width: $circle-width;
+            border: $circle-border-width solid;
+            border-radius: 50%;
         }
         &::after{
             content: '';
             position: absolute;
-            width: $square-width*.65;
-            height: $square-width*.45;
+            width: $circle-width*.75;
+            height: $circle-width*.75;
             top: 50%;
-            left: $square-width*.5;
+            left: $circle-width*.5;
             transform: translate(-50%, -50%);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             opacity: 0;
+            border-radius: 50%;
             transition: opacity $time-b $ease-standard-a;
         }
     }
 }
 
-@mixin make-form-checkbox-01-modifier(
-    $artwork-img,
+@mixin make-form-radio-01-modifier(
+    $artwork-color,
+    $circle-color,
+    $circle-color-focus,
     $error-border-color,
-    $square-color,
-    $square-color-focus,
     $text-color,
 ) {
-    .g--form-checkbox-01{
+    .g--form-radio-01{
         &__item{
-            &:focus + .g--form-checkbox-01__title::before,
-            &:checked + .g--form-checkbox-01__title::before{
-                border-color: $square-color-focus;
+            &:focus + .g--form-radio-01__title::before,
+            &:checked + .g--form-radio-01__title::before{
+                border-color: $circle-color-focus;
             }
         }
         &__title{
             color: $text-color;
             &::before{
-                border-color: $square-color;
+                border-color: $circle-color;
             }
             &::after{
-                background-image: url('#{$artwork-img}');
+                background: $artwork-color;
             }
         }
     }
-    &.g--form-checkbox-01--error{
-        .g--form-checkbox-01{
+    &.g--form-radio-01--error{
+        .g--form-radio-01{
             &__item{
-                &:focus + .g--form-checkbox-01__title::before,
-                &:checked + .g--form-checkbox-01__title::before{
+                &:focus + .g--form-radio-01__title::before,
+                &:checked + .g--form-radio-01__title::before{
                     border-color: $error-border-color;
                 }
             }

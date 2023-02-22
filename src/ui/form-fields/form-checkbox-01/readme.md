@@ -14,7 +14,7 @@
     <label class="g--form-checkbox-01__title" for="checkbox-01">This is a checkbox</label>
 </div>
 ```
-When there's an error in the input the class "g--form-input-01--error" should be added:
+When there's an error in the input the class "g--form-checkbox-01--error" should be added:
 ```sh
 <div class="g--form-checkbox-01 g--form-checkbox-01--error">
     <input type="checkbox" id="checkbox-01--error" class="g--form-checkbox-01__item">
@@ -45,7 +45,7 @@ When there's an error in the input the class "g--form-input-01--error" should be
 
 ## Use
 
-$border-color-focus variable is used for focus and filled styles.
+$square-color-focus variable is used for focus and filled styles.
 
 ```sh
 .g--form-checkbox-01{

@@ -64,9 +64,9 @@
 }
 
 @mixin make-card-51-modifier(
+    $title-color,
     $background-color: false,
     $media-background-color: false,
-    $title-color,
 ) {
     @if $background-color {
         background: $background-color;   

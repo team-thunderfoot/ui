@@ -1,13 +1,12 @@
 @mixin make-form-checkbox-01(
-    $artwork-width,
+    $font,
     $square-border-radius,
     $square-border-width,
     $square-width,
-    $font,
     $font-weight: false,
 ) {
     position: relative;
-    &__input{
+    &__item{
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -17,19 +16,23 @@
         height: 100%;
         z-index: 0;
         padding: 0;
+        &:checked + .g--form-checkbox-01__title::after{
+            opacity: 1;
+        }
     }
     &__title{
         @extend .f--font-#{$font} !optional;
         @if $font-weight {
             font-weight: $font-weight;
         }
+        position: relative;
         display: block;
-        padding-left: calc(#{$measure} + #{$artwork-width});
+        padding-left: calc(#{$measure} + #{$square-width});
         &::before{
             content: '';
             position: absolute;
-            left:0;
-            top:50%;
+            left: 0;
+            top: 50%;
             transform: translateY(-50%);
             height: $square-width;
             width: $square-width;
@@ -38,47 +41,58 @@
         }
         &::after{
             content: '';
-            width: $square-width*.6;
-            height: $square-width*.4;
+            position: absolute;
+            width: $square-width*.65;
+            height: $square-width*.45;
             top: 50%;
-            left: $square-width/2;
-            transform: translate(-50%, -50%) rotate(45deg);
-            border-left: $artwork-width solid;
-            border-bottom: $artwork-width solid;
+            left: $square-width*.5;
+            transform: translate(-50%, -50%);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            opacity: 0;
+            transition: opacity $time-b $ease-standard-a;
         }
     }
 }
 
 @mixin make-form-checkbox-01-modifier(
-    $text-color,
-    $square-color,
-    $artwork-color
-    // $background-color-autofill,
-    // $border-color,
-    // $border-color-focus,
-    // $placeholder-color,
-    // $text-color,
-) {
-    &__title{
-        color: $text-color;
-        &::before{
-            border-color: $square-color;
-        }
-        &::after{
-            border-color: $artwork-color;
-        }
-    }
-}
-
-@mixin make-form-checkbox-01-error(
+    $artwork-img,
     $error-border-color,
+    $square-color,
+    $square-color-focus,
+    $text-color,
 ) {
-    border-color: $error-border-color;
-    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-        border-color: $error-border-color;
+    .g--form-checkbox-01{
+        &__item{
+            &:focus + .g--form-checkbox-01__title::before,
+            &:checked + .g--form-checkbox-01__title::before{
+                border-color: $square-color-focus;
+            }
+        }
+        &__title{
+            color: $text-color;
+            &::before{
+                border-color: $square-color;
+            }
+            &::after{
+                background-image: url('#{$artwork-img}');
+            }
+        }
     }
-    &:focus,
-    &:not(:placeholder-shown){
-        border-color: $error-border-color;
+    &.g--form-checkbox-01--error{
+        .g--form-checkbox-01{
+            &__item{
+                &:focus + .g--form-checkbox-01__title::before,
+                &:checked + .g--form-checkbox-01__title::before{
+                    border-color: $error-border-color;
+                }
+            }
+            &__title{
+                &::before {
+                    border-color: $error-border-color;
+                }
+            }
+        }
     }
 }

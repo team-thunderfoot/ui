@@ -1,49 +1,72 @@
 @mixin make-form-checkbox-01(
-    $border-radius,
-    $border-width,
+    $artwork-width,
+    $square-border-radius,
+    $square-border-width,
+    $square-width,
     $font,
-    $font-weight: false
+    $font-weight: false,
 ) {
-    @extend .f--font-#{$font} !optional;
-    @if $font-weight {
-        font-weight: $font-weight;
+    position: relative;
+    &__input{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        padding: 0;
     }
-    display: block;
-    border: $border-width solid;
-    padding: $measure*.5 $measure;
-    width:100%;
-    border-radius: $border-radius;
-    transition: border-color $time-b $ease-standard-a;
-    @media all and ($viewport-type: $mobile){
-        font-size: 1rem;
-    }
-    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-        border: $border-width solid;
+    &__title{
+        @extend .f--font-#{$font} !optional;
+        @if $font-weight {
+            font-weight: $font-weight;
+        }
+        display: block;
+        padding-left: calc(#{$measure} + #{$artwork-width});
+        &::before{
+            content: '';
+            position: absolute;
+            left:0;
+            top:50%;
+            transform: translateY(-50%);
+            height: $square-width;
+            width: $square-width;
+            border: $square-border-width solid;
+            border-radius: $square-border-radius;
+        }
+        &::after{
+            content: '';
+            width: $square-width*.6;
+            height: $square-width*.4;
+            top: 50%;
+            left: $square-width/2;
+            transform: translate(-50%, -50%) rotate(45deg);
+            border-left: $artwork-width solid;
+            border-bottom: $artwork-width solid;
+        }
     }
 }
 
 @mixin make-form-checkbox-01-modifier(
-    $background-color,
-    $background-color-autofill,
-    $border-color,
-    $border-color-focus,
-    $placeholder-color,
     $text-color,
+    $square-color,
+    $artwork-color
+    // $background-color-autofill,
+    // $border-color,
+    // $border-color-focus,
+    // $placeholder-color,
+    // $text-color,
 ) {
-    border-color: $border-color;
-    background-color: $background-color !important;
-    color: $text-color !important;
-    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-        border-color: $border-color;
-        -webkit-text-fill-color: $text-color;
-        -webkit-box-shadow: 0 0 0px 1000px $background-color-autofill inset;
-    }
-    &::placeholder{
-        color: $placeholder-color;
-    }
-    &:focus,
-    &:not(:placeholder-shown){
-        border-color: $border-color-focus;
+    &__title{
+        color: $text-color;
+        &::before{
+            border-color: $square-color;
+        }
+        &::after{
+            border-color: $artwork-color;
+        }
     }
 }
 

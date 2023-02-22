@@ -49,22 +49,22 @@ When there's an error in the textarea the class "g--form-textarea-01--error" sho
 $border-color-focus variable is used for focus and filled styles, if placeholder is not added, it won't work and it'll be always look as if it's filled/focused.
 
 ```sh
-.g--form-input-01{
-    &__item{
-        @include make-form-input-01(
-            $font: f,
-            $border-width: 1px,
-            $border-radius: 0,
-            // $font-weight: default
-        );
-        @include make-form-input-01-modifier(
-            $border-color: rgba(map-get($color-options, a), .2),
-            $border-color-focus: map-get($color-options, a),
-            $background-color: transparent,
-            $background-color-autofill: transparent,
-            $placeholder-color: transparent,
-            $text-color: map-get($color-options, a),
-        );
-    }
+.g--form-textarea-01{
+    @include make-form-textarea-01(
+        $font: f,
+        $border-width: 1px,
+        $border-radius: 0,
+        $textarea-height: $measure*10,
+        // $font-weight: default
+    );
+    @include make-form-textarea-01-modifier(
+        $background-color: transparent,
+        $background-color-autofill: transparent,
+        $border-color: rgba(map-get($color-options, a), .2),
+        $border-color-focus: map-get($color-options, a),
+        $error-border-color: map-get($color-options, g),
+        $placeholder-color: transparent,
+        $text-color: map-get($color-options, a),
+    );
 }
 ```

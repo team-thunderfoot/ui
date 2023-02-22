@@ -4,21 +4,23 @@
     $font,
     $font-weight: false
 ) {
-    @extend .f--font-#{$font} !optional;
-    @if $font-weight {
-        font-weight: $font-weight;
-    }
-    display: block;
-    border: $border-width solid;
-    padding: $measure*.5 $measure;
-    width:100%;
-    border-radius: $border-radius;
-    transition: border-color $time-b $ease-standard-a;
-    @media all and ($viewport-type: $mobile){
-        font-size: 1rem;
-    }
-    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+    &__item{
+        @extend .f--font-#{$font} !optional;
+        @if $font-weight {
+            font-weight: $font-weight;
+        }
+        display: block;
         border: $border-width solid;
+        padding: $measure*.5 $measure;
+        width:100%;
+        border-radius: $border-radius;
+        transition: border-color $time-b $ease-standard-a;
+        @media all and ($viewport-type: $mobile){
+            font-size: 1rem;
+        }
+        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+            border: $border-width solid;
+        }
     }
 }
 
@@ -27,35 +29,41 @@
     $background-color-autofill,
     $border-color,
     $border-color-focus,
+    $error-border-color,
     $placeholder-color,
     $text-color,
 ) {
-    border-color: $border-color;
-    background-color: $background-color !important;
-    color: $text-color !important;
-    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-        border-color: $border-color;
-        -webkit-text-fill-color: $text-color;
-        -webkit-box-shadow: 0 0 0px 1000px $background-color-autofill inset;
+    .g--form-input-01{
+        &__item{
+            border-color: $border-color;
+            background-color: $background-color !important;
+            color: $text-color !important;
+            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                border-color: $border-color;
+                -webkit-text-fill-color: $text-color;
+                -webkit-box-shadow: 0 0 0px 1000px $background-color-autofill inset;
+            }
+            &::placeholder{
+                color: $placeholder-color;
+            }
+            &:focus,
+            &:not(:placeholder-shown){
+                border-color: $border-color-focus;
+            }
+        }
     }
-    &::placeholder{
-        color: $placeholder-color;
-    }
-    &:focus,
-    &:not(:placeholder-shown){
-        border-color: $border-color-focus;
-    }
-}
-
-@mixin make-form-input-01-error(
-    $error-border-color,
-) {
-    border-color: $error-border-color;
-    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-        border-color: $error-border-color;
-    }
-    &:focus,
-    &:not(:placeholder-shown){
-        border-color: $error-border-color;
+    &.g--form-input-01--error{
+        .g--form-input-01{
+            &__item{
+                border-color: $error-border-color;
+                &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                    border-color: $error-border-color;
+                }
+                &:focus,
+                &:not(:placeholder-shown){
+                    border-color: $error-border-color;
+                }
+            }
+        }
     }
 }

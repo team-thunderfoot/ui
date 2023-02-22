@@ -82,6 +82,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 ### Form fields
 
+- [g--form-checkbox-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-checkbox-01/readme.md)
 - [g--form-error-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-error-01/readme.md)
 - [g--form-group-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-group-01/readme.md)
 - [g--form-input-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-input-01/readme.md)

@@ -9,69 +9,59 @@
 ## Html
 
 ```sh
-<div class="g--form-input-01">
-    <input type="text" id="first-name" class="g--form-input-01__item" placeholder=" ">
+<div class="g--form-checkbox-01">
+    <input type="checkbox" id="checkbox-01" class="g--form-checkbox-01__item">
+    <label class="g--form-checkbox-01__title" for="checkbox-01">This is a checkbox</label>
 </div>
 ```
 When there's an error in the input the class "g--form-input-01--error" should be added:
 ```sh
-<div class="g--form-input-01 g--form-input-01--error">
-    <input type="text" id="first-name" class="g--form-input-01__item" placeholder=" ">
+<div class="g--form-checkbox-01 g--form-checkbox-01--error">
+    <input type="checkbox" id="checkbox-01--error" class="g--form-checkbox-01__item">
+    <label class="g--form-checkbox-01__title" for="checkbox-01--error">This is a checkbox</label>
 </div>
 ```
 
 ## Editable variables
 
-- $background-color
-- $background-color-autofill
-- $border-color
-- $border-color-focus
-- $border-radius
-- $border-width
+- $artwork-img
 - $error-border-color
 - $font
 - $font-weight: false by default
-- $placeholder-color
+- $square-border-radius
+- $square-border-width
+- $square-color
+- $square-color-focus
+- $square-width
 - $text-color
 
 ### For Modifiers
 
-- $background-color
-- $background-color-autofill
-- $border-color
-- $border-color-focus
+- $artwork-img
 - $error-border-color
-- $placeholder-color
+- $square-color
+- $square-color-focus
 - $text-color
 
 ## Use
 
-$border-color-focus variable is used for focus and filled styles, if placeholder is not added, it won't work and it'll be always look as if it's filled/focused.
+$border-color-focus variable is used for focus and filled styles.
 
 ```sh
-.g--form-input-01{
-    &__item{
-        @include make-form-input-01(
-            $font: f,
-            $border-width: 1px,
-            $border-radius: 0,
-            // $font-weight: default
-        );
-        @include make-form-input-01-modifier(
-            $border-color: rgba(map-get($color-options, a), .2),
-            $border-color-focus: map-get($color-options, a),
-            $background-color: transparent,
-            $background-color-autofill: transparent,
-            $placeholder-color: transparent,
-            $text-color: map-get($color-options, a),
-        );
-    }
-    &--error &{
-        &__item{
-            @include make-form-input-01-error(
-                $error-border-color: map-get($color-options, g),
-            );
-        }
-    }
+.g--form-checkbox-01{
+    @include make-form-checkbox-01(
+        $font: f,
+        $square-border-radius: 0,
+        $square-border-width: 1px,
+        $square-width: $measure*2,
+        // $font-weight: default,
+    );
+    @include make-form-checkbox-01-modifier(
+        $artwork-img: './img/global-components/form-fields/checkbox-artwork.svg',
+        $error-border-color: map-get($color-options, f),
+        $square-color: rgba(map-get($color-options, a), .2),
+        $square-color-focus: map-get($color-options, a),
+        $text-color: map-get($color-options, a),
+    );
 }
 ```

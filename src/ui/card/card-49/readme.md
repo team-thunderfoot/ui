@@ -11,8 +11,8 @@
 ```sh
 <div class="g--card-49">
     <div class="g--card-49__wrapper">
+        <h2 class="g--card-49__wrapper__title">Card 49 This is a card lorem ispum dolor sit</h2>
         <div class="c--content-a">
-        <h2>Card 49 This is a card lorem ispum dolor sit</h2>
         <p>Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
         </div>
     </div>
@@ -31,21 +31,28 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $background-color: false by default
 - $border-radius: false by default
 - $change-order-responsive: false by default
+- $title-color
+- $title-font
+- $title-font-weight: false by default
 
 ### For modifiers
 
 - $background-color
+- $title-color
 
 ## use
 
 ```sh
 .g--card-49{
     @include make-card-49(
+        $title-font: d,
+        // title-font-weight: default
         // $change-order-reponsive: default
         // $border-radius: default,
     );
     @include make-card-49-modifier(
         $background-color: rgba(map-get($color-options, a), .1),
+        $title-color: map-get($color-options, a),
     );
 }
 ```

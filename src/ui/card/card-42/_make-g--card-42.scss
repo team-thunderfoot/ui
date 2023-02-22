@@ -64,7 +64,8 @@
 ) {
     background: $background-color;
     @if $background-color-hover or $title-color-hover {
-        text-decoration: none;
+        text-decoration: none !important;
+        display: block;
     }
     @if $background-color-hover and $title-color-hover {
         

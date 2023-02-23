@@ -1,0 +1,71 @@
+@mixin make-card-58(
+    $subtitle-font,
+    $title-font,
+    $img-border-radius: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
+) {
+    padding: 0 $measure*4;
+
+    &__media{
+        display: block;
+        height: 250px;
+        margin-bottom: $measure * 2;
+        width: 100%;
+
+        @if $img-border-radius {
+            border-radius: $border-radius;
+            overflow: hidden;
+        }
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+
+        @media all and ($viewport-type: $mobile) {
+            height: auto;
+        }
+    }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
+    }
+
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
+    }
+}
+
+@mixin make-card-58-modifier(
+    $subtitle-color,
+    $title-color,
+    $text-align: false,
+) {
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+    
+    .g--card-58 {
+        &__title{
+            color: $title-color;
+        }
+        
+        &__subtitle{
+            color: $subtitle-color;
+        }
+    }
+}

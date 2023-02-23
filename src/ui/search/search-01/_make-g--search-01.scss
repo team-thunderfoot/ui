@@ -23,6 +23,8 @@
             font-weight: $input-font-weight;
         }
         display: block;
+        appearance: none;
+        -webkit-appearance: none;
         border: $input-border-width solid;
         padding: $measure*.5 $measure;
         width:100%;

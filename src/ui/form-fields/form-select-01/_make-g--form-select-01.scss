@@ -1,0 +1,91 @@
+@mixin make-form-select-01(
+    $artwork-border-width,
+    $border-radius,
+    $border-width,
+    $font,
+    $artwork-border-radius: false,
+    $font-weight: false
+) {
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: $measure;
+        width: $measure*1.5;
+        height: $measure*1.5;
+        border-right: $artwork-border-width solid;
+        border-bottom: $artwork-border-width solid;
+        transform: rotate(45deg) translateX(-75%) translateY(-35%);
+        pointer-events: none;
+        @if $artwork-border-radius{
+            border-radius: $artwork-border-radius;
+        }
+    }
+    &__item{
+        @extend .f--font-#{$font} !optional;
+        @if $font-weight {
+            font-weight: $font-weight;
+        }
+        display: block;
+        border: $border-width solid;
+        padding: $measure*.5 $measure;
+        width:100%;
+        border-radius: $border-radius;
+        transition: border-color $time-b $ease-standard-a;
+        @media all and ($viewport-type: $mobile){
+            font-size: 1rem;
+        }
+        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+            border: $border-width solid;
+        }
+    }
+}
+
+@mixin make-form-select-01-modifier(
+    $artwork-color,
+    $background-color,
+    $border-color,
+    $border-color-focus,
+    $error-border-color,
+    $text-color,
+    $option-color: false,
+    $option-background: false,
+) {
+    .g--form-select-01{
+        &::after{
+            border-right-color: $artwork-color;
+            border-bottom-color: $artwork-color;
+        }
+        &__item{
+            border-color: $border-color;
+            background-color: $background-color !important;
+            color: $text-color !important;
+            &:focus,
+            &:valid{
+                border-color: $border-color-focus;
+            }
+            @if $option-color or $option-background{
+                option{
+                    @if $option-color{
+                        color: $option-color;
+                    }
+                    @if $option-background{
+                        background: $option-background;
+                    }
+                }
+            }
+        }
+    }
+    &.g--form-select-01--error{
+        .g--form-select-01{
+            &__item{
+                border-color: $error-border-color;
+                &:focus,
+                &:valid{
+                    border-color: $error-border-color;
+                }
+            }
+        }
+    }
+}

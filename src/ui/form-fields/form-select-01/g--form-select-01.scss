@@ -1,0 +1,20 @@
+.g--form-select-01{
+    @include make-form-select-01(
+        $artwork-border-width: 1px,
+        $border-radius: 0,
+        $border-width: 1px,
+        $font: f,
+        // $artwork-border-radius: default
+        // $font-weight: default
+    );
+    @include make-form-select-01-modifier(
+        $artwork-color: map-get($color-options, a),
+        $background-color: transparent,
+        $border-color: rgba(map-get($color-options, a), .2),
+        $border-color-focus: map-get($color-options, a),
+        $error-border-color: map-get($color-options, g),
+        $text-color: map-get($color-options, a),
+        // $option-color: default,
+        // $option-background: default,
+    );
+}

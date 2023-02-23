@@ -1,0 +1,84 @@
+@mixin make-form-file-01(
+    $border-radius,
+    $border-width,
+    $btn-font,
+    $font,
+    $btn-font-weight: false,
+    $font-weight: false,
+) {
+    &__item{
+        @extend .f--font-#{$font} !optional;
+        @if $font-weight {
+            font-weight: $font-weight;
+        }
+        cursor: pointer;
+        position: relative;
+        -webkit-padding-before: 0 !important;
+        -webkit-padding-after: 0 !important;
+        -webkit-padding-start: 0 !important;
+        display: block;
+        border: $border-width solid;
+        padding: $measure*.5 $measure;
+        width: 100%;
+        border-radius: $border-radius;
+        transition: border-color $time-b $ease-standard-a;
+        @media all and ($viewport-type: $mobile){
+            font-size: 1rem;
+        }
+        &::-webkit-file-upload-button {
+            cursor: pointer;
+            height: 100%;
+            padding: $measure*.5 $measure*3;
+            appearance: none;
+            border: none;
+            margin-right: $measure;
+            @extend .f--font-#{$btn-font} !optional;
+            @if $btn-font-weight {
+                font-weight: $btn-font-weight;
+            }
+            transition: all $time-a ease-in-out;
+        }
+    }
+}
+
+@mixin make-form-file-01-modifier(
+    $background-color,
+    $btn-background-color,
+    $btn-text-color,
+    $border-color,
+    $border-color-focus,
+    $error-border-color,
+    // $placeholder-color,
+    $text-color,
+) {
+    .g--form-file-01{
+        &__item{
+            border-color: $border-color;
+            background-color: $background-color !important;
+            color: $text-color !important;
+            // &::placeholder{
+            //     color: $placeholder-color;
+            // }
+            &::-webkit-file-upload-button {
+                background-color: $btn-background-color;
+                color: $btn-text-color;
+            }
+            &:hover,
+            &:focus,
+            &:valid{
+                border-color: $border-color-focus;
+            }
+        }
+    }
+    &.g--form-file-01--error{
+        .g--form-file-01{
+            &__item{
+                border-color: $error-border-color;
+                &:focus,
+                &:valid{
+                    border-color: $error-border-color;
+                }
+            }
+        }
+    }
+}

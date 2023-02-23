@@ -1,69 +1,60 @@
-# Form-input-01
+# Search-01
 
 ## Layout
 
-![alt text][input-01]
+![alt text][search-01]
 
-[input-01]: /src/img/global-components/form-fields/input-01.jpg
+[search-01]: /src/img/global-components/search/search-01.jpg
 
 ## Html
 
 ```sh
-<div class="g--form-input-01">
-    <input type="text" id="first-name" class="g--form-input-01__item" placeholder=" ">
-</div>
-```
-When there's an error in the input the class "g--form-input-01--error" should be added:
-```sh
-<div class="g--form-input-01 g--form-input-01--error">
-    <input type="text" id="first-name" class="g--form-input-01__item" placeholder=" ">
+<div class="g--search-01">
+    <label for="text-01" class="g--search-01__title">Search by:</label>
+    <input type="search" id="text-01" class="g--search-01__item" placeholder="Type something...">
 </div>
 ```
 
 ## Editable variables
 
-- $background-color
-- $background-color-autofill
-- $border-color
-- $border-color-focus
-- $border-radius
-- $border-width
-- $error-border-color
-- $font
-- $font-weight: false by default
+- $input-background-color
+- $input-background-color-autofill
+- $input-border-color
+- $input-border-radius
+- $input-border-width
+- $input-font
+- $input-text-color
+- $input-font-weight: false by default
 - $placeholder-color
-- $text-color
+- $title-font
+- $title-font-weight: false by default
 
 ### For Modifiers
 
-- $background-color
-- $background-color-autofill
-- $border-color
-- $border-color-focus
-- $error-border-color
+- $input-background-color
+- $input-background-color-autofill
+- $input-border-color
 - $placeholder-color
-- $text-color
+- $input-text-color
 
 ## Use
 
-$border-color-focus variable is used for focus and filled styles, if placeholder is not added, it won't work and it'll be always look as if it's filled/focused.
-
 ```sh
-.g--form-input-01{
-    @include make-form-input-01(
-        $font: f,
-        $border-width: 1px,
-        $border-radius: 0,
-        // $font-weight: default
+.g--search-01{
+    @include make-search-01(
+        $input-border-radius: 0,
+        $input-border-width: 1px,
+        $input-font: f,
+        $title-font: f,
+        // $input-font-weight: default,
+        // $title-font-weight: default
     );
-    @include make-form-input-01-modifier(
-        $border-color: rgba(map-get($color-options, a), .2),
-        $border-color-focus: map-get($color-options, a),
-        $background-color: transparent,
-        $background-color-autofill: transparent,
-        $error-border-color: map-get($color-options, g),
-        $placeholder-color: transparent,
-        $text-color: map-get($color-options, a),
+    @include make-search-01-modifier(
+        $input-background-color: transparent,
+        $input-background-color-autofill: transparent,
+        $input-border-color: map-get($color-options, a),
+        $placeholder-color: rgba(map-get($color-options, a), .5),
+        $input-text-color: map-get($color-options, a),
     );
 }
 ```

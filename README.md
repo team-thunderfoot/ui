@@ -123,6 +123,10 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--pill-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/pill/pill-01/readme.md)
 
+### Search
+
+- [g--search-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/search/search-01/readme.md)
+
 ### Spinner
 
 - [g--spinner-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/spinner/spinner-01/readme.md)

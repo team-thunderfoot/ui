@@ -33,16 +33,8 @@
 @import './scss/components/gap/c--gap-d.scss';
 @import './scss/components/gap/c--gap-e.scss';
 
-//* form fields
-@import './ui/form-fields/form-checkbox-01/g--form-checkbox-01.scss';
-@import './ui/form-fields/form-error-01/g--form-error-01.scss';
-@import './ui/form-fields/form-file-01/g--form-file-01.scss';
-@import './ui/form-fields/form-group-01/g--form-group-01.scss';
-@import './ui/form-fields/form-input-01/g--form-input-01.scss';
-@import './ui/form-fields/form-label-01/g--form-label-01.scss';
-@import './ui/form-fields/form-radio-01/g--form-radio-01.scss';
-@import './ui/form-fields/form-select-01/g--form-select-01.scss';
-@import './ui/form-fields/form-textarea-01/g--form-texatarea-01.scss';
-
 //* link
 @import './ui/link/link-01/g--link-01.scss';
+
+//* search
+@import './ui/search/search-01/g--search-01.scss';

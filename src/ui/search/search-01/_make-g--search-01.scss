@@ -1,0 +1,68 @@
+@mixin make-search-01(
+    $input-border-radius,
+    $input-border-width,
+    $input-font,
+    $title-font,
+    $input-font-weight: false,
+    $title-font-weight: false
+) {
+    &__title{
+        display: block;
+        @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
+        margin-bottom: $measure * 2;
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+    &__item{
+        @extend .f--font-#{$input-font} !optional;
+        @if $input-font-weight {
+            font-weight: $input-font-weight;
+        }
+        display: block;
+        border: $input-border-width solid;
+        padding: $measure*.5 $measure;
+        width:100%;
+        border-radius: $input-border-radius;
+        transition: border-color $time-b $ease-standard-a;
+        @media all and ($viewport-type: $mobile){
+            font-size: 1rem;
+        }
+        &::placeholder{
+            @extend .f--font-#{$input-font} !optional;
+            @if $input-font-weight {
+                font-weight: $input-font-weight;
+            }
+        }
+        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+            border: $input-border-width solid;
+        }
+    }
+}
+
+@mixin make-search-01-modifier(
+    $input-background-color,
+    $input-background-color-autofill,
+    $input-border-color,
+    $placeholder-color,
+    $input-text-color,
+) {
+    .g--search-01{
+        &__item{
+            border-color: $input-border-color;
+            background-color: $input-background-color !important;
+            color: $input-text-color !important;
+            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                border-color: $input-border-color;
+                -webkit-text-fill-color: $input-text-color;
+                -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+            }
+            &::placeholder{
+                color: $placeholder-color;
+            }
+        }
+    }
+}

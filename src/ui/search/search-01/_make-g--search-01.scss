@@ -42,6 +42,10 @@
         &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
             border: $input-border-width solid;
         }
+        &::-webkit-search-decoration{
+            opacity: 0;
+            position: absolute;
+        }
     }
 }
 

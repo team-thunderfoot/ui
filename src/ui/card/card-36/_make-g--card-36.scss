@@ -4,6 +4,7 @@
     $title-font,
     $border-radius: false,
     $meta-font-weight: false,
+    $meta-divider-font: false,
     $title-font-weight: false,
 ) {
     padding: $measure * 6 $measure * 5;
@@ -14,14 +15,26 @@
     }
 
     &__meta {
-        @extend .f--font-#{$meta-font} !optional;
-        @if $meta-font-weight {
-            font-weight: $meta-font-weight;
-        }
         margin-bottom: $measure * 3;
 
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 2;
+        }
+        &__item {
+            display: inline-flex;
+            align-items: center;
+            @extend .f--font-#{$meta-font} !optional;
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
+            &:not(:last-child){
+                &:after{
+                content: '|';
+                margin-left: $measure;
+                display: inline-block;
+                @extend .f--font-#{$meta-divider-font} !optional;
+                }
+            }
         }
     }
 
@@ -201,7 +214,15 @@
         }
 
         &__meta {
-            color: $meta-color;
+            &__item {
+                color: $meta-color;
+                &:not(:last-child){
+                    &:after{
+                        color: $meta-color;
+                    }
+                }
+            }
+            
         }
 
         &__title {

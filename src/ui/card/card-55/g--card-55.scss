@@ -1,0 +1,15 @@
+.g--card-55 {
+    @include make-card-55(
+        $pill-class: g--pill-01,
+        $title-font: c,
+        // $border-radius: default
+    );
+    @include make-card-55-modifier(
+        $background-color: map-get($color-options, e),
+        $title-color: map-get($color-options, a),
+        // $background-color-hover: default,
+        // $pill-class-modifier: default,
+        // $text-align: default,
+        // $title-color-hover: default
+    );
+}

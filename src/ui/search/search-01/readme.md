@@ -17,6 +17,7 @@
 
 ## Editable variables
 
+- $artwork-img
 - $input-background-color
 - $input-background-color-autofill
 - $input-border-color
@@ -31,6 +32,7 @@
 
 ### For Modifiers
 
+- $artwork-img
 - $input-background-color
 - $input-background-color-autofill
 - $input-border-color
@@ -50,6 +52,7 @@
         // $title-font-weight: default
     );
     @include make-search-01-modifier(
+        $artwork-img: './img/global-components/search/icon.svg',
         $input-background-color: transparent,
         $input-background-color-autofill: transparent,
         $input-border-color: map-get($color-options, a),

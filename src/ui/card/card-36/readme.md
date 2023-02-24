@@ -31,7 +31,6 @@
 - $pill-class
 - $pill-class-modifier: false by default
 - $meta-color
-- $meta-divider-font
 - $meta-font
 - $text-align: false by default
 - $title-color

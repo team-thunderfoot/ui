@@ -4,7 +4,7 @@
 
 ![alt text][search-01]
 
-[search-01]: /src/img/global-components/search/search-01.jpg
+[search-01]: /src/img/global-components/search/search-01.png
 
 ## Html
 

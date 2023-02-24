@@ -1,0 +1,393 @@
+@mixin make-form-hubspot-01(
+    $font,
+    $square-border-radius,
+    $square-border-width,
+    $square-width,
+    $font-weight: false,
+) {
+    .hs-form{
+        fieldset{
+            max-width: none;
+            .field,
+            .hs-form-field{
+                @include make-form-group-a();
+                width: 100%;
+                label{
+                    @include make-label-a($colorlabel: map-get($color-options, b));
+                }
+        
+                //* generic input, textarea, radio, checkbox
+                .input{
+                    //* generic input
+                    input{
+                        @include make-generic-input(
+                            $color-a: map-get($color-options, b),
+                            $colorborder-a: map-get($color-options, b),
+                            $padding: $measure*1.376 $measure*2,
+                            $mobileFontSize:1rem
+                        );
+                        &:focus{
+                            @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                        }
+                        &.invalid,
+                        &.error{
+                            border: 1px solid map-get($color-options, f);
+                        }
+                    }
+        
+                    //* textarea
+                    textarea{
+                        @include make-generic-input(
+                            $color-a: map-get($color-options, b),
+                            $colorborder-a: map-get($color-options, b),
+                            $padding: $measure*1.376 $measure*2,
+                            $mobileFontSize:1rem
+                        );
+                        min-height: 150px;
+                        display: block;
+                        resize: vertical;
+                        &:focus{
+                            @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                        }
+                        &.invalid,
+                        &.error{
+                            border: 1px solid map-get($color-options, f);
+                        }
+                    }
+        
+                    //* radio and checkbox
+                    .inputs-list{
+                        list-style: none;
+                        display: flex;
+                        flex-wrap: wrap;
+            
+                        //* multiple radio
+                        .hs-form-radio{
+                            margin-bottom: $measure;
+                            label{
+                                position: relative;
+                                margin-bottom: 0;
+                                input{
+                                    position: absolute;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                    left:0;
+                                    top:0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 0;
+                                    padding: 0;
+                                    &:checked ~ span::before{
+                                        background:map-get($color-options, b);
+                                    }
+                                }
+                                span{
+                                    @include make-label-a($colorlabel: map-get($color-options, b));
+                                    padding-left: $measure*3;
+                                    margin-bottom: 0;
+                                    z-index: 1;
+                                    position: relative;
+                                    a{
+                                        @include link-a($colortext: b);
+                                        &:hover,&:focus{
+                                            @include link-a-interaction();
+                                        }
+                                    }
+                                    .hs-form-required,
+                                    span{
+                                        display: inline;
+                                        padding-left: 0;
+                                        &::before{
+                                            content: none;
+                                        }
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        left:0;
+                                        top:50%;
+                                        transform: translateY(-50%);
+                                        height: $measure*2;
+                                        width: $measure*2;
+                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                            &:not(:last-child){
+                                margin-right: $measure*3;
+                            }
+                        }
+            
+                        //* multiple checkbox
+                        .hs-form-checkbox{
+                            margin-bottom: $measure;
+                            label{
+                                position: relative;
+                                margin-bottom: 0;
+                                input{
+                                    position: absolute;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                    left:0;
+                                    top:0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 0;
+                                    padding: 0;
+                                    &:checked ~ span::before{
+                                        background:map-get($color-options, b);
+                                    }
+                                }
+                                span{
+                                    @include make-label-a($colorlabel: map-get($color-options, b));
+                                    padding-left: $measure*3;
+                                    margin-bottom: 0;
+                                    z-index: 1;
+                                    position: relative;
+                                    a{
+                                        @include link-a($colortext: b);
+                                        &:hover,&:focus{
+                                            @include link-a-interaction();
+                                        }
+                                    }
+                                    .hs-form-required,
+                                    span{
+                                        display: inline;
+                                        padding-left: 0;
+                                        &::before{
+                                            content: none;
+                                        }
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        left:0;
+                                        top:50%;
+                                        transform: translateY(-50%);
+                                        height: $measure*2;
+                                        width: $measure*2;
+                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                    }
+                                }
+                            }
+                            &:not(:last-child){
+                                margin-right: $measure*3;
+                            }
+                        }
+            
+                        //* single checkbox
+                        .hs-form-booleancheckbox{
+                            label{
+                                position: relative;
+                                margin-bottom: 0;
+                                input{
+                                    position: absolute;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                    left:0;
+                                    top:0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 0;
+                                    padding: 0;
+                                    &:checked ~ span::before{
+                                        background:map-get($color-options, b);
+                                    }
+                                }
+                                span{
+                                    @include make-label-a($colorlabel: map-get($color-options, b));
+                                    padding-left: $measure*3;
+                                    margin-bottom: 0;
+                                    z-index: 1;
+                                    position: relative;
+                                    a{
+                                        @include link-a($colortext: b);
+                                        &:hover,&:focus{
+                                            @include link-a-interaction();
+                                        }
+                                    }
+                                    .hs-form-required,
+                                    span{
+                                        display: inline;
+                                        padding-left: 0;
+                                        &::before{
+                                            content: none;
+                                        }
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        left:0;
+                                        top:50%;
+                                        transform: translateY(-50%);
+                                        height: $measure*2;
+                                        width: $measure*2;
+                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                //* radio label, checkbox label
+                &.hs-fieldtype-radio,
+                &.hs-fieldtype-checkbox,
+                &.hs-fieldtype-booleancheckbox{
+                    label{
+                        cursor: pointer;
+                    }
+                }
+    
+                //* select
+                &.hs-fieldtype-select{
+                    .input{
+                        @include make-select-wrapper($background-image-a: url('https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.0-beta.6/img/angle-arrow-down-white.png'));
+                        select{
+                            @include make-generic-input(
+                                $color-a: map-get($color-options, b),
+                                $colorborder-a: map-get($color-options, b),
+                                $padding: $measure * 1.376 $measure * 2,
+                                $mobileFontSize: 1rem
+                            );
+                            &:focus {
+                                @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                            }
+                        }
+                    }
+                }
+    
+                //* file
+                &.hs-fieldtype-file{
+                    .input{
+                        input{
+                            @include make-upload(
+                                $color-a: map-get($color-options, b),
+                                $padding: $measure*1.376 $measure*2,
+                                $colorborder-a: map-get($color-options, b),
+                                $colorbtnbg: map-get($color-options, b), 
+                                $colorbtntext: map-get($color-options, a),
+                                $fontSize: 1rem
+                            );
+                            &:hover,&:focus{
+                                @include make-upload-interaction($color-a: rgba(map-get($color-options, b), .7), $colorborder-a: rgba(map-get($color-options, b), .7));
+                            }
+                        }
+                    }
+                }
+        
+                //* date
+                &.hs-fieldtype-date{
+                    .input{
+                        @include make-date-wrapper($background-image-a: url('https://www.citypng.com/public/uploads/preview/download-hd-calendar-date-white-icon-png-11640487316ur2gb8sd6l.png'));
+                        input{
+                            @include make-generic-input(
+                                $color-a: map-get($color-options, b),
+                                $colorborder-a: map-get($color-options, b),
+                                $padding: $measure * 1.376 $measure * 2,
+                                $mobileFontSize: 1rem
+                            );
+                            &:focus {
+                                @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                            }
+                        }
+                    }
+                }
+        
+                //* error message after each input
+                .hs-error-msgs{
+                    list-style: none;
+                    label{
+                        @include make-error-a($color-a: map-get($color-options, f), $important: true);
+                    }
+                }
+            }
+    
+            &.form-columns-2{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .field{
+                    float: none;
+                    width: calc(50% - 16px);
+                    @media all and ($viewport-type: $tablets) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+        //* submit btn
+        .hs_submit{
+            .actions{
+                .hs-button{
+                    @include make-btn-a($colortext: b, $colorborder: b, $colorbackground: b);
+                    border-radius: 0;
+                    &:hover, &:active {
+                        @media (pointer: fine){
+                            @include make-btn-interaction($colortext: a, $colorbg: b);
+                        }
+                    }
+                    &:active {
+                        @media (pointer: coarse){
+                            @include make-btn-interaction($colortext: a, $colorbg: b);
+                        }
+                    }
+                }
+            }
+        }
+    
+        //* form error
+        .hs_error_rollup{
+            .hs-error-msgs,
+            .inputs-list{
+                list-style: none;
+                label{
+                    @include make-error-b($color-a: map-get($color-options, f));
+                }
+            }
+        }
+    }
+}
+
+@mixin make-form-hubspot-01-modifier(
+    $artwork-img,
+    $error-border-color,
+    $square-color,
+    $square-color-focus,
+    $text-color,
+) {
+    .g--form-hubspot-01{
+        &__item{
+            &:focus + .g--form-hubspot-01__title::before,
+            &:checked + .g--form-hubspot-01__title::before{
+                border-color: $square-color-focus;
+            }
+        }
+        &__title{
+            color: $text-color;
+            &::before{
+                border-color: $square-color;
+            }
+            &::after{
+                background-image: url('#{$artwork-img}');
+            }
+        }
+    }
+    &.g--form-hubspot-01--error{
+        .g--form-hubspot-01{
+            &__item{
+                &:focus + .g--form-hubspot-01__title::before,
+                &:checked + .g--form-hubspot-01__title::before{
+                    border-color: $error-border-color;
+                }
+            }
+            &__title{
+                &::before {
+                    border-color: $error-border-color;
+                }
+            }
+        }
+    }
+}

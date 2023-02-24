@@ -11,7 +11,9 @@
 ```sh
 <div class="g--search-01">
     <label for="text-01" class="g--search-01__title">Search by:</label>
-    <input type="search" id="text-01" class="g--search-01__item" placeholder="Type something...">
+    <div class="g--search-01__wrapper">
+        <input type="search" id="text-01" class="g--search-01__wrapper__item" placeholder="Type something...">
+    </div>
 </div>
 ```
 

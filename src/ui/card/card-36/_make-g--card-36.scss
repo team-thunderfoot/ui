@@ -27,12 +27,14 @@
             @if $meta-font-weight {
                 font-weight: $meta-font-weight;
             }
-            &:not(:last-child){
-                &:after{
-                content: '|';
-                margin-left: $measure;
-                display: inline-block;
-                @extend .f--font-#{$meta-divider-font} !optional;
+            @if $meta-divider-font {
+                &:not(:last-child){
+                    &:after{
+                    content: '|';
+                    margin-left: $measure;
+                    display: inline-block;
+                    @extend .f--font-#{$meta-divider-font} !optional;
+                    }
                 }
             }
         }

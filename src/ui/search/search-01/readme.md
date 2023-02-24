@@ -13,13 +13,16 @@
     <label for="text-01" class="g--search-01__title">Search by:</label>
     <div class="g--search-01__wrapper">
         <input type="search" id="text-01" class="g--search-01__wrapper__item" placeholder="Type something...">
+        <svg class="g--search-01__wrapper__artwork" viewBox="0 0 18 19" fill="none">
+            <path d="M11.9264 12.4266L16.9998 17.5M13.8395 7.87383C13.8395 11.394 10.9858 14.2477 7.46563 14.2477C3.94546 14.2477 1.0918 11.394 1.0918 7.87383C1.0918 4.35366 3.94546 1.5 7.46563 1.5C10.9858 1.5 13.8395 4.35366 13.8395 7.87383Z" stroke-width="2" stroke-linecap="round"/>
+        </svg>
     </div>
 </div>
 ```
 
 ## Editable variables
 
-- $artwork-img
+- $artwork-color
 - $input-background-color
 - $input-background-color-autofill
 - $input-border-color
@@ -34,7 +37,7 @@
 
 ### For Modifiers
 
-- $artwork-img
+- $artwork-color
 - $input-background-color
 - $input-background-color-autofill
 - $input-border-color
@@ -54,7 +57,7 @@
         // $title-font-weight: default
     );
     @include make-search-01-modifier(
-        $artwork-img: './img/global-components/search/icon.svg',
+        $artwork-color: map-get($color-options, a),
         $input-background-color: transparent,
         $input-background-color-autofill: transparent,
         $input-border-color: map-get($color-options, a),

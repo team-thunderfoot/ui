@@ -8,7 +8,7 @@
         // $title-font-weight: default
     );
     @include make-search-01-modifier(
-        $artwork-img: './img/global-components/search/icon.svg',
+        $artwork-color: map-get($color-options, a),
         $input-background-color: transparent,
         $input-background-color-autofill: transparent,
         $input-border-color: map-get($color-options, a),

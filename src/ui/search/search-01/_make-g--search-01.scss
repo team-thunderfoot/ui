@@ -19,19 +19,6 @@
     }
     &__wrapper{
         position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: $measure;
-            transform: translateY(-50%);
-            width: $measure*2;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: right center;
-            pointer-events: none;
-        }
         &__item{
             @extend .f--font-#{$input-font} !optional;
             @if $input-font-weight {
@@ -61,11 +48,20 @@
                 display: none;
             }
         }
+        &__artwork{
+            position: absolute;
+            top: 50%;
+            right: $measure;
+            transform: translateY(-50%);
+            width: $measure*2;
+            height: 100%;
+            pointer-events: none;
+        }
     }
 }
 
 @mixin make-search-01-modifier(
-    $artwork-img,
+    $artwork-color,
     $input-background-color,
     $input-background-color-autofill,
     $input-border-color,
@@ -74,9 +70,6 @@
 ) {
     .g--search-01{
         &__wrapper{
-            &::after{
-                background-image: url('#{$artwork-img}');
-            }
             &__item{
                 border-color: $input-border-color;
                 background-color: $input-background-color !important;
@@ -88,6 +81,11 @@
                 }
                 &::placeholder{
                     color: $placeholder-color;
+                }
+            }
+            &__artwork{
+                path{
+                    stroke: $artwork-color;
                 }
             }
         }

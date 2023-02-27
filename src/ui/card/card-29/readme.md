@@ -33,6 +33,7 @@
 ### For modifiers
 
 - $background-color
+- $link-class-modifier
 - $subtitle-color
 - $text-align
 - $title-color
@@ -45,6 +46,9 @@
         $link-class: g--link-01,
         $subtitle-font: f,
         $title-font: c,
+        // $title-font-weight: default
+        // $subtitle-font-weight: default
+        // $border-radius: default
     );
     @include make-card-29-modifier(
         $background-color: transparent,

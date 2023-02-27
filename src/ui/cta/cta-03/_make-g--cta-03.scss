@@ -1,10 +1,8 @@
 @mixin make-cta-03(
     $btn-class,
-    $subtitle-font,
     $title-font,
     $border-radius: false,
     $title-font-weight: false,
-    $subtitle-font-weight: false,
 ) {
     padding: $measure * 15 $measure * 30 $measure * 15 $measure * 10;
 
@@ -38,10 +36,6 @@
     }
 
     &__subtitle{
-        @extend .f--font-#{$subtitle-font} !optional;
-        @if $subtitle-font-weight {
-            font-weight: $subtitle-font-weight;
-        }
         margin-bottom: $measure*6;
         
         @media all and ($viewport-type: $tablets) {
@@ -56,7 +50,6 @@
 
 @mixin make-cta-03-modifier(
     $background-color,
-    $subtitle-color,
     $title-color,
     $btn-class-modifier: false,
     $text-align: false,
@@ -137,10 +130,6 @@
     .g--cta-03{
         &__title{
             color: $title-color;
-        }
-
-        &__subtitle{
-            color: $subtitle-color;
         }
         
         @if $btn-class-modifier {

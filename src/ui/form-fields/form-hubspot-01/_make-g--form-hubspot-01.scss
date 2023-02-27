@@ -1,57 +1,84 @@
 @mixin make-form-hubspot-01(
-    $font,
-    $square-border-radius,
-    $square-border-width,
-    $square-width,
-    $font-weight: false,
+    $checkbox-link-class,
+    $checkbox-square-width,
+    $checkbox-title-font,
+    $input-border-radius,
+    $input-border-width,
+    $input-font,
+    $label-font,
+    $radio-circle-border-width,
+    $radio-circle-width,
+    $textarea-height,
+    $checkbox-title-font-weight: false,
+    $input-font-weight: false,
+    $label-font-weight: false,
 ) {
     .hs-form{
         fieldset{
             max-width: none;
             .field,
             .hs-form-field{
-                @include make-form-group-a();
+                position: relative;
+                margin-bottom: $measure*2;
                 width: 100%;
                 label{
-                    @include make-label-a($colorlabel: map-get($color-options, b));
+                    @extend .f--font-#{$label-font} !optional;
+                    @if $label-font-weight {
+                        font-weight: $label-font-weight;
+                    }
+                    margin-bottom: $measure;
+                    display: block;
                 }
         
                 //* generic input, textarea, radio, checkbox
                 .input{
                     //* generic input
                     input{
-                        @include make-generic-input(
-                            $color-a: map-get($color-options, b),
-                            $colorborder-a: map-get($color-options, b),
-                            $padding: $measure*1.376 $measure*2,
-                            $mobileFontSize:1rem
-                        );
-                        &:focus{
-                            @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                        @extend .f--font-#{$input-font} !optional;
+                        @if $input-font-weight {
+                            font-weight: $input-font-weight;
+                        }
+                        display: block;
+                        border: $input-border-width solid;
+                        padding: $measure*.5 $measure;
+                        width:100%;
+                        border-radius: $input-border-radius;
+                        transition: border-color $time-b $ease-standard-a;
+                        @media all and ($viewport-type: $mobile){
+                            font-size: 1rem;
+                        }
+                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            border: $input-border-width solid;
                         }
                         &.invalid,
                         &.error{
-                            border: 1px solid map-get($color-options, f);
+                            border: $input-border-width solid;
                         }
                     }
         
                     //* textarea
                     textarea{
-                        @include make-generic-input(
-                            $color-a: map-get($color-options, b),
-                            $colorborder-a: map-get($color-options, b),
-                            $padding: $measure*1.376 $measure*2,
-                            $mobileFontSize:1rem
-                        );
-                        min-height: 150px;
+                        @extend .f--font-#{$input-font} !optional;
+                        @if $input-font-weight {
+                            font-weight: $input-font-weight;
+                        }
                         display: block;
                         resize: vertical;
-                        &:focus{
-                            @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                        height: $textarea-height;
+                        border: $input-border-width solid;
+                        padding: $measure*.5 $measure;
+                        width:100%;
+                        border-radius: $input-border-radius;
+                        transition: border-color $time-b $ease-standard-a;
+                        @media all and ($viewport-type: $mobile){
+                            font-size: 1rem;
+                        }
+                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            border: $input-border-width solid;
                         }
                         &.invalid,
                         &.error{
-                            border: 1px solid map-get($color-options, f);
+                            border: $input-border-width solid;
                         }
                     }
         
@@ -64,6 +91,133 @@
                         //* multiple radio
                         .hs-form-radio{
                             margin-bottom: $measure;
+                            label{
+                                position: relative;
+                                margin-bottom: 0;
+                                input{
+                                    position: absolute;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                    left:0;
+                                    top:0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 0;
+                                    padding: 0;
+                                    &:checked ~ span::after{
+                                        opacity: 1;
+                                    }
+                                }
+                                span{
+                                    @extend .f--font-#{$checkbox-title-font} !optional;
+                                    @if $checkbox-title-font-weight {
+                                        font-weight: $checkbox-title-font-weight;
+                                    }
+                                    position: relative;
+                                    display: block;
+                                    padding-left: calc(#{$measure} + #{$radio-circle-width});
+                                    cursor: pointer;
+                                    a{
+                                        @extend .#{$checkbox-link-class} !optional;
+                                    }
+                                    .hs-form-required,
+                                    span{
+                                        display: inline;
+                                        padding-left: 0;
+                                        &::before{
+                                            content: none;
+                                        }
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        height: $radio-circle-width;
+                                        width: $radio-circle-width;
+                                        border: $radio-circle-border-width solid;
+                                        border-radius: 50%;
+                                    }
+                                    &::after{
+                                        content: '';
+                                        position: absolute;
+                                        width: $radio-circle-width*.75;
+                                        height: $radio-circle-width*.75;
+                                        top: 50%;
+                                        left: $radio-circle-width*.5;
+                                        transform: translate(-50%, -50%);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        opacity: 0;
+                                        border-radius: 50%;
+                                        transition: opacity $time-b $ease-standard-a;
+                                    }
+                                }
+                            }
+                        }
+            
+                        //* multiple checkbox
+                        .hs-form-checkbox{
+                            margin-bottom: $measure;
+                            label{
+                                position: relative;
+                                margin-bottom: 0;
+                                input{
+                                    position: absolute;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                    left:0;
+                                    top:0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 0;
+                                    padding: 0;
+                                    &:checked ~ span::after{
+                                        opacity: 1;
+                                    }
+                                }
+                                span{
+                                    
+                                    @extend .f--font-#{$checkbox-title-font} !optional;
+                                    @if $checkbox-title-font-weight {
+                                        font-weight: $checkbox-title-font-weight;
+                                    }
+                                    position: relative;
+                                    display: block;
+                                    padding-left: calc(#{$measure} + #{$checkbox-square-width});
+                                    cursor: pointer;
+                                    a{
+                                        @extend .#{$checkboxe-link-class} !optional;
+                                    }
+                                    .hs-form-required,
+                                    span{
+                                        display: inline;
+                                        padding-left: 0;
+                                        &::before{
+                                            content: none;
+                                        }
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        left:0;
+                                        top:50%;
+                                        transform: translateY(-50%);
+                                        height: $measure*2;
+                                        width: $measure*2;
+                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                    }
+                                }
+                            }
+                            &:not(:last-child){
+                                margin-right: $measure*3;
+                            }
+                        }
+            
+                        //* single checkbox
+                        .hs-form-booleancheckbox{
                             label{
                                 position: relative;
                                 margin-bottom: 0;
@@ -110,12 +264,244 @@
                                         height: $measure*2;
                                         width: $measure*2;
                                         border: 1px solid rgba(map-get($color-options, b), .3);
-                                        border-radius: 50%;
                                     }
                                 }
                             }
-                            &:not(:last-child){
-                                margin-right: $measure*3;
+                        }
+                    }
+                }
+        
+                //* radio label, checkbox label
+                &.hs-fieldtype-radio,
+                &.hs-fieldtype-checkbox,
+                &.hs-fieldtype-booleancheckbox{
+                    label{
+                        cursor: pointer;
+                    }
+                }
+    
+                //* select
+                &.hs-fieldtype-select{
+                    .input{
+                        @include make-select-wrapper($background-image-a: url('https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.0-beta.6/img/angle-arrow-down-white.png'));
+                        select{
+                            @include make-generic-input(
+                                $color-a: map-get($color-options, b),
+                                $colorborder-a: map-get($color-options, b),
+                                $padding: $measure * 1.376 $measure * 2,
+                                $mobileFontSize: 1rem
+                            );
+                            &:focus {
+                                @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                            }
+                        }
+                    }
+                }
+    
+                //* file
+                &.hs-fieldtype-file{
+                    .input{
+                        input{
+                            @include make-upload(
+                                $color-a: map-get($color-options, b),
+                                $padding: $measure*1.376 $measure*2,
+                                $colorborder-a: map-get($color-options, b),
+                                $colorbtnbg: map-get($color-options, b), 
+                                $colorbtntext: map-get($color-options, a),
+                                $fontSize: 1rem
+                            );
+                            &:hover,&:focus{
+                                @include make-upload-interaction($color-a: rgba(map-get($color-options, b), .7), $colorborder-a: rgba(map-get($color-options, b), .7));
+                            }
+                        }
+                    }
+                }
+        
+                //* date
+                &.hs-fieldtype-date{
+                    .input{
+                        @include make-date-wrapper($background-image-a: url('https://www.citypng.com/public/uploads/preview/download-hd-calendar-date-white-icon-png-11640487316ur2gb8sd6l.png'));
+                        input{
+                            @include make-generic-input(
+                                $color-a: map-get($color-options, b),
+                                $colorborder-a: map-get($color-options, b),
+                                $padding: $measure * 1.376 $measure * 2,
+                                $mobileFontSize: 1rem
+                            );
+                            &:focus {
+                                @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                            }
+                        }
+                    }
+                }
+        
+                //* error message after each input
+                .hs-error-msgs{
+                    list-style: none;
+                    label{
+                        @include make-error-a($color-a: map-get($color-options, f), $important: true);
+                    }
+                }
+            }
+    
+            &.form-columns-2{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .field{
+                    float: none;
+                    width: calc(50% - 16px);
+                    @media all and ($viewport-type: $tablets) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+        //* submit btn
+        .hs_submit{
+            .actions{
+                .hs-button{
+                    @include make-btn-a($colortext: b, $colorborder: b, $colorbackground: b);
+                    border-radius: 0;
+                    &:hover, &:active {
+                        @media (pointer: fine){
+                            @include make-btn-interaction($colortext: a, $colorbg: b);
+                        }
+                    }
+                    &:active {
+                        @media (pointer: coarse){
+                            @include make-btn-interaction($colortext: a, $colorbg: b);
+                        }
+                    }
+                }
+            }
+        }
+    
+        //* form error
+        .hs_error_rollup{
+            .hs-error-msgs,
+            .inputs-list{
+                list-style: none;
+                label{
+                    @include make-error-b($color-a: map-get($color-options, f));
+                }
+            }
+        }
+    }
+}
+
+@mixin make-form-hubspot-01-modifier(
+    $input-background-color,
+    $input-background-color-autofill,
+    $input-border-color,
+    $input-border-color-focus,
+    $input-error-border-color,
+    $input-placeholder-color,
+    $input-text-color,
+    $label-color,
+    $radio-artwork-color,
+    $radio-circle-color,
+    $radio-circle-color-focus,
+    $checkbox-title-color,
+    $checkbox-link-class-modifier: false,
+) {
+    .hs-form{
+        fieldset{
+            .field,
+            .hs-form-field{
+                label{
+                    color: $label-color;
+                }
+        
+                //* generic input, textarea, radio, checkbox
+                .input{
+                    //* generic input
+                    input{
+                        border-color: $input-border-color;
+                        background-color: $input-background-color !important;
+                        color: $input-text-color !important;
+                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            border-color: $input-border-color;
+                            -webkit-text-fill-color: $input-text-color;
+                            -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                        }
+                        &::placeholder{
+                            color: $input-placeholder-color;
+                        }
+                        &:focus,
+                        &:not(:placeholder-shown){
+                            border-color: $input-border-color-focus;
+                        }
+                        &.invalid,
+                        &.error{
+                            border-color: $input-error-border-color;
+                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                                border-color: $input-error-border-color;
+                            }
+                            &:focus,
+                            &:not(:placeholder-shown){
+                                border-color: $input-error-border-color;
+                            }
+                        }
+                    }
+        
+                    //* textarea
+                    textarea{
+                        border-color: $input-border-color;
+                        background-color: $input-background-color !important;
+                        color: $input-text-color !important;
+                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            border-color: $input-border-color;
+                            -webkit-text-fill-color: $input-text-color;
+                            -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                        }
+                        &::placeholder{
+                            color: $input-placeholder-color;
+                        }
+                        &:focus,
+                        &:not(:placeholder-shown){
+                            border-color: $input-border-color-focus;
+                        }
+                        &.invalid,
+                        &.error{
+                            border-color: $input-error-border-color;
+                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                                border-color: $input-error-border-color;
+                            }
+                            &:focus,
+                            &:not(:placeholder-shown){
+                                border-color: $input-error-border-color;
+                            }
+                        }
+                    }
+        
+                    //* radio and checkbox
+                    .inputs-list{
+            
+                        //* multiple radio
+                        .hs-form-radio{
+                            label{
+                                input{
+                                    &:focus ~ span::before,
+                                    &:checked ~ span::before{
+                                        border-color: $radio-circle-color-focus;
+                                    }
+                                }
+                                span{
+                                    color: $checkbox-title-color;
+                                    @if $checkbox-link-class-modifier{
+                                        a{
+                                            @extend .#{$checkbox-link-class-modifier} !optional;
+                                        }
+                                    }
+                                    &::before{
+                                        border-color: $radio-circle-color;
+                                    }
+                                    &::after{
+                                        background: $radio-artwork-color;
+                                    }
+                                }
                             }
                         }
             
@@ -345,47 +731,6 @@
                 list-style: none;
                 label{
                     @include make-error-b($color-a: map-get($color-options, f));
-                }
-            }
-        }
-    }
-}
-
-@mixin make-form-hubspot-01-modifier(
-    $artwork-img,
-    $error-border-color,
-    $square-color,
-    $square-color-focus,
-    $text-color,
-) {
-    .g--form-hubspot-01{
-        &__item{
-            &:focus + .g--form-hubspot-01__title::before,
-            &:checked + .g--form-hubspot-01__title::before{
-                border-color: $square-color-focus;
-            }
-        }
-        &__title{
-            color: $text-color;
-            &::before{
-                border-color: $square-color;
-            }
-            &::after{
-                background-image: url('#{$artwork-img}');
-            }
-        }
-    }
-    &.g--form-hubspot-01--error{
-        .g--form-hubspot-01{
-            &__item{
-                &:focus + .g--form-hubspot-01__title::before,
-                &:checked + .g--form-hubspot-01__title::before{
-                    border-color: $error-border-color;
-                }
-            }
-            &__title{
-                &::before {
-                    border-color: $error-border-color;
                 }
             }
         }

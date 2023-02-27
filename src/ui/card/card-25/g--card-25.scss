@@ -1,12 +1,15 @@
 .g--card-25{
     @include make-card-25(
-        $subtitle-font: f,
-        $title-font: c,
+        // $border-radius: default
     );
     @include make-card-25-modifier(
-        $background-color: transparent,
+        $background-color: map-get($color-options, d),
         $subtitle-color: map-get($color-options, a),
+        $subtitle-font: f,
+        // $subtitle-font-weight: default,
         $title-color: map-get($color-options, a),
+        $title-font: c,
+        // $title-font-weight: default,
         // $text-align: default
     );
 }

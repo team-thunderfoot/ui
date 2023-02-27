@@ -8,6 +8,8 @@
     $label-font,
     $radio-circle-border-width,
     $radio-circle-width,
+    $select-artwork-border-radius,
+    $select-artwork-border-width,
     $textarea-height,
     $checkbox-title-font-weight: false,
     $input-font-weight: false,
@@ -231,21 +233,21 @@
                                     height: 100%;
                                     z-index: 0;
                                     padding: 0;
-                                    &:checked ~ span::before{
-                                        background:map-get($color-options, b);
+                                    &:checked ~ span::after{
+                                        opacity: 1;
                                     }
                                 }
                                 span{
-                                    @include make-label-a($colorlabel: map-get($color-options, b));
-                                    padding-left: $measure*3;
-                                    margin-bottom: 0;
-                                    z-index: 1;
+                                    @extend .f--font-#{$checkbox-title-font} !optional;
+                                    @if $checkbox-title-font-weight {
+                                        font-weight: $checkbox-title-font-weight;
+                                    }
                                     position: relative;
+                                    display: block;
+                                    padding-left: calc(#{$measure} + #{$checkbox-square-width});
+                                    cursor: pointer;
                                     a{
-                                        @include link-a($colortext: b);
-                                        &:hover,&:focus{
-                                            @include link-a-interaction();
-                                        }
+                                        @extend .#{$checkboxe-link-class} !optional;
                                     }
                                     .hs-form-required,
                                     span{
@@ -283,16 +285,42 @@
                 //* select
                 &.hs-fieldtype-select{
                     .input{
-                        @include make-select-wrapper($background-image-a: url('https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.0-beta.6/img/angle-arrow-down-white.png'));
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            right: $measure;
+                            width: $measure*1.5;
+                            height: $measure*1.5;
+                            border-right: $select-artwork-border-width solid;
+                            border-bottom: $select-artwork-border-width solid;
+                            transform: rotate(45deg) translateX(-75%) translateY(-35%);
+                            pointer-events: none;
+                            @if $select-artwork-border-radius{
+                                border-radius: $select-artwork-border-radius;
+                            }
+                        }
                         select{
-                            @include make-generic-input(
-                                $color-a: map-get($color-options, b),
-                                $colorborder-a: map-get($color-options, b),
-                                $padding: $measure * 1.376 $measure * 2,
-                                $mobileFontSize: 1rem
-                            );
-                            &:focus {
-                                @include make-generic-input-interaction($colorborder-a: rgba(map-get($color-options, g), .7));
+                            @extend .f--font-#{$input-font} !optional;
+                            @if $input-font-weight {
+                                font-weight: $input-font-weight;
+                            }
+                            display: block;
+                            border: $input-border-width solid;
+                            padding: $measure*.5 $measure;
+                            width:100%;
+                            border-radius: $input-border-radius;
+                            transition: border-color $time-b $ease-standard-a;
+                            @media all and ($viewport-type: $mobile){
+                                font-size: 1rem;
+                            }
+                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                                border: $input-border-width solid;
+                            }
+                            &.invalid,
+                            &.error{
+                                border: $input-border-width solid;
                             }
                         }
                     }
@@ -392,6 +420,10 @@
 }
 
 @mixin make-form-hubspot-01-modifier(
+    $checkbox-artwork-img,
+    $checkbox-square-color,
+    $checkbox-square-color-focus,
+    $checkbox-title-color,
     $input-background-color,
     $input-background-color-autofill,
     $input-border-color,
@@ -403,7 +435,7 @@
     $radio-artwork-color,
     $radio-circle-color,
     $radio-circle-color-focus,
-    $checkbox-title-color,
+    $select-artwork-color,
     $checkbox-link-class-modifier: false,
 ) {
     .hs-form{
@@ -507,129 +539,65 @@
             
                         //* multiple checkbox
                         .hs-form-checkbox{
-                            margin-bottom: $measure;
                             label{
-                                position: relative;
-                                margin-bottom: 0;
                                 input{
-                                    position: absolute;
-                                    opacity: 0;
-                                    cursor: pointer;
-                                    left:0;
-                                    top:0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 0;
-                                    padding: 0;
+                                    &:focus ~ span::before,
                                     &:checked ~ span::before{
-                                        background:map-get($color-options, b);
+                                        border-color: $checkbox-square-color-focus;
                                     }
                                 }
                                 span{
-                                    @include make-label-a($colorlabel: map-get($color-options, b));
-                                    padding-left: $measure*3;
-                                    margin-bottom: 0;
-                                    z-index: 1;
-                                    position: relative;
-                                    a{
-                                        @include link-a($colortext: b);
-                                        &:hover,&:focus{
-                                            @include link-a-interaction();
-                                        }
-                                    }
-                                    .hs-form-required,
-                                    span{
-                                        display: inline;
-                                        padding-left: 0;
-                                        &::before{
-                                            content: none;
+                                    color: $checkbox-title-color;
+                                    @if $checkbox-link-class-modifier{
+                                        a{
+                                            @extend .#{$checkbox-link-class-modifier} !optional;
                                         }
                                     }
                                     &::before{
-                                        content: '';
-                                        position: absolute;
-                                        left:0;
-                                        top:50%;
-                                        transform: translateY(-50%);
-                                        height: $measure*2;
-                                        width: $measure*2;
-                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                        border-color: $checkbox-square-color;
+                                    }
+                                    &::after{
+                                        background-image: url('#{$checkbox-artwork-img}');
                                     }
                                 }
-                            }
-                            &:not(:last-child){
-                                margin-right: $measure*3;
                             }
                         }
             
                         //* single checkbox
                         .hs-form-booleancheckbox{
                             label{
-                                position: relative;
-                                margin-bottom: 0;
                                 input{
-                                    position: absolute;
-                                    opacity: 0;
-                                    cursor: pointer;
-                                    left:0;
-                                    top:0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 0;
-                                    padding: 0;
+                                    &:focus ~ span::before,
                                     &:checked ~ span::before{
-                                        background:map-get($color-options, b);
+                                        border-color: $checkbox-square-color-focus;
                                     }
                                 }
                                 span{
-                                    @include make-label-a($colorlabel: map-get($color-options, b));
-                                    padding-left: $measure*3;
-                                    margin-bottom: 0;
-                                    z-index: 1;
-                                    position: relative;
-                                    a{
-                                        @include link-a($colortext: b);
-                                        &:hover,&:focus{
-                                            @include link-a-interaction();
-                                        }
-                                    }
-                                    .hs-form-required,
-                                    span{
-                                        display: inline;
-                                        padding-left: 0;
-                                        &::before{
-                                            content: none;
+                                    color: $checkbox-title-color;
+                                    @if $checkbox-link-class-modifier{
+                                        a{
+                                            @extend .#{$checkbox-link-class-modifier} !optional;
                                         }
                                     }
                                     &::before{
-                                        content: '';
-                                        position: absolute;
-                                        left:0;
-                                        top:50%;
-                                        transform: translateY(-50%);
-                                        height: $measure*2;
-                                        width: $measure*2;
-                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                        border-color: $checkbox-square-color;
+                                    }
+                                    &::after{
+                                        background-image: url('#{$checkbox-artwork-img}');
                                     }
                                 }
                             }
                         }
                     }
                 }
-        
-                //* radio label, checkbox label
-                &.hs-fieldtype-radio,
-                &.hs-fieldtype-checkbox,
-                &.hs-fieldtype-booleancheckbox{
-                    label{
-                        cursor: pointer;
-                    }
-                }
     
                 //* select
                 &.hs-fieldtype-select{
                     .input{
-                        @include make-select-wrapper($background-image-a: url('https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.0-beta.6/img/angle-arrow-down-white.png'));
+                        &::after{
+                            border-right-color: $select-artwork-color;
+                            border-bottom-color: $select-artwork-color;
+                        }
                         select{
                             @include make-generic-input(
                                 $color-a: map-get($color-options, b),

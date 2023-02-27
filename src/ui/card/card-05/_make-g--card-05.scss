@@ -1,10 +1,6 @@
 @mixin make-card-05(
     $link-class,
-    $subtitle-font,
-    $title-font,
     $border-radius: false,
-    $title-font-weight: false,
-    $subtitle-font-weight: false,
 ) {
     display: flex;
     flex-direction: column;
@@ -30,10 +26,6 @@
     }
 
     &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
         margin-bottom: $measure * 2;
 
         @media all and ($viewport-type: $tablets) {
@@ -42,10 +34,6 @@
     }
 
     &__subtitle{
-        @extend .f--font-#{$subtitle-font} !optional;
-        @if $subtitle-font-weight {
-            font-weight: $subtitle-font-weight;
-        }
         margin-bottom: $measure * 2;
         
         @media all and ($viewport-type: $tablets) {
@@ -64,7 +52,11 @@
     $subtitle-color,
     $title-color,
     $link-class-modifier: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
     $text-align: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     background: $background-color;
     
@@ -110,10 +102,22 @@
 
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
 
         &__subtitle{
             color: $subtitle-color;
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
         }
     }
 }

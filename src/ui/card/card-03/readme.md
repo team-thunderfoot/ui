@@ -23,10 +23,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ## Editable variables
 
 - $subtitle-color
-- $subtitle-font
+- $subtitle-font: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 - $subtitle-font-weight: false by default
 
@@ -35,21 +35,24 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $subtitle-color
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
+- $subtitle-font
+- $subtitle-font-weight
 
 ## Use
 
 ```sh
 .g--card-03{
-    @include make-card-03(
-        $subtitle-font: f,
-        $title-font: c,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-    );
+    @include make-card-03();
     @include make-card-03-modifier(
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $text-align: default
+        // $text-align: default,
+        // $subtitle-font: default,
+        // $title-font: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
 }
 ```

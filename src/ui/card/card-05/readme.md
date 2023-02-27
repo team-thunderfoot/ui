@@ -28,10 +28,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $link-class
 - $link-class-modifier: false by default
 - $subtitle-color
-- $subtitle-font
+- $subtitle-font: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 - $subtitle-font-weight: false by default
 
@@ -39,8 +39,12 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 - $background-color
 - $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -50,18 +54,18 @@ To use it we have to import the css of the $link-class in the entry
 .g--card-05{
     @include make-card-05(
         $link-class: g--link-01,
-        $subtitle-font: f,
-        $title-font: c,
         // $border-radius: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
     );
     @include make-card-05-modifier(
         $background-color: map-get($color-options, f),
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
         // $link-class-modifier: default,
+        $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: default,
+        // $subtitle-font-weight: default,
+        $title-color: map-get($color-options, a),
         //$text-align: default
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

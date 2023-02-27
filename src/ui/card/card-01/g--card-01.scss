@@ -1,7 +1,5 @@
 .g--card-01{
     @include make-card-01(
-        $title-font: b,
-        $subtitle-font: d,
         $border-radius: 8px,
     );
     @include make-card-01-modifier(
@@ -9,6 +7,10 @@
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
         // $text-align: default
+        $subtitle-font: d,
+        // $subtitle-font-weight: default,
+        $title-font: b,
+        // $title-font-weight: default,
     );
 
     &--second {

@@ -1,14 +1,14 @@
 .g--card-05{
     @include make-card-05(
         $link-class: g--link-01,
-        $subtitle-font: f,
-        $title-font: c,
         // $border-radius: default
     );
     @include make-card-05-modifier(
         $background-color: map-get($color-options, f),
         $subtitle-color: map-get($color-options, a),
+        $subtitle-font: f,
         $title-color: map-get($color-options, a),
+        $title-font: c,
         // $link-class-modifier: default
         // $text-align: default,
     );

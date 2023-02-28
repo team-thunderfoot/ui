@@ -7,6 +7,7 @@
 [layout-06]: /src/img/global-components/layout/layout-06.png
 
 ## Html
+If we change the order in responsive we have to add "f--order-tablets-1" class to the text-wrapper column.
 
 ```sh
 <section class="g--layout-06">
@@ -42,6 +43,7 @@
 - $meta-font-weight: false by default
 - $title-font-weight: false by default
 - $subtitle-font-weight: false by default
+- $change-order-reponsive: false by default
 
 ### For Modifiers
 
@@ -54,6 +56,7 @@
 
 To see it correctly we have to make sure display--flex in utilities is included in the project.
 For the image, we have to add width, height and aspect ratio dynamically.
+If we change the order in responsive we have to add "f--order-tablets-1" class to the text-wrapper column.
 
 ```sh
 .g--layout-06{
@@ -65,6 +68,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $meta-font-weight: default,
         // $title-font-weight: default,
         // $subtitle-font-weight: default,
+        // $change-order-reponsive: default
     );
     @include make-layout-06-modifier(
         $meta-color: map-get($color-options, a),

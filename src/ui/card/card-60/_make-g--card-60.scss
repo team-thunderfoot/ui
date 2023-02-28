@@ -24,8 +24,11 @@
         padding: $measure*10;
 
         @media all and ($viewport-type: $tabletm) {
+            padding: $measure*10 $measure*4;
+        }
+
+        @media all and ($viewport-type: $tablets) {
             width: 100%;
-            padding: $measure*5;
         }
 
         &__hd{
@@ -80,7 +83,7 @@
         position: relative;
         width: 50%;
 
-        @media all and ($viewport-type: $tabletm) {
+        @media all and ($viewport-type: $tablets) {
             width: 100%;
         }
 
@@ -91,7 +94,7 @@
             width: 100%;
             height: 100%;
 
-            @media all and ($viewport-type: $tabletm) {
+            @media all and ($viewport-type: $tablets) {
                 position: relative;
                 top: auto;
                 left: auto;

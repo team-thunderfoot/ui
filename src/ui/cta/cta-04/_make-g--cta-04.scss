@@ -2,9 +2,7 @@
     $background-position,
     $background-size,
     $btn-class,
-    $title-font,
     $border-radius: false,
-    $title-font-weight: false,
 ) {
     background-position: $background-position;
     background-size: $background-size;
@@ -39,10 +37,6 @@
     }
 
     &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
         margin-bottom: $measure*3;
         position: relative;
         z-index: 1;
@@ -71,9 +65,14 @@
 
 @mixin make-cta-04-modifier(
     $mask-color,
+    $subtitle-color,
     $title-color,
     $btn-class-modifier: false,
     $text-align: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     &::before{
         background: $mask-color;
@@ -153,6 +152,21 @@
     .g--cta-04{
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+        }
+        &__subtitle{
+            color: $subtitle-color;
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
         }
         
         @if $btn-class-modifier {

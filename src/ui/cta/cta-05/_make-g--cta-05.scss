@@ -1,10 +1,6 @@
 @mixin make-cta-05(
     $btn-class,
-    $subtitle-font,
-    $title-font,
     $border-radius: false,
-    $title-font-weight: false,
-    $subtitle-font-weight: false,
 ) {
     display: flex;
     flex-wrap: wrap;
@@ -24,10 +20,6 @@
         }
 
         &__title{
-            @extend .f--font-#{$title-font} !optional;
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
             margin-bottom: $measure * 3;
 
             @media all and ($viewport-type: $tablets) {
@@ -36,10 +28,6 @@
         }
 
         &__subtitle{
-            @extend .f--font-#{$subtitle-font} !optional;
-            @if $subtitle-font-weight {
-                font-weight: $subtitle-font-weight;
-            }
             margin-bottom: $measure * 6;
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure * 4;
@@ -82,6 +70,10 @@
     $background-color: false,
     $btn-class-modifier: false,
     $text-align: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $background-color {
         background: $background-color;   
@@ -130,10 +122,22 @@
         &__wrapper{
             &__title{
                 color: $title-color;
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
             }
 
             &__subtitle{
                 color: $subtitle-color;
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
             }
 
             @if $btn-class-modifier {

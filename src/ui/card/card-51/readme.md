@@ -34,7 +34,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $media-background-color: false by default
 - $media-max-width
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
@@ -42,6 +42,8 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $background-color
 - $media-background-color: false
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## use
 
@@ -49,15 +51,15 @@ For the image, we have to add width, height and aspect ratio dynamically.
 .g--card-51{
     @include make-card-51(
         $media-max-width: 150px,
-        $title-font: d,
-        // title-font-weight: default
-        // $change-order-reponsive: default
+        // $change-order-reponsive: default,
         // $border-radius: default,
     );
     @include make-card-51-modifier(
         $background-color: rgba(map-get($color-options, a), .1),
         $media-background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
+        // $title-font: default,
+        // title-font-weight: default
     );
 }
 ```

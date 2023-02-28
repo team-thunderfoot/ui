@@ -26,8 +26,11 @@
 - $btn-class-modifier: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $subtitle-color
+- $subtitle-font: false by default
 - $subtitle-font-weight: false by default
+- $title-font: false by default
+- $title-font-weight: false by default
 
 ### For Modifiers
 
@@ -35,6 +38,11 @@
 - $btn-class-modifier: false by default
 - $text-align
 - $title-color
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -44,15 +52,18 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-03{
     @include make-cta-03(
         // $border-radius: default,
-        $title-font: b,
         $btn-class: g--btn-02,
-        // $title-font-weight: default,
     );
     @include make-cta-03-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         // $text-align: default,
+        $subtitle-color: map-get($color-options, b),
         $title-color: map-get($color-options, b),
-        // $btn-class-modifier: default
+        // $btn-class-modifier: default,
+        // $subtitle-font: default,
+        // $subtitle-font-weight: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

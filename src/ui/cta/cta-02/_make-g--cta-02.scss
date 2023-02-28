@@ -2,8 +2,6 @@
     $btn-class,
     $background-position,
     $background-size,
-    $title-font,
-    $title-font-weight: false,
 ) {
     background-position: $background-position;
     background-size: $background-size;
@@ -34,10 +32,6 @@
     }
 
     &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
         margin-bottom: $measure*6;
         position: relative;
 
@@ -58,7 +52,9 @@
     $mask-color,
     $title-color,
     $btn-class-modifier: false,
-    $text-align: false
+    $text-align: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     &::before{
         background: $mask-color;
@@ -99,6 +95,12 @@
     .g--cta-02{
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
         
         @if $btn-class-modifier {

@@ -21,10 +21,10 @@
 - $link-class
 - $link-class-modifier: false by default
 - $subtitle-color
-- $subtitle-font
+- $subtitle-font: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 - $subtitle-font-weight: false by default
 
@@ -32,8 +32,12 @@
 
 - $link-class-modifier
 - $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -41,13 +45,15 @@
 .g--card-31{
     @include make-card-31(
         $link-class: g--link-01,
-        $title-font: c,
-        $subtitle-font: f,
     );
     @include make-card-31-modifier(
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
-        // $text-align: default
+        // $title-font: default,
+        // $subtitle-font: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
+        // $text-align: default,
         // $link-class-modifier: default
     );
 }

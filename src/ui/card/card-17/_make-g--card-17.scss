@@ -1,7 +1,5 @@
 @mixin make-card-17(
-    $title-font,
     $border-radius: false,
-    $title-font-weight: false,
 ) {
     padding: $measure*7 $measure*5;
     position: relative;
@@ -23,18 +21,15 @@
         }
     }
 
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
-    }
+    &__title{}
 }
 
 @mixin make-card-17-modifier(
     $background-color,
     $title-color,
     $text-align: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     background: $background-color;
 
@@ -73,6 +68,12 @@
     .g--card-17 {
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
     }
 

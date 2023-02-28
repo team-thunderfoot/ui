@@ -1,8 +1,6 @@
 @mixin make-card-10(
     $border-width,
-    $title-font,
     $border-radius: false,
-    $title-font-weight: false,
 ) {
     border: $border-width solid;
     padding: $measure*7 $measure*5;
@@ -24,12 +22,7 @@
         }
     }
 
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
-    }
+    &__title{}
 }
 
 @mixin make-card-10-modifier(
@@ -37,6 +30,8 @@
     $title-color,
     $background-color: false,
     $text-align: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     border-color: $border-color;
 
@@ -79,6 +74,12 @@
     .g--card-10 {
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
     }
 }

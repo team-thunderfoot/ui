@@ -32,10 +32,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $mask-color
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 - $subtitle-color
-- $subtitle-font
+- $subtitle-font: false by default
 - $subtitle-font-weight: false by default
 
 ### For modifiers
@@ -44,7 +44,11 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $mask-color
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 - $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
 
 ## use
 
@@ -54,18 +58,18 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $link-class: g--link-01,
         $background-size: cover,
         $background-position: center,
-        $title-font: e,
-        $subtitle-font: f
         // $border-radius: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default
     );
     @include make-card-32-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
-        //$link-class-modifier: default
-        // $text-align: default
+        //$link-class-modifier: default,
+        // $text-align: default,
+        // $title-font: default,
+        // $subtitle-font: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default
     );
 }
 ```

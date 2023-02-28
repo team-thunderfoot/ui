@@ -25,7 +25,7 @@
 - $mask-color
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
@@ -34,6 +34,8 @@
 - $subtitle-color
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -42,14 +44,14 @@
     @include make-card-12(
         $background-position: center,
         $background-size: cover,
-        $title-font: c,
         // $border-radius: default,
-        // $title-font-weight: default,
     );
     @include make-card-12-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
-        // $text-align: default
+        // $text-align: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

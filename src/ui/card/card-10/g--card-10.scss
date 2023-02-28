@@ -1,12 +1,12 @@
 .g--card-10{
     @include make-card-10(
         $border-width: 1px,
-        $title-font: c,
         // $border-radius: default,
     );
     @include make-card-10-modifier(
         $border-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $title-font: c,
         // $background-color: default,
         // $text-align: default
     );

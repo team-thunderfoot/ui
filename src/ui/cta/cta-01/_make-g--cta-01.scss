@@ -1,7 +1,5 @@
 @mixin make-cta-01(
     $btn-class,
-    $title-font,
-    $title-font-weight: false,
 ) {
     padding: $measure * 20 $measure * 30;
     text-align: center;
@@ -19,10 +17,6 @@
     }
 
     &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
         margin-bottom: $measure*6;
 
         @media all and ($viewport-type: $tablets) {
@@ -41,7 +35,9 @@
     $background-color,
     $title-color,
     $btn-class-modifier: false,
-    $text-align: false
+    $text-align: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     background: $background-color;
 
@@ -80,6 +76,12 @@
     .g--cta-01{
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
         
         @if $btn-class-modifier {

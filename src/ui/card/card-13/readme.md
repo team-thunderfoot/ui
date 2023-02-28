@@ -24,7 +24,7 @@
 - $link-class-modifier: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
@@ -32,22 +32,24 @@
 - $background-color
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
 ```sh
 .g--card-13{
     @include make-card-13(
-        $title-font: c,
         $link-class: g--link-01,
         // $border-radius: default,
-        // $title-font-weight: default,
     );
     @include make-card-13-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
         // $link-class-modifier: default
         // $text-align: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

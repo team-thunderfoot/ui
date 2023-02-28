@@ -1,13 +1,13 @@
 .g--card-14{
     @include make-card-14(
-        $border-width: 1px,    
-        $title-font: c,
+        $border-width: 1px,
         $link-class: g--link-01,
         // $border-radius: default,
     );
     @include make-card-14-modifier(
         $border-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $title-font: c,
         // $background-color: default,
         // $link-class-modifier: default,
         // $text-align: default

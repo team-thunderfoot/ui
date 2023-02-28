@@ -24,11 +24,11 @@
 - $link-class
 - $link-class-modifier: false by default
 - $subtitle-color
-- $subtitle-font
+- $subtitle-font: false by default
 - $subtitle-font-weight: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
@@ -37,8 +37,12 @@
 - $border-color
 - $link-class-modifier
 - $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -46,11 +50,7 @@
 .g--card-30{
     @include make-card-30(
         $link-class: g--link-01,
-        $border-width: 1px,    
-        $subtitle-font: f,
-        $title-font: c,
-        // $title-font-weight: default
-        // $subtitle-font-weight: default
+        $border-width: 1px,
         // $border-radius: default
     );
     @include make-card-30-modifier(
@@ -58,7 +58,11 @@
         $background-color: transparent,
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $link-class-modifier: default
+        // $subtitle-font: default,
+        // $title-font: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
+        // $link-class-modifier: default,
         // $text-align: default
     );
 }

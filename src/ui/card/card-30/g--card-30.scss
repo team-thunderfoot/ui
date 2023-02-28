@@ -1,11 +1,7 @@
 .g--card-30{
     @include make-card-30(
         $link-class: g--link-01,
-        $border-width: 1px,    
-        $subtitle-font: f,
-        $title-font: c,
-        // $title-font-weight: default
-        // $subtitle-font-weight: default
+        $border-width: 1px,
         // $border-radius: default
     );
     @include make-card-30-modifier(
@@ -13,6 +9,10 @@
         $background-color: transparent,
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $subtitle-font: f,
+        $title-font: c,
+        // $title-font-weight: default
+        // $subtitle-font-weight: default
         // $link-class-modifier: default
         // $text-align: default
     );

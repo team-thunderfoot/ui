@@ -2,12 +2,12 @@
     @include make-card-12(
         $background-position: center,
         $background-size: cover,
-        $title-font: c,
         // $border-radius: default,
     );
     @include make-card-12-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
+        $title-font: c,
         // $text-align: default
     );
 }

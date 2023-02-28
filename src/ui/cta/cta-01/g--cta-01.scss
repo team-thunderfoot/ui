@@ -1,12 +1,12 @@
 .g--cta-01{
     @include make-cta-01(
         $btn-class: g--btn-02,
-        $title-font: b,
     );
     @include make-cta-01-modifier(
         $background-color: map-get($color-options, e),
         $btn-class-modifier: g--btn-02--second,
         $title-color: map-get($color-options, a),
+        $title-font: b,
         // $text-align: default
     );
 }

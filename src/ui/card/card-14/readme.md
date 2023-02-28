@@ -30,7 +30,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $link-class-modifier: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
@@ -38,6 +38,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $background-color
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -45,17 +47,17 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-14{
     @include make-card-14(
         $border-width: 1px,
-        $title-font: c,
         $link-class: g--link-01,
         // $border-radius: default,
-        // $title-font-weight: default,
     );
     @include make-card-14-modifier(
         $border-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         // $background-color: default,
         // $link-class-modifier: default,
-        // $text-align: default
+        // $text-align: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

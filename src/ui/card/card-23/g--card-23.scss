@@ -1,11 +1,11 @@
 .g--card-23{
     @include make-card-23(
         $link-class: g--link-01,
-        $title-font: f,
-        //$title-font-weight: default
     );
     @include make-card-23-modifier(
         $title-color: map-get($color-options, a),
+        $title-font: f,
+        //$title-font-weight: default,
         // $link-class-modifier: default,
         // $text-align: default
     );

@@ -29,7 +29,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $mask-color
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
@@ -37,6 +37,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $mask-color
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## use
 
@@ -45,14 +47,14 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-20(
         $background-size: cover,
         $background-position: center,
-        $title-font: f,
         // $border-radius: default,
-        // $title-font-weight: default,
     );
     @include make-card-20-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
-        // $text-align: default
+        // $text-align: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

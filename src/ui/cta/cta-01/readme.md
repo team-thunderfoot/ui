@@ -22,7 +22,7 @@
 - $btn-class-modifier: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For Modifiers
@@ -31,6 +31,8 @@
 - $btn-class-modifier
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -39,15 +41,15 @@ To use it we have to import the css of the $btn-class in the entry
 ```sh
 .g--cta-01{
     @include make-cta-01(
-        $title-font: b,
         $btn-class: g--btn-02,
-        // $title-font-weight: default,
     );
     @include make-cta-01-modifier(
         $title-color: map-get($color-options, a),
         $background-color: map-get($color-options, e),
         // $btn-class-modifier: default,
-        // $text-align: default
+        // $text-align: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

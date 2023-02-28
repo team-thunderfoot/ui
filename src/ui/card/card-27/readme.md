@@ -18,33 +18,36 @@
 ## Editable variables
 
 - $subtitle-color
-- $subtitle-font
+- $subtitle-font: false by default
 - $text-align: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 - $subtitle-font-weight: false by default
 
 ### For modifiers
 
 - $subtitle-color
+- $subtitle-font
 - $text-align
 - $title-color
+- $title-font
+- $title-font-weight
+- $subtitle-font-weight
 
 ## Use
 
 ```sh
 .g--card-27{
-    @include make-card-27(
-        $title-font: c,
-        $subtitle-font: f,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-    );
+    @include make-card-27();
     @include make-card-27-modifier(
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
-        // $text-align: default
+        // $text-align: default,
+        // $title-font: default,
+        // $subtitle-font: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
 }
 ```

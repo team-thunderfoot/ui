@@ -32,27 +32,29 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $border-radius: false by default
 - $change-order-responsive: false by default
 - $title-color
-- $title-font
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For modifiers
 
 - $background-color
 - $title-color
+- $title-font
+- $title-font-weight
 
 ## use
 
 ```sh
 .g--card-49{
     @include make-card-49(
-        $title-font: d,
-        // title-font-weight: default
         // $change-order-reponsive: default
         // $border-radius: default,
     );
     @include make-card-49-modifier(
         $background-color: rgba(map-get($color-options, a), .1),
         $title-color: map-get($color-options, a),
+        // $title-font: default,
+        // title-font-weight: default
     );
 }
 ```

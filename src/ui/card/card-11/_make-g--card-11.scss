@@ -1,7 +1,4 @@
-@mixin make-card-11(
-    $title-font,
-    $title-font-weight: false,
-) {
+@mixin make-card-11() {
     padding: 0 $measure*2;
     width: 100%;
 
@@ -16,17 +13,14 @@
             margin-bottom: $measure;
         }
     }
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
-    }
+    &__title{}
 }
 
 @mixin make-card-11-modifier(
     $title-color,
     $text-align: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -63,6 +57,12 @@
     .g--card-11 {
         &__title{
             color: $title-color;
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
     }
 }

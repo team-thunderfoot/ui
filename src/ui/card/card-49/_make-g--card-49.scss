@@ -1,8 +1,6 @@
 @mixin make-card-49(
-    $title-font,
     $border-radius: false,
     $change-order-reponsive: false,
-    $title-font-weight: false,
 ) {
     display: flex;
     flex-wrap: wrap;
@@ -14,19 +12,6 @@
     &__wrapper {
         padding: $measure*10;
         width: 50%;
-
-        &__title {
-            @extend .f--font-#{$title-font} !optional;
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
-            margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
-        }
-
         @media all and ($viewport-type: $tablets) {
             width: 100%;
             padding: $measure*5;
@@ -34,6 +19,15 @@
                 order: 2;
             }
         }
+
+        &__title {
+            margin-bottom: $measure * 3;
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 2;
+            }
+        }
+
 
     }
     &__media-wrapper {
@@ -66,6 +60,8 @@
 @mixin make-card-49-modifier(
     $title-color,
     $background-color: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $background-color {
         background: $background-color;   
@@ -75,6 +71,12 @@
         &__wrapper{
             &__title{
                 color: $title-color;
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
             }
             
         }

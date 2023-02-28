@@ -23,21 +23,28 @@
 - $border-radius: false by default
 - $background-position
 - $background-size
-- $title-font
 - $btn-class
 - $mask-color
 - $text-align: false by default
 - $title-color
 - $subtitle-color
 - $btn-class-modifier: false by default
+- $subtitle-font: false by default
+- $subtitle-font-weight: false by default
+- $title-font: false by default
 - $title-font-weight: false by default
 
 ### For Modifiers
 
 - $mask-color
 - $text-align
+- $subtitle-color
 - $title-color
 - $btn-class-modifier
+- $subtitle-font
+- $subtitle-font-weight
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -49,15 +56,18 @@ To use it we have to import the css of the $btn-class in the entry
         // $border-radius: default,
         $background-position: left top,
         $background-size: cover,
-        $title-font: b,
         $btn-class: g--btn-01,
-        // $title-font-weight: default,
     );
     @include make-cta-04-modifier(
         $mask-color: rgba(map-get($color-options, a), .5),
         // $text-align: default,
+        $subtitle-color: map-get($color-options, b),
         $title-color: map-get($color-options, b),
         // $btn-class-modifier: default,
+        // $subtitle-font: default,
+        // $subtitle-font-weight: default,
+        // $title-font: default,
+        // $title-font-weight: default,
     );
 }
 ```

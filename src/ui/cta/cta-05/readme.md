@@ -28,8 +28,8 @@ For the image, we have to add width, height and aspect ratio dynamically.
 ## Editable variables
 
 - $border-radius: false by default
-- $title-font
-- $subtitle-font
+- $title-font: false by default
+- $subtitle-font: false by default
 - $btn-class
 - $background-color: false by default
 - $text-align: false by default
@@ -46,6 +46,10 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $title-color
 - $subtitle-color
 - $btn-class-modifier
+- $subtitle-font
+- $subtitle-font-weight
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -55,18 +59,18 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-05{
     @include make-cta-05(
         // $border-radius: default,
-        $title-font: d,
-        $subtitle-font: f,
         $btn-class: g--btn-02,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
     );
     @include make-cta-05-modifier(
         // $background-color: default,
         // $text-align: default,
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
-        // $btn-class-modifier: default
+        // $btn-class-modifier: default,
+        // $title-font: default,
+        // $subtitle-font: default,
+        // $title-font-weight: default,
+        // $subtitle-font-weight: default,
     );
 }
 ```

@@ -7,6 +7,7 @@
     $meta-font-weight: false,
     $title-font-weight: false,
     $subtitle-font-weight: false,
+    $change-order-reponsive: false,
 ) {
 
     &__media-wrapper{
@@ -31,6 +32,9 @@
             min-height: 0;
             height: auto;
             margin-bottom: $measure*5;
+            @if  $change-order-reponsive{
+                margin-bottom: 0;
+            }
         }
 
         &__media{
@@ -58,6 +62,9 @@
 
         @media all and ($viewport-type: $tablets) {
             padding: 0;
+            @if  $change-order-reponsive{
+                margin-bottom: $measure*5;
+            }
         }
 
         &__meta{

@@ -6,6 +6,7 @@
     $subtitle-font-weight: false,
 ) {
     padding: 0 $measure*4;
+    width: 100%;
 
     &__media{
         display: block;

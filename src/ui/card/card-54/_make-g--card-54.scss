@@ -5,6 +5,7 @@
     $title-font-weight: false,
 ) {
     overflow: hidden;
+    width: 100%;
     
     @if $border-radius {
         border-radius: $border-radius;

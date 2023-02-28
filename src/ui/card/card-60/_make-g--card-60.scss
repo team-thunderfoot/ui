@@ -155,11 +155,11 @@
     
     .g--card-60 {
         &__wrapper{
-            &__title{
+            &__hd{
                 color: $heading-color;
             }
 
-            &__subtitle{
+            &__bd{
                 color: $content-color;
             }
 

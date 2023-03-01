@@ -8,5 +8,8 @@
         // $text-align: default,
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
+        $img-background-color: map-get($color-options, f),
+        // $img-background-color-hover: map-get($color-options, e),
+        // $title-color-hover: map-get($color-options, g)
     );
 }

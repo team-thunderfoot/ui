@@ -16,6 +16,15 @@
 </div>
 ```
 
+If you want the subtitle to be a c--content, the HTML should be:
+```sh
+<div class="g--card-02">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-02__media g--lazy-01">
+    <h3 class="g--card-02__title">Card 02</h3>
+    <div class="g--card-02__subtitle c--content-a"></div>
+</div>
+```
+
 ##### \*Aspect Ratio
 
 It is not necessary to add aspect-ratio because the images have height in the css.

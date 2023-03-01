@@ -9,6 +9,7 @@
     $heading-font-weight: false,
     $person-font-weight: false,
     $position-font-weight: false,
+    $change-order-reponsive: false,
 ) {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +30,9 @@
 
         @media all and ($viewport-type: $tablets) {
             width: 100%;
+            @if $change-order-reponsive{
+                order: 1;
+            }
         }
 
         &__hd{

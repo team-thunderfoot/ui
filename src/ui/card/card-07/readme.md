@@ -17,6 +17,16 @@
 </div>
 ```
 
+It is not necessary to add aspect-ratio because the images have height in the css.
+```sh
+<div class="g--card-07">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-07__media g--lazy-01">
+    <h3 class="g--card-07__title">Card 07</h3>
+    <div class="g--card-07__subtitle c--content-a"></div>
+    <a href="" class="g--card-07__link">This is a link</a>
+</div>
+```
+
 ##### \*Aspect Ratio
 
 It is not necessary to add aspect-ratio because the images have height in the css.

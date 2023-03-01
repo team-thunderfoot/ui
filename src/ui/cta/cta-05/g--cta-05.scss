@@ -1,7 +1,8 @@
 .g--cta-05{
     @include make-cta-05(
         // $border-radius: default,
-        $btn-class: g--btn-02
+        $btn-class: g--btn-02,
+        $change-order-reponsive: true
     );
     @include make-cta-05-modifier(
         $background-color: rgba(map-get($color-options, a), .1),

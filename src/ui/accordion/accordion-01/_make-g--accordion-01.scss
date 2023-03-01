@@ -4,7 +4,11 @@
     $title-font-weight: false,
 ) {
     border-bottom: $border-width solid;
-    margin-bottom: $measure * 5;
+    padding: $measure $measure*2;
+
+    @media all and ($viewport-type: $tablets) {
+        padding: 0 $measure;
+    }
 
     &__hd {
         display: flex;
@@ -12,12 +16,8 @@
         align-items: center;
         cursor: pointer;
         position: relative;
-        padding: $measure * 3 $measure * 4;
+        padding: $measure * 3 0;
         width: 100%;
-
-        @media all and ($viewport-type: $tablets) {
-            padding: $measure * 3 $measure * 2;
-        }
 
         &__title {
             @extend .f--font-#{$title-font} !optional;
@@ -44,11 +44,7 @@
         transition: max-height $time-c cubic-bezier(0,1,0,1);
 
         &__content {
-            padding: 0 $measure * 8 $measure * 3 $measure * 4;
-
-            @media all and ($viewport-type: $tablets) {
-                padding: 0 $measure * 6 $measure * 3 $measure * 2;
-            }
+            padding: 0 $measure * 4 $measure * 3 0;
         }
     }
 

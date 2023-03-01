@@ -10,6 +10,7 @@
         $person-font-weight: 500,
         // $position-font-weight: false,
         // $content-font-weight: false,
+        $change-order-reponsive: true
     );
     @include make-card-60-modifier(
         $content-color: map-get($color-options, a),

@@ -1,0 +1,25 @@
+.g--card-59{
+    @include make-card-59(
+        // $border-radius: default,
+        $content-font: c,
+        $heading-font: f,
+        $person-font: d,
+        $position-font: d,
+        $btn-class: g--link-01,
+        // $heading-font-weight: false,
+        $person-font-weight: 500,
+        // $position-font-weight: false,
+        // $content-font-weight: false,
+        // $change-order-reponsive: true
+    );
+    @include make-card-59-modifier(
+        $content-color: map-get($color-options, a),
+        $heading-color: map-get($color-options, a),
+        $person-color: map-get($color-options, a),
+        $position-color: map-get($color-options, a),
+        $background-color: rgba(map-get($color-options, a), .1),
+        $img-background-color: rgba(map-get($color-options, a), .8),
+        // $text-align: default,
+        // $btn-class-modifier: default
+    );
+}

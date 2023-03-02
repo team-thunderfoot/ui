@@ -120,6 +120,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--link-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-01/readme.md)
 - [g--link-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-02/readme.md)
+- [g--link-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-03/readme.md)
 
 ### List
 

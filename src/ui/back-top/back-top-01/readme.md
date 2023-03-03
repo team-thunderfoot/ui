@@ -11,7 +11,7 @@
 You need to add it at the beginning in the HTML container that you want the limits to be. For example, if you want it to be in the main content, you have to add it inside the main tag. It doesn't need container or rows.
 
 ```sh
-<button class="g--back-top-01 js--back-top" style="opacity: 1">
+<button class="g--back-top-01 js--back-top">
 </button>
 ```
 
@@ -20,7 +20,7 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 ### Example with an icon
 
 ```sh
-<button class="g--back-top-01 js--back-top" style="opacity: 1">
+<button class="g--back-top-01 js--back-top">
     <div class="g--icon-01">
         <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
         <path d="M0.5 8L8.5 -3.49691e-07L16.5 8L15.1 9.425L9.5 3.825L9.5 16L7.5 16L7.5 3.825L1.9 9.425L0.5 8Z" fill="#1A191D"/>
@@ -33,7 +33,7 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 
 ```sh
 <main>
-    <button class="g--back-top-01 js--back-top" style="opacity: 1">
+    <button class="g--back-top-01 js--back-top">
     </button>
     <section class="g--hero-01">
     </section>

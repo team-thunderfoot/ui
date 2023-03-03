@@ -15,7 +15,9 @@ You need to add it at the beginning in the HTML container that you want the limi
 </button>
 ```
 
-Inside the `<button>` you can add whatever you want. If you add an icon, it can't be a link or a button. Here's an example:
+Inside the `<button>` you can add whatever you want. If you add an icon, it can't be a link or a button.
+
+### Example with an icon
 
 ```sh
 <button class="g--back-top-01 js--back-top" style="opacity: 1">
@@ -25,6 +27,21 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
         </svg>
     </div>
 </button>
+```
+
+### Position example inside `<main>`
+
+```sh
+<main>
+    <button class="g--back-top-01 js--back-top" style="opacity: 1">
+    </button>
+    <section class="g--hero-01">
+    </section>
+    <section class="f--section-a">
+    </section>
+    <section class="f--section-b">
+    </section>
+</main>
 ```
 
 ## Editable variables

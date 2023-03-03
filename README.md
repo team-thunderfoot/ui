@@ -34,6 +34,10 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)
 
+### Back-top
+
+- [g--back-top-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/back-top/back-top-01/readme.md)
+
 ### Btn
 
 - [g--btn-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-01/readme.md)

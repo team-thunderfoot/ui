@@ -3,4 +3,9 @@
     @include make-link-01-modifier(
         $text-color: map-get($color-options, a),
     );
+    &--second{
+        @include make-link-01-modifier(
+            $text-color: map-get($color-options, f),
+        );
+    }
 }

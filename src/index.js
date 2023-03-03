@@ -7,7 +7,7 @@
  * Lazy Loading
  */
 import Blazy from "blazy";
-import BackToTop from "./back-top";
+import BackToTop from "./ui/back-top/back-top-01/back-top";
 
 class Index {
   constructor() {
@@ -20,7 +20,10 @@ class Index {
       successClass: "g--lazy-01--is-loaded",
       errorClass: "g--lazy-01--is-error",
     });
-    new BackToTop();
+    new BackToTop({
+      activeClass: 'g--back-top-01--is-active',
+      distance: 300,
+    });
   }
 }
 

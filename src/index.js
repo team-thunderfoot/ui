@@ -7,6 +7,7 @@
  * Lazy Loading
  */
 import Blazy from "blazy";
+import BackToTop from "./back-top";
 
 class Index {
   constructor() {
@@ -19,6 +20,7 @@ class Index {
       successClass: "g--lazy-01--is-loaded",
       errorClass: "g--lazy-01--is-error",
     });
+    new BackToTop();
   }
 }
 

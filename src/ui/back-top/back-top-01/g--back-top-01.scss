@@ -1,0 +1,13 @@
+.g--back-top-01 {
+    @include make-back-top-01(
+        $icon-height: $measure*5,
+        $icon-width: $measure*5,
+        $margin-bottom: $measure*5,
+        $margin-right: $measure*3,
+        $breakpoint: $tablets,
+        $icon-height-responsive: $measure*5,
+        $icon-width-responsive: $measure*5,
+        $margin-bottom-responsive: $measure*2,
+        $margin-right-responsive: $measure*2,
+    );
+}

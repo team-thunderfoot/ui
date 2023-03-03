@@ -4,7 +4,6 @@ class BackToTop {
      this.link = document.querySelector(".js--back-top");
      this.activeClass = 'g--back-top-01--is-active';
      this.events();
-     console.log('amaiaaa');
   }
 
   events() {

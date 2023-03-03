@@ -8,7 +8,7 @@
 
 ## Html for a card
 
-You need to add it in the HTML container that you want the limits to be. For example, if you want it to be in the main content, you have to add it inside the main tag. It doesn't need container or rows.
+You need to add it at the beginning in the HTML container that you want the limits to be. For example, if you want it to be in the main content, you have to add it inside the main tag. It doesn't need container or rows.
 
 ```sh
 <button class="g--back-top-01 js--back-top" style="opacity: 1">
@@ -70,7 +70,7 @@ npm i @andresclua/jsutil
 Import the BackToTop and initialize it inside `init()`. The `activeClass` is the class used to show it, `distance` is the dstance (in px) you have to scroll to start seeing it, if you don't add any distance it'll be 500.
 
 ```sh
-import BackToTop from "@/node_modules/@teamthunderfoot/ui/src/ui/back-top/back-top-01/back-top";
+import BackToTop from "@teamthunderfoot/ui/src/ui/back-top/back-top-01/back-top.js";
 
 class Index {
   constructor() {

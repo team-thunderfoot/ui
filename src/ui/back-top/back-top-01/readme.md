@@ -6,7 +6,7 @@
 
 [back-top-01]: /src/img/global-components/back-top/back-top-01.png
 
-## Html for a card
+## Html
 
 You need to add it at the beginning in the HTML container that you want the limits to be. For example, if you want it to be in the main content, you have to add it inside the main tag. It doesn't need container or rows.
 

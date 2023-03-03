@@ -19,7 +19,11 @@
         @media all and ($viewport-type: $breakpoint) {
             top: calc(100% - #{$icon-height-responsive} - #{$margin-bottom-responsive});
             left: calc(100% - #{$icon-width-responsive} - #{$margin-right-responsive});
+            margin-bottom: -$icon-height-responsive;
         }
+    }
+    & + * {
+        margin-top: -$icon-height;
     }
     &--is-active{
         opacity: 1;

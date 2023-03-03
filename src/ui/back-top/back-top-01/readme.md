@@ -8,6 +8,8 @@
 
 ## Html for a card
 
+You need to add it in the HTML container that you want the limits to be. For example, if you want it to be in the main content, you have to add it inside the main tag. It doesn't need container or rows.
+
 ```sh
 <button class="g--back-top-01 js--back-top" style="opacity: 1">
 </button>

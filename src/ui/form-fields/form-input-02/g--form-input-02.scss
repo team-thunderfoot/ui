@@ -1,0 +1,17 @@
+.g--form-input-02{
+    @include make-form-input-02(
+        $font: f,
+        $border-width: 1px,
+        $border-radius: 0,
+        // $font-weight: default
+    );
+    @include make-form-input-02-modifier(
+        $border-color: rgba(map-get($color-options, a), .2),
+        $border-color-focus: map-get($color-options, a),
+        $background-color: transparent,
+        $background-color-autofill: transparent,
+        $error-border-color: map-get($color-options, g),
+        $placeholder-color: transparent,
+        $text-color: map-get($color-options, a),
+    );
+}

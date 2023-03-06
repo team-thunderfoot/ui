@@ -1,18 +1,20 @@
 .g--form-label-02{
     @include make-form-label-02(
         $label-font: f,
-        $label-top: $measure*1.5,
+        $label-top: $measure
         // $label-font-weight: default,
     );
     @include make-form-label-02-modifier(
         $label-color: map-get($color-options, a),
     );
 }
-.g--form-input-01:focus-within + .g--form-label-2,
-.g--form-input-01:not(:placeholder-shown) + .g--form-label-2{
-    @include make-form-label-02(
+.g--form-input-02__item:focus + .g--form-label-02,
+.g--form-input-02__item:not(:placeholder-shown) + .g--form-label-02,
+.g--form-textarea-02__item:focus + .g--form-label-02,
+.g--form-textarea-02__item:not(:placeholder-shown) + .g--form-label-02 {
+    @include make-form-label-02-focus(
         $label-font: g,
-        $label-top: -$measure*1.5,
+        $label-top: -$measure
         // $label-font-weight: default,
     );
     @include make-form-label-02-focus-modifier(

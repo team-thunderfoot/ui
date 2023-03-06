@@ -49,7 +49,6 @@
     $border-color,
     $border-color-focus,
     $error-border-color,
-    // $placeholder-color,
     $text-color,
 ) {
     .g--form-file-01{
@@ -57,9 +56,6 @@
             border-color: $border-color;
             background-color: $background-color !important;
             color: $text-color !important;
-            // &::placeholder{
-            //     color: $placeholder-color;
-            // }
             &::-webkit-file-upload-button {
                 background-color: $btn-background-color;
                 color: $btn-text-color;

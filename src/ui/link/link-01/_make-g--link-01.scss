@@ -1,10 +1,14 @@
 @mixin make-link-01() {
-    text-decoration: underline;
+    text-decoration: none;
+    background-size: 100% 1px;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    transition: background-size $time-b $ease-standard-a;
     @media (hover: hover) {
         &:hover ,
         &:focus ,
         &:active {
-            text-decoration: none;
+            background-size: 0% 1px;
         }
     }
 }
@@ -13,4 +17,5 @@
     $text-color,
 ) {
     color: $text-color;
+    background-image: linear-gradient($text-color, $text-color);
 }

@@ -1,6 +1,8 @@
-@mixin make-link-01() {
+@mixin make-link-01(
+    $underline-height
+) {
     text-decoration: none;
-    background-size: 100% 1px;
+    background-size: 100% $underline-height;
     background-position: bottom left;
     background-repeat: no-repeat;
     transition: background-size $time-b $ease-standard-a;
@@ -8,14 +10,15 @@
         &:hover ,
         &:focus ,
         &:active {
-            background-size: 0% 1px;
+            background-size: 0% $underline-height;
         }
     }
 }
 
 @mixin make-link-01-modifier(
     $text-color,
+    $underline-color,
 ) {
     color: $text-color;
-    background-image: linear-gradient($text-color, $text-color);
+    background-image: linear-gradient($underline-color, $underline-color);
 }

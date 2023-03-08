@@ -20,19 +20,25 @@
 
 ## Editable variables
 
+- $underline-height
 - $text-color
+- $underline-color
 
 ### For Modifiers
 
 - $text-color
+- $underline-color
 
 ## Use
 
 ```sh
 .g--link-01{
-    @include make-link-01();
+    @include make-link-01(
+        $underline-height: 1px
+    );
     @include make-link-01-modifier(
         $text-color: map-get($color-options, a),
+        $underline-color: map-get($color-options, a),
     );
 }
 ```

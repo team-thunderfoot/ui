@@ -39,6 +39,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 - $btn-class
 - $btn-class-modifier: false by default
 - $img-border-radius: false by default
+- $img-position: false by default
 - $meta-color
 - $meta-font
 - $subtitle-color
@@ -68,10 +69,11 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-03{
     @include make-layout-03(
         $btn-class: g--btn-01,
-        $img-border-radius: $measure*4,
         $meta-font: g,
         $subtitle-font: f,
         $title-font: c,
+        // $img-border-radius: default,
+        // $img-position: default,
         // $meta-font-weight: default,
         // $title-font-weight: default,
         // $subtitle-font-weight: default,

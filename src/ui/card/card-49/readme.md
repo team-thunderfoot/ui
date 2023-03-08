@@ -31,6 +31,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $background-color: false by default
 - $border-radius: false by default
 - $change-order-responsive: false by default
+- $img-position: false by default
 - $title-color
 - $title-font: false by default
 - $title-font-weight: false by default
@@ -49,6 +50,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
     @include make-card-49(
         // $change-order-reponsive: default
         // $border-radius: default,
+        // $img-position: default,
     );
     @include make-card-49-modifier(
         $background-color: rgba(map-get($color-options, a), .1),

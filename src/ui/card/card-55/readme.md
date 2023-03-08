@@ -26,6 +26,7 @@
 - $background-color
 - $background-color-hover
 - $border-radius: false by default
+- $img-position: false by default
 - $pill-class
 - $pill-class-modifier: false by default
 - $text-align: false by default
@@ -52,6 +53,7 @@
         $title-font: f,
         // $border-radius: default,
         // $title-font-weight: default,
+        // $img-position: default,
     );
     @include make-card-55-modifier(
         $background-color: map-get($color-options, e),

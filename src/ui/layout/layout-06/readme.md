@@ -34,6 +34,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 - $background-color: false by default
 - $img-border-radius: false by default
+- $img-position: false by default
 - $meta-color
 - $meta-font
 - $subtitle-color
@@ -65,6 +66,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $subtitle-font: f,
         $title-font: c,
         // $img-border-radius: default,
+        // $img-position: default,
         // $meta-font-weight: default,
         // $title-font-weight: default,
         // $subtitle-font-weight: default,

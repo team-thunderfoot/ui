@@ -4,6 +4,7 @@
     $subtitle-font,
     $title-font,
     $img-border-radius: false,
+    $img-position: false,
     $meta-font-weight: false,
     $title-font-weight: false,
     $subtitle-font-weight: false,
@@ -44,6 +45,9 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            @if $img-position {
+                object-position: $img-position;
+            }
 
             @media all and ($viewport-type: $tablets) {
                 position: relative;

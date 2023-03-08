@@ -46,6 +46,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $change-order-reponsive: false by default
 - $content-font-weight: false by default
 - $heading-font-weight: false by default
+- $img-position: false by default
 - $person-font-weight: false by default
 - $position-font-weight: false by default
 - $text-align: false
@@ -76,6 +77,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $position-font-weight: default,
         // $change-order-reponsive: default,
         // $content-font-weight: default,
+        // $img-position: default,
     );
     @include make-card-60-modifier(
         $content-color: map-get($color-options, a),

@@ -27,6 +27,7 @@
 - $background-color
 - $background-color-hover
 - $border-radius: false by default
+- $img-position: false by default
 - $pill-class
 - $pill-class-modifier: false by default
 - $meta-color
@@ -57,6 +58,7 @@
         $pill-class: g--pill-01,
         $title-font: f,
         // $border-radius: default,
+        // $img-position: default,
         // $meta-font-weight: default,
         // $title-font-weight: default,
     );

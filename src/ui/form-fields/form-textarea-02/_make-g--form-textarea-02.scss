@@ -5,6 +5,8 @@
     $textarea-height,
     $font-weight: false
 ) {
+    position: relative;
+    padding-top: $measure*2;
     &__item{
         @extend .f--font-#{$font} !optional;
         @if $font-weight {

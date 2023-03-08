@@ -1,7 +1,6 @@
 .g--form-label-02{
     @include make-form-label-02(
         $label-font: f,
-        $label-top: $measure
         // $label-font-weight: default,
     );
     @include make-form-label-02-modifier(
@@ -14,10 +13,9 @@
 .g--form-textarea-02__item:not(:placeholder-shown) + .g--form-label-02 {
     @include make-form-label-02-focus(
         $label-font: g,
-        $label-top: -$measure
         // $label-font-weight: default,
     );
     @include make-form-label-02-focus-modifier(
-        $label-color: map-get($color-options, a),
+        $label-color: map-get($color-options, h),
     );
 }

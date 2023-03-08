@@ -18,7 +18,7 @@
         $background-color: rgba(map-get($color-options, h), .5),
         $title-color: map-get($color-options, f),
         $subtitle-color: map-get($color-options, g),
-        // $text-align: default
+        $text-align: center
         );
     }
 }

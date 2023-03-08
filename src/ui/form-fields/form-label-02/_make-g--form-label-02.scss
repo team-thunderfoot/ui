@@ -1,6 +1,5 @@
 @mixin make-form-label-02(
     $label-font,
-    $label-top,
     $label-font-weight: false,
 ) {
     @extend .f--font-#{$label-font} !optional;
@@ -9,7 +8,7 @@
     }
     display: block;
     position: absolute;
-    top: $label-top;
+    top: $measure*2.5;
     left: $measure;
     transition: all $time-b $ease-standard-a;
     pointer-events: none;
@@ -17,14 +16,13 @@
 
 @mixin make-form-label-02-focus(
     $label-font,
-    $label-top,
     $label-font-weight: false,
 ) {
     @extend .f--font-#{$label-font} !optional;
     @if $label-font-weight {
         font-weight: $label-font-weight;
     }
-    top: $label-top;
+    transform: translateY(calc(-100% - #{$measure*.5}));
 }
 
 @mixin make-form-label-02-modifier(

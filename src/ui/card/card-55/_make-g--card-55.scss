@@ -6,6 +6,8 @@
 ) {
     overflow: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     
     @if $border-radius {
         border-radius: $border-radius;
@@ -16,6 +18,10 @@
         display: block;
         object-fit: cover;
         width: 100%;
+        height: 100%;
+        @media all and ($viewport-type: $tablets) {
+            aspect-ratio: 4 / 3;
+        }
     }
 
     &__wrapper {
@@ -57,7 +63,6 @@
 
     @if $background-color-hover or $title-color-hover {
         text-decoration: none !important;
-        display: block;
     }
     @if $background-color-hover and $title-color-hover {
         transition: background $time-b $ease-standard-a;

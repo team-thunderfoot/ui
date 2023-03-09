@@ -31,6 +31,7 @@ When there's an error in the input the class "g--form-input-01--error" should be
 - $error-border-color
 - $font
 - $font-weight: false by default
+- $mobile-font-size: false by default
 - $placeholder-color
 - $text-color
 
@@ -54,7 +55,8 @@ $border-color-focus variable is used for focus and filled styles, if placeholder
         $font: f,
         $border-width: 1px,
         $border-radius: 0,
-        // $font-weight: default
+        // $font-weight: default,
+        // $mobile-font-size: default
     );
     @include make-form-input-01-modifier(
         $border-color: rgba(map-get($color-options, a), .2),

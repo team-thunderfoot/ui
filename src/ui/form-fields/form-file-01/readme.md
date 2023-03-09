@@ -9,14 +9,14 @@
 ## Html
 
 ```sh
-<div class="g--form-input-01">
-    <input type="text" id="first-name" class="g--form-input-01__item" placeholder=" ">
+<div class="g--form-file-01">
+    <input type="file" id="file-01" class="g--form-file-01__item" required>
 </div>
 ```
 When there's an error in the input the class "g--form-input-01--error" should be added:
 ```sh
-<div class="g--form-input-01 g--form-input-01--error">
-    <input type="text" id="first-name" class="g--form-input-01__item" placeholder=" ">
+<div class="g--form-file-01 g--form-file-01--error">
+    <input type="file" id="file-01" class="g--form-file-01__item" required>
 </div>
 ```
 
@@ -31,6 +31,7 @@ When there's an error in the input the class "g--form-input-01--error" should be
 - $error-border-color
 - $font
 - $font-weight: false by default
+- $mobile-font-size: false by default
 - $placeholder-color
 - $text-color
 
@@ -54,7 +55,8 @@ $border-color-focus variable is used for focus and filled styles, if placeholder
         $font: f,
         $border-width: 1px,
         $border-radius: 0,
-        // $font-weight: default
+        // $font-weight: default,
+        // $mobile-font-size: default
     );
     @include make-form-input-01-modifier(
         $border-color: rgba(map-get($color-options, a), .2),

@@ -20,6 +20,7 @@
     $input-error-font-weight: false,
     $input-font-weight: false,
     $label-font-weight: false,
+    $mobile-font-size: false,
     $select-artwork-border-radius: false,
 ) {
     .hs-form{
@@ -53,8 +54,10 @@
                         width:100%;
                         border-radius: $input-border-radius;
                         transition: border-color $time-b $ease-standard-a;
-                        @media all and ($viewport-type: $mobile){
-                            font-size: 1rem;
+                        @if $mobile-font-size {
+                            @media all and ($viewport-type: $mobile){
+                                font-size: $mobile-font-size;
+                            }
                         }
                         &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
                             border: $input-border-width solid;
@@ -79,8 +82,10 @@
                         width:100%;
                         border-radius: $input-border-radius;
                         transition: border-color $time-b $ease-standard-a;
-                        @media all and ($viewport-type: $mobile){
-                            font-size: 1rem;
+                        @if $mobile-font-size {
+                            @media all and ($viewport-type: $mobile){
+                                font-size: $mobile-font-size;
+                            }
                         }
                         &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
                             border: $input-border-width solid;
@@ -319,8 +324,10 @@
                             width:100%;
                             border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
-                            @media all and ($viewport-type: $mobile){
-                                font-size: 1rem;
+                            @if $mobile-font-size {
+                                @media all and ($viewport-type: $mobile){
+                                    font-size: $mobile-font-size;
+                                }
                             }
                             &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
                                 border: $input-border-width solid;
@@ -352,8 +359,10 @@
                             width: 100%;
                             border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
-                            @media all and ($viewport-type: $mobile){
-                                font-size: 1rem;
+                            @if $mobile-font-size {
+                                @media all and ($viewport-type: $mobile){
+                                    font-size: $mobile-font-size;
+                                }
                             }
                             &::-webkit-file-upload-button {
                                 cursor: pointer;
@@ -401,8 +410,10 @@
                             width:100%;
                             border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
-                            @media all and ($viewport-type: $mobile){
-                                font-size: 1rem;
+                            @if $mobile-font-size {
+                                @media all and ($viewport-type: $mobile){
+                                    font-size: $mobile-font-size;
+                                }
                             }
                             &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
                                 border: $input-border-width solid;

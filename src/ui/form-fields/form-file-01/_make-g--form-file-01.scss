@@ -5,6 +5,7 @@
     $font,
     $btn-font-weight: false,
     $font-weight: false,
+    $mobile-font-size: false,
 ) {
     &__item{
         @extend .f--font-#{$font} !optional;
@@ -22,8 +23,10 @@
         width: 100%;
         border-radius: $border-radius;
         transition: border-color $time-b $ease-standard-a;
-        @media all and ($viewport-type: $mobile){
-            font-size: 1rem;
+        @if $mobile-font-size {
+            @media all and ($viewport-type: $mobile){
+                font-size: $mobile-font-size;
+            }
         }
         &::-webkit-file-upload-button {
             cursor: pointer;

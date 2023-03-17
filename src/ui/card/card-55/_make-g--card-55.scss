@@ -4,6 +4,7 @@
     $border-radius: false,
     $img-position: false,
     $title-font-weight: false,
+    $full-image-height: false,
 ) {
     overflow: hidden;
     width: 100%;
@@ -19,7 +20,9 @@
         display: block;
         object-fit: cover;
         width: 100%;
-        height: 100%;
+        @if $full-image-height {
+            height: 100%;
+        }
         @if $img-position {
             object-position: $img-position;
         }

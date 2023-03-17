@@ -29,14 +29,14 @@
     
         @if $header-height-tablets {
             @media all and ($viewport-type: $tablets) {
-                padding-top: calc(#{$measure} * 14 + #{$header-height-tablets});
+                padding-top: calc(#{$measure} * 7 + #{$header-height-tablets});
                 padding-bottom: $measure * 5;
             }
         }
     
         @if $header-height-mobile {
             @media all and ($viewport-type: $mobile) {
-                padding-top: calc(#{$measure} * 14 + #{$header-height-mobile});
+                padding-top: calc(#{$measure} * 7 + #{$header-height-mobile});
             }
         }
 

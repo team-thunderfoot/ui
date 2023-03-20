@@ -6,7 +6,6 @@
     $img-position: false,
     $meta-font-weight: false,
     $title-font-weight: false,
-    $full-image-height: false,
 ) {
     overflow: hidden;
     width: 100%;
@@ -26,9 +25,7 @@
         @if $img-position {
             object-position: $img-position;
         }
-        @if $full-image-height {
-            height: 100%;
-        }
+
         @media all and ($viewport-type: $tablets) {
             aspect-ratio: 4 / 3;
         }
@@ -76,11 +73,21 @@
     $pill-class-modifier: false,
     $text-align: false,
     $title-color-hover: false,
+    $full-image-height: false,
 ) {
     background: $background-color;
     @if $background-color-hover or $title-color-hover {
         text-decoration: none !important;
     }
+
+    @if $full-image-height {
+        .g--card-42 {
+            &__media {
+                height: 100%;
+            }
+        }
+    }
+
     @if $background-color-hover and $title-color-hover {
         
         .g--card-42 {

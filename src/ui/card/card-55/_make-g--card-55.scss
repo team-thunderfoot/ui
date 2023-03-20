@@ -4,7 +4,6 @@
     $border-radius: false,
     $img-position: false,
     $title-font-weight: false,
-    $full-image-height: false,
 ) {
     overflow: hidden;
     width: 100%;
@@ -20,9 +19,6 @@
         display: block;
         object-fit: cover;
         width: 100%;
-        @if $full-image-height {
-            height: 100%;
-        }
         @if $img-position {
             object-position: $img-position;
         }
@@ -65,8 +61,17 @@
     $pill-class-modifier: false,
     $text-align: false,
     $title-color-hover: false,
+    $full-image-height: false,
 ) {
     background: $background-color;
+
+    @if $full-image-height {
+        .g--card-55 {
+            &__media {
+                height: 100%;
+            }
+        }
+    }
 
     @if $background-color-hover or $title-color-hover {
         text-decoration: none !important;

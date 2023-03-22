@@ -22,7 +22,7 @@
         @if $img-position {
             object-position: $img-position;
         }
-        @media all and ($viewport-type: $tablets) {
+        @media all and ($viewport-type: $mobile) {
             aspect-ratio: 4 / 3;
         }
     }

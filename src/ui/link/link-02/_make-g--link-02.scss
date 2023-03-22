@@ -1,5 +1,6 @@
 @mixin make-link-02() {
     text-decoration: underline;
+    width: fit-content;
 }
 
 @mixin make-link-02-modifier(

@@ -6,6 +6,7 @@
     background-position: bottom left;
     background-repeat: no-repeat;
     transition: background-size $time-b $ease-standard-a;
+    width: fit-content;
     @media (hover: hover) {
         &:hover ,
         &:focus ,

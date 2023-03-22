@@ -1,5 +1,6 @@
 @mixin make-link-03() {
     text-decoration: none;
+    width: fit-content;
 }
 
 @mixin make-link-03-modifier(

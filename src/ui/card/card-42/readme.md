@@ -27,6 +27,7 @@
 - $background-color
 - $background-color-hover
 - $border-radius: false by default
+- $full-image-height: false by default
 - $img-position: false by default
 - $pill-class
 - $pill-class-modifier: false by default
@@ -43,6 +44,7 @@
 
 - $background-color
 - $background-color-hover
+- $full-image-height
 - $pill-class-modifier: false by default
 - $meta-color
 - $text-align
@@ -57,15 +59,13 @@
         $meta-font: g,
         $pill-class: g--pill-01,
         $title-font: f,
-        // $border-radius: default,
-        // $img-position: default,
-        // $meta-font-weight: default,
-        // $title-font-weight: default,
+        // $border-radius: default
     );
     @include make-card-42-modifier(
         $background-color: map-get($color-options, e),
         $meta-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        // $full-image-height: default,
         // $background-color-hover: default,
         // $pill-class-modifier: default,
         // $text-align: default,

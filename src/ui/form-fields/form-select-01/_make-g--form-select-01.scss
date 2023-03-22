@@ -27,7 +27,7 @@
         }
         display: block;
         border: $border-width solid;
-        padding: $measure*.5 $measure;
+        padding: $measure $measure * 1.5;
         width:100%;
         border-radius: $border-radius;
         transition: border-color $time-b $ease-standard-a;

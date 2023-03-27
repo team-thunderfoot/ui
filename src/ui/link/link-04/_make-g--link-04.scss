@@ -3,7 +3,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    &__artwork{
+    svg{
         width: $measure;
         height: auto;
         margin-left: $measure;
@@ -22,7 +22,7 @@
         transition: color $ease-standard-a $time-b;
     }
     .g--link-04{
-        &__artwork{
+        svg{
             transition: transform $ease-standard-a $time-b;
             path{
                 @if $artwork-color-fill {

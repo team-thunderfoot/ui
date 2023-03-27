@@ -10,7 +10,7 @@
 
 ```sh
 <button class="g--link-04">link 04
-    <svg class="g--link-04__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
     </svg>
 </button>
@@ -20,7 +20,7 @@
 
 ```sh
 <a href="#" class="g--link-04" target="_blank" rel="noopener noreferrer">link 04 link
-    <svg class="g--link-04__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
     </svg>
 </a>

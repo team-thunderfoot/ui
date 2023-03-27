@@ -29,6 +29,8 @@
 - $title-color
 - $title-font: false by default
 - $title-font-weight: false by default
+- $link-font: false by default
+- $link-font-weight: false by default
 
 ### For modifiers
 
@@ -41,6 +43,8 @@
 - $title-color
 - $title-font
 - $title-font-weight
+- $link-font
+- $link-font-weight
 
 ## Use
 
@@ -56,6 +60,8 @@
         $title-color: map-get($color-options, a),
         // $link-class-modifier: default,
         // $text-align: default,
+        // $link-font: default,
+        // $link-font-weight: default,
         // $subtitle-font: default,
         // $title-font: default,
         // $title-font-weight: default,

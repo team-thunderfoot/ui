@@ -38,6 +38,8 @@
     $title-color,
     $link-class-modifier: false,
     $text-align: false,
+    $link-font: false,
+    $link-font-weight: false,
     $subtitle-font: false,
     $title-font: false,
     $title-font-weight: false,
@@ -59,9 +61,17 @@
 
     .g--card-29 {
 
-        @if $link-class-modifier {
+        @if $link-class-modifier or $link-font or $link-font-weight {
             &__link{
-                @extend .#{$link-class-modifier} !optional;
+                @if $link-class-modifier{
+                    @extend .#{$link-class-modifier} !optional;
+                }
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
+                }
+                @if $link-font-weight {
+                    font-weight: $link-font-weight;
+                }
             }
         }
 

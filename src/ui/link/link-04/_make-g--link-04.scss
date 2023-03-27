@@ -21,22 +21,20 @@
     @if $text-color-hover {
         transition: color $ease-standard-a $time-b;
     }
-    .g--link-04{
-        svg{
-            transition: transform $ease-standard-a $time-b;
-            path{
-                @if $artwork-color-fill {
-                    fill: $artwork-color-fill;
-                }
-                @if $artwork-color-stroke {
-                    stroke: $artwork-color-stroke;
-                }
-                @if $artwork-color-hover and $artwork-color-fill {
-                    transition: fill $ease-standard-a $time-b;
-                }
-                @if $artwork-color-hover and $artwork-color-stroke {
-                    transition: stroke $ease-standard-a $time-b;
-                }
+    svg{
+        transition: transform $ease-standard-a $time-b;
+        path{
+            @if $artwork-color-fill {
+                fill: $artwork-color-fill;
+            }
+            @if $artwork-color-stroke {
+                stroke: $artwork-color-stroke;
+            }
+            @if $artwork-color-hover and $artwork-color-fill {
+                transition: fill $ease-standard-a $time-b;
+            }
+            @if $artwork-color-hover and $artwork-color-stroke {
+                transition: stroke $ease-standard-a $time-b;
             }
         }
     }
@@ -48,9 +46,9 @@
         }
     }
     @media (hover: hover) {
-        &:hover .g--link-04,
-        &:focus .g--link-04,
-        &:active .g--link-04{
+        &:hover ,
+        &:focus ,
+        &:active {
             svg{
                 transform: translateX($measure);
                 path{

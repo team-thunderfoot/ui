@@ -51,7 +51,7 @@
         &:hover .g--link-04,
         &:focus .g--link-04,
         &:active .g--link-04{
-            &__artwork{
+            svg{
                 transform: translateX($measure);
                 path{
                     @if $artwork-color-hover and $artwork-color-fill {

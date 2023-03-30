@@ -10,7 +10,9 @@
 You have to add alt text to make it work properly. You can add src with a placeholder image.
 You have to import CSS:
 ```sh
-@import '@/node_modules/@teamthunderfoot/ui/src/ui/lazy/g--lazy-01';
+.g--lazy-01 {
+    @include make-lazy-01();
+}
 ```
 And import JS:
 ```sh

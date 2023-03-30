@@ -1,7 +1,8 @@
 @mixin make-lazy-01() {
     opacity: 0;
-    &--is-loaded{
+    transition: opacity $time-a $ease-standard-b;
+    &--is-loaded,
+    &.loaded{
         opacity: 1;
-        transition: opacity $time-a $ease-standard-b;
     }   
 }

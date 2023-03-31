@@ -10,7 +10,7 @@
 
 ```sh
 <div class="g--card-39">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media g--lazy-01 f--ar" width="604" height="340">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media g--lazy-01">
     <div class="g--card-39__wrapper">
         <div class="g--card-39__wrapper__hd">
             <p class="g--card-39__wrapper__hd__meta">Jan 5, 2023</p>

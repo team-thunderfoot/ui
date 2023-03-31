@@ -1,0 +1,12 @@
+.g--layout-10{
+    @include make-layout-10(
+        $img-border-radius: $measure*4,
+        $subtitle-font: f,
+        $title-font: c,
+    );
+    @include make-layout-10-modifier(
+        $subtitle-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $background-color: default,
+    );
+}

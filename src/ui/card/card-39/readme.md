@@ -61,15 +61,15 @@
 ## use
 
 ```sh
-.g--card-42 {
-    @include make-card-42(
+.g--card-39 {
+    @include make-card-39(
         $author-font: g,
         $meta-font: g,
         $pill-class: g--pill-01,
         $title-font: f,
         // $border-radius: default
     );
-    @include make-card-42-modifier(
+    @include make-card-39-modifier(
         $background-color: map-get($color-options, e),
         $author-color: map-get($color-options, a),
         $meta-color: map-get($color-options, a),

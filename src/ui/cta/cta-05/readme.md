@@ -32,6 +32,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $subtitle-font: false by default
 - $btn-class
 - $background-color: false by default
+- $hide-img-reponsive: false by default
 - $text-align: false by default
 - $title-color
 - $subtitle-color
@@ -64,6 +65,7 @@ To use it we have to import the css of the $btn-class in the entry
         $btn-class: g--btn-02,
         // $change-order-reponsive: default,
         // $img-position: default,
+        // $hide-img-reponsive: default
     );
     @include make-cta-05-modifier(
         // $background-color: default,

@@ -2,6 +2,7 @@
     $btn-class,
     $border-radius: false,
     $change-order-reponsive: false,
+    $hide-img-reponsive: false,
     $img-position: false,
 ) {
     display: flex;
@@ -48,8 +49,19 @@
         position: relative;
         width: 50%;
 
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
+        @if $hide-img-reponsive{
+            @media all and ($viewport-type: $tablets) {
+                position: absolute;
+                height: 0;
+                overflow: hidden;
+                pointer-events: none;
+                visibility: hidden;
+            }
+        }
+        @else{
+            @media all and ($viewport-type: $tablets) {
+                width: 100%;
+            }
         }
 
         &__media{
@@ -58,6 +70,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover;
             @if $img-position {
                 object-position: $img-position;
             }

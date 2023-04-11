@@ -18,7 +18,7 @@
         width: 100%;
 
         @if $img-border-radius {
-            border-radius: $border-radius;
+            border-radius: $img-border-radius;
             overflow: hidden;
         }
 

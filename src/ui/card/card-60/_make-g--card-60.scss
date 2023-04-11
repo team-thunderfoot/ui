@@ -26,7 +26,7 @@
         padding: $measure*10;
 
         @media all and ($viewport-type: $tabletm) {
-            padding: $measure*10 $measure*4;
+            padding: $measure*4;
         }
 
         @media all and ($viewport-type: $tablets) {
@@ -121,9 +121,6 @@
     $btn-class-modifier: false,
     $text-align: false,
 ) {
-    @if $background-color {
-        background: $background-color;   
-    }
 
     @if $text-align == "center" {
         text-align: center;
@@ -166,6 +163,9 @@
     
     .g--card-60 {
         &__wrapper{
+            @if $background-color {
+                background: $background-color;   
+            }
             &__hd{
                 color: $heading-color;
             }

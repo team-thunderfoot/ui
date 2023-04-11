@@ -1,0 +1,17 @@
+.g--card-61{
+    @include make-card-61(
+        // $img-border-radius: default,
+        $icon-class: g--icon-01,
+        $title-font: d,
+        $subtitle-font: f,
+    );
+    @include make-card-61-modifier(
+        // $text-align: default,
+        $title-color: map-get($color-options, a),
+        $subtitle-color: map-get($color-options, a),
+        $img-background-color: map-get($color-options, f),
+        // $img-background-color-hover: map-get($color-options, e),
+        // $icon-class-modifier: default,
+        // $title-color-hover: map-get($color-options, g)
+    );
+}

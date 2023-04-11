@@ -1,0 +1,172 @@
+@mixin make-card-61(
+    $icon-class,
+    $subtitle-font,
+    $title-font,
+    $img-border-radius: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
+) {
+    padding: 0 $measure * 2;
+    width: 100%;
+
+    @media all and ($viewport-type: $tabletm) {
+        padding: 0;
+    }
+
+    &__media-wrapper{
+        margin-bottom: $measure * 1.5;
+        width: 100%;
+
+        @if $img-border-radius {
+            border-radius: $border-radius;
+            overflow: hidden;
+        }
+
+        @media all and ($viewport-type: $mobile) {
+            height: auto;
+        }
+
+        &__media{
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: bottom center;
+        }
+    }
+
+    &__title{
+        @extend .f--font-#{$title-font} !optional;
+        margin-bottom: $measure * 0.5;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
+    }
+
+    &__subtitle{
+        @extend .f--font-#{$subtitle-font} !optional;
+        @if $subtitle-font-weight {
+            font-weight: $subtitle-font-weight;
+        }
+    }
+
+    &__link {
+        @extend .#{$icon-class} !optional;
+        margin-top: $measure * 1.5;
+        display: inline-block;
+    }
+}
+
+@mixin make-card-61-modifier(
+    $subtitle-color,
+    $title-color,
+    $img-background-color: false,
+    $img-background-color-hover: false,
+    $icon-class-modifier: false,
+    $text-align: false,
+    $title-color-hover: false,
+) {
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    @if $img-background-color-hover or $title-color-hover {
+        text-decoration: none !important;
+        display: block;
+    }
+
+    @if $img-background-color-hover and $title-color-hover {
+        .g--card-61 {
+            &__media-wrapper{
+                transition: background $time-b $ease-standard-a;
+            }
+            &__title {
+                transition: color $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-61 {
+                    &__media-wrapper{
+                        background: $img-background-color-hover;
+                    }
+                    &__title {
+                        color: $title-color-hover;
+                    }
+                }
+            }
+        }
+
+    } @else if $img-background-color-hover {
+        .g--card-61 {
+            &__media-wrapper{
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-61 {
+                    &__media-wrapper{
+                        background: $img-background-color-hover;
+                    }
+                }
+            }
+        }
+        
+    } @else if $title-color-hover {
+        .g--card-61 {
+            &__title {
+                transition: color $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-61 {
+                    &__title {
+                        color: $title-color-hover;
+                    }
+                }
+            }
+        }
+    }
+    
+    .g--card-61 {
+        @if $img-background-color{
+            &__media-wrapper{
+                background: $img-background-color;
+            }
+        }
+
+        &__title{
+            color: $title-color;
+        }
+        
+        &__subtitle{
+            color: $subtitle-color;
+        }
+
+        @if $icon-class-modifier {
+            &__link {
+                @extend .#{$icon-class-modifier} !optional;
+            }
+        }
+    }
+}

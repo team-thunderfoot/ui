@@ -13,27 +13,31 @@
 ) {
 
     &__media-wrapper{
-        min-height: 500px;
+        @if $object-fit == contain or $object-fit== scale-down{
+            display: flex;
+            align-items: center;
+        } @else{
+            min-height: 500px;
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
+                overflow: hidden
+            }
+            @media all and ($viewport-type: $tabletl) {
+                min-height: 450px;
+            }
+    
+            @media all and ($viewport-type: $tabletm) {
+                min-height: 400px;
+            }
+        }
         position: relative;
         width: 100%;
 
-        @if $img-border-radius {
-            border-radius: $img-border-radius;
-            overflow: hidden
-        }
-
-        @media all and ($viewport-type: $tabletl) {
-            min-height: 450px;
-        }
-
-        @media all and ($viewport-type: $tabletm) {
-            min-height: 400px;
-        }
 
         @media all and ($viewport-type: $tablets) {
-            min-height: 0;
             height: auto;
-            @if  $change-order-reponsive == false{
+            min-height: 0;
+            @if $change-order-reponsive {
                 margin-bottom: $measure*5;
             }
         }

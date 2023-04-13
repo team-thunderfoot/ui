@@ -66,6 +66,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $img-border-radius: $measure*4,
         $subtitle-font: f,
         $title-font: c,
+        // $object-fit: cover
     );
     @include make-layout-10-modifier(
         $subtitle-color: map-get($color-options, a),

@@ -68,6 +68,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $btn-class: g--btn-01,
         $subtitle-font: f,
         $title-font: c,
+        // $object-fit: cover,
         // $btn-font: default,
         // $img-border-radius: default,
         // $img-position: default,

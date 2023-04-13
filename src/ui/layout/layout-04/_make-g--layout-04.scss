@@ -2,6 +2,7 @@
     $meta-font,
     $subtitle-font,
     $title-font,
+    $object-fit: cover,
     $img-border-radius: false,
     $img-position: false,
     $meta-font-weight: false,
@@ -34,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: $object-fit;
             display: block;
             @if $img-position {
                 object-position: $img-position;

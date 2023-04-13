@@ -72,6 +72,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $meta-font: g,
         $subtitle-font: f,
         $title-font: c,
+        // $object-fit: cover,
         // $img-border-radius: default,
         // $img-position: default,
         // $meta-font-weight: default,

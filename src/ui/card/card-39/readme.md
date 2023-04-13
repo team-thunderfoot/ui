@@ -10,7 +10,9 @@
 
 ```sh
 <div class="g--card-39">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media g--lazy-01">
+    <div class="g--card-39__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media-wrapper__media g--lazy-01">
+    </div>
     <div class="g--card-39__wrapper">
         <div class="g--card-39__wrapper__hd">
             <p class="g--card-39__wrapper__hd__meta">Jan 5, 2023</p>
@@ -78,7 +80,10 @@
         // $background-color-hover: default,
         // $pill-class-modifier: default,
         // $text-align: default,
-        // $title-color-hover: default
+        // $title-color-hover: default,
+        // $zoom-hover:default,
+        // $shadow-hover:default,
+        // $translate-hover:default,
     );
 }
 ```

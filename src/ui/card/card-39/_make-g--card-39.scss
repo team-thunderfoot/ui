@@ -17,19 +17,25 @@
     @if $border-radius {
         border-radius: $border-radius;
     }
-
-    &__media {
+    &__media-wrapper{
         aspect-ratio: 16 / 9;
-        display: block;
-        object-fit: cover;
         width: 100%;
-        
-        @if $img-position {
-            object-position: $img-position;
-        }
-
         @media all and ($viewport-type: $mobile) {
             aspect-ratio: 4 / 3;
+        }
+        &__media {
+            aspect-ratio: 16 / 9;
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            
+            @if $img-position {
+                object-position: $img-position;
+            }
+
+            @media all and ($viewport-type: $mobile) {
+                aspect-ratio: 4 / 3;
+            }
         }
     }
 
@@ -89,20 +95,78 @@
     $text-align: false,
     $title-color-hover: false,
     $full-image-height: false,
+    $shadow-hover: false,
+    $translate-hover: false,
+    $zoom-hover: false,
 ) {
     background: $background-color;
-    @if $background-color-hover or $title-color-hover {
+    @if $background-color-hover or $title-color-hover or $zoom-hover or $shadow-hover or $translate-hover {
         text-decoration: none !important;
+        cursor: pointer;
     }
-
-    @if $full-image-height {
-        .g--card-39 {
-            &__media {
-                height: 100%;
+    @if $shadow-hover and $translate-hover {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $shadow-hover;
+                transform: $translate-hover;
+            }
+        }
+    } @else if $shadow-hover{
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $shadow-hover;
+            }
+        }
+    } @else if $translate-hover{
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $translate-hover;
             }
         }
     }
 
+    @if $full-image-height {
+        .g--card-39 {
+            &__media-wrapper{
+                &__media {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @if $zoom-hover{
+        .g--card-39 {
+            &__media-wrapper{
+                overflow: hidden;
+                &__media{
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-39 {
+                    &__media-wrapper{
+                        &__media{
+                            transform: scale($zoom-hover);
+                        }
+                    }
+                }
+            }
+        }
+    }
     @if $background-color-hover and $title-color-hover {
         
         .g--card-39 {

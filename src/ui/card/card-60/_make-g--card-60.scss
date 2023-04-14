@@ -90,6 +90,7 @@
 
         @media all and ($viewport-type: $tablets) {
             width: 100%;
+            display: flex;
         }
 
         &__media{

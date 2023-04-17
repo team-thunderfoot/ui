@@ -1,0 +1,212 @@
+@mixin make-card-62(
+    $meta-font,
+    $title-font,
+    $border-radius: false,
+    $img-position: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
+) {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    &__media {
+        aspect-ratio: 16 / 9;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        
+        @if $img-position {
+            object-position: $img-position;
+        }
+
+        @media all and ($viewport-type: $mobile) {
+            aspect-ratio: 4 / 3;
+        }
+    }
+
+    &__wrapper {
+        padding: $measure * 6 $measure * 5;
+
+        &__meta {
+            @extend .f--font-#{$meta-font} !optional;
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
+            margin-bottom: $measure * 3;
+        }
+
+        &__title {
+            @extend .f--font-#{$title-font} !optional;
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+        }
+
+    }
+}
+
+@mixin make-card-62-modifier(
+    $background-color,
+    $meta-color,
+    $title-color,
+    $background-color-hover: false,
+    $text-align: false,
+    $title-color-hover: false,
+    $full-image-height: false,
+) {
+    background: $background-color;
+    @if $background-color-hover or $title-color-hover {
+        text-decoration: none !important;
+    }
+
+    @if $full-image-height {
+        .g--card-62 {
+            &__media {
+                height: 100%;
+            }
+        }
+    }
+
+    @if $background-color-hover and $title-color-hover {
+        
+        .g--card-62 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+    
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-62 {
+                    &__wrapper {
+                        background: $background-color-hover;
+
+                        &__title {
+                            color: $title-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+
+    } @else if $background-color-hover {
+
+        .g--card-62 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                
+                .g--card-62 {
+                    &__wrapper {
+                        background: $background-color-hover;
+                    }
+                }
+            }
+        }
+    } @else if $title-color-hover {
+
+        .g--card-62  {
+            &__wrapper {
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-62 {
+                    &__wrapper {
+                        &__title {
+                            color: $title-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--card-62 {
+            &__wrapper {
+                text-align: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        .g--card-62 {
+            &__wrapper {
+                text-align: left;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        .g--card-62 {
+            &__wrapper {
+                text-align: right;
+            }
+        }
+    }
+    @if $text-align == "center" {
+
+        .g--card-62 {
+            &__wrapper{
+                text-align: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+
+        .g--card-62 {
+            &__wrapper{
+                text-align: left;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+
+        .g--card-62 {
+            &__wrapper{
+                text-align: right;
+            }
+        }
+    }
+
+    .g--card-62 {
+        &__wrapper {
+
+            &__meta {
+                color: $meta-color;
+            }
+
+            &__title {
+                color: $title-color;
+            }
+        }
+    }
+}

@@ -24,6 +24,9 @@
     &__wrapper{
         width: 50%;
         padding: $measure*10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         @media all and ($viewport-type: $tabletm) {
             padding: $measure*4;

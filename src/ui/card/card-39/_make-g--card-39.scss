@@ -137,6 +137,7 @@
     @if $full-image-height {
         .g--card-39 {
             &__media-wrapper{
+                height: 100%;
                 &__media {
                     height: 100%;
                 }

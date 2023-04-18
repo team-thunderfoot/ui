@@ -1,0 +1,240 @@
+@mixin make-card-34(
+    $border-width,
+    $pill-class,
+    $author-font,
+    $meta-font,
+    $title-font,
+    $author-font-weight: false,
+    $border-radius: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
+) {
+    padding: $measure * 6 $measure * 5;
+    width: 100%;
+    border: $border-width solid;
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    &__hd{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        &__item-left {
+            @extend .f--font-#{$meta-font} !optional;
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
+            margin-bottom: $measure * 3;
+            margin-right: $measure * 2;
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 2;
+            }
+        }
+        &__item-right {
+            @extend .f--font-#{$author-font} !optional;
+            @if $author-font-weight {
+                font-weight: $author-font-weight;
+            }
+            margin-bottom: $measure * 3;
+
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 2;
+            }
+        }
+    }
+
+
+    &__title {
+        @extend .f--font-#{$title-font} !optional;
+        @if $title-font-weight {
+            font-weight: $title-font-weight;
+        }
+        margin-bottom: $measure * 3;
+
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure * 2;
+        }
+    }
+
+    &__list-group {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: $measure;
+        &__list-item{
+            @extend .#{$pill-class} !optional;
+            &:not(:last-child){
+                margin-right: $measure*2;
+            }
+        }
+    }
+}
+
+@mixin make-card-34-modifier(
+    $background-color,
+    $border-color,
+    $author-color,
+    $meta-color,
+    $title-color,
+    $background-color-hover: false,
+    $pill-class-modifier: false,
+    $text-align: false,
+    $title-color-hover: false,
+) {
+
+    background: $background-color;
+    border-color: $border-color;
+    @if $background-color-hover or $title-color-hover {
+        text-decoration: none !important;
+        display: block;
+    }
+    @if $background-color-hover and $title-color-hover {
+        transition: background $time-b $ease-standard-a;
+
+        &__title {
+            transition: color $time-b $ease-standard-a;
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $background-color-hover;
+
+                .g--card-34 {
+                    &__title {
+                        color: $title-color-hover;
+                    }
+                }
+            }
+        }
+
+    } @else if $background-color-hover {
+        transition: background $time-b $ease-standard-a;
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $background-color-hover;
+            }
+        }
+        
+    } @else if $title-color-hover {
+        &__title {
+            transition: color $time-b $ease-standard-a;
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-34 {
+                    &__title {
+                        color: $title-color-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+
+        .g--card-34 {
+            &__list-group {
+                justify-content: center;
+                &__list-item{
+                    margin-left: $measure;
+                    margin-right: $measure;
+                    &:first-child{
+                        margin-left: $measure;
+                    }
+                    &:last-child{
+                        margin-right: $measure;
+                    }
+                    &:not(:first-child){
+                        margin-left: $measure;
+                    }
+                    &:not(:last-child){
+                        margin-right: $measure;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+
+        .g--card-34 {
+            &__list-group {
+                justify-content: flex-start;
+                &__list-item{
+                    margin-left: 0;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:not(:first-child){
+                        margin-left: 0;
+                    }
+                    &:not(:last-child){
+                        margin-right: $measure*2;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+
+        .g--card-34 {
+            &__list-group {
+                justify-content: flex-end;
+                &__list-item{
+                    margin-right: 0;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:not(:first-child){
+                        margin-left: $measure*2;
+                    }
+                    &:not(:last-child){
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .g--card-34 {
+        @if $pill-class-modifier {
+            &__list-group {
+                &__list-item{
+                    @extend .#{$pill-class-modifier} !optional;
+                }
+            }
+        }
+        &__hd{
+            &__item-left {
+                color: $meta-color;
+            }
+            &__item-right {
+                color: $author-color;
+            }
+        }
+
+        &__title {
+            color: $title-color;
+        }
+    }
+}

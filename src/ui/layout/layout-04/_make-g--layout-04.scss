@@ -36,7 +36,7 @@
         @media all and ($viewport-type: $tablets) {
             height: auto;
             min-height: 0;
-            @if $change-order-reponsive {
+            @if $change-order-reponsive == false {
                 margin-bottom: $measure*5;
             }
         }

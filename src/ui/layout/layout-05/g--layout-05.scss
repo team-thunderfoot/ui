@@ -5,6 +5,7 @@
         $meta-font: g,
         $subtitle-font: f,
         $title-font: c,
+        $change-order-reponsive: true
     );
     @include make-layout-05-modifier(
         $meta-color: map-get($color-options, a),

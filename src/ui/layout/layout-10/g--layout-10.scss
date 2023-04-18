@@ -3,7 +3,8 @@
         $img-border-radius: $measure*4,
         $subtitle-font: f,
         $title-font: c,
-        $object-fit: contain
+        $object-fit: contain,
+        $change-order-reponsive: true
     );
     @include make-layout-10-modifier(
         $subtitle-color: map-get($color-options, a),

@@ -6,7 +6,7 @@
         // $img-position: default,
         // $title-font-weight: default,
         // $subtitle-font-weight: default,
-        // $change-order-reponsive: default,
+        $change-order-reponsive: true
     );
     @include make-layout-08-modifier(
         $background-color: map-get($color-options, d),

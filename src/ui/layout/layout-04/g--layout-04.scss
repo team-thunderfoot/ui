@@ -4,6 +4,7 @@
         $subtitle-font: d,
         $title-font: c,
         // $img-border-radius: $measure*4,
+        $change-order-reponsive: true
     );
     @include make-layout-04-modifier(
         $background-color: map-get($color-options, d),

@@ -5,6 +5,7 @@
         $subtitle-font: f,
         $title-font: c,
         // $btn-font: default,
+        $change-order-reponsive: true
     );
     @include make-layout-09-modifier(
         $subtitle-color: map-get($color-options, a),

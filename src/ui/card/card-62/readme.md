@@ -10,7 +10,9 @@
 
 ```sh
 <div class="g--card-62">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-62__media g--lazy-01 f--ar" width="604" height="340">
+    <div class="g--card-62__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-62__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
     <div class="g--card-62__wrapper">
         <p class="g--card-62__wrapper__meta">Jan 5, 2023</p>
         <p class="g--card-62__wrapper__title">Card-62 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
@@ -60,7 +62,10 @@
         // $full-image-height: default,
         // $background-color-hover: default,
         // $text-align: default,
-        // $title-color-hover: default
+        // $title-color-hover: default,
+        // $shadow-hover: default,
+        // $translate-hover: default,
+        // $zoom-hover: default,
     );
 }
 ```

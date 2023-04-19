@@ -131,6 +131,15 @@
                 }
             }
         }
+    } @else{
+        .g--card-39 {
+            &__media-wrapper{
+                height: auto;
+                &__media {
+                    height: auto;
+                }
+            }
+        }
     }
     @if $zoom-hover{
         .g--card-39 {

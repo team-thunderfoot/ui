@@ -1,12 +1,20 @@
-@mixin make-card-39(
+@mixin make-card-40(
+    $author-font,
+    $border-width,
+    $meta-font,
     $pill-class,
+    $title-font,
+    $author-font-weight: false,
     $border-radius: false,
     $img-position: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
 ) {
     overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
+    border: $border-width solid;
     
     @if $border-radius {
         border-radius: $border-radius;
@@ -41,14 +49,26 @@
             align-items: center;
             justify-content: space-between;
             &__meta {
+                @extend .f--font-#{$meta-font} !optional;
+                @if $meta-font-weight {
+                    font-weight: $meta-font-weight;
+                }
                 margin-bottom: $measure * 3;
             }
             &__author {
+                @extend .f--font-#{$author-font} !optional;
+                @if $author-font-weight {
+                    font-weight: $author-font-weight;
+                }
                 margin-bottom: $measure * 3;
             }
         }
 
         &__title {
+            @extend .f--font-#{$title-font} !optional;
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
             margin-bottom: $measure * 3;
         }
         &__list-group{
@@ -67,17 +87,12 @@
     }
 }
 
-@mixin make-card-39-modifier(
+@mixin make-card-40-modifier(
     $background-color,
+    $border-color,
     $author-color,
     $meta-color,
     $title-color,
-    $author-font: false,
-    $author-font-weight: false,
-    $meta-font: false,
-    $meta-font-weight: false,
-    $title-font: false,
-    $title-font-weight: false,
     $background-color-hover: false,
     $pill-class-modifier: false,
     $text-align: false,
@@ -88,6 +103,7 @@
     $zoom-hover: false,
 ) {
     background: $background-color;
+    border-color: $border-color;
     @if $background-color-hover or $title-color-hover or $zoom-hover or $shadow-hover or $translate-hover {
         text-decoration: none !important;
         cursor: pointer;
@@ -123,7 +139,7 @@
     }
 
     @if $full-image-height {
-        .g--card-39 {
+        .g--card-40 {
             &__media-wrapper{
                 height: 100%;
                 &__media {
@@ -133,7 +149,7 @@
         }
     }
     @if $zoom-hover{
-        .g--card-39 {
+        .g--card-40 {
             &__media-wrapper{
                 overflow: hidden;
                 &__media{
@@ -146,7 +162,7 @@
             &:focus,
             &:active {
 
-                .g--card-39 {
+                .g--card-40 {
                     &__media-wrapper{
                         &__media{
                             transform: scale($zoom-hover);
@@ -158,7 +174,7 @@
     }
     @if $background-color-hover and $title-color-hover {
         
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
     
@@ -173,7 +189,7 @@
             &:focus,
             &:active {
 
-                .g--card-39 {
+                .g--card-40 {
                     &__wrapper {
                         background: $background-color-hover;
 
@@ -187,7 +203,7 @@
 
     } @else if $background-color-hover {
 
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
             }
@@ -198,7 +214,7 @@
             &:focus,
             &:active {
                 
-                .g--card-39 {
+                .g--card-40 {
                     &__wrapper {
                         background: $background-color-hover;
                     }
@@ -207,7 +223,7 @@
         }
     } @else if $title-color-hover {
 
-        .g--card-39  {
+        .g--card-40  {
             &__wrapper {
                 &__title {
                     transition: color $time-b $ease-standard-a;
@@ -219,7 +235,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-39 {
+                .g--card-40 {
                     &__wrapper {
                         &__title {
                             color: $title-color-hover;
@@ -231,7 +247,7 @@
     }
 
     @if $text-align == "center" {
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper {
                 text-align: center;
                 &__list-group{
@@ -245,7 +261,7 @@
     }
 
     @if $text-align == "left" {
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper {
                 text-align: left;
                 &__list-group{
@@ -259,7 +275,7 @@
     }
 
     @if $text-align == "right" {
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper {
                 text-align: right;
                 &__list-group{
@@ -273,7 +289,7 @@
     }
     @if $text-align == "center" {
 
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper{
                 text-align: center;
                 &__list-group {
@@ -301,7 +317,7 @@
 
     @if $text-align == "left" {
 
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper{
                 text-align: left;
                 &__list-group {
@@ -328,7 +344,7 @@
 
     @if $text-align == "right" {
 
-        .g--card-39 {
+        .g--card-40 {
             &__wrapper{
                 text-align: right;
                 &__list-group {
@@ -353,36 +369,18 @@
         }
     }
 
-    .g--card-39 {
+    .g--card-40 {
         &__wrapper {
             &__hd{
                 &__meta {
-                    @if $meta-font {
-                        @extend .f--font-#{$meta-font} !optional;
-                    }
-                    @if $meta-font-weight {
-                        font-weight: $meta-font-weight;
-                    }
                     color: $meta-color;
                 }
                 &__author {
-                    @if $author-font {
-                        @extend .f--font-#{$author-font} !optional;
-                    }
-                    @if $author-font-weight {
-                        font-weight: $author-font-weight;
-                    }
                     color: $author-color;
                 }
             }
 
             &__title {
-                @if $title-font {
-                    @extend .f--font-#{$title-font} !optional;
-                }
-                @if $title-font-weight {
-                    font-weight: $title-font-weight;
-                }
                 color: $title-color;
             }
         }

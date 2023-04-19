@@ -1,10 +1,15 @@
-.g--card-39 {
-    @include make-card-39(
+.g--card-40 {
+    @include make-card-40(
+        $border-width: 1px,
+        $meta-font: g,
+        $author-font: g,
         $pill-class: g--pill-01,
+        $title-font: f,
         // $border-radius: default
     );
-    @include make-card-39-modifier(
+    @include make-card-40-modifier(
         $background-color: map-get($color-options, e),
+        $border-color: map-get($color-options, a),
         $author-color: map-get($color-options, a),
         $meta-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
@@ -13,9 +18,6 @@
         // $pill-class-modifier: default,
         // $text-align: default,
         // $title-color-hover: default,
-        $meta-font: g,
-        $author-font: g,
-        $title-font: f,
         $zoom-hover: 2,
         $shadow-hover: 0 0 16px 0 rgba(map-get($color-options, a), .5),
         $translate-hover: translateY(-32px)

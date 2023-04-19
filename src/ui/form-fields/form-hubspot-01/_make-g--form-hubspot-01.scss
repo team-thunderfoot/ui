@@ -23,7 +23,8 @@
     $mobile-font-size: false,
     $select-artwork-border-radius: false,
 ) {
-    .hs-form{
+    .hs-form,
+    form{
         fieldset{
             max-width: none;
             .field,

@@ -122,9 +122,18 @@
     $person-color,
     $position-color,
     $background-color: false,
+    $background-color-hover: false,
     $btn-class-modifier: false,
     $text-align: false,
+    $shadow-hover: false,
+    $translate-hover: false,
+    $zoom-hover: false,
 ) {
+
+    @if $background-color-hover or $zoom-hover or $shadow-hover or $translate-hover {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
 
     @if $text-align == "center" {
         text-align: center;
@@ -165,6 +174,84 @@
         }
     }
     
+    @if $shadow-hover and $translate-hover {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $shadow-hover;
+                transform: $translate-hover;
+            }
+        }
+    } @else if $shadow-hover{
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $shadow-hover;
+            }
+        }
+    } @else if $translate-hover{
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $translate-hover;
+            }
+        }
+    }
+
+    @if $background-color-hover {
+        
+        .g--card-60 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-60 {
+                    &__wrapper {
+                        background: $background-color-hover;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @if $zoom-hover{
+        .g--card-60 {
+            &__media-wrapper{
+                overflow: hidden;
+                &__media{
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-60 {
+                    &__media-wrapper{
+                        &__media{
+                            transform: scale($zoom-hover);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .g--card-60 {
         &__wrapper{
             @if $background-color {

@@ -19,6 +19,10 @@
         $position-color: map-get($color-options, a),
         $background-color: rgba(map-get($color-options, a), .1),
         // $text-align: default,
-        // $btn-class-modifier: default
+        // $btn-class-modifier: default,
+        // $background-color-hover: false,
+        // $shadow-hover: false,
+        // $translate-hover: false,
+        // $zoom-hover: false,
     );
 }

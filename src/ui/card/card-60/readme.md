@@ -86,7 +86,10 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $position-color: map-get($color-options, a),
         // $background-color: default,
         // $text-align: default,
-        // $btn-class-modifier: default
+        // $btn-class-modifier: default,
+        // $person-font-weight: default,
+        // $position-font-weight: default,
+        // $change-order-reponsive: default,
     );
 }
 ```

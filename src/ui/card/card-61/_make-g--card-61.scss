@@ -3,6 +3,11 @@
     $subtitle-font,
     $title-font,
     $img-border-radius: false,
+    $img-object-fit: false,
+    $img-position: false,
+    $img-width: false,
+    $img-height: false,
+    $img-aspect-ratio: false,
     $title-font-weight: false,
     $subtitle-font-weight: false,
 ) {
@@ -28,10 +33,34 @@
 
         &__media{
             display: block;
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            object-position: bottom center;
+
+            @if $img-object-fit {
+                object-fit: $img-object-fit;
+            } @else{
+                object-fit: contain;
+            }
+
+            @if $img-position {
+                object-position: $img-position;
+            } @else{
+                object-position: bottom center;
+            }
+
+            @if $img-width {
+                width: $img-width;
+            } @else{
+                width: 100%;
+            }
+
+            @if $img-height {
+                height: $img-height;
+            } @else{
+                height: auto;
+            }
+
+            @if $img-aspect-ratio {
+                aspect-ratio: $img-aspect-ratio;
+            }
         }
     }
 

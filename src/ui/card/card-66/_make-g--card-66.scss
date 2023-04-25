@@ -8,6 +8,7 @@
     $link-font: false,
     $meta-font-weight: false,
     $title-font-weight: false,
+    $title-max-lines: false,
 ) {
     overflow: hidden;
     width: 100%;
@@ -50,6 +51,14 @@
                 font-weight: $title-font-weight;
             }
             margin-bottom: $measure * 3;
+
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
         }
         &__list-group{
             display: flex;

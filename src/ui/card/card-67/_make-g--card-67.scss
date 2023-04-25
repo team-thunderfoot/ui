@@ -4,6 +4,7 @@
     $border-radius: false,
     $img-position: false,
     $link-font: false,
+    $title-max-lines: false
 ) {
     overflow: hidden;
     width: 100%;
@@ -52,6 +53,13 @@
 
         &__title {
             margin-bottom: $measure * 3;
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
         }
         &__list-group{
             display: flex;

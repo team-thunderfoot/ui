@@ -62,7 +62,8 @@
         $pill-class: g--pill-01,
         $title-font: f,
         // $border-radius: default,
-        // $link-font: default
+        // $link-font: default,
+        // $title-max-lines: default
     );
     @include make-card-66-modifier(
         $background-color: map-get($color-options, e),

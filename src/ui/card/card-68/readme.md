@@ -56,7 +56,8 @@
         $meta-font: g,
         $title-font: f,
         // $border-radius: default,
-        // $link-font: default
+        // $link-font: default,
+        // $title-max-lines: default
     );
     @include make-card-68-modifier(
         $background-color: map-get($color-options, e),

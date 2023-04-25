@@ -1,0 +1,21 @@
+.g--card-66 {
+    @include make-card-66(
+        $meta-font: g,
+        $pill-class: g--pill-01,
+        $title-font: f,
+        $link-class: g--link-01,
+        $link-font: d,
+        // $border-radius: default
+    );
+    @include make-card-66-modifier(
+        $background-color: map-get($color-options, e),
+        $meta-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        // $link-class-modifier: default,
+        // $full-image-height: default,
+        // $background-color-hover: default,
+        // $pill-class-modifier: default,
+        // $text-align: default,
+        // $title-color-hover: default
+    );
+}

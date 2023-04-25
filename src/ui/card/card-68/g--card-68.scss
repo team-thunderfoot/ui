@@ -1,0 +1,18 @@
+.g--card-68 {
+    @include make-card-68(
+        $link-class: g--link-01,
+        $meta-font: g,
+        $title-font: f,
+        // $border-radius: default
+    );
+    @include make-card-68-modifier(
+        $background-color: map-get($color-options, e),
+        $meta-color: map-get($color-options, a),
+        $title-color: map-get($color-options, a),
+        $zoom-hover: 1.7
+        // $full-image-height: default,
+        // $background-color-hover: default,
+        // $text-align: default,
+        // $title-color-hover: default
+    );
+}

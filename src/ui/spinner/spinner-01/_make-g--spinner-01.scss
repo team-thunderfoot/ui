@@ -1,4 +1,7 @@
 @mixin make-spinner-01() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     svg {
         animation: spinner 1.5s infinite;
     }

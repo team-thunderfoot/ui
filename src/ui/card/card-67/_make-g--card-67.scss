@@ -116,7 +116,6 @@
     $translate-hover: false,
     $zoom-hover: false,
 ) {
-    background: $background-color;
     @if $background-color-hover or $title-color-hover or $zoom-hover or $shadow-hover or $translate-hover {
         text-decoration: none !important;
         cursor: pointer;
@@ -176,6 +175,9 @@
                 overflow: hidden;
                 &__media{
                     transition: transform $time-b $ease-standard-a;
+                    min-width: calc(100% + 2px);
+                    max-width: calc(100% + 2px);
+                    min-height: calc(100% + 2px);
                 }
             }
         }
@@ -393,6 +395,7 @@
 
     .g--card-67 {
         &__wrapper {
+            background: $background-color;
             &__hd{
                 &__meta {
                     @if $meta-font {

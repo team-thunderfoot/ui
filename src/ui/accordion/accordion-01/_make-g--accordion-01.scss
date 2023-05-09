@@ -18,6 +18,7 @@
         position: relative;
         padding: $measure * 3 0;
         width: 100%;
+        text-align: left;
 
         &__title {
             @extend .f--font-#{$title-font} !optional;

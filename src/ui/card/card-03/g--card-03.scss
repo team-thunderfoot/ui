@@ -1,18 +1,42 @@
 .g--card-03{
     @include make-card-03(
-    );
-    @include make-card-03-modifier(
         $title-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
-        // $text-align: default
-        $title-font: c,
-        $subtitle-font: f,
+        $title-font: b,
+        // $hover-img-zoom: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-size: false,
+        // $img-position: false,
+        // $img-width: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $subtitle-max-lines: false,
+        // $text-align: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
-
-    &--second {
+    &--second{
         @include make-card-03-modifier(
-            $title-color: map-get($color-options, e),
             $subtitle-color: map-get($color-options, g),
+            $title-color: map-get($color-options, g),
+            $title-font: c,
+            $hover-img-zoom: 1.2,
+            $hover-title-color: map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+            $img-aspect-ratio: 1 / 1,
+            $img-height: 50px,
+            $img-size: cover,
+            $img-position: center,
+            $img-width: auto,
+            $subtitle-font: d,
+            $subtitle-font-weight: 400,
+            $subtitle-max-lines: 3,
+            $text-align: center,
+            $title-font-weight: 700,
+            $title-max-lines: 2,
         );
     }
 }

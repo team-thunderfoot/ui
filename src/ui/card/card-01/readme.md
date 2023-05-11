@@ -8,66 +8,103 @@
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-01">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media g--lazy-01">
+    <div class="g--card-01__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
+    </div>
     <h3 class="g--card-01__title">Card 01</h3>
     <p class="g--card-01__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
-```sh
+```html
 <div class="g--card-01">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media g--lazy-01">
+    <div class="g--card-01__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
+    </div>
     <h3 class="g--card-01__title">Card 01</h3>
-    <div class="g--card-01__subtitle c--content-a"></div>
+    <p class="g--card-01__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</p>
 </div>
 ```
 
 ##### \*Aspect Ratio
 
-It is not necessary to add aspect-ratio because the images have height in the css.
+It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
 - $background-color
-- $border-radius: false by default
-- $subtitle-color
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $background-color
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $text-align
 - $title-color
 - $title-font
-- $title-font-weight
+- $border-radius: false
+- $hover-background-color: false
+- $hover-img-zoom: false
+- $hover-shadow: false
+- $hover-title-color: false
+- $hover-transform: false
+- $img-aspect-ratio: false
+- $img-height: false
+- $img-size: false
+- $img-width: false
+- $subtitle-color: false
+- $subtitle-font: false
+- $subtitle-font-weight: false
+- $subtitle-max-lines: false
+- $text-align: false
+- $title-font-weight: false
+- $title-max-lines: false
 
 ## Use
 
-```sh
+```scss
 .g--card-01{
     @include make-card-01(
-        // $border-radius: default,
-    );
-    @include make-card-01-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
-        $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $text-align: default,
-        // $subtitle-font: default,
-        // $subtitle-font-weight: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        $title-font: b,
+        // $border-radius: false,
+        // $hover-background-color: false,
+        // $hover-img-zoom: false,
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-size: false,
+        // $img-width: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $subtitle-max-lines: false,
+        // $text-align: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
+    &--second{
+        @include make-card-01-modifier(
+            // $background-color: false,
+            // $subtitle-color: false,
+            // $title-color: false,
+            // $title-font: false,
+            // $border-radius: false,
+            // $hover-background-color: false,
+            // $hover-img-zoom: false,
+            // $hover-shadow: false,
+            // $hover-title-color: false,
+            // $hover-transform: false,
+            // $img-aspect-ratio: false,
+            // $img-height: false,
+            // $img-size: false,
+            // $img-width: false,
+            // $subtitle-font: false,
+            // $subtitle-font-weight: d,
+            // $subtitle-max-lines: false,
+            // $text-align: false,
+            // $title-font-weight: false,
+            // $title-max-lines: false,
+        );
+    }
 }
 ```

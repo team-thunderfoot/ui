@@ -10,7 +10,7 @@
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
 ```sh
-<section class="c--section-c">
+<section class="f--section-c">
     <section class="g--layout-07">
         <div class="f--container">
             <div class="f--row">

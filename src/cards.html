@@ -11,12 +11,16 @@
 </head>
 <body>
   <main>
-    <section class="c--section-a">
+    <section class="f--section-a">
       <div class="f--container">
         <div class="f--row">
           <div class="f--col-12">
-            <a href="./index.html" class="f--font-f g--link-01 c--sp-c display--inline-block">Back to Index</a>
-            <h1 class="f--font-b">Global Cards</h1>
+            <a href="./index.html" class="f--font-f g--link-01 f--sp-c display--inline-block">Back to Index</a>
+            <h1 class="f--font-b f--sp-a">Global Cards</h1>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note:</strong> To go to any card we can add "#card-cardNumber" in the url. For example, to go to card-32 add "#card-32", the url will be "https://globalcomponents.netlify.app/cards.html#card-32"</p>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> All the variables in black are necessary to build the card, the variables in purple are optional. For card modifiers we can edit any variable (in black or purple). We can change any variable at any breakpoint using the mixin modifier.</p>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note hover options:</strong> change background-color, change title-color, add box-shadow, transform card (translate, zoom...), image zoom</p>
+            <p class="f--font-f f--background-a f--p-3"><strong>Note button/links:</strong> In all places where there is a link or a button it could be either</p>
           </div>
         </div>
       </div>
@@ -31,54 +35,60 @@
     </button>
 
     <!-- card 01 -->
-    <section class="c--section-c">
+    <section class="f--section-c" id="card-01">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
+          <div class="f--col-12">
+            <h2 class="f--font-c">Card-01</h2>
+          </div>
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
-              <div class="f--col-6 f--col-tablets-12">
+            <div class="f--row f--gap-d">
+              <div class="f--col-6 f--col-tablets-12 display--flex">
                 <div class="g--card-01">
-                  <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media g--lazy-01">
-                  <h3 class="g--card-01__title">Card 01</h3>
-                  <p class="g--card-01__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="g--card-01__media-wrapper">
+                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
+                  </div>
+                  <h3 class="g--card-01__title">Lorem ipsum</h3>
+                  <p class="g--card-01__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-              </div>
-              <div class="f--col-6 f--col-tablets-12">
+              </div>  
+              <div class="f--col-6 f--col-tablets-12 display--flex">
                 <div class="g--card-01 g--card-01--second">
-                  <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media g--lazy-01">
-                  <h3 class="g--card-01__title">Card 01</h3>
-                  <p class="g--card-01__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="g--card-01__media-wrapper">
+                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
+                  </div>
+                  <h3 class="g--card-01__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
+                  <p class="g--card-01__subtitle">Nulla facilisi nullam vehicula ipsum a arcu cursus. Pretium quam vulputate dignissim suspendisse in est. Egestas maecenas pharetra convallis posuere morbi leo.</p>
                 </div>
-              </div>   
+              </div> 
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
+              <div class="f--col-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
-                  <li class="f--color-g">$border-radius: false by default</li>
-                  <li>$subtitle-color</li>
-                  <li class="f--color-g">$subtitle-font: false by default</li>
-                  <li class="f--color-g">$text-align: false by default</li>
-                  <li>$title-color</li>
-                  <li class="f--color-g">$title-font: false by default</li>
-                  <li class="f--color-g">$title-font-weight: false by default</li>
-                  <li class="f--color-g">$subtitle-font-weight: false by default</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$subtitle-color</li>
-                  <li>$subtitle-font</li>
-                  <li>$subtitle-font-weight</li>
-                  <li>$text-align</li>
                   <li>$title-color</li>
                   <li>$title-font</li>
-                  <li>$title-font-weight</li>
+                  <li class="f--color-g">$border-radius</li>
+                  <li class="f--color-g">$hover-background-color</li>
+                  <li class="f--color-g">$hover-img-zoom</li>
+                  <li class="f--color-g">$hover-shadow</li>
+                  <li class="f--color-g">$hover-title-color</li>
+                  <li class="f--color-g">$hover-transform</li>
+                  <li class="f--color-g">$img-aspect-ratio</li>
+                  <li class="f--color-g">$img-height</li>
+                  <li class="f--color-g">$img-size</li>
+                  <li class="f--color-g">$img-position</li>
+                  <li class="f--color-g">$img-width</li>
+                  <li class="f--color-g">$subtitle-color</li>
+                  <li class="f--color-g">$subtitle-font</li>
+                  <li class="f--color-g">$subtitle-font-weight</li>
+                  <li class="f--color-g">$subtitle-max-lines</li>
+                  <li class="f--color-g">$text-align</li>
+                  <li class="f--color-g">$title-font-weight</li>
+                  <li class="f--color-g">$title-max-lines</li>
                 </ul>
               </div>
             </div>
@@ -88,11 +98,11 @@
     </section>
 
     <!-- card 02 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-02">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-02__media g--lazy-01">
@@ -110,8 +120,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$background-color: false by default</li>
@@ -128,7 +138,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$subtitle-color</li>
@@ -147,11 +157,11 @@
     </section>
 
     <!-- card 03 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-03">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-03__media g--lazy-01">
@@ -169,8 +179,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$subtitle-color</li>
@@ -183,7 +193,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$subtitle-color</li>
                   <li>$subtitle-font</li>
@@ -201,11 +211,11 @@
     </section>
 
     <!-- card 04 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-04 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
                   <div class="g--card-04__wrapper">
@@ -227,8 +237,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -245,7 +255,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$subtitle-color</li>
@@ -264,11 +274,11 @@
     </section>
 
     <!-- card 05 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-05">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-05__media g--lazy-01">
@@ -280,8 +290,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -298,7 +308,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$subtitle-color</li>
@@ -317,11 +327,11 @@
     </section>
 
     <!-- card 06 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-06">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-06__media g--lazy-01">
@@ -333,8 +343,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$background-color: false by default</li>
@@ -353,7 +363,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$subtitle-color</li>
@@ -372,11 +382,11 @@
     </section>
 
     <!-- card 07 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-07">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-07__media g--lazy-01">
@@ -388,8 +398,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$link-class</li>
@@ -404,7 +414,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$subtitle-color</li>
@@ -423,11 +433,11 @@
     </section>
 
     <!-- card 08 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-08 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg" >
                   <div class="g--card-08__wrapper">
@@ -441,8 +451,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -461,7 +471,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$subtitle-color</li>
                   <li>$text-align</li>
@@ -479,11 +489,11 @@
     </section>
 
     <!-- card 09 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-09">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-09__media g--lazy-01">
@@ -493,8 +503,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -506,7 +516,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$text-align</li>
@@ -522,11 +532,11 @@
     </section>
 
     <!-- card 10 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-10">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-10__media g--lazy-01">
@@ -536,8 +546,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$background-color: false by default</li>
@@ -551,7 +561,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$text-align</li>
@@ -567,11 +577,11 @@
     </section>
 
     <!-- card 11 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-11">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="placeholder" class="g--card-11__media g--lazy-01">
@@ -581,8 +591,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$text-align: false by default</li>
@@ -592,7 +602,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$text-align</li>
                   <li>$title-color</li>
@@ -607,11 +617,11 @@
     </section>
 
     <!-- card 12 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-12 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
                   <div class="g--card-12__wrapper">
@@ -623,8 +633,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -638,7 +648,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$text-align</li>
@@ -654,11 +664,11 @@
     </section>
 
     <!-- card 13 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-13">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-13__media g--lazy-01">
@@ -669,8 +679,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -684,7 +694,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$text-align</li>
@@ -700,11 +710,11 @@
     </section>
 
     <!-- card 14 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-14">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-14__media g--lazy-01">
@@ -715,8 +725,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$background-color: false by default</li>
@@ -732,7 +742,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$text-align</li>
@@ -748,11 +758,11 @@
     </section>
 
     <!-- card 15 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-15">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-15__media g--lazy-01">
@@ -763,8 +773,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$link-class</li>
@@ -776,7 +786,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$text-align</li>
                   <li>$title-color</li>
@@ -791,11 +801,11 @@
     </section>
 
     <!-- card 16 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-16 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
                   <div class="g--card-16__wrapper">
@@ -808,8 +818,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -825,7 +835,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$text-align</li>
@@ -841,11 +851,11 @@
     </section>
 
     <!-- card 17 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-17">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-17__media g--lazy-01">
@@ -855,8 +865,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -868,7 +878,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$text-align</li>
@@ -884,11 +894,11 @@
     </section>
 
     <!-- card 18 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-18">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-18__media g--lazy-01">
@@ -898,8 +908,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$background-color: false by default</li>
@@ -913,7 +923,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$text-align</li>
@@ -929,11 +939,11 @@
     </section>
 
     <!-- card 19 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-19">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-19__media g--lazy-01">
@@ -943,8 +953,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$text-align: false by default</li>
@@ -954,7 +964,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$text-align</li>
                   <li>$title-color</li>
@@ -969,11 +979,11 @@
     </section>
 
     <!-- card 20 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-20 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
                   <div class="g--card-20__wrapper">
@@ -985,8 +995,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -1000,7 +1010,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$text-align</li>
@@ -1016,11 +1026,11 @@
     </section>
 
     <!-- card 21 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-21">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-21__media g--lazy-01">
@@ -1031,8 +1041,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1046,7 +1056,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$link-class-modifier</li>
@@ -1063,11 +1073,11 @@
     </section>
 
     <!-- card 22 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-22">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-22__media g--lazy-01">
@@ -1078,8 +1088,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li class="f--color-g">$background-color: false by default</li>
@@ -1095,7 +1105,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$link-class-modifier</li>
@@ -1112,11 +1122,11 @@
     </section>
 
     <!-- card 23 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-23">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-23__media g--lazy-01">
@@ -1127,8 +1137,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$link-class</li>
@@ -1140,7 +1150,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$link-class-modifier</li>
                   <li>$text-align</li>
@@ -1156,11 +1166,11 @@
     </section>
 
     <!-- card 24 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-24 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
                   <div class="g--card-24__wrapper">
@@ -1173,8 +1183,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -1190,7 +1200,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$link-class-modifier</li>
@@ -1207,11 +1217,11 @@
     </section>
 
     <!-- card 25 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-25">
                   <h3 class="g--card-25__title">Card 25</h3>
@@ -1221,8 +1231,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1237,7 +1247,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$subtitle-color</li>
@@ -1256,11 +1266,11 @@
     </section>
 
     <!-- card 26 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-26">
                   <h3 class="g--card-26__title">Card 26</h3>
@@ -1270,8 +1280,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1288,7 +1298,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$border-color</li>
@@ -1308,11 +1318,11 @@
     </section>
 
     <!-- card 27 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-27">
                   <h3 class="g--card-27__title">Card 27</h3>
@@ -1322,8 +1332,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$subtitle-color</li>
@@ -1336,7 +1346,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$subtitle-color</li>
                   <li>$text-align</li>
@@ -1354,11 +1364,11 @@
     </section>
 
     <!-- card 28 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-28 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
                   <div class="g--card-28__wrapper">
@@ -1370,8 +1380,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -1388,7 +1398,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$mask-color</li>
                   <li>$text-align</li>
@@ -1407,11 +1417,11 @@
     </section>
 
     <!-- card 29 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-29">
                   <h3 class="g--card-29__title">Card 29</h3>
@@ -1422,8 +1432,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1440,7 +1450,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$link-class-modifier</li>
@@ -1460,11 +1470,11 @@
     </section>    
     
     <!-- card 30 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-30">
                   <h3 class="g--card-30__title">Card 30</h3>
@@ -1475,8 +1485,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1495,7 +1505,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$border-color</li>
@@ -1516,11 +1526,11 @@
     </section>
 
     <!-- card 31 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-31">
                   <h3 class="g--card-31__title">Card 31</h3>
@@ -1531,8 +1541,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1551,7 +1561,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
                   <li>$border-color</li>
@@ -1572,11 +1582,11 @@
     </section>    
 
     <!-- card 32 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-32" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
                   <div class="g--card-32__wrapper">
@@ -1589,8 +1599,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-position</li>
@@ -1609,7 +1619,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$link-class-modifier</li>
                   <li>$mask-color</li>
@@ -1630,11 +1640,11 @@
  
     
     <!-- card 33 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-12">
                 <div class="g--card-33">
                   <div class="g--card-33__hd">
@@ -1657,8 +1667,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1677,7 +1687,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$bakcground-color</li>
                   <li>$bakcground-color-hover</li>
@@ -1695,11 +1705,11 @@
     </section>
  
     <!-- card 34 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-12">
                 <div class="g--card-34">
                   <div class="g--card-34__hd">
@@ -1722,8 +1732,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1742,7 +1752,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$bakcground-color</li>
                   <li>$bakcground-color-hover</li>
@@ -1760,11 +1770,11 @@
     </section>
     
     <!-- card 36 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-36">
                   <p class="g--card-36__meta">
@@ -1782,8 +1792,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1802,7 +1812,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$bakcground-color</li>
                   <li>$bakcground-color-hover</li>
@@ -1820,11 +1830,11 @@
     </section>
 
     <!-- card 39 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-39">
                   <div class="g--card-39__media-wrapper">
@@ -1846,8 +1856,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1868,7 +1878,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$bakcground-color</li>
                   <li>$bakcground-color-hover</li>
@@ -1887,11 +1897,11 @@
   </section>
 
   <!-- card 40 -->
-  <section class="c--section-c">
+  <section class="f--section-c">
     <div class="f--container">
-      <div class="f--row c--gap-d">
+      <div class="f--row f--gap-d">
         <div class="f--col-8 f--col-tabletm-12">
-          <div class="f--row c--gap-d">
+          <div class="f--row f--gap-d">
             <div class="f--col-6 f--col-tablets-12">
               <div class="g--card-40">
                 <div class="g--card-40__media-wrapper">
@@ -1913,8 +1923,8 @@
           </div>
         </div>
         <div class="f--col-4 f--col-tabletm-12">
-          <h2 class="f--font-c c--sp-a">Editable variables</h2>
-          <div class="f--row c--gap-b">
+          <h2 class="f--font-c f--sp-a">Editable variables</h2>
+          <div class="f--row f--gap-b">
             <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
               <ul style="list-style: inside;">
                 <li>$background-color</li>
@@ -1935,7 +1945,7 @@
               </ul>
             </div>
             <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-              <h3 class="f--font-d c--sp-a">For modifiers</h3>
+              <h3 class="f--font-d f--sp-a">For modifiers</h3>
               <ul style="list-style: inside;">
                 <li>$bakcground-color</li>
                 <li>$bakcground-color-hover</li>
@@ -1954,11 +1964,11 @@
 </section>
 
     <!-- card 42 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
       <div class="f--container">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <div class="f--row c--gap-d">
+            <div class="f--row f--gap-d">
               <div class="f--col-6 f--col-tablets-12">
                 <div class="g--card-42">
                   <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-42__media g--lazy-01 f--ar" width="604" height="340">
@@ -1975,8 +1985,8 @@
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c c--sp-a">Editable variables</h2>
-            <div class="f--row c--gap-b">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row f--gap-b">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
@@ -1997,7 +2007,7 @@
                 </ul>
               </div>
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d c--sp-a">For modifiers</h3>
+                <h3 class="f--font-d f--sp-a">For modifiers</h3>
                 <ul style="list-style: inside;">
                   <li>$bakcground-color</li>
                   <li>$bakcground-color-hover</li>
@@ -2016,9 +2026,9 @@
   </section>
 
   <!-- card 49 -->
-  <section class="c--section-c">
+  <section class="f--section-c">
     <div class="f--container">
-      <div class="f--row c--gap-d">
+      <div class="f--row f--gap-d">
         <div class="f--col-12 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0">
           <div class="g--card-49">
             <div class="g--card-49__wrapper">
@@ -2033,8 +2043,8 @@
           </div>
         </div>
         <div class="f--col-12">
-          <h2 class="f--font-c c--sp-a">Editable variables</h2>
-          <div class="f--row c--gap-b">
+          <h2 class="f--font-c f--sp-a">Editable variables</h2>
+          <div class="f--row f--gap-b">
             <div class="f--col-6 f--col-mobile-12">
               <ul style="list-style: inside;">
                 <li class="f--color-g">$background-color: false by default</li>
@@ -2047,7 +2057,7 @@
               </ul>
             </div>
             <div class="f--col-6 f--col-mobile-12">
-              <h3 class="f--font-d c--sp-a">For modifiers</h3>
+              <h3 class="f--font-d f--sp-a">For modifiers</h3>
               <ul style="list-style: inside;">
                 <li>$background-color</li>
                 <li>$title-color</li>
@@ -2062,9 +2072,9 @@
   </section>
 
     <!-- card 50 -->
-    <section class="c--section-c">
+    <section class="f--section-c">
      <div class="f--container">
-       <div class="f--row c--gap-d">
+       <div class="f--row f--gap-d">
          <div class="f--col-12 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0">
           <div class="g--card-50">
             <div class="g--card-50__media-wrapper">
@@ -2079,8 +2089,8 @@
           </div>
          </div>
          <div class="f--col-12">
-           <h2 class="f--font-c c--sp-a">Editable variables</h2>
-           <div class="f--row c--gap-b">
+           <h2 class="f--font-c f--sp-a">Editable variables</h2>
+           <div class="f--row f--gap-b">
             <div class="f--col-6 f--col-mobile-12">
               <ul style="list-style: inside;">
                 <li class="f--color-g">$background-color: false by default</li>
@@ -2093,7 +2103,7 @@
               </ul>
             </div>
             <div class="f--col-6 f--col-mobile-12">
-              <h3 class="f--font-d c--sp-a">For modifiers</h3>
+              <h3 class="f--font-d f--sp-a">For modifiers</h3>
               <ul style="list-style: inside;">
                 <li>$background-color</li>
                 <li>$title-color</li>
@@ -2108,9 +2118,9 @@
    </section>
 
    <!-- card 51 -->
-  <section class="c--section-c">
+  <section class="f--section-c">
     <div class="f--container">
-      <div class="f--row c--gap-d">
+      <div class="f--row f--gap-d">
         <div class="f--col-12 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0">
           <div class="g--card-51">
             <div class="g--card-51__wrapper">
@@ -2125,8 +2135,8 @@
           </div>
         </div>
         <div class="f--col-12">
-          <h2 class="f--font-c c--sp-a">Editable variables</h2>
-          <div class="f--row c--gap-b">
+          <h2 class="f--font-c f--sp-a">Editable variables</h2>
+          <div class="f--row f--gap-b">
             <div class="f--col-6 f--col-mobile-12">
               <ul style="list-style: inside;">
                 <li class="f--color-g">$background-color: false by default</li>
@@ -2140,7 +2150,7 @@
               </ul>
             </div>
             <div class="f--col-6 f--col-mobile-12">
-              <h3 class="f--font-d c--sp-a">For modifiers</h3>
+              <h3 class="f--font-d f--sp-a">For modifiers</h3>
               <ul style="list-style: inside;">
                 <li>$background-color</li>
                 <li>$media-background-color</li>
@@ -2156,11 +2166,11 @@
   </section>
 
    <!-- card 55 -->
-   <section class="c--section-c">
+   <section class="f--section-c">
     <div class="f--container">
-      <div class="f--row c--gap-d">
+      <div class="f--row f--gap-d">
         <div class="f--col-8 f--col-tabletm-12">
-          <div class="f--row c--gap-d">
+          <div class="f--row f--gap-d">
             <div class="f--col-6 f--col-tablets-12">
               <div class="g--card-55">
                 <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-55__media g--lazy-01 f--ar" width="604" height="340">
@@ -2176,8 +2186,8 @@
           </div>
         </div>
         <div class="f--col-4 f--col-tabletm-12">
-          <h2 class="f--font-c c--sp-a">Editable variables</h2>
-          <div class="f--row c--gap-b">
+          <h2 class="f--font-c f--sp-a">Editable variables</h2>
+          <div class="f--row f--gap-b">
             <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
               <ul style="list-style: inside;">
                 <li>$background-color</li>
@@ -2195,7 +2205,7 @@
               </ul>
             </div>
             <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-              <h3 class="f--font-d c--sp-a">For modifiers</h3>
+              <h3 class="f--font-d f--sp-a">For modifiers</h3>
               <ul style="list-style: inside;">
                 <li>$bakcground-color</li>
                 <li>$bakcground-color-hover</li>
@@ -2213,11 +2223,11 @@
   </section>
 
    <!-- card 58 -->
-   <section class="c--section-c">
+   <section class="f--section-c">
     <div class="f--container">
-      <div class="f--row c--gap-d">
+      <div class="f--row f--gap-d">
         <div class="f--col-8 f--col-tabletm-12">
-          <div class="f--row c--gap-d">
+          <div class="f--row f--gap-d">
             <div class="f--col-6 f--col-mobile-12">
               <div class="g--card-58">
                 <div class="g--card-58__media-wrapper">
@@ -2239,8 +2249,8 @@
           </div>
         </div>
         <div class="f--col-4 f--col-tabletm-12">
-          <h2 class="f--font-c c--sp-a">Editable variables</h2>
-          <div class="f--row c--gap-b">
+          <h2 class="f--font-c f--sp-a">Editable variables</h2>
+          <div class="f--row f--gap-b">
             <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
               <ul style="list-style: inside;">
                 <li class="f--color-g">$img-border-radius: false by default</li>
@@ -2254,7 +2264,7 @@
               </ul>
             </div>
             <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-              <h3 class="f--font-d c--sp-a">For modifiers</h3>
+              <h3 class="f--font-d f--sp-a">For modifiers</h3>
               <ul style="list-style: inside;">
                 <li>$text-align</li>
                 <li>$title-color</li>
@@ -2268,11 +2278,11 @@
   </section>
 
   <!-- card 59 -->
-  <section class="c--section-c">
+  <section class="f--section-c">
    <div class="f--container">
-     <div class="f--row c--gap-d">
+     <div class="f--row f--gap-d">
        <div class="f--col-12 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0">
-         <div class="f--row c--gap-d">
+         <div class="f--row f--gap-d">
            <div class="f--col-12">
             <div class="g--card-59">
               <div class="g--card-59__wrapper">
@@ -2292,8 +2302,8 @@
          </div>
        </div>
        <div class="f--col-12">
-         <h2 class="f--font-c c--sp-a">Editable variables</h2>
-         <div class="f--row c--gap-b">
+         <h2 class="f--font-c f--sp-a">Editable variables</h2>
+         <div class="f--row f--gap-b">
            <div class="f--col-6 f--col-mobile-12">
              <ul style="list-style: inside;">
               <li class="f--color-g">$background-color: false by default</li>
@@ -2318,7 +2328,7 @@
              </ul>
            </div>
            <div class="f--col-6 f--col-mobile-12">
-             <h3 class="f--font-d c--sp-a">For modifiers</h3>
+             <h3 class="f--font-d f--sp-a">For modifiers</h3>
              <ul style="list-style: inside;">
               <li>$content-color</li>
               <li>$heading-color</li>
@@ -2337,11 +2347,11 @@
  </section>
 
   <!-- card 60 -->
-  <section class="c--section-c">
+  <section class="f--section-c">
    <div class="f--container">
-     <div class="f--row c--gap-d">
+     <div class="f--row f--gap-d">
        <div class="f--col-12 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0">
-         <div class="f--row c--gap-d">
+         <div class="f--row f--gap-d">
            <div class="f--col-12">
             <div class="g--card-60">
               <div class="g--card-60__wrapper">
@@ -2361,8 +2371,8 @@
          </div>
        </div>
        <div class="f--col-12">
-         <h2 class="f--font-c c--sp-a">Editable variables</h2>
-         <div class="f--row c--gap-b">
+         <h2 class="f--font-c f--sp-a">Editable variables</h2>
+         <div class="f--row f--gap-b">
            <div class="f--col-6 f--col-mobile-12">
              <ul style="list-style: inside;">
               <li class="f--color-g">$background-color: false by default</li>
@@ -2387,7 +2397,7 @@
              </ul>
            </div>
            <div class="f--col-6 f--col-mobile-12">
-             <h3 class="f--font-d c--sp-a">For modifiers</h3>
+             <h3 class="f--font-d f--sp-a">For modifiers</h3>
              <ul style="list-style: inside;">
               <li>$content-color</li>
               <li>$heading-color</li>
@@ -2405,11 +2415,11 @@
  </section>
 
  <!-- card 61 -->
- <section class="c--section-c">
+ <section class="f--section-c">
   <div class="f--container">
-    <div class="f--row c--gap-d">
+    <div class="f--row f--gap-d">
       <div class="f--col-8 f--col-tabletm-12">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
 
           <div class="f--col-6 f--col-mobile-12">
             <div class="g--card-61">
@@ -2448,8 +2458,8 @@
       </div>
 
       <div class="f--col-4 f--col-tabletm-12">
-        <h2 class="f--font-c c--sp-a">Editable variables</h2>
-        <div class="f--row c--gap-b">
+        <h2 class="f--font-c f--sp-a">Editable variables</h2>
+        <div class="f--row f--gap-b">
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
             <ul style="list-style: inside;">
               <li class="f--color-g">$img-border-radius: false by default</li>
@@ -2464,7 +2474,7 @@
             </ul>
           </div>
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-            <h3 class="f--font-d c--sp-a">For modifiers</h3>
+            <h3 class="f--font-d f--sp-a">For modifiers</h3>
             <ul style="list-style: inside;">
               <li>$icon-class-modifier</li>
               <li>$text-align</li>
@@ -2479,11 +2489,11 @@
 </section>
 
 <!-- card 62 -->
-<section class="c--section-c">
+<section class="f--section-c">
   <div class="f--container">
-    <div class="f--row c--gap-d">
+    <div class="f--row f--gap-d">
       <div class="f--col-8 f--col-tabletm-12">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-6 f--col-tablets-12">
             <div class="g--card-62">
               <div class="g--card-62__media-wrapper">
@@ -2498,8 +2508,8 @@
         </div>
       </div>
       <div class="f--col-4 f--col-tabletm-12">
-        <h2 class="f--font-c c--sp-a">Editable variables</h2>
-        <div class="f--row c--gap-b">
+        <h2 class="f--font-c f--sp-a">Editable variables</h2>
+        <div class="f--row f--gap-b">
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
             <ul style="list-style: inside;">
               <li>$background-color</li>
@@ -2518,7 +2528,7 @@
             </ul>
           </div>
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-            <h3 class="f--font-d c--sp-a">For modifiers</h3>
+            <h3 class="f--font-d f--sp-a">For modifiers</h3>
             <ul style="list-style: inside;">
               <li>$bakcground-color</li>
               <li>$bakcground-color-hover</li>
@@ -2536,11 +2546,11 @@
 </section>
 
 <!-- card 66 -->
-<section class="c--section-c">
+<section class="f--section-c">
   <div class="f--container">
-    <div class="f--row c--gap-d">
+    <div class="f--row f--gap-d">
       <div class="f--col-8 f--col-tabletm-12">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-6 f--col-tablets-12 display--flex">
             <div class="g--card-66">
               <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-66__media g--lazy-01 f--ar" width="604" height="340">
@@ -2572,8 +2582,8 @@
         </div>
       </div>
       <div class="f--col-4 f--col-tabletm-12">
-        <h2 class="f--font-c c--sp-a">Editable variables</h2>
-        <div class="f--row c--gap-b">
+        <h2 class="f--font-c f--sp-a">Editable variables</h2>
+        <div class="f--row f--gap-b">
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
             <ul style="list-style: inside;">
               <li>$background-color</li>
@@ -2594,7 +2604,7 @@
             </ul>
           </div>
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-            <h3 class="f--font-d c--sp-a">For modifiers</h3>
+            <h3 class="f--font-d f--sp-a">For modifiers</h3>
             <ul style="list-style: inside;">
               <li>$bakcground-color</li>
               <li>$bakcground-color-hover</li>
@@ -2613,11 +2623,11 @@
 </section>
 
 <!-- card 67 -->
- <section class="c--section-c">
+ <section class="f--section-c">
   <div class="f--container">
-    <div class="f--row c--gap-d">
+    <div class="f--row f--gap-d">
       <div class="f--col-8 f--col-tabletm-12">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-6 f--col-tablets-12 display--flex">
             <div class="g--card-67">
               <div class="g--card-67__media-wrapper">
@@ -2659,8 +2669,8 @@
         </div>
       </div>
       <div class="f--col-4 f--col-tabletm-12">
-        <h2 class="f--font-c c--sp-a">Editable variables</h2>
-        <div class="f--row c--gap-b">
+        <h2 class="f--font-c f--sp-a">Editable variables</h2>
+        <div class="f--row f--gap-b">
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
             <ul style="list-style: inside;">
               <li>$background-color</li>
@@ -2681,7 +2691,7 @@
             </ul>
           </div>
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-            <h3 class="f--font-d c--sp-a">For modifiers</h3>
+            <h3 class="f--font-d f--sp-a">For modifiers</h3>
             <ul style="list-style: inside;">
               <li>$bakcground-color</li>
               <li>$bakcground-color-hover</li>
@@ -2700,11 +2710,11 @@
 </section>
 
 <!-- card 68 -->
-<section class="c--section-c">
+<section class="f--section-c">
   <div class="f--container">
-    <div class="f--row c--gap-d">
+    <div class="f--row f--gap-d">
       <div class="f--col-8 f--col-tabletm-12">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-6 f--col-tablets-12 display--flex">
             <div class="g--card-68">
               <div class="g--card-68__media-wrapper">
@@ -2732,8 +2742,8 @@
         </div>
       </div>
       <div class="f--col-4 f--col-tabletm-12">
-        <h2 class="f--font-c c--sp-a">Editable variables</h2>
-        <div class="f--row c--gap-b">
+        <h2 class="f--font-c f--sp-a">Editable variables</h2>
+        <div class="f--row f--gap-b">
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
             <ul style="list-style: inside;">
               <li>$background-color</li>
@@ -2752,7 +2762,7 @@
             </ul>
           </div>
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-            <h3 class="f--font-d c--sp-a">For modifiers</h3>
+            <h3 class="f--font-d f--sp-a">For modifiers</h3>
             <ul style="list-style: inside;">
               <li>$bakcground-color</li>
               <li>$bakcground-color-hover</li>
@@ -2770,11 +2780,11 @@
 </section>
  
 <!-- card 69 -->
-<section class="c--section-c">
+<section class="f--section-c">
   <div class="f--container">
-    <div class="f--row c--gap-d">
+    <div class="f--row f--gap-d">
       <div class="f--col-8 f--col-tabletm-12">
-        <div class="f--row c--gap-d">
+        <div class="f--row f--gap-d">
           <div class="f--col-6 display--flex">
             <div class="g--card-69">
               <div class="g--card-69__hd">
@@ -2818,8 +2828,8 @@
         </div>
       </div>
       <div class="f--col-4 f--col-tabletm-12">
-        <h2 class="f--font-c c--sp-a">Editable variables</h2>
-        <div class="f--row c--gap-b">
+        <h2 class="f--font-c f--sp-a">Editable variables</h2>
+        <div class="f--row f--gap-b">
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
             <ul style="list-style: inside;">
               <li>$background-color</li>
@@ -2838,7 +2848,7 @@
             </ul>
           </div>
           <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-            <h3 class="f--font-d c--sp-a">For modifiers</h3>
+            <h3 class="f--font-d f--sp-a">For modifiers</h3>
             <ul style="list-style: inside;">
               <li>$bakcground-color</li>
               <li>$bakcground-color-hover</li>

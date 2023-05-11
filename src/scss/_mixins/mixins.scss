@@ -1,8 +1,6 @@
 @import './foundation/grid/grid';
 @import './foundation/font/font';
 @import './foundation/aspect-ratio/ar';
-
-//* components
-@import './components/section/section';
-@import './components/spacing/spacing';
-@import './components/gap/gap';
+@import './foundation/section/section';
+@import './foundation/spacing/spacing';
+@import './foundation/gap/gap';

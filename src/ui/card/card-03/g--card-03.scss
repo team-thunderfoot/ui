@@ -26,7 +26,7 @@
             $hover-img-zoom: 1.2,
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
-            $img-aspect-ratio: 1 / 1,
+            $img-aspect-ratio:calc(1 / 1),
             $img-height: 50px,
             $img-size: cover,
             $img-position: center,

@@ -453,9 +453,6 @@
             @if $title-font {
                 @extend .f--font-#{$title-font} !optional;
             }
-            // margin-bottom: $measure * 2;
-            // color: $title-color;
-            // @extend .f--font-#{$title-font} !optional;
             @if $title-font-weight {
                 font-weight: $title-font-weight;
             }
@@ -469,16 +466,12 @@
             @if $hover-title-color {
                 transition: color $time-b $ease-standard-a;
             }
-            // @media all and ($viewport-type: $tablets) {
-            //     margin-bottom: $measure;
-            // }
         }
     
         &__subtitle {
             @if $subtitle-color {
                 color: $subtitle-color;
             }
-            // color: $subtitle-color;
             @if $subtitle-font {
                 @extend .f--font-#{$subtitle-font} !optional;
             }

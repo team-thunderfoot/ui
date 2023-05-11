@@ -8,74 +8,112 @@
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-04 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
-    <div class="g--card-04__wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-04__wrapper__media g--lazy-01">
-        <h3 class="g--card-04__wrapper__title">Card 04</h3>
-        <p class="g--card-04__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+    <div class="g--card-04__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-04__media-wrapper__media g--lazy-01">
     </div>
+    <h3 class="g--card-04__title">Card 01</h3>
+    <p class="g--card-04__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
-```sh
+```html
 <div class="g--card-04 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
-    <div class="g--card-04__wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-04__wrapper__media g--lazy-01">
-        <h3 class="g--card-04__wrapper__title">Card 04</h3>
-        <p class="g--card-04__wrapper__subtitle c--content-a"></p>
+    <div class="g--card-04__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-04__media-wrapper__media g--lazy-01">
     </div>
+    <h3 class="g--card-04__title">Card 01</h3>
+    <div class="g--card-04__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
 </div>
 ```
 
 ##### \*Aspect Ratio
 
-It is not necessary to add aspect-ratio because the images have height in the css.
+It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
 - $background-position
 - $background-size
-- $border-radius: false by default
 - $mask-color
-- $subtitle-color
-- $subtitle-font: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-
-### For modifiers
-
-- $mask-color
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $text-align
 - $title-color
 - $title-font
-- $title-font-weight
+- $border-radius: false
+- $hover-background-img-zoom: false
+- $hover-img-zoom: false
+- $hover-shadow: false
+- $hover-title-color: false
+- $hover-transform: false
+- $img-aspect-ratio: false
+- $img-height: false
+- $img-size: false
+- $img-position: false
+- $img-width: false
+- $subtitle-color: false
+- $subtitle-font: false
+- $subtitle-font-weight: false
+- $subtitle-max-lines: false
+- $text-align: false
+- $title-font-weight: false
+- $title-max-lines: false
 
 ## Use
 
-```sh
+```scss
 .g--card-04{
     @include make-card-04(
         $background-position: center,
         $background-size: cover,
-        // $border-radius: default,
-    );
-    @include make-card-04-modifier(
         $mask-color: rgba(map-get($color-options, b), .5),
-        $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $subtitle-font: default,
-        // $subtitle-font-weight: default,
-        // $text-align: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        $title-font: b,
+        // $border-radius: false,
+        // $hover-background-img-zoom: false,
+        // $hover-img-zoom: false,
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-size: false,
+        // $img-position: false,
+        // $img-width: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $subtitle-max-lines: false,
+        // $text-align: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
+    &--second{
+        @include make-card-04-modifier(
+            // $background-position: false,
+            // $background-size: false,
+            // $mask-color: false,
+            // $subtitle-color: false,
+            // $title-color: false,
+            // $title-font: false,
+            // $border-radius: false,
+            // $hover-background-size: false,
+            // $hover-img-zoom: false,
+            // $hover-shadow: false,
+            // $hover-title-color: false,
+            // $hover-transform: false,
+            // $img-aspect-ratio: false,
+            // $img-height: false,
+            // $img-size: false,
+            // $img-position: false,
+            // $img-width: false,
+            // $subtitle-font: false,
+            // $subtitle-font-weight: false,
+            // $subtitle-max-lines: false,
+            // $text-align: false,
+            // $title-font-weight: false,
+            // $title-max-lines: false,
+        );
+    }
 }
 ```

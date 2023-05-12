@@ -64,12 +64,12 @@ It is not necessary to add aspect-ratio.
 ```scss
 .g--card-02{
     @include make-card-02(
-        $background-color: rgba(map-get($color-options, a), .5),
         $border-color: map-get($color-options, e),
         $border-style: dashed,
         $border-width: 4px 8px,
         $title-color: map-get($color-options, a),
         $title-font: b,
+        // $background-color: false,
         // $border-radius: false,
         // $hover-background-color: false,
         // $hover-img-zoom: false,

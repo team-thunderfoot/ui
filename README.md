@@ -1,5 +1,7 @@
 # Thunderfoot Global Components
 
+### note that up to version 0.97 should be consider beta, now working on 0.1.0 verison
+
 ## Use
 
 Install package

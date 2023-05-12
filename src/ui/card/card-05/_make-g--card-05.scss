@@ -231,7 +231,9 @@
 
     &__subtitle {
         margin-bottom: $measure * 2;
-        
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
         @if $subtitle-color {
             color: $subtitle-color;
         }
@@ -247,9 +249,6 @@
             display: -webkit-box;
             -webkit-line-clamp: $subtitle-max-lines;
             -webkit-box-orient: vertical;
-        }
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
         }
     }
     &__link{

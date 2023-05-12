@@ -13,7 +13,7 @@
     <div class="g--card-05__media-wrapper">
         <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-05__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-05__title">Card 01</h3>
+    <h3 class="g--card-05__title">Lorem ipsum</h3>
     <p class="g--card-05__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-05__link">This is a link</a>
 </div>
@@ -25,7 +25,7 @@ If you want the subtitle to be a c--content, the HTML should be:
     <div class="g--card-05__media-wrapper">
         <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-05__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-05__title">Card 01</h3>
+    <h3 class="g--card-05__title">Lorem ipsum</h3>
     <div class="g--card-05__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-05__link">This is a link</a>
 </div>

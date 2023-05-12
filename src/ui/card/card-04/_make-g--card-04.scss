@@ -27,18 +27,29 @@
     padding: $measure*7 $measure*5;
     width: 100%;
     display: block;
-    background-position: $background-position;
     background-repeat: no-repeat;
-    background-size: $background-size;
     position: relative;
     overflow: hidden;
+    background-size: 0;
     &::before{
         content: '';
+        width: 100%;
         height: 100%;
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 0;
+        background: inherit;
+        background-position: $background-position;
+        background-size: $background-size;
+    }
+    &::after{
+        content: '';
         width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
         z-index: 0;
         background: $mask-color;
     }
@@ -46,47 +57,7 @@
         text-decoration: none !important;
         cursor: pointer;
     }
-    @if $hover-background-img-zoom and $hover-shadow and $hover-transform {
-        transition: background-size $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-img-zoom;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-img-zoom and $hover-shadow{
-        transition: background-size $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-img-zoom;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-img-zoom and $hover-transform{
-        transition: background-size $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-img-zoom;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-img-zoom{
-        transition: background-size $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-img-zoom;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
+    @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -123,6 +94,21 @@
             &:active & {
                 &__title{
                     color: $hover-title-color;
+                }
+            }
+        }
+    }
+
+    @if $hover-background-img-zoom {
+        &::before{
+            transition: transform $time-b $ease-standard-a;
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::before{
+                    transform: scale($hover-background-img-zoom);
                 }
             }
         }
@@ -272,7 +258,7 @@
     $title-color: false,
     $title-font: false,
     $border-radius: false,
-    $hover-background-size: false,
+    $hover-background-img-zoom: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
@@ -291,51 +277,11 @@
 
 ) {
 
-    @if $hover-background-size or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
+    @if $hover-background-img-zoom or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
-    @if $hover-background-size and $hover-shadow and $hover-transform {
-        transition: background-size $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-size;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-size and $hover-shadow{
-        transition: background-size $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-size;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-size and $hover-transform{
-        transition: background-size $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-size;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-size{
-        transition: background-size $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background-size: $hover-background-size;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
+    @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -392,18 +338,36 @@
             }
         }
     }
+    @if $hover-background-img-zoom {
+        &::before{
+            transition: transform $time-b $ease-standard-a;
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::before{
+                    transform: scale($hover-background-img-zoom);
+                }
+            }
+        }
+    }
     @if $border-radius {
         border-radius: $border-radius;
     }
     @if $background-position {
-        background-position: $background-position;
+        &::before{
+            background-position: $background-position;
+        }
     }
     @if $background-size {
-        background-size: $background-size;
+        &::before{
+            background-size: $background-size;
+        }
     }
 
     @if $mask-color {
-        &::before{
+        &::after{
             background: $mask-color;
         }
     }

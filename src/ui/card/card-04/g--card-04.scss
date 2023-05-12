@@ -27,13 +27,13 @@
     &--second{
         @include make-card-04-modifier(
             $background-position: bottom right,
-            $background-size: auto 100%,
+            $background-size: cover,
             $mask-color: rgba(map-get($color-options, g), .5),
             $subtitle-color: map-get($color-options, b),
             $title-color: map-get($color-options, d),
             $title-font: c,
             $border-radius: $measure*2,
-            $hover-background-size: auto 200%,
+            $hover-background-img-zoom: 2,
             $hover-img-zoom: 1.2,
             $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
             $hover-title-color: map-get($color-options, h),

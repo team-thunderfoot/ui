@@ -35,12 +35,12 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $background-color
 - $border-color
 - $border-style
 - $border-width
 - $title-color
 - $title-font
+- $background-color: false
 - $border-radius: false
 - $hover-background-color: false
 - $hover-img-zoom: false

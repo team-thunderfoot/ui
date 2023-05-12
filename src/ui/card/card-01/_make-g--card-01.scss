@@ -24,6 +24,7 @@
 ) {
     padding: $measure*7 $measure*5;
     width: 100%;
+    display: block;
     background: $background-color;
     @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
         text-decoration: none !important;

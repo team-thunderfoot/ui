@@ -8,53 +8,45 @@
 
 ## Html for a button
 
-```sh
+```html
 <button class="g--btn-02">button 02</button>
 ```
 
 ## Html for a link
 
-```sh
+```html
 <a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">button 02</a>
 ```
 
 ## Editable variables
 
-- $background-color: false by default
-- $background-color-hover: false by default
-- $border-color
 - $border-width
+- $border-color
 - $border-color-hover
+- $border-style
 - $font
-- $font-weight: false by default
+- $font-weight
 - $text-color
 - $text-color-hover
-
-### For Modifiers
-
 - $background-color
 - $background-color-hover
-- $border-color
-- $border-color-hover
-- $text-color
-- $text-color-hover
 
 ## Use
 
-```sh
+```scss
 .g--btn-02{
-    @include make-btn-02(
-        $border-width: 1px,
-        $font: c,
-        // $font-weight: default,
-    );
+    @include make-btn-02();
     @include make-btn-02-modifier(
+        $border-width: 2px,
         $border-color: map-get($color-options, a),
         $border-color-hover: map-get($color-options, g),
-        $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g),
-        // $background-color: default,
-        // $background-color-hover: defaullt
+        $border-style: solid,
+        $font: c,
+        $font-weight: 600,
+        $text-color: map-get($color-options, b),
+        $text-color-hover: map-get($color-options, a),
+        $background-color: map-get($color-options, f),
+        $background-color-hover: map-get($color-options, g)
     );
 }
 ```

@@ -1,35 +1,19 @@
 .g--card-08{
-    @include make-card-08(
+    @include make-card-08();
+    @include make-card-08-modifier(
         $background-position: center,
         $background-size: cover,
         $link-class: g--link-01,
+        $link-font: d,
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $border-radius: false,
-        // $hover-background-img-zoom: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-size: false,
-        // $img-position: false,
-        // $img-width: false,
-        // $link-font: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
     );
     &--second{
         @include make-card-08-modifier(
             $background-position: bottom right,
             $background-size: cover,
+            $link-font: e,
             $mask-color: rgba(map-get($color-options, g), .5),
             $subtitle-color: map-get($color-options, b),
             $title-color: map-get($color-options, d),
@@ -45,8 +29,6 @@
             $img-size: cover,
             $img-position: center,
             $img-width: auto,
-            $link-class: g--link-01--second,
-            $link-font: f,
             $subtitle-font: d,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,

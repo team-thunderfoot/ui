@@ -64,32 +64,30 @@ It is not necessary to add aspect-ratio.
 ```scss
 .g--card-04{
     @include make-card-04();
-    &--second{
-        @include make-card-04-modifier(
-            // $background-position: false,
-            // $background-size: false,
-            // $border-radius: false,
-            // $hover-background-img-zoom: false,
-            // $hover-img-zoom: false,
-            // $hover-shadow: false,
-            // $hover-title-color: false,
-            // $hover-transform: false,
-            // $img-aspect-ratio: false,
-            // $img-height: false,
-            // $img-position: false,
-            // $img-size: false,
-            // $img-width: false,
-            // $mask-color: false,
-            // $subtitle-color: false,
-            // $subtitle-font: false,
-            // $subtitle-font-weight: false,
-            // $subtitle-max-lines: false,
-            // $text-align: false,
-            // $title-color: false,
-            // $title-font: false,
-            // $title-font-weight: false,
-            // $title-max-lines: false,
-        );
-    }
+    @include make-card-04-modifier(
+        // $background-position: false,
+        // $background-size: false,
+        // $border-radius: false,
+        // $hover-background-img-zoom: false,
+        // $hover-img-zoom: false,
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $img-size: false,
+        // $img-width: false,
+        // $mask-color: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $subtitle-max-lines: false,
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
+    );
 }
 ```

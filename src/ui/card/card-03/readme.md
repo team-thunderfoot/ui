@@ -58,26 +58,24 @@ It is not necessary to add aspect-ratio.
 ```scss
 .g--card-03{
     @include make-card-03();
-    &--second{
-        @include make-card-03-modifier(
-            // $hover-img-zoom: false,
-            // $hover-title-color: false,
-            // $hover-transform: false,
-            // $img-aspect-ratio: false,
-            // $img-height: false,
-            // $img-position: false,
-            // $img-size: false,
-            // $img-width: false,
-            // $subtitle-color: false,
-            // $subtitle-font: false,
-            // $subtitle-font-weight: false,
-            // $subtitle-max-lines: false,
-            // $text-align: false,
-            // $title-color: false,
-            // $title-font: false,
-            // $title-font-weight: false,
-            // $title-max-lines: false,
-        );
-    }
+    @include make-card-03-modifier(
+        // $hover-img-zoom: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $img-size: false,
+        // $img-width: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $subtitle-max-lines: false,
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
+    );
 }
 ```

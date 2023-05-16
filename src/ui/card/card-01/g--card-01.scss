@@ -1,5 +1,6 @@
 .g--card-01{
-    @include make-card-01(
+    @include make-card-01();
+    @include make-card-01-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, a),
         $title-font: b,

@@ -1,6 +1,6 @@
 .g--card-02{
     @include make-card-02(
-        $border-color: map-get($color-options, e),
+        $border-color: map-get($color-options, e) map-get($color-options, a),
         $border-style: dashed,
         $border-width: 4px 8px,
         $title-color: map-get($color-options, a),

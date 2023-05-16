@@ -1,31 +1,7 @@
-@mixin make-card-01(
-    $background-color,
-    $title-color,
-    $title-font,
-    $border-radius: false,
-    $hover-background-color: false,
-    $hover-img-zoom: false,
-    $hover-shadow: false,
-    $hover-title-color: false,
-    $hover-transform: false,
-    $img-aspect-ratio: false,
-    $img-height: false,
-    $img-size: false,
-    $img-position: false,
-    $img-width: false,
-    $subtitle-color: false,
-    $subtitle-font: false,
-    $subtitle-font-weight: false,
-    $subtitle-max-lines: false,
-    $text-align: false,
-    $title-font-weight: false,
-    $title-max-lines: false,
-
-) {
+@mixin make-card-01() {
     padding: $measure*7 $measure*5;
     width: 100%;
     display: block;
-    background: $background-color;
     &__media-wrapper{
         overflow: hidden;
         margin-bottom: $measure * 2;
@@ -39,8 +15,6 @@
 
     &__title {
         margin-bottom: $measure * 2;
-        color: $title-color;
-        @extend .f--font-#{$title-font} !optional;
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure;
         }
@@ -49,9 +23,6 @@
 
 @mixin make-card-01-modifier(
     $background-color: false,
-    $subtitle-color: false,
-    $title-color: false,
-    $title-font: false,
     $border-radius: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
@@ -60,13 +31,16 @@
     $hover-transform: false,
     $img-aspect-ratio: false,
     $img-height: false,
-    $img-size: false,
     $img-position: false,
+    $img-size: false,
     $img-width: false,
+    $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
     $subtitle-max-lines: false,
     $text-align: false,
+    $title-color: false,
+    $title-font: false,
     $title-font-weight: false,
     $title-max-lines: false,
 

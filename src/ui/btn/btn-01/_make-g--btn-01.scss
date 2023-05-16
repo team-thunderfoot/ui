@@ -1,16 +1,7 @@
-@mixin make-btn-01(
-    $border-width,
-    $font,
-    $font-weight: false,
-) {
-    @extend .f--font-#{$font} !optional;
-    @if $font-weight {
-        font-weight: $font-weight;
-    }
-    border: $border-width solid;
+@mixin make-btn-01() {
     border-radius: 200px;
     display: inline-block;
-    padding: $measure $measure*3;
+    padding: $measure $measure * 3;
     text-align: center;
     text-decoration: none;
 
@@ -21,23 +12,47 @@
 }
 
 @mixin make-btn-01-modifier(
-    $border-color,
-    $border-color-hover,
-    $text-color,
-    $text-color-hover,
+    $border-color: false,
+    $border-color-hover: false,
+    $border-width: false,
+    $border-style: false,
+    $font: false,
+    $font-weight: false,
+    $text-color: false,
+    $text-color-hover: false,
     $background-color: false,
-    $background-color-hover: false,
+    $background-color-hover: false
 ) {
-    border-color: $border-color;
-    color: $text-color;
-
     @media (hover: hover) {
-        &:hover ,
-        &:focus ,
+        &:hover,
+        &:focus,
         &:active {
-            border-color: $border-color-hover;
-            color: $text-color-hover;
+            @if $border-color-hover {
+                border-color: $border-color-hover;
+            }
+            @if $text-color-hover {
+                color: $text-color-hover;
+            }
         }
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $text-color {
+        color: $text-color;
+    }
+    @if $font {
+        @extend .f--font-#{$font} !optional;
+    }
+    @if $font-weight {
+        font-weight: $font-weight;
     }
 
     @if $background-color {
@@ -45,11 +60,12 @@
     }
 
     @if $background-color-hover {
-        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a,
+            background $time-b $ease-standard-a;
 
         @media (hover: hover) {
-            &:hover ,
-            &:focus ,
+            &:hover,
+            &:focus,
             &:active {
                 background: $background-color-hover;
             }
@@ -57,5 +73,4 @@
     } @else {
         transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
     }
-
 }

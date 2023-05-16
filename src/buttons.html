@@ -1,111 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Buttons</title>
+        <title>Buttons</title>
 
-  <link rel="stylesheet" href="https://use.typekit.net/gll7dfd.css">
-  <link rel="stylesheet" href="./buttons.scss">
-</head>
-<body>
-  <main>
-    <section class="f--section-a">
-      <div class="f--container">
-        <div class="f--row">
-          <div class="f--col-12">
-            <a href="./index.html" class="f--font-f g--link-01 f--sp-c display--inline-block">Back to Index</a>
-            <h1 class="f--font-b">Global Buttons</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="f--section-c">
-      <div class="f--container">
-        <div class="f--row">
-          <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">btn-01</h2>
-            <button class="g--btn-01 f--sp-b">Button 01</button>
-            <a href="#" class="g--btn-01 f--sp-b">Button 01 link</a>
-            <button class="g--btn-01 g--btn-01--second f--sp-b">Button 01--second</button>
-            <a href="#" class="g--btn-01 g--btn-01--second f--sp-b">Button 01--second link</a>
-          </div>
-          <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-            <div class="f--row">
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <ul class="f--sp-c" style="list-style: inside;">
-                  <li class="f--color-g">$background-color: false by default</li>
-                  <li class="f--color-g">$background-color-hover: false by default</li>
-                  <li>$border-color</li>
-                  <li>$border-color-hover</li>
-                  <li>$border-width</li>
-                  <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li>$text-color</li>
-                  <li>$text-color-hover</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-hover</li>
-                  <li>$border-color</li>
-                  <li>$border-color-hover</li>
-                  <li>$text-color</li>
-                  <li>$text-color-hover</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="f--section-c">
-      <div class="f--container">
-        <div class="f--row">
-          <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">btn-02</h2>
-            <button class="g--btn-02 f--sp-b">Button 02</button>
-            <a href="#" class="g--btn-02 f--sp-b">Button 02 link</a>
-            <button class="g--btn-02 g--btn-02--second f--sp-b">Button 02--second</button>
-            <a href="#" class="g--btn-02 g--btn-02--second f--sp-b">Button 02--second link</a>
-          </div>
-          <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-            <div class="f--row">
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <ul class="f--sp-c" style="list-style: inside;">
-                  <li class="f--color-g">$background-color: false by default</li>
-                  <li class="f--color-g">$background-color-hover: false by default</li>
-                  <li>$border-color</li>
-                  <li>$border-color-hover</li>
-                  <li>$border-width</li>
-                  <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li>$text-color</li>
-                  <li>$text-color-hover</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-hover</li>
-                  <li>$border-color</li>
-                  <li>$border-color-hover</li>
-                  <li>$text-color</li>
-                  <li>$text-color-hover</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script type="module" src="./index.js"></script>
-</body>
+        <link rel="stylesheet" href="https://use.typekit.net/gll7dfd.css" />
+        <link rel="stylesheet" href="./buttons.scss" />
+    </head>
+    <body>
+        <main>
+            <section class="f--section-a">
+                <div class="f--container">
+                    <div class="f--row">
+                        <div class="f--col-12">
+                            <a
+                                href="./index.html"
+                                class="f--font-f g--link-01 f--sp-c display--inline-block"
+                                >Back to Index</a
+                            >
+                            <h1 class="f--font-b">Global Buttons</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="f--section-c" id="btn-01">
+                <div class="f--container">
+                    <div class="f--row">
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-b">btn-01</h2>
+                            <button class="g--btn-01 f--sp-b">Button 01</button>
+                            <a href="#" class="g--btn-01 f--sp-b">Button 01 link</a>
+                            <button class="g--btn-01 g--btn-01--second f--sp-b">
+                                Button 01--second
+                            </button>
+                            <a href="#" class="g--btn-01 g--btn-01--second f--sp-b"
+                                >Button 01--second link</a
+                            >
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul class="f--sp-c" style="list-style: inside">
+                                        <li>$border-color</li>
+                                        <li>$border-color-hover</li>
+                                        <li>$border-width</li>
+                                        <li>$border-style</li>
+                                        <li>$font</li>
+                                        <li>$font-weight</li>
+                                        <li>$text-color</li>
+                                        <li>$text-color-hover</li>
+                                        <li>$background-color</li>
+                                        <li>$background-color-hover</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="f--section-c" id="btn-02">
+                <div class="f--container">
+                    <div class="f--row">
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-b">btn-02</h2>
+                            <button class="g--btn-02 f--sp-b">Button 02</button>
+                            <a href="#" class="g--btn-02 f--sp-b">Button 02 link</a>
+                            <button class="g--btn-02 g--btn-02--second f--sp-b">
+                                Button 02--second
+                            </button>
+                            <a href="#" class="g--btn-02 g--btn-02--second f--sp-b"
+                                >Button 02--second link</a
+                            >
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul class="f--sp-c" style="list-style: inside">
+                                        <li>$border-width</li>
+                                        <li>$border-color</li>
+                                        <li>$border-color-hover</li>
+                                        <li>$border-style</li>
+                                        <li>$font</li>
+                                        <li>$font-weight</li>
+                                        <li>$text-color</li>
+                                        <li>$text-color-hover</li>
+                                        <li>$background-color</li>
+                                        <li>$background-color-hover</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script type="module" src="./index.js"></script>
+    </body>
 </html>

@@ -10,53 +10,45 @@
 
 ## Html for a button
 
-```sh
+```html
 <button class="g--btn-01">button 01</button>
 ```
 
 ## Html for a link
 
-```sh
+```html
 <a href="#" class="g--btn-01" target="_blank" rel="noopener noreferrer">button 01</a>
 ```
 
 ## Editable variables
 
-- $background-color: false by default
-- $background-color-hover: false by default
 - $border-color
-- $border-width
 - $border-color-hover
+- $border-width
+- $border-style
 - $font
-- $font-weight: false by default
+- $font-weight
 - $text-color
 - $text-color-hover
-
-### For Modifiers
-
 - $background-color
 - $background-color-hover
-- $border-color
-- $border-color-hover
-- $text-color
-- $text-color-hover
 
 ## Use
 
-```sh
+```scss
 .g--btn-01{
-    @include make-btn-01(
-        $border-width: 1px,
-        $font: c,
-        // $font-weight: default,
-    );
+    @include make-btn-01();
     @include make-btn-01-modifier(
-        $border-color: map-get($color-options, a),
-        $border-color-hover: map-get($color-options, g),
-        $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g),
-        // $background-color: default,
-        // $background-color-hover: default
+        // $border-color: false,
+        // $border-color-hover: false,
+        // $border-width: false,
+        // $border-style: false,
+        // $font: false,
+        // $font-weight: false,
+        // $text-color: false,
+        // $text-color-hover: false,
+        // $background-color: false,
+        // $background-color-hover: false
     );
 }
 ```

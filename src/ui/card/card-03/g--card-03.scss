@@ -1,22 +1,8 @@
 .g--card-03{
-    @include make-card-03(
+    @include make-card-03();
+    @include make-card-03-modifier(
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-size: false,
-        // $img-position: false,
-        // $img-width: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
     );
     &--second{
         @include make-card-03-modifier(

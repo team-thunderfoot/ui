@@ -35,61 +35,46 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
+- $hover-img-zoom
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-position
+- $img-size
+- $img-width
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
 - $title-color
 - $title-font
-- $hover-img-zoom: false
-- $hover-title-color: false
-- $hover-transform: false
-- $img-aspect-ratio: false
-- $img-height: false
-- $img-size: false
-- $img-width: false
-- $subtitle-color: false
-- $subtitle-font: false
-- $subtitle-font-weight: false
-- $subtitle-max-lines: false
-- $text-align: false
-- $title-font-weight: false
-- $title-max-lines: false
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
 ```scss
 .g--card-03{
-    @include make-card-03(
-        $title-color: map-get($color-options, a),
-        $title-font: b,
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
-    );
+    @include make-card-03();
     &--second{
         @include make-card-03-modifier(
-            // $subtitle-color: false,
-            // $title-color: false,
-            // $title-font: false,
             // $hover-img-zoom: false,
             // $hover-title-color: false,
             // $hover-transform: false,
             // $img-aspect-ratio: false,
             // $img-height: false,
+            // $img-position: false,
             // $img-size: false,
             // $img-width: false,
+            // $subtitle-color: false,
             // $subtitle-font: false,
-            // $subtitle-font-weight: d,
+            // $subtitle-font-weight: false,
             // $subtitle-max-lines: false,
             // $text-align: false,
+            // $title-color: false,
+            // $title-font: false,
             // $title-font-weight: false,
             // $title-max-lines: false,
         );

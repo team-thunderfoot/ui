@@ -20,7 +20,7 @@
             <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note:</strong> To go to any card we can add "#card-cardNumber" in the url. For example, to go to card-32 add "#card-32", the url will be "https://globalcomponents.netlify.app/cards.html#card-32"</p>
             <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> For card modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier.</p>
             <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note border:</strong> For cards with border we can set different border-color, border-style or border-width for each side (or add border just to one side).</p>
-            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note hover options:</strong> change background-color, change title-color, add box-shadow, transform card (translate, zoom...), image zoom</p>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note hover options:</strong> change background-color, change title-color, add box-shadow, transform card (translate, zoom...), image zoom. *If the title is a c--content we can't change the color on hover.</p>
             <p class="f--font-f f--background-a f--p-3"><strong>Note button/links:</strong> In all places where there is a link or a button it could be either</p>
           </div>
         </div>
@@ -627,42 +627,57 @@
     </section>
 
     <!-- card 10 -->
-    <section class="f--section-c">
+    <section class="f--section-c" id="card-10">
       <div class="f--container">
         <div class="f--row f--gap-d">
+          <div class="f--col-12">
+            <h2 class="f--font-c">Card-10</h2>
+          </div>
           <div class="f--col-8 f--col-tabletm-12">
             <div class="f--row f--gap-d">
-              <div class="f--col-6 f--col-tablets-12">
+              <div class="f--col-6 f--col-tablets-12 display--flex">
                 <div class="g--card-10">
-                  <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-10__media g--lazy-01">
-                  <h3 class="g--card-10__title">Card 10</h3>
+                  <div class="g--card-10__media-wrapper">
+                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-10__media-wrapper__media g--lazy-01">
+                  </div>
+                  <h3 class="g--card-10__title">Lorem ipsum</h3>
                 </div>
-              </div>
+              </div>  
+              <div class="f--col-6 f--col-tablets-12 display--flex">
+                <div class="g--card-10 g--card-10--second">
+                  <div class="g--card-10__media-wrapper">
+                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-10__media-wrapper__media g--lazy-01">
+                  </div>
+                  <h3 class="g--card-10__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
+                </div>
+              </div> 
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
             <h2 class="f--font-c f--sp-a">Editable variables</h2>
             <div class="f--row f--gap-b">
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <ul style="list-style: inside;">
-                  <li class="f--color-g">$background-color: false by default</li>
-                  <li>$border-color</li>
-                  <li class="f--color-g">$border-radius: false by default</li>
-                  <li>$border-width</li>
-                  <li class="f--color-g">$text-align: false by default</li>
-                  <li>$title-color</li>
-                  <li class="f--color-g">$title-font: false by default</li>
-                  <li class="f--color-g">$title-font-weight: false by default</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
+              <div class="f--col-12">
                 <ul style="list-style: inside;">
                   <li>$background-color</li>
+                  <li>$border-color</li>
+                  <li>$border-style</li>
+                  <li>$border-width</li>
+                  <li>$border-radius</li>
+                  <li>$hover-background-color</li>
+                  <li>$hover-img-zoom</li>
+                  <li>$hover-shadow</li>
+                  <li>$hover-title-color</li>
+                  <li>$hover-transform</li>
+                  <li>$img-aspect-ratio</li>
+                  <li>$img-height</li>
+                  <li>$img-position</li>
+                  <li>$img-size</li>
+                  <li>$img-width</li>
                   <li>$text-align</li>
                   <li>$title-color</li>
                   <li>$title-font</li>
                   <li>$title-font-weight</li>
+                  <li>$title-max-lines</li>
                 </ul>
               </div>
             </div>

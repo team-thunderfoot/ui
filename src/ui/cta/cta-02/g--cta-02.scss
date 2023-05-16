@@ -1,13 +1,20 @@
 .g--cta-02{
-    @include make-cta-02(
-        $btn-class: g--btn-02,
+    @include make-cta-02();
+    @include make-cta-02-modifier(
+        // $background-color: false,
+        // $hover-background-color: false,
         $background-position: center,
         $background-size: cover,
-    );
-    @include make-cta-02-modifier(
+        $btn-class: g--btn-02,
+        // $btn-font: false,
         $mask-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, b),
+        $hover-title-color: map-get($color-options, a),
+        // $text-align: false,
         $title-font: b,
-        // $text-align: default
+        // $title-font-weight: false,
+        // $hover-shadow: false,
+        // $hover-transform: false,
+        // $title-max-lines: false,
     );
 }

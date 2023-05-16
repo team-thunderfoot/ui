@@ -20,29 +20,24 @@
 
 ## Editable variables
 
-- $background-color
-- $border-radius: false by default
-- $btn-class
-- $btn-class-modifier: false by default
-- $text-align: false by default
-- $title-color
-- $subtitle-color
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $background-color
-- $btn-class-modifier: false by default
-- $text-align
-- $title-color
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $title-font
-- $title-font-weight
+- $background-color,
+- $hover-background-color,
+- $btn-class,
+- $btn-font,
+- $border-radius,
+- $subtitle-color,
+- $hover-subtitle-color,
+- $subtitle-font,
+- $subtitle-font-weight,
+- $subtitle-max-lines,
+- $title-color,
+- $hover-title-color,
+- $title-font,
+- $title-font-weight,
+- $title-max-lines,
+- $text-align,
+- $hover-shadow,
+- $hover-transform,
 
 ## Use
 
@@ -50,20 +45,30 @@ To use it we have to import the css of the $btn-class in the entry
 
 ```sh
 .g--cta-03{
-    @include make-cta-03(
-        // $border-radius: default,
-        $btn-class: g--btn-02,
-    );
+    @include make-cta-03();
     @include make-cta-03-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
-        // $text-align: default,
+        // $hover-background-color: false,
+        $btn-class: g--btn-02,
+        // $btn-font: false,
+        // $border-radius: false,
         $subtitle-color: map-get($color-options, b),
+        // $hover-subtitle-color: false,
+        $subtitle-font: d,
+        // $subtitle-font-weight: false,
+        // $subtitle-max-lines: false,
         $title-color: map-get($color-options, b),
-        // $btn-class-modifier: default,
-        // $subtitle-font: default,
-        // $subtitle-font-weight: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        // $hover-title-color: false,
+        $title-font: b,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
+        $text-align: left,
+        // $hover-shadow: false,
+        // $hover-transform: false,
+    );
+
+    @include make-cta-03-modifier(
+        $btn-class: g--btn-02--second,
     );
 }
 ```

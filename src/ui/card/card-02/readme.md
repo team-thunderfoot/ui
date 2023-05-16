@@ -40,63 +40,36 @@ It is not necessary to add aspect-ratio.
 - $border-width
 - $title-color
 - $title-font
-- $background-color: false
-- $border-radius: false
-- $hover-background-color: false
-- $hover-img-zoom: false
-- $hover-shadow: false
-- $hover-title-color: false
-- $hover-transform: false
-- $img-aspect-ratio: false
-- $img-height: false
-- $img-size: false
-- $img-width: false
-- $subtitle-color: false
-- $subtitle-font: false
-- $subtitle-font-weight: false
-- $subtitle-max-lines: false
-- $text-align: false
-- $title-font-weight: false
-- $title-max-lines: false
+- $background-color
+- $border-radius
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-size
+- $img-width
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
 ```scss
 .g--card-02{
-    @include make-card-02(
-        $border-color: map-get($color-options, e),
-        $border-style: dashed,
-        $border-width: 4px 8px,
-        $title-color: map-get($color-options, a),
-        $title-font: b,
-        // $background-color: false,
-        // $border-radius: false,
-        // $hover-background-color: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
-    );
+    @include make-card-02();
     &--second{
         @include make-card-02-modifier(
             // $background-color: false,
             // $border-color: false,
             // $border-style: false,
             // $border-width: false,
-            // $subtitle-color: false,
-            // $title-color: false,
-            // $title-font: false,
             // $border-radius: false,
             // $hover-background-color: false,
             // $hover-img-zoom: false,
@@ -105,12 +78,16 @@ It is not necessary to add aspect-ratio.
             // $hover-transform: false,
             // $img-aspect-ratio: false,
             // $img-height: false,
+            // $img-position: false,
             // $img-size: false,
             // $img-width: false,
+            // $subtitle-color: false,
             // $subtitle-font: false,
-            // $subtitle-font-weight: d,
+            // $subtitle-font-weight: false,
             // $subtitle-max-lines: false,
             // $text-align: false,
+            // $title-color: false,
+            // $title-font: false,
             // $title-font-weight: false,
             // $title-max-lines: false,
         );

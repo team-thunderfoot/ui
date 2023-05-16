@@ -1,29 +1,11 @@
 .g--card-02{
-    @include make-card-02(
+    @include make-card-02();
+    @include make-card-02-modifier(
         $border-color: map-get($color-options, e) map-get($color-options, a),
         $border-style: dashed,
         $border-width: 4px 8px,
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $background-color: false,
-        // $border-radius: false,
-        // $hover-background-color: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-size: false,
-        // $img-position: false,
-        // $img-width: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
     );
     &--second{
         @include make-card-02-modifier(

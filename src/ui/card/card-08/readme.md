@@ -9,25 +9,31 @@
 ## Html for a card
 
 ```html
-<div class="g--card-08 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
-    <div class="g--card-08__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-08__media-wrapper__media g--lazy-01">
+<div class="g--card-08">
+    <div class="g--card-08__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg"></div>
+    <div class="g--card-08__ft-items">
+    <div class="g--card-08__ft-items__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-08__ft-items__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-08__title">Lorem ipsum</h3>
-    <p class="g--card-08__subtitle">Lorem ipsum dolor sit amet.</p>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-08__link">This is a link</a>
+    <h3 class="g--card-08__ft-items__title">Lorem ipsum</h3>
+    <p class="g--card-08__ft-items__subtitle">Lorem ipsum dolor sit amet.</p>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-08__ft-items__link">This is a link</a>
+    </div>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
 ```html
-<div class="g--card-08 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
-    <div class="g--card-08__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-08__media-wrapper__media g--lazy-01">
+<div class="g--card-08">
+    <div class="g--card-08__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg"></div>
+    <div class="g--card-08__ft-items">
+    <div class="g--card-08__ft-items__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-08__ft-items__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-08__title">Lorem ipsum</h3>
-    <div class="g--card-08__subtitle c--content-a">Lorem ipsum dolor sit amet.</div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-08__link">This is a link</a>
+    <h3 class="g--card-08__ft-items__title">Lorem ipsum</h3>
+    <div class="g--card-08__ft-items__subtitle c--content-a">Lorem ipsum dolor sit amet.</div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-08__ft-items__link">This is a link</a>
+    </div>
 </div>
 ```
 

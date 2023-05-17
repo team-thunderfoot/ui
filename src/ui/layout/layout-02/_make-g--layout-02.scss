@@ -1,9 +1,4 @@
-@mixin make-layout-02(
-    $subtitle-font,
-    $title-font,
-    $title-font-weight: false,
-    $subtitle-font-weight: false,
-) {
+@mixin make-layout-02() {
     padding: $measure * 15 0;
     text-align: center;
 
@@ -11,40 +6,51 @@
         padding: $measure * 10 0;
     }
 
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
-        margin-bottom: $measure*4;
+    &__title {
+        margin-bottom: $measure * 4;
 
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 3;
         }
     }
-    &__subtitle{
-        @extend .f--font-#{$subtitle-font} !optional;
-        @if $subtitle-font-weight {
-            font-weight: $subtitle-font-weight;
-        }
-    }
 }
 
 @mixin make-layout-02-modifier(
-    $subtitle-color,
-    $title-color,
-    $background-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $subtitle-color: false,
+    $background-color: false
 ) {
     @if $background-color {
         background: $background-color;
     }
 
-    .g--layout-02{
-        &__title{
-            color: $title-color;
+    .g--layout-02 {
+        &__title {
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+            @if $title-color {
+                color: $title-color;
+            }
         }
-        &__subtitle{
-            color: $subtitle-color;
+        &__subtitle {
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
+
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
         }
     }
 }

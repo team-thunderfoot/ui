@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--layout-02">
     <div class="f--container">
         <div class="f--row justify-content--center">
@@ -23,34 +23,28 @@
 
 ## Editable variables
 
-- $background-color: false by default
-- $subtitle-color
-- $subtitle-font
-- $title-color
 - $title-font
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-
-### For Modifiers
-
-- $background-color
-- $subtitle-color
+- $title-font-weight,
 - $title-color
+- $subtitle-font
+- $subtitle-font-weight,
+- $subtitle-color
+- $background-color
 
 ## Use
 
-```sh
-.g--layout-02{
-    @include make-layout-02(
-        $subtitle-font: f,
-        $title-font: a,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-    );
+```scss
+.g--layout-02 {
+    @include make-layout-02();
     @include make-layout-02-modifier(
-        $subtitle-color: map-get($color-options, a),
+        $title-font: a,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
-        // $background-color: map-get($color-options, e),
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
+        $subtitle-color: map-get($color-options, a),
+        //$background-color: map-get($color-options, e),
     );
 }
+
 ```

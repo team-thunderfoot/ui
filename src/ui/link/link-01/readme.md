@@ -28,13 +28,19 @@
 ## Use
 
 ```scss
-.g--link-01{
-    @include make-link-01(
-    );
+.g--link-01 {
+    @include make-link-01();
     @include make-link-01-modifier(
         $underline-height: 1px,
         $text-color: map-get($color-options, a),
-        $underline-color: map-get($color-options, a),
+        $underline-color: map-get($color-options, a)
     );
+    &--second {
+        @include make-link-01-modifier(
+            $underline-height: 2px,
+            $text-color: map-get($color-options, a),
+            $underline-color: map-get($color-options, f)
+        );
+    }
 }
 ```

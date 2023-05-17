@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--layout-01">
     <div class="f--container">
         <div class="f--row justify-content--center">
@@ -24,42 +24,31 @@
 
 ## Editable variables
 
-- $background-color: false by default
-- $btn-class
-- $btn-class-modifier: false by default
-- $subtitle-font
-- $subtitle-color
-- $title-color
-- $title-font
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-
-### For Modifiers
-
 - $background-color
-- $btn-class-modifier
-- $subtitle-color
+- $title-font
+- $title-font-weight
 - $title-color
+- $subtitle-font
+- $subtitle-font-weight,
+- $subtitle-color
+- $btn-class
+- $btn-class-modifier
 
 ## Use
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
-.g--layout-01{
-    @include make-layout-01(
+```scss
+.g--layout-01 {
+    @include make-layout-01();
+    @include make-layout-01-modifier(
         $btn-class: g--btn-01,
         $subtitle-font: d,
         $title-font: b,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-    );
-    @include make-layout-01-modifier(
+        $background-color: map-get($color-options, d),
+        $btn-class-modifier: g--btn-02--second,
         $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $background-color: default,
-        // $btn-class-modifier: default,
-        // $text-align: default,
+        $title-color: map-get($color-options, a)
     );
 }
 ```

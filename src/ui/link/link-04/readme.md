@@ -45,7 +45,7 @@
     @include make-link-04-modifier(
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g),
-        $icon-top: 4px,
+        $icon-top: 0px,
         $link-font: c,
         $link-font-weight: 600,
         $artwork-color-fill: map-get($color-options, f),

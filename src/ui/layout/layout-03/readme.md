@@ -9,7 +9,7 @@
 ## Html
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
-```sh
+```html
 <section class="g--layout-03">
     <div class="f--container">
         <div class="f--row">
@@ -35,29 +35,22 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $background-color: false by default
-- $btn-class
-- $btn-class-modifier: false by default
-- $img-border-radius: false by default
-- $img-position: false by default
-- $meta-color
 - $meta-font
-- $subtitle-color
-- $subtitle-font
-- $title-color
-- $title-font
-- $meta-font-weight: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-- $change-order-reponsive: false by default
-
-### For Modifiers
-
-- $background-color
-- $btn-class-modifier
+- $meta-font-weight
 - $meta-color
-- $subtitle-color
+- $title-font
+- $title-font-weight
 - $title-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-color
+- $object-fit
+- $img-position
+- $img-border-radius
+- $change-order-reponsive
+- $background-color
+- $btn-class
+- $btn-class-modifier
 
 ## Use
 
@@ -65,27 +58,26 @@ To see it correctly we have to make sure display--flex in utilities is included 
 For the image, we have to add width, height and aspect ratio dynamically.
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
-```sh
-.g--layout-03{
-    @include make-layout-03(
-        $btn-class: g--btn-01,
-        $meta-font: g,
-        $subtitle-font: f,
-        $title-font: c,
-        // $object-fit: cover
-        // $img-border-radius: default,
-        // $img-position: default,
-        // $meta-font-weight: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $change-order-reponsive: default
-    );
+```scss
+.g--layout-03 {
+    @include make-layout-03();
     @include make-layout-03-modifier(
+        $meta-font: g,
+        $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
-        // $background-color: default,
-        // $btn-class-modifier: default,
+        $object-fit: cover,
+        $img-position: false,
+        $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
+        $btn-class: g--btn-01,
+        // $btn-class-modifier: g--btn-01--second,
+        // $background-color: map-get($color-options, e),
     );
 }
 ```

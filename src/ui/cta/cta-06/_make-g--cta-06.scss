@@ -278,7 +278,7 @@
         }
 
         @if $one-col-bkt and $change-order-reponsive {
-            &__wrapper{
+            &__media-wrapper{
                 @media all and ($viewport-type: $one-col-bkt) {
                     order: 1;
                 }

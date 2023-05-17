@@ -27,40 +27,44 @@
 
 ## Editable variables
 
-- $background-color
-- $header-height-desktop
-- $header-height-tabletl
-- $header-height-tabletm
-- $header-height-tablets
-- $header-height-mobile
-- $text-align: false by default
-- $title-color
-- $title-font
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $background-color
+- $background-color,
+- $header-height,
+- $img-height,
+- $img-position,
+- $img-object-fit,
+- $title-color,
+- $title-font,
+- $title-font-weight,
 - $text-align
-- $title-color
 
 ## Use
 
 ```sh
 .g--hero-01 {
-    @include make-hero-01(
-        $header-height-desktop: 96px,
-        $title-font: a,
-        // $header-height-tabletl: default,
-        // $header-height-tabletm: default,
-        // $header-height-tablets: default,
-        // $header-height-mobile: default,
-        // $title-font-weight: default
-    );
+    @include make-hero-01();
     @include make-hero-01-modifier(
-        $background-color: map-get($color-options, d),
+        $background-color: map-get($color-options, f),
+        $header-height: 96px,
+        $img-height: 500px,
+        $img-position: center,
+        $img-object-fit: cover,
         $title-color: map-get($color-options, a),
-        // $text-align: default
+        $title-font: a,
+        $title-font-weight: bold,
+        // $text-align: false
     );
+
+    @media all and ( $viewport-type: $tabletm) {
+        @include make-hero-01-modifier(
+            $img-height: 400px,
+        );
+    }
+
+    @media all and ( $viewport-type: $tablets) {
+        @include make-hero-01-modifier(
+            $header-height: 86px,
+            $img-height: 300px,
+        );
+    }
 }
 ```

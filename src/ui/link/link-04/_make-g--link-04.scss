@@ -1,43 +1,45 @@
-@mixin make-link-04(
-    $icon-top: false,
-    $link-font: false,
-    $link-font-weight: false,
-) {
+@mixin make-link-04() {
     text-decoration: none;
     width: fit-content;
     display: flex;
     align-items: center;
-    @if $link-font{
-        @extend .f--font-#{$link-font} !optional;
-    }
-    @if $link-font-weight{
-        font-weight: $link-font-weight;
-    }
-    svg{
+
+    svg {
         width: $measure;
         height: auto;
         margin-left: $measure;
-        @if $icon-top {
-            position: relative;
-            top: $icon-top;
-        }
     }
 }
 
 @mixin make-link-04-modifier(
-    $text-color,
+    $text-color: false,
+    $text-color-hover: false,
+    $icon-top: false,
+    $link-font: false,
+    $link-font-weight: false,
     $artwork-color-fill: false,
     $artwork-color-stroke: false,
-    $artwork-color-hover: false,
-    $text-color-hover: false
+    $artwork-color-hover: false
 ) {
-    color: $text-color;
+    @if $text-color {
+        color: $text-color;
+    }
     @if $text-color-hover {
         transition: color $ease-standard-a $time-b;
     }
-    svg{
+    @if $link-font {
+        @extend .f--font-#{$link-font} !optional;
+    }
+    @if $link-font-weight {
+        font-weight: $link-font-weight;
+    }
+    svg {
+        @if $icon-top {
+            position: relative;
+            top: $icon-top;
+        }
         transition: transform $ease-standard-a $time-b;
-        path{
+        path {
             @if $artwork-color-fill {
                 fill: $artwork-color-fill;
             }
@@ -53,19 +55,21 @@
         }
     }
     @media (hover: hover) {
-        &:hover ,
-        &:focus ,
+        &:hover,
+        &:focus,
         &:active {
-            color: $text-color-hover;
+            @if $text-color-hover {
+                color: $text-color-hover;
+            }
         }
     }
     @media (hover: hover) {
-        &:hover ,
-        &:focus ,
+        &:hover,
+        &:focus,
         &:active {
-            svg{
+            svg {
                 transform: translateX($measure);
-                path{
+                path {
                     @if $artwork-color-hover and $artwork-color-fill {
                         fill: $artwork-color-hover;
                     }

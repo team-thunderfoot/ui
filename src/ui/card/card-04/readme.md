@@ -30,7 +30,7 @@ If you want the subtitle to be a c--content, the HTML should be:
             <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-04__ft-items__media-wrapper__media g--lazy-01">
         </div>
         <h3 class="g--card-04__ft-items__title">Lorem ipsum</h3>
-        <p class="g--card-04__ft-items__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="g--card-04__ft-items__subtitle c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     </div>
 </div>
 ```

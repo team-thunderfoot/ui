@@ -15,8 +15,8 @@
             padding: 9%;
         }
 
-        @media all and ($viewport-type: $tablets) {
-            padding: 6%;
+        @media all and ($viewport-type: $mobile) {
+            padding: 11%;
         }
 
         &__title{
@@ -240,15 +240,12 @@
             }
         }
     }
-
-    @if $one-col-bkt {
-        .g--cta-06 {
-            &__wrapper {
+  
+    .g--cta-06 {
+        @if $one-col-bkt {
+            &__wrapper{
                 @media all and ($viewport-type: $one-col-bkt) {
                     width: 100%;
-                    @if $change-order-reponsive{
-                        order: 1;
-                    }
                 }
 
                 &__title {
@@ -265,19 +262,8 @@
             }
 
             &__media-wrapper {
-                @if $hide-img-reponsive{
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        position: absolute;
-                        height: 0;
-                        overflow: hidden;
-                        pointer-events: none;
-                        visibility: hidden;
-                    }
-                }
-                @else{
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        width: 100%;
-                    }
+                @media all and ($viewport-type: $one-col-bkt) {
+                    width: 100%;
                 }
 
                 &__media {
@@ -290,19 +276,28 @@
                 }
             }
         }
-    }
-    
-    .g--cta-06 {
-        &__wrapper{
-            // @if $one-col-bkt {
-            //     @media all and ($viewport-type: $one-col-bkt) {
-            //         width: 100%;
-            //         @if $change-order-reponsive{
-            //             order: 1;
-            //         }
-            //     }
-            // }
 
+        @if $one-col-bkt and $change-order-reponsive {
+            &__wrapper{
+                @media all and ($viewport-type: $one-col-bkt) {
+                    order: 1;
+                }
+            }
+        }
+
+        @if $one-col-bkt and $hide-img-reponsive {
+            &__media-wrapper {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    position: absolute;
+                    height: 0;
+                    overflow: hidden;
+                    pointer-events: none;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &__wrapper {
             &__title{
                 @if $title-color {
                     color: $title-color;
@@ -328,11 +323,11 @@
                     transition: color $time-b $ease-standard-a;
                 }
 
-                // @if $one-col-bkt {
-                //     @media all and ($viewport-type: $one-col-bkt) {
-                //         margin-bottom: $measure * 2;
-                //     }
-                // }
+                @if $one-col-bkt {
+                    @media all and ($viewport-type: $one-col-bkt) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
             }
 
             &__subtitle{
@@ -380,31 +375,7 @@
         }
 
         &__media-wrapper {
-            // @if $hide-img-reponsive and $one-col-bkt{
-            //     @media all and ($viewport-type: $one-col-bkt) {
-            //         position: absolute;
-            //         height: 0;
-            //         overflow: hidden;
-            //         pointer-events: none;
-            //         visibility: hidden;
-            //     }
-            // }
-            // @else if $one-col-bkt{
-            //     @media all and ($viewport-type: $one-col-bkt) {
-            //         width: 100%;
-            //     }
-            // }
-
             &__media {
-                // @if $one-col-bkt {
-                //     @media all and ($viewport-type: $one-col-bkt) {
-                //         position: relative;
-                //         top: auto;
-                //         left: auto;
-                //         height: auto;
-                //     }
-                // }
-
                 @if $img-position {
                     object-position: $img-position;
                 }

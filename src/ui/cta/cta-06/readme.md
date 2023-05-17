@@ -73,11 +73,11 @@ To use it we have to import the css of the $btn-class in the entry
         $hover-title-color: map-get($color-options, a),
         $title-font: d,
         // $title-font-weight: false,
-        // $title-max-lines: false,
+        $title-max-lines: 1,
         // $text-align: false,
-        $one-col-bkt: tablets,
-        // $change-order-reponsive: false, // probar con true
-        $hide-img-reponsive: true,
+        $one-col-bkt: $tabletm,
+        $change-order-reponsive: true, // probar con true
+        // $hide-img-reponsive: false,
         $img-position: center,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),

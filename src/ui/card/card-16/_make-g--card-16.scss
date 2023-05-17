@@ -1,85 +1,200 @@
-@mixin make-card-16(
-    $background-position,
-    $background-size,
-    $link-class,
-    $border-radius: false,
-) {
-    display: flex;
-    background-position: $background-position;
-    background-repeat: no-repeat;
-    background-size: $background-size;
+@mixin make-card-16() {
     padding: $measure*7 $measure*5;
-    position: relative;
     width: 100%;
-
-    &::before{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    &::after{
         content: '';
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
         width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
         z-index: 0;
     }
-
-    @if $border-radius {
-        border-radius: $border-radius;
-        overflow: hidden;
+    &__bg-items{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-repeat: no-repeat;
     }
-
-    &__wrapper{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    &__ft-items{
         position: relative;
         z-index: 1;
-
-        &__media{
-            display: block;
-            height: 100px;
+        &__media-wrapper{
+            overflow: hidden;
             margin-bottom: $measure * 2;
-            object-fit: cover;
-            width: auto;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure;
+            &__media {
+                display: block;
+                @media all and ($viewport-type: $tablets) {
+                    margin-bottom: $measure;
+                }
             }
         }
-
-        &__title{
+    
+        &__title {
             margin-bottom: $measure * 2;
-
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure;
             }
         }
         &__link{
-            @extend .#{$link-class} !optional;
             margin-top: auto;
         }
     }
 }
 
 @mixin make-card-16-modifier(
-    $mask-color,
-    $title-color,
-    $link-class-modifier: false,
+    $background-position: false,
+    $background-size: false,
+    $border-radius: false,
+    $hover-background-img-zoom: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-height: false,
+    $img-position: false,
+    $img-size: false,
+    $img-width: false,
+    $link-class: false,
+    $link-font: false,
+    $mask-color: false,
     $text-align: false,
+    $title-color: false,
     $title-font: false,
     $title-font-weight: false,
+    $title-max-lines: false,
+
 ) {
-    &::before{
-        background: $mask-color;
+
+    @if $hover-background-img-zoom or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-title-color {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-16{
+                    &__ft-items{
+                        &__title{
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-img-zoom {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-16{
+                    &__ft-items{
+                        &__media-wrapper{
+                            &__media{
+                                transform: scale($hover-img-zoom);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-background-img-zoom {
+        .g--card-16{
+            &__bg-items{
+                transition: transform $time-b $ease-standard-a;
+            }
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-16{
+                    &__bg-items{
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $background-position {
+        .g--card-16{
+            &__bg-items{
+                background-position: $background-position;
+            }
+        }
+    }
+    @if $background-size {
+        .g--card-16{
+            &__bg-items{
+                background-size: $background-size;
+            }
+        }
     }
 
+    @if $mask-color {
+        &::after{
+            background: $mask-color;
+        }
+    }
+
+    
     @if $text-align == "center" {
         text-align: center;
-
-        .g--card-16 {
-            &__wrapper {
-                &__media {
+        align-items: center;
+        .g--card-16{
+            &__ft-items{
+                &__media-wrapper{
                     margin-left: auto;
                     margin-right: auto;
+                    &__media{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
                 }
             }
         }
@@ -87,44 +202,97 @@
     }
     @if $text-align == "left" {
         text-align: left;
-
-        .g--card-16 {
-            &__wrapper {
-                &__media {
+        align-items: flex-start;
+        .g--card-16{
+            &__ft-items{
+                &__media-wrapper{
                     margin-left: 0;
                     margin-right: auto;
+                    &__media{
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
                 }
             }
         }
     }
     @if $text-align == "right" {
         text-align: right;
-
-        .g--card-16 {
-            &__wrapper {
-                &__media {
+        align-items: flex-end;
+        .g--card-16{
+            &__ft-items{
+                &__media-wrapper{
                     margin-left: auto;
                     margin-right: 0;
+                    &__media{
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
                 }
             }
         }
     }
-    
-    .g--card-16 {
-        &__wrapper{
-            @if $link-class-modifier {
-                &__link{
-                    @extend .#{$link-class-modifier} !optional;
+    .g--card-16{
+        &__ft-items{
+            &__media-wrapper{
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-width {
+                    width: $img-width;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                &__media {
+                    @if $img-aspect-ratio {
+                        aspect-ratio: $img-aspect-ratio;
+                    }
+                    @if $img-width {
+                        width: $img-width;
+                    }
+                    @if $img-height {
+                        height: $img-height;
+                    }
+                    @if $img-size{
+                        object-fit: $img-size;
+                    }
+                    @if $img-position{
+                        object-position: $img-position;
+                    }
+                    @if $hover-img-zoom {
+                        transition: transform $time-b $ease-standard-a;
+                    }
                 }
             }
-
-            &__title{
-                color: $title-color;
+        
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
                 @if $title-font {
                     @extend .f--font-#{$title-font} !optional;
                 }
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+                @if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+            &__link{
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
                 }
             }
         }

@@ -1,19 +1,19 @@
-@mixin make-cta-01(
-    $btn-class,
-) {
-    padding: $measure * 20 $measure * 30;
+@mixin make-cta-01() {
+    display: block;
+    padding: 8% 12%;
     text-align: center;
+    width: 100%;
 
     @media all and ($viewport-type: $tabletl) {
-        padding: $measure * 20 $measure * 20;
+        padding: 12%;
     }
 
     @media all and ($viewport-type: $tabletm) {
-        padding: $measure * 10;
+        padding: 9% 8%;
     }
 
     @media all and ($viewport-type: $mobile) {
-        padding: $measure * 7;
+        padding: 11% 12%;
     }
 
     &__title{
@@ -25,21 +25,117 @@
     }
 
     &__btn{
-        @extend .#{$btn-class} !optional;
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @mixin make-cta-01-modifier(
-    $background-color,
-    $title-color,
-    $btn-class-modifier: false,
-    $text-align: false,
+    $background-color: false,
+    $hover-background-color: false,
+    $btn-class: false,
+    $btn-font: false,
+    $title-color: false,
+    $hover-title-color: false,
     $title-font: false,
     $title-font-weight: false,
+    $title-max-lines: false,
+    $text-align: false,
+    $hover-shadow: false,
+    $hover-transform: false,
 ) {
-    background: $background-color;
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow{
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform{
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color{
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    @if $hover-title-color {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-01{
+                    &__title{
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    }
 
     @if $text-align == "center" {
         text-align: center;
@@ -52,6 +148,7 @@
         }
         
     }
+
     @if $text-align == "left" {
         text-align: left;
 
@@ -62,6 +159,7 @@
             }
         }
     }
+
     @if $text-align == "right" {
         text-align: right;
 
@@ -75,18 +173,39 @@
 
     .g--cta-01{
         &__title{
-            color: $title-color;
+            @if $title-color {
+                color: $title-color;
+            }
+
             @if $title-font {
                 @extend .f--font-#{$title-font} !optional;
             }
             @if $title-font-weight {
                 font-weight: $title-font-weight;
             }
+
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+
+            @if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            }
         }
         
-        @if $btn-class-modifier {
+        @if $btn-font {
             &__btn{
-                @extend .#{$btn-class-modifier} !optional;
+                @extend .f--font-#{$btn-font} !optional;
+            }
+        }
+
+        @if $btn-class {
+            &__btn{
+                @extend .#{$btn-class} !optional;
             }
         }
     }

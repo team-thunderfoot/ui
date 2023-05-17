@@ -53,12 +53,12 @@
     $mask-color: false,
     $title-color: false,
     $hover-title-color: false,
-    $text-align: false,
     $title-font: false,
     $title-font-weight: false,
+    $title-max-lines: false,
+    $text-align: false,
     $hover-shadow: false,
     $hover-transform: false,
-    $title-max-lines: false,
 ) {
     @if $background-color {
         background: $background-color;

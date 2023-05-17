@@ -2,23 +2,23 @@
     @include make-cta-03();
     @include make-cta-03-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
-        // $hover-background-color: false,
+        $hover-background-color: map-get($color-options, e),
         $btn-class: g--btn-02,
         // $btn-font: false,
-        // $border-radius: false,
+        $border-radius: 90px,
         $subtitle-color: map-get($color-options, b),
-        // $hover-subtitle-color: false,
+        $hover-subtitle-color: map-get($color-options, c),
         $subtitle-font: d,
         // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
+        $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
-        // $hover-title-color: false,
+        $hover-title-color: map-get($color-options, c),
         $title-font: b,
         // $title-font-weight: false,
         // $title-max-lines: false,
         $text-align: left,
-        // $hover-shadow: false,
-        // $hover-transform: false,
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
     );
 
     @include make-cta-03-modifier(

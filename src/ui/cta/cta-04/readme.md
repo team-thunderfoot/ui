@@ -20,31 +20,27 @@
 
 ## Editable variables
 
-- $border-radius: false by default
-- $background-position
-- $background-size
-- $btn-class
-- $mask-color
-- $text-align: false by default
-- $title-color
-- $subtitle-color
-- $btn-class-modifier: false by default
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $mask-color
-- $text-align
-- $subtitle-color
-- $title-color
-- $btn-class-modifier
-- $subtitle-font
-- $subtitle-font-weight
-- $title-font
-- $title-font-weight
+- $background-color,
+- $hover-background-color,
+- $background-position,
+- $background-size,
+- $btn-class,
+- $btn-font,
+- $border-radius,
+- $mask-color,
+- $subtitle-color,
+- $hover-subtitle-color,
+- $subtitle-font,
+- $subtitle-font-weight,
+- $subtitle-max-lines,
+- $title-color,
+- $hover-title-color,
+- $title-font,
+- $title-font-weight,
+- $title-max-lines,
+- $text-align,
+- $hover-shadow,
+- $hover-transform,
 
 ## Use
 
@@ -52,22 +48,29 @@ To use it we have to import the css of the $btn-class in the entry
 
 ```sh
 .g--cta-04{
-    @include make-cta-04(
-        // $border-radius: default,
+    @include make-cta-04();
+    @include make-cta-04-modifier(
+        // $background-color: false,
+        // $hover-background-color: false,
         $background-position: left top,
         $background-size: cover,
         $btn-class: g--btn-01,
-    );
-    @include make-cta-04-modifier(
+        // $btn-font: false,
+        $border-radius: 90px,
         $mask-color: rgba(map-get($color-options, a), .5),
-        // $text-align: default,
         $subtitle-color: map-get($color-options, b),
+        $hover-subtitle-color: map-get($color-options, c),
+        $subtitle-font: d,
+        // $subtitle-font-weight: false,
+        $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
-        // $btn-class-modifier: default,
-        // $subtitle-font: default,
-        // $subtitle-font-weight: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        $hover-title-color: map-get($color-options, c),
+        $title-font: b,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
+        $text-align: center,
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
     );
 }
 ```

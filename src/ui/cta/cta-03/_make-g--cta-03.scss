@@ -63,7 +63,7 @@
         background: $background-color;
     }
 
-    @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
+    @if $hover-background-color or $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }

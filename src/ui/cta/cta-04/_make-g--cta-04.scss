@@ -1,29 +1,19 @@
-@mixin make-cta-04(
-    $background-position,
-    $background-size,
-    $btn-class,
-    $border-radius: false,
-) {
-    background-position: $background-position;
-    background-size: $background-size;
-    padding: $measure * 15 $measure * 30 $measure * 15 $measure * 10;
+@mixin make-cta-04() {
+    display: block;
+    padding: 10%;
     position: relative;
-
-    @if $border-radius {
-        border-radius: $border-radius;
-        overflow: hidden;
-    }
+    width: 100%;
 
     @media all and ($viewport-type: $tabletl) {
-        padding: $measure * 10 $measure * 25 $measure * 10 $measure * 5;
+        padding: 8% 7%;
     }
 
     @media all and ($viewport-type: $tabletm) {
-        padding-right: $measure * 20;
+        padding-right: 9% 7%;
     }
 
     @media all and ($viewport-type: $tablets) {
-        padding-right: $measure * 5;
+        padding-right: 10% 6%;
     }
 
     &::before{
@@ -57,25 +47,158 @@
     }
 
     &__btn{
-        @extend .#{$btn-class} !optional;
         position: relative;
         z-index: 1;
     }
 }
 
 @mixin make-cta-04-modifier(
-    $mask-color,
-    $subtitle-color,
-    $title-color,
-    $btn-class-modifier: false,
-    $text-align: false,
+    $background-color: false,
+    $hover-background-color: false,
+    $background-position: false,
+    $background-size: false,
+    $btn-class: false,
+    $btn-font: false,
+    $border-radius: false,
+    $mask-color: false,
+    $subtitle-color: false,
+    $hover-subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
+    $subtitle-max-lines: false,
+    $title-color: false,
+    $hover-title-color: false,
     $title-font: false,
     $title-font-weight: false,
+    $title-max-lines: false,
+    $text-align: false,
+    $hover-shadow: false,
+    $hover-transform: false,
 ) {
-    &::before{
-        background: $mask-color;
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $background-position {
+        background-position: $background-position;
+    }
+
+    @if $background-size {
+        background-size: $background-size;
+    }
+
+    @if $mask-color {
+        &::before{
+            background: $mask-color;
+        }
+    }
+
+    @if $hover-background-color or $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow{
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform{
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color{
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    @if $hover-title-color {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-04{
+                    &__title{
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-subtitle-color {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-04{
+                    &__subtitle{
+                        color: $hover-subtitle-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
     }
 
     @if $text-align == "center" {
@@ -151,27 +274,64 @@
 
     .g--cta-04{
         &__title{
-            color: $title-color;
+            @if $title-color {
+                color: $title-color;
+            }
+
             @if $title-font {
                 @extend .f--font-#{$title-font} !optional;
             }
+
             @if $title-font-weight {
                 font-weight: $title-font-weight;
             }
+
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+
+            @if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            }
         }
         &__subtitle{
-            color: $subtitle-color;
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
+
             @if $subtitle-font {
                 @extend .f--font-#{$subtitle-font} !optional;
             }
             @if $subtitle-font-weight {
                 font-weight: $subtitle-font-weight;
             }
+
+            @if $subtitle-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $subtitle-max-lines;
+                -webkit-box-orient: vertical;
+            }
+
+            @if $hover-subtitle-color {
+                transition: color $time-b $ease-standard-a;
+            }
+        }
+
+        @if $btn-font {
+            &__btn{
+                @extend .f--font-#{$btn-font} !optional;
+            }
         }
         
-        @if $btn-class-modifier {
+        @if $btn-class {
             &__btn{
-                @extend .#{$btn-class-modifier} !optional;
+                @extend .#{$btn-class} !optional;
             }
         }
     }

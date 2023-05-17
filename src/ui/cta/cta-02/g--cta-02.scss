@@ -13,8 +13,8 @@
         // $text-align: false,
         $title-font: b,
         // $title-font-weight: false,
-        // $hover-shadow: false,
-        // $hover-transform: false,
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
         // $title-max-lines: false,
     );
 }

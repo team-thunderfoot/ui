@@ -2,7 +2,23 @@
     @include make-card-11();
     @include make-card-11-modifier(
         $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $text-align: default
+        $title-font: b,
     );
+    &--second{
+        @include make-card-11-modifier(
+            $title-color: map-get($color-options, g),
+            $title-font: c,
+            $hover-img-zoom: 1.2,
+            $hover-title-color: map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+            $img-aspect-ratio:calc(1 / 1),
+            $img-height: 50px,
+            $img-size: cover,
+            $img-position: center,
+            $img-width: auto,
+            $text-align: center,
+            $title-font-weight: 700,
+            $title-max-lines: 2,
+        );
+    }
 }

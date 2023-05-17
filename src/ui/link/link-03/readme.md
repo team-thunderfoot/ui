@@ -8,13 +8,13 @@
 
 ## Html for a button
 
-```sh
+```html
 <button class="g--link-03">link 03</button>
 ```
 
 ## Html for a link
 
-```sh
+```html
 <a href="#" class="g--link-03" target="_blank" rel="noopener noreferrer">link 03 link</a>
 ```
 
@@ -23,14 +23,9 @@
 - $text-color
 - $text-color-hover
 
-### For Modifiers
-
-- $text-color
-- $text-color-hover
-
 ## Use
 
-```sh
+```scss
 .g--link-03{
     @include make-link-03();
     @include make-link-03-modifier(

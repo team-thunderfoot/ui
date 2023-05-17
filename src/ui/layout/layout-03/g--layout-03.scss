@@ -1,17 +1,21 @@
-.g--layout-03{
-    @include make-layout-03(
-        $btn-class: g--btn-01,
-        $img-border-radius: $measure*4,
-        $meta-font: g,
-        $subtitle-font: f,
-        $title-font: c,
-        $change-order-reponsive: true
-    );
+.g--layout-03 {
+    @include make-layout-03();
     @include make-layout-03-modifier(
+        $meta-font: g,
+        $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
-        // $background-color: map-get($color-options, e),
+        $object-fit: cover,
+        $img-position: false,
+        $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
+        $btn-class: g--btn-01,
         // $btn-class-modifier: g--btn-01--second,
+        // $background-color: map-get($color-options, e),
     );
 }

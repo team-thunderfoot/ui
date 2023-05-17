@@ -17,22 +17,18 @@
 
 ## Editable variables
 
-- $background-color
-- $btn-class
-- $btn-class-modifier: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $background-color
-- $btn-class-modifier
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
+- $background-color,
+- $hover-background-color,
+- $btn-class,
+- $btn-font,
+- $title-color,
+- $hover-title-color,
+- $title-font,
+- $title-font-weight,
+- $title-max-lines,
+- $text-align,
+- $hover-shadow,
+- $hover-transform,
 
 ## Use
 
@@ -40,16 +36,20 @@ To use it we have to import the css of the $btn-class in the entry
 
 ```sh
 .g--cta-01{
-    @include make-cta-01(
-        $btn-class: g--btn-02,
-    );
+    @include make-cta-01();
     @include make-cta-01-modifier(
-        $title-color: map-get($color-options, a),
         $background-color: map-get($color-options, e),
-        // $btn-class-modifier: default,
-        // $text-align: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        $hover-background-color: map-get($color-options, h),
+        $btn-class: g--btn-01,
+        // $btn-font: false,
+        $title-color: map-get($color-options, a),
+        $hover-title-color: map-get($color-options, e),
+        $title-font: b,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
+        // $text-align: false,
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
     );
 }
 ```

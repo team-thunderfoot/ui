@@ -21,32 +21,36 @@
 ## Editable variables
 
 - $background-color
-- $background-color-hover: false by default
-- $font
+- $hover-background-color
+- $border-width
+- $border-style
+- $border-color
+- $hover-border-color
 - $text-color
-- $text-color-hover: false by default
-- $font-weight: false by default
-
-#### For Modifiers
-
-- $background-color
-- $background-color-hover
-- $text-color
-- $text-color-hover
+- $hover-text-color
+- $text-font
+- $text-font-weight
+- $hover-shadow
+- $hover-transform
 
 ## Use
 
 ```sh
 .g--pill-01{
-    @include make-pill-01(
-        $font: d,
-        // $font-weight: default,
-    );
+    @include make-pill-01();
     @include make-pill-01-modifier(
-        $background-color: map-get($color-options, d),
-        $text-color: map-get($color-options, a),
-        // $background-color-hover: default,
-        // $text-color-hover: default,
-    );
+            $background-color: map-get($color-options, g),
+            $hover-background-color: map-get($color-options, f),
+            $border-width: 3px,
+            $border-style: dotted,
+            $border-color: map-get($color-options, e),
+            $hover-border-color: map-get($color-options, b),
+            $text-color: map-get($color-options, a),
+            $hover-text-color: map-get($color-options, b),
+            $text-font: f,
+            // $text-font-weight: false,
+            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+        );
 }
 ```

@@ -1,96 +1,82 @@
 @mixin make-card-17(
-    $meta-font,
-    $title-font,
-    $border-radius: false,
-    $img-position: false,
-    $meta-font-weight: false,
-    $title-font-weight: false,
 ) {
     overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
-    
-    @if $border-radius {
-        border-radius: $border-radius;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 0;
     }
     &__media-wrapper{
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
         &__media {
-            aspect-ratio: 16 / 9;
             display: block;
             object-fit: cover;
             width: 100%;
-            
-            @if $img-position {
-                object-position: $img-position;
-            }
-    
-            @media all and ($viewport-type: $mobile) {
-                aspect-ratio: 4 / 3;
-            }
+            height: 100%;
         }
     }
 
     &__wrapper {
         padding: $measure * 6 $measure * 5;
+        position: relative;
+        z-index: 1;
 
         &__meta {
-            @extend .f--font-#{$meta-font} !optional;
-            @if $meta-font-weight {
-                font-weight: $meta-font-weight;
-            }
             margin-bottom: $measure * 3;
-        }
-
-        &__title {
-            @extend .f--font-#{$title-font} !optional;
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
         }
 
     }
 }
 
 @mixin make-card-17-modifier(
-    $background-color:false,
+    $background-color: false,
+    $border-radius: false,
     $full-image-height: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
-    $hover-translate: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-height: false,
+    $img-position: false,
     $meta-color: false,
     $meta-font: false,
     $meta-font-weight: false,
     $text-align: false,
     $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false,
 ) {
-    @if $background-color{
-        background: $background-color;
+    @if $border-radius {
+        border-radius: $border-radius;
     }
-    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-translate {
+    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
-        display: block;
     }
 
-    @if $full-image-height {
-        .g--card-17 {
-            &__media {
-                height: 100%;
-            }
-        }
-    }
+    
 
-    @if $hover-shadow and $hover-translate {
+    @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
                 box-shadow: $hover-shadow;
-                transform: $hover-translate;
+                transform: $hover-transform;
             }
         }
     } @else if $hover-shadow{
@@ -102,48 +88,29 @@
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-translate{
+    } @else if $hover-transform{
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                transform: $hover-translate;
+                transform: $hover-transform;
             }
         }
     }
-
-    @if $hover-background-color and $hover-title-color {
-        
-        .g--card-17 {
-            &__wrapper {
-                transition: background $time-b $ease-standard-a;
-    
-                &__title {
-                    transition: color $time-b $ease-standard-a;
-                }
-            }
+    @if $hover-background-color {
+        &::before{
+            transition: background $time-b $ease-standard-a;
         }
-
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-
-                .g--card-17 {
-                    &__wrapper {
-                        background: $hover-background-color;
-
-                        &__title {
-                            color: $hover-title-color;
-                        }
-                    }
+                &::before {
+                    background: $hover-background-color;
                 }
             }
         }
-
-    } @else if $hover-background-color {
-
         .g--card-17 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
@@ -162,7 +129,8 @@
                 }
             }
         }
-    } @else if $hover-title-color {
+    }
+    @if $hover-title-color {
 
         .g--card-17  {
             &__wrapper {
@@ -190,7 +158,6 @@
     @if $hover-img-zoom{
         .g--card-17 {
             &__media-wrapper{
-                overflow: hidden;
                 &__media{
                     transition: transform $time-b $ease-standard-a;
                 }
@@ -235,35 +202,41 @@
             }
         }
     }
-    @if $text-align == "center" {
 
-        .g--card-17 {
-            &__wrapper{
-                text-align: center;
-            }
+    @if $background-color{
+        &::before{
+            background: $background-color;
         }
     }
-
-    @if $text-align == "left" {
-
-        .g--card-17 {
-            &__wrapper{
-                text-align: left;
-            }
-        }
-    }
-
-    @if $text-align == "right" {
-
-        .g--card-17 {
-            &__wrapper{
-                text-align: right;
-            }
-        }
-    }
-
     .g--card-17 {
+        &__media-wrapper{
+            @if $full-image-height {
+                height: 100%;
+            }
+            &__media{
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                    height: auto;
+                } @else{
+                    height: 100%;
+                }
+                @if $img-height {
+                    height: $img-height;
+                } @else{
+                    height: 100%;
+                }
+                @if $img-position {
+                    object-position: $img-position;
+                }
+            }
+        }
         &__wrapper {
+            @if $full-image-height {
+                height: auto;
+            }
+            @if $background-color{
+                background: $background-color;
+            }
             &__meta {
                 @if $meta-color{
                     color: $meta-color;
@@ -275,9 +248,22 @@
                     @extend .f--font-#{$meta-font} !optional;
                 }
             }
-            @if $title-color{
-                &__title {
+            &__title {
+                @if $title-color{
                     color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
                 }
             }
         }

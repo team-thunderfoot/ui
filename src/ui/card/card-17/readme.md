@@ -1,21 +1,21 @@
-# Card-62
+# Card-17
 
 ## Layout
 
-![alt text][card-42]
+![alt text][card-17]
 
-[card-42]: /src/img/global-components/card/card-42.png
+[card-17]: /src/img/global-components/card/card-17.png
 
 ## Html for a card
 
-```sh
-<div class="g--card-62">
-    <div class="g--card-62__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-62__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+```html
+<div class="g--card-17">
+    <div class="g--card-17__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-17__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
     </div>
-    <div class="g--card-62__wrapper">
-        <p class="g--card-62__wrapper__meta">Jan 5, 2023</p>
-        <p class="g--card-62__wrapper__title">Card-62 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+    <div class="g--card-17__wrapper">
+        <p class="g--card-17__wrapper__meta">Lorem ipsum</p>
+        <p class="g--card-17__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
 </div>
 ```
@@ -23,49 +23,50 @@
 ## Editable variables
 
 - $background-color
-- $background-color-hover
-- $border-radius: false by default
-- $full-image-height: false by default
-- $img-position: false by default
+- $border-radius
+- $full-image-height
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-position
 - $meta-color
 - $meta-font
-- $text-align: false by default
-- $title-color
-- $title-color-hover
-- $title-font
-- $meta-font-weight: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $background-color
-- $background-color-hover
-- $full-image-height
-- $meta-color
+- $meta-font-weight
 - $text-align
 - $title-color
-- $title-color-hover
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
-```sh
-.g--card-62 {
-    @include make-card-62(
-        $meta-font: g,
-        $title-font: f,
-        // $border-radius: default
-    );
-    @include make-card-62-modifier(
-        $background-color: map-get($color-options, e),
-        $meta-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $full-image-height: default,
-        // $background-color-hover: default,
-        // $text-align: default,
-        // $title-color-hover: default,
-        // $shadow-hover: default,
-        // $translate-hover: default,
-        // $zoom-hover: default,
+```scss
+.g--card-17 {
+    @include make-card-17();
+    @include make-card-17-modifier(
+        // $background-color: false,
+        // $border-radius: false,
+        // $full-image-height: false,
+        // $hover-background-color: false,
+        // $hover-img-zoom: false,
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $meta-color: false,
+        // $meta-font: false,
+        // $meta-font-weight: false,
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
 }
 ```

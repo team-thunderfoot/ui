@@ -1,0 +1,124 @@
+@mixin make-accordion-02() {
+    display: block;
+    padding: $measure $measure*2;
+    width: 100%;
+
+    @media all and ($viewport-type: $tablets) {
+        padding: 0 $measure;
+    }
+
+    &__hd {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        padding: $measure * 3 0;
+        width: 100%;
+        text-align: left;
+
+        &__title {
+            margin-bottom: 0 !important;
+            margin-right: $measure * 2;
+            text-decoration: none !important;
+        }
+
+        &__icon {
+            display: inline-block;
+            height: 2px;
+            min-width: $measure * 2 !important;
+            position: relative;
+            width: $measure * 2;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                height: $measure * 2;
+                width: 2px;
+                transition: opacity $time-b $ease-standard-a;
+            }
+        }
+    }
+
+    &__bd {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $time-c cubic-bezier(0,1,0,1);
+
+        &__content {
+            padding: 0 $measure * 4 $measure * 3 0;
+        }
+    }
+
+    &--is-active & {
+        &__hd {
+            &__icon {
+                &::after {
+                    opacity: 0;
+                    transition: opacity $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        &__bd {
+            max-height: 99em;
+            transition: max-height $time-c cubic-bezier(1,0,1,0);
+        }
+    }
+}
+
+@mixin make-accordion-02-modifier(
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $icon-color: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+) {
+    @if $border-width {
+        border-bottom: $border-width;
+    }
+
+    @if $border-style {
+        border-bottom-style: $border-style;
+    }
+    
+    @if $border-color {
+        border-bottom-color: $border-color;
+    }
+
+    .g--accordion-02 {
+        &__hd {
+
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+    
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+    
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+            }
+
+            &__icon {
+                @if $icon-color {
+                    background: $icon-color;
+
+                    &::after {
+                        background: $icon-color;
+                    }
+                }
+            }
+        }
+    }
+}

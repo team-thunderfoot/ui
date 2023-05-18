@@ -35,6 +35,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 ### Accordion
 
 - [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)
+- [g--accordion-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-02/readme.md)
 
 ### Back-top
 
@@ -93,6 +94,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--cta-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-03/readme.md)
 - [g--cta-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-04/readme.md)
 - [g--cta-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-05/readme.md)
+- [g--cta-06](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-06/readme.md)
 
 ### Form fields
 
@@ -104,6 +106,11 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--form-radio-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-radio-01/readme.md)
 - [g--form-select-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-select-01/readme.md)
 - [g--form-textarea-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-textarea-01/readme.md)
+
+### Hero
+
+- [g--hero-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-01/readme.md)
+- [g--hero-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-02/readme.md)
 
 ### Icon
 

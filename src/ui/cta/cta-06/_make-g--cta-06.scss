@@ -1,4 +1,4 @@
-@mixin make-cta-05() {
+@mixin make-cta-06() {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -45,7 +45,7 @@
     }
 }
 
-@mixin make-cta-05-modifier(
+@mixin make-cta-06-modifier(
     $background-color: false,
     $hover-background-color: false,
     $btn-class: false,
@@ -154,7 +154,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--cta-05{
+                .g--cta-06{
                     &__media-wrapper{
                         &__media{
                             transform: scale($hover-img-zoom);
@@ -170,7 +170,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--cta-05{
+                .g--cta-06{
                     &__wrapper {
                         &__title{
                             color: $hover-title-color;
@@ -186,7 +186,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--cta-05{
+                .g--cta-06{
                     &__wrapper {
                         &__subtitle{
                             color: $hover-subtitle-color;
@@ -205,7 +205,7 @@
     @if $text-align == "center" {
         text-align: center;
         
-        .g--cta-05 {
+        .g--cta-06 {
             &__wrapper{
                 &__btn{
                     margin-left: auto;
@@ -218,7 +218,7 @@
     @if $text-align == "left" {
         text-align: left;
 
-        .g--cta-05 {
+        .g--cta-06 {
             &__wrapper{
                 &__btn{
                     margin-left: 0;
@@ -231,7 +231,7 @@
     @if $text-align == "right" {
         text-align: right;
 
-        .g--cta-05 {
+        .g--cta-06 {
             &__wrapper{
                 &__btn{
                     margin-left: auto;
@@ -240,8 +240,8 @@
             }
         }
     }
-
-    .g--cta-05 {
+  
+    .g--cta-06 {
         @if $one-col-bkt {
             &__wrapper{
                 @media all and ($viewport-type: $one-col-bkt) {
@@ -278,9 +278,8 @@
         }
 
         @if $one-col-bkt and $change-order-reponsive {
-            &__wrapper{
+            &__media-wrapper{
                 @media all and ($viewport-type: $one-col-bkt) {
-                    width: 100%;
                     order: 1;
                 }
             }

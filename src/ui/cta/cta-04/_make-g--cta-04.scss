@@ -9,11 +9,15 @@
     }
 
     @media all and ($viewport-type: $tabletm) {
-        padding-right: 9% 7%;
+        padding: 9% 7%;
     }
 
     @media all and ($viewport-type: $tablets) {
-        padding-right: 10% 6%;
+        padding: 10% 6%;
+    }
+
+    @media all and ($viewport-type: $mobile) {
+        padding: 10% 8%;
     }
 
     &::before{

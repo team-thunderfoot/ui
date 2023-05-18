@@ -14,8 +14,8 @@
         <div class="f--container">
             <div class="f--row">
                 <div class="f--col-8 f--col-tablets-10 f--col-mobile-12">
-                    <h1 class="g--hero-02__wrapper__title">Subheading</h1>
-                    <h2 class="g--hero-02__wrapper__subtitle">An Energy Solution for Healthcare</h2>
+                    <h1 class="g--hero-02__wrapper__tagline">Subheading</h1>
+                    <h2 class="g--hero-02__wrapper__title">An Energy Solution for Healthcare</h2>
                 </div>
             </div>
         </div>
@@ -28,47 +28,37 @@
 
 ## Editable variables
 
-- $background-color
-- $header-height-desktop
-- $header-height-tabletl
-- $header-height-tabletm
-- $header-height-tablets
-- $header-height-mobile
-- $subheading-color
-- $subheading-font
-- $subheading-font-weight: false by default
-- $text-align: false by default
-- $title-color
-- $title-font
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $background-color
-- $subheading-color
+- $background-color,
+- $header-height,
+- $img-height,
+- $img-position,
+- $img-object-fit,
+- $tagline-color,
+- $tagline-font,
+- $tagline-font-weight,
+- $title-color,
+- $title-font,
+- $title-font-weight,
 - $text-align
-- $title-color
 
 ## Use
 
 ```sh
 .g--hero-02 {
-    @include make-hero-02(
-        $header-height-desktop: 96px,
-        $subheading-font: a,
-        $title-font: a,
-        // $header-height-tabletl: default,
-        // $header-height-tabletm: default,
-        // $header-height-tablets: default,
-        // $header-height-mobile: default,
-        // $subheading-font-weight: default,
-        // $title-font-weight: default
-    );
+    @include make-hero-02();
     @include make-hero-02-modifier(
-        $background-color: map-get($color-options, d),
-        $subheading-color: map-get($color-options, a),
+        $background-color:  map-get($color-options, d),
+        $header-height: 96px,
+        $img-height: 500px,
+        $img-position: center,
+        $img-object-fit: cover,
+        $tagline-color: map-get($color-options, f),
+        $tagline-font: d,
+        $tagline-font-weight: medium,
         $title-color: map-get($color-options, a),
-        // $text-align: default
+        $title-font: a,
+        $title-font-weight: bold,
+        // $text-align: false
     );
 }
 ```

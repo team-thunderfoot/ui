@@ -1,94 +1,54 @@
-@mixin make-hero-02(
-    $subheading-font,
-    $title-font,
-    $header-height-desktop,
-    $header-height-tabletl: false,
-    $header-height-tabletm: false,
-    $header-height-tablets: false,
-    $header-height-mobile: false,
-    $subheading-font-weight: false,
-    $title-font-weight: false,
-) {
+@mixin make-hero-02() {
+    display: block;
     width: 100%;
 
     &__wrapper {
         padding-bottom: $measure * 10;
-        padding-top: calc(#{$measure} * 14 + #{$header-height-desktop});
-    
-        @if $header-height-tabletl {
-            @media all and ($viewport-type: $tabletl) {
-                padding-top: calc(#{$measure} * 14 + #{$header-height-tabletl});
-            }
-        }
-    
-        @if $header-height-tabletm {
-            @media all and ($viewport-type: $tabletm) {
-                padding-top: calc(#{$measure} * 14 + #{$header-height-tabletm});
-            }
-        }
-    
-        @if $header-height-tablets {
-            @media all and ($viewport-type: $tablets) {
-                padding-top: calc(#{$measure} * 7 + #{$header-height-tablets});
-                padding-bottom: $measure * 5;
-            }
-        }
-    
-        @if $header-height-mobile {
-            @media all and ($viewport-type: $mobile) {
-                padding-top: calc(#{$measure} * 7 + #{$header-height-mobile});
-            }
+        padding-top: $measure * 14;
+
+        @media all and ($viewport-type: $tablets) {
+            padding-bottom: $measure * 5;
         }
 
-        &__title {
-            @extend .f--font-#{$subheading-font} !optional;
-
-            @if $subheading-font-weight {
-                font-weight: $subheading-font-weight;
-            }
+        &__tagline {
             margin-bottom: $measure * 4;
+
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure * 3;
             }
         }
-        &__subtitle {
-            @extend .f--font-#{$title-font} !optional;
-
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
-        }
+        &__title {}
     }
 
     &__media-wrapper {
-        height: 500px;
         overflow: hidden;
-
-        @media all and ($viewport-type: $tabletm) {
-            height: 400px;
-        }
-
-        @media all and ($viewport-type: $tablets) {
-            height: 300px;
-        }
 
         &__media {
             display: block;
-            object-fit: cover;
-            width: 100%;
-            min-height: 100%;
             position: relative;
+            min-height: 100%;
+            width: 100%;
         }
     }
 }
 
 @mixin make-hero-02-modifier(
-    $background-color,
-    $subheading-color,
-    $title-color,
+    $background-color: false,
+    $header-height: false,
+    $img-height: false,
+    $img-position: false,
+    $img-object-fit: false,
+    $tagline-color: false,
+    $tagline-font: false,
+    $tagline-font-weight: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
     $text-align: false
 ) {
-    background: $background-color;
+    @if $background-color {
+        background: $background-color;
+    }
 
     @if $text-align == "center" {
         text-align: center;
@@ -104,11 +64,56 @@
 
     .g--hero-02 {
         &__wrapper {
-            &__title {
-                color: $subheading-color;
+            @if $header-height {
+                padding-top: calc(#{$measure} * 14 + #{$header-height});
+    
+                @media all and ($viewport-type: $tablets) {
+                    padding-top: calc(#{$measure} * 7 + #{$header-height});
+                }
             }
-            &__subtitle {
-                color: $title-color;
+
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+            }
+
+            &__tagline {
+                @if $tagline-color {
+                    color: $tagline-color;
+                }
+
+                @if $tagline-font {
+                    @extend .f--font-#{$tagline-font} !optional;
+                }
+
+                @if $tagline-font-weight {
+                    font-weight: $tagline-font-weight;
+                }
+            }
+
+            &__media-wrapper {
+                @if $img-height {
+                    height: $img-height;
+                }
+    
+                &__media {
+                    @if $img-position {
+                        object-position: $img-position;
+                    }
+    
+                    @if $img-object-fit {
+                        object-fit: $img-object-fit;
+                    }
+                }
             }
         }
     }

@@ -116,14 +116,13 @@
                 }
             }
 
-            @if $breakpoint{
+            @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     @if $change-order-reponsive == false {
                         margin-bottom: $measure * 5;
                     }
                 }
             }
-
 
             &__media {
                 @if $object-fit {
@@ -133,65 +132,64 @@
                     object-position: $img-position;
                 }
             }
+        }
 
-            &__wrapper {
-
-                @if $breakpoint{
-                    @media all and ($viewport-type: $breakpoint) {
-                        @if $change-order-reponsive {
-                            margin-bottom: $measure * 5;
-                        }
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    @if $change-order-reponsive {
+                        margin-bottom: $measure * 5;
                     }
                 }
-                
-                &__meta {
-                    @if $meta-font {
-                        @extend .f--font-#{$meta-font} !optional;
-                    }
-                    @if $meta-font-weight {
-                        font-weight: $meta-font-weight;
-                    }
+            }
 
-                    @if $meta-color {
-                        color: $meta-color;
-                    }
+            &__meta {
+                @if $meta-font {
+                    @extend .f--font-#{$meta-font} !optional;
+                }
+                @if $meta-font-weight {
+                    font-weight: $meta-font-weight;
                 }
 
-                &__title {
-                    @if $title-font {
-                        @extend .f--font-#{$title-font} !optional;
-                    }
-                    @if $title-font-weight {
-                        font-weight: $title-font-weight;
-                    }
-                    @if $title-color {
-                        color: $title-color;
-                    }
+                @if $meta-color {
+                    color: $meta-color;
                 }
-                &__subtitle {
-                    @if $subtitle-font {
-                        @extend .f--font-#{$subtitle-font} !optional;
-                    }
-                    @if $subtitle-font-weight {
-                        font-weight: $subtitle-font-weight;
-                    }
+            }
 
-                    @if $subtitle-color {
-                        color: $subtitle-color;
-                    }
+            &__title {
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-color {
+                    color: $title-color;
+                }
+            }
+            &__subtitle {
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
                 }
 
-                &__ft {
-                    &__btn {
-                        @if $btn-class {
-                            @extend .#{$btn-class} !optional;
-                        }
-                        @if $btn-class-modifier {
-                            @extend .#{$btn-class-modifier} !optional;
-                        }
-                        @if $btn-font {
-                            @extend .f--font-#{$btn-font} !optional;
-                        }
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+            }
+
+            &__ft {
+                &__btn {
+                    @if $btn-class {
+                        @extend .#{$btn-class} !optional;
+                    }
+                    @if $btn-class-modifier {
+                        @extend .#{$btn-class-modifier} !optional;
+                    }
+                    @if $btn-font {
+                        @extend .f--font-#{$btn-font} !optional;
                     }
                 }
             }

@@ -4,7 +4,7 @@
 
 ![alt text][btn-03]
 
-[btn-03]: /src/img/global-components/btn/btn-03.png
+[btn-03]: /src/img/global-components/btn/g--btn-03.png
 
 ## Html for a button
 

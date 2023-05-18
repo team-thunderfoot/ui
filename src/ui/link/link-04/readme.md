@@ -9,13 +9,13 @@
 ## Html for a button
 
 ```html
-<button class="g--link-04">link 01</button>
+<button class="g--link-04">link 04</button>
 ```
 
 ## Html for a link
 
 ```html
-<a href="#" class="g--link-04" target="_blank" rel="noopener noreferrer">link 01 link</a>
+<a href="#" class="g--link-04" target="_blank" rel="noopener noreferrer">link 04 link</a>
 ```
 
 ## Editable variables

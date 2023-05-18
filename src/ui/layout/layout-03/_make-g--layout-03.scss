@@ -87,8 +87,10 @@
     $img-border-radius: false,
     $change-order-reponsive: false,
     $background-color: false,
+    $btn-font: false,
     $btn-class: false,
-    $btn-class-modifier: false
+    $btn-class-modifier: false,
+    $breakpoint: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -114,11 +116,14 @@
                 }
             }
 
-            @media all and ($viewport-type: $tablets) {
-                @if $change-order-reponsive == false {
-                    margin-bottom: $measure * 5;
+            @if $breakpoint{
+                @media all and ($viewport-type: $breakpoint) {
+                    @if $change-order-reponsive == false {
+                        margin-bottom: $measure * 5;
+                    }
                 }
             }
+
 
             &__media {
                 @if $object-fit {
@@ -130,11 +135,15 @@
             }
 
             &__wrapper {
-                @media all and ($viewport-type: $tablets) {
-                    @if $change-order-reponsive {
-                        margin-bottom: $measure * 5;
+
+                @if $breakpoint{
+                    @media all and ($viewport-type: $breakpoint) {
+                        @if $change-order-reponsive {
+                            margin-bottom: $measure * 5;
+                        }
                     }
                 }
+                
                 &__meta {
                     @if $meta-font {
                         @extend .f--font-#{$meta-font} !optional;
@@ -179,6 +188,9 @@
                         }
                         @if $btn-class-modifier {
                             @extend .#{$btn-class-modifier} !optional;
+                        }
+                        @if $btn-font {
+                            @extend .f--font-#{$btn-font} !optional;
                         }
                     }
                 }

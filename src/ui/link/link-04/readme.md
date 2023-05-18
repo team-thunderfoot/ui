@@ -4,7 +4,7 @@
 
 ![alt text][link-04]
 
-[link-04]: /src/img/global-components/link/link-04.png
+[link-04]: /src/img/global-components/link/g--link-04.png
 
 ## Html for a button
 

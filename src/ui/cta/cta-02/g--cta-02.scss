@@ -2,7 +2,7 @@
     @include make-cta-02();
     @include make-cta-02-modifier(
         // $background-color: false,
-        // $hover-background-color: false,
+        // $hover-background-color: red,
         $background-position: center,
         $background-size: cover,
         $btn-class: g--btn-02,

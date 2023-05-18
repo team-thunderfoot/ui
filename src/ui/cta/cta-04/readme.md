@@ -20,27 +20,26 @@
 
 ## Editable variables
 
-- $background-color,
-- $hover-background-color,
-- $background-position,
-- $background-size,
-- $btn-class,
-- $btn-font,
-- $border-radius,
-- $mask-color,
-- $subtitle-color,
-- $hover-subtitle-color,
-- $subtitle-font,
-- $subtitle-font-weight,
-- $subtitle-max-lines,
-- $title-color,
-- $hover-title-color,
-- $title-font,
-- $title-font-weight,
-- $title-max-lines,
-- $text-align,
-- $hover-shadow,
-- $hover-transform,
+- $background-position
+- $background-size
+- $$hover-background-img-zoom
+- $btn-class
+- $btn-font
+- $border-radius
+- $mask-color
+- $subtitle-color
+- $hover-subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $title-color
+- $hover-title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
+- $text-align
+- $hover-shadow
+- $hover-transform
 
 ## Use
 
@@ -50,13 +49,12 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-04{
     @include make-cta-04();
     @include make-cta-04-modifier(
-        // $background-color: false,
-        // $hover-background-color: false,
         $background-position: left top,
         $background-size: cover,
+        $hover-background-img-zoom: 1.2,
         $btn-class: g--btn-01,
         // $btn-font: false,
-        $border-radius: 90px,
+        $border-radius: 8px,
         $mask-color: rgba(map-get($color-options, a), .5),
         $subtitle-color: map-get($color-options, b),
         $hover-subtitle-color: map-get($color-options, c),
@@ -68,7 +66,7 @@ To use it we have to import the css of the $btn-class in the entry
         $title-font: b,
         // $title-font-weight: false,
         // $title-max-lines: false,
-        $text-align: center,
+        // $text-align: false,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
     );

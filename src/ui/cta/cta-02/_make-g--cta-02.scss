@@ -1,53 +1,69 @@
 @mixin make-cta-02() {
     display: block;
-    padding: 9% 13%;
     position: relative;
-    text-align: center;
+    overflow: hidden;
     width: 100%;
 
-    @media all and ($viewport-type: $tabletl) {
-        padding: 14% 6%;
-    }
-
-    @media all and ($viewport-type: $tabletm) {
-        padding: 12% 6%;
-    }
-
-    @media all and ($viewport-type: $mobile) {
-        padding: 30% 5%;
-    }
-
-    &::before{
-        content: '';
-        height: 100%;
-        left: 0;
+    &__bg-items {
+        display: block;
         position: absolute;
+        left: 0;
         top: 0;
+        height: 100%;
         width: 100%;
-        z-index: 0;
-    }
+        
 
-    &__title{
-        margin-bottom: $measure * 6;
-        position: relative;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure * 4;
+        &::before{
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
         }
     }
 
-    &__btn{
-        margin-left: auto;
-        margin-right: auto;
+    &__ft-items {
+        padding: 9% 13%;
         position: relative;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        @media all and ($viewport-type: $tabletl) {
+            padding: 14% 6%;
+        }
+    
+        @media all and ($viewport-type: $tabletm) {
+            padding: 12% 6%;
+        }
+    
+        @media all and ($viewport-type: $mobile) {
+            padding: 30% 5%;
+        }
+
+        &__title{
+            margin-bottom: $measure * 6;
+            position: relative;
+    
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 4;
+            }
+        }
+    
+        &__btn{
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
     }
 }
 
 @mixin make-cta-02-modifier(
-    $background-color: false,
-    $hover-background-color: false,
     $background-position: false,
     $background-size: false,
+    $hover-background-img-zoom: false,
     $btn-class: false,
     $btn-font: false,
     $mask-color: false,
@@ -60,70 +76,33 @@
     $hover-shadow: false,
     $hover-transform: false,
 ) {
-    @if $background-color {
-        background: $background-color;
-    }
 
     @if $background-position {
-        background-position: $background-position;
-    }
-
-    @if $background-size {
-        background-size: $background-size;
-    }
-
-    @if $mask-color {
-        &::before{
-            background: $mask-color;
+        &__bg-items {
+            background-position: $background-position;
         }
     }
 
-    @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
+    @if $background-size {
+        &__bg-items {
+            background-size: $background-size;
+        }
+    }
+
+    @if $mask-color {
+        &__bg-items {
+            &::before{
+                background: $mask-color;
+            }
+        }
+    }
+
+    @if $hover-title-color or $hover-shadow or $hover-transform or $hover-background-img-zoom{
         text-decoration: none !important;
         cursor: pointer;
     }
 
-    @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color and $hover-shadow{
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-color and $hover-transform{
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color{
-        transition: background $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
+    @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -133,7 +112,7 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-shadow {
+    } @else if $hover-shadow{
         transition: box-shadow $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -142,7 +121,7 @@
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-transform {
+    } @else if $hover-transform{
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -153,14 +132,30 @@
         }
     }
 
+    @if $hover-background-img-zoom {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-02{
+                    &__bg-items{
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+
     @if $hover-title-color {
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--cta-02{
-                    &__title{
-                        color: $hover-title-color;
+                    &__ft-items {
+                        &__title{
+                            color: $hover-title-color;
+                        }
                     }
                 }
             }
@@ -168,73 +163,87 @@
     }
 
     @if $text-align == "center" {
-        text-align: center;
-
         .g--cta-02 {
-            &__btn {
-                margin-left: auto;
-                margin-right: auto;
+            &__ft-items {
+                text-align: center;
+
+                &__btn {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
-        
     }
+
     @if $text-align == "left" {
-        text-align: left;
-
         .g--cta-02 {
-            &__btn {
-                margin-left: 0;
-                margin-right: auto;
+            &__ft-items {
+                text-align: left;
+
+                &__btn {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
             }
         }
     }
-    @if $text-align == "right" {
-        text-align: right;
 
+    @if $text-align == "right" {
         .g--cta-02 {
-            &__btn {
-                margin-left: auto;
-                margin-right: 0;
+            &__ft-items {
+                text-align: right;
+
+                &__btn {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
             }
         }
     }
 
     .g--cta-02{
-        &__title{
-            @if $title-color {
-                color: $title-color;
-            }
-            
-            @if $title-font {
-                @extend .f--font-#{$title-font} !optional;
-            }
-
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
-
-            @if $title-max-lines {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: $title-max-lines;
-                -webkit-box-orient: vertical;
-            }
-
-            @if $hover-title-color {
-                transition: color $time-b $ease-standard-a;
+        &__bg-items {
+            @if $hover-background-img-zoom{
+                transition: transform $time-b $ease-standard-a;
             }
         }
-
-        @if $btn-font {
-            &__btn{
-                @extend .f--font-#{$btn-font} !optional;
+        &__ft-items {
+            &__title{
+                @if $title-color {
+                    color: $title-color;
+                }
+                
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+    
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+    
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+    
+                @if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                }
             }
-        }
-
-        @if $btn-class {
-            &__btn{
-                @extend .#{$btn-class} !optional;
+    
+            @if $btn-font {
+                &__btn{
+                    @extend .f--font-#{$btn-font} !optional;
+                }
+            }
+    
+            @if $btn-class {
+                &__btn{
+                    @extend .#{$btn-class} !optional;
+                }
             }
         }
     }

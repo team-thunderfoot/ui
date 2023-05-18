@@ -1,10 +1,7 @@
-@mixin make-accordion-01(
-    $border-width,
-    $title-font,
-    $title-font-weight: false,
-) {
-    border-bottom: $border-width solid;
+@mixin make-accordion-01() {
+    display: block;
     padding: $measure $measure*2;
+    width: 100%;
 
     @media all and ($viewport-type: $tablets) {
         padding: 0 $measure;
@@ -21,10 +18,6 @@
         text-align: left;
 
         &__title {
-            @extend .f--font-#{$title-font} !optional;
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
             margin-bottom: 0 !important;
             margin-right: $measure * 2;
             text-decoration: none !important;
@@ -65,22 +58,48 @@
 }
 
 @mixin make-accordion-01-modifier(
-    $border-color,
-    $icon-color,
-    $title-color,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $icon-color: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
-    border-color: $border-color;
+    @if $border-width {
+        border-bottom: $border-width;
+    }
+
+    @if $border-style {
+        border-bottom-style: $border-style;
+    }
+    
+    @if $border-color {
+        border-bottom-color: $border-color;
+    }
 
     .g--accordion-01 {
         &__hd {
 
             &__title {
-                color: $title-color;
+                @if $title-color {
+                    color: $title-color;
+                }
+    
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+    
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
             }
 
             &__icon {
-                path {
-                    fill: $icon-color;
+                @if $icon-color {
+                    path {
+                        fill: $icon-color;
+                    }
                 }
             }
         }

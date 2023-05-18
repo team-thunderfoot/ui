@@ -1,66 +1,78 @@
 @mixin make-cta-04() {
     display: block;
-    padding: 10%;
     position: relative;
+    overflow: hidden;
     width: 100%;
 
-    @media all and ($viewport-type: $tabletl) {
-        padding: 8% 7%;
-    }
-
-    @media all and ($viewport-type: $tabletm) {
-        padding: 9% 7%;
-    }
-
-    @media all and ($viewport-type: $tablets) {
-        padding: 10% 6%;
-    }
-
-    @media all and ($viewport-type: $mobile) {
-        padding: 10% 8%;
-    }
-
-    &::before{
-        content: '';
-        height: 100%;
-        left: 0;
+    &__bg-items {
+        display: block;
         position: absolute;
+        left: 0;
         top: 0;
+        height: 100%;
         width: 100%;
-        z-index: 0;
-    }
-
-    &__title{
-        margin-bottom: $measure*3;
-        position: relative;
-        z-index: 1;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure * 2;
-        }
-    }
-
-    &__subtitle{
-        margin-bottom: $measure*6;
-        position: relative;
-        z-index: 1;
         
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure * 4;
+
+        &::before{
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
         }
     }
 
-    &__btn{
-        position: relative;
-        z-index: 1;
+    &__ft-items {
+        padding: 10%;
+
+        @media all and ($viewport-type: $tabletl) {
+            padding: 8% 7%;
+        }
+    
+        @media all and ($viewport-type: $tabletm) {
+            padding: 9% 7%;
+        }
+    
+        @media all and ($viewport-type: $tablets) {
+            padding: 10% 6%;
+        }
+    
+        @media all and ($viewport-type: $mobile) {
+            padding: 10% 8%;
+        }
+
+        &__title{
+            margin-bottom: $measure*3;
+            position: relative;
+            z-index: 1;
+    
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 2;
+            }
+        }
+    
+        &__subtitle{
+            margin-bottom: $measure*6;
+            position: relative;
+            z-index: 1;
+            
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure * 4;
+            }
+        }
+    
+        &__btn{
+            position: relative;
+            z-index: 1;
+        }
     }
 }
 
 @mixin make-cta-04-modifier(
-    $background-color: false,
-    $hover-background-color: false,
     $background-position: false,
     $background-size: false,
+    $hover-background-img-zoom: false,
     $btn-class: false,
     $btn-font: false,
     $border-radius: false,
@@ -79,70 +91,33 @@
     $hover-shadow: false,
     $hover-transform: false,
 ) {
-    @if $background-color {
-        background: $background-color;
-    }
 
     @if $background-position {
-        background-position: $background-position;
-    }
-
-    @if $background-size {
-        background-size: $background-size;
-    }
-
-    @if $mask-color {
-        &::before{
-            background: $mask-color;
+        &__bg-items {
+            background-position: $background-position;
         }
     }
 
-    @if $hover-background-color or $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform {
+    @if $background-size {
+        &__bg-items {
+            background-size: $background-size;
+        }
+    }
+
+    @if $mask-color {
+        &__bg-items {
+            &::before{
+                background: $mask-color;
+            }
+        }
+    }
+
+    @if $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
 
-    @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color and $hover-shadow{
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-color and $hover-transform{
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color{
-        transition: background $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
+    @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -152,7 +127,7 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-shadow {
+    } @else if $hover-shadow{
         transition: box-shadow $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -161,7 +136,7 @@
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-transform {
+    } @else if $hover-transform{
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -172,14 +147,30 @@
         }
     }
 
+    @if $hover-background-img-zoom {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-04{
+                    &__bg-items{
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+
     @if $hover-title-color {
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--cta-04{
-                    &__title{
-                        color: $hover-title-color;
+                    &__ft-items {
+                        &__title{
+                            color: $hover-title-color;
+                        }
                     }
                 }
             }
@@ -192,8 +183,10 @@
             &:focus,
             &:active {
                 .g--cta-04{
-                    &__subtitle{
-                        color: $hover-subtitle-color;
+                    &__ft-items {
+                        &__subtitle{
+                            color: $hover-subtitle-color;
+                        }
                     }
                 }
             }
@@ -202,140 +195,159 @@
 
     @if $border-radius {
         border-radius: $border-radius;
-        overflow: hidden;
     }
 
     @if $text-align == "center" {
-        padding-left: $measure * 15;
-        padding-right: $measure * 15;
-        text-align: center;
-
-        @media all and ($viewport-type: $tabletl) {
-            padding-left: $measure * 10;
-            padding-right: $measure * 10;
-        }
-
-        @media all and ($viewport-type: $tablets) {
-            padding-left: $measure * 5;
-            padding-right: $measure * 5;
-        }
-
-        &__btn {
-            margin-left: auto;
-            margin-right: auto;
+        .g--cta-04 {
+            &__ft-items {
+                padding-left: $measure * 15;
+                padding-right: $measure * 15;
+                text-align: center;
+    
+                @media all and ($viewport-type: $tabletl) {
+                    padding-left: $measure * 10;
+                    padding-right: $measure * 10;
+                }
+    
+                @media all and ($viewport-type: $tablets) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 5;
+                }
+    
+                &__btn {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
         }
     }
 
     @if $text-align == "left" {
-        padding-left: $measure * 10;
-        padding-right: $measure * 30;
-        text-align: left;
-
-        @media all and ($viewport-type: $tabletl) {
-            padding-left: $measure * 5;
-            padding-right: $measure * 25;
-        }
-
-        @media all and ($viewport-type: $tabletm) {
-            padding-right: $measure * 20;
-        }
-
-        @media all and ($viewport-type: $tablets) {
-            padding-left: $measure * 5;
-            padding-right: $measure * 5;
-        }
-
-        &__btn {
-            margin-left: 0;
-            margin-right: auto;
+        .g--cta-04 {
+            &__ft-items {
+                padding-left: $measure * 10;
+                padding-right: $measure * 30;
+                text-align: left;
+    
+                @media all and ($viewport-type: $tabletl) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 25;
+                }
+    
+                @media all and ($viewport-type: $tabletm) {
+                    padding-right: $measure * 20;
+                }
+    
+                @media all and ($viewport-type: $tablets) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 5;
+                }
+    
+                &__btn {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
         }
     }
 
     @if $text-align == "right" {
-        padding-left: $measure * 30;
-        padding-right: $measure * 10;
-        text-align: right;
-
-        @media all and ($viewport-type: $tabletl) {
-            padding-left: $measure * 25;
-            padding-right: $measure * 5;
-        }
-
-        @media all and ($viewport-type: $tabletm) {
-            padding-left: $measure * 20;
-        }
-
-        @media all and ($viewport-type: $tablets) {
-            padding-left: $measure * 5;
-            padding-right: $measure * 5;
-        }
-
-        &__btn {
-            margin-left: auto;
-            margin-right: 0;
+        .g--cta-04 {
+            &__ft-items {
+                padding-left: $measure * 30;
+                padding-right: $measure * 10;
+                text-align: right;
+        
+                @media all and ($viewport-type: $tabletl) {
+                    padding-left: $measure * 25;
+                    padding-right: $measure * 5;
+                }
+        
+                @media all and ($viewport-type: $tabletm) {
+                    padding-left: $measure * 20;
+                }
+        
+                @media all and ($viewport-type: $tablets) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 5;
+                }
+    
+                &__btn {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
         }
     }
 
     .g--cta-04{
-        &__title{
-            @if $title-color {
-                color: $title-color;
-            }
-
-            @if $title-font {
-                @extend .f--font-#{$title-font} !optional;
-            }
-
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
-
-            @if $title-max-lines {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: $title-max-lines;
-                -webkit-box-orient: vertical;
-            }
-
-            @if $hover-title-color {
-                transition: color $time-b $ease-standard-a;
-            }
-        }
-        &__subtitle{
-            @if $subtitle-color {
-                color: $subtitle-color;
-            }
-
-            @if $subtitle-font {
-                @extend .f--font-#{$subtitle-font} !optional;
-            }
-            @if $subtitle-font-weight {
-                font-weight: $subtitle-font-weight;
-            }
-
-            @if $subtitle-max-lines {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: $subtitle-max-lines;
-                -webkit-box-orient: vertical;
-            }
-
-            @if $hover-subtitle-color {
-                transition: color $time-b $ease-standard-a;
+        &__bg-items {
+            @if $hover-background-img-zoom{
+                transition: transform $time-b $ease-standard-a;
             }
         }
 
-        @if $btn-font {
-            &__btn{
-                @extend .f--font-#{$btn-font} !optional;
+        &__ft-items {
+            &__title{
+                @if $title-color {
+                    color: $title-color;
+                }
+    
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+    
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+    
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+    
+                @if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                }
             }
-        }
-        
-        @if $btn-class {
-            &__btn{
-                @extend .#{$btn-class} !optional;
+            &__subtitle{
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+    
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+    
+                @if $subtitle-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $subtitle-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+    
+                @if $hover-subtitle-color {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+    
+            @if $btn-font {
+                &__btn{
+                    @extend .f--font-#{$btn-font} !optional;
+                }
+            }
+            
+            @if $btn-class {
+                &__btn{
+                    @extend .#{$btn-class} !optional;
+                }
             }
         }
     }

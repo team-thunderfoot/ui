@@ -17,22 +17,21 @@
 
 ## Editable variables
 
-- $background-color,
-- $hover-background-color,
-- $background-position,
-- $background-size,
-- $btn-class,
-- $btn-font,
-- $mask-color,
-- $title-color,
-- $hover-title-color,
-- $btn-class-modifier,
-- $text-align,
-- $title-font,
-- $title-font-weight,
-- $hover-shadow,
-- $hover-transform,
-- $title-max-lines,
+- $background-position
+- $background-size
+- $hover-background-img-zoom: false
+- $btn-class
+- $btn-font
+- $mask-color
+- $title-color
+- $hover-title-color
+- $btn-class-modifier
+- $text-align
+- $title-font
+- $title-font-weight
+- $hover-shadow
+- $hover-transform
+- $title-max-lines
 
 ## Use
 
@@ -42,10 +41,9 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-02{
     @include make-cta-02();
     @include make-cta-02-modifier(
-        // $background-color: false,
-        // $hover-background-color: false,
         $background-position: center,
         $background-size: cover,
+        $hover-background-img-zoom: 1.2,
         $btn-class: g--btn-02,
         // $btn-font: false,
         $mask-color: rgba(map-get($color-options, a), .5),
@@ -54,8 +52,8 @@ To use it we have to import the css of the $btn-class in the entry
         // $text-align: false,
         $title-font: b,
         // $title-font-weight: false,
-        // $hover-shadow: false,
-        // $hover-transform: false,
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
         // $title-max-lines: false,
     );
 }

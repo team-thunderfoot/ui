@@ -20,24 +20,24 @@
 
 ## Editable variables
 
-- $background-color,
-- $hover-background-color,
-- $btn-class,
-- $btn-font,
-- $border-radius,
-- $subtitle-color,
-- $hover-subtitle-color,
-- $subtitle-font,
-- $subtitle-font-weight,
-- $subtitle-max-lines,
-- $title-color,
-- $hover-title-color,
-- $title-font,
-- $title-font-weight,
-- $title-max-lines,
-- $text-align,
-- $hover-shadow,
-- $hover-transform,
+- $background-color
+- $hover-background-color
+- $btn-class
+- $btn-font
+- $border-radius
+- $subtitle-color
+- $hover-subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $title-color
+- $hover-title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
+- $text-align
+- $hover-shadow
+- $hover-transform
 
 ## Use
 

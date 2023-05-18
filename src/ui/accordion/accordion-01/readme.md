@@ -27,32 +27,27 @@
 ## Editable variables
 
 - $border-color
+- $border-style
 - $border-width
 - $icon-color
 - $title-color
 - $title-font
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $border-color
-- $icon-color
-- $title-color
+- $title-font-weight
 
 ## Use
 
 ```sh
 .g--accordion-01 {
-    @include make-accordion-01(
-        $border-width: 1px,
-        $title-font: d,
-        // $title-font-weight: default,
-    );
+    @include make-accordion-01();
 
     @include make-accordion-01-modifier(
         $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
         $icon-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $title-font: d,
+        // $title-font-weight: false,
     );
 }
 ```

@@ -17,18 +17,18 @@
 
 ## Editable variables
 
-- $background-color,
-- $hover-background-color,
-- $btn-class,
-- $btn-font,
-- $title-color,
-- $hover-title-color,
-- $title-font,
-- $title-font-weight,
-- $title-max-lines,
-- $text-align,
-- $hover-shadow,
-- $hover-transform,
+- $background-color
+- $hover-background-color
+- $btn-class
+- $btn-font
+- $title-color
+- $hover-title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
+- $text-align
+- $hover-shadow
+- $hover-transform
 
 ## Use
 

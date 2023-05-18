@@ -27,29 +27,29 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
 
-- $background-color,
-- $hover-background-color,
-- $btn-class,
-- $btn-font,
-- $border-radius,
-- $subtitle-color,
-- $hover-subtitle-color,
-- $subtitle-font,
-- $subtitle-font-weight,
-- $subtitle-max-lines,
-- $title-color,
-- $hover-title-color,
-- $title-font,
-- $title-font-weight,
-- $title-max-lines,
-- $text-align,
-- $one-col-bkt,
-- $change-order-reponsive,
-- $hide-img-reponsive,
-- $img-position,
-- $hover-shadow,
-- $hover-transform,
-- $hover-img-zoom,
+- $background-color
+- $hover-background-color
+- $btn-class
+- $btn-font
+- $border-radius
+- $subtitle-color
+- $hover-subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $title-color
+- $hover-title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
+- $text-align
+- $one-col-bkt
+- $change-order-reponsive
+- $hide-img-reponsive
+- $img-position
+- $hover-shadow
+- $hover-transform
+- $hover-img-zoom
 
 ## Use
 

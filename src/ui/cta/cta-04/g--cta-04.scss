@@ -1,10 +1,9 @@
 .g--cta-04{
     @include make-cta-04();
     @include make-cta-04-modifier(
-        // $background-color: false,
-        // $hover-background-color: false,
         $background-position: left top,
         $background-size: cover,
+        $hover-background-img-zoom: 1.2,
         $btn-class: g--btn-01,
         // $btn-font: false,
         $border-radius: 8px,

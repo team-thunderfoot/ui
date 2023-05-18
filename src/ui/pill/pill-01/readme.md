@@ -39,18 +39,18 @@
 .g--pill-01{
     @include make-pill-01();
     @include make-pill-01-modifier(
-            $background-color: map-get($color-options, g),
-            $hover-background-color: map-get($color-options, f),
-            $border-width: 3px,
-            $border-style: dotted,
-            $border-color: map-get($color-options, e),
-            $hover-border-color: map-get($color-options, b),
-            $text-color: map-get($color-options, a),
-            $hover-text-color: map-get($color-options, b),
-            $text-font: f,
-            // $text-font-weight: false,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-            $hover-transform: translateY(-$measure),
-        );
+        $background-color: map-get($color-options, g),
+        $hover-background-color: map-get($color-options, f),
+        $border-width: 3px,
+        $border-style: dotted,
+        $border-color: map-get($color-options, e),
+        $hover-border-color: map-get($color-options, b),
+        $text-color: map-get($color-options, a),
+        $hover-text-color: map-get($color-options, b),
+        $text-font: f,
+        // $text-font-weight: false,
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
+    );
 }
 ```

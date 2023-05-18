@@ -1,80 +1,285 @@
 @mixin make-card-17(
+    $meta-font,
+    $title-font,
     $border-radius: false,
+    $img-position: false,
+    $meta-font-weight: false,
+    $title-font-weight: false,
 ) {
-    padding: $measure*7 $measure*5;
-    position: relative;
+    overflow: hidden;
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    
     @if $border-radius {
         border-radius: $border-radius;
     }
-
-    &__media{
-        display: block;
-        height: 100px;
-        margin-bottom: $measure * 2;
-        object-fit: cover;
-        width: auto;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
-        }
-    }
-
-    &__title{}
-}
-
-@mixin make-card-17-modifier(
-    $background-color,
-    $title-color,
-    $text-align: false,
-    $title-font: false,
-    $title-font-weight: false,
-) {
-    background: $background-color;
-
-    @if $text-align == "center" {
-        text-align: center;
-
-        .g--card-17 {
-            &__media {
-                margin-left: auto;
-                margin-right: auto;
+    &__media-wrapper{
+        &__media {
+            aspect-ratio: 16 / 9;
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            
+            @if $img-position {
+                object-position: $img-position;
             }
-        }
-        
-    }
-    @if $text-align == "left" {
-        text-align: left;
-
-        .g--card-17 {
-            &__media {
-                margin-left: 0;
-                margin-right: auto;
-            }
-        }
-    }
-    @if $text-align == "right" {
-        text-align: right;
-
-        .g--card-17 {
-            &__media {
-                margin-left: auto;
-                margin-right: 0;
-            }
-        }
-    }
     
-    .g--card-17 {
-        &__title{
-            color: $title-color;
-            @if $title-font {
-                @extend .f--font-#{$title-font} !optional;
+            @media all and ($viewport-type: $mobile) {
+                aspect-ratio: 4 / 3;
             }
+        }
+    }
+
+    &__wrapper {
+        padding: $measure * 6 $measure * 5;
+
+        &__meta {
+            @extend .f--font-#{$meta-font} !optional;
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
+            margin-bottom: $measure * 3;
+        }
+
+        &__title {
+            @extend .f--font-#{$title-font} !optional;
             @if $title-font-weight {
                 font-weight: $title-font-weight;
             }
         }
+
+    }
+}
+
+@mixin make-card-17-modifier(
+    $background-color:false,
+    $full-image-height: false,
+    $hover-background-color: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-translate: false,
+    $meta-color: false,
+    $meta-font: false,
+    $meta-font-weight: false,
+    $text-align: false,
+    $title-color: false,
+) {
+    @if $background-color{
+        background: $background-color;
+    }
+    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-translate {
+        text-decoration: none !important;
+        cursor: pointer;
+        display: block;
     }
 
+    @if $full-image-height {
+        .g--card-17 {
+            &__media {
+                height: 100%;
+            }
+        }
+    }
+
+    @if $hover-shadow and $hover-translate {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-translate;
+            }
+        }
+    } @else if $hover-shadow{
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-translate{
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-translate;
+            }
+        }
+    }
+
+    @if $hover-background-color and $hover-title-color {
+        
+        .g--card-17 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+    
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-17 {
+                    &__wrapper {
+                        background: $hover-background-color;
+
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+
+    } @else if $hover-background-color {
+
+        .g--card-17 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                
+                .g--card-17 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+
+        .g--card-17  {
+            &__wrapper {
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-17 {
+                    &__wrapper {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom{
+        .g--card-17 {
+            &__media-wrapper{
+                overflow: hidden;
+                &__media{
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-17 {
+                    &__media-wrapper{
+                        &__media{
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--card-17 {
+            &__wrapper {
+                text-align: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        .g--card-17 {
+            &__wrapper {
+                text-align: left;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        .g--card-17 {
+            &__wrapper {
+                text-align: right;
+            }
+        }
+    }
+    @if $text-align == "center" {
+
+        .g--card-17 {
+            &__wrapper{
+                text-align: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+
+        .g--card-17 {
+            &__wrapper{
+                text-align: left;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+
+        .g--card-17 {
+            &__wrapper{
+                text-align: right;
+            }
+        }
+    }
+
+    .g--card-17 {
+        &__wrapper {
+            &__meta {
+                @if $meta-color{
+                    color: $meta-color;
+                }
+                @if $meta-font-weight {
+                    font-weight: $meta-font-weight;
+                }
+                @if $meta-font {
+                    @extend .f--font-#{$meta-font} !optional;
+                }
+            }
+            @if $title-color{
+                &__title {
+                    color: $title-color;
+                }
+            }
+        }
+    }
 }

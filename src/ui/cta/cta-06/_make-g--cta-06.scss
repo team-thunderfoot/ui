@@ -32,6 +32,7 @@
 
     &__media-wrapper{
         position: relative;
+        overflow: hidden;
         width: 50%;
 
         &__media{
@@ -70,53 +71,94 @@
     $hover-transform: false,
     $hover-img-zoom: false,
 ) {
-    @if $background-color {
-        background: $background-color;
-    }
-
     @if $hover-background-color or $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform or $hover-img-zoom {
         text-decoration: none !important;
         cursor: pointer;
     }
 
     @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+
+        .g--cta-06 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                background: $hover-background-color;
                 box-shadow: $hover-shadow;
                 transform: $hover-transform;
+
+                .g--cta-06 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
             }
         }
     } @else if $hover-background-color and $hover-shadow{
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        transition: box-shadow $time-b $ease-standard-a;
+
+        .g--cta-06 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                background: $hover-background-color;
                 box-shadow: $hover-shadow;
+
+                .g--cta-06 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
             }
         }
     } @else if $hover-background-color and $hover-transform{
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        transition: transform $time-b $ease-standard-a;
+
+        .g--cta-06 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                background: $hover-background-color;
                 transform: $hover-transform;
+
+                .g--cta-06 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
             }
         }
     } @else if $hover-background-color{
-        transition: background $time-b $ease-standard-a;
+        .g--cta-06 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                background: $hover-background-color;
+                .g--cta-06 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
             }
         }
     } @else if $hover-shadow and $hover-transform {
@@ -244,6 +286,10 @@
     .g--cta-06 {
         @if $one-col-bkt {
             &__wrapper{
+                @if $background-color {
+                    background: $background-color;   
+                }
+                
                 @media all and ($viewport-type: $one-col-bkt) {
                     width: 100%;
                 }
@@ -353,12 +399,6 @@
                 @if $hover-subtitle-color {
                     transition: color $time-b $ease-standard-a;
                 }
-
-                // @if $one-col-bkt {
-                //     @media all and ($viewport-type: $one-col-bkt) {
-                //         margin-bottom: $measure * 4;
-                //     }
-                // }
             }
 
             @if $btn-font {

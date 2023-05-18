@@ -10,10 +10,10 @@
 
 ```sh
 <div class="g--accordion-02" id="accordion-4" tf-ds-acc-body="accordion-4">
-    <div class="g--accordion-02__hd" tf-ds-acc-target="accordion-4">
+    <button class="g--accordion-02__hd" tf-ds-acc-target="accordion-4">
         <p class="g--accordion-02__hd__title">Accordion 1</p>
         <span class="g--accordion-02__hd__icon"></span>
-    </div>
+    </button>
     <div class="g--accordion-02__bd">
         <div class="g--accordion-02__bd__content b--content-a">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur nesciunt, sed quaerat ut a sapiente quia ea! Doloribus architecto aut voluptates quasi perspiciatis fugiat non nisi magni libero rem! Ducimus.

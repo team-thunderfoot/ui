@@ -59,11 +59,11 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-05{
     @include make-cta-05();
     @include make-cta-05-modifier(
-        $background-color: rgba(map-get($color-options, a), .1),
+        $background-color: map-get($color-options, f),
         $hover-background-color: map-get($color-options, e),
         $btn-class: g--btn-02,
         // $btn-font: false,
-        $border-radius: 90px,
+        $border-radius: 25px,
         $subtitle-color: map-get($color-options, b),
         $hover-subtitle-color: map-get($color-options, a),
         $subtitle-font: f,
@@ -75,9 +75,9 @@ To use it we have to import the css of the $btn-class in the entry
         // $title-font-weight: false,
         // $title-max-lines: false,
         // $text-align: false,
-        $one-col-bkt: tablets,
-        // $change-order-reponsive: false, // probar con true
-        $hide-img-reponsive: true,
+        $one-col-bkt: $tablets,
+        // $change-order-reponsive: false,
+        // $hide-img-reponsive: false,
         $img-position: center,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),

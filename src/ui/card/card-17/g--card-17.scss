@@ -3,8 +3,6 @@
     @include make-card-17-modifier(
         $background-color: map-get($color-options, e),
         $img-aspect-ratio: calc(16 / 9),
-        $border-radius: $measure*8,
-        $hover-background-color: map-get($color-options, h),
     );
     &--second{
         @include make-card-17-modifier(

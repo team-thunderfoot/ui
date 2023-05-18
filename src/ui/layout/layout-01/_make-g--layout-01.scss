@@ -39,6 +39,7 @@
     $subtitle-font: false,
     $subtitle-font-weight: false,
     $subtitle-color: false,
+    $btn-font: false,
     $btn-class: false,
     $btn-class-modifier: false
 ) {
@@ -77,6 +78,9 @@
             }
             @if $btn-class-modifier {
                 @extend .#{$btn-class-modifier} !optional;
+            }
+            @if $btn-font {
+                @extend .f--font-#{$btn-font} !optional;
             }
         }
     }

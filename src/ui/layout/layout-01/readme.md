@@ -32,6 +32,7 @@
 - $subtitle-font-weight,
 - $subtitle-color
 - $btn-class
+- $btn-font
 - $btn-class-modifier
 
 ## Use
@@ -42,13 +43,14 @@ To use it we have to import the css of the $btn-class in the entry
 .g--layout-01 {
     @include make-layout-01();
     @include make-layout-01-modifier(
-        $btn-class: g--btn-01,
         $subtitle-font: d,
         $title-font: b,
         $background-color: map-get($color-options, d),
-        $btn-class-modifier: g--btn-02--second,
         $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a)
+        $title-color: map-get($color-options, a),
+        $btn-class: g--btn-01,
+        //$btn-font: d,
+        //$btn-class-modifier: g--btn-02--second,
     );
 }
 ```

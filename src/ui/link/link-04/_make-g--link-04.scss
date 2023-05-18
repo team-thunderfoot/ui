@@ -1,82 +1,54 @@
 @mixin make-link-04() {
     text-decoration: none;
+    background-position: bottom left;
+    background-repeat: no-repeat;
     width: fit-content;
-    display: flex;
-    align-items: center;
-
-    svg {
-        width: $measure;
-        height: auto;
-        margin-left: $measure;
-    }
 }
 
 @mixin make-link-04-modifier(
     $text-color: false,
     $text-color-hover: false,
-    $icon-top: false,
-    $link-font: false,
-    $link-font-weight: false,
-    $artwork-color-fill: false,
-    $artwork-color-stroke: false,
-    $artwork-color-hover: false
+    $underline-color: false,
+    $underline-height: false
 ) {
     @if $text-color {
         color: $text-color;
     }
-    @if $text-color-hover {
-        transition: color $ease-standard-a $time-b;
+    @if $underline-color {
+        background-image: linear-gradient($underline-color, $underline-color);
     }
-    @if $link-font {
-        @extend .f--font-#{$link-font} !optional;
-    }
-    @if $link-font-weight {
-        font-weight: $link-font-weight;
-    }
-    svg {
-        @if $icon-top {
-            position: relative;
-            top: $icon-top;
-        }
-        transition: transform $ease-standard-a $time-b;
-        path {
-            @if $artwork-color-fill {
-                fill: $artwork-color-fill;
-            }
-            @if $artwork-color-stroke {
-                stroke: $artwork-color-stroke;
-            }
-            @if $artwork-color-hover and $artwork-color-fill {
-                transition: fill $ease-standard-a $time-b;
-            }
-            @if $artwork-color-hover and $artwork-color-stroke {
-                transition: stroke $ease-standard-a $time-b;
-            }
-        }
-    }
-    @media (hover: hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            @if $text-color-hover {
+
+    @if $text-color-hover and $underline-height  {
+        background-size: 0% $underline-height;
+        transition: background-size $time-b $ease-standard-a, color $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
                 color: $text-color-hover;
+                background-size: 100% $underline-height;
             }
         }
     }
-    @media (hover: hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            svg {
-                transform: translateX($measure);
-                path {
-                    @if $artwork-color-hover and $artwork-color-fill {
-                        fill: $artwork-color-hover;
-                    }
-                    @if $artwork-color-hover and $artwork-color-stroke {
-                        stroke: $artwork-color-hover;
-                    }
-                }
+
+    @else if $underline-height {
+        background-size: 0% $underline-height;
+        transition: background-size $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background-size: 100% $underline-height;
+            }
+        }
+    }
+    @else if $text-color-hover {
+        transition: color $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                color: $text-color-hover;
             }
         }
     }

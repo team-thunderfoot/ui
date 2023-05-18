@@ -1,13 +1,17 @@
-.g--link-04{
+.g--link-04 {
     @include make-link-04();
     @include make-link-04-modifier(
+        $underline-height: 1px,
         $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g),
-        $icon-top: 0px,
-        $link-font: c,
-        $link-font-weight: 600,
-        $artwork-color-fill: map-get($color-options, f),
-        $artwork-color-stroke: map-get($color-options, g),
-        $artwork-color-hover: map-get($color-options, h)
+        $underline-color: map-get($color-options, a),
+        $text-color-hover: map-get($color-options, g)
     );
+    &--second {
+        @include make-link-04-modifier(
+            $underline-height: 2px,
+            $text-color: map-get($color-options, a),
+            $underline-color: map-get($color-options, f),
+            $text-color-hover: map-get($color-options, h)
+        );
+    }
 }

@@ -4,45 +4,76 @@
 
 ![alt text][card-19]
 
-[card-19]: /src/img/global-components/card/card-19.png
+[card-19]: /src/img/global-components/card/card-19.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-19">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-19__media g--lazy-01">
-    <p class="g--card-19__title">Card 19 description lorem ipsum dolor sit amet consectetur.</p>
+    <div class="g--card-19__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-19__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
+    <div class="g--card-19__wrapper">
+        <p class="g--card-19__wrapper__meta">Lorem ipsum</p>
+        <p class="g--card-19__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
 </div>
 ```
 
-##### \*Aspect Ratio
-
-It is not necessary to add aspect-ratio because the images have height in the css.
+If you want the subtitle to be a c--content, the HTML should be:
+```html
+<div class="g--card-19">
+    <div class="g--card-19__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-19__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
+    <div class="g--card-19__wrapper">
+        <p class="g--card-19__wrapper__meta">Lorem ipsum</p>
+        <div class="g--card-19__wrapper__title c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+</div>
+```
 
 ## Editable variables
 
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
+- $full-image-height
+- $hover-img-zoom
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-border-radius
+- $img-height
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
 - $text-align
 - $title-color
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
-## Use
+## use
 
-```sh
-.g--card-19{
+```scss
+.g--card-19 {
     @include make-card-19();
     @include make-card-19-modifier(
-        $title-color: map-get($color-options, a),
-        // $text-align: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        // $full-image-height: false,
+        // $hover-img-zoom: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-border-radius: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $meta-color: false,
+        // $meta-font: false,
+        // $meta-font-weight: false,
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
 }
 ```

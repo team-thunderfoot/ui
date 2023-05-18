@@ -20,6 +20,19 @@
 </div>
 ```
 
+If you want the subtitle to be a c--content, the HTML should be:
+```html
+<div class="g--card-17">
+    <div class="g--card-17__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-17__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
+    <div class="g--card-17__wrapper">
+        <p class="g--card-17__wrapper__meta">Lorem ipsum</p>
+        <div class="g--card-17__wrapper__title c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+</div>
+```
+
 ## Editable variables
 
 - $background-color

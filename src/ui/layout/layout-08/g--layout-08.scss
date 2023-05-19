@@ -10,7 +10,7 @@
         $object-fit: cover,
         $img-position: false,
         $img-border-radius: $measure * 4,
-        $change-order-reponsive: true,
+        // $change-order-reponsive: false,
         $breakpoint: $tablets
         // $background-color: map-get($color-options, e),
     );

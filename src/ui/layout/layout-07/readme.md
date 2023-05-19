@@ -20,12 +20,9 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
             </div>
             <div class="f--col-5 f--offset-1 f--col-tabletm-6 f--offset-tabletm-0 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
                 <div class="g--layout-07__wrapper">
-                    <p class="g--layout-07__wrapper__meta">Lorem Ipsum</p>
                     <h2 class="g--layout-07__wrapper__title">Lorem ipsum dolor sit amet consectetur.</h2>
                     <p class="g--layout-07__wrapper__subtitle">Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie vulputate venenatis velit.</p>
-                    <div class="g--layout-07__wrapper__ft">
-                        <a href="#" class="g--layout-07__wrapper__ft__btn" target="_blank" rel="noopener noreferrer">Button</a>
-                    </div>
+                    <a href="" class="g--layout-07__wrapper__link">Button</a>
                 </div>
             </div>
         </div>

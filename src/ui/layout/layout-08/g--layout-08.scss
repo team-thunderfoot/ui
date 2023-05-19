@@ -1,16 +1,17 @@
-.g--layout-08{
-    @include make-layout-08(
-        $subtitle-font: d,
-        $title-font: c,
-        // $img-border-radius: default,
-        // $img-position: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $change-order-reponsive: true
-    );
+.g--layout-08 {
+    @include make-layout-08();
     @include make-layout-08-modifier(
-        $background-color: map-get($color-options, d),
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
+        $object-fit: cover,
+        $img-position: false,
+        $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
+        $breakpoint: $tablets
+        // $background-color: map-get($color-options, e),
     );
 }

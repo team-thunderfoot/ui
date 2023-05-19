@@ -43,8 +43,7 @@ To use it we have to import the css of the $btn-class in the entry
 .g--layout-01 {
     @include make-layout-01();
     @include make-layout-01-modifier(
-        $background-color: map-get($color-options, d),
-        $title-font: b,
+        $title-font: c,
         $title-font-weight: 600,
         $title-color: map-get($color-options, a),
         $subtitle-font: d,
@@ -52,6 +51,7 @@ To use it we have to import the css of the $btn-class in the entry
         $subtitle-color: map-get($color-options, a),
         $btn-font: d,
         $btn-class: g--btn-01,
+        // $background-color: map-get($color-options, d),
         // $btn-class-modifier: false
     );
 }

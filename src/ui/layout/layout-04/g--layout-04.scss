@@ -1,15 +1,15 @@
-.g--layout-04{
-    @include make-layout-04(
+.g--layout-04 {
+    @include make-layout-04();
+    @include make-layout-04-modifier(
         $meta-font: f,
         $subtitle-font: d,
         $title-font: c,
         // $img-border-radius: $measure*4,
-        $change-order-reponsive: true
-    );
-    @include make-layout-04-modifier(
+        $change-order-reponsive: true,
         $background-color: map-get($color-options, d),
         $meta-color: map-get($color-options, g),
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
+        $breakpoint: $tablets
     );
 }

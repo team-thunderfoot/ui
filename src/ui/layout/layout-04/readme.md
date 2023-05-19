@@ -9,7 +9,7 @@
 ## Html
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
-```sh
+```html
 <section class="g--layout-04">
     <div class="f--container">
         <div class="f--row">
@@ -32,26 +32,21 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $background-color: false by default
-- $img-border-radius: false by default
-- $img-position: false by default
-- $meta-color
 - $meta-font
-- $subtitle-color
 - $subtitle-font
-- $title-color
 - $title-font
-- $meta-font-weight: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-- $change-order-reponsive: false by default
-
-### For Modifiers
-
-- $background-color
+- $object-fit
+- $img-border-radius
+- $img-position
+- $meta-font-weight
+- $title-font-weight
+- $subtitle-font-weight
+- $change-order-reponsive
 - $meta-color
 - $subtitle-color
 - $title-color
+- $background-color
+- $breakpoint
 
 ## Use
 
@@ -59,25 +54,20 @@ To see it correctly we have to make sure display--flex in utilities is included 
 For the image, we have to add width, height and aspect ratio dynamically.
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
-```sh
-.g--layout-04{
-    @include make-layout-04(
-        $meta-font: g,
-        $subtitle-font: f,
-        $title-font: c,
-        // $object-fit: cover,
-        // $img-border-radius: default,
-        // $img-position: default,
-        // $meta-font-weight: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $change-order-reponsive: default
-    );
+```scss
+.g--layout-04 {
+    @include make-layout-04();
     @include make-layout-04-modifier(
-        $meta-color: map-get($color-options, a),
+        $meta-font: f,
+        $subtitle-font: d,
+        $title-font: c,
+        // $img-border-radius: $measure*4,
+        $change-order-reponsive: true,
+        $background-color: map-get($color-options, d),
+        $meta-color: map-get($color-options, g),
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $background-color: default,
+        $breakpoint: $tablets
     );
 }
 ```

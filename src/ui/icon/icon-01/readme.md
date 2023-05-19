@@ -34,42 +34,38 @@
 
 ## Editable variables
 
-- $background-color:
-- $background-color-hover: false by default
-- $border-color
-- $border-color-hover
-- $border-width
-- $height
-- $path-fill-color
-- $path-fill-color-hover
-- $width
-
-### For Modifiers
-
 - $background-color
-- $background-color-hover
+- $hover-background-color
+- $border-width
+- $border-style
 - $border-color
-- $border-color-hover
+- $hover-border-color
 - $path-fill-color
-- $path-fill-color-hover
+- $hover-path-fill-color
+- $hover-shadow
+- $hover-transform
+- $height
+- $width
 
 ## Use
 
 ```sh
-.g--icon-01{
-    @include make-icon-01(
-        $border-width: 1px,
-        $width: $measure * 6,
-        $height: $measure * 6
-    );
+.g--icon-01 {
+    @include make-icon-01();
 
     @include make-icon-01-modifier(
         $background-color: transparent,
+        // $hover-background-color: false,
+        $border-width: 1px,
+        $border-style: solid,
         $border-color: map-get($color-options, a ),
+        $hover-border-color: map-get($color-options, g ),
         $path-fill-color: map-get($color-options, a ),
-        $border-color-hover: map-get($color-options, g ),
-        $path-fill-color-hover: map-get($color-options, g ),
-        // $background-color-hover: default,
+        $hover-path-fill-color: map-get($color-options, g ),
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
+        $height: $measure * 5,
+        $width: $measure * 5,
     );
 }
 ```

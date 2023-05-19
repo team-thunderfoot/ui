@@ -64,7 +64,7 @@
             }
         }
     } @else if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadowcolor $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
             &:focus,

@@ -43,14 +43,16 @@ To use it we have to import the css of the $btn-class in the entry
 .g--layout-01 {
     @include make-layout-01();
     @include make-layout-01-modifier(
-        $subtitle-font: d,
-        $title-font: b,
         $background-color: map-get($color-options, d),
-        $subtitle-color: map-get($color-options, a),
+        $title-font: b,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
+        $subtitle-font: d,
+        $subtitle-font-weight: 400,
+        $subtitle-color: map-get($color-options, a),
+        $btn-font: d,
         $btn-class: g--btn-01,
-        //$btn-font: d,
-        //$btn-class-modifier: g--btn-02--second,
+        // $btn-class-modifier: false
     );
 }
 ```

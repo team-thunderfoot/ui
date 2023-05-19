@@ -45,6 +45,7 @@
     @include make-btn-03-modifier(
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g),
+        $icon-width: $measure,
         $icon-top: 0px,
         $btn-font: c,
         $btn-font-weight: 600,

@@ -1,49 +1,59 @@
 .g--icon-01 {
-    @include make-icon-01(
-        $border-width: 1px,
-        $width: $measure * 5,
-        $height: $measure * 5
-    );
+    @include make-icon-01();
 
     @include make-icon-01-modifier(
         $background-color: transparent,
+        // $hover-background-color: false,
+        $border-width: 1px,
+        $border-style: solid,
         $border-color: map-get($color-options, a ),
+        $hover-border-color: map-get($color-options, g ),
         $path-fill-color: map-get($color-options, a ),
-        // $background-color-hover: default,
-        $border-color-hover: map-get($color-options, g ),
-        $path-fill-color-hover: map-get($color-options, g ),
+        $hover-path-fill-color: map-get($color-options, g ),
+        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
+        $height: $measure * 5,
+        $width: $measure * 5,
     );
 
     &--second {
         @include make-icon-01-modifier(
-            $background-color: transparent,
-            $border-color: map-get($color-options, a ),
+            $hover-background-color: map-get($color-options, a ),
+            $border-style: dotted,
+            $border-color: map-get($color-options, g ),
+            $hover-border-color: map-get($color-options, f ),
             $path-fill-color: map-get($color-options, a ),
-            $background-color-hover: map-get($color-options, a ),
-            $border-color-hover: map-get($color-options, a ),
-            $path-fill-color-hover: map-get($color-options, b ),
+            $hover-path-fill-color: map-get($color-options, b ),
+            $hover-shadow: 0 0 $measure*2 map-get($color-options, a),
+            $hover-transform: none
         );
     }
 
     &--third {
         @include make-icon-01-modifier(
             $background-color: map-get($color-options, a ),
-            $border-color: map-get($color-options, a ),
+            $hover-background-color: map-get($color-options, g ),
+            $border-width: 2px,
+            $border-style: dashed,
+            $border-color: map-get($color-options, f ),
+            $hover-border-color: map-get($color-options, e ),
             $path-fill-color: map-get($color-options, b ),
-            $background-color-hover: map-get($color-options, g ),
-            $border-color-hover: map-get($color-options, g ),
-            $path-fill-color-hover: map-get($color-options, b ),
+            $hover-path-fill-color: map-get($color-options, b ),
+            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-transform: translateY($measure),
         );
     }
 
     &--fourth {
         @include make-icon-01-modifier(
             $background-color: map-get($color-options, a ),
+            $hover-background-color: transparent,
             $border-color: map-get($color-options, a ),
+            $hover-border-color: map-get($color-options, a ),
             $path-fill-color: map-get($color-options, b ),
-            $background-color-hover: transparent,
-            $border-color-hover: map-get($color-options, a ),
-            $path-fill-color-hover: map-get($color-options, a ),
+            $hover-path-fill-color: map-get($color-options, a ),
+            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-transform: translateY($measure),
         );
     }
 }

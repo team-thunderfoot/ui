@@ -1,9 +1,4 @@
-@mixin make-icon-01(
-    $border-width,
-    $height,
-    $width,
-) {
-    border: $border-width solid;
+@mixin make-icon-01() {
     border-radius: 100%;
     cursor: pointer;
     display: inline-flex;
@@ -11,8 +6,6 @@
     align-items: center;
     padding: $measure * 1.5;
     position: relative;
-    height: $height;
-    width: $width;
     svg {
         width: 100%;
         height: 100%;
@@ -20,47 +13,446 @@
 }
 
 @mixin make-icon-01-modifier(
-    $background-color,
-    $border-color,
-    $path-fill-color,
-    $border-color-hover,
-    $path-fill-color-hover,
-    $background-color-hover: false,
+    $background-color: false,
+    $hover-background-color: false,
+    $border-width: false,
+    $border-style: false,
+    $border-color: false,
+    $hover-border-color: false,
+    $path-fill-color: false,
+    $hover-path-fill-color: false,
+    $hover-shadow: false,
+    $hover-transform: false,
+    $height: false,
+    $width: false,
 ) {
-    background: $background-color;
-    border-color: $border-color;
-    transition: $border-color $time-b $ease-standard-a;
-    svg {
-        path {
-            fill: $path-fill-color;
-            transition: fill $time-b $ease-standard-a;
-        }
+    @if $background-color {
+        background: $background-color;
     }
 
-    @if $background-color-hover {
-        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
+    @if $hover-background-color or $hover-border-color or $hover-path-fill-color or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
 
+    @if $hover-background-color and $hover-border-color and $hover-path-fill-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
-            &:hover ,
-            &:focus ,
+            &:hover,
+            &:focus,
             &:active {
-                background: $background-color-hover;
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
             }
         }
-    } @else {
+    } @else if $hover-background-color and $hover-border-color and $hover-path-fill-color and $hover-shadow{
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-border-color and $hover-path-fill-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+                transform: $hover-transform;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-border-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-path-fill-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-border-color and $hover-path-fill-color {
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-border-color and $hover-shadow {
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-border-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-path-fill-color and $hover-shadow {
+        transition: background $time-b $ease-standard-a, fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-path-fill-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, fill $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-border-color{
+        transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-color: $hover-border-color;
+            }
+        }
+    } @else if $hover-background-color and $hover-path-fill-color{
+        transition: background $time-b $ease-standard-a, fill $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow{
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform{
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-border-color and $hover-path-fill-color  and $hover-shadow and $hover-transform{
+        transition: border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-border-color and $hover-path-fill-color  and $hover-shadow{
+        transition: border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-border-color and $hover-path-fill-color  and $hover-transform{
+        transition: border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                transform: $hover-transform;
+
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-border-color and $hover-shadow and $hover-transform{
+        transition: border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-border-color and $hover-path-fill-color {
+        transition: border-color $time-b $ease-standard-a, fill $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-border-color and $hover-shadow {
+        transition: border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-border-color and $hover-transform{
+        transition: border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-border-color {
         transition: border-color $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $hover-border-color;
+            }
+        }
+    } @else if $hover-path-fill-color and $hover-shadow {
+        transition: fill $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-path-fill-color and $hover-transform {
+        transition: fill $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+                
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-path-fill-color {
+        transition: fill $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                svg {
+                    path {
+                        fill: $hover-path-fill-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-shadow and $hover-transform{
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
     }
 
-    @media (hover : hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            border-color: $border-color-hover;
+    @if $border-width {
+        border-width: $border-width;
+    }
 
-            svg {
-                path {
-                    fill: $path-fill-color-hover;
-                }
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $height {
+        height: $height;
+    }
+
+    @if $width {
+        width: $width;
+    }
+    
+    svg {
+        @if $path-fill-color {
+            path {
+                fill: $path-fill-color;
+                transition: fill $time-b $ease-standard-a;
             }
         }
     }

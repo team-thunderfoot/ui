@@ -1,13 +1,17 @@
-.g--card-20{
-    @include make-card-20(
-        $background-size: cover,
-        $background-position: center,
-        // $border-radius: default,
-    );
-    @include make-card-20-modifier(
-        $mask-color: rgba(map-get($color-options, b), .5),
-        $title-color: map-get($color-options, a),
-        $title-font: f,
-        // $text-align: default
-    );
+.g--card-20 {
+    @include make-card-20();
+    &--second{
+        @include make-card-20-modifier(
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(1.1),
+            $meta-color: map-get($color-options, f),
+            $meta-font: f,
+            $meta-font-weight: false,
+            $text-align: center,
+            $title-color: map-get($color-options, f),
+            $title-font: b,
+            $title-font-weight: false,
+            $title-max-lines: 2,
+        );
+    }
 }

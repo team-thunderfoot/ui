@@ -49,8 +49,10 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 - $img-border-radius
 - $change-order-reponsive
 - $background-color
+- $btn-font
 - $btn-class
 - $btn-class-modifier
+- $breakpoint
 
 ## Use
 
@@ -75,7 +77,9 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $img-position: false,
         $img-border-radius: $measure * 4,
         $change-order-reponsive: true,
+        $btn-font: d,
         $btn-class: g--btn-01,
+        $breakpoint: $tablets
         // $btn-class-modifier: g--btn-01--second,
         // $background-color: map-get($color-options, e),
     );

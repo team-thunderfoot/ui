@@ -35,24 +35,24 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-$meta-font
-$subtitle-font
-$title-font
-$object-fit
-$img-border-radius
-$img-position
-$meta-font-weight
-$title-font-weight
-$subtitle-font-weight
-$change-order-reponsive
-$meta-color
-$subtitle-color
-$title-color
-$background-color
-$btn-font
-$btn-class
-$btn-class-modifier
-$breakpoint
+- $meta-font
+- $subtitle-font
+- $title-font
+- $object-fit
+- $img-border-radius
+- $img-position
+- $meta-font-weight
+- $title-font-weight
+- $subtitle-font-weight
+- $change-order-reponsive
+- $meta-color
+- $subtitle-color
+- $title-color
+- $background-color
+- $btn-font
+- $btn-class
+- $btn-class-modifier
+- $breakpoint
 
 ## Use
 

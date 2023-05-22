@@ -8,6 +8,7 @@
  */
 import Blazy from "blazy";
 import BackToTop from "./ui/back-top/back-top-01/back-top";
+import "@lottiefiles/lottie-player";
 
 class Index {
   constructor() {

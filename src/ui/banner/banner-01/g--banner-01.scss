@@ -1,0 +1,9 @@
+.g--banner-01 {
+    @include make-banner-01();
+    @include make-banner-01-modifier(
+        $background-color: map-get($color-options, a),
+        $title-font:f,
+        $title-font-weight: 400,
+        $title-color: map-get($color-options, b)
+    );
+}

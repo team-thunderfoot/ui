@@ -45,13 +45,13 @@
     @include make-btn-03-modifier(
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g),
-        $icon-width: $measure,
         $icon-top: 0px,
-        $btn-font: c,
+        $icon-width: $measure,
+        $btn-font: f,
         $btn-font-weight: 600,
-        $artwork-color-fill: map-get($color-options, f),
-        $artwork-color-stroke: map-get($color-options, g),
-        $artwork-color-hover: map-get($color-options, h)
+        // $artwork-color-fill: map-get($color-options, a),
+        $artwork-color-stroke: map-get($color-options, a),
+        $artwork-color-hover: map-get($color-options, g)
     );
 }
 ```

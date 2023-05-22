@@ -1,15 +1,15 @@
-# Layout-05
+# Layout-09
 
 ## Layout
 
-![alt text][layout-05]
+![alt text][layout-09]
 
-[layout-05]: /src/img/global-components/layout/layout-05.png
+[layout-09]: /src/img/global-components/layout/layout-09.png
 
 ## Html
 If we change the order in responsive we have to add "f--order-tablets-1" class to the text-wrapper column.
 
-```sh
+```html
 <section class="g--layout-09">
     <div class="f--container">
         <div class="f--row">
@@ -34,27 +34,21 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $background-color: false by default
-- $btn-class
-- $btn-class-modifier: false by default
-- $img-border-radius: false by default
-- $img-position: false by default
-- $btn-font: false by default
-- $subtitle-color
 - $subtitle-font
-- $title-color
 - $title-font
-- $meta-font-weight: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-- $change-order-reponsive: false by default
-
-### For Modifiers
-
-- $background-color
-- $btn-class-modifier
+- $object-fit
+- $img-border-radius
+- $img-position
+- $title-font-weight
+- $subtitle-font-weight
+- $change-order-reponsive
 - $subtitle-color
 - $title-color
+- $background-color
+- $btn-font
+- $btn-class
+- $btn-class-modifier
+- $breakpoint
 
 ## Use
 
@@ -62,26 +56,25 @@ To see it correctly we have to make sure display--flex in utilities is included 
 For the image, we have to add width, height and aspect ratio dynamically.
 If we change the order in responsive we have to add "f--order-tablets-1" class to the text-wrapper column.
 
-```sh
-.g--layout-09{
-    @include make-layout-09(
-        $btn-class: g--btn-01,
+```scss
+.g--layout-09 {
+    @include make-layout-09();
+    @include make-layout-09-modifier(
         $subtitle-font: f,
         $title-font: c,
-        // $object-fit: cover,
-        // $btn-font: default,
-        // $img-border-radius: default,
-        // $img-position: default,
-        // $meta-font-weight: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $change-order-reponsive: default,
-    );
-    @include make-layout-09-modifier(
+        $object-fit: cover,
+        // $img-border-radius: $measure * 4,
+        // $img-position: false,
+        $title-font-weight: 400,
+        $subtitle-font-weight: 400,
+        $change-order-reponsive: true,
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $background-color: default,
-        // $btn-class-modifier: default,
+        // $background-color: false,
+        $btn-font: f,
+        $btn-class: g--btn-01,
+        // $btn-class-modifier: false,
+        $breakpoint: $tablets
     );
 }
 ```

@@ -37,16 +37,16 @@
 .g--btn-02{
     @include make-btn-02();
     @include make-btn-02-modifier(
-        $border-width: 2px,
+        $border-width: 1px,
         $border-color: map-get($color-options, a),
         $border-color-hover: map-get($color-options, g),
         $border-style: solid,
-        $font: c,
-        $font-weight: 600,
-        $text-color: map-get($color-options, b),
-        $text-color-hover: map-get($color-options, a),
-        $background-color: map-get($color-options, f),
-        $background-color-hover: map-get($color-options, g)
+        $font: f,
+        $font-weight: 400,
+        $text-color: map-get($color-options, a),
+        $text-color-hover: map-get($color-options, g),
+        // $background-color: map-get($color-options, f),
+        // $background-color-hover: map-get($color-options, g)
     );
 }
 ```

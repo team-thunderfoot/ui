@@ -1,29 +1,26 @@
-@mixin make-social-01(
-    $icon-class
-) {
+@mixin make-social-01() {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
 
     &__item{
         &:not(:last-child){
             margin-right: $measure * 2;
         }
 
-        &__link {
-            @extend .#{$icon-class} !optional;
-        }
+        &__link {}
     }
 }
 
 @mixin make-social-01-modifier(
-    $icon-class-modifier: false
+    $icon-class: false,
 ) {
     .g--social-01 {
-        @if $icon-class-modifier {
-            &__item {
-                &__link {
-                    @extend .#{$icon-class-modifier} !optional;
+        &__item {
+            &__link {
+                @if $icon-class {
+                    @extend .#{$icon-class} !optional;
                 }
             }
         }

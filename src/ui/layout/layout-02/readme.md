@@ -37,7 +37,7 @@
 .g--layout-02 {
     @include make-layout-02();
     @include make-layout-02-modifier(
-        $title-font: a,
+        $title-font: c,
         $title-font-weight: 600,
         $title-color: map-get($color-options, a),
         $subtitle-font: f,

@@ -60,7 +60,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
     @include make-layout-04-modifier(
         $meta-font: f,
         $meta-font-weight: 400,
-        $meta-color: map-get($color-options, g),
+        $meta-color: map-get($color-options, a),
         $subtitle-font: d,
         $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
@@ -71,7 +71,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         // $img-border-radius: false,
         // $img-position: false,
         $change-order-reponsive: true,
-        $background-color: map-get($color-options, d),
+        // $background-color: map-get($color-options, d),
         $breakpoint: $tablets
     );
 }

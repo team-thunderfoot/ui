@@ -39,16 +39,31 @@
 .g--btn-01{
     @include make-btn-01();
     @include make-btn-01-modifier(
-        // $border-color: false,
-        // $border-color-hover: false,
-        // $border-width: false,
-        // $border-style: false,
-        // $font: false,
-        // $font-weight: false,
-        // $text-color: false,
-        // $text-color-hover: false,
-        // $background-color: false,
-        // $background-color-hover: false
+        $border-color: map-get($color-options, a),
+        $border-color-hover: map-get($color-options, g),
+        $border-width: 1px,
+        $border-style: solid,
+        $font: f,
+        $font-weight: 400,
+        $text-color: map-get($color-options, a),
+        $text-color-hover: map-get($color-options, g),
+        // $background-color: transparent,
+        // $background-color-hover: map-get($color-options, a)
     );
+
+    &--second {
+        @include make-btn-01-modifier(
+            $border-color: map-get($color-options, a),
+            $border-color-hover: map-get($color-options, a),
+            $border-width: 1px,
+            $border-style: solid,
+            $font: f,
+            $font-weight: 400,
+            $text-color: map-get($color-options, b),
+            $text-color-hover: map-get($color-options, a),
+            $background-color: map-get($color-options, a),
+            $background-color-hover: map-get($color-options, b)
+        );
+    }
 }
 ```

@@ -1,0 +1,31 @@
+@mixin make-banner-01() {
+    padding: $measure 0;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+@mixin make-banner-01-modifier(
+    $background-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-color: false
+) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+    .g--banner-01 {
+        &__title {
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+            @if $title-color {
+                color: $title-color;
+            }
+        }
+    }
+}

@@ -15,12 +15,18 @@
 
     &--second {
         @include make-btn-01-modifier(
-            $border-color: map-get($color-options, a),
             $border-color-hover: map-get($color-options, a),
-            $border-width: 1px,
-            $border-style: solid,
-            $font: f,
-            $font-weight: 400,
+            $text-color: map-get($color-options, b),
+            $text-color-hover: map-get($color-options, a),
+            $background-color: map-get($color-options, a),
+            $background-color-hover: map-get($color-options, b)
+        );
+    }
+
+    &--third {
+        @include make-btn-01-modifier(
+            $border-color: map-get($color-options, b),
+            $border-color-hover: map-get($color-options, b),
             $text-color: map-get($color-options, b),
             $text-color-hover: map-get($color-options, a),
             $background-color: map-get($color-options, a),

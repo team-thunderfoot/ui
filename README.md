@@ -42,7 +42,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 | Accordion   | Image |
 | ----------- | ----------- |
-| [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)      | ![alt text][accordion-01] [accordion-01]: https://github.com/team-thunderfoot/ui/blob/main/src/img/global-components/accordion/accordion-01.png       |
+| [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)      | [![accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/img/global-components/accordion/accordion-01.png)]      |
 | Paragraph   | Text        |
 
 - [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)

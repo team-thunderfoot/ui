@@ -49,8 +49,8 @@
         // $font-weight: 400,
         // $text-color: map-get($color-options, a),
         // $text-color-hover: map-get($color-options, g),
-        // $background-color: false,
-        // $background-color-hover: false
+        // $background-color: map-get($color-options, b),
+        // $background-color-hover: map-get($color-options, d)
     );
 }
 ```

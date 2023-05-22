@@ -22,47 +22,41 @@
 
 ## Editable variables
 
-- $artwork-color
 - $input-background-color
 - $input-background-color-autofill
-- $input-border-color
 - $input-border-radius
 - $input-border-width
-- $input-font
-- $input-text-color
-- $input-font-weight: false by default
-- $placeholder-color
-- $title-font
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $artwork-color
-- $input-background-color
-- $input-background-color-autofill
+- $input-border-style
 - $input-border-color
-- $placeholder-color
 - $input-text-color
+- $input-font
+- $input-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
+- $artwork-color
+- $placeholder-color
 
 ## Use
 
 ```sh
 .g--search-01{
-    @include make-search-01(
-        $input-border-radius: 0,
-        $input-border-width: 1px,
-        $input-font: f,
-        $title-font: f,
-        // $input-font-weight: default,
-        // $title-font-weight: default
-    );
+    @include make-search-01();
     @include make-search-01-modifier(
-        $artwork-color: map-get($color-options, a),
         $input-background-color: transparent,
         $input-background-color-autofill: transparent,
-        $input-border-color: map-get($color-options, a),
-        $placeholder-color: rgba(map-get($color-options, a), .5),
-        $input-text-color: map-get($color-options, a),
+        $input-border-radius: 8px,
+        $input-border-width: 3px,
+        $input-border-style: dotted,
+        $input-border-color: map-get($color-options, e),
+        $input-text-color: map-get($color-options, f),
+        $input-font: f,
+        // $input-font-weight: false,
+        $title-color: map-get($color-options, g),
+        $title-font: f,
+        // $title-font-weight: false
+        $artwork-color: map-get($color-options, g),
+        $placeholder-color: rgba(map-get($color-options, g), .5),
     );
 }
 ```

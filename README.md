@@ -14,7 +14,7 @@ npm i @teamthunderfoot/ui
 
 Import all mixins before any global component
 
-```sh
+```js
 @import '@/node_modules/@teamthunderfoot/ui/src/mixins';
 ```
 
@@ -22,7 +22,7 @@ Import all mixins before any global component
 
 Create one SCSS entry for each JS entry and import global mixins before any global component
 
-```sh
+```js
 @import '@/node_modules/@teamthunderfoot/ui/src/mixins';
 ```
 
@@ -33,6 +33,14 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--404-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/404/404-01/readme.md)
 
 ### Accordion
+
+| - [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md) | ![alt text][accordion-01]
+
+[accordion-01]: https://github.com/team-thunderfoot/ui/blob/main/src/img/global-components/accordion/accordion-01.png |
+| - [g--accordion-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-02/readme.md) | ![alt text][accordion-02]
+
+[accordion-02]: https://github.com/team-thunderfoot/ui/blob/main/src/img/global-components/accordion/accordion-02.png |
+
 
 - [g--accordion-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-01/readme.md)
 - [g--accordion-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/accordion/accordion-02/readme.md)

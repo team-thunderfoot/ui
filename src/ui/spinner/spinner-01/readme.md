@@ -20,10 +20,6 @@
 
 - $spinner-color
 
-### For Modifiers
-
-- $spinner-color
-
 ## Use
 
 ```sh

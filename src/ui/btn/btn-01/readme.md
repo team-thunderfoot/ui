@@ -25,6 +25,7 @@
 - $border-color
 - $border-color-hover
 - $border-width
+- $border-radius
 - $border-style
 - $font
 - $font-weight
@@ -39,31 +40,17 @@
 .g--btn-01{
     @include make-btn-01();
     @include make-btn-01-modifier(
-        $border-color: map-get($color-options, a),
-        $border-color-hover: map-get($color-options, g),
-        $border-width: 1px,
-        $border-style: solid,
-        $font: f,
-        $font-weight: 400,
-        $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g),
-        // $background-color: transparent,
-        // $background-color-hover: map-get($color-options, a)
+        // $border-color: map-get($color-options, a),
+        // $border-color-hover: map-get($color-options, g),
+        // $border-width: 1px 4px 4px 1px,
+        // $border-radius: 200px,
+        // $border-style: solid,
+        // $font: f,
+        // $font-weight: 400,
+        // $text-color: map-get($color-options, a),
+        // $text-color-hover: map-get($color-options, g),
+        // $background-color: false,
+        // $background-color-hover: false
     );
-
-    &--second {
-        @include make-btn-01-modifier(
-            $border-color: map-get($color-options, a),
-            $border-color-hover: map-get($color-options, a),
-            $border-width: 1px,
-            $border-style: solid,
-            $font: f,
-            $font-weight: 400,
-            $text-color: map-get($color-options, b),
-            $text-color-hover: map-get($color-options, a),
-            $background-color: map-get($color-options, a),
-            $background-color-hover: map-get($color-options, b)
-        );
-    }
 }
 ```

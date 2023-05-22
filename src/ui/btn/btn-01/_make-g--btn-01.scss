@@ -1,5 +1,4 @@
 @mixin make-btn-01() {
-    border-radius: 200px;
     display: inline-block;
     padding: $measure $measure * 3;
     text-align: center;
@@ -15,6 +14,7 @@
     $border-color: false,
     $border-color-hover: false,
     $border-width: false,
+    $border-radius: false,
     $border-style: false,
     $font: false,
     $font-weight: false,
@@ -23,7 +23,9 @@
     $background-color: false,
     $background-color-hover: false
 ) {
-
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
     @if $border-color {
         border-color: $border-color;
     }

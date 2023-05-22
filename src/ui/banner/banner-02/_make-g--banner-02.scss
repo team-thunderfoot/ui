@@ -1,0 +1,69 @@
+@mixin make-banner-02() {
+    padding: $measure * 3 0;
+    text-align: center;
+
+    &__wrapper {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+
+        &__btn {
+            margin-left: $measure * 3;
+        }
+    }
+}
+
+@mixin make-banner-02-modifier(
+    $background-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-color: false,
+    $btn-font: false,
+    $btn-class: false,
+    $btn-class-modifier: false,
+    $breakpoint: false
+) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+
+    .g--banner-02 {
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type:$breakpoint) {
+                    display: block;
+                }
+            }
+            &__title {
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-color {
+                    color: $title-color;
+                }
+            }
+
+            &__btn {
+                @if $btn-class {
+                    @extend .#{$btn-class} !optional;
+                }
+                @if $btn-class-modifier {
+                    @extend .#{$btn-class-modifier} !optional;
+                }
+                @if $btn-font {
+                    @extend .f--font-#{$btn-font} !optional;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type:$breakpoint) {
+                        margin-top: $measure * 2;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

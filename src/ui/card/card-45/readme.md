@@ -4,11 +4,11 @@
 
 ![alt text][card-45]
 
-[card-45]: /src/img/global-components/card/card-58.png
+[card-45]: /src/img/global-components/card/card-45.png
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-45">
     <div class="g--card-45__media-wrapper">
     <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-45__media-wrapper__media g--lazy-01">
@@ -29,47 +29,49 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
-- $img-border-radius: false by default
-- $icon-class,
-- $text-align: false by default
-- $subtitle-color
-- $subtitle-font
-- $title-color
 - $title-font
-- $img-background-color: false by default
-- $img-background-color-hover: false by default
-- $title-color-hover: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-
-### For modifiers
-
+- $subtitle-font
+- $img-border-radius
+- $img-object-fit
+- $img-position
+- $img-width
+- $img-height
+- $img-aspect-ratio
+- $title-font-weight
+- $subtitle-font-weight
+- $subtitle-color
+- $title-color
 - $img-background-color
 - $img-background-color-hover
-- $icon-class-modifier,
-- $title-color-hover
-- $subtitle-color
+- $icon-class
+- $icon-class-modifier
 - $text-align
-- $title-color
+- $title-color-hover
 
 ## use
 
-```sh
-.g--card-45{
-    @include make-card-45(
-        // $img-border-radius: default,
-        $icon-class: g--icon-01,
-        $title-font: d,
-        $subtitle-font: f,
-    );
+```scss
+.g--card-45 {
+    @include make-card-45();
     @include make-card-45-modifier(
-        // $text-align: default,
+        $icon-class:  g--icon-01,
+        $title-font: e,
+        $subtitle-font: f,
+        // $img-border-radius: false,
+        // $img-object-fit: false,
+        // $img-position: false,
+        // $img-width: false,
+        // $img-height: false,
+        // $img-aspect-ratio: false,
+        // $title-font-weight: false,
+        // $subtitle-font-weight: false,
         $title-color: map-get($color-options, a),
         $subtitle-color: map-get($color-options, a),
-        $img-background-color: map-get($color-options, f),
-        // $img-background-color-hover: map-get($color-options, e),
-        // $icon-class-modifier: default,
-        // $title-color-hover: map-get($color-options, g)
+        $img-background-color: map-get($color-options, a),
+        $img-background-color-hover: map-get($color-options, g),
+        // $icon-class-modifier: false,
+        // $text-align: false,
+        $title-color-hover: map-get($color-options, g)
     );
 }
 ```

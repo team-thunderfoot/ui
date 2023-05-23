@@ -1,12 +1,12 @@
-.g--card-07{
-    @include make-card-07();
-    @include make-card-07-modifier(
+.g--card-05{
+    @include make-card-05();
+    @include make-card-05-modifier(
         $link-class: g--link-02,
         $title-color: map-get($color-options, a),
         $title-font: b,
     );
     &--second{
-        @include make-card-07-modifier(
+        @include make-card-05-modifier(
             $subtitle-color: map-get($color-options, g),
             $title-color: map-get($color-options, g),
             $title-font: c,

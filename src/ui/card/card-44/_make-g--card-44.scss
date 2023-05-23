@@ -1,64 +1,42 @@
-@mixin make-card-44(
-    $subtitle-font,
-    $title-font,
-    $img-border-radius: false,
-    $title-font-weight: false,
-    $subtitle-font-weight: false
-) {
-    padding: 0 $measure * 4;
+@mixin make-card-44() {
+    padding: 0 $measure * 2;
     width: 100%;
 
     @media all and ($viewport-type: $tabletm) {
-        padding: 0 $measure * 2;
-    }
-
-    @media all and ($viewport-type: $mobile) {
         padding: 0;
     }
 
     &__media-wrapper {
-        margin-bottom: $measure * 2;
+        margin-bottom: $measure * 1.5;
         width: 100%;
-
-        @if $img-border-radius {
-            border-radius: $img-border-radius;
-            overflow: hidden;
-        }
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
-        }
 
         @media all and ($viewport-type: $mobile) {
             height: auto;
         }
+
         &__media {
             display: block;
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            object-position: bottom center;
         }
     }
 
     &__title {
-        @extend .f--font-#{$title-font} !optional;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
-    }
-
-    &__subtitle {
-        @extend .f--font-#{$subtitle-font} !optional;
-        @if $subtitle-font-weight {
-            font-weight: $subtitle-font-weight;
-        }
+        margin-bottom: $measure * 0.5;
     }
 }
 
 @mixin make-card-44-modifier(
-    $subtitle-color,
-    $title-color,
+    $subtitle-font: false,
+    $title-font: false,
+    $img-border-radius: false,
+    $img-object-fit: false,
+    $img-position: false,
+    $img-width: false,
+    $img-height: false,
+    $img-aspect-ratio: false,
+    $title-font-weight: false,
+    $subtitle-font-weight: false,
+    $subtitle-color: false,
+    $title-color: false,
     $img-background-color: false,
     $img-background-color-hover: false,
     $text-align: false,
@@ -144,18 +122,68 @@
     }
 
     .g--card-44 {
-        @if $img-background-color {
-            &__media-wrapper {
+        &__media-wrapper {
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
+                overflow: hidden;
+            }
+            @if $img-background-color {
                 background: $img-background-color;
+            }
+
+            &__media {
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
+                } @else {
+                    object-fit: contain;
+                }
+
+                @if $img-position {
+                    object-position: $img-position;
+                } @else {
+                    object-position: bottom center;
+                }
+
+                @if $img-width {
+                    width: $img-width;
+                } @else {
+                    width: 100%;
+                }
+
+                @if $img-height {
+                    height: $img-height;
+                } @else {
+                    height: auto;
+                }
+
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
             }
         }
 
         &__title {
-            color: $title-color;
+            @if $title-color {
+                color: $title-color;
+            }
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
 
         &__subtitle {
-            color: $subtitle-color;
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
         }
     }
 }

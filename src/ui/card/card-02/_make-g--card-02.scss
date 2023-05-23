@@ -1,4 +1,4 @@
-@mixin make-card-03() {
+@mixin make-card-02() {
     padding: 0 $measure*2;
     width: 100%;
     display: block;
@@ -22,7 +22,7 @@
 
 }
 
-@mixin make-card-03-modifier(
+@mixin make-card-02-modifier(
     $hover-img-zoom: false,
     $hover-title-color: false,
     $hover-transform: false,
@@ -62,7 +62,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-03{
+                .g--card-02{
                     &__title{
                         color: $hover-title-color;
                     }
@@ -75,7 +75,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-03{
+                .g--card-02{
                     &__media-wrapper{
                         &__media{
                             transform: scale($hover-img-zoom);
@@ -87,7 +87,7 @@
     }
     @if $text-align == "center" {
         text-align: center;
-        .g--card-03{
+        .g--card-02{
             &__media-wrapper{
                 margin-left: auto;
                 margin-right: auto;
@@ -101,7 +101,7 @@
     }
     @if $text-align == "left" {
         text-align: left;
-        .g--card-03{
+        .g--card-02{
             &__media-wrapper{
                 margin-left: 0;
                 margin-right: auto;
@@ -114,7 +114,7 @@
     }
     @if $text-align == "right" {
         text-align: right;
-        .g--card-03{
+        .g--card-02{
             &__media-wrapper{
                 margin-left: auto;
                 margin-right: 0;
@@ -125,7 +125,7 @@
             }
         }
     }
-    .g--card-03{
+    .g--card-02{
         &__media-wrapper{
             @if $img-aspect-ratio {
                 aspect-ratio: $img-aspect-ratio;

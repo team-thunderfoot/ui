@@ -1,11 +1,11 @@
-.g--card-03{
-    @include make-card-03();
-    @include make-card-03-modifier(
+.g--card-02{
+    @include make-card-02();
+    @include make-card-02-modifier(
         $title-color: map-get($color-options, a),
         $title-font: b,
     );
     &--second{
-        @include make-card-03-modifier(
+        @include make-card-02-modifier(
             $subtitle-color: map-get($color-options, g),
             $title-color: map-get($color-options, g),
             $title-font: c,

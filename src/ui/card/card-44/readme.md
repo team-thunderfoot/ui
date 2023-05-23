@@ -1,20 +1,20 @@
-# Card-58
+# Card-44
 
 ## Layout
 
-![alt text][card-58]
+![alt text][card-44]
 
-[card-58]: /src/img/global-components/card/card-58.png
+[card-44]: /src/img/global-components/card/card-44.png
 
 ## Html for a card
 
 ```sh
-<div class="g--card-58">
-    <div class="g--card-58__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-58__media-wrapper__media g--lazy-01">
+<div class="g--card-44">
+    <div class="g--card-44__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-44__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-58__title">Card 58</h3>
-    <h4 class="g--card-58__subtitle">Job Position</h4>
+    <h3 class="g--card-44__title">Card 44</h3>
+    <h4 class="g--card-44__subtitle">Job Position</h4>
 </div>
 ```
 
@@ -48,15 +48,15 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ## use
 
 ```sh
-.g--card-58{
-    @include make-card-58(
+.g--card-44{
+    @include make-card-44(
         $subtitle-font: f,
         $title-font: d,
         // $img-border-radius: default,
         // $title-font-weight: default,
         // $subtitle-font-weight: default,
     );
-    @include make-card-58-modifier(
+    @include make-card-44-modifier(
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         // $text-align: default,

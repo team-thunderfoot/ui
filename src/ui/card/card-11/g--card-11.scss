@@ -1,12 +1,12 @@
-.g--card-15{
-    @include make-card-15();
-    @include make-card-15-modifier(
+.g--card-11{
+    @include make-card-11();
+    @include make-card-11-modifier(
         $link-class: g--link-02,
         $title-color: map-get($color-options, a),
         $title-font: b,
     );
     &--second{
-        @include make-card-15-modifier(
+        @include make-card-11-modifier(
             $title-color: map-get($color-options, g),
             $title-font: c,
             $hover-img-zoom: 1.2,

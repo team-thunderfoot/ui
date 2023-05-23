@@ -1,9 +1,7 @@
-@mixin make-card-14() {
-    padding: $measure*7 $measure*5;
+@mixin make-card-08() {
+    padding: 0 $measure*2;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
     &__media-wrapper{
         overflow: hidden;
         margin-bottom: $measure * 2;
@@ -15,26 +13,10 @@
         }
     }
 
-    &__title {
-        margin-bottom: $measure * 2;
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
-        }
-    }
-    &__link{
-        margin-top: auto;
-    }
 }
 
-@mixin make-card-14-modifier(
-    $background-color: false,
-    $border-color: false,
-    $border-style: false,
-    $border-width: false,
-    $border-radius: false,
-    $hover-background-color: false,
+@mixin make-card-08-modifier(
     $hover-img-zoom: false,
-    $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
     $img-aspect-ratio: false,
@@ -42,8 +24,6 @@
     $img-position: false,
     $img-size: false,
     $img-width: false,
-    $link-class: false,
-    $link-font: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
@@ -52,82 +32,11 @@
 
 ) {
 
-    @if $background-color {
-        background: $background-color;
-    }
-    @if $border-color {
-        border-color: $border-color;
-    }
-    @if $border-style {
-        border-style: $border-style;
-    }
-    @if $border-width {
-        border-width: $border-width;
-    }
-    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
+    @if $hover-title-color or $hover-img-zoom or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
-    @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color and $hover-shadow{
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-color and $hover-transform{
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color{
-        transition: background $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
+    @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
@@ -142,7 +51,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-14{
+                .g--card-08{
                     &__title{
                         color: $hover-title-color;
                     }
@@ -155,7 +64,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-14{
+                .g--card-08{
                     &__media-wrapper{
                         &__media{
                             transform: scale($hover-img-zoom);
@@ -165,13 +74,9 @@
             }
         }
     }
-    @if $border-radius {
-        border-radius: $border-radius;
-    }
     @if $text-align == "center" {
         text-align: center;
-        align-items: center;
-        .g--card-14{
+        .g--card-08{
             &__media-wrapper{
                 margin-left: auto;
                 margin-right: auto;
@@ -185,8 +90,7 @@
     }
     @if $text-align == "left" {
         text-align: left;
-        align-items: flex-start;
-        .g--card-14{
+        .g--card-08{
             &__media-wrapper{
                 margin-left: 0;
                 margin-right: auto;
@@ -199,8 +103,7 @@
     }
     @if $text-align == "right" {
         text-align: right;
-        align-items: flex-end;
-        .g--card-14{
+        .g--card-08{
             &__media-wrapper{
                 margin-left: auto;
                 margin-right: 0;
@@ -211,7 +114,7 @@
             }
         }
     }
-    .g--card-14{
+    .g--card-08{
         &__media-wrapper{
             @if $img-aspect-ratio {
                 aspect-ratio: $img-aspect-ratio;
@@ -263,14 +166,6 @@
             }
             @if $hover-title-color {
                 transition: color $time-b $ease-standard-a;
-            }
-        }
-        &__link{
-            @if $link-class {
-                @extend .#{$link-class} !optional;
-            }
-            @if $link-font {
-                @extend .f--font-#{$link-font} !optional;
             }
         }
     }

@@ -1,31 +1,31 @@
-# Card-14
+# Card-10
 
 ## Layout
 
-![alt text][card-14]
+![alt text][card-10]
 
-[card-14]: /src/img/global-components/card/card-14.png
+[card-10]: /src/img/global-components/card/card-10.jpg
 
 ## Html for a card
 
 ```html
-<div class="g--card-14">
-    <div class="g--card-14__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-14__media-wrapper__media g--lazy-01">
+<div class="g--card-10">
+    <div class="g--card-10__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-10__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-14__title">Lorem ipsum</h3>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-14__link">This is a link</a>
+    <h3 class="g--card-10__title">Lorem ipsum</h3>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-10__link">This is a link</a>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
 ```html
-<div class="g--card-14">
-    <div class="g--card-14__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-14__media-wrapper__media g--lazy-01">
+<div class="g--card-10">
+    <div class="g--card-10__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-10__media-wrapper__media g--lazy-01">
     </div>
-    <div class="g--card-14__title c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-14__link">This is a link</a>
+    <div class="g--card-10__title c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-10__link">This is a link</a>
 </div>
 ```
 
@@ -61,9 +61,9 @@ It is not necessary to add aspect-ratio.
 ## Use
 
 ```scss
-.g--card-14{
-    @include make-card-14();
-    @include make-card-14-modifier(
+.g--card-10{
+    @include make-card-10();
+    @include make-card-10-modifier(
         // $background-color: false,
         // $border-color: false,
         // $border-style: false,

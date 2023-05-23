@@ -1,11 +1,11 @@
-.g--card-11{
-    @include make-card-11();
-    @include make-card-11-modifier(
+.g--card-08{
+    @include make-card-08();
+    @include make-card-08-modifier(
         $title-color: map-get($color-options, a),
         $title-font: b,
     );
     &--second{
-        @include make-card-11-modifier(
+        @include make-card-08-modifier(
             $title-color: map-get($color-options, g),
             $title-font: c,
             $hover-img-zoom: 1.2,

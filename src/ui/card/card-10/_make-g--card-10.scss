@@ -1,4 +1,4 @@
-@mixin make-card-13() {
+@mixin make-card-10() {
     padding: $measure*7 $measure*5;
     width: 100%;
     display: flex;
@@ -21,14 +21,16 @@
             margin-bottom: $measure;
         }
     }
-
     &__link{
         margin-top: auto;
     }
 }
 
-@mixin make-card-13-modifier(
+@mixin make-card-10-modifier(
     $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
     $border-radius: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
@@ -47,10 +49,20 @@
     $title-font: false,
     $title-font-weight: false,
     $title-max-lines: false,
+
 ) {
 
     @if $background-color {
         background: $background-color;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
     }
     @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
         text-decoration: none !important;
@@ -130,7 +142,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-13{
+                .g--card-10{
                     &__title{
                         color: $hover-title-color;
                     }
@@ -143,7 +155,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-13{
+                .g--card-10{
                     &__media-wrapper{
                         &__media{
                             transform: scale($hover-img-zoom);
@@ -159,7 +171,7 @@
     @if $text-align == "center" {
         text-align: center;
         align-items: center;
-        .g--card-13{
+        .g--card-10{
             &__media-wrapper{
                 margin-left: auto;
                 margin-right: auto;
@@ -174,7 +186,7 @@
     @if $text-align == "left" {
         text-align: left;
         align-items: flex-start;
-        .g--card-13{
+        .g--card-10{
             &__media-wrapper{
                 margin-left: 0;
                 margin-right: auto;
@@ -188,7 +200,7 @@
     @if $text-align == "right" {
         text-align: right;
         align-items: flex-end;
-        .g--card-13{
+        .g--card-10{
             &__media-wrapper{
                 margin-left: auto;
                 margin-right: 0;
@@ -199,7 +211,7 @@
             }
         }
     }
-    .g--card-13{
+    .g--card-10{
         &__media-wrapper{
             @if $img-aspect-ratio {
                 aspect-ratio: $img-aspect-ratio;

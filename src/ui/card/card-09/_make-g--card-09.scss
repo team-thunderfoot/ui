@@ -1,4 +1,4 @@
-@mixin make-card-12() {
+@mixin make-card-09() {
     padding: $measure*7 $measure*5;
     width: 100%;
     display: block;
@@ -38,7 +38,7 @@
     }
 }
 
-@mixin make-card-12-modifier(
+@mixin make-card-09-modifier(
     $background-position: false,
     $background-size: false,
     $border-radius: false,
@@ -99,7 +99,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-12{
+                .g--card-09{
                     &__ft-items{
                         &__title{
                             color: $hover-title-color;
@@ -114,7 +114,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-12{
+                .g--card-09{
                     &__ft-items{
                         &__media-wrapper{
                             &__media{
@@ -127,7 +127,7 @@
         }
     }
     @if $hover-background-img-zoom {
-        .g--card-12{
+        .g--card-09{
             &__bg-items{
                 transition: transform $time-b $ease-standard-a;
             }
@@ -136,7 +136,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-12{
+                .g--card-09{
                     &__bg-items{
                         transform: scale($hover-background-img-zoom);
                     }
@@ -148,14 +148,14 @@
         border-radius: $border-radius;
     }
     @if $background-position {
-        .g--card-12{
+        .g--card-09{
             &__bg-items{
                 background-position: $background-position;
             }
         }
     }
     @if $background-size {
-        .g--card-12{
+        .g--card-09{
             &__bg-items{
                 background-size: $background-size;
             }
@@ -171,7 +171,7 @@
     
     @if $text-align == "center" {
         text-align: center;
-        .g--card-12{
+        .g--card-09{
             &__ft-items{
                 &__media-wrapper{
                     margin-left: auto;
@@ -187,7 +187,7 @@
     }
     @if $text-align == "left" {
         text-align: left;
-        .g--card-12{
+        .g--card-09{
             &__ft-items{
                 &__media-wrapper{
                     margin-left: 0;
@@ -202,7 +202,7 @@
     }
     @if $text-align == "right" {
         text-align: right;
-        .g--card-12{
+        .g--card-09{
             &__ft-items{
                 &__media-wrapper{
                     margin-left: auto;
@@ -215,7 +215,7 @@
             }
         }
     }
-    .g--card-12{
+    .g--card-09{
         &__ft-items{
             &__media-wrapper{
                 @if $img-aspect-ratio {

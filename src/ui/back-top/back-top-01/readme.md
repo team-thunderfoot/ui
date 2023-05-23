@@ -74,28 +74,28 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 }
 ```
 
-### Packages needed
+## Packages needed
 
-You have to install [jsutil package](https://www.npmjs.com/package/@andresclua/jsutil),
+You have to install [back-to-top package](https://www.npmjs.com/package/@teamthunderfoot/back-to-top),
 
 ```sh
 npm i @andresclua/jsutil
 ```
 
-### JS
+## JS
 
 Import the BackToTop and initialize it inside `init()`. The `activeClass` is the class used to show it, `distance` is the dstance (in px) you have to scroll to start seeing it, if you don't add any distance it'll be 500.
 
 ```sh
-import BackToTop from "@teamthunderfoot/ui/src/ui/back-top/back-top-01/back-top.js";
+import BackToTop from 'back-to-top';
 
 class Index {
   constructor() {
     this.init();
   }
   init() {
-    new BackToTop({
-      activeClass: 'g--back-top-01--is-active',
+    const backToTop = new BackToTop({
+      activeClass: "js--back-top--is-active",
       distance: 300,
     });
   }
@@ -103,4 +103,10 @@ class Index {
 
 export default Index;
 new Index();
+```
+
+To remove the back-to-top functionality, you can use the destroy method. Call the destroy method on the instance of BackToTop:
+
+```sh
+const destroy = backToTop.destroy();
 ```

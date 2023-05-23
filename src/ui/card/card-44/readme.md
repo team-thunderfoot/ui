@@ -4,14 +4,14 @@
 
 ![alt text][card-44]
 
-[card-44]: /src/img/global-components/card/card-44.png
+[card-44]: /src/img/global-components/card/card-44.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-44">
     <div class="g--card-44__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-44__media-wrapper__media g--lazy-01">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-44__media-wrapper__media g--lazy-01">
     </div>
     <h3 class="g--card-44__title">Card 44</h3>
     <h4 class="g--card-44__subtitle">Job Position</h4>
@@ -24,45 +24,45 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
-- $img-border-radius: false by default
-- $text-align: false by default
-- $subtitle-color
-- $subtitle-font
-- $title-color
 - $title-font
-- $img-background-color: false by default
-- $img-background-color-hover: false by default
-- $title-color-hover: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-
-### For modifiers
-
+- $subtitle-font
+- $img-border-radius
+- $img-object-fit
+- $img-position
+- $img-width
+- $img-height
+- $img-aspect-ratio
+- $title-font-weight
+- $subtitle-font-weight
+- $subtitle-color
+- $title-color
 - $img-background-color
 - $img-background-color-hover
-- $title-color-hover
-- $subtitle-color
 - $text-align
-- $title-color
+- $title-color-hover
 
 ## use
 
-```sh
-.g--card-44{
-    @include make-card-44(
-        $subtitle-font: f,
-        $title-font: d,
-        // $img-border-radius: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-    );
+```scss
+.g--card-44 {
+    @include make-card-44();
     @include make-card-44-modifier(
-        $subtitle-color: map-get($color-options, a),
+        $title-font: e,
+        $subtitle-font: f,
+        // $img-border-radius: false,
+        // $img-object-fit: false,
+        // $img-position: false,
+        // $img-width: false,
+        // $img-height: false,
+        // $img-aspect-ratio: false,
+        // $title-font-weight: false,
+        // $subtitle-font-weight: false,
         $title-color: map-get($color-options, a),
-        // $text-align: default,
-        // $img-background-color: default,
-        // $img-background-color-hover: default,
-        // $title-color-hover: default,
+        $subtitle-color: map-get($color-options, a),
+        $img-background-color: map-get($color-options, a),
+        $img-background-color-hover: map-get($color-options, g),
+        // $text-align: false,
+        $title-color-hover: map-get($color-options, g)
     );
 }
 ```

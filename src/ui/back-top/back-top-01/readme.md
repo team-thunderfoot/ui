@@ -17,7 +17,7 @@ You need to add it at the beginning in the HTML container that you want the limi
 
 Inside the `<button>` you can add whatever you want. If you add an icon, it can't be a link or a button.
 
-### Example with an icon
+## Example with an icon
 
 ```sh
 <button class="g--back-top-01 js--back-top">
@@ -29,7 +29,7 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 </button>
 ```
 
-### Position example inside `<main>`
+## Position example inside `<main>`
 
 ```sh
 <main>

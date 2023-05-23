@@ -1,6 +1,6 @@
-.g--card-16{
-    @include make-card-16();
-    @include make-card-16-modifier(
+.g--card-12{
+    @include make-card-12();
+    @include make-card-12-modifier(
         $background-position: center,
         $background-size: cover,
         $link-class: g--link-01,
@@ -10,7 +10,7 @@
         $title-font: b,
     );
     &--second{
-        @include make-card-16-modifier(
+        @include make-card-12-modifier(
             $background-position: bottom right,
             $background-size: cover,
             $link-font: e,

@@ -4,66 +4,88 @@
 
 ![alt text][card-28]
 
-[card-28]: /src/img/global-components/card/card-28.png
+[card-28]: /src/img/global-components/card/card-28.jpg
 
 ## Html for a card
 
-```sh
-<div class="g--card-28 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+```html
+<div class="g--card-28">
+    <div class="g--card-28__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-28__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
     <div class="g--card-28__wrapper">
-    <h3 class="g--card-28__wrapper__title">Card 28</h3>
-    <p class="g--card-28__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+        <p class="g--card-28__wrapper__meta">Lorem ipsum</p>
+        <p class="g--card-28__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
 </div>
 ```
 
-##### \*Aspect Ratio
-
-It is not necessary to add aspect-ratio because the images have height in the css.
+If you want the subtitle to be a c--content, the HTML should be:
+```html
+<div class="g--card-28">
+    <div class="g--card-28__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-28__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
+    <div class="g--card-28__wrapper">
+        <p class="g--card-28__wrapper__meta">Lorem ipsum</p>
+        <div class="g--card-28__wrapper__title c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+</div>
+```
 
 ## Editable variables
 
-- $background-position
-- $background-size
-- $border-radius: false by default
-- $mask-color
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-- $subtitle-color
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-
-### For modifiers
-
-- $mask-color
+- $background-color
+- $border-color
+- $border-style
+- $border-width
+- $border-radius
+- $full-image-height
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
 - $text-align
 - $title-color
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
 ## use
 
-```sh
-.g--card-28{
-    @include make-card-28(
-        $background-size: cover,
-        $background-position: center,
-        // $border-radius: default,
-    );
+```scss
+.g--card-28 {
+    @include make-card-28();
     @include make-card-28-modifier(
-        $mask-color: rgba(map-get($color-options, b), .5),
-        $title-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
-        // $text-align: default,
-        // $title-font: default,
-        // $subtitle-font: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default
+        // $background-color: false,
+        // $border-color: false,
+        // $border-style: false,
+        // $border-width: false,
+        // $border-radius: false,
+        // $full-image-height: false,
+        // $hover-background-color: false,
+        // $hover-img-zoom: false,
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $meta-color: false,
+        // $meta-font: false,
+        // $meta-font-weight: false,
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
 }
 ```

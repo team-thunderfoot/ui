@@ -50,11 +50,11 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 - $icon-width
 - $margin-bottom
 - $margin-right
-- $breakpoint: false by default
-- $icon-height-responsive: false by default
-- $icon-width-responsive: false by default
-- $margin-bottom-responsive: false by default
-- $margin-right-responsive: false by default
+- $breakpoint
+- $icon-height-responsive
+- $icon-width-responsive
+- $margin-bottom-responsive
+- $margin-right-responsive
 
 ## Use
 
@@ -65,11 +65,11 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
         $icon-width: $measure*5,
         $margin-bottom: $measure*5,
         $margin-right: $measure*3,
-        // $breakpoint: default,
-        // $icon-height-responsive: default,
-        // $icon-width-responsive: default,
-        // $margin-bottom-responsive: default,
-        // $margin-right-responsive: default,
+        $breakpoint: $tablets,
+        $icon-height-responsive: $measure*4,
+        $icon-width-responsive: $measure*4,
+        $margin-bottom-responsive: $measure*2,
+        $margin-right-responsive: $measure*2,
     );
 }
 ```

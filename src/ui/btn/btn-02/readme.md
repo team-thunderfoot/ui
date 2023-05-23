@@ -1,4 +1,4 @@
-# Btn-02
+# btn-02
 
 ## Layout
 
@@ -9,27 +9,33 @@
 ## Html for a button
 
 ```html
-<button class="g--btn-02">button 02</button>
+<button class="g--btn-02">btn 03
+    <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
+    </svg>
+</button>
 ```
 
-## Html for a link
+## Html for a btn
 
 ```html
-<a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">button 02</a>
+<a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">btn 03 btn
+    <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
+    </svg>
+</a>
 ```
 
 ## Editable variables
 
-- $border-width
-- $border-color
-- $border-color-hover
-- $border-style
-- $font
-- $font-weight
 - $text-color
 - $text-color-hover
-- $background-color
-- $background-color-hover
+- $icon-top
+- $btn-font
+- $btn-font-weight
+- $artwork-color-fill
+- $artwork-color-stroke
+- $artwork-color-hover
 
 ## Use
 
@@ -37,16 +43,15 @@
 .g--btn-02{
     @include make-btn-02();
     @include make-btn-02-modifier(
-        $border-width: 1px,
-        $border-color: map-get($color-options, a),
-        $border-color-hover: map-get($color-options, g),
-        $border-style: solid,
-        $font: f,
-        $font-weight: 400,
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g),
-        // $background-color: map-get($color-options, f),
-        // $background-color-hover: map-get($color-options, g)
+        $icon-top: 0px,
+        $icon-width: $measure,
+        $btn-font: f,
+        $btn-font-weight: 600,
+        // $artwork-color-fill: map-get($color-options, a),
+        $artwork-color-stroke: map-get($color-options, a),
+        $artwork-color-hover: map-get($color-options, g)
     );
 }
 ```

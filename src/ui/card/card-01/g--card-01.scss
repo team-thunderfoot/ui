@@ -1,13 +1,45 @@
 .g--card-01{
     @include make-card-01();
     @include make-card-01-modifier(
-        $border-color: map-get($color-options, e) map-get($color-options, a),
-        $border-style: dashed,
-        $border-width: 4px 8px,
+        $background-color: rgba(map-get($color-options, a), .2),
         $title-color: map-get($color-options, a),
         $title-font: b,
     );
     &--second{
+        @include make-card-01-modifier(
+            $background-color: rgba(map-get($color-options, c), .7),
+            $subtitle-color: map-get($color-options, b),
+            $title-color: map-get($color-options, d),
+            $title-font: c,
+            $border-radius: $measure*2,
+            $hover-background-color: map-get($color-options, g),
+            $hover-img-zoom: 1.2,
+            $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
+            $hover-title-color: map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+            $img-aspect-ratio: calc(1 / 1),
+            $img-height: 50px,
+            $img-size: cover,
+            $img-position: center,
+            $img-width: auto,
+            $subtitle-font: d,
+            $subtitle-font-weight: 400,
+            $subtitle-max-lines: 3,
+            $text-align: center,
+            $title-font-weight: 700,
+            $title-max-lines: 2,
+        );
+    }
+    &--third{
+        @include make-card-01-modifier(
+            $border-color: map-get($color-options, a),
+            $border-style: double,
+            $border-width: 4px 8px,
+            $title-color: map-get($color-options, a),
+            $title-font: b,
+        );
+    }
+    &--fourth{
         @include make-card-01-modifier(
             $background-color: rgba(map-get($color-options, g), .7),
             $border-color: map-get($color-options, h),
@@ -23,7 +55,7 @@
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
-            $img-height: 50px,
+            $img-height: 100px,
             $img-size: cover,
             $img-position: center,
             $img-width: auto,

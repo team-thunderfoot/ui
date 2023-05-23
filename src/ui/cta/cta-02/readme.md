@@ -9,7 +9,7 @@
 ## Html
 
 ```sh
-<section class="g--cta-02" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
+<section class="g--cta-02" style="background-image: url(/src/img/global-components/bg-placeholder.jpg);">
     <h2 class="g--cta-02__title">CTA-02 This is the Contact call to action</h2>
     <a href="#" class="g--cta-02__btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
 </section>

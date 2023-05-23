@@ -10,7 +10,7 @@
 
 ```sh
 <div class="g--card-21">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-21__media g--lazy-01">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-21__media g--lazy-01">
     <p class="g--card-21__title">Card 21 lorem ipsum dolor sit amet consectetur.</p>
     <a href="" class="g--card-21__link">This is a link</a>
 </div>

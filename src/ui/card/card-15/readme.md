@@ -11,7 +11,7 @@
 ```html
 <div class="g--card-15">
     <div class="g--card-15__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-15__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-15__media-wrapper__media g--lazy-01">
     </div>
     <h3 class="g--card-15__title">Lorem ipsum</h3>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-15__link">This is a link</a>
@@ -22,7 +22,7 @@ If you want the subtitle to be a c--content, the HTML should be:
 ```html
 <div class="g--card-15">
     <div class="g--card-15__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-15__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-15__media-wrapper__media g--lazy-01">
     </div>
     <div class="g--card-15__title c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-15__link">This is a link</a>

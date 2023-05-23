@@ -9,7 +9,7 @@
 ## Html for a card
 
 ```sh
-<div class="g--card-32" style="background-image: url(/src/img/global-components/card/card-bg-placeholder.jpg);">
+<div class="g--card-32" style="background-image: url(/src/img/global-components/bg-placeholder.jpg);">
     <div class="g--card-32__wrapper">
     <h3 class="g--card-32__wrapper__title">Card 32</h3>
     <p class="g--card-32__wrapper__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>

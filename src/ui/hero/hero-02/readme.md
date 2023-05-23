@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="g--hero-02__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg" src="/src/img/global-components/card/card-bg-placeholder.jpg" alt="alt text" class="g--hero-02__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/bg-placeholder.jpg" alt="alt text" class="g--hero-02__media-wrapper__media g--lazy-01">
     </div>
 </section>
 ```

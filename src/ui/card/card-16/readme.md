@@ -10,10 +10,10 @@
 
 ```html
 <div class="g--card-16">
-    <div class="g--card-16__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg"></div>
+    <div class="g--card-16__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
     <div class="g--card-16__ft-items">
     <div class="g--card-16__ft-items__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-16__ft-items__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-16__ft-items__media-wrapper__media g--lazy-01">
     </div>
     <h3 class="g--card-16__ft-items__title">Lorem ipsum</h3>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-16__ft-items__link">This is a link</a>
@@ -24,10 +24,10 @@
 If you want the subtitle to be a c--content, the HTML should be:
 ```html
 <div class="g--card-16">
-    <div class="g--card-16__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg"></div>
+    <div class="g--card-16__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
     <div class="g--card-16__ft-items">
     <div class="g--card-16__ft-items__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-16__ft-items__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-16__ft-items__media-wrapper__media g--lazy-01">
     </div>
     <div class="g--card-16__ft-items__title c--content-a">Lorem ipsum dolor sit amet.</div>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-16__ft-items__link">This is a link</a>

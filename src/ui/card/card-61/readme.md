@@ -11,7 +11,7 @@
 ```sh
 <div class="g--card-61">
     <div class="g--card-61__media-wrapper">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-61__media-wrapper__media g--lazy-01">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-61__media-wrapper__media g--lazy-01">
     </div>
     <h3 class="g--card-61__title">Card 61</h3>
     <h4 class="g--card-61__subtitle">Job Position</h4>

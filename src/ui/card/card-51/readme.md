@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="g--card-51__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/logo-placeholder.png" src="/src/img/logo-placeholder.png" alt="img alt" class="g--card-51__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/logo-placeholder.png" alt="img alt" class="g--card-51__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
     </div>
 </div>
 ```

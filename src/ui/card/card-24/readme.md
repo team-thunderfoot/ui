@@ -9,9 +9,9 @@
 ## Html for a card
 
 ```sh
-<div class="g--card-24 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
+<div class="g--card-24 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
     <div class="g--card-24__wrapper">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-24__wrapper__media g--lazy-01">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-24__wrapper__media g--lazy-01">
     <p class="g--card-24__wrapper__title">Card 24 description lorem ipsum dolor sit amet consectetur.</p>
     <a href="" class="g--card-24__wrapper__link">This is a link</a>
     </div>

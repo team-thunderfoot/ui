@@ -23,6 +23,9 @@
 
 @mixin make-card-01-modifier(
     $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
     $border-radius: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
@@ -48,6 +51,15 @@
 
     @if $background-color {
         background: $background-color;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
     }
     @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
         text-decoration: none !important;

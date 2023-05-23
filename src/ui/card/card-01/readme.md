@@ -4,14 +4,14 @@
 
 ![alt text][card-01]
 
-[card-01]: /src/img/global-components/card/card-01.png
+[card-01]: /src/img/global-components/card/card-01.jpg
 
 ## Html for a card
 
 ```html
 <div class="g--card-01">
     <div class="g--card-01__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
     </div>
     <h3 class="g--card-01__title">Lorem ipsum</h3>
     <p class="g--card-01__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
@@ -22,7 +22,7 @@ If you want the subtitle to be a c--content, the HTML should be:
 ```html
 <div class="g--card-01">
     <div class="g--card-01__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-01__media-wrapper__media g--lazy-01">
     </div>
     <h3 class="g--card-01__title">Lorem ipsum</h3>
     <div class="g--card-01__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
@@ -35,9 +35,12 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $background-color
+- $border-color
+- $border-style
+- $border-width
 - $title-color
 - $title-font
+- $background-color
 - $border-radius
 - $hover-background-color
 - $hover-img-zoom
@@ -63,6 +66,9 @@ It is not necessary to add aspect-ratio.
     @include make-card-01();
     @include make-card-01-modifier(
         // $background-color: false,
+        // $border-color: false,
+        // $border-style: false,
+        // $border-width: false,
         // $border-radius: false,
         // $hover-background-color: false,
         // $hover-img-zoom: false,

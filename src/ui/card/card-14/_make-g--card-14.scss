@@ -1,0 +1,111 @@
+@mixin make-card-14() {
+    padding: 0 $measure * 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__title {
+        margin-bottom: $measure * 3;
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+}
+
+@mixin make-card-14-modifier(
+    $hover-title-color: false,
+    $hover-transform: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $subtitle-max-lines: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false
+) {
+    @if $hover-title-color or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    @if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-14 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+        align-items: center;
+    }
+    @if $text-align == "left" {
+        text-align: left;
+        align-items: flex-start;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+        align-items: flex-end;
+    }
+    .g--card-14 {
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+            @if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            }
+        }
+
+        &__subtitle {
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
+            @if $subtitle-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $subtitle-max-lines;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}

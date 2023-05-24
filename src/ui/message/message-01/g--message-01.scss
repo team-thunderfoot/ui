@@ -21,20 +21,16 @@
     &--second {
         @include make-message-01-modifier(
             $background-color: map-get($color-options, e),
-            $hover-background-color: map-get($color-options, g),
             $border-radius: 20px 20px 90px 20px,
             $border-width: 3px,
             $border-style: solid dotted dotted solid,
             $border-color: map-get($color-options, f),
-            $hover-border-color: map-get($color-options, e),
             $text-color: map-get($color-options, a),
             // $hover-text-color: false,
             $text-font: d,
             $text-font-weight: bold,
             $text-max-lines: 2,
             $text-align: left,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-            $hover-transform: translateY(-$measure),
         );
     }
 }

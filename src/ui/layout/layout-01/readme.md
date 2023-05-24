@@ -33,7 +33,6 @@
 - $subtitle-color
 - $btn-class
 - $btn-font
-- $btn-class-modifier
 
 ## Use
 
@@ -52,7 +51,6 @@ To use it we have to import the css of the $btn-class in the entry
         $btn-font: d,
         $btn-class: g--btn-01,
         // $background-color: map-get($color-options, d),
-        // $btn-class-modifier: false
     );
 }
 ```

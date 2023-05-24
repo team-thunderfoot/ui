@@ -1,19 +1,16 @@
-.g--card-30{
-    @include make-card-30(
-        $link-class: g--link-01,
-        $border-width: 1px,
-        // $border-radius: default
-    );
+.g--card-30 {
+    @include make-card-30();
     @include make-card-30-modifier(
-        $border-color: map-get($color-options, a),
-        $background-color: transparent,
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        $subtitle-font: f,
-        $title-font: c,
-        // $title-font-weight: default
-        // $subtitle-font-weight: default
-        // $link-class-modifier: default
-        // $text-align: default
+        $img-aspect-ratio: calc(16 / 9),
     );
+    &--second{
+        @include make-card-30-modifier(
+            $hover-img-zoom: 1.5,
+            $hover-title-color: map-get($color-options, h),
+            $img-border-radius: $measure*2 $measure*4,
+            $meta-color: map-get($color-options, h),
+            $title-color: map-get($color-options, f),
+            $title-max-lines: 5,
+        );
+    }
 }

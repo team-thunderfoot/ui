@@ -1,0 +1,220 @@
+@mixin make-card-15() {
+    padding: $measure * 7 $measure * 5;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    &__bg-items {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-repeat: no-repeat;
+    }
+    &__ft-items {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            margin-bottom: $measure * 2;
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
+        }
+    }
+}
+
+@mixin make-card-15-modifier(
+    $background-position: false,
+    $background-size: false,
+    $border-radius: false,
+    $hover-background-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $mask-color: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $subtitle-max-lines: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false
+) {
+    @if $hover-background-img-zoom or $hover-title-color or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-15 {
+                    &__ft-items {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-background-img-zoom {
+        .g--card-15 {
+            &__bg-items {
+                transition: transform $time-b $ease-standard-a;
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-15 {
+                    &__bg-items {
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $background-position {
+        .g--card-15 {
+            &__bg-items {
+                background-position: $background-position;
+            }
+        }
+    }
+    @if $background-size {
+        .g--card-15 {
+            &__bg-items {
+                background-size: $background-size;
+            }
+        }
+    }
+
+    @if $mask-color {
+        &::after {
+            background: $mask-color;
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--card-15 {
+            &__ft-items {
+                text-align: center;
+                align-items: center;
+            }
+        }
+    }
+    @if $text-align == "left" {
+        .g--card-15 {
+            &__ft-items {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+    @if $text-align == "right" {
+        .g--card-15 {
+            &__ft-items {
+                text-align: right;
+                align-items: flex-end;
+            }
+        }
+    }
+    .g--card-15 {
+        &__ft-items {
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+                @if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+
+            &__subtitle {
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+                @if $subtitle-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $subtitle-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+}

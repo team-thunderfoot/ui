@@ -1,5 +1,4 @@
 @mixin make-icon-01() {
-    border-radius: 100%;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
@@ -13,7 +12,10 @@
 }
 
 @mixin make-icon-01-modifier(
+    $artwork-height: false,
+    $artwork-width: false,
     $background-color: false,
+    $border-radius: false,
     $hover-background-color: false,
     $border-width: false,
     $border-style: false,
@@ -28,6 +30,10 @@
 ) {
     @if $background-color {
         background: $background-color;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
     }
 
     @if $hover-background-color or $hover-border-color or $hover-path-fill-color or $hover-shadow or $hover-transform {
@@ -275,6 +281,13 @@
                 fill: $path-fill-color;
                 transition: fill $time-b $ease-standard-a;
             }
+        }
+        @if $artwork-height {
+            height: $artwork-height;
+        }
+    
+        @if $artwork-width {
+            width: $artwork-width;
         }
     }
 }

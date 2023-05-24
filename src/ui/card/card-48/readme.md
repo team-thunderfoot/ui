@@ -1,20 +1,20 @@
-# Card-44
+# Card-48
 
 ## Layout
 
-![alt text][card-44]
+![alt text][card-48]
 
-[card-44]: /src/img/global-components/card/card-44.jpg
+[card-48]: /src/img/global-components/card/card-48.jpg
 
 ## Html for a card
 
 ```html
-<div class="g--card-44">
-    <div class="g--card-44__media-wrapper">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-44__media-wrapper__media g--lazy-01">
+<div class="g--card-48">
+    <div class="g--card-48__media-wrapper">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-48__media-wrapper__media g--lazy-01">
     </div>
-    <h3 class="g--card-44__title">Card 44</h3>
-    <h4 class="g--card-44__subtitle">Job Position</h4>
+    <h3 class="g--card-48__title">Card 44</h3>
+    <h4 class="g--card-48__subtitle">Job Position</h4>
 </div>
 ```
 
@@ -44,9 +44,9 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ## use
 
 ```scss
-.g--card-44 {
-    @include make-card-44();
-    @include make-card-44-modifier(
+.g--card-48 {
+    @include make-card-48();
+    @include make-card-48-modifier(
         $title-font: e,
         $subtitle-font: f,
         // $img-border-radius: false,

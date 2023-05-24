@@ -10,76 +10,68 @@
 
 ```html
 <div class="g--card-17">
-    <div class="g--card-17__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-17__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
-    </div>
-    <div class="g--card-17__wrapper">
-        <p class="g--card-17__wrapper__meta">Lorem ipsum</p>
-        <p class="g--card-17__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+    <h3 class="g--card-17__title">Lorem ipsum</h3>
+    <p class="g--card-17__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-17__link">This is a link</a>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
 ```html
 <div class="g--card-17">
-    <div class="g--card-17__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-17__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
-    </div>
-    <div class="g--card-17__wrapper">
-        <p class="g--card-17__wrapper__meta">Lorem ipsum</p>
-        <div class="g--card-17__wrapper__title c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-    </div>
+    <h3 class="g--card-17__title">Lorem ipsum</h3>
+    <div class="g--card-17__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-17__link">This is a link</a>
 </div>
 ```
 
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio.
+
 ## Editable variables
 
-- $background-color
-- $border-radius
-- $full-image-height
-- $hover-background-color
-- $hover-img-zoom
-- $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $meta-color
-- $meta-font
-- $meta-font-weight
+- $link-class
+- $link-class-modifier
+- $link-font
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
 - $text-align
 - $title-color
 - $title-font
 - $title-font-weight
 - $title-max-lines
 
-## use
+## Use
 
 ```scss
-.g--card-17 {
+.g--card-17{
     @include make-card-17();
     @include make-card-17-modifier(
-        // $background-color: false,
-        // $border-radius: false,
-        // $full-image-height: false,
-        // $hover-background-color: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $meta-color: false,
-        // $meta-font: false,
-        // $meta-font-weight: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        $link-class: g--link-02,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
     );
+    &--second{
+        @include make-card-17-modifier(
+            $subtitle-color: map-get($color-options, g),
+            $title-color: map-get($color-options, g),
+            $title-font: b,
+            $hover-title-color: map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+            $link-class: g--link-02--second,
+            $link-font: e,
+            $subtitle-font: d,
+            $subtitle-font-weight: 400,
+            $subtitle-max-lines: 3,
+            $text-align: center,
+            $title-font-weight: 700,
+            $title-max-lines: 2,
+        );
+    }
 }
 ```

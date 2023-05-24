@@ -1,48 +1,56 @@
 @mixin make-hero-04() {
     display: block;
     width: 100%;
-    min-height: 100vh;
+    display: flex;
 
-    &__wrapper {
-        display: flex;
+    &__right-items,
+    &__left-items {
+        width: 50%;
+        min-height: 100vh;
+    }
 
-        @media all and ($viewport-type: $tablets) {
-            flex-direction: column;
+    &__right-items {
+        overflow: hidden;
+
+        &__media {
+            display: block;
+            position: relative;
+            height: 100%;
+            width: 100%;
         }
+    }
 
-        &__right-items {
-            overflow: hidden;
+    &__left-items {
+        padding: $measure * 15;
 
-            &__media {
-                display: block;
-                position: relative;
-                min-height: 100%;
-                width: 100%;
-            }
+        @media all and ($viewport-type:$tabletm) {
+            padding: $measure * 15 $measure * 7;
         }
-
-        &__left-items {
-            padding: $measure * 15;
+        @media all and ($viewport-type:$tablets) {
+            padding: $measure * 10 $measure * 7;
         }
-
+        @media all and ($viewport-type:$mobile) {
+            padding: $measure * 10 0;
+        }
         &__title {
-            margin-bottom: $measure * 4;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 3;
-            }
+            margin-bottom: $measure * 3;
         }
         &__subtitle {
+            margin-bottom: $measure * 4;
         }
     }
 }
 
 @mixin make-hero-04-modifier(
     $background-color: false,
+    $breakpoint: false,
     $header-height: false,
     $img-height: false,
     $img-position: false,
     $img-object-fit: false,
+    $link-class: false,
+    $link-class-modifier: false,
+    $link-font: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -52,7 +60,7 @@
     $text-align: false
 ) {
     @if $background-color {
-        background: $background-color;
+        background-color: $background-color;
     }
 
     @if $text-align == "center" {
@@ -67,58 +75,81 @@
         text-align: right;
     }
 
+    @if $breakpoint {
+        @media all and ($viewport-type: $breakpoint) {
+            flex-direction: column;
+        }
+    }
+
     .g--hero-04 {
-        &__wrapper {
+        &__right-items,
+        &__left-items {
             @if $header-height {
                 padding-top: calc(#{$measure} * 14 + #{$header-height});
+                min-height: calc(100vh - #{$header-height});
 
                 @media all and ($viewport-type: $tablets) {
                     padding-top: calc(#{$measure} * 7 + #{$header-height});
                 }
             }
 
-            &__right-items {
-                @if $img-height {
-                    height: $img-height;
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    min-height: auto;
+                }
+            }
+        }
+
+        &__right-items {
+            @if $img-height {
+                height: $img-height;
+            }
+
+            &__media {
+                @if $img-position {
+                    object-position: $img-position;
                 }
 
-                &__media {
-                    @if $img-position {
-                        object-position: $img-position;
-                    }
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
+                }
+            }
+        }
 
-                    @if $img-object-fit {
-                        object-fit: $img-object-fit;
-                    }
+        &__left-titems {
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
                 }
             }
 
-            &__left-titems {
-                &__title {
-                    @if $title-color {
-                        color: $title-color;
-                    }
-
-                    @if $title-font {
-                        @extend .f--font-#{$title-font} !optional;
-                    }
-
-                    @if $title-font-weight {
-                        font-weight: $title-font-weight;
-                    }
+            &__subtitle {
+                @if $subtitle-color {
+                    color: $subtitle-color;
                 }
-                &__subtitle {
-                    @if $subtitle-color {
-                        color: $subtitle-color;
-                    }
-
-                    @if $subtitle-font {
-                        @extend .f--font-#{$subtitle-font} !optional;
-                    }
-
-                    @if $subtitle-font-weight {
-                        font-weight: $subtitle-font-weight;
-                    }
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+            }
+            &__link {
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
+                @if $link-class-modifier {
+                    @extend .#{$link-class-modifier} !optional;
+                }
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
                 }
             }
         }

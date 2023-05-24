@@ -1,7 +1,38 @@
-@mixin make-card-45(
-    $icon-class,
-    $subtitle-font,
-    $title-font,
+@mixin make-card-45() {
+    padding: 0 $measure * 2;
+    width: 100%;
+
+    @media all and ($viewport-type: $tabletm) {
+        padding: 0;
+    }
+
+    &__media-wrapper {
+        margin-bottom: $measure * 1.5;
+        width: 100%;
+
+        @media all and ($viewport-type: $mobile) {
+            height: auto;
+        }
+
+        &__media {
+            display: block;
+        }
+    }
+
+    &__title {
+        margin-bottom: $measure * 0.5;
+    }
+
+    &__link {
+        margin-top: $measure * 1.5;
+        display: inline-block;
+    }
+}
+
+@mixin make-card-45-modifier(
+    $icon-class: false,
+    $subtitle-font: false,
+    $title-font: false,
     $img-border-radius: false,
     $img-object-fit: false,
     $img-position: false,
@@ -10,90 +41,13 @@
     $img-aspect-ratio: false,
     $title-font-weight: false,
     $subtitle-font-weight: false,
-) {
-    padding: 0 $measure * 2;
-    width: 100%;
-
-    @media all and ($viewport-type: $tabletm) {
-        padding: 0;
-    }
-
-    &__media-wrapper{
-        margin-bottom: $measure * 1.5;
-        width: 100%;
-
-        @if $img-border-radius {
-            border-radius: $img-border-radius;
-            overflow: hidden;
-        }
-
-        @media all and ($viewport-type: $mobile) {
-            height: auto;
-        }
-
-        &__media{
-            display: block;
-
-            @if $img-object-fit {
-                object-fit: $img-object-fit;
-            } @else{
-                object-fit: contain;
-            }
-
-            @if $img-position {
-                object-position: $img-position;
-            } @else{
-                object-position: bottom center;
-            }
-
-            @if $img-width {
-                width: $img-width;
-            } @else{
-                width: 100%;
-            }
-
-            @if $img-height {
-                height: $img-height;
-            } @else{
-                height: auto;
-            }
-
-            @if $img-aspect-ratio {
-                aspect-ratio: $img-aspect-ratio;
-            }
-        }
-    }
-
-    &__title{
-        @extend .f--font-#{$title-font} !optional;
-        margin-bottom: $measure * 0.5;
-        @if $title-font-weight {
-            font-weight: $title-font-weight;
-        }
-    }
-
-    &__subtitle{
-        @extend .f--font-#{$subtitle-font} !optional;
-        @if $subtitle-font-weight {
-            font-weight: $subtitle-font-weight;
-        }
-    }
-
-    &__link {
-        @extend .#{$icon-class} !optional;
-        margin-top: $measure * 1.5;
-        display: inline-block;
-    }
-}
-
-@mixin make-card-45-modifier(
-    $subtitle-color,
-    $title-color,
+    $subtitle-color: false,
+    $title-color: false,
     $img-background-color: false,
     $img-background-color-hover: false,
     $icon-class-modifier: false,
     $text-align: false,
-    $title-color-hover: false,
+    $title-color-hover: false
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -114,7 +68,7 @@
 
     @if $img-background-color-hover and $title-color-hover {
         .g--card-45 {
-            &__media-wrapper{
+            &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
             }
             &__title {
@@ -122,13 +76,12 @@
             }
         }
 
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-
                 .g--card-45 {
-                    &__media-wrapper{
+                    &__media-wrapper {
                         background: $img-background-color-hover;
                     }
                     &__title {
@@ -137,26 +90,24 @@
                 }
             }
         }
-
     } @else if $img-background-color-hover {
         .g--card-45 {
-            &__media-wrapper{
+            &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
             }
         }
 
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--card-45 {
-                    &__media-wrapper{
+                    &__media-wrapper {
                         background: $img-background-color-hover;
                     }
                 }
             }
         }
-        
     } @else if $title-color-hover {
         .g--card-45 {
             &__title {
@@ -164,7 +115,7 @@
             }
         }
 
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -176,24 +127,78 @@
             }
         }
     }
-    
+
     .g--card-45 {
-        @if $img-background-color{
-            &__media-wrapper{
+        &__media-wrapper {
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
+                overflow: hidden;
+            }
+            @if $img-background-color {
                 background: $img-background-color;
+            }
+
+            &__media {
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
+                } @else {
+                    object-fit: contain;
+                }
+
+                @if $img-position {
+                    object-position: $img-position;
+                } @else {
+                    object-position: bottom center;
+                }
+
+                @if $img-width {
+                    width: $img-width;
+                } @else {
+                    width: 100%;
+                }
+
+                @if $img-height {
+                    height: $img-height;
+                } @else {
+                    height: auto;
+                }
+
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
             }
         }
 
-        &__title{
-            color: $title-color;
-        }
-        
-        &__subtitle{
-            color: $subtitle-color;
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
         }
 
-        @if $icon-class-modifier {
-            &__link {
+        &__subtitle {
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
+        }
+
+        &__link {
+            @if $icon-class {
+                @extend .#{$icon-class} !optional;
+            }
+
+            @if $icon-class-modifier {
                 @extend .#{$icon-class-modifier} !optional;
             }
         }

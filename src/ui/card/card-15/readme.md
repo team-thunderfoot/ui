@@ -46,6 +46,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $hover-title-color
 - $hover-transform
 - $link-class
+- $link-class-modifier
 - $link-font
 - $mask-color
 - $subtitle-color

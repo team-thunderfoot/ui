@@ -57,6 +57,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $img-size
 - $img-width
 - $link-class
+- $link-class-modifier
 - $link-font
 - $mask-color
 - $subtitle-color

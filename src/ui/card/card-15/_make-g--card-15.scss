@@ -1,11 +1,11 @@
 @mixin make-card-15() {
-    padding: $measure*7 $measure*5;
+    padding: $measure * 7 $measure * 5;
     width: 100%;
     display: flex;
     position: relative;
     overflow: hidden;
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         width: 100%;
         height: 100%;
         position: absolute;
@@ -13,7 +13,7 @@
         top: 0;
         z-index: 0;
     }
-    &__bg-items{
+    &__bg-items {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -22,29 +22,19 @@
         z-index: 0;
         background-repeat: no-repeat;
     }
-    &__ft-items{
+    &__ft-items {
         width: 100%;
         position: relative;
         z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-    
+
         &__title {
             margin-bottom: $measure * 2;
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure;
             }
-        }
-    
-        &__subtitle {
-            margin-bottom: $measure * 2;
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure;
-            }
-        }
-        &__link{
-            margin-top: auto;
         }
     }
 }
@@ -57,8 +47,6 @@
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
-    $link-class: false,
-    $link-font: false,
     $mask-color: false,
     $subtitle-color: false,
     $subtitle-font: false,
@@ -68,17 +56,15 @@
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $title-max-lines: false,
-
+    $title-max-lines: false
 ) {
-
     @if $hover-background-img-zoom or $hover-title-color or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -88,7 +74,7 @@
         }
     } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -97,7 +83,7 @@
         }
     } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -106,13 +92,13 @@
         }
     }
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-15{
-                    &__ft-items{
-                        &__title{
+                .g--card-15 {
+                    &__ft-items {
+                        &__title {
                             color: $hover-title-color;
                         }
                     }
@@ -120,19 +106,19 @@
             }
         }
     }
-    
+
     @if $hover-background-img-zoom {
-        .g--card-15{
-            &__bg-items{
+        .g--card-15 {
+            &__bg-items {
                 transition: transform $time-b $ease-standard-a;
             }
         }
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-15{
-                    &__bg-items{
+                .g--card-15 {
+                    &__bg-items {
                         transform: scale($hover-background-img-zoom);
                     }
                 }
@@ -143,55 +129,52 @@
         border-radius: $border-radius;
     }
     @if $background-position {
-        .g--card-15{
-            &__bg-items{
+        .g--card-15 {
+            &__bg-items {
                 background-position: $background-position;
             }
         }
     }
     @if $background-size {
-        .g--card-15{
-            &__bg-items{
+        .g--card-15 {
+            &__bg-items {
                 background-size: $background-size;
             }
         }
     }
 
     @if $mask-color {
-        &::after{
+        &::after {
             background: $mask-color;
         }
     }
 
-    
     @if $text-align == "center" {
-        .g--card-15{
-            &__ft-items{
+        .g--card-15 {
+            &__ft-items {
                 text-align: center;
                 align-items: center;
             }
         }
-        
     }
     @if $text-align == "left" {
-        .g--card-15{
-            &__ft-items{
+        .g--card-15 {
+            &__ft-items {
                 text-align: left;
                 align-items: flex-start;
             }
         }
     }
     @if $text-align == "right" {
-        .g--card-15{
-            &__ft-items{
+        .g--card-15 {
+            &__ft-items {
                 text-align: right;
                 align-items: flex-end;
             }
         }
     }
-    .g--card-15{
-        &__ft-items{
-        
+    .g--card-15 {
+        &__ft-items {
             &__title {
                 @if $title-color {
                     color: $title-color;
@@ -213,7 +196,7 @@
                     transition: color $time-b $ease-standard-a;
                 }
             }
-        
+
             &__subtitle {
                 @if $subtitle-color {
                     color: $subtitle-color;
@@ -230,14 +213,6 @@
                     display: -webkit-box;
                     -webkit-line-clamp: $subtitle-max-lines;
                     -webkit-box-orient: vertical;
-                }
-            }
-            &__link{
-                @if $link-class {
-                    @extend .#{$link-class} !optional;
-                }
-                @if $link-font {
-                    @extend .f--font-#{$link-font} !optional;
                 }
             }
         }

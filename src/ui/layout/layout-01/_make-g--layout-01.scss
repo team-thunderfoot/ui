@@ -41,7 +41,6 @@
     $subtitle-color: false,
     $btn-font: false,
     $btn-class: false,
-    $btn-class-modifier: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -75,9 +74,6 @@
         &__btn {
             @if $btn-class {
                 @extend .#{$btn-class} !optional;
-            }
-            @if $btn-class-modifier {
-                @extend .#{$btn-class-modifier} !optional;
             }
             @if $btn-font {
                 @extend .f--font-#{$btn-font} !optional;

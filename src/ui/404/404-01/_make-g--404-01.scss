@@ -64,9 +64,11 @@
         text-align: center;
 
         .g--404-01 {
-            &__media {
-                margin-left: auto;
-                margin-right: auto;
+            &__media-wrapper{
+                &__media {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
             &__btn{
                 margin-left: auto;
@@ -80,9 +82,11 @@
         text-align: left;
 
         .g--404-01 {
-            &__media {
-                margin-left: 0;
-                margin-right: auto;
+            &__media-wrapper{
+                &__media {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
             }
             &__btn{
                 margin-left: 0;
@@ -95,9 +99,11 @@
         text-align: right;
 
         .g--404-01 {
-            &__media {
-                margin-left: auto;
-                margin-right: 0;
+            &__media-wrapper{
+                &__media {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
             }
             &__btn{
                 margin-left: auto;

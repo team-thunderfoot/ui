@@ -3,16 +3,19 @@
     @include make-hero-04-modifier(
         $background-color:  rgba(map-get($color-options,a), 30%),
         $breakpoint: $tablets,
-        // $header-height: false,
-        // $img-height: 200px,
+        // $header-height: 96px,
+        $img-height: 200px,
         $img-position: center,
         $img-object-fit: cover,
-        $title-color: map-get($color-options, f),
-        $title-font: d,
+        $link-class: g--link-01,
+        $link-class-modifier: false,
+        $link-font: false,    
+        $title-color: map-get($color-options, a),
+        $title-font: b,
         // $title-font-weight: false,
         $subtitle-color: map-get($color-options, a),
-        $subtitle-font: a,
-        $subtitle-font-weight: bold,
+        $subtitle-font: c,
+        // $subtitle-font-weight: bold,
         // $text-align: false
     );
 }

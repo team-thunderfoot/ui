@@ -23,14 +23,14 @@
     &__left-items {
         padding: $measure * 15;
 
-        @media all and ($viewport-type:$tabletm) {
+        @media all and ($viewport-type: $tabletm) {
             padding: $measure * 15 $measure * 7;
         }
-        @media all and ($viewport-type:$tablets) {
+        @media all and ($viewport-type: $tablets) {
             padding: $measure * 10 $measure * 7;
         }
-        @media all and ($viewport-type:$mobile) {
-            padding: $measure * 10 0;
+        @media all and ($viewport-type: $mobile) {
+            padding: $measure * 10 $measure * 3;
         }
         &__title {
             margin-bottom: $measure * 3;
@@ -63,6 +63,10 @@
         background-color: $background-color;
     }
 
+    @if $header-height {
+        margin-top: $header-height;
+    }
+
     @if $text-align == "center" {
         text-align: center;
     }
@@ -85,7 +89,6 @@
         &__right-items,
         &__left-items {
             @if $header-height {
-                padding-top: calc(#{$measure} * 14 + #{$header-height});
                 min-height: calc(100vh - #{$header-height});
 
                 @media all and ($viewport-type: $tablets) {
@@ -117,7 +120,7 @@
             }
         }
 
-        &__left-titems {
+        &__left-items {
             &__title {
                 @if $title-color {
                     color: $title-color;

@@ -8,57 +8,60 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--hero-04">
-    <div class="g--hero-04__wrapper">
-        <div class="f--container">
-            <div class="f--row">
-                <div class="f--col-8 f--col-tablets-10 f--col-mobile-12">
-                    <h1 class="g--hero-04__wrapper__tagline">Subheading</h1>
-                    <h2 class="g--hero-04__wrapper__title">An Energy Solution for Healthcare</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="g--hero-04__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/bg-placeholder.jpg" alt="alt text" class="g--hero-04__media-wrapper__media g--lazy-01">
-    </div>
+  <div class="g--hero-04__left-items">
+    <h1 class="g--hero-04__left-items__title">Heading lorem ipsum dolor</h1>
+    <h2 class="g--hero-04__left-items__subtitle">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</h2>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--hero-04__left-items__link">Contact Us</a>
+  </div>
+  <div class="g--hero-04__right-items">
+    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--hero-04__right-items__media g--lazy-01" />
+  </div>
 </section>
 ```
 
 ## Editable variables
 
-- $background-color,
-- $header-height,
-- $img-height,
-- $img-position,
-- $img-object-fit,
-- $tagline-color,
-- $tagline-font,
-- $tagline-font-weight,
-- $title-color,
-- $title-font,
-- $title-font-weight,
+- $background-color
+- $breakpoint
+- $header-height
+- $img-height
+- $img-position
+- $img-object-fit
+- $link-class
+- $link-class-modifier
+- $link-font
+- $title-color
+- $title-font
+- $title-font-weight
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
 - $text-align
 
 ## Use
 
-```sh
+```scss
 .g--hero-04 {
-    @include make-hero-04();
-    @include make-hero-04-modifier(
-        $background-color:  map-get($color-options, d),
-        $header-height: 96px,
-        $img-height: 500px,
-        $img-position: center,
-        $img-object-fit: cover,
-        $tagline-color: map-get($color-options, f),
-        $tagline-font: d,
-        $tagline-font-weight: medium,
-        $title-color: map-get($color-options, a),
-        $title-font: a,
-        $title-font-weight: bold,
-        // $text-align: false
-    );
+  @include make-hero-04();
+  @include make-hero-04-modifier(
+    $background-color: rgba(map-get($color-options, a), 30%),
+    $breakpoint: $tablets,
+    // $header-height: 96px,
+    $img-height: 200px,
+    $img-position: center,
+    $img-object-fit: cover,
+    $link-class: g--link-01,
+    $link-class-modifier: false,
+    $link-font: false,
+    $title-color: map-get($color-options, a),
+    $title-font: b,
+    // $title-font-weight: false,
+    $subtitle-color: map-get($color-options, a),
+    $subtitle-font: c,
+    // $subtitle-font-weight: bold,
+    // $text-align: false
+  );
 }
 ```

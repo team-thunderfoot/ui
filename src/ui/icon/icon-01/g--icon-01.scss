@@ -12,12 +12,15 @@
         $hover-path-fill-color: map-get($color-options, g ),
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
-        $height: $measure * 5,
-        $width: $measure * 5,
+        $height: $measure * 6,
+        $width: $measure * 6,
+        $artwork-height: $measure*2,
+        // $artwork-width: $measure*3,
     );
 
     &--second {
         @include make-icon-01-modifier(
+            $border-radius: 100%,
             $hover-background-color: map-get($color-options, a ),
             $border-style: dotted,
             $border-color: map-get($color-options, g ),
@@ -31,6 +34,7 @@
 
     &--third {
         @include make-icon-01-modifier(
+            $border-radius: $measure*2,
             $background-color: map-get($color-options, a ),
             $hover-background-color: map-get($color-options, g ),
             $border-width: 2px,

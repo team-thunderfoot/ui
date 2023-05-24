@@ -15,7 +15,7 @@
         $subtitle-color: map-get($color-options, a),
         $img-background-color: map-get($color-options, a),
         $img-background-color-hover: map-get($color-options, g),
-        // $text-align: false,
+        $text-align: false,
         $title-color-hover: map-get($color-options, g)
     );
 }

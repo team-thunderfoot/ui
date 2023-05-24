@@ -22,8 +22,9 @@ class Index {
       errorClass: "g--lazy-01--is-error",
     });
     const backToTop = new BackToTop({
-      activeClass: "js--back-top--is-active",
-      distance: 300,
+      linkClass: "js--back-top",
+      activeClass: "g--back-top-01--is-active",
+      distanceTrigger: "tf-data-distance",
     });
   }
 }

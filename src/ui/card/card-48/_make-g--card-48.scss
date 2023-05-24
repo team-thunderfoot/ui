@@ -1,4 +1,4 @@
-@mixin make-card-44() {
+@mixin make-card-48() {
     padding: 0 $measure * 2;
     width: 100%;
 
@@ -24,7 +24,7 @@
     }
 }
 
-@mixin make-card-44-modifier(
+@mixin make-card-48-modifier(
     $subtitle-font: false,
     $title-font: false,
     $img-border-radius: false,
@@ -60,7 +60,7 @@
     }
 
     @if $img-background-color-hover and $title-color-hover {
-        .g--card-44 {
+        .g--card-48 {
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
             }
@@ -73,7 +73,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-44 {
+                .g--card-48 {
                     &__media-wrapper {
                         background: $img-background-color-hover;
                     }
@@ -84,7 +84,7 @@
             }
         }
     } @else if $img-background-color-hover {
-        .g--card-44 {
+        .g--card-48 {
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
             }
@@ -94,7 +94,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-44 {
+                .g--card-48 {
                     &__media-wrapper {
                         background: $img-background-color-hover;
                     }
@@ -102,7 +102,7 @@
             }
         }
     } @else if $title-color-hover {
-        .g--card-44 {
+        .g--card-48 {
             &__title {
                 transition: color $time-b $ease-standard-a;
             }
@@ -112,7 +112,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-44 {
+                .g--card-48 {
                     &__title {
                         color: $title-color-hover;
                     }
@@ -121,7 +121,7 @@
         }
     }
 
-    .g--card-44 {
+    .g--card-48 {
         &__media-wrapper {
             @if $img-border-radius {
                 border-radius: $img-border-radius;

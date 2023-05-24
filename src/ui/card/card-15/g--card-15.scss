@@ -3,8 +3,6 @@
     @include make-card-15-modifier(
         $background-position: center,
         $background-size: cover,
-        $link-class: g--link-01,
-        $link-font: d,
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
         $title-font: b,
@@ -13,7 +11,6 @@
         @include make-card-15-modifier(
             $background-position: bottom right,
             $background-size: cover,
-            $link-font: e,
             $mask-color: rgba(map-get($color-options, g), .5),
             $subtitle-color: map-get($color-options, b),
             $title-color: map-get($color-options, d),

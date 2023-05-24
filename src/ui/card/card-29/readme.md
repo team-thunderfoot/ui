@@ -35,12 +35,18 @@ If you want the subtitle to be a c--content, the HTML should be:
 
 ## Editable variables
 
+- $background-color
+- $border-color
+- $border-style
+- $border-width
+- $border-radius
 - $full-image-height
+- $hover-background-color
 - $hover-img-zoom
+- $hover-shadow
 - $hover-title-color
 - $hover-transform
 - $img-aspect-ratio
-- $img-border-radius
 - $img-height
 - $img-position
 - $meta-color
@@ -58,12 +64,18 @@ If you want the subtitle to be a c--content, the HTML should be:
 .g--card-29 {
     @include make-card-29();
     @include make-card-29-modifier(
+        // $background-color: false,
+        // $border-color: false,
+        // $border-style: false,
+        // $border-width: false,
+        // $border-radius: false,
         // $full-image-height: false,
+        // $hover-background-color: false,
         // $hover-img-zoom: false,
+        // $hover-shadow: false,
         // $hover-title-color: false,
         // $hover-transform: false,
         // $img-aspect-ratio: false,
-        // $img-border-radius: false,
         // $img-height: false,
         // $img-position: false,
         // $meta-color: false,

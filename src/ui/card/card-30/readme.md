@@ -4,66 +4,76 @@
 
 ![alt text][card-30]
 
-[card-30]: /src/img/global-components/card/card-30.png
+[card-30]: /src/img/global-components/card/card-30.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-30">
-    <h3 class="g--card-30__title">Card 30</h3>
-    <p class="g--card-30__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
-    <a href="" class="g--card-30__link">This is a link</a>
+    <div class="g--card-30__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-30__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
+    <div class="g--card-30__wrapper">
+        <p class="g--card-30__wrapper__meta">Lorem ipsum</p>
+        <p class="g--card-30__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
+```
+
+If you want the subtitle to be a c--content, the HTML should be:
+```html
+<div class="g--card-30">
+    <div class="g--card-30__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-30__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
+    </div>
+    <div class="g--card-30__wrapper">
+        <p class="g--card-30__wrapper__meta">Lorem ipsum</p>
+        <div class="g--card-30__wrapper__title c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
 </div>
 ```
 
 ## Editable variables
 
-- $background-color
-- $border-width
-- $border-radius: false by default
-- $link-class
-- $link-class-modifier: false by default
-- $subtitle-color
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $background-color
-- $border-color
-- $link-class-modifier
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
+- $full-image-height
+- $hover-img-zoom
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-border-radius
+- $img-height
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
 - $text-align
 - $title-color
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
-## Use
+## use
 
-```sh
-.g--card-30{
-    @include make-card-30(
-        $link-class: g--link-01,
-        $border-width: 1px,
-        // $border-radius: default
-    );
+```scss
+.g--card-30 {
+    @include make-card-30();
     @include make-card-30-modifier(
-        $border-color: map-get($color-options, a),
-        $background-color: transparent,
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $subtitle-font: default,
-        // $title-font: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $link-class-modifier: default,
-        // $text-align: default
+        // $full-image-height: false,
+        // $hover-img-zoom: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        // $img-aspect-ratio: false,
+        // $img-border-radius: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $meta-color: false,
+        // $meta-font: false,
+        // $meta-font-weight: false,
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
 }
 ```

@@ -35,24 +35,26 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
+- $background-color
+- $breakpoint
+- $btn-class
+- $btn-font
+- $change-order-reponsive
+- $img-border-radius
+- $img-max-height
+- $img-min-height
+- $img-height
+- $img-position
+- $meta-color
 - $meta-font
 - $meta-font-weight
-- $meta-color
-- $title-font
-- $title-font-weight
-- $title-color
+- $object-fit
+- $subtitle-color
 - $subtitle-font
 - $subtitle-font-weight
-- $subtitle-color
-- $object-fit
-- $img-position
-- $img-border-radius
-- $change-order-reponsive
-- $background-color
-- $btn-font
-- $btn-class
-- $btn-class-modifier
-- $breakpoint
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -64,24 +66,26 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-03 {
     @include make-layout-03();
     @include make-layout-03-modifier(
-        $meta-font: g,
-        $meta-font-weight: 400,
-        $meta-color: map-get($color-options, a),
-        $subtitle-font: f,
-        $subtitle-font-weight: 400,
-        $subtitle-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 600,
-        $title-color: map-get($color-options, a),
-        $object-fit: cover,
-        $img-position: false,
-        $img-border-radius: $measure * 4,
-        $change-order-reponsive: true,
-        $btn-font: d,
-        $btn-class: g--btn-01,
-        $breakpoint: $tablets
-        // $btn-class-modifier: g--btn-01--second,
-        // $background-color: map-get($color-options, e),
+        // $background-color: false,
+        // $breakpoint: false,
+        // $btn-class: false,
+        // $btn-font: false,
+        // $change-order-reponsive: false,
+        // $img-border-radius: false,
+        // $img-max-height: false,
+        // $img-min-height: false,
+        // $img-height: false,
+        // $img-position: false,
+        // $meta-color: false,
+        // $meta-font: false,
+        // $meta-font-weight: false,
+        // $object-fit: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
     );
 }
 ```

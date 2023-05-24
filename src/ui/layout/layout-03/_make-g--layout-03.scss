@@ -46,24 +46,26 @@
 }
 
 @mixin make-layout-03-modifier(
+    $background-color: false,
+    $breakpoint: false,
+    $btn-class: false,
+    $btn-font: false,
+    $change-order-reponsive: false,
+    $img-border-radius: false,
+    $img-max-height: false,
+    $img-min-height: false,
+    $img-height: false,
+    $img-position: false,
+    $meta-color: false,
     $meta-font: false,
     $meta-font-weight: false,
-    $meta-color: false,
-    $title-font: false,
-    $title-font-weight: false,
-    $title-color: false,
+    $object-fit: false,
+    $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
-    $subtitle-color: false,
-    $object-fit: cover,
-    $img-position: false,
-    $img-border-radius: false,
-    $change-order-reponsive: false,
-    $background-color: false,
-    $btn-font: false,
-    $btn-class: false,
-    $btn-class-modifier: false,
-    $breakpoint: false
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $background-color {
         background: $background-color;
@@ -74,21 +76,23 @@
             @if $object-fit == contain or $object-fit== scale-down {
                 display: flex;
                 align-items: center;
-            } @else {
-                min-height: 500px;
+                justify-content: center;
+                // width: fit-content;
+            } @else{
                 @if $img-border-radius {
                     border-radius: $img-border-radius;
                     overflow: hidden;
                 }
-                @media all and ($viewport-type: $tabletl) {
-                    min-height: 450px;
+                @if $img-min-height {
+                    min-height: $img-min-height;
                 }
-
-                @media all and ($viewport-type: $tabletm) {
-                    min-height: 400px;
+                @if $img-max-height {
+                    max-height: $img-max-height;
+                }
+                @if $img-height {
+                    height: $img-height;
                 }
             }
-
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     height: auto;
@@ -106,7 +110,27 @@
                 @if $img-position {
                     object-position: $img-position;
                 }
-
+                @if $object-fit == contain or $object-fit== scale-down {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    @if $img-border-radius {
+                        border-radius: $img-border-radius;
+                        overflow: hidden;
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                    }
+                    @if $img-min-height {
+                        min-height: $img-min-height;
+                    }
+                    @if $img-max-height {
+                        max-height: $img-max-height;
+                    }
+                    @if $img-height {
+                        height: $img-height;
+                    }
+                }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         position: relative;
@@ -121,8 +145,10 @@
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     padding: 0;
-                    @if $change-order-reponsive {
+                    @if $change-order-reponsive == true {
                         margin-bottom: $measure * 5;
+                    } @else {
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -186,9 +212,6 @@
                 &__btn {
                     @if $btn-class {
                         @extend .#{$btn-class} !optional;
-                    }
-                    @if $btn-class-modifier {
-                        @extend .#{$btn-class-modifier} !optional;
                     }
                     @if $btn-font {
                         @extend .f--font-#{$btn-font} !optional;

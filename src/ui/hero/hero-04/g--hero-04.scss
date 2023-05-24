@@ -1,0 +1,30 @@
+.g--hero-04 {
+    @include make-hero-04();
+    @include make-hero-04-modifier(
+        $background-color:  map-get($color-options, d),
+        $header-height: 96px,
+        $img-height: 200px,
+        $img-position: center,
+        $img-object-fit: cover,
+        $tagline-color: map-get($color-options, f),
+        $tagline-font: d,
+        // $tagline-font-weight: false,
+        $title-color: map-get($color-options, a),
+        $title-font: a,
+        $title-font-weight: bold,
+        // $text-align: false
+    );
+
+    @media all and ( $viewport-type: $tabletm) {
+        @include make-hero-04-modifier(
+            $img-height: 400px,
+        );
+    }
+
+    @media all and ( $viewport-type: $tablets) {
+        @include make-hero-04-modifier(
+            $header-height: 86px,
+            $img-height: 300px,
+        );
+    }
+}

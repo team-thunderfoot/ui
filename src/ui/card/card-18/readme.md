@@ -10,30 +10,25 @@
 
 ```html
 <div class="g--card-18">
-    <div class="g--card-18__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
-    <div class="g--card-18__ft-items">
-    <div class="g--card-18__ft-items__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-18__ft-items__media-wrapper__media g--lazy-01">
-    </div>
+  <div class="g--card-18__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+  <div class="g--card-18__ft-items">
     <h3 class="g--card-18__ft-items__title">Lorem ipsum</h3>
     <p class="g--card-18__ft-items__subtitle">Lorem ipsum dolor sit amet.</p>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-18__ft-items__link">This is a link</a>
-    </div>
+  </div>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
+
 ```html
 <div class="g--card-18">
-    <div class="g--card-18__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
-    <div class="g--card-18__ft-items">
-    <div class="g--card-18__ft-items__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-18__ft-items__media-wrapper__media g--lazy-01">
-    </div>
+  <div class="g--card-18__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+  <div class="g--card-18__ft-items">
     <h3 class="g--card-18__ft-items__title">Lorem ipsum</h3>
     <div class="g--card-18__ft-items__subtitle c--content-a">Lorem ipsum dolor sit amet.</div>
     <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-18__ft-items__link">This is a link</a>
-    </div>
+  </div>
 </div>
 ```
 
@@ -47,15 +42,9 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $background-size
 - $border-radius
 - $hover-background-img-zoom
-- $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $img-size
-- $img-width
 - $link-class
 - $link-font
 - $mask-color
@@ -72,34 +61,30 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ## use
 
 ```scss
-.g--card-18{
-    @include make-card-18();
+.g--card-18 {
+  @include make-card-18();
+  @include make-card-18-modifier($background-position: center, $background-size: cover, $link-class: g--link-01, $link-font: d, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: b);
+  &--second {
     @include make-card-18-modifier(
-        // $background-position: false,
-        // $background-size: false,
-        // $border-radius: false,
-        // $hover-background-img-zoom: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $link-class: false,
-        // $link-font: false,
-        // $mask-color: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+      $background-position: bottom right,
+      $background-size: cover,
+      $link-font: e,
+      $mask-color: rgba(map-get($color-options, g), 0.5),
+      $subtitle-color: map-get($color-options, b),
+      $title-color: map-get($color-options, d),
+      $title-font: c,
+      $border-radius: $measure * 2,
+      $hover-background-img-zoom: 2,
+      $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
+      $hover-title-color: map-get($color-options, h),
+      $hover-transform: translateY(-$measure),
+      $subtitle-font: d,
+      $subtitle-font-weight: 400,
+      $subtitle-max-lines: 3,
+      $text-align: center,
+      $title-font-weight: 700,
+      $title-max-lines: 2
     );
+  }
 }
 ```

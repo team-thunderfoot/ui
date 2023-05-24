@@ -29,16 +29,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        &__media-wrapper{
-            overflow: hidden;
-            margin-bottom: $measure * 2;
-            &__media {
-                display: block;
-                @media all and ($viewport-type: $tablets) {
-                    margin-bottom: $measure;
-                }
-            }
-        }
     
         &__title {
             margin-bottom: $measure * 2;
@@ -64,15 +54,9 @@
     $background-size: false,
     $border-radius: false,
     $hover-background-img-zoom: false,
-    $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
-    $img-aspect-ratio: false,
-    $img-height: false,
-    $img-position: false,
-    $img-size: false,
-    $img-width: false,
     $link-class: false,
     $link-font: false,
     $mask-color: false,
@@ -88,7 +72,7 @@
 
 ) {
 
-    @if $hover-background-img-zoom or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
+    @if $hover-background-img-zoom or $hover-title-color or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
@@ -136,23 +120,7 @@
             }
         }
     }
-    @if $hover-img-zoom {
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                .g--card-18{
-                    &__ft-items{
-                        &__media-wrapper{
-                            &__media{
-                                transform: scale($hover-img-zoom);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
     @if $hover-background-img-zoom {
         .g--card-18{
             &__bg-items{
@@ -201,14 +169,6 @@
             &__ft-items{
                 text-align: center;
                 align-items: center;
-                &__media-wrapper{
-                    margin-left: auto;
-                    margin-right: auto;
-                    &__media{
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
-                }
             }
         }
         
@@ -218,14 +178,6 @@
             &__ft-items{
                 text-align: left;
                 align-items: flex-start;
-                &__media-wrapper{
-                    margin-left: 0;
-                    margin-right: auto;
-                    &__media{
-                        margin-left: 0;
-                        margin-right: auto;
-                    }
-                }
             }
         }
     }
@@ -234,50 +186,11 @@
             &__ft-items{
                 text-align: right;
                 align-items: flex-end;
-                &__media-wrapper{
-                    margin-left: auto;
-                    margin-right: 0;
-                    &__media{
-                        margin-left: auto;
-                        margin-right: 0;
-                    }
-                }
             }
         }
     }
     .g--card-18{
         &__ft-items{
-            &__media-wrapper{
-                @if $img-aspect-ratio {
-                    aspect-ratio: $img-aspect-ratio;
-                }
-                @if $img-width {
-                    width: $img-width;
-                }
-                @if $img-height {
-                    height: $img-height;
-                }
-                &__media {
-                    @if $img-aspect-ratio {
-                        aspect-ratio: $img-aspect-ratio;
-                    }
-                    @if $img-width {
-                        width: $img-width;
-                    }
-                    @if $img-height {
-                        height: $img-height;
-                    }
-                    @if $img-size{
-                        object-fit: $img-size;
-                    }
-                    @if $img-position{
-                        object-position: $img-position;
-                    }
-                    @if $hover-img-zoom {
-                        transition: transform $time-b $ease-standard-a;
-                    }
-                }
-            }
         
             &__title {
                 @if $title-color {

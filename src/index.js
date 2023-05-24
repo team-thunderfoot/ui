@@ -7,7 +7,7 @@
  * Lazy Loading
  */
 import Blazy from "blazy";
-import BackToTop from "./ui/back-top/back-top-01/back-top";
+import BackToTop from "@teamthunderfoot/back-to-top";
 import "@lottiefiles/lottie-player";
 
 class Index {
@@ -21,9 +21,10 @@ class Index {
       successClass: "g--lazy-01--is-loaded",
       errorClass: "g--lazy-01--is-error",
     });
-    new BackToTop({
-      activeClass: 'g--back-top-01--is-active',
-      distance: 300,
+    const backToTop = new BackToTop({
+      linkClass: "js--back-top",
+      activeClass: "g--back-top-01--is-active",
+      distanceTrigger: "tf-data-distance",
     });
   }
 }

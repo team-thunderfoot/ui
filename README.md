@@ -81,11 +81,8 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--card-31](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-31/readme.md)
 - [g--card-32](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-32/readme.md)
 - [g--card-33](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-33/readme.md)
+- [g--card-48](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-48/readme.md)
 - [g--card-49](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-49/readme.md)
-- [g--card-50](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-50/readme.md)
-- [g--card-51](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-51/readme.md)
-- [g--card-55](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-55/readme.md)
-- [g--card-58](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-58/readme.md)
 
 ### Cta
 
@@ -115,7 +112,6 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 ### Icon
 
 - [g--icon-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/icon/icon-01/readme.md)
-- [g--icon-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/icon/icon-02/readme.md)
 
 ### Layout
 
@@ -125,6 +121,10 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--layout-04](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-04/readme.md)
 - [g--layout-05](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-05/readme.md)
 - [g--layout-06](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-06/readme.md)
+- [g--layout-07](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-07/readme.md)
+- [g--layout-08](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-08/readme.md)
+- [g--layout-09](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-09/readme.md)
+- [g--layout-10](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-10/readme.md)
 
 ### Lazy
 

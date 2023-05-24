@@ -1,19 +1,9 @@
 @mixin make-card-17() {
-    padding: 0 $measure*2;
+    padding: 0 $measure * 2;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    &__media-wrapper{
-        overflow: hidden;
-        margin-bottom: $measure * 2;
-        &__media {
-            display: block;
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure;
-            }
-        }
-    }
 
     &__title {
         margin-bottom: $measure * 2;
@@ -28,21 +18,16 @@
             margin-bottom: $measure;
         }
     }
-    &__link{
+    &__link {
         margin-top: auto;
     }
 }
 
 @mixin make-card-17-modifier(
-    $hover-img-zoom: false,
     $hover-title-color: false,
     $hover-transform: false,
-    $img-aspect-ratio: false,
-    $img-height: false,
-    $img-position: false,
-    $img-size: false,
-    $img-width: false,
     $link-class: false,
+    $link-class-modifier: false,
     $link-font: false,
     $subtitle-color: false,
     $subtitle-font: false,
@@ -52,16 +37,15 @@
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $title-max-lines: false,
+    $title-max-lines: false
 ) {
-
-    @if $hover-title-color or $hover-img-zoom or $hover-transform {
+    @if $hover-title-color or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
     @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -70,109 +54,32 @@
         }
     }
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-17{
-                    &__title{
+                .g--card-17 {
+                    &__title {
                         color: $hover-title-color;
                     }
                 }
             }
         }
     }
-    @if $hover-img-zoom {
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                .g--card-17{
-                    &__media-wrapper{
-                        &__media{
-                            transform: scale($hover-img-zoom);
-                        }
-                    }
-                }
-            }
-        }
-    }
+
     @if $text-align == "center" {
         text-align: center;
         align-items: center;
-        .g--card-17{
-            &__media-wrapper{
-                margin-left: auto;
-                margin-right: auto;
-                &__media{
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
-        
     }
     @if $text-align == "left" {
         text-align: left;
         align-items: flex-start;
-        .g--card-17{
-            &__media-wrapper{
-                margin-left: 0;
-                margin-right: auto;
-                &__media{
-                    margin-left: 0;
-                    margin-right: auto;
-                }
-            }
-        }
     }
     @if $text-align == "right" {
         text-align: right;
         align-items: flex-end;
-        .g--card-17{
-            &__media-wrapper{
-                margin-left: auto;
-                margin-right: 0;
-                &__media{
-                    margin-left: auto;
-                    margin-right: 0;
-                }
-            }
-        }
     }
-    .g--card-17{
-        &__media-wrapper{
-            @if $img-aspect-ratio {
-                aspect-ratio: $img-aspect-ratio;
-            }
-            @if $img-width {
-                width: $img-width;
-            }
-            @if $img-height {
-                height: $img-height;
-            }
-            &__media {
-                @if $img-aspect-ratio {
-                    aspect-ratio: $img-aspect-ratio;
-                }
-                @if $img-width {
-                    width: $img-width;
-                }
-                @if $img-height {
-                    height: $img-height;
-                }
-                @if $img-size{
-                    object-fit: $img-size;
-                }
-                @if $img-position{
-                    object-position: $img-position;
-                }
-                @if $hover-img-zoom {
-                    transition: transform $time-b $ease-standard-a;
-                }
-            }
-        }
-    
+    .g--card-17 {
         &__title {
             @if $title-color {
                 color: $title-color;
@@ -194,7 +101,7 @@
                 transition: color $time-b $ease-standard-a;
             }
         }
-    
+
         &__subtitle {
             @if $subtitle-color {
                 color: $subtitle-color;
@@ -213,9 +120,12 @@
                 -webkit-box-orient: vertical;
             }
         }
-        &__link{
+        &__link {
             @if $link-class {
                 @extend .#{$link-class} !optional;
+            }
+            @if $link-class-modifier {
+                @extend .#{$link-class-modifier} !optional;
             }
             @if $link-font {
                 @extend .f--font-#{$link-font} !optional;

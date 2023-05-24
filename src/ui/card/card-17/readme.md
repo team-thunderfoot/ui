@@ -34,6 +34,7 @@ It is not necessary to add aspect-ratio.
 - $hover-title-color
 - $hover-transform
 - $link-class
+- $link-class-modifier
 - $link-font
 - $subtitle-color
 - $subtitle-font
@@ -51,25 +52,26 @@ It is not necessary to add aspect-ratio.
 .g--card-17{
     @include make-card-17();
     @include make-card-17-modifier(
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $link-class: false,
-        // $link-font: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        $link-class: g--link-02,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
     );
+    &--second{
+        @include make-card-17-modifier(
+            $subtitle-color: map-get($color-options, g),
+            $title-color: map-get($color-options, g),
+            $title-font: b,
+            $hover-title-color: map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+            $link-class: g--link-02--second,
+            $link-font: e,
+            $subtitle-font: d,
+            $subtitle-font-weight: 400,
+            $subtitle-max-lines: 3,
+            $text-align: center,
+            $title-font-weight: 700,
+            $title-max-lines: 2,
+        );
+    }
 }
 ```

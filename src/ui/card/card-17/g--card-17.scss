@@ -3,23 +3,17 @@
     @include make-card-17-modifier(
         $link-class: g--link-02,
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c,
     );
     &--second{
         @include make-card-17-modifier(
             $subtitle-color: map-get($color-options, g),
             $title-color: map-get($color-options, g),
-            $title-font: c,
-            $hover-img-zoom: 1.2,
+            $title-font: b,
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
-            $img-aspect-ratio:calc(1 / 1),
-            $img-height: 50px,
-            $img-size: cover,
-            $img-position: center,
-            $img-width: auto,
             $link-class: g--link-02--second,
-            $link-font: b,
+            $link-font: e,
             $subtitle-font: d,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,

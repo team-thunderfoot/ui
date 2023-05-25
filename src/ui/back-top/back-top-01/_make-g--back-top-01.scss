@@ -1,4 +1,18 @@
-@mixin make-back-top-01(
+@mixin make-back-top-01() {
+    display: block;
+    position: sticky;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $time-b $ease-standard-a;
+    z-index: 1000;
+    
+    &--is-active{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@mixin make-back-top-01-modifier(
     $icon-height: false,
     $icon-width: false,
     $margin-bottom: false,
@@ -8,14 +22,7 @@
     $icon-width-responsive: false,
     $margin-bottom-responsive: false,
     $margin-right-responsive: false,
-) {
-    display: block;
-    position: sticky;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity $time-b $ease-standard-a;
-    z-index: 1000;
-    
+){
     @if $icon-height and $margin-bottom{
         top: calc(100% - #{$icon-height} - #{$margin-bottom});
     } @else if $icon-height{
@@ -70,10 +77,5 @@
                 margin-top: -$icon-height-responsive;
             }
         }
-    }
-
-    &--is-active{
-        opacity: 1;
-        pointer-events: all;
     }
 }

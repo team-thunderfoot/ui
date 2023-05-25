@@ -61,26 +61,21 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-04 {
     @include make-layout-04();
     @include make-layout-04-modifier(
-        // $background-color: false,
-        // $breakpoint: false,
-        // $btn-class: false,
-        // $btn-font: false,
-        // $change-order-reponsive: false,
-        // $img-border-radius: false,
-        // $img-max-height: false,
-        // $img-min-height: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $meta-color: false,
-        // $meta-font: false,
-        // $meta-font-weight: false,
-        // $object-fit: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
+        $meta-font: g,
+        $meta-font-weight: 400,
+        $meta-color: map-get($color-options, a),
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
+        $subtitle-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
+        $title-color: map-get($color-options, a),
+        $object-fit: cover,
+        $img-position: false,
+        // $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
+        $breakpoint: $tablets
+        // $background-color: map-get($color-options, e),
     );
 }
 ```

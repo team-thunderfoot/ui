@@ -26,18 +26,21 @@
 }
 
 @mixin make-layout-08-modifier(
-    $title-font: false,
-    $title-font-weight: false,
-    $title-color: false,
+    $background-color: false,
+    $breakpoint: false,
+    $change-order-reponsive: false,
+    $img-border-radius: false,
+    $img-max-height: false,
+    $img-min-height: false,
+    $img-height: false,
+    $img-position: false,
+    $object-fit: false,
+    $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
-    $subtitle-color: false,
-    $object-fit: cover,
-    $img-position: false,
-    $img-border-radius: false,
-    $change-order-reponsive: false,
-    $background-color: false,
-    $breakpoint: false
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -48,21 +51,23 @@
             @if $object-fit == contain or $object-fit== scale-down {
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                // width: fit-content;
             } @else {
-                min-height: 500px;
                 @if $img-border-radius {
                     border-radius: $img-border-radius;
                     overflow: hidden;
                 }
-                @media all and ($viewport-type: $tabletl) {
-                    min-height: 450px;
+                @if $img-min-height {
+                    min-height: $img-min-height;
                 }
-
-                @media all and ($viewport-type: $tabletm) {
-                    min-height: 400px;
+                @if $img-max-height {
+                    max-height: $img-max-height;
+                }
+                @if $img-height {
+                    height: $img-height;
                 }
             }
-
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     height: auto;
@@ -80,7 +85,27 @@
                 @if $img-position {
                     object-position: $img-position;
                 }
-
+                @if $object-fit == contain or $object-fit== scale-down {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    @if $img-border-radius {
+                        border-radius: $img-border-radius;
+                        overflow: hidden;
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                    }
+                    @if $img-min-height {
+                        min-height: $img-min-height;
+                    }
+                    @if $img-max-height {
+                        max-height: $img-max-height;
+                    }
+                    @if $img-height {
+                        height: $img-height;
+                    }
+                }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         position: relative;
@@ -95,8 +120,10 @@
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     padding: 0;
-                    @if $change-order-reponsive {
+                    @if $change-order-reponsive == true {
                         margin-bottom: $measure * 5;
+                    } @else {
+                        margin-bottom: 0;
                     }
                 }
             }

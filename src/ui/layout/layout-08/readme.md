@@ -31,18 +31,21 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $title-font
-- $title-font-weight
-- $title-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-color
-- $object-fit
-- $img-position
-- $img-border-radius
-- $change-order-reponsive
 - $background-color
 - $breakpoint
+- $change-order-reponsive
+- $img-border-radius
+- $img-max-height
+- $img-min-height
+- $img-height
+- $img-position
+- $object-fit
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -62,12 +65,9 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $title-color: map-get($color-options, a),
         $object-fit: cover,
         $img-position: false,
-        $img-border-radius: $measure * 4,
+        // $img-border-radius: $measure * 4,
         $change-order-reponsive: true,
-        $btn-font: d,
-        $btn-class: g--btn-01,
         $breakpoint: $tablets
-        // $btn-class-modifier: g--btn-01--second,
         // $background-color: map-get($color-options, e),
     );
 }

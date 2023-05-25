@@ -4,60 +4,89 @@
 
 ![alt text][card-26]
 
-[card-26]: /src/img/global-components/card/card-26.png
+[card-26]: /src/img/global-components/card/card-26.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-26">
-    <h3 class="g--card-26__title">Card 26</h3>
-    <p class="g--card-26__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
+  <div class="g--card-26__media-wrapper">
+    <img
+      data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+      src="/src/img/global-components/placeholder.jpg"
+      alt="alt text"
+      class="g--card-26__media-wrapper__media g--lazy-01 f--ar"
+      width="604"
+      height="340"
+    />
+  </div>
+  <div class="g--card-26__wrapper">
+    <p class="g--card-26__wrapper__title">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</div>
+```
+
+If you want the subtitle to be a c--content, the HTML should be:
+
+```html
+<div class="g--card-26">
+  <div class="g--card-26__media-wrapper">
+    <img
+      data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+      src="/src/img/global-components/placeholder.jpg"
+      alt="alt text"
+      class="g--card-26__media-wrapper__media g--lazy-01 f--ar"
+      width="604"
+      height="340"
+    />
+  </div>
+  <div class="g--card-26__wrapper">
+    <div class="g--card-26__wrapper__title c--content-a">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
 </div>
 ```
 
 ## Editable variables
 
-- $background-color
-- $border-width
-- $border-radius: false by default
-- $subtitle-color
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $background-color
-- $border-color
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
+- $full-image-height
+- $hover-img-zoom
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-border-radius
+- $img-height
+- $img-position
 - $text-align
 - $title-color
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
-## Use
+## use
 
-```sh
-.g--card-26{
-    @include make-card-26(
-        $border-width: 1px,
-        // $border-radius: default
-    );
-    @include make-card-26-modifier(
-        $border-color: map-get($color-options, a),
-        $background-color: transparent,
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $text-align: default,
-        // $subtitle-font: default,
-        // $title-font: default,
-        // $title-font-weight: default
-        // $subtitle-font-weight: default
-    );
+```scss
+.g--card-26 {
+  @include make-card-26();
+  @include make-card-26-modifier(
+    // $full-image-height: false,
+    // $hover-img-zoom: false,
+    // $hover-title-color: false,
+    // $hover-transform: false,
+    // $img-aspect-ratio: false,
+    // $img-border-radius: false,
+    // $img-height: false,
+    // $img-position: false,
+    // $text-align: false,
+    // $title-color: false,
+    // $title-font: false,
+    // $title-font-weight: false,
+    // $title-max-lines: false,
+  );
 }
 ```

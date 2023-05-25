@@ -57,7 +57,6 @@
     $img-position: false,
     $img-object-fit: false,
     $link-class: false,
-    $link-class-modifier: false,
     $link-font: false,
     $title-color: false,
     $title-font: false,
@@ -158,9 +157,6 @@
             &__link {
                 @if $link-class {
                     @extend .#{$link-class} !optional;
-                }
-                @if $link-class-modifier {
-                    @extend .#{$link-class-modifier} !optional;
                 }
                 @if $link-font {
                     @extend .f--font-#{$link-font} !optional;

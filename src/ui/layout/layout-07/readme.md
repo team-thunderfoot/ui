@@ -22,7 +22,9 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
                 <div class="g--layout-07__wrapper">
                     <h2 class="g--layout-07__wrapper__title">Lorem ipsum dolor sit amet consectetur.</h2>
                     <p class="g--layout-07__wrapper__subtitle">Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie vulputate venenatis velit.</p>
-                    <a href="" class="g--layout-07__wrapper__link">Button</a>
+                    <div class="g--layout-07__wrapper__ft">
+                        <a href="#" class="g--layout-07__wrapper__ft__btn" target="_blank" rel="noopener noreferrer">Button</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,21 +34,23 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $title-font
-- $title-font-weight
-- $title-color
+- $background-color
+- $breakpoint
+- $btn-class
+- $btn-font
+- $change-order-reponsive
+- $img-border-radius
+- $img-max-height
+- $img-min-height
+- $img-height
+- $img-position
+- $object-fit
+- $subtitle-color
 - $subtitle-font
 - $subtitle-font-weight
-- $subtitle-color
-- $object-fit
-- $img-position
-- $img-border-radius
-- $change-order-reponsive
-- $background-color
-- $btn-font
-- $btn-class
-- $btn-class-modifier
-- $breakpoint
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -66,12 +70,11 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $title-color: map-get($color-options, a),
         $object-fit: cover,
         $img-position: false,
-        $img-border-radius: $measure * 4,
+        // $img-border-radius: $measure * 4,
         $change-order-reponsive: true,
-        $btn-font: d,
+        $btn-font: f,
         $btn-class: g--btn-01,
         $breakpoint: $tablets
-        // $btn-class-modifier: g--btn-01--second,
         // $background-color: map-get($color-options, e),
     );
 }

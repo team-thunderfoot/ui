@@ -8,7 +8,7 @@
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--accordion-01" id="accordion-1" tf-ds-acc-body="accordion-1">
     <button class="g--accordion-01__hd" tf-ds-acc-target="accordion-1">
         <p class="g--accordion-01__hd__title">Accordion 1</p>
@@ -26,9 +26,15 @@
 
 ## Editable variables
 
+- $active-background-color
+- $active-title-color
+- $active-icon-color
 - $border-color
 - $border-style
 - $border-width
+- $hover-background-color
+- $hover-title-color
+- $hover-icon-color
 - $icon-color
 - $title-color
 - $title-font
@@ -36,14 +42,20 @@
 
 ## Use
 
-```sh
+```scss
 .g--accordion-01 {
     @include make-accordion-01();
 
     @include make-accordion-01-modifier(
+        // $active-background-color: false,
+        // $active-title-color: false,
+        // $active-icon-color: false,
         $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
+        // $hover-background-color: false,
+        // $hover-title-color: false,
+        // $hover-icon-color: false,
         $icon-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         $title-font: d,

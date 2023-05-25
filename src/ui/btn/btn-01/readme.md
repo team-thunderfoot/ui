@@ -22,21 +22,21 @@
 
 ## Editable variables
 
+- $background-color-hover
+- $background-position
+- $background-position-hover
+- $background-repeat
+- $background-size
+- $background-size-hover
 - $border-color
 - $border-color-hover
-- $border-width
 - $border-radius
 - $border-style
+- $border-width
 - $font
 - $font-weight
 - $text-color
 - $text-color-hover
-- $background-color
-- $background-color-hover
-- $background-position
-- $background-position-hover
-- $background-size
-- $background-size-hover
 - $transition
 
 ## Use
@@ -45,17 +45,22 @@
 .g--btn-01{
     @include make-btn-01();
     @include make-btn-01-modifier(
-        // $border-color: map-get($color-options, a),
-        // $border-color-hover: map-get($color-options, g),
-        // $border-width: 1px 4px 4px 1px,
-        // $border-radius: 200px,
-        // $border-style: solid,
-        // $font: f,
-        // $font-weight: 400,
-        // $text-color: map-get($color-options, a),
-        // $text-color-hover: map-get($color-options, g),
-        // $background-color: map-get($color-options, b),
-        // $background-color-hover: map-get($color-options, d)
+        // $background-color-hover: false,
+        // $background-position: false,
+        // $background-position-hover: false,
+        // $background-repeat: false,
+        // $background-size: false,
+        // $background-size-hover: false,
+        // $border-color: false,
+        // $border-color-hover: false,
+        // $border-radius: false,
+        // $border-style: false,
+        // $border-width: false,
+        // $font: false,
+        // $font-weight: false,
+        // $text-color: false,
+        // $text-color-hover: false,
+        // $transition: false
     );
 }
 ```

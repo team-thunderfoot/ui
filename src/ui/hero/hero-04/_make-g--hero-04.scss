@@ -43,8 +43,10 @@
             margin-bottom: $measure * 4;
         }
 
-        &__link {
-            width: fit-content;
+        &__wrapper {
+            &__link {
+                width: fit-content;
+            }
         }
     }
 }
@@ -154,12 +156,15 @@
                     font-weight: $subtitle-font-weight;
                 }
             }
-            &__link {
-                @if $link-class {
-                    @extend .#{$link-class} !optional;
-                }
-                @if $link-font {
-                    @extend .f--font-#{$link-font} !optional;
+
+            &__wrapper {
+                &__link {
+                    @if $link-class {
+                        @extend .#{$link-class} !optional;
+                    }
+                    @if $link-font {
+                        @extend .f--font-#{$link-font} !optional;
+                    }
                 }
             }
         }

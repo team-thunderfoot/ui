@@ -6,10 +6,9 @@
         display: flex;
         align-items: baseline;
         justify-content: center;
-
-        &__btn {
-            margin-left: $measure * 3;
-        }
+        flex-wrap: wrap;
+        row-gap: $measure * 2;
+        column-gap: $measure * 3;
     }
 }
 
@@ -20,7 +19,6 @@
     $title-color: false,
     $btn-font: false,
     $btn-class: false,
-    $btn-class-modifier: false,
     $breakpoint: false
 ) {
     @if $background-color {
@@ -30,7 +28,7 @@
     .g--banner-02 {
         &__wrapper {
             @if $breakpoint {
-                @media all and ($viewport-type:$breakpoint) {
+                @media all and ($viewport-type: $breakpoint) {
                     display: block;
                 }
             }
@@ -50,18 +48,9 @@
                 @if $btn-class {
                     @extend .#{$btn-class} !optional;
                 }
-                @if $btn-class-modifier {
-                    @extend .#{$btn-class-modifier} !optional;
-                }
+
                 @if $btn-font {
                     @extend .f--font-#{$btn-font} !optional;
-                }
-
-                @if $breakpoint {
-                    @media all and ($viewport-type:$breakpoint) {
-                        margin-top: $measure * 2;
-                        margin-left: 0;
-                    }
                 }
             }
         }

@@ -33,6 +33,11 @@
 - $text-color-hover
 - $background-color
 - $background-color-hover
+- $background-position
+- $background-position-hover
+- $background-size
+- $background-size-hover
+- $transition
 
 ## Use
 

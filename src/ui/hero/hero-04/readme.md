@@ -25,21 +25,21 @@
 
 ## Editable variables
 
--   $background-color
--   $breakpoint
--   $header-height
--   $img-height
--   $img-position
--   $img-object-fit
--   $link-class
--   $link-font
--   $title-color
--   $title-font
--   $title-font-weight
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $text-align
+- $background-color
+- $breakpoint
+- $header-height
+- $img-height
+- $img-position
+- $img-object-fit
+- $link-class
+- $link-font
+- $title-color
+- $title-font
+- $title-font-weight
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $text-align
 
 ## Use
 
@@ -47,14 +47,14 @@
 .g--hero-04 {
     @include make-hero-04();
     @include make-hero-04-modifier(
-        $background-color:  rgba(map-get($color-options,a), 30%),
+        $background-color: rgba(map-get($color-options, a), 30%),
         $breakpoint: $tablets,
         $header-height: 96px,
         $img-height: 200px,
         $img-position: center,
         $img-object-fit: cover,
         $link-class: g--btn-01,
-        $link-font: false,    
+        $link-font: false,
         $title-color: map-get($color-options, a),
         $title-font: b,
         // $title-font-weight: false,

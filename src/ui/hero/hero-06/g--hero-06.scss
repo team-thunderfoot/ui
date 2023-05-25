@@ -1,0 +1,15 @@
+.g--hero-06 {
+    @include make-hero-06();
+    @include make-hero-06-modifier(
+        $background-color:  rgba(map-get($color-options,a), 30%),
+        $breakpoint: $tablets,
+        $header-height: 96px,
+        $img-height: 200px,
+        $img-position: center,
+        $img-object-fit: cover,
+        $title-color: map-get($color-options, a),
+        $title-font: b,
+        // $title-font-weight: false,
+        // $text-align: center
+    );
+}

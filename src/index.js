@@ -8,6 +8,8 @@
  */
 import Blazy from "blazy";
 import BackToTop from "@teamthunderfoot/back-to-top";
+import AnchorTo from "@teamthunderfoot/anchor-to";
+
 import "@lottiefiles/lottie-player";
 
 class Index {
@@ -25,6 +27,14 @@ class Index {
       linkClass: "js--back-top",
       activeClass: "g--back-top-01--is-active",
       distanceTrigger: "tf-data-distance",
+    });
+
+    new AnchorTo({
+      trigger: "js--anchor-to",
+      checkUrl: true,
+      anchorTo: "tf-data-target",
+      offsetTop: "tf-data-distance",
+      offsetTopURL: 100,
     });
   }
 }

@@ -1,4 +1,17 @@
 @mixin make-layout-05() {
+    &__media-wrapper {
+        position: relative;
+        width: 100%;
+
+        &__media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -20,9 +33,9 @@
 
         &__ft {
             &__btn {
+                width: fit-content;
                 margin-left: 0;
                 margin-right: auto;
-                width: fit-content;
 
                 @media all and ($viewport-type: $mobile) {
                     width: 100%;
@@ -30,31 +43,29 @@
             }
         }
     }
-    &__media-wrapper {
-        position: relative;
-        width: 100%;
-    }
 }
 
 @mixin make-layout-05-modifier(
-    $meta-font: false,
-    $subtitle-font: false,
-    $title-font: false,
-    $object-fit: cover,
-    $img-border-radius: false,
-    $img-position: false,
-    $meta-font-weight: false,
-    $title-font-weight: false,
-    $subtitle-font-weight: false,
-    $change-order-reponsive: false,
-    $meta-color: false,
-    $subtitle-color: false,
-    $title-color: false,
     $background-color: false,
-    $btn-font: false,
+    $breakpoint: false,
     $btn-class: false,
-    $btn-class-modifier: false,
-    $breakpoint: false
+    $btn-font: false,
+    $change-order-reponsive: false,
+    $img-border-radius: false,
+    $img-max-height: false,
+    $img-min-height: false,
+    $img-height: false,
+    $img-position: false,
+    $meta-color: false,
+    $meta-font: false,
+    $meta-font-weight: false,
+    $object-fit: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $background-color {
         background: $background-color;
@@ -65,48 +76,64 @@
             @if $object-fit == contain or $object-fit== scale-down {
                 display: flex;
                 align-items: center;
-            } @else {
-                min-height: 500px;
+                justify-content: center;
+                // width: fit-content;
+            } @else{
                 @if $img-border-radius {
                     border-radius: $img-border-radius;
                     overflow: hidden;
                 }
-                @media all and ($viewport-type: $tabletl) {
-                    min-height: 450px;
+                @if $img-min-height {
+                    min-height: $img-min-height;
                 }
-
-                @media all and ($viewport-type: $tabletm) {
-                    min-height: 400px;
+                @if $img-max-height {
+                    max-height: $img-max-height;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+            }
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    height: auto;
+                    min-height: 0;
+                    @if $change-order-reponsive == true {
+                        margin-bottom: $measure * 5;
+                    } @else {
+                        margin-bottom: 0;
+                    }
                 }
             }
 
-            @if $object-fit == contain or $object-fit== scale-down {
-                &__media {
-                    width: 100%;
-                    height: auto;
+            &__media {
+                @if $object-fit {
                     object-fit: $object-fit;
-                    display: block;
-                    @if $img-position {
-                        object-position: $img-position;
-                    }
+                }
+                @if $img-position {
+                    object-position: $img-position;
+                }
+                @if $object-fit == contain or $object-fit== scale-down {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
                     @if $img-border-radius {
                         border-radius: $img-border-radius;
+                        overflow: hidden;
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                    }
+                    @if $img-min-height {
+                        min-height: $img-min-height;
+                    }
+                    @if $img-max-height {
+                        max-height: $img-max-height;
+                    }
+                    @if $img-height {
+                        height: $img-height;
                     }
                 }
-            } @else {
-                &__media {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: $object-fit;
-                    display: block;
-                    @if $img-position {
-                        object-position: $img-position;
-                    }
-                    @if $breakpoint {
-                    }
+                @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         position: relative;
                         top: auto;
@@ -114,26 +141,20 @@
                     }
                 }
             }
-
-            @if $breakpoint {
-                @media all and ($viewport-type: $breakpoint) {
-                    height: auto;
-                    min-height: 0;
-                    @if $change-order-reponsive {
-                        margin-bottom: $measure * 5;
-                    }
-                }
-            }
         }
+
         &__wrapper {
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     padding: 0;
+                  
+
                     @if $change-order-reponsive == false {
                         margin-bottom: $measure * 5;
                     }
                 }
             }
+
             &__meta {
                 @if $meta-font {
                     @extend .f--font-#{$meta-font} !optional;
@@ -141,9 +162,11 @@
                 @if $meta-font-weight {
                     font-weight: $meta-font-weight;
                 }
+
                 @if $meta-color {
                     color: $meta-color;
                 }
+
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         margin-bottom: $measure * 5;
@@ -161,13 +184,13 @@
                 @if $title-color {
                     color: $title-color;
                 }
+
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         margin-bottom: $measure * 3;
                     }
                 }
             }
-
             &__subtitle {
                 @if $subtitle-font {
                     @extend .f--font-#{$subtitle-font} !optional;
@@ -175,8 +198,15 @@
                 @if $subtitle-font-weight {
                     font-weight: $subtitle-font-weight;
                 }
+
                 @if $subtitle-color {
                     color: $subtitle-color;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 3;
+                    }
                 }
             }
 
@@ -184,9 +214,6 @@
                 &__btn {
                     @if $btn-class {
                         @extend .#{$btn-class} !optional;
-                    }
-                    @if $btn-class-modifier {
-                        @extend .#{$btn-class-modifier} !optional;
                     }
                     @if $btn-font {
                         @extend .f--font-#{$btn-font} !optional;

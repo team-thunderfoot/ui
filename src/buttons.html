@@ -1,139 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Buttons</title>
+    <title>Buttons</title>
 
-        <link rel="stylesheet" href="https://use.typekit.net/gll7dfd.css" />
-        <link rel="stylesheet" href="./buttons.scss" />
-    </head>
-    <body>
-        <main>
-            <section class="f--section-a">
-                <div class="f--container">
-                    <div class="f--row">
-                        <div class="f--col-12">
-                            <a
-                                href="./index.html"
-                                class="f--font-f g--link-01 f--sp-c display--inline-block"
-                                >Back to Index</a
-                            >
-                            <h1 class="f--font-b f--sp-a">Global Buttons</h1>
-                            <p class="f--font-f f--background-a f--p-3 f--sp-a">
-                                <strong>Note:</strong> To go to any button we can add
-                                "#btn-btnNumber" in the url. For example, to go to btn-02 add
-                                "#btn-02", the url will be
-                                "https://globalcomponents.netlify.app/buttons.html#btn-02"
-                            </p>
-                            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> For button modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier.</p>
-                            <p class="f--font-f f--background-a f--p-3"><strong>Note border:</strong> We can set different border-color, border-style or border-width for each side (or add border just to one side).</p>
-                        </div>
-                    </div>
+    <link rel="stylesheet" href="https://use.typekit.net/gll7dfd.css" />
+    <link rel="stylesheet" href="./buttons.scss" />
+  </head>
+  <body>
+    <main>
+      <section class="f--section-a">
+        <div class="f--container">
+          <div class="f--row">
+            <div class="f--col-12">
+              <a href="./index.html" class="f--font-f g--link-01 f--sp-c display--inline-block">Back to Index</a>
+              <h1 class="f--font-b f--sp-a">Global Buttons</h1>
+              <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note:</strong> To go to any button we can add "#btn-btnNumber" in the url. For example, to go to btn-02 add "#btn-02", the url will be "https://globalcomponents.netlify.app/buttons.html#btn-02"</p>
+              <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> For button modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier.</p>
+              <p class="f--font-f f--background-a f--p-3"><strong>Note border:</strong> We can set different border-color, border-style or border-width for each side (or add border just to one side).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="f--section-c" id="btn-01">
+        <div class="f--container">
+          <div class="f--row">
+            <div class="f--col-8 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-b">btn-01</h2>
+              <button class="g--btn-01 f--sp-b">Button 01</button>
+              <a href="#" class="g--btn-01 f--sp-b">Button 01 link</a>
+              <button class="g--btn-01 g--btn-01--second f--sp-b">Button 01--second</button>
+              <a href="#" class="g--btn-01 g--btn-01--second f--sp-b">Button 01--second link</a>
+              <button class="g--btn-01 g--btn-01--third f--sp-b">Button 01--third</button>
+              <a href="#" class="g--btn-01 g--btn-01--third f--sp-b">Button 01--third link</a>
+            </div>
+            <div class="f--col-4 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-a">Editable variables</h2>
+              <div class="f--row">
+                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                  <ul class="f--sp-c" style="list-style: inside">
+                    <li>$border-color</li>
+                    <li>$border-color-hover</li>
+                    <li>$border-width</li>
+                    <li>$border-radius</li>
+                    <li>$border-style</li>
+                    <li>$font</li>
+                    <li>$font-weight</li>
+                    <li>$text-color</li>
+                    <li>$text-color-hover</li>
+                    <li>$background-color</li>
+                    <li>$background-color-hover</li>
+                    <li>$background-position</li>
+                    <li>$background-position-hover</li>
+                    <li>$background-size</li>
+                    <li>$background-size-hover</li>
+                    <li>$transition</li>
+                  </ul>
                 </div>
-            </section>
-            <section class="f--section-c" id="btn-01">
-                <div class="f--container">
-                    <div class="f--row">
-                        <div class="f--col-8 f--col-tabletm-12">
-                            <h2 class="f--font-c f--sp-b">btn-01</h2>
-                            <button class="g--btn-01 f--sp-b">Button 01</button>
-                            <a href="#" class="g--btn-01 f--sp-b">Button 01 link</a>
-                            <button class="g--btn-01 g--btn-01--second f--sp-b">
-                                Button 01--second
-                            </button>
-                            <a href="#" class="g--btn-01 g--btn-01--second f--sp-b"
-                                >Button 01--second link</a
-                            >
-                            <button class="g--btn-01 g--btn-01--third f--sp-b">
-                                Button 01--third
-                            </button>
-                            <a href="#" class="g--btn-01 g--btn-01--third f--sp-b"
-                                >Button 01--third link</a
-                            >
-                        </div>
-                        <div class="f--col-4 f--col-tabletm-12">
-                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-                            <div class="f--row">
-                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                                    <ul class="f--sp-c" style="list-style: inside">
-                                        <li>$border-color</li>
-                                        <li>$border-color-hover</li>
-                                        <li>$border-width</li>
-                                        <li>$border-radius</li>
-                                        <li>$border-style</li>
-                                        <li>$font</li>
-                                        <li>$font-weight</li>
-                                        <li>$text-color</li>
-                                        <li>$text-color-hover</li>
-                                        <li>$background-color</li>
-                                        <li>$background-color-hover</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="f--section-c" id="btn-02">
+        <div class="f--container">
+          <div class="f--row">
+            <div class="f--col-8 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-b">btn-02</h2>
+              <button class="g--btn-02 f--font-f display--inline-block f--sp-b">
+                btn 02
+                <svg class="g--btn-02__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </button>
+              <a href="#" class="g--btn-02 f--font-f display--inline-block f--sp-b"
+                >btn 02 link
+                <svg class="g--btn-02__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
+            <div class="f--col-4 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-a">Editable variables</h2>
+              <div class="f--row">
+                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                  <ul class="f--sp-c" style="list-style: inside">
+                    <li>$text-color</li>
+                    <li>$text-color-hover</li>
+                    <li>$icon-top</li>
+                    <li>$icon-width</li>
+                    <li>$btn-font</li>
+                    <li>$btn-font-weight</li>
+                    <li>$artwork-color-fill</li>
+                    <li>$artwork-color-stroke</li>
+                    <li>$artwork-color-hover</li>
+                  </ul>
                 </div>
-            </section>
-            <section class="f--section-c" id="btn-02">
-                <div class="f--container">
-                    <div class="f--row">
-                        <div class="f--col-8 f--col-tabletm-12">
-                            <h2 class="f--font-c f--sp-b">btn-02</h2>
-                            <button class="g--btn-02 f--font-f display--inline-block f--sp-b">
-                                btn 02
-                                <svg
-                                    class="g--btn-02__artwork"
-                                    viewBox="0 0 7 11"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M1 9.5L5 5.5L1 1.5"
-                                        stroke="#4D49F3"
-                                        stroke-width="1.5"
-                                    />
-                                </svg>
-                            </button>
-                            <a href="#" class="g--btn-02 f--font-f display--inline-block f--sp-b"
-                                >btn 02 link
-                                <svg
-                                    class="g--btn-02__artwork"
-                                    viewBox="0 0 7 11"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M1 9.5L5 5.5L1 1.5"
-                                        stroke="#4D49F3"
-                                        stroke-width="1.5"
-                                    />
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="f--col-4 f--col-tabletm-12">
-                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-                            <div class="f--row">
-                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                                    <ul class="f--sp-c" style="list-style: inside">
-                                        <li>$text-color</li>
-                                        <li>$text-color-hover</li>
-                                        <li>$icon-top</li>
-                                        <li>$icon-width</li>
-                                        <li>$btn-font</li>
-                                        <li>$btn-font-weight</li>
-                                        <li>$artwork-color-fill</li>
-                                        <li>$artwork-color-stroke</li>
-                                        <li>$artwork-color-hover</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <script type="module" src="./index.js"></script>
-    </body>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

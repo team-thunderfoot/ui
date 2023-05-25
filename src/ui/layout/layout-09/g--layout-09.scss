@@ -2,19 +2,18 @@
     @include make-layout-09();
     @include make-layout-09-modifier(
         $subtitle-font: f,
-        $title-font: c,
-        $object-fit: cover,
-        // $img-border-radius: $measure * 4,
-        // $img-position: false,
-        $title-font-weight: 400,
         $subtitle-font-weight: 400,
-        $change-order-reponsive: true,
         $subtitle-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
-        // $background-color: false,
+        $object-fit: cover,
+        $img-position: false,
+        // $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
         $btn-font: f,
         $btn-class: g--btn-01,
-        // $btn-class-modifier: false,
         $breakpoint: $tablets
+        // $background-color: map-get($color-options, e),
     );
 }

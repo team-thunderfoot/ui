@@ -1,64 +1,282 @@
-@mixin make-card-25(
-    $border-radius: false,
-) {
-    padding: $measure * 7 $measure * 5;
+@mixin make-card-25() {
+    overflow: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 0;
+    }
+
+    &__media-wrapper{
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &__media {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        padding: $measure * 6 $measure * 5;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@mixin make-card-25-modifier(
+    $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $full-image-height: false,
+    $hover-background-color: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-height: false,
+    $img-position: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false,
+) {
     @if $border-radius {
         border-radius: $border-radius;
     }
 
-    &__title{
-        margin-bottom: $measure * 2;
-        
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow{
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform{
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
         }
     }
 
-    &__subtitle{}
-}
+    @if $hover-background-color {
+        &::before{
+            transition: background $time-b $ease-standard-a;
+        }
+        
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::before {
+                    background: $hover-background-color;
+                }
+            }
+        }
 
-@mixin make-card-25-modifier(
-    $background-color,
-    $subtitle-color,
-    $title-color,
-    $text-align: false,
-    $subtitle-font: false,
-    $subtitle-font-weight: false,
-    $title-font: false,
-    $title-font-weight: false,
-) {
-    background: $background-color;
+        .g--card-25 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                
+                .g--card-25 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-title-color {
+
+        .g--card-25  {
+            &__wrapper {
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-25 {
+                    &__wrapper {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom{
+        .g--card-25 {
+            &__media-wrapper{
+                &__media{
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+
+                .g--card-25 {
+                    &__media-wrapper{
+                        &__media{
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     @if $text-align == "center" {
-        text-align: center;
+        .g--card-25 {
+            &__wrapper {
+                text-align: center;
+            }
+        }
     }
 
     @if $text-align == "left" {
-        text-align: left;
+        .g--card-25 {
+            &__wrapper {
+                text-align: left;
+            }
+        }
     }
 
     @if $text-align == "right" {
-        text-align: right;
+        .g--card-25 {
+            &__wrapper {
+                text-align: right;
+            }
+        }
+    }
+
+    @if $background-color{
+        &::before{
+            background: $background-color;
+        }
     }
 
     .g--card-25 {
-        &__title{
-            color: $title-color;
-            @if $title-font {
-                @extend .f--font-#{$title-font} !optional;
+        &__media-wrapper{
+            @if $full-image-height {
+                height: 100%;
             }
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
+
+            &__media{
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                    height: auto;
+                } @else{
+                    height: 100%;
+                }
+
+                @if $img-height {
+                    height: $img-height;
+                } @else{
+                    height: 100%;
+                }
+
+                @if $img-position {
+                    object-position: $img-position;
+                }
             }
         }
-        &__subtitle{
-            color: $subtitle-color;
-            @if $subtitle-font {
-                @extend .f--font-#{$subtitle-font} !optional;
+
+        &__wrapper {
+            @if $full-image-height {
+                height: auto;
             }
-            @if $subtitle-font-weight {
-                font-weight: $subtitle-font-weight;
+
+            @if $background-color{
+                background: $background-color;
+            }
+
+            &__title {
+                @if $title-color{
+                    color: $title-color;
+                }
+
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
             }
         }
     }

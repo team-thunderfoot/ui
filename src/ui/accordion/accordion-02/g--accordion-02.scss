@@ -7,6 +7,9 @@
         $icon-color: map-get($color-options, g),
         $title-color: map-get($color-options, a),
         $title-font: d,
+        $hover-title-color: map-get($color-options, g),
+        $active-title-color: map-get($color-options, e),
+        $active-icon-color: map-get($color-options, e),
         // $title-font-weight: false,
     );
 }

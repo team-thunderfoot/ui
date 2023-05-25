@@ -30,7 +30,6 @@
 - $img-position
 - $img-object-fit
 - $link-class
-- $link-class-modifier
 - $link-font
 - $title-color
 - $title-font
@@ -53,7 +52,6 @@
     $img-position: center,
     $img-object-fit: cover,
     $link-class: g--link-01,
-    $link-class-modifier: false,
     $link-font: false,
     $title-color: map-get($color-options, a),
     $title-font: b,

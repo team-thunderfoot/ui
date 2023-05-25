@@ -11,23 +11,30 @@
 }
 
 @mixin make-btn-01-modifier(
-    $border-color: false,
-    $border-color-hover: false,
-    $border-width: false,
-    $border-radius: false,
-    $border-style: false,
-    $font: false,
-    $font-weight: false,
-    $text-color: false,
-    $text-color-hover: false,
     $background-color: false,
     $background-color-hover: false,
     $background-position: false,
     $background-position-hover: false,
+    $background-repeat: false,
     $background-size: false,
     $background-size-hover: false,
+    $border-color: false,
+    $border-color-hover: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $font: false,
+    $font-weight: false,
+    $text-color: false,
+    $text-color-hover: false,
     $transition: false
 ) {
+    @if $background-color {
+        background: $background-color;
+    }
+    @if $background-repeat {
+        background-repeat: $background-repeat;
+    }
     @if $background-size {
         background-size: $background-size;
     }
@@ -56,11 +63,8 @@
         font-weight: $font-weight;
     }
 
-    @if $background-color {
-        background: $background-color;
-    }
 
-    @if $background-color-hover or $border-color-hover or $text-color-hover {
+    @if $background-color-hover or $border-color-hover or $text-color-hover or $background-size-hover or $background-position-hover {
         @if $transition{
             transition: $transition;
         }

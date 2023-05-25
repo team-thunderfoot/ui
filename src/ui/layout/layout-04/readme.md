@@ -32,21 +32,24 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $meta-font
-- $subtitle-font
-- $title-font
-- $object-fit
-- $img-border-radius
-- $img-position
-- $meta-font-weight
-- $title-font-weight
-- $subtitle-font-weight
-- $change-order-reponsive
-- $meta-color
-- $subtitle-color
-- $title-color
 - $background-color
 - $breakpoint
+- $change-order-reponsive
+- $img-border-radius
+- $img-max-height
+- $img-min-height
+- $img-height
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $object-fit
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -58,21 +61,26 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-04 {
     @include make-layout-04();
     @include make-layout-04-modifier(
-        $meta-font: f,
-        $meta-font-weight: 400,
-        $meta-color: map-get($color-options, a),
-        $subtitle-font: d,
-        $subtitle-font-weight: 400,
-        $subtitle-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 600,
-        $title-color: map-get($color-options, a),
-        $object-fit: cover,
+        // $background-color: false,
+        // $breakpoint: false,
+        // $btn-class: false,
+        // $btn-font: false,
+        // $change-order-reponsive: false,
         // $img-border-radius: false,
+        // $img-max-height: false,
+        // $img-min-height: false,
+        // $img-height: false,
         // $img-position: false,
-        $change-order-reponsive: true,
-        // $background-color: map-get($color-options, d),
-        $breakpoint: $tablets
+        // $meta-color: false,
+        // $meta-font: false,
+        // $meta-font-weight: false,
+        // $object-fit: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
+        // $subtitle-font-weight: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
     );
 }
 ```

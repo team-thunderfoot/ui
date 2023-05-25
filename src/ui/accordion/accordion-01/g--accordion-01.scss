@@ -10,4 +10,15 @@
         $title-font: d,
         // $title-font-weight: false,
     );
+    &--second{
+        @include make-accordion-01-modifier(
+            $hover-background-color: rgba(map-get($color-options, a), .2),
+            $hover-title-color: map-get($color-options, e),
+            $hover-icon-color: map-get($color-options, e),
+            $active-background-color: rgba(map-get($color-options, h), .2),
+            $active-title-color: map-get($color-options, f),
+            $active-icon-color: map-get($color-options, g),
+            // $title-font-weight: false,
+        );
+    }
 }

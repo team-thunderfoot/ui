@@ -72,9 +72,15 @@
 }
 
 @mixin make-accordion-02-modifier(
+    $active-background-color: false,
+    $active-title-color: false,
+    $active-icon-color: false,
     $border-color: false,
     $border-style: false,
     $border-width: false,
+    $hover-background-color: false,
+    $hover-title-color: false,
+    $hover-icon-color: false,
     $icon-color: false,
     $title-color: false,
     $title-font: false,
@@ -94,7 +100,6 @@
 
     .g--accordion-02 {
         &__hd {
-
             &__title {
                 @if $title-color {
                     color: $title-color;
@@ -107,6 +112,9 @@
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
+                @if $hover-title-color or $active-title-color{
+                    transition: color $time-b $ease-standard-a;
+                }
             }
 
             &__icon {
@@ -115,6 +123,79 @@
 
                     &::after {
                         background: $icon-color;
+                    }
+                }
+                @if $hover-icon-color or $active-icon-color{
+                    transition: background $time-b $ease-standard-a;
+                    &::after{
+                        transition: background $time-b $ease-standard-a;
+                    }
+                }
+            }
+            @if $hover-background-color or $active-background-color{
+                transition: background $time-b $ease-standard-a;
+            }
+            @if $hover-background-color{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: $hover-background-color;
+                    }
+                }
+            }
+            @if $hover-title-color{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__title{
+                                    color: $hover-title-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @if $hover-icon-color{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__icon{
+                                    background: $hover-icon-color;
+                                    &::after{
+                                        background: $hover-icon-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.g--accordion-02--is-active {
+        .g--accordion-02{
+            &__hd {
+                @if $active-background-color{
+                    background: $active-background-color;
+                }
+                @if $active-title-color{
+                    &__title{
+                        color: $active-title-color;
+                    }
+                }
+                @if $active-icon-color{
+                    &__icon{
+                        background: $active-icon-color;
+                        &::after{
+                            background: $active-icon-color;
+                        }
                     }
                 }
             }

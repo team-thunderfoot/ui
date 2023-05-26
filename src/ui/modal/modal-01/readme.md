@@ -8,63 +8,51 @@
 
 ## Html
 
-```sh
-<section class="g--modal-01">
+```html
+<button type="button" class="g--btn-01" tf-ds-modal-target="modal-1">open modal-01</button>
+
+<div class="g--modal-01" id="modal-1" role="dialog">
     <div class="g--modal-01__wrapper">
-        <div class="f--container">
-            <div class="f--row">
-                <div class="f--col-8 f--col-tablets-10 f--col-mobile-12">
-                    <h1 class="g--modal-01__wrapper__title">An Energy Solution for Healthcare</h1>
-                </div>
-            </div>
-        </div>
+        <h3 class="f--font-third">modal 01</h3>
+        <img src="https://www.turn-keytechnologies.com/wp-content/uploads/2020/02/aruba-mobility-master.png" alt="" />
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto labore cum harum laudantium dignissimos deserunt tenetur, possimus accusamus sit unde natus atque earum est, magni sint esse quisquam aspernatur consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias ea est expedita rem necessitatibus tempora. Nisi corporis exercitationem cumque nulla, ducimus fuga dignissimos itaque voluptas! Qui non sequi obcaecati! Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Ullam alias praesentium nobis eligendi corporis maxime officia error. Magnam laborum necessitatibus, dolor doloremque voluptatem earum dolorem esse iusto rerum, aperiam aliquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, omnis id repudiandae pariatur sint vel culpa, veritatis soluta nobis obcaecati in amet perferendis porro eveniet quis accusamus enim perspiciatis voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Molestias reprehenderit ipsa sapiente accusantium magni nam odit libero, aliquam, ex ratione culpa ea molestiae optio voluptates dicta soluta sequi porro tempore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus aliquid ab nihil maiores reiciendis minima dignissimos, provident optio quae quisquam ea unde amet ullam explicabo sequi similique mollitia illum a? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sed nemo dolorum enim sequi repellat
+            delectus ut dignissimos voluptatum nihil, magnam veniam, nisi eligendi aut adipisci porro suscipit odio nulla.
+        </p>
     </div>
-    <div class="g--modal-01__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/bg-placeholder.jpg" alt="alt text" class="g--modal-01__media-wrapper__media g--lazy-01">
-    </div>
-</section>
+    <button class="g--modal-01__btn" tf-ds-modal-close="modal-1" aria-label="Close">
+        <svg class="g--modal-01__btn__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.6 16L0 14.4L6.4 8L0 1.6L1.6 0L8 6.4L14.4 0L16 1.6L9.6 8L16 14.4L14.4 16L8 9.6L1.6 16Z" fill="black" />
+        </svg>
+    </button>
+</div>
 ```
 
 ## Editable variables
 
-- $background-color,
-- $header-height,
-- $img-height,
-- $img-position,
-- $img-object-fit,
-- $title-color,
-- $title-font,
-- $title-font-weight,
-- $text-align
+-   $transition-modal
+-   $transition-backdrop
+-   $modal-bg-color
+-   $backdrop-bg-color
+-   $size
+-   $icon-color
+-   $icon-height
+-   $icon-width
 
 ## Use
 
-```sh
-.g--modal-01 {
+```scss
     @include make-modal-01();
     @include make-modal-01-modifier(
-        $background-color: map-get($color-options, f),
-        $header-height: 96px,
-        $img-height: 500px,
-        $img-position: center,
-        $img-object-fit: cover,
-        $title-color: map-get($color-options, a),
-        $title-font: a,
-        $title-font-weight: bold,
-        // $text-align: false
+        $transition-modal: opacity $time-b $ease-standard-a,
+        $transition-backdrop: transform $time-b $ease-standard-a,
+        $modal-bg-color: map-get($color-options, b),
+        $backdrop-bg-color: rgba(map-get($color-options,a), 20%),
+        $size: medium,
+        $icon-color: map-get($color-options, g),
+        $icon-height: $measure * 2
     );
 
-    @media all and ( $viewport-type: $tabletm) {
-        @include make-modal-01-modifier(
-            $img-height: 400px,
-        );
-    }
-
-    @media all and ( $viewport-type: $tablets) {
-        @include make-modal-01-modifier(
-            $header-height: 86px,
-            $img-height: 300px,
-        );
-    }
-}
 ```

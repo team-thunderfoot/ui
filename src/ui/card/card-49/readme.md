@@ -44,7 +44,6 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $img-background-color
 - $img-background-color-hover
 - $icon-class
-- $icon-class-modifier
 - $text-align
 - $title-color-hover
 
@@ -69,7 +68,6 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $subtitle-color: map-get($color-options, a),
         $img-background-color: map-get($color-options, a),
         $img-background-color-hover: map-get($color-options, g),
-        // $icon-class-modifier: false,
         // $text-align: false,
         $title-color-hover: map-get($color-options, g)
     );

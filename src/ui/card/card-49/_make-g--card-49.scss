@@ -45,7 +45,6 @@
     $title-color: false,
     $img-background-color: false,
     $img-background-color-hover: false,
-    $icon-class-modifier: false,
     $text-align: false,
     $title-color-hover: false
 ) {
@@ -196,10 +195,6 @@
         &__link {
             @if $icon-class {
                 @extend .#{$icon-class} !optional;
-            }
-
-            @if $icon-class-modifier {
-                @extend .#{$icon-class-modifier} !optional;
             }
         }
     }

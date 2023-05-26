@@ -46,7 +46,9 @@
     $img-background-color: false,
     $img-background-color-hover: false,
     $text-align: false,
-    $title-color-hover: false
+    $title-color-hover: false,
+    $translate-hover: false,
+    $zoom-hover: false
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -60,13 +62,14 @@
         text-align: right;
     }
 
-    @if $img-background-color-hover or $title-color-hover {
+    @if $img-background-color-hover or $title-color-hover or $translate-hover {
         text-decoration: none !important;
         display: block;
     }
 
-    @if $img-background-color-hover and $title-color-hover {
+    @if $img-background-color-hover and $title-color-hover and $translate-hover {
         .g--card-49 {
+            transition: transform $time-b $ease-standard-a;
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
             }
@@ -80,6 +83,7 @@
             &:focus,
             &:active {
                 .g--card-49 {
+                    transform: $translate-hover;
                     &__media-wrapper {
                         background: $img-background-color-hover;
                     }
@@ -121,6 +125,41 @@
                 .g--card-49 {
                     &__title {
                         color: $title-color-hover;
+                    }
+                }
+            }
+        }
+    } 
+    
+    @if $translate-hover{
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $translate-hover;
+            }
+        }
+    }
+
+    @if $zoom-hover {
+        .g--card-49 {
+            &__media-wrapper {
+                overflow: hidden;
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($zoom-hover);
+                        }
                     }
                 }
             }

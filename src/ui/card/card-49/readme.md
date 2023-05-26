@@ -46,6 +46,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $icon-class
 - $text-align
 - $title-color-hover
+- $zoom-hover
+- $translate-hover
 
 ## use
 
@@ -53,7 +55,6 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-49 {
     @include make-card-49();
     @include make-card-49-modifier(
-        $icon-class:  g--icon-01,
         $title-font: e,
         $subtitle-font: f,
         // $img-border-radius: false,
@@ -68,8 +69,11 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $subtitle-color: map-get($color-options, a),
         $img-background-color: map-get($color-options, a),
         $img-background-color-hover: map-get($color-options, g),
-        // $text-align: false,
-        $title-color-hover: map-get($color-options, g)
+        $icon-class:  g--icon-01,
+        $text-align: false,
+        $title-color-hover: map-get($color-options, g),
+        $zoom-hover: 1.1,
+        $translate-hover: translateY(-5%)
     );
 }
 ```

@@ -40,7 +40,9 @@
     $img-background-color: false,
     $img-background-color-hover: false,
     $text-align: false,
-    $title-color-hover: false
+    $title-color-hover: false,
+    $zoom-hover:false,
+    $translate-hover: false,
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -115,6 +117,41 @@
                 .g--card-48 {
                     &__title {
                         color: $title-color-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $translate-hover{
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $translate-hover;
+            }
+        }
+    }
+
+    @if $zoom-hover {
+        .g--card-48 {
+            &__media-wrapper {
+                overflow: hidden;
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-48 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($zoom-hover);
+                        }
                     }
                 }
             }

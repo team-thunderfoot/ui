@@ -108,6 +108,11 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--hero-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-01/readme.md)
 - [g--hero-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-02/readme.md)
+- [g--hero-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-03/readme.md)
+- [g--hero-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-04/readme.md)
+- [g--hero-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-05/readme.md)
+- [g--hero-06](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-06/readme.md)
+- [g--hero-07](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-07/readme.md)
 
 ### Icon
 

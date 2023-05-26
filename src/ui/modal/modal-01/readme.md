@@ -4,7 +4,7 @@
 
 ![alt text][modal-01]
 
-[modal-01]: /src/img/global-components/modal/modal-01.png
+[modal-01]: /src/img/global-components/modal/modal-01.jpg
 
 ## Html
 

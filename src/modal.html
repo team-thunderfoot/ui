@@ -32,20 +32,33 @@
                     </div>
                 </div>
             </section>
-            <section class="g--modal-01">
-                <div class="g--modal-01__wrapper">
-                    <div class="f--container">
-                        <div class="f--row">
-                            <div class="f--col-8 f--col-tablets-10 f--col-mobile-12">
-                                <h1 class="g--modal-01__wrapper__title">An Energy Solution for Healthcare</h1>
+
+            <section class="f--section-c" id="modal-01">
+                <div class="f--container">
+                    <div class="f--row">
+                        <div class="f--col-12">
+                            <button type="button" class="g--btn-01" tf-ds-modal-target="modal-1">Launch demo modal</button>
+                            <div class="g--modal-01">
+                                <div class="g--modal-01__backdrop"></div>
+                                <div id="modal-1" class="g--modal-01__wrapper" role="dialog">
+                                    <h3 class="f--font-third">Welcome to a super modal</h3>
+                                    <img src="https://www.turn-keytechnologies.com/wp-content/uploads/2020/02/aruba-mobility-master.png" alt="" />
+                                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <button class="g--modal-01__wrapper__btn" tf-ds-modal-close="modal-1" aria-label="Close">
+                                        <svg class="g--modal-01__wrapper__btn__icon apb apb-close" viewBox="0 0 15.81 15.81" enable-background="new 0 0 15.81 15.81" xml:space="preserve">
+                                            <path
+                                                d="M8.74,8.03l6.82,6.82l-0.71,0.71L8.03,8.74l-7.07,7.07L0.25,15.1l7.07-7.07L0,0.71L0.71,0l7.32,7.32l7.07-7.07l0.71,0.71
+            L8.74,8.03z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="g--modal-01__media-wrapper">
-                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/bg-placeholder.jpg" alt="alt text" class="g--modal-01__media-wrapper__media g--lazy-01" />
-                </div>
             </section>
+
             <section class="f--section-a">
                 <div class="f--container">
                     <div class="f--row">
@@ -73,6 +86,6 @@
                 </div>
             </section>
         </main>
-        <script type="module" src="./index.js"></script>
+        <script type="module" src="./modal.js"></script>
     </body>
 </html>

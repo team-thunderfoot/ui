@@ -1,96 +1,54 @@
 @mixin make-modal-01() {
-    display: block;
-    width: 100%;
-
     &__wrapper {
-        padding-bottom: $measure * 10;
-        padding-top: $measure * 14;
-
-        @media all and ($viewport-type: $tablets) {
-            padding-bottom: $measure * 5;
-        }
-
-        &__title {}
-    }
-
-    &__media-wrapper {
-        overflow: hidden;
-
-        &__media {
-            display: block;
-            position: relative;
-            min-height: 100%;
-            width: 100%;
-        }
-    }
-}
-
-@mixin make-modal-01-modifier(
-    $background-color: false,
-    $header-height: false,
-    $img-height: false,
-    $img-position: false,
-    $img-object-fit: false,
-    $title-color: false,
-    $title-font: false,
-    $title-font-weight: false,
-    $text-align: false
-) {
-    @if $background-color {
-        background: $background-color;
-    }
-
-    @if $text-align == "center" {
-        text-align: center;
-    }
-
-    @if $text-align == "left" {
-        text-align: left;
-    }
-
-    @if $text-align == "right" {
-        text-align: right;
-    }
-
-    .g--modal-01 {
-        &__wrapper {
-            @if $header-height {
-                padding-top: calc(#{$measure} * 14 + #{$header-height});
-    
-                @media all and ($viewport-type: $tablets) {
-                    padding-top: calc(#{$measure} * 7 + #{$header-height});
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+        width: 60%;
+        background-color: #78f2c5;
+        padding: 2rem;
+        transition: transform 0.3s 0s ease;
+        &__btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: #1a191d;
+            &__icon {
+                color: #1a191d;
+                height: 1rem;
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                    width: 1rem;
                 }
-            }
-
-            &__title {
-                @if $title-color {
-                    color: $title-color;
-                }
-
-                @if $title-font {
-                    @extend .f--font-#{$title-font} !optional;
-                }
-
-                @if $title-font-weight {
-                    font-weight: $title-font-weight;
+                path {
+                    fill: #1a191d;
                 }
             }
         }
 
-        &__media-wrapper {
-            @if $img-height {
-                height: $img-height;
-            }
+        &--is-active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 
-            &__media {
-                @if $img-position {
-                    object-position: $img-position;
-                }
-
-                @if $img-object-fit {
-                    object-fit: $img-object-fit;
-                }
-            }
+    &__backdrop {
+        visibility: visible;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 100;
+        background-color: rgba(26, 25, 29, 0.7);
+        transform: translate(0px, 100%);
+        transition: transform 0.3s 0s ease;
+        &--is-active {
+            transform: translate(0px, 0%);
         }
     }
 }

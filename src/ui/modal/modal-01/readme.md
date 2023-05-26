@@ -1,6 +1,6 @@
 # modal-01
 
-## Layout
+## Modal
 
 ![alt text][modal-01]
 

@@ -38,6 +38,8 @@ class Index {
       offsetTopURL: 100,
     });
 
+    //
+
     const preventBounceIOS = new PreventBounceIOS();
   }
 }

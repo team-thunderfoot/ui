@@ -1,0 +1,96 @@
+@mixin make-modal-01() {
+    display: block;
+    width: 100%;
+
+    &__wrapper {
+        padding-bottom: $measure * 10;
+        padding-top: $measure * 14;
+
+        @media all and ($viewport-type: $tablets) {
+            padding-bottom: $measure * 5;
+        }
+
+        &__title {}
+    }
+
+    &__media-wrapper {
+        overflow: hidden;
+
+        &__media {
+            display: block;
+            position: relative;
+            min-height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@mixin make-modal-01-modifier(
+    $background-color: false,
+    $header-height: false,
+    $img-height: false,
+    $img-position: false,
+    $img-object-fit: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $text-align: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--modal-01 {
+        &__wrapper {
+            @if $header-height {
+                padding-top: calc(#{$measure} * 14 + #{$header-height});
+    
+                @media all and ($viewport-type: $tablets) {
+                    padding-top: calc(#{$measure} * 7 + #{$header-height});
+                }
+            }
+
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+            }
+        }
+
+        &__media-wrapper {
+            @if $img-height {
+                height: $img-height;
+            }
+
+            &__media {
+                @if $img-position {
+                    object-position: $img-position;
+                }
+
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
+                }
+            }
+        }
+    }
+}

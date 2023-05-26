@@ -1,0 +1,18 @@
+//* project vars/mixins
+@import './scss/_var/vars.scss';
+@import './scss/_mixins/mixins.scss';
+
+//* project foundations
+@import './scss/foundation/foundation.scss';
+
+//* project utilities
+@import './scss/utilities/utilities.scss';
+
+//* global components mixins
+@import './mixins.scss';
+
+//* lazy
+@import './ui/lazy/lazy-01/g--lazy-01.scss';
+
+//* modal
+@import './ui/modal/modal-01/g--modal-01.scss';

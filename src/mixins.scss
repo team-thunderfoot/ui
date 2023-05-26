@@ -94,7 +94,7 @@
 //* hero
 @import './ui/hero/hero-01/make-g--hero-01';
 @import './ui/hero/hero-02/make-g--hero-02';
-// @import './ui/hero/hero-03/make-g--hero-03';
+@import './ui/hero/hero-03/make-g--hero-03';
 @import './ui/hero/hero-04/make-g--hero-04';
 @import './ui/hero/hero-05/make-g--hero-05';
 @import './ui/hero/hero-06/make-g--hero-06';
@@ -105,6 +105,9 @@
 
 //* message
 @import './ui/message/message-01/make-g--message-01';
+
+//* modal
+@import './ui/modal/modal-01/make-g--modal-01';
 
 //* layout
 @import './ui/layout/layout-01/make-g--layout-01';

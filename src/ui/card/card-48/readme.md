@@ -40,6 +40,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $img-background-color-hover
 - $text-align
 - $title-color-hover
+- $zoom-hover
+- $translate-hover
 
 ## use
 
@@ -61,8 +63,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $subtitle-color: map-get($color-options, a),
         $img-background-color: map-get($color-options, a),
         $img-background-color-hover: map-get($color-options, g),
-        // $text-align: false,
-        $title-color-hover: map-get($color-options, g)
+        $text-align: false,
+        $title-color-hover: map-get($color-options, g),
+        $zoom-hover: 1.1,
+        $translate-hover: translateY(-5%)
     );
 }
 ```

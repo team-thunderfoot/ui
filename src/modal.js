@@ -7,9 +7,9 @@ import Modal from '@andresclua/modal';
 const modal = new Modal({
   backdrop: 'g--modal-01__backdrop', //class of the backdrop
   backdropActiveClass: 'g--modal-01__backdrop--is-active', //active class of the backdrop
-  modal:'g--modal-01__wrapper', //class of the modal
+  modal:'g--modal-01', //class of the modal
   modalIdTarget : 'modal-1', //ID of the modal
-  modalActiveClass:'g--modal-01__wrapper--is-active', //active class of the modal
+  modalActiveClass:'g--modal-01--is-active', //active class of the modal
   onHide : () => {
       //do something when the modal closes
   },

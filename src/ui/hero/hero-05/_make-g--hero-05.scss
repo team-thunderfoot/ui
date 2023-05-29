@@ -75,14 +75,44 @@
 
     @if $text-align == "center" {
         text-align: center;
+        .g--hero-05 {
+            &__left-items {
+                &__wrapper {
+                    &__link {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
     }
 
     @if $text-align == "left" {
         text-align: left;
+        .g--hero-04 {
+            &__left-items {
+                &__wrapper {
+                    &__link {
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
     }
 
     @if $text-align == "right" {
         text-align: right;
+        .g--hero-04 {
+            &__left-items {
+                &__wrapper {
+                    &__link {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
     }
 
     @if $breakpoint {

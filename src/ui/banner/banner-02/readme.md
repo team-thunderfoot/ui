@@ -50,7 +50,6 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $title-color
 - $btn-font
 - $btn-class
-- $breakpoint
 
 ## Use
 
@@ -64,7 +63,6 @@ If you want the subtitle to be a c--content, the HTML should be:
         $title-color: map-get($color-options, b),
         $btn-font: f,
         $btn-class: g--btn-01,
-        $breakpoint: $tablets
     );
 }
 ```

@@ -19,7 +19,6 @@
     $title-color: false,
     $btn-font: false,
     $btn-class: false,
-    $breakpoint: false
 ) {
     @if $background-color {
         background-color: $background-color;
@@ -27,11 +26,7 @@
 
     .g--banner-02 {
         &__wrapper {
-            @if $breakpoint {
-                @media all and ($viewport-type: $breakpoint) {
-                    display: block;
-                }
-            }
+
             &__title {
                 @if $title-font {
                     @extend .f--font-#{$title-font} !optional;

@@ -10,7 +10,7 @@
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g),
         $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a),
-        // $background-color: transparent,
+        $background-color: map-get($color-options, b),
         // $background-color-hover: map-get($color-options, a)
     );
 

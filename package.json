@@ -26,6 +26,8 @@
     "@lottiefiles/lottie-player": "^1.7.1",
     "@teamthunderfoot/anchor-to": "^0.0.1",
     "@teamthunderfoot/back-to-top": "^0.0.4",
+    "@teamthunderfoot/mobile-height-adjust": "^0.0.2",
+    "@teamthunderfoot/prevent-bounce-ios": "^0.0.1",
     "blazy": "^1.8.2",
     "push-dir": "^0.4.1"
   }

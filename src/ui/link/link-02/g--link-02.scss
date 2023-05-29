@@ -4,4 +4,9 @@
         $text-color: map-get($color-options, a),
         $text-color-hover: map-get($color-options, g)
     );
+    &--second {
+        @include make-link-02-modifier(
+            $text-color: map-get($color-options, b),
+        );
+    }
 }

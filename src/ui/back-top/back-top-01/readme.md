@@ -10,7 +10,7 @@
 
 You need to add it at the beginning in the HTML container that you want the limits to be. For example, if you want it to be in the main content, you have to add it inside the main tag. It doesn't need container or rows.
 
-```sh
+```html
 <button class="g--back-top-01 js--back-top" tf-data-distance="200">
 </button>
 ```
@@ -19,7 +19,7 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 
 ## Example with an icon
 
-```sh
+```html
 <button class="g--back-top-01 js--back-top" tf-data-distance="200">
     <div class="g--icon-01">
         <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
@@ -31,7 +31,7 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 
 ## Position example inside `<main>`
 
-```sh
+```html
 <main>
     <button class="g--back-top-01 js--back-top" tf-data-distance="200">
     </button>
@@ -50,15 +50,10 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 - $icon-width
 - $margin-bottom
 - $margin-right
-- $breakpoint
-- $icon-height-responsive
-- $icon-width-responsive
-- $margin-bottom-responsive
-- $margin-right-responsive
 
 ## Use
 
-```sh
+```scss
 .g--back-top-01 {
     @include make-back-top-01();
 
@@ -67,11 +62,6 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
         $icon-width: $measure*5,
         $margin-bottom: $measure*5,
         $margin-right: $measure*3,
-        $breakpoint: $tablets,
-        $icon-height-responsive: $measure*4,
-        $icon-width-responsive: $measure*4,
-        $margin-bottom-responsive: $measure*2,
-        $margin-right-responsive: $measure*2,
     );
 }
 ```
@@ -88,7 +78,7 @@ npm i @andresclua/jsutil
 
 Import the BackToTop and initialize it inside `init()`. The `activeClass` is the class used to show it, `distance` is the dstance (in px) you have to scroll to start seeing it.
 
-```sh
+```js
 import BackToTop from '@teamthunderfoot/back-to-top';
 
 class Index {
@@ -110,6 +100,6 @@ new Index();
 
 To remove the back-to-top functionality, you can use the destroy method. Call the destroy method on the instance of BackToTop:
 
-```sh
+```js
 const destroy = backToTop.destroy();
 ```

@@ -17,11 +17,6 @@
     $icon-width: false,
     $margin-bottom: false,
     $margin-right: false,
-    $breakpoint: false,
-    $icon-height-responsive: false,
-    $icon-width-responsive: false,
-    $margin-bottom-responsive: false,
-    $margin-right-responsive: false,
 ){
     @if $icon-height and $margin-bottom{
         top: calc(100% - #{$icon-height} - #{$margin-bottom});
@@ -39,43 +34,9 @@
         left: calc(100% - #{$margin-right});
     }
 
-    @if $breakpoint and $icon-height-responsive and $margin-bottom-responsive{
-        @media all and ($viewport-type: $breakpoint) {
-            top: calc(100% - #{$icon-height-responsive} - #{$margin-bottom-responsive});
-        }
-    } @else if $breakpoint and $icon-height-responsive {
-        @media all and ($viewport-type: $breakpoint) {
-            top: calc(100% - #{$icon-height-responsive});
-        }
-    } @else if $breakpoint and $margin-bottom-responsive {
-        @media all and ($viewport-type: $breakpoint) {
-            top: calc(100% - #{$margin-bottom-responsive});
-        }
-    }
-
-    @if $breakpoint and $icon-width-responsive and $margin-right-responsive {
-        @media all and ($viewport-type: $breakpoint) {
-            left: calc(100% - #{$icon-width-responsive} - #{$margin-right-responsive});
-        }
-    } @else if $breakpoint and $icon-width-responsive {
-        @media all and ($viewport-type: $breakpoint) {
-            left: calc(100% - #{$icon-width-responsive});
-        }
-    } @else if $breakpoint and $margin-right-responsive {
-        @media all and ($viewport-type: $breakpoint) {
-            left: calc(100% - #{$margin-right-responsive});
-        }
-    }
-
     & + * {
         @if $icon-height {
             margin-top: -$icon-height;
-        }
-        
-        @if $breakpoint and $icon-height-responsive{
-            @media all and ($viewport-type: $breakpoint) {
-                margin-top: -$icon-height-responsive;
-            }
         }
     }
 }

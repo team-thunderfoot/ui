@@ -50,21 +50,34 @@
 
 ### For modifiers
 
-- $background-color
-- $background-color-hover
-- $full-image-height
-- $pill-class-modifier: false by default
-- $author-color
 - $author-font
 - $author-font-weight
+- $author-color
+- $background-color
+- $border-color
+- $border-style
+- $border-width
+- $border-radius
+- $full-image-height
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-position
+- $link-class
+- $link-font
 - $meta-color
 - $meta-font
 - $meta-font-weight
+- $pill-class
 - $text-align
+- $title-color
 - $title-font
 - $title-font-weight
-- $title-color
-- $title-color-hover
+- $title-max-lines
 
 ## use
 

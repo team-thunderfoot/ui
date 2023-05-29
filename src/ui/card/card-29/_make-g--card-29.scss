@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    &__media-wrapper{
+    &__media-wrapper {
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -20,8 +20,8 @@
         padding: $measure * 6 $measure * 5;
         position: relative;
         z-index: 1;
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             position: absolute;
             top: 100%;
             left: 0;
@@ -32,7 +32,6 @@
         &__meta {
             margin-bottom: $measure * 3;
         }
-
     }
 }
 
@@ -58,7 +57,7 @@
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $title-max-lines: false,
+    $title-max-lines: false
 ) {
     @if $border-radius {
         border-radius: $border-radius;
@@ -77,11 +76,9 @@
         cursor: pointer;
     }
 
-    
-
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -89,18 +86,18 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-shadow{
+    } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-transform{
+    } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -112,10 +109,10 @@
         .g--card-29 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
-                &::before{
+                &::before {
                     transition: background $time-b $ease-standard-a;
                 }
-                @media all and (hover : hover) {
+                @media all and (hover: hover) {
                     &:hover,
                     &:focus,
                     &:active {
@@ -127,11 +124,10 @@
             }
         }
 
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                
                 .g--card-29 {
                     &__wrapper {
                         background: $hover-background-color;
@@ -141,8 +137,7 @@
         }
     }
     @if $hover-title-color {
-
-        .g--card-29  {
+        .g--card-29 {
             &__wrapper {
                 &__title {
                     transition: color $time-b $ease-standard-a;
@@ -150,7 +145,7 @@
             }
         }
 
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -165,22 +160,21 @@
         }
     }
 
-    @if $hover-img-zoom{
+    @if $hover-img-zoom {
         .g--card-29 {
-            &__media-wrapper{
-                &__media{
+            &__media-wrapper {
+                &__media {
                     transition: transform $time-b $ease-standard-a;
                 }
             }
         }
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-
                 .g--card-29 {
-                    &__media-wrapper{
-                        &__media{
+                    &__media-wrapper {
+                        &__media {
                             transform: scale($hover-img-zoom);
                         }
                     }
@@ -214,20 +208,20 @@
     }
 
     .g--card-29 {
-        &__media-wrapper{
+        &__media-wrapper {
             @if $full-image-height {
                 height: 100%;
             }
-            &__media{
+            &__media {
                 @if $img-aspect-ratio {
                     aspect-ratio: $img-aspect-ratio;
                     height: auto;
-                } @else{
+                } @else {
                     height: 100%;
                 }
                 @if $img-height {
                     height: $img-height;
-                } @else{
+                } @else {
                     height: 100%;
                 }
                 @if $img-position {
@@ -239,16 +233,16 @@
             @if $full-image-height {
                 height: auto;
             }
-            @if $background-color{
+            @if $background-color {
                 background: $background-color;
             }
-            @if $background-color{
-                &::before{
+            @if $background-color {
+                &::before {
                     background: $background-color;
                 }
             }
             &__meta {
-                @if $meta-color{
+                @if $meta-color {
                     color: $meta-color;
                 }
                 @if $meta-font-weight {
@@ -259,7 +253,7 @@
                 }
             }
             &__title {
-                @if $title-color{
+                @if $title-color {
                     color: $title-color;
                 }
                 @if $title-font {

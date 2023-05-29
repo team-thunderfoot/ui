@@ -41,6 +41,7 @@
             margin-bottom: $measure * 3;
         }
         &__list-group {
+            margin-bottom: $measure * 4;
             display: flex;
             flex-wrap: wrap;
             row-gap: $measure;
@@ -49,6 +50,10 @@
                     margin-right: $measure * 2;
                 }
             }
+        }
+
+        &__link {
+            margin-top: auto;
         }
     }
 }
@@ -65,6 +70,8 @@
     $border-radius: false,
     $full-image-height: false,
     $img-position: false,
+    $link-class: false,
+    $link-font: false,
     $meta-font: false,
     $meta-font-weight: false,
     $meta-color: false,
@@ -87,7 +94,7 @@
     @if $border-width {
         border-width: $border-width;
     }
-    
+
     @if $border-radius {
         border-radius: $border-radius;
     }
@@ -403,14 +410,21 @@
                     color: $title-color;
                 }
             }
-        }
 
-        &__wrapper {
             &__list-group {
                 &__list-item {
                     @if $pill-class {
                         @extend .#{$pill-class} !optional;
                     }
+                }
+            }
+
+            &__link {
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
                 }
             }
         }

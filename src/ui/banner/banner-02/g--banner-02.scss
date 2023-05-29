@@ -9,4 +9,7 @@
         $btn-class: g--link-02,
         $breakpoint: $tablets
     );
+    @include make-banner-02-modifier(
+        $btn-class: g--link-02--second
+    );
 }

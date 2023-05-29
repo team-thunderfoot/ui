@@ -48,9 +48,6 @@
         }
         &__list-group {
             margin-bottom: $measure * 4;
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: $measure;
             &__list-item {
                 &:not(:last-child) {
                     margin-right: $measure * 2;

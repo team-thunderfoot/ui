@@ -30,4 +30,37 @@
         $title-font-weight: 600,
         $title-max-lines: 3
     );
+
+    &--second {
+        @include make-card-39-modifier(
+            $author-font: g,
+            $author-font-weight: 400,
+            $author-color: map-get($color-options, a),
+            $background-color: rgba(map-get($color-options,a), 5%),
+            $border-color: map-get($color-options, a),
+            $border-style: solid,
+            $border-width: 1px,
+            $border-radius: 0,
+            // $full-image-height: true,
+            $hover-background-color: map-get($color-options, g),
+            $hover-img-zoom: 1.5,
+            $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: auto,
+            $img-height: 200px,
+            $img-position: center,
+            $link-class: g--link-01,
+            $link-font: f,
+            $meta-color: map-get($color-options, a),
+            $meta-font: f,
+            $meta-font-weight: 600,
+            $pill-class: g--pill-01,
+            $text-align: left,
+            $title-color: map-get($color-options, a),
+            $title-font: c,
+            $title-font-weight: 600,
+            $title-max-lines: 3
+        );
+    }
 }

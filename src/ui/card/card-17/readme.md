@@ -34,7 +34,6 @@ It is not necessary to add aspect-ratio.
 - $hover-title-color
 - $hover-transform
 - $link-class
-- $link-class-modifier
 - $link-font
 - $subtitle-color
 - $subtitle-font

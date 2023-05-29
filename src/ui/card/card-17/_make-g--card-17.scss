@@ -27,7 +27,6 @@
     $hover-title-color: false,
     $hover-transform: false,
     $link-class: false,
-    $link-class-modifier: false,
     $link-font: false,
     $subtitle-color: false,
     $subtitle-font: false,
@@ -123,9 +122,6 @@
         &__link {
             @if $link-class {
                 @extend .#{$link-class} !optional;
-            }
-            @if $link-class-modifier {
-                @extend .#{$link-class-modifier} !optional;
             }
             @if $link-font {
                 @extend .f--font-#{$link-font} !optional;

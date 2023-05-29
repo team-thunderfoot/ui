@@ -16,8 +16,9 @@
         $img-background-color: map-get($color-options, a),
         $img-background-color-hover: map-get($color-options, g),
         $icon-class:  g--icon-01,
-        // $icon-class-modifier: false,
         $text-align: false,
-        $title-color-hover: map-get($color-options, g)
+        $title-color-hover: map-get($color-options, g),
+        $zoom-hover: 1.1,
+        $translate-hover: translateY(-5%)
     );
 }

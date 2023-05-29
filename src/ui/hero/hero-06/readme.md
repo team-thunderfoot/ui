@@ -1,0 +1,53 @@
+# Hero-06
+
+## Layout
+
+![alt text][hero-06]
+
+[hero-06]: /src/img/global-components/hero/hero-06.jpg
+
+## Html
+
+```html
+<section class="g--hero-06">
+    <div class="g--hero-06__left-items">
+        <h1 class="g--hero-06__left-items__title">Heading lorem ipsum dolor</h1>
+    </div>
+    <div class="g--hero-06__right-items">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--hero-06__right-items__media g--lazy-01" />
+    </div>
+</section>
+```
+
+## Editable variables
+
+- $background-color
+- $breakpoint
+- $header-height
+- $img-height
+- $img-position
+- $img-object-fit
+- $title-color
+- $title-font
+- $title-font-weight
+- $text-align
+
+## Use
+
+```scss
+.g--hero-06 {
+    @include make-hero-06();
+    @include make-hero-06-modifier(
+        $background-color: rgba(map-get($color-options, a), 30%),
+        $breakpoint: $tablets,
+        $header-height: 96px,
+        $img-height: 200px,
+        $img-position: center,
+        $img-object-fit: cover,
+        $title-color: map-get($color-options, a),
+        $title-font: b,
+        // $title-font-weight: false,
+        // $text-align: center
+    );
+}
+```

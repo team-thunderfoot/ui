@@ -7,15 +7,16 @@
 [layout-07]: /src/img/global-components/layout/layout-07.png
 
 ## Html
+
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
 ```html
 <section class="g--layout-07">
     <div class="f--container">
         <div class="f--row">
-            <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
+            <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex f--order-tablets-1">
                 <div class="g--layout-07__media-wrapper">
-                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--layout-07__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
+                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--layout-07__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000" />
                 </div>
             </div>
             <div class="f--col-5 f--offset-1 f--col-tabletm-6 f--offset-tabletm-0 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
@@ -34,23 +35,23 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
-- $background-color
-- $breakpoint
-- $btn-class
-- $btn-font
-- $change-order-reponsive
-- $img-border-radius
-- $img-max-height
-- $img-min-height
-- $img-height
-- $img-position
-- $object-fit
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $title-color
-- $title-font
-- $title-font-weight
+-   $background-color
+-   $breakpoint
+-   $btn-class
+-   $btn-font
+-   $change-order-reponsive
+-   $img-border-radius
+-   $img-max-height
+-   $img-min-height
+-   $img-height
+-   $img-position
+-   $object-fit
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $title-color
+-   $title-font
+-   $title-font-weight
 
 ## Use
 
@@ -74,8 +75,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $change-order-reponsive: true,
         $btn-font: f,
         $btn-class: g--btn-01,
-        $breakpoint: $tablets
-        // $background-color: map-get($color-options, e),
+        $breakpoint: $tablets // $background-color: map-get($color-options, e),
     );
 }
 ```

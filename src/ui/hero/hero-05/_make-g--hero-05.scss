@@ -1,4 +1,4 @@
-@mixin make-hero-04() {
+@mixin make-hero-05() {
     display: block;
     width: 100%;
     display: flex;
@@ -22,10 +22,10 @@
     }
 
     &__left-items {
+        padding: $measure * 15;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: $measure * 15;
 
         @media all and ($viewport-type: $tabletm) {
             padding: $measure * 15 $measure * 7;
@@ -37,10 +37,7 @@
             padding: $measure * 10 $measure * 3;
         }
         &__title {
-            margin-bottom: $measure * 3;
-        }
-        &__subtitle {
-            margin-bottom: $measure * 4;
+            margin-bottom: $measure * 6;
         }
 
         &__wrapper {
@@ -51,7 +48,7 @@
     }
 }
 
-@mixin make-hero-04-modifier(
+@mixin make-hero-05-modifier(
     $background-color: false,
     $breakpoint: false,
     $header-height: false,
@@ -63,9 +60,6 @@
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $subtitle-color: false,
-    $subtitle-font: false,
-    $subtitle-font-weight: false,
     $text-align: false
 ) {
     @if $background-color {
@@ -96,7 +90,7 @@
         }
     }
 
-    .g--hero-04 {
+    .g--hero-05 {
         &__right-items,
         &__left-items {
             @if $breakpoint {
@@ -142,18 +136,6 @@
                 }
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
-                }
-            }
-
-            &__subtitle {
-                @if $subtitle-color {
-                    color: $subtitle-color;
-                }
-                @if $subtitle-font {
-                    @extend .f--font-#{$subtitle-font} !optional;
-                }
-                @if $subtitle-font-weight {
-                    font-weight: $subtitle-font-weight;
                 }
             }
 

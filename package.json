@@ -22,6 +22,7 @@
   "dependencies": {
     "@andresclua/accordion": "^0.0.9",
     "@andresclua/jsutil": "^2.0.4",
+    "@andresclua/modal": "^0.0.13",
     "@lottiefiles/lottie-player": "^1.7.1",
     "@teamthunderfoot/anchor-to": "^0.0.1",
     "@teamthunderfoot/back-to-top": "^0.0.4",

@@ -1,7 +1,7 @@
 .g--card-29 {
     @include make-card-29();
     @include make-card-29-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: rgba(map-get($color-options, e), .5),
         $img-aspect-ratio: calc(16 / 9),
     );
     &--second{

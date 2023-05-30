@@ -4,7 +4,7 @@
 
 ![alt text][card-22]
 
-[card-22]: /src/img/global-components/card/card-22.png
+[card-22]: /src/img/global-components/card/card-22.jpg
 
 ## Html for a card
 

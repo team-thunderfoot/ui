@@ -1,0 +1,196 @@
+@mixin make-card-19() {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: $measure * 6 $measure * 5;
+
+    &__meta {
+        margin-bottom: $measure * 3;
+    }
+
+    &__title {
+        margin-bottom: $measure * 3;
+    }
+    &__list-group {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $measure * 2;
+        row-gap: $measure;
+    }
+}
+
+@mixin make-card-19-modifier(
+    $author-font: false,
+    $author-font-weight: false,
+    $author-color: false,
+    $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $hover-background-color: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $meta-color: false,
+    $meta-font: false,
+    $meta-font-weight: false,
+    $pill-class: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false
+) {
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-background-color {
+        .g--card-19 {
+            transition: background $time-b $ease-standard-a;
+
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    background: $hover-background-color;
+                }
+            }
+        }
+    }
+    @if $hover-title-color {
+        .g--card-19 {
+            &__title {
+                transition: color $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-19 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+        .g--card-19 {
+            &__list-group {
+                justify-content: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+        .g--card-19 {
+            &__list-group {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+        .g--card-19 {
+            &__list-group {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @if $background-color {
+        background-color: $background-color;
+    }
+    .g--card-19 {
+        &__meta {
+            @if $meta-font {
+                @extend .f--font-#{$meta-font} !optional;
+            }
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
+            @if $meta-color {
+                color: $meta-color;
+            }
+        }
+
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        &__list-group {
+            &__list-item {
+                @if $pill-class {
+                    @extend .#{$pill-class} !optional;
+                }
+            }
+        }
+    }
+}

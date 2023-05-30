@@ -1,5 +1,5 @@
-.g--card-59{
-    @include make-card-59(
+.g--card-46{
+    @include make-card-46(
         // $border-radius: default,
         $content-font: c,
         $heading-font: f,
@@ -12,7 +12,7 @@
         // $content-font-weight: false,
         // $change-order-reponsive: true
     );
-    @include make-card-59-modifier(
+    @include make-card-46-modifier(
         $content-color: map-get($color-options, a),
         $heading-color: map-get($color-options, a),
         $person-color: map-get($color-options, a),

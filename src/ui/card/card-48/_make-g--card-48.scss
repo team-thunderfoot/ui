@@ -25,24 +25,25 @@
 }
 
 @mixin make-card-48-modifier(
-    $subtitle-font: false,
-    $title-font: false,
+    $hover-img-background-color: false,
+    $hover-img-zoom:false,
+    $hover-title-color: false,
+    $hover-translate: false,
+    $img-align: false,
+    $img-aspect-ratio: false,
+    $img-background-color: false,
     $img-border-radius: false,
+    $img-height: false,
     $img-object-fit: false,
     $img-position: false,
     $img-width: false,
-    $img-height: false,
-    $img-aspect-ratio: false,
-    $title-font-weight: false,
-    $subtitle-font-weight: false,
     $subtitle-color: false,
-    $title-color: false,
-    $img-background-color: false,
-    $img-background-color-hover: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
     $text-align: false,
-    $title-color-hover: false,
-    $zoom-hover:false,
-    $translate-hover: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -56,12 +57,12 @@
         text-align: right;
     }
 
-    @if $img-background-color-hover or $title-color-hover {
+    @if $hover-img-background-color or $hover-img-zoom or $hover-title-color or $hover-translate {
         text-decoration: none !important;
         display: block;
     }
 
-    @if $img-background-color-hover and $title-color-hover {
+    @if $hover-img-background-color and $hover-title-color {
         .g--card-48 {
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
@@ -77,15 +78,15 @@
             &:active {
                 .g--card-48 {
                     &__media-wrapper {
-                        background: $img-background-color-hover;
+                        background: $hover-img-background-color;
                     }
                     &__title {
-                        color: $title-color-hover;
+                        color: $hover-title-color;
                     }
                 }
             }
         }
-    } @else if $img-background-color-hover {
+    } @else if $hover-img-background-color {
         .g--card-48 {
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
@@ -98,12 +99,12 @@
             &:active {
                 .g--card-48 {
                     &__media-wrapper {
-                        background: $img-background-color-hover;
+                        background: $hover-img-background-color;
                     }
                 }
             }
         }
-    } @else if $title-color-hover {
+    } @else if $hover-title-color {
         .g--card-48 {
             &__title {
                 transition: color $time-b $ease-standard-a;
@@ -116,25 +117,25 @@
             &:active {
                 .g--card-48 {
                     &__title {
-                        color: $title-color-hover;
+                        color: $hover-title-color;
                     }
                 }
             }
         }
     }
 
-    @if $translate-hover{
+    @if $hover-translate{
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                transform: $translate-hover;
+                transform: $hover-translate;
             }
         }
     }
 
-    @if $zoom-hover {
+    @if $hover-img-zoom {
         .g--card-48 {
             &__media-wrapper {
                 overflow: hidden;
@@ -150,7 +151,7 @@
                 .g--card-48 {
                     &__media-wrapper {
                         &__media {
-                            transform: scale($zoom-hover);
+                            transform: scale($hover-img-zoom);
                         }
                     }
                 }
@@ -171,30 +172,34 @@
             &__media {
                 @if $img-object-fit {
                     object-fit: $img-object-fit;
-                } @else {
-                    object-fit: contain;
                 }
 
                 @if $img-position {
                     object-position: $img-position;
-                } @else {
-                    object-position: bottom center;
                 }
 
                 @if $img-width {
                     width: $img-width;
-                } @else {
-                    width: 100%;
                 }
 
                 @if $img-height {
                     height: $img-height;
-                } @else {
-                    height: auto;
                 }
 
                 @if $img-aspect-ratio {
                     aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-align == "center" {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @if $img-align == "left" {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+                @if $img-align == "right" {
+                    margin-left: auto;
+                    margin-right: 0;
                 }
             }
         }

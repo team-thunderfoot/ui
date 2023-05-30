@@ -15,12 +15,14 @@
     </div>
     <div class="f--container">
         <div class="f--row">
-            <div class="f--col-6 f--col-tablets-12">
+            <div class="f--col-12">
                 <div class="g--hero-03__ft-items">
-                    <h1 class="g--hero-03__ft-items__title">Heading lorem ipsum dolor</h1>
-                    <h2 class="g--hero-03__ft-items__subtitle">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</h2>
-                    <div class="g--hero-03__ft-items__wrapper">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--hero-03__ft-items__wrapper__link">Contact Us</a>
+                    <div class="g--hero-03__ft-items__bd">
+                        <h1 class="g--hero-03__ft-items__bd__title">Heading lorem ipsum dolor</h1>
+                        <h2 class="g--hero-03__ft-items__bd__subtitle">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</h2>
+                        <div class="g--hero-03__ft-items__bd__wrapper">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--hero-03__ft-items__bd__wrapper__link">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -31,18 +33,19 @@
 
 ## Editable variables
 
-- $header-height
-- $img-position
-- $img-object-fit
-- $link-class
-- $link-font
-- $title-color
-- $title-font
-- $title-font-weight
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $text-align
+-   $header-height
+-   $img-position
+-   $img-object-fit
+-   $link-class
+-   $link-font
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $text-align
+-   $breakpoint
 
 ## Use
 
@@ -61,7 +64,8 @@
         $subtitle-color: map-get($color-options, a),
         $subtitle-font: d,
         $subtitle-font-weight: bold,
-        // $text-align: center
+        $text-align: left,
+        $breakpoint: $tablets
     );
 }
 ```

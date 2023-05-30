@@ -5,7 +5,6 @@
     overflow: hidden;
     position: relative;
 
-
     &__bg-items {
         position: absolute;
         top: 0;
@@ -30,17 +29,20 @@
             padding: $measure * 10 0;
         }
 
+        &__bd {
+            width: 50%;
 
-        &__title {
-            margin-bottom: $measure * 3;
-        }
-        &__subtitle {
-            margin-bottom: $measure * 4;
-        }
+            &__title {
+                margin-bottom: $measure * 3;
+            }
+            &__subtitle {
+                margin-bottom: $measure * 4;
+            }
 
-        &__wrapper {
-            &__link {
-                width: fit-content;
+            &__wrapper {
+                &__link {
+                    width: fit-content;
+                }
             }
         }
     }
@@ -58,19 +60,20 @@
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
-    $text-align: false
+    $text-align: false,
+    $breakpoint: false
 ) {
-
-
-
     @if $text-align == "center" {
         text-align: center;
         .g--hero-03 {
             &__ft-items {
-                &__wrapper {
-                    &__link {
-                        margin-left: auto;
-                        margin-right: auto;
+                align-items: center;
+                &__bd {
+                    &__wrapper {
+                        &__link {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
                     }
                 }
             }
@@ -81,10 +84,13 @@
         text-align: left;
         .g--hero-03 {
             &__ft-items {
-                &__wrapper {
-                    &__link {
-                        margin-left: 0;
-                        margin-right: auto;
+                align-items: flex-start;
+                &__bd {
+                    &__wrapper {
+                        &__link {
+                            margin-left: 0;
+                            margin-right: auto;
+                        }
                     }
                 }
             }
@@ -95,10 +101,13 @@
         text-align: right;
         .g--hero-03 {
             &__ft-items {
-                &__wrapper {
-                    &__link {
-                        margin-left: auto;
-                        margin-right: 0;
+                align-items: flex-end;
+                &__bd {
+                    &__wrapper {
+                        &__link {
+                            margin-left: auto;
+                            margin-right: 0;
+                        }
                     }
                 }
             }
@@ -110,9 +119,7 @@
     }
 
     .g--hero-03 {
-
         &__bg-items {
-
             &__media {
                 @if $img-position {
                     object-position: $img-position;
@@ -128,37 +135,45 @@
             @if $header-height {
                 min-height: calc(100vh - #{$header-height});
             }
-            &__title {
-                @if $title-color {
-                    color: $title-color;
-                }
-                @if $title-font {
-                    @extend .f--font-#{$title-font} !optional;
-                }
-                @if $title-font-weight {
-                    font-weight: $title-font-weight;
-                }
-            }
 
-            &__subtitle {
-                @if $subtitle-color {
-                    color: $subtitle-color;
-                }
-                @if $subtitle-font {
-                    @extend .f--font-#{$subtitle-font} !optional;
-                }
-                @if $subtitle-font-weight {
-                    font-weight: $subtitle-font-weight;
-                }
-            }
-
-            &__wrapper {
-                &__link {
-                    @if $link-class {
-                        @extend .#{$link-class} !optional;
+            &__bd {
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        width: 100%;
                     }
-                    @if $link-font {
-                        @extend .f--font-#{$link-font} !optional;
+                }
+                &__title {
+                    @if $title-color {
+                        color: $title-color;
+                    }
+                    @if $title-font {
+                        @extend .f--font-#{$title-font} !optional;
+                    }
+                    @if $title-font-weight {
+                        font-weight: $title-font-weight;
+                    }
+                }
+
+                &__subtitle {
+                    @if $subtitle-color {
+                        color: $subtitle-color;
+                    }
+                    @if $subtitle-font {
+                        @extend .f--font-#{$subtitle-font} !optional;
+                    }
+                    @if $subtitle-font-weight {
+                        font-weight: $subtitle-font-weight;
+                    }
+                }
+
+                &__wrapper {
+                    &__link {
+                        @if $link-class {
+                            @extend .#{$link-class} !optional;
+                        }
+                        @if $link-font {
+                            @extend .f--font-#{$link-font} !optional;
+                        }
                     }
                 }
             }

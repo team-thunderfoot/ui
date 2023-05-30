@@ -28,13 +28,6 @@
 -   $author-font
 -   $author-font-weight
 -   $author-color
--   $background-color
--   $border-color
--   $border-style
--   $border-width
--   $border-radius
--   $hover-background-color
--   $hover-shadow
 -   $hover-title-color
 -   $hover-transform
 -   $link-class
@@ -58,13 +51,6 @@
         $author-font: g,
         $author-font-weight: 600,
         $author-color: map-get($color-options, a),
-        $background-color: map-get($color-options, e),
-        $border-color: map-get($color-options, a),
-        $border-style: dashed,
-        $border-width: 2px,
-        $border-radius: $measure,
-        $hover-background-color: map-get($color-options, g),
-        $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         $hover-title-color: map-get($color-options, b),
         $hover-transform: translateY(-5%),
         $link-class: g--link-01,

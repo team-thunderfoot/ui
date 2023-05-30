@@ -17,12 +17,10 @@
         <div class="f--row">
             <div class="f--col-12">
                 <div class="g--hero-03__ft-items">
-                    <div class="g--hero-03__ft-items__bd">
-                        <h1 class="g--hero-03__ft-items__bd__title">Heading lorem ipsum dolor</h1>
-                        <h2 class="g--hero-03__ft-items__bd__subtitle">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</h2>
-                        <div class="g--hero-03__ft-items__bd__wrapper">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--hero-03__ft-items__bd__wrapper__link">Contact Us</a>
-                        </div>
+                    <h1 class="g--hero-03__ft-items__title">Heading lorem ipsum dolor</h1>
+                    <h2 class="g--hero-03__ft-items__subtitle">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</h2>
+                    <div class="g--hero-03__ft-items__wrapper">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--hero-03__ft-items__wrapper__link">Contact Us</a>
                     </div>
                 </div>
             </div>

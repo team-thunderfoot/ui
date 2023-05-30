@@ -24,25 +24,21 @@
         flex-direction: column;
         justify-content: center;
         padding: $measure * 15 0;
+        width: 50%;
 
         @media all and ($viewport-type: $tablets) {
             padding: $measure * 10 0;
         }
+        &__title {
+            margin-bottom: $measure * 3;
+        }
+        &__subtitle {
+            margin-bottom: $measure * 4;
+        }
 
-        &__bd {
-            width: 50%;
-
-            &__title {
-                margin-bottom: $measure * 3;
-            }
-            &__subtitle {
-                margin-bottom: $measure * 4;
-            }
-
-            &__wrapper {
-                &__link {
-                    width: fit-content;
-                }
+        &__wrapper {
+            &__link {
+                width: fit-content;
             }
         }
     }
@@ -67,13 +63,12 @@
         text-align: center;
         .g--hero-03 {
             &__ft-items {
-                align-items: center;
-                &__bd {
-                    &__wrapper {
-                        &__link {
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
+                margin-left: auto;
+                margin-right: auto;
+                &__wrapper {
+                    &__link {
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 }
             }
@@ -84,13 +79,12 @@
         text-align: left;
         .g--hero-03 {
             &__ft-items {
-                align-items: flex-start;
-                &__bd {
-                    &__wrapper {
-                        &__link {
-                            margin-left: 0;
-                            margin-right: auto;
-                        }
+                margin-left: 0;
+                margin-right: auto;
+                &__wrapper {
+                    &__link {
+                        margin-left: 0;
+                        margin-right: auto;
                     }
                 }
             }
@@ -101,13 +95,12 @@
         text-align: right;
         .g--hero-03 {
             &__ft-items {
-                align-items: flex-end;
-                &__bd {
-                    &__wrapper {
-                        &__link {
-                            margin-left: auto;
-                            margin-right: 0;
-                        }
+                margin-left: auto;
+                margin-right: 0;
+                &__wrapper {
+                    &__link {
+                        margin-left: auto;
+                        margin-right: 0;
                     }
                 }
             }
@@ -136,44 +129,42 @@
                 min-height: calc(100vh - #{$header-height});
             }
 
-            &__bd {
-                @if $breakpoint {
-                    @media all and ($viewport-type: $breakpoint) {
-                        width: 100%;
-                    }
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
                 }
-                &__title {
-                    @if $title-color {
-                        color: $title-color;
-                    }
-                    @if $title-font {
-                        @extend .f--font-#{$title-font} !optional;
-                    }
-                    @if $title-font-weight {
-                        font-weight: $title-font-weight;
-                    }
+            }
+            &__title {
+                @if $title-color {
+                    color: $title-color;
                 }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+            }
 
-                &__subtitle {
-                    @if $subtitle-color {
-                        color: $subtitle-color;
-                    }
-                    @if $subtitle-font {
-                        @extend .f--font-#{$subtitle-font} !optional;
-                    }
-                    @if $subtitle-font-weight {
-                        font-weight: $subtitle-font-weight;
-                    }
+            &__subtitle {
+                @if $subtitle-color {
+                    color: $subtitle-color;
                 }
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+            }
 
-                &__wrapper {
-                    &__link {
-                        @if $link-class {
-                            @extend .#{$link-class} !optional;
-                        }
-                        @if $link-font {
-                            @extend .f--font-#{$link-font} !optional;
-                        }
+            &__wrapper {
+                &__link {
+                    @if $link-class {
+                        @extend .#{$link-class} !optional;
+                    }
+                    @if $link-font {
+                        @extend .f--font-#{$link-font} !optional;
                     }
                 }
             }

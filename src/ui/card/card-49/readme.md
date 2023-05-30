@@ -29,25 +29,26 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
-- $title-font
-- $subtitle-font
+- $hover-img-background-color
+- $hover-img-zoom
+- $hover-title-color
+- $hover-translate
+- $icon-class
+- $img-align
+- $img-aspect-ratio
+- $img-background-color
 - $img-border-radius
+- $img-height
 - $img-object-fit
 - $img-position
 - $img-width
-- $img-height
-- $img-aspect-ratio
-- $title-font-weight
-- $subtitle-font-weight
 - $subtitle-color
-- $title-color
-- $img-background-color
-- $img-background-color-hover
-- $icon-class
+- $subtitle-font
+- $subtitle-font-weight
 - $text-align
-- $title-color-hover
-- $zoom-hover
-- $translate-hover
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## use
 
@@ -55,25 +56,26 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-49 {
     @include make-card-49();
     @include make-card-49-modifier(
-        $title-font: e,
-        $subtitle-font: f,
+        // $hover-img-background-color: false,
+        // $hover-img-zoom: false,
+        // $hover-title-color: false,
+        // $hover-translate: false,
+        // $icon-class: false,
+        // $img-align: false,
+        // $img-aspect-ratio: false,
+        // $img-background-color: false,
         // $img-border-radius: false,
+        // $img-height: false,
         // $img-object-fit: false,
         // $img-position: false,
         // $img-width: false,
-        // $img-height: false,
-        // $img-aspect-ratio: false,
-        // $title-font-weight: false,
+        // $subtitle-color: false,
+        // $subtitle-font: false,
         // $subtitle-font-weight: false,
-        $title-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
-        $img-background-color: map-get($color-options, a),
-        $img-background-color-hover: map-get($color-options, g),
-        $icon-class:  g--icon-01,
-        $text-align: false,
-        $title-color-hover: map-get($color-options, g),
-        $zoom-hover: 1.1,
-        $translate-hover: translateY(-5%)
+        // $text-align: false,
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
     );
 }
 ```

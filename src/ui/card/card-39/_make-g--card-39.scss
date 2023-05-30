@@ -254,9 +254,6 @@
             @if $background-color {
                 background: $background-color;
             }
-            @if $background-color {
-                background: $background-color;
-            }
 
             @if $img-height {
                 height: calc(100% - #{$img-height});

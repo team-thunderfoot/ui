@@ -199,6 +199,10 @@
                 &__list-group {
                     justify-content: center;
                 }
+                &__link {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
     }
@@ -210,6 +214,10 @@
                 &__list-group {
                     justify-content: flex-start;
                 }
+                &__link {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
             }
         }
     }
@@ -220,6 +228,10 @@
                 text-align: right;
                 &__list-group {
                     justify-content: flex-end;
+                }
+                &__link {
+                    margin-left: auto;
+                    margin-right: 0;
                 }
             }
         }

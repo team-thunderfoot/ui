@@ -1,10 +1,10 @@
-@mixin make-card-23() {
+@mixin make-card-24() {
     overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: $measure * 6 $measure * 5;
+    padding: 0 $measure * 2;
 
     &__hd {
         display: flex;
@@ -29,23 +29,12 @@
         row-gap: $measure;
         margin-bottom: $measure * 4;
     }
-
-    &__link {
-        margin-top: auto;
-    }
 }
 
-@mixin make-card-23-modifier(
+@mixin make-card-24-modifier(
     $author-font: false,
     $author-font-weight: false,
     $author-color: false,
-    $background-color: false,
-    $border-color: false,
-    $border-style: false,
-    $border-width: false,
-    $border-radius: false,
-    $hover-background-color: false,
-    $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
     $link-class: false,
@@ -60,43 +49,12 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
-    @if $border-radius {
-        border-radius: $border-radius;
-    }
-    @if $border-color {
-        border-color: $border-color;
-    }
-    @if $border-style {
-        border-style: $border-style;
-    }
-    @if $border-width {
-        border-width: $border-width;
-    }
-    @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
+    @if $hover-title-color or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
     }
 
-    @if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
+    @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
@@ -106,21 +64,9 @@
             }
         }
     }
-    @if $hover-background-color {
-        .g--card-23 {
-            transition: background $time-b $ease-standard-a;
 
-            @media all and (hover: hover) {
-                &:hover,
-                &:focus,
-                &:active {
-                    background: $hover-background-color;
-                }
-            }
-        }
-    }
     @if $hover-title-color {
-        .g--card-23 {
+        .g--card-24 {
             &__title {
                 transition: color $time-b $ease-standard-a;
             }
@@ -130,7 +76,7 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-23 {
+                .g--card-24 {
                     &__title {
                         color: $hover-title-color;
                     }
@@ -141,7 +87,7 @@
 
     @if $text-align == "center" {
         text-align: center;
-        .g--card-23 {
+        .g--card-24 {
             &__list-group {
                 justify-content: center;
             }
@@ -154,7 +100,7 @@
 
     @if $text-align == "left" {
         text-align: left;
-        .g--card-23 {
+        .g--card-24 {
             &__list-group {
                 justify-content: flex-start;
             }
@@ -167,7 +113,7 @@
 
     @if $text-align == "right" {
         text-align: right;
-        .g--card-23 {
+        .g--card-24 {
             &__list-group {
                 justify-content: flex-end;
             }
@@ -178,10 +124,7 @@
         }
     }
 
-    @if $background-color {
-        background-color: $background-color;
-    }
-    .g--card-23 {
+    .g--card-24 {
         &__hd {
             &__meta {
                 @if $meta-font {

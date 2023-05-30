@@ -261,7 +261,7 @@
             @if $img-height {
                 height: calc(100% - #{$img-height});
             } @else {
-                height: 100%;
+                height: auto;
             }
             &__hd {
                 &__meta {

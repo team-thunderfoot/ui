@@ -43,7 +43,7 @@
         &__list-group {
             display: flex;
             flex-wrap: wrap;
-            column-gap: $measure *2;
+            column-gap: $measure * 2;
             row-gap: $measure;
             margin-bottom: $measure * 4;
         }
@@ -196,7 +196,7 @@
         .g--card-39 {
             &__wrapper {
                 text-align: center;
-                &__list-group{
+                &__list-group {
                     justify-content: center;
                 }
             }
@@ -207,7 +207,7 @@
         .g--card-39 {
             &__wrapper {
                 text-align: left;
-                &__list-group{
+                &__list-group {
                     justify-content: flex-start;
                 }
             }
@@ -218,7 +218,7 @@
         .g--card-39 {
             &__wrapper {
                 text-align: right;
-                &__list-group{
+                &__list-group {
                     justify-content: flex-end;
                 }
             }
@@ -263,6 +263,11 @@
             } @else {
                 height: auto;
             }
+
+            @if $img-aspect-ratio {
+                height: auto;
+            }
+
             &__hd {
                 &__meta {
                     @if $meta-font {

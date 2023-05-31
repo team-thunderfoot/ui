@@ -1,0 +1,142 @@
+@mixin make-card-45() {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__wrapper {
+        width: 50%;
+        padding: $measure * 10;
+
+        @media all and ($viewport-type: $tabletm) {
+            padding: $measure * 10 $measure * 4;
+        }
+
+        &__hd {
+            margin-bottom: $measure * 3;
+        }
+    }
+
+    &__media-wrapper {
+        position: relative;
+        width: 50%;
+
+        &__media {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 65%;
+            height: 52%;
+            max-width: 400px;
+            max-height: 300px;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+}
+
+@mixin make-card-45-modifier(
+    $content-font: false,
+    $heading-font: false,
+    $border-radius: false,
+    $content-font-weight: false,
+    $heading-font-weight: false,
+    $change-order-reponsive: false,
+    $content-color: false,
+    $heading-color: false,
+    $background-color: false,
+    $img-background-color: false,
+    $text-align: false,
+    $breakpoint: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--card-45 {
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    @if $change-order-reponsive {
+                        order: 1;
+                    }
+                }
+            }
+            &__hd {
+                @if $heading-color {
+                    color: $heading-color;
+                }
+                @if $heading-font {
+                    @extend .f--font-#{$heading-font} !optional;
+                }
+                @if $heading-font-weight {
+                    font-weight: $heading-font-weight;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
+            }
+
+            &__bd {
+                @if $content-color {
+                    color: $content-color;
+                }
+                @if $content-font {
+                    @extend .f--font-#{$content-font} !optional;
+                }
+                @if $content-font-weight {
+                    font-weight: $content-font-weight;
+                }
+            }
+        }
+        &__media-wrapper {
+            @if $img-background-color {
+                background: $img-background-color;
+            }
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    padding: $measure * 14 $measure * 4;
+                }
+            }
+
+            &__media {
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        height: auto;
+                        transform: none;
+                        width: 100%;
+                        height: auto;
+                        max-width: 275px;
+                        max-height: 275px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

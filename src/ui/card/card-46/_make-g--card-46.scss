@@ -125,12 +125,15 @@
                 }
             }
             &__hd {
-                color: $heading-color;
-                @extend .f--font-#{$heading-font} !optional;
+                @if $heading-color {
+                    color: $heading-color;
+                }
+                @if $heading-font {
+                    @extend .f--font-#{$heading-font} !optional;
+                }
                 @if $heading-font-weight {
                     font-weight: $heading-font-weight;
                 }
-
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         margin-bottom: $measure * 2;
@@ -139,8 +142,12 @@
             }
 
             &__bd {
-                color: $content-color;
-                @extend .f--font-#{$content-font} !optional;
+                @if $content-color {
+                    color: $content-color;
+                }
+                @if $content-font {
+                    @extend .f--font-#{$content-font} !optional;
+                }
                 @if $content-font-weight {
                     font-weight: $content-font-weight;
                 }
@@ -154,15 +161,23 @@
 
             &__ft {
                 &__title {
-                    color: $person-color;
-                    @extend .f--font-#{$person-font} !optional;
+                    @if $person-color {
+                        color: $person-color;
+                    }
+                    @if $person-font {
+                        @extend .f--font-#{$person-font} !optional;
+                    }
                     @if $person-font-weight {
                         font-weight: $person-font-weight;
                     }
                 }
                 &__subtitle {
-                    color: $position-color;
-                    @extend .f--font-#{$position-font} !optional;
+                    @if $position-color {
+                        color: $position-color;
+                    }
+                    @if $position-font {
+                        @extend .f--font-#{$position-font} !optional;
+                    }
                     @if $position-font-weight {
                         font-weight: $position-font-weight;
                     }
@@ -170,7 +185,9 @@
             }
 
             &__link {
-                @extend .#{$link-class} !optional;
+                @if $link-class{
+                    @extend .#{$link-class} !optional;
+                }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         margin-top: $measure * 3;

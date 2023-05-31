@@ -19,19 +19,13 @@
     &__media-wrapper {
         position: relative;
         width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
 
         &__media {
             display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 65%;
-            height: 52%;
-            max-width: 400px;
-            max-height: 300px;
-            object-fit: contain;
-            object-position: center center;
         }
     }
 }
@@ -40,7 +34,20 @@
     $content-font: false,
     $heading-font: false,
     $border-radius: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
     $content-font-weight: false,
+    $hover-background-color: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-height: false,
+    $img-position: false,
+    $img-fit: false,
+    $img-width: false,
     $heading-font-weight: false,
     $change-order-reponsive: false,
     $content-color: false,
@@ -54,9 +61,125 @@
         background: $background-color;
     }
 
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+
     @if $border-radius {
         border-radius: $border-radius;
         overflow: hidden;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-45 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-img-zoom {
+        .g--card-45 {
+            &__media-wrapper {
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-45 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @if $text-align == "center" {
@@ -114,6 +237,7 @@
             @if $img-background-color {
                 background: $img-background-color;
             }
+
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     width: 100%;
@@ -122,17 +246,23 @@
             }
 
             &__media {
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-width {
+                    width: $img-width;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                @if $img-fit{
+                    object-fit: $img-fit;
+                }
+                @if $img-position{
+                    object-position: $img-position;
+                }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                        height: auto;
-                        transform: none;
-                        width: 100%;
-                        height: auto;
-                        max-width: 275px;
-                        max-height: 275px;
                         margin: 0 auto;
                     }
                 }

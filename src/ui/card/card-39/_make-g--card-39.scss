@@ -134,11 +134,15 @@
         .g--card-39 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
+            }
+        }
 
-                @media all and (hover: hover) {
-                    &:hover,
-                    &:focus,
-                    &:active {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-39 {
+                    &__wrapper {
                         background: $hover-background-color;
                     }
                 }

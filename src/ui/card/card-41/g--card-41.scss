@@ -1,0 +1,31 @@
+.g--card-41{
+    @include make-card-41();
+    @include make-card-41-modifier(
+        $author-color: map-get($color-options, g),
+        $author-font: g,
+        $author-font-weight: 600,
+        $background-color: rgba(map-get($color-options, h), .2),
+        $border-color: map-get($color-options, h),
+        $border-style: solid,
+        $border-width: $measure*.5,
+        $border-radius: $measure,
+        $breakpoint: $tablets,
+        $hover-background-color: rgba(map-get($color-options, h), .5),
+        $hover-img-zoom: 1.4,
+        $hover-shadow: 0 0 $measure*5 map-get($color-options, h),
+        $hover-title-color: map-get($color-options, g),
+        $hover-transform: translateY(-$measure),
+        // $img-aspect-ratio-responsive: 1,
+        $img-height-responsive: 300px,
+        $img-position: left bottom,
+        $meta-color: map-get($color-options, g),
+        $meta-font: g,
+        $meta-font-weight: false,
+        $pill-class: g--pill-01,
+        $text-align: center,
+        $title-color: map-get($color-options, a),
+        $title-font: f,
+        $title-font-weight: false,
+        $title-max-lines: 3,
+    );
+}

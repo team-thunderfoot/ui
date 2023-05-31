@@ -1,98 +1,35 @@
-@mixin make-card-46(
-    $btn-class,
-    $content-font,
-    $heading-font,
-    $person-font,
-    $position-font,
-    $border-radius: false,
-    $content-font-weight: false,
-    $heading-font-weight: false,
-    $person-font-weight: false,
-    $position-font-weight: false,
-    $change-order-reponsive: false,
-) {
+@mixin make-card-46() {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 
-    @if $border-radius {
-        border-radius: $border-radius;
-        overflow: hidden;
-    }
-
-    &__wrapper{
+    &__wrapper {
         width: 50%;
-        padding: $measure*10;
+        padding: $measure * 10;
 
         @media all and ($viewport-type: $tabletm) {
-            padding: $measure*10 $measure*4;
+            padding: $measure * 10 $measure * 4;
         }
 
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
-            @if $change-order-reponsive{
-                order: 1;
-            }
-        }
-
-        &__hd{
-            @extend .f--font-#{$heading-font} !optional;
-            @if $heading-font-weight {
-                font-weight: $heading-font-weight;
-            }
+        &__hd {
             margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
         }
 
-        &__bd{
-            @extend .f--font-#{$content-font} !optional;
-            @if $content-font-weight {
-                font-weight: $content-font-weight;
-            }
+        &__bd {
             margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
-        }
-        &__ft{
-            &__title{
-                @extend .f--font-#{$person-font} !optional;
-                @if $person-font-weight {
-                    font-weight: $person-font-weight;
-                }
-            }
-            &__subtitle{
-                @extend .f--font-#{$position-font} !optional;
-                @if $position-font-weight {
-                    font-weight: $position-font-weight;
-                }
-            }
         }
 
-        &__btn{
-            @extend .#{$btn-class} !optional;
+        &__link {
             margin-top: $measure * 4;
             display: inline-block;
-            @media all and ($viewport-type: $tablets) {
-                margin-top: $measure * 3;
-            }
         }
     }
 
-    &__media-wrapper{
+    &__media-wrapper {
         position: relative;
         width: 50%;
 
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
-            padding: $measure*14 $measure*4;
-        }
-
-        &__media{
+        &__media {
             display: block;
             position: absolute;
             top: 50%;
@@ -104,43 +41,46 @@
             max-height: 300px;
             object-fit: contain;
             object-position: center center;
-
-            @media all and ($viewport-type: $tablets) {
-                position: relative;
-                top: auto;
-                left: auto;
-                height: auto;
-                transform: none;
-                width: 100%;
-                height: auto;
-                max-width: 275px;
-                max-height: 275px;
-                margin: 0 auto;
-            }
         }
     }
 }
 
 @mixin make-card-46-modifier(
-    $content-color,
-    $heading-color,
-    $person-color,
-    $position-color,
+    $link-class: false,
+    $content-font: false,
+    $heading-font: false,
+    $person-font: false,
+    $position-font: false,
+    $border-radius: false,
+    $content-font-weight: false,
+    $heading-font-weight: false,
+    $person-font-weight: false,
+    $position-font-weight: false,
+    $change-order-reponsive: false,
+    $content-color: false,
+    $heading-color: false,
+    $person-color: false,
+    $position-color: false,
     $background-color: false,
-    $btn-class-modifier: false,
     $img-background-color: false,
     $text-align: false,
+    $breakpoint: false
 ) {
     @if $background-color {
-        background: $background-color;   
+        background: $background-color;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
     }
 
     @if $text-align == "center" {
         text-align: center;
-        
+
         .g--card-46 {
-            &__wrapper{
-                &__btn{
+            &__wrapper {
+                &__link {
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -152,8 +92,8 @@
         text-align: left;
 
         .g--card-46 {
-            &__wrapper{
-                &__btn{
+            &__wrapper {
+                &__link {
                     margin-left: 0;
                     margin-right: auto;
                 }
@@ -165,43 +105,105 @@
         text-align: right;
 
         .g--card-46 {
-            &__wrapper{
-                &__btn{
+            &__wrapper {
+                &__link {
                     margin-left: auto;
                     margin-right: 0;
                 }
             }
         }
     }
-    
+
     .g--card-46 {
-        &__wrapper{
-            &__hd{
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    @if $change-order-reponsive {
+                        order: 1;
+                    }
+                }
+            }
+            &__hd {
                 color: $heading-color;
+                @extend .f--font-#{$heading-font} !optional;
+                @if $heading-font-weight {
+                    font-weight: $heading-font-weight;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
             }
 
-            &__bd{
+            &__bd {
                 color: $content-color;
+                @extend .f--font-#{$content-font} !optional;
+                @if $content-font-weight {
+                    font-weight: $content-font-weight;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
             }
 
-            &__ft{
-                &__title{
+            &__ft {
+                &__title {
                     color: $person-color;
+                    @extend .f--font-#{$person-font} !optional;
+                    @if $person-font-weight {
+                        font-weight: $person-font-weight;
+                    }
                 }
-                &__subtitle{
+                &__subtitle {
                     color: $position-color;
+                    @extend .f--font-#{$position-font} !optional;
+                    @if $position-font-weight {
+                        font-weight: $position-font-weight;
+                    }
                 }
             }
 
-            @if $btn-class-modifier {
-                &__btn{
-                    @extend .#{$btn-class-modifier} !optional;
+            &__link {
+                @extend .#{$link-class} !optional;
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-top: $measure * 3;
+                    }
                 }
             }
         }
-        @if $img-background-color {
-            &__media-wrapper{
+        &__media-wrapper {
+            @if $img-background-color {
                 background: $img-background-color;
+            }
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    padding: $measure * 14 $measure * 4;
+                }
+            }
+
+            &__media {
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        height: auto;
+                        transform: none;
+                        width: 100%;
+                        height: auto;
+                        max-width: 275px;
+                        max-height: 275px;
+                        margin: 0 auto;
+                    }
+                }
             }
         }
     }

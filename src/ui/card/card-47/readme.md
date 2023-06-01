@@ -1,26 +1,26 @@
-# Card-46
+# Card-47
 
 ## Layout
 
-![alt text][card-46]
+![alt text][card-47]
 
-[card-46]: /src/img/global-components/card/card-46.jpg
+[card-47]: /src/img/global-components/card/card-47.jpg
 
 ## Html for a card
 
 ```html
-<div class="g--card-46">
-    <div class="g--card-46__wrapper">
-        <p class="g--card-46__wrapper__hd">Heading</p>
-        <p class="g--card-46__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
-        <div class="g--card-46__wrapper__ft">
-            <p class="g--card-46__wrapper__ft__title">Person Name</p>
-            <p class="g--card-46__wrapper__ft__subtitle">Job Position</p>
+<div class="g--card-47">
+    <div class="g--card-47__wrapper">
+        <p class="g--card-47__wrapper__hd">Heading</p>
+        <p class="g--card-47__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
+        <div class="g--card-47__wrapper__ft">
+            <p class="g--card-47__wrapper__ft__title">Person Name</p>
+            <p class="g--card-47__wrapper__ft__subtitle">Job Position</p>
         </div>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-46__wrapper__link">This is a link</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-47__wrapper__link">This is a link</a>
     </div>
-    <div class="g--card-46__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-46__media-wrapper__media g--lazy-01" />
+    <div class="g--card-47__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-47__media-wrapper__media g--lazy-01" />
     </div>
 </div>
 ```
@@ -30,7 +30,6 @@
 For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
-
 - $link-class
 - $content-font
 - $heading-font
@@ -46,12 +45,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio
-- $img-height
+- $img-aspect-ratio-responsive
+- $img-height-responsive
 - $img-position
-- $img-fit
-- $img-width
-- $img-background-color
 - $heading-font-weight
 - $person-font-weight
 - $position-font-weight
@@ -67,9 +63,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
 ## use
 
 ```scss
-.g--card-46 {
-    @include make-card-46();
-    @include make-card-46-modifier(
+.g--card-47 {
+    @include make-card-47();
+    @include make-card-47-modifier(
         $link-class: g--link-01,
         $content-font: f,
         $heading-font: h,
@@ -86,10 +82,10 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
         $hover-title-color: map-get($color-options, h),
         $hover-transform: translateY(-$measure),
-        // $img-aspect-ratio: 2,
-        $img-height: 300px,
-        $img-position: center,
-        $img-fit: contain,
+        $img-aspect-ratio: 1.7,
+        // $img-height: 1300px,
+        $img-position: bottom,
+        $img-fit: cover,
         // $img-width: auto,
         $person-font-weight: 600,
         $position-font-weight: 400,
@@ -99,7 +95,6 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $person-color: map-get($color-options, g),
         $position-color: map-get($color-options, a),
         $background-color: map-get($color-options, e),
-        $img-background-color: map-get($color-options, g),
         $text-align: left,
         $breakpoint: $tablets
     );

@@ -1,6 +1,6 @@
-.g--card-42{
-    @include make-card-42();
-    @include make-card-42-modifier(
+.g--card-44{
+    @include make-card-44();
+    @include make-card-44-modifier(
         $background-color: rgba(map-get($color-options, h), .2),
         $border-color: map-get($color-options, h),
         $border-style: solid,
@@ -15,14 +15,14 @@
         // $img-aspect-ratio-responsive: 1,
         $img-height-responsive: 300px,
         $img-position: left bottom,
-        $meta-color: map-get($color-options, g),
-        $meta-font: g,
-        $meta-font-weight: false,
-        $pill-class: g--pill-01,
+        $heading-color: map-get($color-options, a),
+        $heading-font: c,
+        $heading-font-weight: 600,
         $text-align: center,
-        $title-color: map-get($color-options, a),
-        $title-font: f,
-        $title-font-weight: false,
-        $title-max-lines: 3,
+        $content-color: map-get($color-options, a),
+        $content-font: f,
+        $content-font-weight: 400,
+        $content-max-lines: 3,
+        $change-order-reponsive: true
     );
 }

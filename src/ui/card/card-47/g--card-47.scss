@@ -1,30 +1,33 @@
-.g--card-45 {
-    @include make-card-45();
-    @include make-card-45-modifier(
-        $content-font: d,
-        $content-max-lines: 3,
-        $heading-font: c,
+.g--card-47 {
+    @include make-card-47();
+    @include make-card-47-modifier(
+        $link-class: g--link-01,
+        $content-font: f,
+        $heading-font: h,
+        $person-font: h,
+        $position-font: h,
         $border-radius: $measure,
         $border-color: map-get($color-options, g),
         $border-style: solid,
         $border-width: 2px,
+        $content-font-weight: 600,
+        $heading-font-weight: 400,
         $hover-background-color: map-get($color-options, b),
         $hover-img-zoom: 1.2,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
         $hover-title-color: map-get($color-options, h),
         $hover-transform: translateY(-$measure),
-        $img-aspect-ratio: 2,
-        // $img-height: 300px,
+        $img-aspect-ratio-responsive: 1.7,
+        // $img-height-responsive: 1300px,
         $img-position: center,
-        // $img-fit: contain,
-        // $img-width: auto,
-        $content-font-weight: 400,
-        $heading-font-weight: 600,
+        $person-font-weight: 600,
+        $position-font-weight: 400,
         $change-order-reponsive: true,
         $content-color: map-get($color-options, a),
         $heading-color: map-get($color-options, g),
+        $person-color: map-get($color-options, g),
+        $position-color: map-get($color-options, a),
         $background-color: map-get($color-options, e),
-        $img-background-color: map-get($color-options, g),
         $text-align: left,
         $breakpoint: $tablets
     );

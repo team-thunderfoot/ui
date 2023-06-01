@@ -32,6 +32,7 @@
 
 @mixin make-card-45-modifier(
     $content-font: false,
+    $content-max-lines: false,
     $heading-font: false,
     $border-radius: false,
     $border-color: false,
@@ -147,13 +148,22 @@
         }
     }
     @if $hover-title-color {
+        .g--card-45 {
+            &__wrapper {
+                &__hd {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--card-45 {
-                    &__title {
-                        color: $hover-title-color;
+                    &__wrapper {
+                        &__hd {
+                            color: $hover-title-color;
+                        }
                     }
                 }
             }
@@ -230,6 +240,14 @@
                 }
                 @if $content-font-weight {
                     font-weight: $content-font-weight;
+                }
+
+                @if $content-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $content-max-lines;
+                    -webkit-box-orient: vertical;
                 }
             }
         }

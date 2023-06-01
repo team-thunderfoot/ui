@@ -26,18 +26,32 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
 
--   $content-font
--   $heading-font
--   $border-radius
--   $content-font-weight
--   $heading-font-weight
--   $change-order-reponsive
--   $content-color
--   $heading-color
--   $background-color
--   $img-background-color
--   $text-align
--   $breakpoint
+- $content-font
+- $content-max-lines
+- $heading-font
+- $border-radius
+- $border-color
+- $border-style
+- $border-width
+- $content-font-weight
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-position
+- $img-fit
+- $img-width
+- $heading-font-weight
+- $change-order-reponsive
+- $content-color
+- $heading-color
+- $background-color
+- $img-background-color
+- $text-align
+- $breakpoin
 
 ## use
 
@@ -46,6 +60,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
     @include make-card-45();
     @include make-card-45-modifier(
         $content-font: d,
+        $content-max-lines: 3,
         $heading-font: c,
         $border-radius: $measure,
         $border-color: map-get($color-options, g),

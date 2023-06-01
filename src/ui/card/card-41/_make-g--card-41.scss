@@ -2,11 +2,11 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    &__media-wrapper{
+    &__media-wrapper {
         width: 50%;
         position: relative;
         overflow: hidden;
-        &__media{
+        &__media {
             display: block;
             position: absolute;
             top: 0;
@@ -16,26 +16,29 @@
             object-fit: cover;
         }
     }
-    &__wrapper{
+    &__wrapper {
         width: 50%;
-        padding: $measure*5 $measure*6;
-        &__hd{
+        padding: $measure * 5 $measure * 6;
+        &__hd {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: $measure;
-            margin-bottom: $measure*3;
-            &__meta{}
-            &__author{}
+            margin-bottom: $measure * 3;
+            &__meta {
+            }
+            &__author {
+            }
         }
-        &__bd{
-            margin-bottom: $measure*3;
+        &__bd {
+            margin-bottom: $measure * 3;
         }
-        &__ft{
+        &__ft {
             display: flex;
             flex-wrap: wrap;
-            gap: $measure $measure*2;
-            &__badge{}
+            gap: $measure $measure * 2;
+            &__badge {
+            }
         }
     }
 }
@@ -66,11 +69,8 @@
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $title-max-lines: false,
-
+    $title-max-lines: false
 ) {
-
-    
     @if $border-color {
         border-color: $border-color;
     }
@@ -90,7 +90,7 @@
     }
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -100,7 +100,7 @@
         }
     } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -109,7 +109,7 @@
         }
     } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -119,13 +119,13 @@
     }
 
     @if $hover-img-zoom {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-41{
-                    &__media-wrapper{
-                        &__media{
+                .g--card-41 {
+                    &__media-wrapper {
+                        &__media {
                             transform: scale($hover-img-zoom);
                         }
                     }
@@ -134,12 +134,12 @@
         }
     }
     @if $hover-background-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-41{
-                    &__wrapper{
+                .g--card-41 {
+                    &__wrapper {
                         background: $hover-background-color;
                     }
                 }
@@ -147,13 +147,13 @@
         }
     }
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-41{
-                    &__wrapper{
-                        &__bd{
+                .g--card-41 {
+                    &__wrapper {
+                        &__bd {
                             color: $hover-title-color;
                         }
                     }
@@ -163,86 +163,86 @@
     }
 
     @if $text-align == "center" {
-        .g--card-41{
-            &__media-wrapper{
-                &__media{
+        .g--card-41 {
+            &__media-wrapper {
+                &__media {
                 }
             }
-            &__wrapper{
-                &__hd{
-                    &__meta{
+            &__wrapper {
+                &__hd {
+                    &__meta {
                     }
-                    &__author{
+                    &__author {
                     }
                 }
-                &__bd{
+                &__bd {
                     text-align: center;
                 }
-                &__ft{
+                &__ft {
                     justify-content: center;
-                    &__badge{
+                    &__badge {
                     }
                 }
             }
         }
     }
     @if $text-align == "left" {
-        .g--card-41{
-            &__media-wrapper{
-                &__media{
+        .g--card-41 {
+            &__media-wrapper {
+                &__media {
                 }
             }
-            &__wrapper{
-                &__hd{
-                    &__meta{
+            &__wrapper {
+                &__hd {
+                    &__meta {
                     }
-                    &__author{
+                    &__author {
                     }
                 }
-                &__bd{
+                &__bd {
                     text-align: left;
                 }
-                &__ft{
+                &__ft {
                     justify-content: flex-start;
-                    &__badge{
+                    &__badge {
                     }
                 }
             }
         }
     }
     @if $text-align == "right" {
-        .g--card-41{
-            &__media-wrapper{
-                &__media{
+        .g--card-41 {
+            &__media-wrapper {
+                &__media {
                 }
             }
-            &__wrapper{
-                &__hd{
-                    &__meta{
+            &__wrapper {
+                &__hd {
+                    &__meta {
                     }
-                    &__author{
+                    &__author {
                     }
                 }
-                &__bd{
+                &__bd {
                     text-align: right;
                 }
-                &__ft{
+                &__ft {
                     justify-content: flex-end;
-                    &__badge{
+                    &__badge {
                     }
                 }
             }
         }
     }
 
-    .g--card-41{
-        &__media-wrapper{
+    .g--card-41 {
+        &__media-wrapper {
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
-                    width: 100%;    
+                    width: 100%;
                 }
             }
-            &__media{
+            &__media {
                 @if $img-position {
                     object-position: $img-position;
                 }
@@ -253,10 +253,10 @@
                         left: auto;
                         @if $img-height-responsive {
                             height: $img-height-responsive;
-                        }  
+                        }
                         @if $img-aspect-ratio-responsive {
                             aspect-ratio: $img-aspect-ratio-responsive;
-                        }  
+                        }
                     }
                 }
                 @if $hover-img-zoom {
@@ -264,20 +264,20 @@
                 }
             }
         }
-        &__wrapper{
+        &__wrapper {
             @if $background-color {
                 background: $background-color;
             }
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
-                    width: 100%;    
+                    width: 100%;
                 }
             }
             @if $hover-background-color {
                 transition: background $time-b $ease-standard-a;
             }
-            &__hd{
-                &__meta{
+            &__hd {
+                &__meta {
                     @if $meta-color {
                         color: $meta-color;
                     }
@@ -288,7 +288,7 @@
                         font-weight: $meta-font-weight;
                     }
                 }
-                &__author{
+                &__author {
                     @if $author-color {
                         color: $author-color;
                     }
@@ -300,7 +300,7 @@
                     }
                 }
             }
-            &__bd{
+            &__bd {
                 @if $title-color {
                     color: $title-color;
                 }
@@ -321,8 +321,8 @@
                     transition: color $time-b $ease-standard-a;
                 }
             }
-            &__ft{
-                &__badge{
+            &__ft {
+                &__badge {
                     @if $pill-class {
                         @extend .#{$pill-class} !optional;
                     }

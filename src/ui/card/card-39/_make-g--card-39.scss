@@ -13,7 +13,6 @@
             display: block;
             object-fit: cover;
             width: 100%;
-            height: 100%;
         }
     }
 
@@ -69,7 +68,8 @@
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
-    $img-aspect-ratio: false,
+    $img-aspect-ratio-width: false,
+    $img-aspect-ratio-height: false,
     $img-height: false,
     $img-position: false,
     $link-class: false,
@@ -246,17 +246,25 @@
             @if $full-image-height {
                 height: 100%;
             }
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                padding-top: calc((#{$img-aspect-ratio-height} / #{$img-aspect-ratio-width})*100%);
+            } @else{
+                padding-top: 0;
+            }
             &__media {
-                @if $img-aspect-ratio {
-                    aspect-ratio: $img-aspect-ratio;
-                    height: auto;
-                } @else {
+                @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
                     height: 100%;
+                } @else{
+                    position: relative;
+                    top: auto;
+                    left: auto;
                 }
                 @if $img-height {
                     height: $img-height;
-                } @else {
-                    height: 100%;
                 }
                 @if $img-position {
                     object-position: $img-position;
@@ -271,14 +279,30 @@
                 background: $background-color;
             }
 
-            @if $img-height {
-                height: calc(100% - #{$img-height});
-            } @else {
-                height: auto;
+
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                height: 100%;
             }
 
-            @if $img-aspect-ratio {
+            @if $img-height {
+                height: calc(100% - #{$img-height});
+            }
+
+            @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
                 height: auto;
+
+                @if $background-color {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        height: 300%;
+                        z-index: 0;
+                        background: $background-color;
+                    }
+                }
             }
 
             &__hd {

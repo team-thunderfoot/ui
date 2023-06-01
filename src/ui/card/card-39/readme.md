@@ -27,6 +27,9 @@
     </div>
 </div>
 ```
+## Note:
+
+it is recommended to add aspect ratio variables or img height variables, if we don't add them the link won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
 
 ## Editable variables
 
@@ -44,7 +47,8 @@
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio
+- $img-aspect-ratio-width
+- $img-aspect-ratio-height
 - $img-height
 - $img-position
 - $link-class
@@ -73,14 +77,15 @@
         $border-style: dashed,
         $border-width: 2px,
         $border-radius: $measure,
-        // $full-image-height: true,
+        $full-image-height: false,
         $hover-background-color: map-get($color-options, g),
         $hover-img-zoom: 1.1,
         $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
-        $img-aspect-ratio: 1.777,
-        // $img-height: 200px,
+        $img-aspect-ratio-width: 16,
+        $img-aspect-ratio-height: 9,
+        // $img-height: 100px,
         $img-position: center,
         $link-class: g--link-01,
         $link-font: f,
@@ -88,7 +93,7 @@
         $meta-font: f,
         $meta-font-weight: 600,
         $pill-class: g--pill-01,
-        $text-align: left,
+        $text-align: right,
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: 600,

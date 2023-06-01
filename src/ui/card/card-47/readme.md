@@ -45,11 +45,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio
-- $img-height
+- $img-aspect-ratio-responsive
+- $img-height-responsive
 - $img-position
-- $img-fit
-- $img-width
 - $heading-font-weight
 - $person-font-weight
 - $position-font-weight

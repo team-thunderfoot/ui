@@ -165,13 +165,22 @@
         }
     }
     @if $hover-title-color {
+        .g--card-47 {
+            &__wrapper {
+                &__hd {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--card-47 {
-                    &__title {
-                        color: $hover-title-color;
+                    &__wrapper {
+                        &__hd {
+                            color: $hover-title-color;
+                        }
                     }
                 }
             }

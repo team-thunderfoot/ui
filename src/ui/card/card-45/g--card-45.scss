@@ -2,6 +2,7 @@
     @include make-card-45();
     @include make-card-45-modifier(
         $content-font: d,
+        $content-max-lines: 3,
         $heading-font: c,
         $border-radius: $measure,
         $border-color: map-get($color-options, g),

@@ -134,6 +134,11 @@
         .g--card-39 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
+                @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                    &::before {
+                        transition: background $time-b $ease-standard-a;
+                    }
+                }
             }
         }
 
@@ -144,6 +149,11 @@
                 .g--card-39 {
                     &__wrapper {
                         background: $hover-background-color;
+                        @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                            &::before {
+                                background: $hover-background-color;
+                            }
+                        }
                     }
                 }
             }

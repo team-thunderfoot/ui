@@ -10,12 +10,12 @@
 
 ```html
 <div class="g--card-43">
-    <div class="g--card-43__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-43__media-wrapper__media g--lazy-01" />
-    </div>
     <div class="g--card-43__wrapper">
         <p class="g--card-43__wrapper__hd">This is a card lorem ispum dolor sit</p>
         <p class="g--card-43__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
+    </div>
+    <div class="g--card-43__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-43__media-wrapper__media g--lazy-01" />
     </div>
 </div>
 ```
@@ -24,12 +24,12 @@ If you want the subtitle to be a c--content, the HTML should be:
 
 ```html
 <div class="g--card-43">
-    <div class="g--card-43__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-43__media-wrapper__media g--lazy-01" />
-    </div>
     <div class="g--card-43__wrapper">
         <p class="g--card-43__wrapper__hd">Heading</p>
         <div class="g--card-43__wrapper__bd c--content-a">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</div>
+    </div>
+    <div class="g--card-43__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-43__media-wrapper__media g--lazy-01" />
     </div>
 </div>
 ```

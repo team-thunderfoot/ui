@@ -149,7 +149,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 ### Modal
 
-- [g--modal-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/modal/g--modal-01/readme.md)
+- [g--modal-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/modal/modal-01/readme.md)
 
 ### List
 

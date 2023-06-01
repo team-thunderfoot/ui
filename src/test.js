@@ -7,7 +7,7 @@
  * Lazy Loading
  */
 import Blazy from "blazy";
-import PreventBounceIOS from "@teamthunderfoot/prevent-bounce-ios";
+// import PreventBounceIOS from "@teamthunderfoot/prevent-bounce-ios";
 import MobileHeightAdjust from "@teamthunderfoot/mobile-height-adjust";
 
 import "@lottiefiles/lottie-player";
@@ -17,7 +17,7 @@ class Test {
     this.init();
   }
   init() {
-    const preventBounceIOS = new PreventBounceIOS();
+    // const preventBounceIOS = new PreventBounceIOS();
     const mobileHeightAdjust = new MobileHeightAdjust();
   }
 }

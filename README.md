@@ -41,6 +41,11 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--back-top-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/back-top/back-top-01/readme.md)
 
+### Banner
+
+- [g--banner-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/banner/banner-01/readme.md)
+- [g--banner-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/banner/banner-02/readme.md)
+
 ### Btn
 
 - [g--btn-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-01/readme.md)
@@ -141,6 +146,10 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--link-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-02/readme.md)
 - [g--link-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-03/readme.md)
 - [g--link-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/link/link-04/readme.md)
+
+### Modal
+
+- [g--modal-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/modal/g--modal-01/readme.md)
 
 ### List
 

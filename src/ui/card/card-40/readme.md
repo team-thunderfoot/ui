@@ -33,7 +33,6 @@
 - $author-color
 - $author-font
 - $author-font-weight
-- $full-image-height
 - $hover-img-zoom
 - $hover-title-color
 - $hover-transform
@@ -61,7 +60,6 @@
         $author-font: g,
         $author-font-weight: 600,
         $author-color: map-get($color-options, a),
-        $full-image-height: false,
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),

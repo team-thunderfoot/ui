@@ -53,7 +53,6 @@
     $author-font: false,
     $author-font-weight: false,
     $author-color: false,
-    $full-image-height: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
     $hover-transform: false,
@@ -182,9 +181,6 @@
 
     .g--card-40 {
         &__media-wrapper {
-            @if $full-image-height {
-                height: 100%;
-            }
 
             &__media {
                 @if $img-aspect-ratio {

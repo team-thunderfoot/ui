@@ -62,7 +62,6 @@
     $meta-font-weight: false,
     $meta-font: false,
     $pill-class: false,
-    $text-align: false,
     $title-color: false,
     $title-font-weight: false,
     $title-font: false,
@@ -126,39 +125,6 @@
                             transform: scale($hover-img-zoom);
                         }
                     }
-                }
-            }
-        }
-    }
-
-    @if $text-align == "center" {
-        .g--card-32 {
-            &__wrapper {
-                text-align: center;
-                &__list-group {
-                    justify-content: center;
-                }
-            }
-        }
-    }
-
-    @if $text-align == "left" {
-        .g--card-32 {
-            &__wrapper {
-                text-align: left;
-                &__list-group {
-                    justify-content: flex-start;
-                }
-            }
-        }
-    }
-
-    @if $text-align == "right" {
-        .g--card-32 {
-            &__wrapper {
-                text-align: right;
-                &__list-group {
-                    justify-content: flex-end;
                 }
             }
         }

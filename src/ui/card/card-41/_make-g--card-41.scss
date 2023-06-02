@@ -25,10 +25,6 @@
             justify-content: space-between;
             gap: $measure;
             margin-bottom: $measure * 3;
-            &__meta {
-            }
-            &__author {
-            }
         }
         &__bd {
             margin-bottom: $measure * 3;
@@ -37,8 +33,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: $measure $measure * 2;
-            &__badge {
-            }
         }
     }
 }
@@ -65,7 +59,6 @@
     $meta-font: false,
     $meta-font-weight: false,
     $pill-class: false,
-    $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -156,79 +149,6 @@
                         &__bd {
                             color: $hover-title-color;
                         }
-                    }
-                }
-            }
-        }
-    }
-
-    @if $text-align == "center" {
-        .g--card-41 {
-            &__media-wrapper {
-                &__media {
-                }
-            }
-            &__wrapper {
-                &__hd {
-                    &__meta {
-                    }
-                    &__author {
-                    }
-                }
-                &__bd {
-                    text-align: center;
-                }
-                &__ft {
-                    justify-content: center;
-                    &__badge {
-                    }
-                }
-            }
-        }
-    }
-    @if $text-align == "left" {
-        .g--card-41 {
-            &__media-wrapper {
-                &__media {
-                }
-            }
-            &__wrapper {
-                &__hd {
-                    &__meta {
-                    }
-                    &__author {
-                    }
-                }
-                &__bd {
-                    text-align: left;
-                }
-                &__ft {
-                    justify-content: flex-start;
-                    &__badge {
-                    }
-                }
-            }
-        }
-    }
-    @if $text-align == "right" {
-        .g--card-41 {
-            &__media-wrapper {
-                &__media {
-                }
-            }
-            &__wrapper {
-                &__hd {
-                    &__meta {
-                    }
-                    &__author {
-                    }
-                }
-                &__bd {
-                    text-align: right;
-                }
-                &__ft {
-                    justify-content: flex-end;
-                    &__badge {
                     }
                 }
             }

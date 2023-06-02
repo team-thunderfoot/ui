@@ -48,7 +48,6 @@
     $meta-font: false,
     $meta-font-weight: false,
     $pill-class: false,
-    $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -187,33 +186,6 @@
                         color: $hover-title-color;
                     }
                 }
-            }
-        }
-    }
-
-    @if $text-align == "center" {
-        text-align: center;
-        .g--card-21 {
-            &__list-group {
-                justify-content: center;
-            }
-        }
-    }
-
-    @if $text-align == "left" {
-        text-align: left;
-        .g--card-21 {
-            &__list-group {
-                justify-content: flex-start;
-            }
-        }
-    }
-
-    @if $text-align == "right" {
-        text-align: right;
-        .g--card-21 {
-            &__list-group {
-                justify-content: flex-end;
             }
         }
     }

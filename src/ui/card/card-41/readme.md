@@ -74,7 +74,6 @@ It is not necessary to add aspect-ratio.
 - $meta-font
 - $meta-font-weight
 - $pill-class
-- $text-align
 - $title-color
 - $title-font
 - $title-font-weight
@@ -107,7 +106,6 @@ It is not necessary to add aspect-ratio.
         // $meta-font: false,
         // $meta-font-weight: false,
         // $pill-class: false,
-        // $text-align: false,
         // $title-color: false,
         // $title-font: false,
         // $title-font-weight: false,

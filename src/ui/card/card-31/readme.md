@@ -1,35 +1,34 @@
-# Card-39
+# Card-31
 
 ## Layout
 
-![alt text][card-39]
+![alt text][card-31]
 
-[card-39]: /src/img/global-components/card/card-39.jpg
+[card-31]: /src/img/global-components/card/card-31.jpg
 
 ## Html for a card
 
 ```html
-<div class="g--card-39">
-    <div class="g--card-39__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media-wrapper__media g--lazy-01" />
+<div class="g--card-31">
+    <div class="g--card-31__media-wrapper">
+        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-31__media-wrapper__media g--lazy-01" />
     </div>
-    <div class="g--card-39__wrapper">
-        <div class="g--card-39__wrapper__hd">
-            <p class="g--card-39__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
-            <p class="g--card-39__wrapper__hd__author">By Author</p>
+    <div class="g--card-31__wrapper">
+        <div class="g--card-31__wrapper__hd">
+            <p class="g--card-31__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+            <p class="g--card-31__wrapper__hd__author">By Author</p>
         </div>
-        <p class="g--card-39__wrapper__title">Card-39 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
-        <div class="g--card-39__wrapper__list-group">
-            <div class="g--card-39__wrapper__list-group__list-item">Category</div>
-            <div class="g--card-39__wrapper__list-group__list-item">Category</div>
+        <p class="g--card-31__wrapper__title">Card-31 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+        <div class="g--card-31__wrapper__list-group">
+            <div class="g--card-31__wrapper__list-group__list-item">Category</div>
+            <div class="g--card-31__wrapper__list-group__list-item">Category</div>
         </div>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-39__wrapper__link">This is a link</a>
     </div>
 </div>
 ```
 ## Note:
 
-it is recommended to add aspect ratio variables or img height variables, if we don't add them the link won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+it is recommended to add aspect ratio variables or img height variables, if we don't add them the pills won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
 
 ## Editable variables
 
@@ -51,8 +50,6 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 - $img-aspect-ratio-height
 - $img-height
 - $img-position
-- $link-class
-- $link-font
 - $meta-color
 - $meta-font
 - $meta-font-weight
@@ -66,9 +63,9 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 ## use
 
 ```scss
-.g--card-39 {
-    @include make-card-39();
-    @include make-card-39-modifier(
+.g--card-31 {
+    @include make-card-31();
+    @include make-card-31-modifier(
         $author-font: g,
         $author-font-weight: 600,
         $author-color: map-get($color-options, a),
@@ -87,8 +84,6 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         $img-aspect-ratio-height: 9,
         // $img-height: 100px,
         $img-position: center,
-        $link-class: g--link-01,
-        $link-font: f,
         $meta-color: map-get($color-options, a),
         $meta-font: f,
         $meta-font-weight: 600,

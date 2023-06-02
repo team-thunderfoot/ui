@@ -30,22 +30,14 @@
 
 ## Editable variables
 
+- $author-color
 - $author-font
 - $author-font-weight
-- $author-color
-- $background-color
-- $border-color
-- $border-style
-- $border-width
-- $border-radius
 - $full-image-height
-- $hover-background-color
 - $hover-img-zoom
-- $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio-width
-- $img-aspect-ratio-height
+- $img-aspect-ratio
 - $img-height
 - $img-position
 - $link-class
@@ -69,19 +61,11 @@
         $author-font: g,
         $author-font-weight: 600,
         $author-color: map-get($color-options, a),
-        $background-color: map-get($color-options, e),
-        $border-color: map-get($color-options, a),
-        $border-style: dashed,
-        $border-width: 2px,
-        $border-radius: $measure,
         $full-image-height: false,
-        $hover-background-color: map-get($color-options, g),
         $hover-img-zoom: 1.1,
-        $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
-        $img-aspect-ratio-width: 16,
-        $img-aspect-ratio-height: 9,
+        $img-aspect-ratio: 1.7,
         // $img-height: 100px,
         $img-position: center,
         $link-class: g--link-01,

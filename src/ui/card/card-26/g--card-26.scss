@@ -1,0 +1,26 @@
+.g--card-26 {
+    @include make-card-26();
+    @include make-card-26-modifier(
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, e),
+        $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        $img-height: 300px,
+        $img-position: center,
+        $text-align: right,
+        $title-color: map-get($color-options, a),
+        $title-font: d,
+        $title-font-weight: 400,
+        $title-max-lines: 3
+    );
+
+    &--second {
+        @include make-card-26-modifier(
+            $hover-img-zoom: 1.5,
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: 2,
+            $img-height: auto,
+            $title-max-lines: 2
+        );
+    }
+}

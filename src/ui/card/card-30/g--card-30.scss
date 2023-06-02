@@ -1,0 +1,38 @@
+.g--card-30 {
+    @include make-card-30();
+    @include make-card-30-modifier(
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, e),
+        $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        $img-height: 300px,
+        $img-position: center,
+        $meta-color: map-get($color-options, a),
+        $meta-font: f,
+        $meta-font-weight: 600,
+        $text-align: right,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
+        $title-max-lines: 3
+    );
+
+    &--second {
+        @include make-card-30-modifier(
+            $hover-img-zoom: 1.5,
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: 2,
+            $img-height: auto,
+            $img-position: center,
+            $meta-color: map-get($color-options, a),
+            $meta-font-weight: 600,
+            $meta-font: f,
+            $text-align: center,
+            $title-color: map-get($color-options, a),
+            $title-font-weight: 600,
+            $title-font: c,
+            $title-max-lines: 3
+        );
+    }
+}

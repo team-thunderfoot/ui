@@ -40,28 +40,30 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
--   $background-color
--   $border-color
--   $border-style
--   $border-width
--   $border-radius
--   $breakpoint
--   $hover-background-color
--   $hover-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $img-aspect-ratio-responsive
--   $img-height-responsive
--   $img-position
--   $heading-color
--   $heading-font
--   $heading-font-weight
--   $text-align
--   $content-color
--   $content-font
--   $content-font-weight
--   $content-max-lines
+- $background-color
+- $border-color
+- $border-style
+- $border-width
+- $border-radius
+- $breakpoint
+- $change-order-reponsive
+- $content-color
+- $content-font
+- $content-font-weight
+- $content-max-lines
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio-responsive
+- $img-height-responsive
+- $img-position
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
@@ -75,6 +77,11 @@ It is not necessary to add aspect-ratio.
         // $border-width: false,
         // $border-radius: false,
         // $breakpoint: false,
+        // $change-order-reponsive: false,
+        // $content-color: false,
+        // $content-font: false,
+        // $content-font-weight: false,
+        // $content-max-lines: false,
         // $hover-background-color: false,
         // $hover-img-zoom: false,
         // $hover-shadow: false,
@@ -83,15 +90,11 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio-responsive: false,
         // $img-height-responsive: false,
         // $img-position: false,
-        // $heading-color: false,
-        // $heading-font: false,
-        // $heading-font-weight: false,
         // $text-align: false,
-        // $content-color: false,
-        // $content-font: false,
-        // $content-font-weight: false,
-        // $content-max-lines: false,
-        // $change-order-reponsive: false
+        // $title-color: false,
+        // $title-font: false,
+        // $title-font-weight: false,
+        // $title-max-lines: false,
     );
 }
 ```

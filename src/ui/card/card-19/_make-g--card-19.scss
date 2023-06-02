@@ -22,26 +22,23 @@
 }
 
 @mixin make-card-19-modifier(
-    $author-font: false,
-    $author-font-weight: false,
-    $author-color: false,
     $background-color: false,
     $border-color: false,
+    $border-radius: false,
     $border-style: false,
     $border-width: false,
-    $border-radius: false,
     $hover-background-color: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
     $meta-color: false,
-    $meta-font: false,
     $meta-font-weight: false,
+    $meta-font: false,
     $pill-class: false,
     $text-align: false,
     $title-color: false,
-    $title-font: false,
     $title-font-weight: false,
+    $title-font: false,
     $title-max-lines: false
 ) {
     @if $border-radius {
@@ -59,6 +56,19 @@
     @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
         text-decoration: none !important;
         cursor: pointer;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                background: $hover-background-color;
+            }
+        }
     }
 
     @if $hover-shadow and $hover-transform {
@@ -90,19 +100,66 @@
             }
         }
     }
-    @if $hover-background-color {
-        .g--card-19 {
-            transition: background $time-b $ease-standard-a;
 
-            @media all and (hover: hover) {
-                &:hover,
-                &:focus,
-                &:active {
-                    background: $hover-background-color;
-                }
+    @if $hover-shadow and $hover-background-color {
+        transition: box-shadow $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
             }
         }
     }
+    @if $hover-transform and $hover-background-color {
+        transition: transform $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    }
+
     @if $hover-title-color {
         .g--card-19 {
             &__title {

@@ -207,6 +207,7 @@
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     width: 100%;
+                    padding: $measure * 5;
                 }
             }
             @if $background-color {

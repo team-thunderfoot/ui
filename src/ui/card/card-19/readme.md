@@ -23,9 +23,9 @@
 
 -   $background-color
 -   $border-color
+-   $border-radius
 -   $border-style
 -   $border-width
--   $border-radius
 -   $hover-background-color
 -   $hover-shadow
 -   $hover-title-color
@@ -48,21 +48,21 @@
     @include make-card-19-modifier(
         $background-color: map-get($color-options, e),
         $border-color: map-get($color-options, a),
+        $border-radius: $measure,
         $border-style: dashed,
         $border-width: 2px,
-        $border-radius: $measure,
         $hover-background-color: map-get($color-options, g),
         $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         $hover-title-color: map-get($color-options, b),
         $hover-transform: translateY(-5%),
         $meta-color: map-get($color-options, a),
-        $meta-font: f,
         $meta-font-weight: 600,
+        $meta-font: f,
         $pill-class: g--pill-01,
         $text-align: left,
         $title-color: map-get($color-options, a),
-        $title-font: c,
         $title-font-weight: 600,
+        $title-font: c,
         $title-max-lines: 3
     );
 }

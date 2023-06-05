@@ -1,6 +1,8 @@
 @mixin make-card-25() {
     overflow: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
     &__media-wrapper {
         overflow: hidden;
@@ -16,6 +18,17 @@
 
     &__wrapper {
         padding: $measure * 6 $measure * 5;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 300%;
+            z-index: 0;
+        }
     }
 }
 
@@ -34,6 +47,9 @@
     $img-aspect-ratio: false,
     $img-height: false,
     $img-position: false,
+    $meta-color: false,
+    $meta-font: false,
+    $meta-font-weight: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
@@ -86,6 +102,18 @@
         .g--card-25 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
+                &::before {
+                    transition: background $time-b $ease-standard-a;
+                }
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        &::before {
+                            background: $hover-background-color;
+                        }
+                    }
+                }
             }
         }
 
@@ -200,6 +228,11 @@
             }
             @if $background-color {
                 background: $background-color;
+            }
+            @if $background-color {
+                &::before {
+                    background: $background-color;
+                }
             }
 
             &__title {

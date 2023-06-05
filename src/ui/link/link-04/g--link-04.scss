@@ -4,14 +4,14 @@
         $underline-height: 1px,
         $text-color: map-get($color-options, a),
         $underline-color: map-get($color-options, g),
-        $text-color-hover: map-get($color-options, g)
+        $hover-text-color: map-get($color-options, g)
     );
     &--second {
         @include make-link-04-modifier(
             $underline-height: 2px,
             $text-color: map-get($color-options, a),
             $underline-color: map-get($color-options, h),
-            $text-color-hover: map-get($color-options, h)
+            $hover-text-color: map-get($color-options, h)
         );
     }
 }

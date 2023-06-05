@@ -2,13 +2,13 @@
     @include make-btn-02();
     @include make-btn-02-modifier(
         $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g),
+        $hover-text-color: map-get($color-options, g),
         $icon-top: 0px,
         $icon-width: $measure,
         $btn-font: f,
         $btn-font-weight: 600,
         // $artwork-color-fill: map-get($color-options, a),
         $artwork-color-stroke: map-get($color-options, a),
-        $artwork-color-hover: map-get($color-options, g)
+        $hover-artwork-color: map-get($color-options, g)
     );
 }

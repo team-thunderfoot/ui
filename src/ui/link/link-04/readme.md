@@ -21,7 +21,7 @@
 ## Editable variables
 
 - $text-color
-- $text-color-hover
+- $hover-text-color
 - $underline-color
 - $underline-height
 

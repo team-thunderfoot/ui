@@ -22,21 +22,21 @@
 
 ## Editable variables
 
-- $background-color-hover
+- $hover-background-color
 - $background-position
-- $background-position-hover
+- $hover-background-position
 - $background-repeat
 - $background-size
-- $background-size-hover
+- $hover-background-size
 - $border-color
-- $border-color-hover
+- $hover-border-color
 - $border-radius
 - $border-style
 - $border-width
 - $font
 - $font-weight
 - $text-color
-- $text-color-hover
+- $hover-text-color
 - $transition
 
 ## Use
@@ -45,21 +45,21 @@
 .g--btn-01{
     @include make-btn-01();
     @include make-btn-01-modifier(
-        // $background-color-hover: false,
+        // $hover-background-color: false,
         // $background-position: false,
-        // $background-position-hover: false,
+        // $hover-background-position: false,
         // $background-repeat: false,
         // $background-size: false,
-        // $background-size-hover: false,
+        // $hover-background-size: false,
         // $border-color: false,
-        // $border-color-hover: false,
+        // $hover-border-color: false,
         // $border-radius: false,
         // $border-style: false,
         // $border-width: false,
         // $font: false,
         // $font-weight: false,
         // $text-color: false,
-        // $text-color-hover: false,
+        // $hover-text-color: false,
         // $transition: false
     );
 }

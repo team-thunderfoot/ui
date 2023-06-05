@@ -46,7 +46,7 @@
 .g--card-19 {
     @include make-card-19();
     @include make-card-19-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
         $border-radius: $measure,
         $border-style: dashed,

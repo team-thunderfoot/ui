@@ -23,11 +23,6 @@
         background: $background-color;
     }
 
-    @if $hover-background-color or $hover-border-color or $hover-text-color or $hover-shadow or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
-
     @if $hover-background-color and $hover-border-color and $hover-shadow and $hover-transform and $hover-text-color {
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a, color $time-b $ease-standard-a;
         @media (hover: hover) {
@@ -191,6 +186,7 @@
             &:hover,
             &:focus,
             &:active {
+                background: $hover-background-color;
                 color: $hover-text-color;
             }
         }

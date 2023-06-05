@@ -38,7 +38,7 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-01{
     @include make-cta-01();
     @include make-cta-01-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $hover-background-color: map-get($color-options, h),
         $btn-class: g--btn-01,
         // $btn-font: false,

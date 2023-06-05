@@ -59,7 +59,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 .g--card-35 {
     @include make-card-35();
     @include make-card-35-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: dashed,
         $border-width: 2px,

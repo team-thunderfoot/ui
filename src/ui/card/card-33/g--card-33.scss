@@ -1,7 +1,7 @@
 .g--card-33 {
     @include make-card-33();
     @include make-card-33-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
         $border-radius: $measure,
         $border-style: dashed,
@@ -32,7 +32,7 @@
             // $full-image-height: true,
             // $img-aspect-ratio: 2,
             // $img-height: 400px,
-            $background-color: rgba(map-get($color-options,a), 5%),
+            $background-color: lighten(map-get($color-options,a), 82%),
             $border-color: map-get($color-options, a),
             $border-radius: 0,
             $border-style: solid,

@@ -27,7 +27,7 @@
         $heading-color: map-get($color-options, g),
         $person-color: map-get($color-options, g),
         $position-color: map-get($color-options, a),
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $text-align: left,
         $breakpoint: $tablets
     );

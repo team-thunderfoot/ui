@@ -1,7 +1,7 @@
 .g--card-10{
     @include make-card-10();
     @include make-card-10-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $link-class: g--btn-01,
         $title-color: map-get($color-options, a),
         $title-font: b,

@@ -1,7 +1,7 @@
 .g--card-19 {
     @include make-card-19();
     @include make-card-19-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
         $border-radius: $measure,
         $border-style: dashed,
@@ -23,7 +23,7 @@
 
     &--second {
         @include make-card-19-modifier(
-            $background-color: rgba(map-get($color-options,a), 5%),
+            $background-color: lighten(map-get($color-options,a), 82%),
             $border-color: map-get($color-options, a),
             $border-radius: 0,
             $border-style: solid,

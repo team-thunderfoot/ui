@@ -81,7 +81,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $change-order-reponsive: true,
         $content-color: map-get($color-options, a),
         $heading-color: map-get($color-options, g),
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $img-background-color: map-get($color-options, g),
         $text-align: left,
         $breakpoint: $tablets

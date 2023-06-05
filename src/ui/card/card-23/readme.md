@@ -57,7 +57,7 @@
         $author-font: g,
         $author-font-weight: 600,
         $author-color: map-get($color-options, a),
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: dashed,
         $border-width: 2px,

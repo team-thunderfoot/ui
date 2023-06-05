@@ -20,7 +20,7 @@
 
     &--second {
         @include make-message-01-modifier(
-            $background-color: map-get($color-options, e),
+            $background-color: lighten(map-get($color-options,a), 82%),
             $border-radius: 20px 20px 90px 20px,
             $border-width: 3px,
             $border-style: solid dotted dotted solid,

@@ -168,7 +168,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 ### Message
 
-- [g--message-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/message/g--message-01/readme.md)
+- [g--message-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/message/message-01/readme.md)
 
 ### Modal
 

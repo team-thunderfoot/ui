@@ -20,11 +20,10 @@
 
 ## Editable variables
 
-- $text-color
 - $hover-text-color
+- $text-color
 - $underline-color
 - $underline-height
-
 
 ## Use
 
@@ -32,16 +31,10 @@
 .g--link-04 {
     @include make-link-04();
     @include make-link-04-modifier(
-        $underline-height: 1px,
+        // $hover-text-color: map-get($color-options, g),
         $text-color: map-get($color-options, a),
         $underline-color: map-get($color-options, a)
+        $underline-height: 1px,
     );
-    &--second {
-        @include make-link-04-modifier(
-            $underline-height: 2px,
-            $text-color: map-get($color-options, a),
-            $underline-color: map-get($color-options, f)
-        );
-    }
 }
 ```

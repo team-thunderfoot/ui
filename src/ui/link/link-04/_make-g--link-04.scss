@@ -1,13 +1,13 @@
 @mixin make-link-04() {
-    text-decoration: none;
     background-position: bottom left;
     background-repeat: no-repeat;
+    text-decoration: none;
     width: fit-content;
 }
 
 @mixin make-link-04-modifier(
-    $text-color: false,
     $hover-text-color: false,
+    $text-color: false,
     $underline-color: false,
     $underline-height: false
 ) {

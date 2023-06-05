@@ -7,17 +7,17 @@
 
 @mixin make-pill-01-modifier(
     $background-color: false,
-    $hover-background-color: false,
-    $border-width: false,
-    $border-style: false,
     $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $hover-background-color: false,
     $hover-border-color: false,
-    $text-color: false,
-    $hover-text-color: false,
-    $text-font: false,
-    $text-font-weight: false,
     $hover-shadow: false,
+    $hover-text-color: false,
     $hover-transform: false,
+    $text-color: false,
+    $text-font-weight: false,
+    $text-font: false,
 ) {
     @if $background-color {
         background: $background-color;

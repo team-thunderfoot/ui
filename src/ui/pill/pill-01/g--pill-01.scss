@@ -1,34 +1,34 @@
-.g--pill-01{
-    @include make-pill-01();
-    @include make-pill-01-modifier(
-        $background-color: lighten(map-get($color-options,a), 75%),
-        $hover-background-color: map-get($color-options, a),
-        // $border-width: 1px,
-        // $border-style: solid,
-        // $border-color: map-get($color-options, e),
-        // $hover-border-color: false,
-        $text-color: map-get($color-options, a),
-        $hover-text-color: map-get($color-options, b),
-        $text-font: f,
-        $text-font-weight: false,
-        // $hover-shadow: false,
-        // $hover-transform: false,
-    );
+.g--pill-01 {
+  @include make-pill-01();
+  @include make-pill-01-modifier(
+    $background-color: lighten(map-get($color-options, a), 75%),
+    // $border-color: map-get($color-options, e),
+    // $border-style: solid,
+    // $border-width: 1px,
+    $hover-background-color: map-get($color-options, a),
+    // $hover-border-color: map-get($color-options, a),
+    // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+    $hover-text-color: map-get($color-options, b),
+    // $hover-transform: translateY(-$measure),
+    $text-color: map-get($color-options, a),
+    // $text-font-weight: 600,
+    $text-font: f
+  );
 
-    &--second {
-        @include make-pill-01-modifier(
-            $background-color: map-get($color-options, g),
-            // $hover-background-color: map-get($color-options, f),
-            $border-width: 3px,
-            $border-style: dotted,
-            $border-color: map-get($color-options, e),
-            $hover-border-color: map-get($color-options, b),
-            $text-color: map-get($color-options, a),
-            $hover-text-color: map-get($color-options, b),
-            $text-font: f,
-            // $text-font-weight: false,
-            // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-            // $hover-transform: translateY(-$measure),
-        );
-    }
+  &--second {
+    @include make-pill-01-modifier(
+      $background-color: map-get($color-options, g),
+      $border-color: map-get($color-options, e),
+      $border-style: dotted,
+      $border-width: 3px,
+      $hover-background-color: map-get($color-options, f),
+      $hover-border-color: map-get($color-options, b),
+      $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+      $hover-text-color: map-get($color-options, b),
+      $hover-transform: translateY(-$measure),
+      $text-color: map-get($color-options, a),
+      $text-font-weight: false,
+      $text-font: f,
+    );
+  }
 }

@@ -1,8 +1,6 @@
 @mixin make-card-29() {
     overflow: hidden;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     position: relative;
     &__media-wrapper {
         overflow: hidden;
@@ -18,17 +16,6 @@
 
     &__wrapper {
         padding: $measure * 6 $measure * 5;
-        position: relative;
-        z-index: 1;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 300%;
-            z-index: 0;
-        }
         &__meta {
             margin-bottom: $measure * 3;
         }
@@ -109,16 +96,12 @@
         .g--card-29 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
-                &::before {
-                    transition: background $time-b $ease-standard-a;
-                }
+
                 @media all and (hover: hover) {
                     &:hover,
                     &:focus,
                     &:active {
-                        &::before {
-                            background: $hover-background-color;
-                        }
+                        background: $hover-background-color;
                     }
                 }
             }
@@ -236,11 +219,7 @@
             @if $background-color {
                 background: $background-color;
             }
-            @if $background-color {
-                &::before {
-                    background: $background-color;
-                }
-            }
+
             &__meta {
                 @if $meta-color {
                     color: $meta-color;

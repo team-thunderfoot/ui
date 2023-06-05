@@ -96,14 +96,6 @@
         .g--card-29 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
-
-                @media all and (hover: hover) {
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        background: $hover-background-color;
-                    }
-                }
             }
         }
 

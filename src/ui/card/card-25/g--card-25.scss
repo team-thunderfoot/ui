@@ -13,7 +13,6 @@
             $hover-img-zoom: 2,
             $hover-shadow: 0 0 $measure*4 map-get($color-options, h),
             $hover-title-color: map-get($color-options, a),
-            $hover-transform: false,
             // $img-aspect-ratio: false,
             $img-height: false,
             $img-position: false,
@@ -22,6 +21,7 @@
             $title-font: false,
             $title-font-weight: false,
             $title-max-lines: 6,
+            $hover-transform: translateY(-5%)
         );
     }
 }

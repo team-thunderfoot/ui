@@ -22,45 +22,45 @@
 
 ## Editable variables
 
-- $hover-background-color
 - $background-position
-- $hover-background-position
 - $background-repeat
 - $background-size
-- $hover-background-size
 - $border-color
-- $hover-border-color
 - $border-radius
 - $border-style
 - $border-width
 - $font
 - $font-weight
-- $text-color
+- $hover-background-color
+- $hover-background-position
+- $hover-background-size
+- $hover-border-color
 - $hover-text-color
+- $text-color
 - $transition
 
 ## Use
 
 ```scss
-.g--btn-01{
-    @include make-btn-01();
-    @include make-btn-01-modifier(
-        // $hover-background-color: false,
-        // $background-position: false,
-        // $hover-background-position: false,
-        // $background-repeat: false,
-        // $background-size: false,
-        // $hover-background-size: false,
-        // $border-color: false,
-        // $hover-border-color: false,
-        // $border-radius: false,
-        // $border-style: false,
-        // $border-width: false,
-        // $font: false,
-        // $font-weight: false,
-        // $text-color: false,
-        // $hover-text-color: false,
-        // $transition: false
-    );
+.g--btn-01 {
+  @include make-btn-01();
+  @include make-btn-01-modifier(
+    // $background-position: center,
+    // $background-repeat: no-repeat,
+    // $background-size: 100% 0px,
+    // $border-color: map-get($color-options, a),
+    // $border-radius: $measure,
+    // $border-style: solid,
+    // $border-width: 1px,
+    // $font-weight: 600,
+    // $font: f,
+    // $hover-background-color:  map-get($color-options, a),
+    // $hover-background-position: bottom left,
+    // $hover-background-size: 100% 100%,
+    // $hover-border-color: map-get($color-options, a),
+    // $hover-text-color: map-get($color-options, a),
+    // $text-color: map-get($color-options, a),
+    // $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a, background-size $time-b $ease-standard-a)
+  );
 }
 ```

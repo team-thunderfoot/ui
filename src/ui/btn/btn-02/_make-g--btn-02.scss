@@ -11,15 +11,15 @@
 }
 
 @mixin make-btn-02-modifier(
-    $text-color: false,
+    $artwork-color-fill: false,
+    $artwork-color-stroke: false,
+    $btn-font-weight: false,
+    $btn-font: false,
+    $hover-artwork-color: false,
     $hover-text-color: false,
     $icon-top: false,
     $icon-width: false,
-    $btn-font: false,
-    $btn-font-weight: false,
-    $artwork-color-fill: false,
-    $artwork-color-stroke: false,
-    $hover-artwork-color: false
+    $text-color: false,
 ) {
     @if $text-color {
         color: $text-color;

@@ -1,22 +1,22 @@
 .g--btn-01{
     @include make-btn-01();
     @include make-btn-01-modifier(
-        $border-color: map-get($color-options, a),
-        $hover-border-color: map-get($color-options, g),
-        $border-width: 1px 4px 4px 1px,
-        $border-style: solid,
-        $font: f,
-        $font-weight: 400,
-        $text-color: map-get($color-options, a),
-        $hover-text-color: map-get($color-options, g),
-        $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a),
         $background-color: map-get($color-options, b),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
+        $font-weight: 400,
+        $font: f,
         // $hover-background-color: map-get($color-options, a)
-    );
-
+        $hover-border-color: map-get($color-options, g),
+        $hover-text-color: map-get($color-options, g),
+        $text-color: map-get($color-options, a),
+        $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a),
+        );
+        
     &--second {
         @include make-btn-01-modifier(
-            $border-radius: $measure,
+            $border-radius: 200px,
             $border-width: 1px,
             $hover-border-color: map-get($color-options, a),
             $text-color: map-get($color-options, a),

@@ -12,21 +12,21 @@
 
 @mixin make-btn-01-modifier(
     $background-color: false,
-    $hover-background-color: false,
     $background-position: false,
-    $hover-background-position: false,
     $background-repeat: false,
     $background-size: false,
-    $hover-background-size: false,
     $border-color: false,
-    $hover-border-color: false,
     $border-radius: false,
     $border-style: false,
     $border-width: false,
-    $font: false,
     $font-weight: false,
-    $text-color: false,
+    $font: false,
+    $hover-background-color: false,
+    $hover-background-position: false,
+    $hover-background-size: false,
+    $hover-border-color: false,
     $hover-text-color: false,
+    $text-color: false,
     $transition: false
 ) {
     @if $background-color {

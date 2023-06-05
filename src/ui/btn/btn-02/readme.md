@@ -28,14 +28,14 @@
 
 ## Editable variables
 
-- $text-color
-- $hover-text-color
-- $icon-top
-- $btn-font
-- $btn-font-weight
 - $artwork-color-fill
 - $artwork-color-stroke
+- $btn-font
+- $btn-font-weight
 - $hover-artwork-color
+- $hover-text-color
+- $icon-top
+- $text-color
 
 ## Use
 
@@ -43,15 +43,15 @@
 .g--btn-02{
     @include make-btn-02();
     @include make-btn-02-modifier(
-        $text-color: map-get($color-options, a),
-        $hover-text-color: map-get($color-options, g),
-        $icon-top: 0px,
-        $icon-width: $measure,
-        $btn-font: f,
-        $btn-font-weight: 600,
         // $artwork-color-fill: map-get($color-options, a),
-        $artwork-color-stroke: map-get($color-options, a),
-        $hover-artwork-color: map-get($color-options, g)
+        // $artwork-color-stroke: map-get($color-options, a),
+        // $btn-font-weight: 600,
+        // $btn-font: f,
+        // $hover-artwork-color: map-get($color-options, g),
+        // $hover-text-color: map-get($color-options, g),
+        // $icon-top: 0px,
+        // $icon-width: $measure,
+        // $text-color: map-get($color-options, a),
     );
 }
 ```

@@ -45,10 +45,6 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
-    @if $hover-title-color or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
 
     @if $hover-transform {
         transition: transform $time-b $ease-standard-a;

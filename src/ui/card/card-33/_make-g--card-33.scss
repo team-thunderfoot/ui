@@ -78,10 +78,6 @@
     @if $border-width {
         border-width: $border-width;
     }
-    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
 
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;

@@ -1,13 +1,5 @@
-@mixin make-form-file-01(
-    $border-radius,
-    $border-width,
-    $btn-font,
-    $font,
-    $btn-font-weight: false,
-    $font-weight: false,
-    $mobile-font-size: false,
-) {
-    &__item{
+@mixin make-form-file-01($border-radius, $border-width, $btn-font, $font, $btn-font-weight: false, $font-weight: false, $mobile-font-size: false) {
+    &__item {
         @extend .f--font-#{$font} !optional;
         @if $font-weight {
             font-weight: $font-weight;
@@ -19,19 +11,19 @@
         -webkit-padding-start: 0 !important;
         display: block;
         border: $border-width solid;
-        padding: $measure*.5 $measure;
+        padding: $measure * 0.5 $measure;
         width: 100%;
         border-radius: $border-radius;
         transition: border-color $time-b $ease-standard-a;
         @if $mobile-font-size {
-            @media all and ($viewport-type: $mobile){
+            @media all and ($viewport-type: $mobile) {
                 font-size: $mobile-font-size;
             }
         }
         &::-webkit-file-upload-button {
             cursor: pointer;
             height: 100%;
-            padding: $measure*.5 $measure*3;
+            padding: $measure * 0.5 $measure * 3;
             appearance: none;
             -webkit-appearance: none;
             border: none;
@@ -45,17 +37,9 @@
     }
 }
 
-@mixin make-form-file-01-modifier(
-    $background-color,
-    $btn-background-color,
-    $btn-text-color,
-    $border-color,
-    $border-color-focus,
-    $error-border-color,
-    $text-color,
-) {
-    .g--form-file-01{
-        &__item{
+@mixin make-form-file-01-modifier($background-color, $btn-background-color, $btn-text-color, $border-color, $border-color-focus, $error-border-color, $text-color) {
+    .g--form-file-01 {
+        &__item {
             border-color: $border-color;
             background-color: $background-color !important;
             color: $text-color !important;
@@ -65,17 +49,17 @@
             }
             &:hover,
             &:focus,
-            &:valid{
+            &:valid {
                 border-color: $border-color-focus;
             }
         }
     }
-    &.g--form-file-01--error{
-        .g--form-file-01{
-            &__item{
+    &.g--form-file-01--error {
+        .g--form-file-01 {
+            &__item {
                 border-color: $error-border-color;
                 &:focus,
-                &:valid{
+                &:valid {
                     border-color: $error-border-color;
                 }
             }

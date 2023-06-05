@@ -69,10 +69,6 @@
         border-radius: $border-radius;
     }
 
-    @if $hover-background-color or $hover-img-zoom or $hover-shadow or $hover-title-color or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover: hover) {

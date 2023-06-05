@@ -32,10 +32,6 @@
 
 ) {
 
-    @if $hover-title-color or $hover-img-zoom or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
     @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {

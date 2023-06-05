@@ -4,7 +4,7 @@
         $hover-img-background-color: map-get($color-options, g),
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, g),
-        $hover-translate: translateY(-5%),
+        $hover-transform: translateY(-5%),
         $icon-class:  g--icon-01,
         $img-align: center,
         // $img-aspect-ratio: false,

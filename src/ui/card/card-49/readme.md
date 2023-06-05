@@ -32,7 +32,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $hover-img-background-color
 - $hover-img-zoom
 - $hover-title-color
-- $hover-translate
+- $hover-transform
 - $icon-class
 - $img-align
 - $img-aspect-ratio
@@ -59,7 +59,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-img-background-color: false,
         // $hover-img-zoom: false,
         // $hover-title-color: false,
-        // $hover-translate: false,
+        // $hover-transform: false,
         // $icon-class: false,
         // $img-align: false,
         // $img-aspect-ratio: false,

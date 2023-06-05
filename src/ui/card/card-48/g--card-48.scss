@@ -19,6 +19,6 @@
         $img-align: center,
         $hover-title-color: map-get($color-options, g),
         $hover-img-zoom: 1.1,
-        $hover-translate: translateY(-5%)
+        $hover-transform: translateY(-5%)
     );
 }

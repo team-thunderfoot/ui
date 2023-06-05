@@ -33,7 +33,7 @@
     $hover-img-background-color: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
-    $hover-translate: false,
+    $hover-transform: false,
     $icon-class: false,
     $img-align: false,
     $img-aspect-ratio: false,
@@ -63,12 +63,12 @@
         text-align: right;
     }
 
-    @if $hover-img-background-color or $hover-img-zoom or $hover-title-color or $hover-translate {
+    @if $hover-img-background-color or $hover-img-zoom or $hover-title-color or $hover-transform {
         text-decoration: none !important;
         display: block;
     }
 
-    @if $hover-img-background-color and $hover-title-color and $hover-translate {
+    @if $hover-img-background-color and $hover-title-color and $hover-transform {
         .g--card-49 {
             transition: transform $time-b $ease-standard-a;
             &__media-wrapper {
@@ -84,7 +84,7 @@
             &:focus,
             &:active {
                 .g--card-49 {
-                    transform: $hover-translate;
+                    transform: $hover-transform;
                     &__media-wrapper {
                         background: $hover-img-background-color;
                     }
@@ -132,13 +132,13 @@
         }
     } 
     
-    @if $hover-translate{
+    @if $hover-transform{
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
             &:focus,
             &:active {
-                transform: $hover-translate;
+                transform: $hover-transform;
             }
         }
     }

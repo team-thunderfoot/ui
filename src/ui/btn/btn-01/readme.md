@@ -22,6 +22,7 @@
 
 ## Editable variables
 
+- $background-color
 - $background-position
 - $background-repeat
 - $background-size
@@ -29,8 +30,8 @@
 - $border-radius
 - $border-style
 - $border-width
-- $font
 - $font-weight
+- $font
 - $hover-background-color
 - $hover-background-position
 - $hover-background-size
@@ -45,6 +46,7 @@
 .g--btn-01 {
   @include make-btn-01();
   @include make-btn-01-modifier(
+    // $background-color: map-get($color-options, a),
     // $background-position: center,
     // $background-repeat: no-repeat,
     // $background-size: 100% 0px,

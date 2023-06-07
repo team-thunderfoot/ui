@@ -23,6 +23,7 @@ class Index {
       selector: ".g--lazy-01",
       successClass: "g--lazy-01--is-loaded",
       errorClass: "g--lazy-01--is-error",
+      loadInvisible: true
     });
     const backToTop = new BackToTop({
       linkClass: "js--back-top",

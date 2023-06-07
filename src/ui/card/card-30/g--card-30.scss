@@ -23,6 +23,7 @@
             $hover-title-color: map-get($color-options, e),
             $hover-transform: scale(105%),
             $img-aspect-ratio: 2,
+            $img-border-radius: $measure*2,
             $img-height: auto,
             $img-position: center,
             $meta-color: map-get($color-options, a),

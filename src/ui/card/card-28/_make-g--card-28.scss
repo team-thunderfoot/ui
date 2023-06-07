@@ -36,6 +36,7 @@
     $hover-title-color: false,
     $hover-transform: false,
     $img-aspect-ratio: false,
+    $img-border-radius: false,
     $img-height: false,
     $img-position: false,
     $pill-class: false,
@@ -139,6 +140,10 @@
 
     .g--card-28 {
         &__media-wrapper {
+            @if $img-border-radius {
+              border-radius: $img-border-radius;
+              overflow: hidden;
+            }
             &__media {
                 @if $img-aspect-ratio {
                     aspect-ratio: $img-aspect-ratio;

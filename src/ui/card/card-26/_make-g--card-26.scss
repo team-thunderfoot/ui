@@ -19,7 +19,20 @@
   }
 }
 
-@mixin make-card-26-modifier($hover-img-zoom: false, $hover-title-color: false, $hover-transform: false, $img-aspect-ratio: false, $img-height: false, $img-position: false, $text-align: false, $title-color: false, $title-font-weight: false, $title-font: false, $title-max-lines: false) {
+@mixin make-card-26-modifier(
+  $hover-img-zoom: false,
+  $hover-title-color: false,
+  $hover-transform: false,
+  $img-aspect-ratio: false,
+  $img-border-radius: false,
+  $img-height: false,
+  $img-position: false,
+  $text-align: false,
+  $title-color: false,
+  $title-font-weight: false,
+  $title-font: false,
+  $title-max-lines: false
+) {
   @if $hover-transform {
     transition: transform $time-b $ease-standard-a;
     @media all and (hover: hover) {
@@ -104,6 +117,10 @@
 
   .g--card-26 {
     &__media-wrapper {
+      @if $img-border-radius {
+        border-radius: $img-border-radius;
+        overflow: hidden;
+      }
       &__media {
         @if $img-aspect-ratio {
           aspect-ratio: $img-aspect-ratio;

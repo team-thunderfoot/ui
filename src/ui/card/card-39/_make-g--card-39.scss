@@ -203,7 +203,9 @@
 
     .g--card-39 {
         &__media-wrapper {
-            @if $full-image-height {
+            @if $full-image-height == "no" {
+                height: auto;
+            } @else if $full-image-height {
                 height: 100%;
             }
             @if $img-aspect-ratio-width and $img-aspect-ratio-height {
@@ -240,14 +242,6 @@
             }
 
 
-            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
-                height: 100%;
-            }
-
-            @if $img-height {
-                height: calc(100% - #{$img-height});
-            }
-
             @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
                 height: auto;
 
@@ -263,6 +257,14 @@
                         background: $background-color;
                     }
                 }
+            }
+
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                height: 100%;
+            }
+
+            @if $img-height {
+                height: calc(100% - #{$img-height});
             }
 
             &__hd {

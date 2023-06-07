@@ -102,6 +102,8 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--card-47](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-47/readme.md)
 - [g--card-48](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-48/readme.md)
 - [g--card-49](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-49/readme.md)
+- [g--card-50](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-50/readme.md)
+- [g--card-51](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-51/readme.md)
 
 ### Cta
 

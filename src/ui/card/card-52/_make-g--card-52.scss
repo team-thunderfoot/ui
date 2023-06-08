@@ -286,8 +286,10 @@
             }
             &__wrapper{
                 @if $link-hide-by-default == true {
-                    opacity: 0;
-                    transition: opacity $time-b $ease-standard-a;
+                    @media all and (hover: hover) {
+                        opacity: 0;
+                        transition: opacity $time-b $ease-standard-a;
+                    }
                 } @else if $link-hide-by-default == "no" {
                     opacity: 1;
                 }

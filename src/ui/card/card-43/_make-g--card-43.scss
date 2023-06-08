@@ -5,9 +5,8 @@
     &__wrapper {
         width: 50%;
         padding: $measure * 10;
-
         @media all and ($viewport-type: $tabletm) {
-            padding: $measure * 10 $measure * 4;
+            padding: $measure * 5;
         }
 
         &__hd {
@@ -172,7 +171,6 @@
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     width: 100%;
-                    padding: $measure * 5;
                     @if $change-order-reponsive {
                         order: 1;
                     }

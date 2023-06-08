@@ -1,9 +1,8 @@
 .g--form-error-01{
-    @include make-form-error-01(
-        $font: g,
-        // $font-weight: default,
-    );
+    @include make-form-error-01();
     @include make-form-error-01-modifier(
         $text-color: map-get($color-options, g),
+        $font: g,
+        // $font-weight: default,
     );
 }

@@ -1,10 +1,4 @@
-@mixin make-form-checkbox-01(
-    $font,
-    $square-border-radius,
-    $square-border-width,
-    $square-width,
-    $font-weight: false,
-) {
+@mixin make-form-checkbox-01() {
     position: relative;
     &__item{
         position: absolute;
@@ -21,13 +15,9 @@
         }
     }
     &__title{
-        @extend .f--font-#{$font} !optional;
-        @if $font-weight {
-            font-weight: $font-weight;
-        }
         position: relative;
         display: block;
-        padding-left: calc(#{$measure} + #{$square-width});
+        padding-left: $measure;
         cursor: pointer;
         &::before{
             content: '';
@@ -35,18 +25,11 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            height: $square-width;
-            width: $square-width;
-            border: $square-border-width solid;
-            border-radius: $square-border-radius;
         }
         &::after{
             content: '';
             position: absolute;
-            width: $square-width*.65;
-            height: $square-width*.65;
             top: 50%;
-            left: $square-width*.5;
             transform: translate(-50%, -50%);
             background-repeat: no-repeat;
             background-size: contain;
@@ -58,11 +41,17 @@
 }
 
 @mixin make-form-checkbox-01-modifier(
-    $artwork-img,
-    $error-border-color,
-    $square-color,
-    $square-color-focus,
-    $text-color,
+    $artwork-img: false,
+    $error-border-color: false,
+    $font: false,
+    $font-weight: false,
+    $square-border-radius: false,
+    $square-border-style: false,
+    $square-border-width: false,
+    $square-border-color: false,
+    $square-color-focus: false,
+    $square-width: false,
+    $text-color: false,
 ) {
     .g--form-checkbox-01{
         &__item{
@@ -72,12 +61,45 @@
             }
         }
         &__title{
-            color: $text-color;
+            @if $font {
+                @extend .f--font-#{$font} !optional;
+            }
+            @if $font-weight {
+                font-weight: $font-weight;
+            }
+            @if $text-color {
+                color: $text-color;
+            }
+            @if $square-width {
+                padding-left: calc(#{$measure} + #{$square-width});
+            }
             &::before{
-                border-color: $square-color;
+                @if $square-border-color {
+                    border-color: $square-border-color;
+                }
+                @if $square-width {
+                    height: $square-width;
+                    width: $square-width;
+                }
+                @if $square-border-width {
+                    border-width: $square-border-width;
+                }
+                @if $square-border-style {
+                    border-style: $square-border-style;
+                }
+                @if $square-border-radius {
+                    border-radius: $square-border-radius;
+                }
             }
             &::after{
-                background-image: url('#{$artwork-img}');
+                @if $artwork-img {
+                    background-image: url('#{$artwork-img}');
+                }
+                @if $square-width {
+                    width: $square-width*.65;
+                    height: $square-width*.65;
+                    left: $square-width*.5;
+                }
             }
         }
     }
@@ -86,12 +108,16 @@
             &__item{
                 &:focus + .g--form-checkbox-01__title::before,
                 &:checked + .g--form-checkbox-01__title::before{
-                    border-color: $error-border-color;
+                    @if $error-border-color {
+                        border-color: $error-border-color;
+                    }
                 }
             }
             &__title{
                 &::before {
-                    border-color: $error-border-color;
+                    @if $error-border-color {
+                        border-color: $error-border-color;
+                    }
                 }
             }
         }

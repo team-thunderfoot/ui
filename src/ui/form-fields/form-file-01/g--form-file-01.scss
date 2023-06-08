@@ -1,12 +1,5 @@
 .g--form-file-01{
-    @include make-form-file-01(
-        $border-radius: 0,
-        $border-width: 1px,
-        $btn-font: f,
-        $font: f,
-        // $btn-font-weight: default,
-        // $font-weight: default
-    );
+    @include make-form-file-01();
     @include make-form-file-01-modifier(
         $background-color: transparent,
         $btn-background-color: map-get($color-options, a),
@@ -16,5 +9,13 @@
         $error-border-color: map-get($color-options, f),
         // $placeholder-color: transparent,
         $text-color: map-get($color-options, a),
+        $border-radius: 0,
+        $border-width: 1px,
+        $border-style: solid,
+        $btn-font: f,
+        $font: f,
+        // $btn-font-weight: default,
+        // $font-weight: default
+        $mobile-font-size: false,
     );
 }

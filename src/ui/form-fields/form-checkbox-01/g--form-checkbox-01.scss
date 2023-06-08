@@ -1,16 +1,16 @@
 .g--form-checkbox-01{
-    @include make-form-checkbox-01(
-        $font: f,
-        $square-border-radius: 0,
-        $square-border-width: 1px,
-        $square-width: $measure*2,
-        // $font-weight: default,
-    );
+    @include make-form-checkbox-01();
     @include make-form-checkbox-01-modifier(
         $artwork-img: './img/global-components/form-fields/checkbox-artwork.svg',
         $error-border-color: map-get($color-options, f),
-        $square-color: rgba(map-get($color-options, a), .2),
+        $square-border-color: rgba(map-get($color-options, a), .2),
         $square-color-focus: map-get($color-options, a),
         $text-color: map-get($color-options, a),
+        $font: f,
+        $square-border-radius: 0,
+        $square-border-style: solid,
+        $square-border-width: 1px,
+        $square-width: $measure*2,
+        // $font-weight: default,
     );
 }

@@ -27,6 +27,7 @@
 - $hover-title-color
 - $hover-transform
 - $img-aspect-ratio
+- $img-border-radius
 - $img-height
 - $img-position
 - $link-class
@@ -50,6 +51,7 @@
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
         $img-aspect-ratio: 1.7,
+        // $img-border-radius: false
         // $img-height: 100px,
         $img-position: center,
         $link-class: g--link-01,

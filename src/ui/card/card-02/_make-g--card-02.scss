@@ -29,7 +29,7 @@
     $img-aspect-ratio: false,
     $img-height: false,
     $img-position: false,
-    $img-size: false,
+    $img-fit: false,
     $img-width: false,
     $subtitle-color: false,
     $subtitle-font: false,
@@ -142,8 +142,8 @@
                 @if $img-height {
                     height: $img-height;
                 }
-                @if $img-size{
-                    object-fit: $img-size;
+                @if $img-fit{
+                    object-fit: $img-fit;
                 }
                 @if $img-position{
                     object-position: $img-position;

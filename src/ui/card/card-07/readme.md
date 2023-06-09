@@ -46,7 +46,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $img-aspect-ratio
 - $img-height
 - $img-position
-- $img-size
+- $img-fit
 - $img-width
 - $text-align
 - $title-color
@@ -73,7 +73,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $img-aspect-ratio: false,
         // $img-height: false,
         // $img-position: false,
-        // $img-size: false,
+        // $img-fit: false,
         // $img-width: false,
         // $text-align: false,
         // $title-color: false,

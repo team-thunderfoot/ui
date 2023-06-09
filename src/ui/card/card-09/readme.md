@@ -50,7 +50,7 @@ It is not necessary to add aspect-ratio.
 - $img-aspect-ratio
 - $img-height
 - $img-position
-- $img-size
+- $img-fit
 - $img-width
 - $mask-color
 - $text-align
@@ -76,7 +76,7 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio: false,
         // $img-height: false,
         // $img-position: false,
-        // $img-size: false,
+        // $img-fit: false,
         // $img-width: false,
         // $mask-color: false,
         // $text-align: false,

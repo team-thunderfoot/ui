@@ -41,7 +41,7 @@ It is not necessary to add aspect-ratio.
 - $img-aspect-ratio
 - $img-height
 - $img-position
-- $img-size
+- $img-fit
 - $img-width
 - $subtitle-color
 - $subtitle-font
@@ -65,7 +65,7 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio: false,
         // $img-height: false,
         // $img-position: false,
-        // $img-size: false,
+        // $img-fit: false,
         // $img-width: false,
         // $subtitle-color: false,
         // $subtitle-font: false,

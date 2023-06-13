@@ -1,7 +1,10 @@
 .g--form-checkbox-01{
     @include make-form-checkbox-01();
     @include make-form-checkbox-01-modifier(
-        $artwork-img: './img/global-components/form-fields/checkbox-artwork.svg',
+        $artwork-background: url('./img/global-components/form-fields/checkbox-artwork.svg'),
+        $artwork-background-repeat: no-repeat,
+        $artwork-background-size: contain,
+        $artwork-background-position: center,
         $error-border-color: map-get($color-options, f),
         $square-border-color: rgba(map-get($color-options, a), .2),
         $square-color-focus: map-get($color-options, a),

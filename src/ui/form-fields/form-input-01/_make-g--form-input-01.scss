@@ -12,48 +12,51 @@
     $background-color-autofill: false,
     $border-color: false,
     $border-color-focus: false,
-    $error-border-color: false,
-    $placeholder-color: false,
-    $text-color: false,
     $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $error-border-color: false,
     $font: false,
+    $font-size-mobile: false,
     $font-weight: false,
-    $mobile-font-size: false,
+    $placeholder-color: false,
+    $text-color: false,
 ) {
     .g--form-input-01{
         &__item{
-            @if $font-weight {
-                font-weight: $font-weight;
-            }
-            @if $font {
-                @extend .f--font-#{$font} !optional;
+            @if $background-color {
+                background-color: $background-color !important;
             }
             @if $border-color {
                 border-color: $border-color;
             }
-            @if $border-width {
-                border-width: $border-width;
+            @if $border-radius {
+                border-radius: $border-radius;
             }
             @if $border-style {
                 border-style: $border-style;
             }
-            @if $border-radius {
-                border-radius: $border-radius;
+            @if $border-width {
+                border-width: $border-width;
             }
-            @if $background-color {
-                background-color: $background-color !important;
+            @if $font {
+                @extend .f--font-#{$font} !optional;
+            }
+            @if $font-size-mobile {
+                @media all and ($viewport-type: $mobile){
+                    font-size: $font-size-mobile;
+                }
+            }
+            @if $font-weight {
+                font-weight: $font-weight;
             }
             @if $text-color {
                 color: $text-color !important;
             }
-            @if $mobile-font-size {
-                @media all and ($viewport-type: $mobile){
-                    font-size: $mobile-font-size;
-                }
-            }
             &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                @if $background-color-autofill {
+                    -webkit-box-shadow: 0 0 0px 1000px $background-color-autofill inset;
+                }
                 @if $border-color {
                     border-color: $border-color;
                 }
@@ -65,9 +68,6 @@
                 }
                 @if $text-color {
                     -webkit-text-fill-color: $text-color;
-                }
-                @if $background-color-autofill {
-                    -webkit-box-shadow: 0 0 0px 1000px $background-color-autofill inset;
                 }
             }
             @if $placeholder-color {
@@ -83,10 +83,10 @@
             }
         }
     }
-    &.g--form-input-01--error{
-        .g--form-input-01{
-            &__item{
-                @if $error-border-color {
+    @if $error-border-color {
+        &.g--form-input-01--error{
+            .g--form-input-01{
+                &__item{
                     border-color: $error-border-color;
                     &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
                         border-color: $error-border-color;

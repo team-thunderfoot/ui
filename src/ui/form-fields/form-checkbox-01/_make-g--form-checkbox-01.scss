@@ -41,7 +41,11 @@
 }
 
 @mixin make-form-checkbox-01-modifier(
-    $artwork-img: false,
+    $artwork-background: false,
+    $artwork-background-position: false,
+    $artwork-background-repeat: false,
+    $artwork-background-size: false,
+    $artwork-border-radius: false,
     $error-border-color: false,
     $font: false,
     $font-weight: false,
@@ -92,8 +96,17 @@
                 }
             }
             &::after{
-                @if $artwork-img {
-                    background-image: url('#{$artwork-img}');
+                @if $artwork-background {
+                    background: $artwork-background;
+                }
+                @if $artwork-background-position {
+                    background-position: $artwork-background-position;
+                }
+                @if $artwork-background-repeat {
+                    background-repeat: $artwork-background-repeat;
+                }
+                @if $artwork-background-size {
+                    background-size: $artwork-background-size;
                 }
                 @if $square-width {
                     width: $square-width*.65;

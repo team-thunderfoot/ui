@@ -4,6 +4,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
     &::after {
         content: "";
         width: 100%;

@@ -2,6 +2,7 @@
     padding: $measure*7 $measure*5;
     width: 100%;
     display: block;
+    text-decoration: none;
     &__media-wrapper{
         overflow: hidden;
         margin-bottom: $measure * 2;
@@ -207,10 +208,10 @@
                     aspect-ratio: $img-aspect-ratio;
                 }
                 @if $img-width {
-                    width: $img-width;
+                    width: 100%;
                 }
                 @if $img-height {
-                    height: $img-height;
+                    height: 100%;
                 }
                 @if $img-fit{
                     object-fit: $img-fit;

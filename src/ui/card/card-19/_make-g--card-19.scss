@@ -5,6 +5,7 @@
     flex-direction: column;
     position: relative;
     padding: $measure * 6 $measure * 5;
+    text-decoration: none;
 
     &__meta {
         margin-bottom: $measure * 3;

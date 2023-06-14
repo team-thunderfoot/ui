@@ -4,6 +4,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
     &::after{
         content: '';
         width: 100%;
@@ -239,10 +240,10 @@
                         aspect-ratio: $img-aspect-ratio;
                     }
                     @if $img-width {
-                        width: $img-width;
+                        width: 100%;
                     }
                     @if $img-height {
-                        height: $img-height;
+                        height: 100%;
                     }
                     @if $img-fit{
                         object-fit: $img-fit;

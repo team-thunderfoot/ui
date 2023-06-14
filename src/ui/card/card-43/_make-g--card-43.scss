@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    text-decoration: none;
     &__wrapper {
         width: 50%;
         padding: $measure * 10;

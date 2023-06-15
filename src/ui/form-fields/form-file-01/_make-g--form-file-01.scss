@@ -42,8 +42,8 @@
     $btn-transition: false,
     $error-border-color: false,
     $font: false,
+    $font-size-mobile: false,
     $font-weight: false,
-    $font-mobile-size: false,
     $hover-btn-background-color: false,
     $hover-btn-background-position: false,
     $hover-btn-background-size: false,
@@ -77,9 +77,9 @@
       @if $border-radius {
         border-radius: $border-radius;
       }
-      @if $font-mobile-size {
+      @if $font-size-mobile {
         @media all and ($viewport-type: $mobile) {
-          font-size: $font-mobile-size;
+          font-size: $font-size-mobile;
         }
       }
       &::-webkit-file-upload-button {

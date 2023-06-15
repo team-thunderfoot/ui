@@ -44,15 +44,15 @@
 
 @mixin make-form-radio-01-modifier(
     $artwork-color: false,
+    $circle-border-style: false,
+    $circle-border-width: false,
     $circle-color: false,
     $circle-color-focus: false,
-    $error-border-color: false,
-    $text-color: false,
-    $circle-border-width: false,
-    $circle-border-style: false,
     $circle-width: false,
+    $error-border-color: false,
     $font: false,
     $font-weight: false,
+    $text-color: false,
 ) {
     .g--form-radio-01{
         &__item{

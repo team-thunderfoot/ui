@@ -21,20 +21,20 @@
 }
 
 @mixin make-form-select-01-modifier(
+    $artwork-url: false,
     $background-color: false,
     $border-color: false,
     $border-color-focus: false,
-    $error-border-color: false,
-    $text-color: false,
-    $option-color: false,
-    $option-background: false,
-    $artwork-url: false,
     $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $error-border-color: false,
     $font: false,
+    $font-size-mobile: false,
     $font-weight: false,
-    $mobile-font-size: false,
+    $option-background: false,
+    $option-color: false,
+    $text-color: false,
 ) {
     .g--form-select-01{
         @if $artwork-url{
@@ -74,9 +74,9 @@
             @if $font-weight {
                 font-weight: $font-weight;
             }
-            @if $mobile-font-size {
+            @if $font-size-mobile {
                 @media all and ($viewport-type: $mobile){
-                    font-size: $mobile-font-size;
+                    font-size: $font-size-mobile;
                 }
             }
             @if $border-color-focus {

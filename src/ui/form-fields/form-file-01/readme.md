@@ -1,4 +1,4 @@
-# Form-input-01
+# Form-file-01
 
 ## Layout
 
@@ -41,8 +41,8 @@ When there's an error in the input the class "g--form-input-01--error" should be
 - $btn-transition
 - $error-border-color
 - $font
+- $font-size-mobile
 - $font-weight
-- $font-mobile-size
 - $hover-btn-background-color
 - $hover-btn-background-position
 - $hover-btn-background-size
@@ -77,8 +77,8 @@ When there's an error in the input the class "g--form-input-01--error" should be
         // $btn-transition: (color $time-b $ease-standard-a, background-size $time-b $ease-standard-a),
         // $error-border-color: map-get($color-options, f),
         // $font: f,
+        // $font-size-mobile: 1rem,
         // $font-weight: 400,
-        // $font-mobile-size: 1rem,
         // $hover-btn-background-color: map-get($color-options, a),
         // $hover-btn-background-position: (right top),
         // $hover-btn-background-size: (100% 100%, 100%),

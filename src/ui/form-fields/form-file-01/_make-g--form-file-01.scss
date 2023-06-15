@@ -24,20 +24,32 @@
 
 @mixin make-form-file-01-modifier(
     $background-color: false,
-    $btn-background-color: false,
-    $btn-text-color: false,
     $border-color: false,
     $border-color-focus: false,
-    $error-border-color: false,
-    $text-color: false,
     $border-radius: false,
-    $border-width: false,
     $border-style: false,
+    $border-width: false,
+    $btn-background: false,
+    $btn-background-position: false,
+    $btn-background-repeat: false,
+    $btn-background-size: false,
+    $btn-border-color: false,
+    $btn-border-style: false,
+    $btn-border-width: false,
     $btn-font: false,
-    $font: false,
     $btn-font-weight: false,
+    $btn-text-color: false,
+    $btn-transition: false,
+    $error-border-color: false,
+    $font: false,
     $font-weight: false,
-    $mobile-font-size: false,
+    $font-mobile-size: false,
+    $hover-btn-background-color: false,
+    $hover-btn-background-position: false,
+    $hover-btn-background-size: false,
+    $hover-btn-border-color: false,
+    $hover-btn-text-color: false,
+    $text-color: false,
 ) {
   .g--form-file-01 {
     &__item {
@@ -65,14 +77,32 @@
       @if $border-radius {
         border-radius: $border-radius;
       }
-      @if $mobile-font-size {
+      @if $font-mobile-size {
         @media all and ($viewport-type: $mobile) {
-          font-size: $mobile-font-size;
+          font-size: $font-mobile-size;
         }
       }
       &::-webkit-file-upload-button {
-        @if $btn-background-color {
-            background-color: $btn-background-color;
+        @if $btn-background {
+            background: $btn-background;
+        }
+        @if $btn-background-size {
+            background-size: $btn-background-size;
+        }
+        @if $btn-background-position {
+            background-position: $btn-background-position;
+        }
+        @if $btn-background-repeat {
+            background-repeat: $btn-background-repeat;
+        }
+        @if $btn-border-color {
+            border-color: $btn-border-color;
+        }
+        @if $btn-border-style {
+            border-style: $btn-border-style;
+        }
+        @if $btn-border-width {
+            border-width: $btn-border-width;
         }
         @if $btn-text-color {
             color: $btn-text-color;
@@ -83,12 +113,35 @@
         @if $btn-font-weight {
           font-weight: $btn-font-weight;
         }
+        @if $btn-transition {
+          transition: $btn-transition;
+        }
       }
       &:hover,
       &:focus,
       &:valid {
         @if $border-color-focus {
             border-color: $border-color-focus;
+        }
+      }
+      &:hover,
+      &:focus {
+        &::-webkit-file-upload-button {
+          @if $hover-btn-background-color {
+              background-color: $hover-btn-background-color;
+          }
+          @if $hover-btn-text-color {
+              color: $hover-btn-text-color;
+          }
+          @if $hover-btn-border-color {
+              border-color: $hover-btn-border-color;
+          }
+          @if $hover-btn-background-size {
+              background-size: $hover-btn-background-size;
+          }
+          @if $hover-btn-background-position {
+              background-position: $hover-btn-background-position;
+          }
         }
       }
     }

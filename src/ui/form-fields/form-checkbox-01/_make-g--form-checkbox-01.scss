@@ -48,6 +48,7 @@
     $artwork-border-radius: false,
     $error-border-color: false,
     $font: false,
+    $font-mobile-size: false,
     $font-weight: false,
     $square-border-radius: false,
     $square-border-style: false,
@@ -76,6 +77,11 @@
             }
             @if $square-width {
                 padding-left: calc(#{$measure} + #{$square-width});
+            }
+            @if $font-mobile-size {
+              @media all and ($viewport-type: $mobile) {
+                font-size: $font-mobile-size;
+              }
             }
             &::before{
                 @if $square-border-color {

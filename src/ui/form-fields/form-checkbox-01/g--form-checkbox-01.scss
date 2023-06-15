@@ -16,4 +16,9 @@
         $square-width: $measure*2,
         // $font-weight: default,
     );
+    &--second{
+        @include make-form-checkbox-01-modifier(
+            $artwork-background: map-get($color-options, a),
+        );
+    }
 }

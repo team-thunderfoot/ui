@@ -8,13 +8,13 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--form-file-01">
     <input type="file" id="file-01" class="g--form-file-01__item" required>
 </div>
 ```
 When there's an error in the input the class "g--form-input-01--error" should be added:
-```sh
+```html
 <div class="g--form-file-01 g--form-file-01--error">
     <input type="file" id="file-01" class="g--form-file-01__item" required>
 </div>
@@ -23,49 +23,68 @@ When there's an error in the input the class "g--form-input-01--error" should be
 ## Editable variables
 
 - $background-color
-- $background-color-autofill
 - $border-color
 - $border-color-focus
 - $border-radius
+- $border-style
 - $border-width
+- $btn-background
+- $btn-background-position
+- $btn-background-repeat
+- $btn-background-size
+- $btn-border-color
+- $btn-border-style
+- $btn-border-width
+- $btn-font
+- $btn-font-weight
+- $btn-text-color
+- $btn-transition
 - $error-border-color
 - $font
-- $font-weight: false by default
-- $mobile-font-size: false by default
-- $placeholder-color
-- $text-color
-
-### For Modifiers
-
-- $background-color
-- $background-color-autofill
-- $border-color
-- $border-color-focus
-- $error-border-color
-- $placeholder-color
+- $font-weight
+- $font-mobile-size
+- $hover-btn-background-color
+- $hover-btn-background-position
+- $hover-btn-background-size
+- $hover-btn-border-color
+- $hover-btn-text-color
 - $text-color
 
 ## Use
 
-$border-color-focus variable is used for focus and filled styles, if placeholder is not added, it won't work and it'll be always look as if it's filled/focused.
+`$border-color-focus` variable is used for focus and filled styles, if placeholder is not added, it won't work and it'll be always look as if it's filled/focused.
 
-```sh
+```scss
 .g--form-input-01{
-    @include make-form-input-01(
-        $font: f,
-        $border-width: 1px,
-        $border-radius: 0,
-        // $font-weight: default,
-        // $mobile-font-size: default
-    );
-    @include make-form-input-01-modifier(
-        $border-color: rgba(map-get($color-options, a), .2),
-        $border-color-focus: map-get($color-options, a),
-        $background-color: transparent,
-        $background-color-autofill: transparent,
-        $error-border-color: map-get($color-options, g),
-        $placeholder-color: transparent,
-        $text-color: map-get($color-options, a),
+    @include make-form-file-01();
+    @include make-form-file-01-modifier(
+        // $background-color: transparent,
+        // $border-color: rgba(map-get($color-options, a), .2),
+        // $border-color-focus: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $btn-background: (linear-gradient(map-get($color-options, b), map-get($color-options, b)), linear-gradient(map-get($color-options, a), map-get($color-options, a))),
+        // $btn-background-position: (left center, center),
+        // $btn-background-repeat: no-repeat,
+        // $btn-background-size: (0% 100%, 100%),
+        // $btn-border-color: map-get($color-options, a),
+        // $btn-border-style: solid,
+        // $btn-border-width: 1px 1px 0,
+        // $btn-font: f,
+        // $btn-font-weight: 600,
+        // $btn-text-color: map-get($color-options, b),
+        // $btn-transition: (color $time-b $ease-standard-a, background-size $time-b $ease-standard-a),
+        // $error-border-color: map-get($color-options, f),
+        // $font: f,
+        // $font-weight: 400,
+        // $font-mobile-size: 1rem,
+        // $hover-btn-background-color: map-get($color-options, a),
+        // $hover-btn-background-position: (right top),
+        // $hover-btn-background-size: (100% 100%, 100%),
+        // $hover-btn-border-color: map-get($color-options, a),
+        // $hover-btn-text-color: map-get($color-options, a),
+        // $text-color: map-get($color-options, a),
     );
 }
 ```

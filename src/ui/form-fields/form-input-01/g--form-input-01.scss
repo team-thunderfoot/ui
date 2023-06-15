@@ -15,4 +15,10 @@
         // $font-weight: default,
         // $font-size-mobile: false,
     );
+    &--second{
+        @include make-form-input-01-modifier(
+            $border-width: 0 0 1px,
+            $border-color: map-get($color-options, h),
+        );
+    }
 }

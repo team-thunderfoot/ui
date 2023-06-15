@@ -4,7 +4,7 @@
 
 ![alt text][input-01]
 
-[input-01]: /src/img/global-components/form-fields/input-01.jpg
+[input-01]: /src/img/global-components/form-fields/file-01.jpg
 
 ## Html
 

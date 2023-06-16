@@ -35,23 +35,24 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
--   $background-color
--   $breakpoint
--   $btn-class
--   $btn-font
--   $change-order-reponsive
--   $img-border-radius
--   $img-max-height
--   $img-min-height
--   $img-height
--   $img-position
--   $object-fit
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $title-color
--   $title-font
--   $title-font-weight
+- $align-text-img
+- $background-color
+- $breakpoint
+- $btn-class
+- $btn-font
+- $change-order-reponsive
+- $img-border-radius
+- $img-max-height
+- $img-min-height
+- $img-height
+- $img-position
+- $object-fit
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -63,19 +64,20 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-09 {
     @include make-layout-09();
     @include make-layout-09-modifier(
-        $subtitle-font: f,
-        $subtitle-font-weight: 400,
-        $subtitle-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 600,
-        $title-color: map-get($color-options, a),
-        $object-fit: cover,
-        $img-position: false,
+        // $align-text-img: bottom,
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $subtitle-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 600,
+        // $title-color: map-get($color-options, a),
+        // $object-fit: cover,
+        // $img-position: false,
         // $img-border-radius: $measure * 4,
-        $change-order-reponsive: true,
-        $btn-font: f,
-        $btn-class: g--btn-01,
-        $breakpoint: $tablets
+        // $change-order-reponsive: true,
+        // $btn-font: f,
+        // $btn-class: g--btn-01,
+        // $breakpoint: $tablets,
         // $background-color: map-get($color-options, e),
     );
 }

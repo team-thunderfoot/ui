@@ -125,6 +125,9 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--form-radio-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-radio-01/readme.md)
 - [g--form-select-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-select-01/readme.md)
 - [g--form-textarea-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-textarea-01/readme.md)
+- [g--form-input-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-input-02/readme.md)
+- [g--form-label-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-label-02/readme.md)
+- [g--form-textarea-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-textarea-02/readme.md)
 
 ### Hero
 

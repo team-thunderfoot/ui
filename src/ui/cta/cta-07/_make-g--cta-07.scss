@@ -54,31 +54,33 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            &__wrapper {
+                margin-left: $measure * 2;
             }
+        }
     }
 }
 
 @mixin make-cta-07-modifier(
     $background-position: false,
     $background-size: false,
-    $hover-background-img-zoom: false,
-    $btn-class: false,
-    $btn-font: false,
     $border-radius: false,
-    $mask-color: false,
-    $subtitle-color: false,
-    $hover-subtitle-color: false,
-    $subtitle-font: false,
-    $subtitle-font-weight: false,
-    $subtitle-max-lines: false,
-    $title-color: false,
-    $hover-title-color: false,
-    $title-font: false,
-    $title-font-weight: false,
-    $title-max-lines: false,
-    $text-align: false,
+    $breakpoint: false,
+    $btn-class: false,
+    $error-class: false,
+    $hover-background-img-zoom: false,
     $hover-shadow: false,
-    $hover-transform: false
+    $hover-title-color: false,
+    $hover-transform: false,
+    $input-class: false,
+    $label-class: false,
+    $mask-color: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false,
 ) {
     @if $background-position {
         &__bg-items {
@@ -89,6 +91,30 @@
     @if $background-size {
         &__bg-items {
             background-size: $background-size;
+        }
+    }
+    @if $breakpoint {
+        @media all and ($viewport-type: $breakpoint) {
+            &__ft-items {
+                display: block;
+
+                &__left-items,
+                &__right-items {
+                    width: 100%;
+                }
+
+                &__right-items {
+                    margin-top: $measure * 4;
+                    display: block;
+
+                    &__wrapper {
+                        margin-left: 0;
+                        &__btn {
+                            margin-top: $measure;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -273,19 +299,27 @@
             &__right-items {
                 &__content {
                     &__hd {
-                        @extend .g--form-label-01 !optional;
+                        @if $label-class {
+                            @extend .#{$label-class} !optional;
+                        }
                     }
                     &__bd {
-                        @extend .g--form-input-01 !optional;
+                        @if $input-class {
+                            @extend .#{$input-class} !optional;
+                        }
                     }
                     &__subtitle {
-                        @extend .g--form-error-01 !optional;
+                        @if $error-class {
+                            @extend .#{$error-class} !optional;
+                        }
                     }
                 }
 
                 &__wrapper {
                     &__btn {
-                        @extend .g--btn-01 !optional;
+                        @if $btn-class {
+                            @extend .#{$btn-class} !optional;
+                        }
                     }
                 }
             }

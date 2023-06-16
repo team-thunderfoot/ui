@@ -8,6 +8,8 @@
 
 ## Html
 
+Please observe that input class needs to be implemented directly on html. For example, in this case, we need to add "g--form-input-a" to the div which contains the input element, and also add "g--form-input-a__item" to the input element.
+
 ```html
 <div class="g--cta-07">
     <div class="g--cta-07__bg-items" style="background-image: url(/src/img/global-components/bg-placeholder.jpg)"></div>
@@ -18,8 +20,8 @@
         <div class="g--cta-07__ft-items__right-items">
             <div class="g--cta-07__ft-items__right-items__content">
                 <label for="subscribe-email" class="g--cta-07__ft-items__right-items__content__hd">Sign up for our newsletter</label>
-                <div class="g--cta-07__ft-items__right-items__content__bd">
-                    <input type="subscribe-email" id="subscribe-email" placeholder="Email adress" class="g--cta-07__ft-items__right-items__content__bd__item" />
+                <div class="g--cta-07__ft-items__right-items__content__bd g--form-input-01">
+                    <input type="subscribe-email" id="subscribe-email" placeholder="Email adress" class="g--form-input-01__item" />
                 </div>
                 <span class="g--cta-07__ft-items__right-items__content__subtitle">Please complete this required field.</span>
             </div>
@@ -33,24 +35,24 @@
 
 ## Editable variables
 
-$background-position
-$background-size
-$border-radius
-$breakpoint
-$btn-class
-$error-class
-$hover-background-img-zoom
-$hover-shadow
-$hover-title-color
-$hover-transform
-$input-class
-$label-class
-$mask-color
-$text-align
-$title-color
-$title-font
-$title-font-weight
-$title-max-lines
+- $background-position
+- $background-size
+- $border-radius
+- $breakpoint
+- $btn-class
+- $error-class
+- $hover-background-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $input-class
+- $label-class
+- $mask-color
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 

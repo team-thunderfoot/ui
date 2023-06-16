@@ -9,11 +9,14 @@
         $placeholder-color: transparent,
         $text-color: map-get($color-options, a),
         $font: f,
-        $border-width: 1px,
+        $border-width: 0 0 1px,
         $border-radius: 0,
         $border-style: solid,
         $textarea-height: $measure*10,
-        // $font-weight: default,
-        // $mobile-font-size: false,
     );
+    &--second{
+        @include make-form-textarea-02-modifier(
+            $border-width: 1px,
+        );
+    }
 }

@@ -12,9 +12,9 @@
 }
 
 @mixin make-form-label-02-modifier(
+    $label-color: false,
     $label-font: false,
     $label-font-weight: false,
-    $label-color: false,
 ) {
     @if $label-font {
         @extend .f--font-#{$label-font} !optional;
@@ -28,9 +28,9 @@
 }
 
 @mixin make-form-label-02-focus-modifier(
+    $label-color: false,
     $label-font: false,
     $label-font-weight: false,
-    $label-color: false,
 ) {
     @if $label-font {
         @extend .f--font-#{$label-font} !optional;

@@ -16,16 +16,16 @@
     $background-color-autofill: false,
     $border-color: false,
     $border-color-focus: false,
-    $error-border-color: false,
-    $placeholder-color: false,
-    $text-color: false,
     $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $error-border-color: false,
     $font: false,
-    $textarea-height: false,
+    $font-size-mobile: false,
     $font-weight: false,
-    $mobile-font-size: false,
+    $placeholder-color: false,
+    $text-color: false,
+    $textarea-height: false,
 ) {
     .g--form-textarea-02{
         &__item{
@@ -68,9 +68,9 @@
             @if $border-radius {
                 border-radius: $border-radius;
             }
-            @if $mobile-font-size {
+            @if $font-size-mobile {
                 @media all and ($viewport-type: $mobile){
-                    font-size: $mobile-font-size;
+                    font-size: $font-size-mobile;
                 }
             }
             @if $background-color-autofill {

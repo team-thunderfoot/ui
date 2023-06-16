@@ -36,12 +36,12 @@
     $option-color: false,
     $text-color: false,
 ) {
-    .g--form-select-01{
-        @if $artwork-url{
-            &::after{
-                background-image: $artwork-url;
-            }
+    @if $artwork-url{
+        &::after{
+            background-image: $artwork-url;
         }
+    }
+    .g--form-select-01{
         &__item{
             @if $border-color {
                 border-color: $border-color;

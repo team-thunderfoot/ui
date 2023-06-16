@@ -6,7 +6,7 @@
         $border-color-focus: map-get($color-options, a),
         $error-border-color: map-get($color-options, g),
         $text-color: map-get($color-options, a),
-        $artwork-url: url('/src/img/global-components/form-fields/select-01.jpg'),
+        $artwork-url: url('./img/global-components/form-fields/select-artwork.svg'),
         $border-radius: 0,
         $border-width: 1px,
         $border-style: solid,

@@ -1,6 +1,8 @@
 .g--layout-08 {
     @include make-layout-08();
     @include make-layout-08-modifier(
+        $align-text-img: bottom,
+        $img-height: 600px,
         $subtitle-font: f,
         $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),

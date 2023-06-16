@@ -15,7 +15,6 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         padding: $measure * 7 0;
         width: 100%;
 
@@ -42,6 +41,7 @@
 }
 
 @mixin make-layout-07-modifier(
+    $align-text-img: false,
     $background-color: false,
     $breakpoint: false,
     $btn-class: false,
@@ -131,6 +131,21 @@
                         left: auto;
                     }
                 }
+                @if $align-text-img == "top"{
+                    top: 0;
+                    bottom: auto;
+                    transform: translateY(0);
+                }
+                @if $align-text-img == "center"{
+                    top: 50%;
+                    bottom: auto;
+                    transform: translateY(-50%);
+                }
+                @if $align-text-img == "bottom"{
+                    top: auto;
+                    bottom: 0;
+                    transform: translateY(0);
+                }
             }
         }
 
@@ -144,6 +159,15 @@
                         margin-bottom: 0;
                     }
                 }
+            }
+            @if $align-text-img == "top"{
+                justify-content: flex-start;
+            }
+            @if $align-text-img == "center"{
+                justify-content: center;
+            }
+            @if $align-text-img == "bottom"{
+                justify-content: flex-end;
             }
 
             &__title {

@@ -23,6 +23,9 @@
     }
 
     &__ft-items {
+        position: relative;
+        display: flex;
+        align-items: center;
         padding: 10%;
 
         @media all and ($viewport-type: $tabletl) {
@@ -41,30 +44,17 @@
             padding: 10% 8%;
         }
 
-        &__title {
-            margin-bottom: $measure * 3;
-            position: relative;
-            z-index: 1;
+        &__left-items {
+            width: calc(50% - #{$measure} * 15);
+            margin-right: $measure * 15;
+        }
 
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
+        &__right-items {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             }
-        }
-
-        &__subtitle {
-            margin-bottom: $measure * 6;
-            position: relative;
-            z-index: 1;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 4;
-            }
-        }
-
-        &__btn {
-            position: relative;
-            z-index: 1;
-        }
     }
 }
 
@@ -161,24 +151,10 @@
             &:active {
                 .g--cta-07 {
                     &__ft-items {
-                        &__title {
-                            color: $hover-title-color;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @if $hover-subtitle-color {
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                .g--cta-07 {
-                    &__ft-items {
-                        &__subtitle {
-                            color: $hover-subtitle-color;
+                        &__left-items {
+                            &__title {
+                                color: $hover-title-color;
+                            }
                         }
                     }
                 }
@@ -206,11 +182,6 @@
                     padding-left: $measure * 5;
                     padding-right: $measure * 5;
                 }
-
-                &__btn {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
             }
         }
     }
@@ -234,11 +205,6 @@
                 @media all and ($viewport-type: $tablets) {
                     padding-left: $measure * 5;
                     padding-right: $measure * 5;
-                }
-
-                &__btn {
-                    margin-left: 0;
-                    margin-right: auto;
                 }
             }
         }
@@ -264,11 +230,6 @@
                     padding-left: $measure * 5;
                     padding-right: $measure * 5;
                 }
-
-                &__btn {
-                    margin-left: auto;
-                    margin-right: 0;
-                }
             }
         }
     }
@@ -281,65 +242,51 @@
         }
 
         &__ft-items {
-            &__title {
-                @if $title-color {
-                    color: $title-color;
-                }
+            &__left-items {
+                &__title {
+                    @if $title-color {
+                        color: $title-color;
+                    }
 
-                @if $title-font {
-                    @extend .f--font-#{$title-font} !optional;
-                }
+                    @if $title-font {
+                        @extend .f--font-#{$title-font} !optional;
+                    }
 
-                @if $title-font-weight {
-                    font-weight: $title-font-weight;
-                }
+                    @if $title-font-weight {
+                        font-weight: $title-font-weight;
+                    }
 
-                @if $title-max-lines {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: $title-max-lines;
-                    -webkit-box-orient: vertical;
-                }
+                    @if $title-max-lines {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: $title-max-lines;
+                        -webkit-box-orient: vertical;
+                    }
 
-                @if $hover-title-color {
-                    transition: color $time-b $ease-standard-a;
-                }
-            }
-            &__subtitle {
-                @if $subtitle-color {
-                    color: $subtitle-color;
-                }
-
-                @if $subtitle-font {
-                    @extend .f--font-#{$subtitle-font} !optional;
-                }
-                @if $subtitle-font-weight {
-                    font-weight: $subtitle-font-weight;
-                }
-
-                @if $subtitle-max-lines {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: $subtitle-max-lines;
-                    -webkit-box-orient: vertical;
-                }
-
-                @if $hover-subtitle-color {
-                    transition: color $time-b $ease-standard-a;
+                    @if $hover-title-color {
+                        transition: color $time-b $ease-standard-a;
+                    }
                 }
             }
 
-            @if $btn-font {
-                &__btn {
-                    @extend .f--font-#{$btn-font} !optional;
+            &__right-items {
+                &__content {
+                    &__hd {
+                        @extend .g--form-label-01 !optional;
+                    }
+                    &__bd {
+                        @extend .g--form-input-01 !optional;
+                    }
+                    &__subtitle {
+                        @extend .g--form-error-01 !optional;
+                    }
                 }
-            }
 
-            @if $btn-class {
-                &__btn {
-                    @extend .#{$btn-class} !optional;
+                &__wrapper {
+                    &__btn {
+                        @extend .g--btn-01 !optional;
+                    }
                 }
             }
         }

@@ -16,15 +16,15 @@
     $background-color-autofill: false,
     $border-color: false,
     $border-color-focus: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
     $error-border-color: false,
+    $font: false,
+    $font-size-mobile: false,
+    $font-weight: false,
     $placeholder-color: false,
     $text-color: false,
-    $border-radius: false,
-    $border-width: false,
-    $border-style: false,
-    $font: false,
-    $font-weight: false,
-    $mobile-font-size: false
 ) {
     .g--form-input-02{
         &__item{
@@ -64,9 +64,9 @@
                     -webkit-text-fill-color: $text-color;
                 }
             }
-            @if $mobile-font-size {
+            @if $font-size-mobile {
                 @media all and ($viewport-type: $mobile){
-                    font-size: $mobile-font-size;
+                    font-size: $font-size-mobile;
                 }
             }
             @if $background-color-autofill {

@@ -9,10 +9,15 @@
         $placeholder-color: transparent,
         $text-color: map-get($color-options, a),
         $font: f,
-        $border-width: 1px,
+        $border-width: 0 0 1px,
         $border-radius: 0,
         // $font-weight: default,
         $border-style: solid,
-        $mobile-font-size: false
+        // $mobile-font-size: false
     );
+    &--second{
+        @include make-form-input-02-modifier(
+            $border-width: 1px,
+        );
+    }
 }

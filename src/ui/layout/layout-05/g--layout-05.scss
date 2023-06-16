@@ -2,7 +2,7 @@
     @include make-layout-05();
     @include make-layout-05-modifier(
         $align-text-img: center,
-        $img-height: 600px,
+        $img-height: 60px,
         $meta-font: g,
         $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),

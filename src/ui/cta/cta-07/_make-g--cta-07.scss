@@ -54,14 +54,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            &__content {
-                position: relative;
-            }
-
-            &__wrapper {
-                margin-left: $measure * 2;
-            }
         }
     }
 }
@@ -71,14 +63,10 @@
     $background-size: false,
     $border-radius: false,
     $breakpoint: false,
-    $btn-class: false,
-    $error-class: false,
     $hover-background-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
-    $input-class: false,
-    $label-class: false,
     $mask-color: false,
     $text-align: false,
     $title-color: false,
@@ -110,20 +98,6 @@
                 &__right-items {
                     margin-top: $measure * 4;
                     display: block;
-                    &__content {
-                        margin-bottom: $measure * 3;
-                        &__subtitle {
-                            position: absolute;
-                            top: 100%;
-                        }
-                    }
-
-                    &__wrapper {
-                        margin-left: 0;
-                        &__btn {
-                            margin-top: $measure;
-                        }
-                    }
                 }
             }
         }
@@ -303,29 +277,6 @@
 
                     @if $hover-title-color {
                         transition: color $time-b $ease-standard-a;
-                    }
-                }
-            }
-
-            &__right-items {
-                &__content {
-                    &__hd {
-                        @if $label-class {
-                            @extend .#{$label-class} !optional;
-                        }
-                    }
-                    &__subtitle {
-                        @if $error-class {
-                            @extend .#{$error-class} !optional;
-                        }
-                    }
-                }
-
-                &__wrapper {
-                    &__btn {
-                        @if $btn-class {
-                            @extend .#{$btn-class} !optional;
-                        }
                     }
                 }
             }

@@ -14,6 +14,6 @@
         $hover-transform: translateY(-$measure),
         $mask-color: rgba(map-get($color-options, a), 0.5),
         $title-color: map-get($color-options, b),
-        $title-font: b
+        $title-font: c
     );
 }

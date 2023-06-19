@@ -1,8 +1,8 @@
 .g--layout-06 {
     @include make-layout-06();
     @include make-layout-06-modifier(
-        $align-text-img: bottom,
-        $img-height: 60px,
+        $align-text-img: center,
+        $img-height: 200px,
         $meta-font: g,
         $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),

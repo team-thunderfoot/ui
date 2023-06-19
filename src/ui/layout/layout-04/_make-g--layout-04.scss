@@ -59,28 +59,22 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                // width: fit-content;
-            } @else{
-                @if $img-border-radius {
-                    border-radius: $img-border-radius;
-                    overflow: hidden;
-                }
-                @if $img-min-height {
-                    min-height: $img-min-height;
-                }
-                @if $img-max-height {
-                    max-height: $img-max-height;
-                }
-                @if $img-height {
-                    height: $img-height;
-                }
             }
+            @if $img-min-height {
+                min-height: $img-min-height;
+            }
+            @if $img-height {
+                min-height: $img-height;
+            }
+            
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     height: auto;
                     min-height: 0;
-                    @if $change-order-reponsive == false {
+                    @if $change-order-reponsive == true {
                         margin-bottom: $measure * 5;
+                    } @else {
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -92,26 +86,26 @@
                 @if $img-position {
                     object-position: $img-position;
                 }
+                @if $img-border-radius {
+                    border-radius: $img-border-radius;
+                    overflow: hidden;
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+                @if $img-min-height {
+                    min-height: $img-min-height;
+                }
+                @if $img-max-height {
+                    max-height: $img-max-height;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
                 @if $object-fit == contain or $object-fit== scale-down {
                     width: auto;
                     height: auto;
                     max-width: 100%;
-                    @if $img-border-radius {
-                        border-radius: $img-border-radius;
-                        overflow: hidden;
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                    }
-                    @if $img-min-height {
-                        min-height: $img-min-height;
-                    }
-                    @if $img-max-height {
-                        max-height: $img-max-height;
-                    }
-                    @if $img-height {
-                        height: $img-height;
-                    }
                 }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
@@ -120,6 +114,8 @@
                         left: auto;
                     }
                 }
+
+
                 @if $align-text-img == "top"{
                     top: 0;
                     bottom: auto;

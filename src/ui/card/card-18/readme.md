@@ -66,25 +66,25 @@ It is not necessary to add aspect-ratio because the images have height in the cs
   @include make-card-18-modifier($background-position: center, $background-size: cover, $link-class: g--link-01, $link-font: d, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: b);
   &--second {
     @include make-card-18-modifier(
-      // $background-position: false,
-      // $background-size: false,
-      // $border-radius: false,
-      // $hover-background-img-zoom: false,
-      // $hover-shadow: false,
-      // $hover-title-color: false,
-      // $hover-transform: false,
-      // $link-class: false,
-      // $link-font: false,
-      // $mask-color: false,
-      // $subtitle-color: false,
-      // $subtitle-font: false,
-      // $subtitle-font-weight: false,
-      // $subtitle-max-lines: false,
-      // $text-align: false,
-      // $title-color: false,
-      // $title-font: false,
-      // $title-font-weight: false,
-      // $title-max-lines: false
+      // $background-position: ,
+      // $background-size: ,
+      // $border-radius: ,
+      // $hover-background-img-zoom: ,
+      // $hover-shadow: ,
+      // $hover-title-color: ,
+      // $hover-transform: ,
+      // $link-class: ,
+      // $link-font: ,
+      // $mask-color: ,
+      // $subtitle-color: ,
+      // $subtitle-font: ,
+      // $subtitle-font-weight: ,
+      // $subtitle-max-lines: ,
+      // $text-align: ,
+      // $title-color: ,
+      // $title-font: ,
+      // $title-font-weight: ,
+      // $title-max-lines: 
     );
   }
 }

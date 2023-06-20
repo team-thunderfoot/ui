@@ -48,7 +48,7 @@
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
         $img-aspect-ratio: 1.7,
-        // $img-border-radius: false,
+        // $img-border-radius: ,
         // $img-height: 100px,
         $img-position: center,
         $meta-color: map-get($color-options, a),

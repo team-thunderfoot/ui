@@ -53,19 +53,19 @@ It is not necessary to add aspect-ratio.
 .g--card-08{
     @include make-card-08();
     @include make-card-08-modifier(
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-fit: false,
-        // $img-width: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        $hover-img-zoom: ,
+        $hover-title-color: ,
+        $hover-transform: ,
+        $img-aspect-ratio: 1.7,
+        $img-height: ,
+        $img-position: ,
+        $img-fit: ,
+        $img-width: ,
+        $text-align: ,
+        $title-color: ,
+        $title-font: ,
+        $title-font-weight: ,
+        $title-max-lines: ,
     );
 }
 ```

@@ -8,7 +8,6 @@
     $label-font: false,
     $label-font-weight: false,
 ) {
-    color: $label-color;
     @if $label-color {
         color: $label-color;
     }

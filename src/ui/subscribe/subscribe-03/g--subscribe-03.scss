@@ -1,0 +1,16 @@
+.g--subscribe-03{
+    @include make-subscribe-03();
+    @include make-subscribe-03-modifier(
+        $breakpoint: $tablets,
+        $btn-width: 105px,
+    );
+    &--second{
+        @include make-subscribe-03-modifier(
+            $breakpoint: $tablets,
+            $btn-min-height: 50px,
+            $error-height: $measure*2,
+            $input-min-height: 50px,
+            $recaptcha: true,
+        );
+    }
+}

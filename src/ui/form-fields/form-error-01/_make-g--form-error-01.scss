@@ -7,6 +7,7 @@
 @mixin make-form-error-01-modifier(
     $font: false,
     $font-weight: false,
+    $position-absolute: false,
     $text-color: false,
 ) {
     @if $font {
@@ -17,5 +18,14 @@
     }
     @if $text-color {
         color: $text-color;
+    }
+    @if $position-absolute {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    } @else{
+        position: relative;
+        top: auto;
+        left: auto;
     }
 }

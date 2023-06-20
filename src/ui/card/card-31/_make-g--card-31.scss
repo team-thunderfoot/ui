@@ -31,6 +31,7 @@
             justify-content: space-between;
             &__meta {
                 margin-bottom: $measure * 3;
+                margin-right: $measure * 2;
             }
             &__author {
                 margin-bottom: $measure * 3;
@@ -198,13 +199,18 @@
 
     .g--card-31 {
         &__media-wrapper {
-            @if $full-image-height {
+            @if $full-image-height == "no" {
+                height: auto;
+            } @else if $full-image-height {
                 height: 100%;
             }
             @if $img-aspect-ratio-width and $img-aspect-ratio-height {
                 padding-top: calc((#{$img-aspect-ratio-height} / #{$img-aspect-ratio-width})*100%);
             } @else{
                 padding-top: 0;
+            }
+            @if $img-height {
+                height: auto;
             }
             &__media {
                 @if $img-aspect-ratio-width and $img-aspect-ratio-height {
@@ -235,14 +241,6 @@
             }
 
 
-            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
-                height: 100%;
-            }
-
-            @if $img-height {
-                height: calc(100% - #{$img-height});
-            }
-
             @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
                 height: auto;
 
@@ -258,6 +256,14 @@
                         background: $background-color;
                     }
                 }
+            }
+
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                height: 100%;
+            }
+
+            @if $img-height {
+                height: calc(100% - #{$img-height});
             }
 
             &__hd {

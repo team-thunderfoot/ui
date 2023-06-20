@@ -46,6 +46,9 @@
 }
 
 @mixin make-card-37-modifier(
+    $author-font: false,
+    $author-font-weight: false,
+    $author-color: false,
     $background-color: false,
     $border-color: false,
     $border-style: false,
@@ -67,7 +70,6 @@
     $meta-font: false,
     $meta-font-weight: false,
     $pill-class: false,
-    $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -191,60 +193,20 @@
         }
     }
 
-    @if $text-align == "center" {
-        .g--card-37 {
-            &__wrapper {
-                text-align: center;
-                &__list-group {
-                    justify-content: center;
-                }
-                &__link {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
-    }
-
-    @if $text-align == "left" {
-        .g--card-37 {
-            &__wrapper {
-                text-align: left;
-                &__list-group {
-                    justify-content: flex-start;
-                }
-                &__link {
-                    margin-left: 0;
-                    margin-right: auto;
-                }
-            }
-        }
-    }
-
-    @if $text-align == "right" {
-        .g--card-37 {
-            &__wrapper {
-                text-align: right;
-                &__list-group {
-                    justify-content: flex-end;
-                }
-                &__link {
-                    margin-left: auto;
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
     .g--card-37 {
         &__media-wrapper {
-            @if $full-image-height {
+            @if $full-image-height == "no" {
+                height: auto;
+            } @else if $full-image-height {
                 height: 100%;
             }
             @if $img-aspect-ratio-width and $img-aspect-ratio-height {
                 padding-top: calc((#{$img-aspect-ratio-height} / #{$img-aspect-ratio-width}) * 100%);
             } @else {
                 padding-top: 0;
+            }
+            @if $img-height {
+                height: auto;
             }
             &__media {
                 @if $img-aspect-ratio-width and $img-aspect-ratio-height {
@@ -274,14 +236,6 @@
                 background: $background-color;
             }
 
-            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
-                height: 100%;
-            }
-
-            @if $img-height {
-                height: calc(100% - #{$img-height});
-            }
-
             @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
                 height: auto;
 
@@ -299,6 +253,14 @@
                 }
             }
 
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                height: 100%;
+            }
+
+            @if $img-height {
+                height: calc(100% - #{$img-height});
+            }
+
             &__meta {
                 @if $meta-font {
                     @extend .f--font-#{$meta-font} !optional;
@@ -310,7 +272,7 @@
                     color: $meta-color;
                 }
             }
-            
+
             &__title {
                 @if $title-color {
                     color: $title-color;

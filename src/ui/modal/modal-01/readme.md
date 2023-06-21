@@ -75,13 +75,13 @@
 .g--modal-01 {
     @include make-modal-01();
     @include make-modal-01-modifier(
-        $transition: all $time-b * 2 $ease-standard-a,
-        $background-color: map-get($color-options, b),
-        $size: small,
-        $icon-color: map-get($color-options, g),
-        $icon-height: $measure * 2,
-        $opacity: 0,
-        $opacity-active: 1,
+        // $transition: all $time-b * 2 $ease-standard-a,
+        // $background-color: map-get($color-options, b),
+        // $size: small,
+        // $icon-color: map-get($color-options, g),
+        // $icon-height: $measure * 2,
+        // $opacity: 0,
+        // $opacity-active: 1,
         // $zoom: 0,
         // $zoom-active: 1
     );

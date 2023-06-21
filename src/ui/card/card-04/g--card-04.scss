@@ -38,7 +38,7 @@
             $background-color: rgba(map-get($color-options, e), .2),
             $border-color: map-get($color-options, e),
             $border-style: dotted,
-            $border-width: 4px 8px,
+            $border-width: 1px,
             $border-radius: $measure*3 $measure*6,
             $link-class: g--btn-01,
             $title-color: map-get($color-options, a),

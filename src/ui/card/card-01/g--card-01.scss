@@ -2,6 +2,9 @@
     @include make-card-01();
     @include make-card-01-modifier(
         $background-color: rgba(map-get($color-options, a), .2),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
         $subtitle-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
         $title-font: c,
@@ -51,8 +54,8 @@
     &--third{
         @include make-card-01-modifier(
             $border-color: map-get($color-options, a),
-            $border-style: double,
-            $border-width: 4px 8px,
+            $border-style: solid,
+            $border-width: 1px,
             $title-color: map-get($color-options, a),
             $title-font: c,
         );

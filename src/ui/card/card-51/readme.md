@@ -104,7 +104,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $background-size: cover,
         // $border-color: map-get($color-options, f),
         // $border-radius: $measure*4,
-        // $border-style: double,
+        // $border-style: solid,
         // $border-width: 6px,
         // $card-aspect-ratio: calc(3 / 4),
         // $card-height: 200px,

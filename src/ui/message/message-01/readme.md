@@ -36,10 +36,10 @@
     @include make-message-01();
     @include make-message-01-modifier(
         // $background-color: ,
-        // $border-color: ,
+        // $border-color: map-get($color-options, a),
         // $border-radius: 0,
         // $border-style: ,
-        // $border-width: ,
+        // $border-width: 1px,
         //$text-align: left,
         // $text-color: ,
         // $text-font: ,

@@ -63,10 +63,10 @@ To use it we have to import the css of the $btn-class in the entry
         $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, c),
-        $title-font: b,
+        $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
-        // $text-align: ,
+        //$text-align: left,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
     );

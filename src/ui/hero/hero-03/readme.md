@@ -57,7 +57,7 @@
         $link-class: g--btn-01,
         // $link-font: ,
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c,
         // $title-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
         $subtitle-font: f,

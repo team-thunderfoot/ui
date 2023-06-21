@@ -40,7 +40,7 @@
         // $border-radius: 0,
         // $border-style: ,
         // $border-width: ,
-        // $text-align: ,
+        //$text-align: left,
         // $text-color: ,
         // $text-font: ,
         // $text-font-weight: ,

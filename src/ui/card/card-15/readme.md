@@ -64,7 +64,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $background-size: cover,
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c,
     );
     &--second{
         @include make-card-15-modifier(
@@ -82,7 +82,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-            $text-align: center,
+           $text-align: left,
             $title-font-weight: 400,
             $title-max-lines: 3,
         );

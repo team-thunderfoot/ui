@@ -44,10 +44,10 @@ To use it we have to import the css of the $btn-class in the entry
         // $btn-font: ,
         $title-color: map-get($color-options, a),
         $hover-title-color: map-get($color-options, e),
-        $title-font: b,
+        $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
-        // $text-align: ,
+        //$text-align: left,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
     );

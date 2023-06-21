@@ -107,7 +107,7 @@ It is not necessary to add aspect-ratio.
         // $meta-font-weight: ,
         // $pill-class: ,
         // $title-color: map-get($color-options, a),
-        // $title-font: ,
+        // $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
     );

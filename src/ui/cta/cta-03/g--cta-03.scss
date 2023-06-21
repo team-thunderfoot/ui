@@ -13,10 +13,10 @@
         $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, c),
-        $title-font: b,
+        $title-font: c,
         // $title-font-weight: false,
         // $title-max-lines: false,
-        $text-align: center,
+       $text-align: left,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
     );

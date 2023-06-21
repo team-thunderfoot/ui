@@ -5,7 +5,7 @@
         $background-size: cover,
         $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c,
     );
     &--second{
         @include make-card-09-modifier(
@@ -25,7 +25,7 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
-            $text-align: center,
+           $text-align: left,
             $title-font-weight: 400,
             $title-max-lines: 3,
         );

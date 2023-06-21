@@ -81,9 +81,9 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $meta-color: ,
         // $meta-font: ,
         // $meta-font-weight: ,
-        // $text-align: ,
+        //$text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font: ,
+        // $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
     );

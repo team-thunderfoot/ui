@@ -84,9 +84,9 @@ It is not necessary to add aspect-ratio.
         $subtitle-font: f,
         $subtitle-font-weight: ,
         $subtitle-max-lines: ,
-        $text-align: ,
+       $text-align: left,
         $title-color: map-get($color-options, a),
-        $title-font: ,
+        $title-font: c,
         $title-font-weight: 400,
         $title-max-lines: 3,
     );

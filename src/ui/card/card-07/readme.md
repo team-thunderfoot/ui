@@ -75,9 +75,9 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $img-position: ,
         $img-fit: ,
         $img-width: ,
-        $text-align: ,
+       $text-align: left,
         $title-color: map-get($color-options, a),
-        $title-font: ,
+        $title-font: c,
         $title-font-weight: 400,
         $title-max-lines: 3,
     );

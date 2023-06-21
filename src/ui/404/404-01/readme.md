@@ -65,7 +65,7 @@ To use it we have to import the css of the $btn-class in the entry
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: bold,
-        // $text-align: ,
+        //$text-align: left,
         $min-height: calc(100vh - 109px),
     );
 

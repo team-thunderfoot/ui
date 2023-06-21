@@ -52,7 +52,7 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-07 {
     @include make-cta-07();
     @include make-cta-07-modifier(
-        // $text-align: ,
+        //$text-align: left,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
         $background-position: left top,

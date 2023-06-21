@@ -59,7 +59,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $subtitle-max-lines: ,
         $title-color: map-get($color-options, b),
         // $hover-title-color: ,
-        $title-font: b,
+        $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
         $text-align: left,

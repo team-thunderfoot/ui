@@ -90,9 +90,9 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio-responsive: ,
         // $img-height-responsive: ,
         // $img-position: ,
-        // $text-align: ,
+        //$text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font: ,
+        // $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
     );

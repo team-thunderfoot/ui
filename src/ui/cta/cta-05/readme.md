@@ -74,7 +74,7 @@ To use it we have to import the css of the $btn-class in the entry
         $title-font: d,
         // $title-font-weight: 400,
         // $title-max-lines: 3,
-        // $text-align: ,
+        //$text-align: left,
         $one-col-bkt: $tablets,
         // $change-order-reponsive: ,
         // $hide-img-reponsive: ,

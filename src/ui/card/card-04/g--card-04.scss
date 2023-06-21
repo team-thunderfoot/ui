@@ -1,8 +1,11 @@
 .g--card-04{
     @include make-card-04();
     @include make-card-04-modifier(
-        $background-color: rgba(map-get($color-options, h), .2),
-        $link-class: g--btn-01,
+        $background-color:lighten(map-get($color-options,a), 82%),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
+        $link-class: g--link-01,
         $title-color: map-get($color-options, a),
         $title-font: c,
     );
@@ -40,7 +43,7 @@
             $border-style: dotted,
             $border-width: 1px,
             $border-radius: $measure*3 $measure*6,
-            $link-class: g--btn-01,
+            $link-class: g--link-01,
             $title-color: map-get($color-options, a),
             $title-font: c,
             $title-max-lines: 3,

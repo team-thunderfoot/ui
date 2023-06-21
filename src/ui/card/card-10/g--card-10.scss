@@ -2,7 +2,7 @@
     @include make-card-10();
     @include make-card-10-modifier(
         $background-color: lighten(map-get($color-options,a), 82%),
-        $link-class: g--btn-01,
+        $link-class: g--link-01,
         $title-color: map-get($color-options, a),
         $title-font: c,
     );
@@ -37,7 +37,7 @@
             $border-color: map-get($color-options, a),
             $border-style: solid,
             $border-width: 1px,
-            $link-class: g--btn-01,
+            $link-class: g--link-01,
             $title-color: map-get($color-options, a),
             $title-font: c,
         );

@@ -82,7 +82,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $img-position: ,
         // $img-fit: ,
         // $img-width: ,
-        // $link-class: ,
+        // $link-class: g--link-01,
         // $link-font: ,
         // $mask-color: ,
         //$text-align: left,

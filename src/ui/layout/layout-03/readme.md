@@ -80,7 +80,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
     @include make-layout-03();
     @include make-layout-03-modifier(
         // $align-text-img: ,
-        // $background-color: ,
+        // $background-color: lighten(map-get($color-options,a), 82%),
         // $breakpoint: ,
         // $btn-class: ,
         // $btn-font: ,

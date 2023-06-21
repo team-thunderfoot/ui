@@ -19,7 +19,7 @@
     );
     &--second {
         @include make-card-51-modifier(
-            $background-color: linear-gradient(map-get($color-options, e), map-get($color-options, h)),
+            $background-color: lighten(map-get($color-options,a), 82%),
             $hover-background-position: center,
             $hover-background-repeat: no-repeat,
             $hover-background-size: cover,

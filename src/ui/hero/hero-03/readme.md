@@ -54,7 +54,7 @@
         $header-height: 96px,
         $img-position: center,
         $img-object-fit: cover,
-        $link-class: g--btn-01,
+        $link-class: g--link-01,
         // $link-font: ,
         $title-color: map-get($color-options, a),
         $title-font: c,

@@ -1,7 +1,7 @@
 .g--card-43{
     @include make-card-43();
     @include make-card-43-modifier(
-        $background-color: rgba(map-get($color-options, h), .2),
+        $background-color:lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, h),
         $border-style: solid,
         $border-width: $measure*.5,

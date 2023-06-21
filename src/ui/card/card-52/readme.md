@@ -104,7 +104,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-52 {
     @include make-card-52();
     @include make-card-52-modifier(
-        // $background-color: linear-gradient(map-get($color-options, e), map-get($color-options, h)),
+        // $background-color: lighten(map-get($color-options,a), 82%),
         // $background-position: center,
         // $background-repeat: no-repeat,
         // $background-size: cover,

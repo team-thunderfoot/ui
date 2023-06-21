@@ -4,7 +4,7 @@
         $author-color: map-get($color-options, g),
         $author-font: f,
         $author-font-weight: 400,
-        $background-color: rgba(map-get($color-options, h), .2),
+        $background-color:lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, h),
         $border-style: solid,
         $border-width: $measure*.5,

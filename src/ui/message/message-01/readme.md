@@ -35,7 +35,7 @@
 .g--message-01 {
     @include make-message-01();
     @include make-message-01-modifier(
-        // $background-color: ,
+        // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
         // $border-radius: 0,
         // $border-style: ,

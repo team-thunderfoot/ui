@@ -71,7 +71,7 @@ It is not necessary to add aspect-ratio.
         $img-position: ,
         $img-fit: ,
         $img-width: ,
-        $link-class: ,
+        $link-class: g--link-01,
         $link-font: ,
         $subtitle-color: map-get($color-options, a)
         $subtitle-font: f,

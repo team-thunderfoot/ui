@@ -1,7 +1,8 @@
 .g--card-05{
     @include make-card-05();
     @include make-card-05-modifier(
-        $link-class: g--link-02,
+        $link-class: g--link-01,
+        $link-font: f,
         $title-color: map-get($color-options, a),
         $title-font: c,
     );
@@ -18,7 +19,7 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
-            $link-class: g--link-02--second,
+            $link-class: g--link-01--second,
             $link-font: b,
             $subtitle-font: f,
             $subtitle-font-weight: 400,

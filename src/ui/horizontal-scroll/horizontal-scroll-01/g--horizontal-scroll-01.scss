@@ -1,0 +1,58 @@
+.g--horizontal-scroll-01{
+    display: flex;
+    overflow-x: hidden;
+    height: fit-content !important;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(map-get($color-options, a), .8);
+    &__wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        min-height: 80vh;
+        padding: $measure*4 10vw $measure*4;
+        &__item{
+            width: 80vw;
+            padding-right: 10vw;
+        }
+    }
+    &--second {
+        // display: flex;
+        // overflow-x: hidden;
+        // height: fit-content !important;
+        // align-items: center;
+        // min-height: 100vh;
+        // background-color: map-get($color-options, a);
+    }
+    &--second & {
+        &__wrapper{
+            // display: flex;
+            // flex-wrap: nowrap;
+            // min-height: 80vh;
+            padding: $measure*4 0;
+            &__item{
+                padding-right: 0;
+                width: calc(100vw - var(--scrollbar-width));
+                // width: 100vw;
+            }
+        }
+    }
+}
+
+.g--horizontal-scroll-02{
+    display: flex;
+    overflow-x: hidden;
+    height: fit-content !important;
+    align-items: center;
+    min-height: 100vh;
+    background-color: map-get($color-options, a);
+    &__wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        min-height: 80vh;
+        padding: $measure*4 0;
+        &__item{
+            width: calc(100vw - var(--scrollbar-width));
+            // width: 100vw;
+        }
+    }
+}

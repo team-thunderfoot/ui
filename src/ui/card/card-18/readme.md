@@ -66,24 +66,24 @@ It is not necessary to add aspect-ratio because the images have height in the cs
   @include make-card-18-modifier($background-position: center, $background-size: cover, $link-class: g--link-01, $link-font: d, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: b);
   &--second {
     @include make-card-18-modifier(
-      // $background-position: ,
-      // $background-size: ,
+      // $background-position: center
+      // $background-size: cover,
       // $border-radius: $measure,
-      // $hover-background-img-zoom: ,
+      // $hover-background-img-zoom: 2,
       // $hover-shadow: ,
       // $hover-title-color: ,
       // $hover-transform: ,
       // $link-class: ,
       // $link-font: ,
       // $mask-color: ,
-      // $subtitle-color: ,
-      // $subtitle-font: ,
+      // $subtitle-color: map-get($color-options, a)
+      // $subtitle-font: f,
       // $subtitle-font-weight: ,
       // $subtitle-max-lines: ,
-      // $text-align: ,
-      // $title-color: ,
-      // $title-font: ,
-      // $title-font-weight: ,
+      //$text-align: left,
+      // $title-color: map-get($color-options, a),
+      // $title-font: c,
+      // $title-font-weight: 400,
       // $title-max-lines: 
     );
   }

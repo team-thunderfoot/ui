@@ -49,12 +49,12 @@ To use it we have to import the css of the $btn-class in the entry
         $mask-color: rgba(map-get($color-options, a), .5),
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, a),
-        // $text-align: ,
-        $title-font: b,
-        // $title-font-weight: ,
+        //$text-align: left,
+        $title-font: c,
+        // $title-font-weight: 400,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
-        // $title-max-lines: ,
+        // $title-max-lines: 3,
     );
 }
 ```

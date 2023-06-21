@@ -54,15 +54,15 @@ It is not necessary to add aspect-ratio.
         @include make-card-14-modifier(
             $subtitle-color: map-get($color-options, g),
             $title-color: map-get($color-options, g),
-            $title-font: b,
+            $title-font: c,
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
-            $subtitle-font: d,
+            $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-            $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+           $text-align: left,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
 }

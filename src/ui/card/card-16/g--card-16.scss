@@ -13,8 +13,8 @@
     &--second{
         @include make-card-16-modifier(
             $background-color: rgba(map-get($color-options, g), .7),
-            $subtitle-color: map-get($color-options, b),
-            $title-color: map-get($color-options, d),
+            $subtitle-color: map-get($color-options, a),
+            $title-color: map-get($color-options, a),
             $title-font: c,
             // $border-radius: false,
             $hover-background-color: map-get($color-options, g),
@@ -22,12 +22,12 @@
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $link-font: d,
-            $subtitle-font: d,
+            $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-            $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+           $text-align: left,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
 }

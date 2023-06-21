@@ -61,11 +61,11 @@ It is not necessary to add aspect-ratio.
         $img-position: ,
         $img-fit: ,
         $img-width: ,
-        $text-align: ,
-        $title-color: ,
-        $title-font: ,
-        $title-font-weight: ,
-        $title-max-lines: ,
+       $text-align: left,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 400,
+        $title-max-lines: 3,
     );
 }
 ```

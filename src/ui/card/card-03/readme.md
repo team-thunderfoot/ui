@@ -71,10 +71,10 @@ It is not necessary to add aspect-ratio.
 .g--card-03{
     @include make-card-03();
     @include make-card-03-modifier(
-        $background-position: ,
-        $background-size: ,
+        $background-position: center
+        $background-size: cover,
         $border-radius: $measure,
-        $hover-background-img-zoom: ,
+        $hover-background-img-zoom: 2,
         $hover-img-zoom: ,
         $hover-shadow: ,
         $hover-title-color: ,
@@ -85,15 +85,15 @@ It is not necessary to add aspect-ratio.
         $img-fit: ,
         $img-width: ,
         $mask-color: ,
-        $subtitle-color: ,
-        $subtitle-font: ,
+        $subtitle-color: map-get($color-options, a)
+        $subtitle-font: f,
         $subtitle-font-weight: ,
         $subtitle-max-lines: ,
-        $text-align: ,
-        $title-color: ,
-        $title-font: ,
-        $title-font-weight: ,
-        $title-max-lines: ,
+       $text-align: left,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 400,
+        $title-max-lines: 3,
     );
 }
 ```

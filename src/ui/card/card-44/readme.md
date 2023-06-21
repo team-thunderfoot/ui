@@ -90,11 +90,11 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio-responsive: ,
         // $img-height-responsive: ,
         // $img-position: ,
-        // $title-color: ,
-        // $title-font: ,
-        // $title-font-weight: ,
-        // $title-max-lines: ,
-        // $text-align: ,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
+        //$text-align: left,
     );
 }
 ```

@@ -106,10 +106,10 @@ It is not necessary to add aspect-ratio.
         // $meta-font: ,
         // $meta-font-weight: ,
         // $pill-class: ,
-        // $title-color: ,
-        // $title-font: ,
-        // $title-font-weight: ,
-        // $title-max-lines: ,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
     );
 }
 ```

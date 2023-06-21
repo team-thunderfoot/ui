@@ -31,12 +31,12 @@
     &--third {
         @include make-card-52-modifier(
             // $background-color: false,
-            $background-position: bottom right,
+            $background-position: center,
             // $background-repeat: false,
             // $background-size: false,
             $border-color: map-get($color-options, f),
             $border-radius: $measure*4,
-            $border-style: double,
+            $border-style: solid,
             $border-width: 6px,
             $card-aspect-ratio: initial,
             $card-height: 200px,
@@ -51,7 +51,7 @@
             $link-class: g--link-01--second,
             $mask-background-color: rgba(map-get($color-options, a), .3),
             $pill-class: g--pill-01--second,
-            $text-align: center,
+           $text-align: left,
             $title-color: map-get($color-options, b),
             // $title-font: false,
             $title-font-weight: 800,

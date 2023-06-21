@@ -43,7 +43,7 @@
         $border-width: 1px,
         $icon-color: map-get($color-options, g),
         $title-color: map-get($color-options, a),
-        $title-font: d,
+        $title-font: c,
         // $title-font-weight: false,
     );
 }

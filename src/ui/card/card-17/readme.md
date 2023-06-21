@@ -51,7 +51,7 @@ It is not necessary to add aspect-ratio.
 .g--card-17{
     @include make-card-17();
     @include make-card-17-modifier(
-        $link-class: g--link-02,
+        $link-class: g--link-01,
         $title-color: map-get($color-options, a),
         $title-font: c,
     );

@@ -139,7 +139,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $pill-class: g--pill-01,
         // $text-align: right,
         // $title-color: map-get($color-options, b),
-        // $title-font: d,
+        // $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 5,
     );

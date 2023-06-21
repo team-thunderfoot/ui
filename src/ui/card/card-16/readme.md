@@ -64,7 +64,7 @@ It is not necessary to add aspect-ratio.
         $border-width: 1px,
         $link-class: g--link-01,
         $title-color: map-get($color-options, a),
-        $title-font: d,
+        $title-font: c,
         $title-font-weight: 400,
     );
     &--second{

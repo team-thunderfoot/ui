@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--cta-03">
     <h2 class="g--cta-03__title">CTA-03 This is the Contact call to action</h2>
     <div class="g--cta-03__subtitle c--content-a">
@@ -43,28 +43,28 @@
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
+```scss
 .g--cta-03{
     @include make-cta-03();
     @include make-cta-03-modifier(
         $background-color: rgba(map-get($color-options, a), .5),
-        // $hover-background-color: false,
+        // $hover-background-color: ,
         $btn-class: g--btn-02,
-        // $btn-font: false,
-        // $border-radius: false,
+        // $btn-font: ,
+        // $border-radius: ,
         $subtitle-color: map-get($color-options, b),
-        // $hover-subtitle-color: false,
+        // $hover-subtitle-color: ,
         $subtitle-font: d,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
+        // $subtitle-font-weight: ,
+        // $subtitle-max-lines: ,
         $title-color: map-get($color-options, b),
-        // $hover-title-color: false,
+        // $hover-title-color: ,
         $title-font: b,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $title-font-weight: ,
+        // $title-max-lines: ,
         $text-align: left,
-        // $hover-shadow: false,
-        // $hover-transform: false,
+        // $hover-shadow: ,
+        // $hover-transform: ,
     );
 
     @include make-cta-03-modifier(

@@ -60,11 +60,11 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-07{
     @include make-card-07();
     @include make-card-07-modifier(
-        $background-color: ,
-        $border-color: ,
-        $border-style: ,
-        $border-width: ,
-        $border-radius: ,
+        $background-color: lighten(map-get($color-options,a), 82%),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
+        $border-radius: $measure,
         $hover-background-color: ,
         $hover-img-zoom: ,
         $hover-shadow: ,

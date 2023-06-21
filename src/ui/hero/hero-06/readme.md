@@ -46,7 +46,7 @@
         $img-object-fit: cover,
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $title-font-weight: false,
+        // $title-font-weight: ,
         // $text-align: center
     );
 }

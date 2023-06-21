@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--cta-06">
     <div class="g--cta-06__media-wrapper">
         <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="img alt" class="g--cta-06__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
@@ -55,29 +55,29 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
+```scss
 .g--cta-06{
     @include make-cta-06();
     @include make-cta-06-modifier(
         $background-color: map-get($color-options, h),
         $hover-background-color: map-get($color-options, g),
         $btn-class: g--btn-01,
-        // $btn-font: false,
+        // $btn-font: ,
         $border-radius: 90px,
         $subtitle-color: map-get($color-options, b),
         $hover-subtitle-color: map-get($color-options, a),
         $subtitle-font: f,
-        // $subtitle-font-weight: false,
+        // $subtitle-font-weight: ,
         $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, a),
         $title-font: d,
         $title-font-weight: bold,
         $title-max-lines: 1,
-        // $text-align: false,
+        // $text-align: ,
         $one-col-bkt: $tabletm,
         $change-order-reponsive: true,
-        // $hide-img-reponsive: false,
+        // $hide-img-reponsive: ,
         $img-position: center,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),

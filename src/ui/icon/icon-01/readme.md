@@ -57,11 +57,11 @@
     @include make-icon-01();
 
     @include make-icon-01-modifier(
-        // $artwork-height: false,
-        // $artwork-width: false,
+        // $artwork-height: ,
+        // $artwork-width: ,
         $background-color: transparent,
-        // $hover-background-color: false,
-        // $border-radius: false,
+        // $hover-background-color: ,
+        // $border-radius: ,
         $border-width: 1px,
         $border-style: solid,
         $border-color: map-get($color-options, a ),

@@ -9,11 +9,11 @@
         $img-position: center,
         $meta-color: map-get($color-options, a),
         $meta-font: f,
-        $meta-font-weight: 600,
+        $meta-font-weight: 400,
         $text-align: right,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-max-lines: 3
     );
 
@@ -27,11 +27,11 @@
             $img-height: auto,
             $img-position: center,
             $meta-color: map-get($color-options, a),
-            $meta-font-weight: 600,
+            $meta-font-weight: 400,
             $meta-font: f,
             $text-align: center,
             $title-color: map-get($color-options, a),
-            $title-font-weight: 600,
+            $title-font-weight: 400,
             $title-font: c,
             $title-max-lines: 3
         );

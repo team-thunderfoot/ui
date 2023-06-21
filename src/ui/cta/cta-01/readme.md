@@ -34,20 +34,20 @@
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
+```scss
 .g--cta-01{
     @include make-cta-01();
     @include make-cta-01-modifier(
         $background-color: lighten(map-get($color-options,a), 82%),
         $hover-background-color: map-get($color-options, h),
         $btn-class: g--btn-01,
-        // $btn-font: false,
+        // $btn-font: ,
         $title-color: map-get($color-options, a),
         $hover-title-color: map-get($color-options, e),
         $title-font: b,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
-        // $text-align: false,
+        // $title-font-weight: ,
+        // $title-max-lines: ,
+        // $text-align: ,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
     );

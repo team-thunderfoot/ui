@@ -8,7 +8,7 @@
 
 ## Html for a list
 
-```sh
+```html
 <ul class="g--list-02">
     <li class="g--list-02__list-item">list 02 item</li>
     <li class="g--list-02__list-item">list 02 item</li>
@@ -24,7 +24,7 @@
 
 ## Use
 
-```sh
+```scss
 .g--list-02 {
     &__list-item {
         @include make-list-02();

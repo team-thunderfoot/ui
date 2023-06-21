@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--hero-01">
     <div class="g--hero-01__wrapper">
         <div class="f--container">
@@ -39,7 +39,7 @@
 
 ## Use
 
-```sh
+```scss
 .g--hero-01 {
     @include make-hero-01();
     @include make-hero-01-modifier(
@@ -51,7 +51,7 @@
         $title-color: map-get($color-options, a),
         $title-font: a,
         $title-font-weight: bold,
-        // $text-align: false
+        // $text-align: 
     );
 
     @media all and ( $viewport-type: $tabletm) {

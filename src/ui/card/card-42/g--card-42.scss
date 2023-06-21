@@ -5,7 +5,7 @@
         $border-color: map-get($color-options, h),
         $border-style: solid,
         $border-width: $measure*.5,
-        $border-radius: $measure,
+        $border-radius: 0,
         $breakpoint: $tablets,
         $hover-background-color: rgba(map-get($color-options, h), .5),
         $hover-img-zoom: 1.4,

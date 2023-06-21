@@ -50,10 +50,10 @@
         $img-position: center,
         $img-object-fit: cover,
         $link-class: g--btn-01,
-        $link-font: false,
+        $link-font: ,
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $title-font-weight: false,
+        // $title-font-weight: ,
         // $text-align: center
     );
 }

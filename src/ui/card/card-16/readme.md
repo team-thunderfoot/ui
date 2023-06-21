@@ -79,7 +79,7 @@ It is not necessary to add aspect-ratio.
             // $hover-title-color: ,
             // $hover-transform: ,
             // $link-class: g--link-01,
-            // $link-font: ,
+            // $link-font: f,
             // $subtitle-color: map-get($color-options, a)
             // $subtitle-font: f,
             // $subtitle-font-weight: ,

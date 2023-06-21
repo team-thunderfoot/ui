@@ -50,7 +50,7 @@
         $img-position: center,
         $img-object-fit: cover,
         $link-class: g--link-01,
-        $link-font: ,
+        $link-font: f,
         $title-color: map-get($color-options, a),
         $title-font: c,
         // $title-font-weight: 400,

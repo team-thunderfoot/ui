@@ -58,7 +58,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $background-color: map-get($color-options, e),
         $btn-class: g--btn-02,
         // $btn-font: a,
-        $img-aspect-ratio: ,
+        $img-aspect-ratio: calc(16 / 9),
         $img-height: 340px,        $img-position: center,
         $img-fit: cover,
         $img-width: auto,

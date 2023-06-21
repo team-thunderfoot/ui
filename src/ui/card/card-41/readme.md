@@ -95,7 +95,7 @@ It is not necessary to add aspect-ratio.
         // $border-radius: $measure,
         // $breakpoint: ,
         // $hover-background-color: ,
-        // $hover-img-zoom: ,
+        // $hover-img-zoom: 1.2,
         // $hover-shadow: ,
         // $hover-title-color: ,
         // $hover-transform: ,

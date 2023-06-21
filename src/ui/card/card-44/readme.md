@@ -83,7 +83,7 @@ It is not necessary to add aspect-ratio.
         // $content-font-weight: ,
         // $content-max-lines: ,
         // $hover-background-color: ,
-        // $hover-img-zoom: ,
+        // $hover-img-zoom: 1.2,
         // $hover-shadow: ,
         // $hover-title-color: ,
         // $hover-transform: ,

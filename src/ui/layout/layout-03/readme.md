@@ -88,7 +88,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         // $img-border-radius: ,
         // $img-max-height: ,
         // $img-min-height: ,
-        // $img-height: ,
+        // $img-height: 340px,
         // $img-position: ,
         // $meta-color: ,
         // $meta-font: ,

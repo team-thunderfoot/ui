@@ -58,9 +58,9 @@ it is recommended to add aspect ratio variables or img height variables, if we d
     @include make-card-27-modifier(
         $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
-        $border-style: dashed,
-        $border-width: 2px,
-        $border-radius: $measure,
+        $border-style: solid,
+        $border-width: 1px,
+        $border-radius: 0,
         $full-image-height: false,
         $hover-background-color: map-get($color-options, g),
         $hover-img-zoom: 1.1,
@@ -69,13 +69,13 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         $hover-transform: translateY(-5%),
         $img-aspect-ratio-width: 16,
         $img-aspect-ratio-height: 9,
-        // $img-height: 100px,
+        // $img-height: 340px,
         $img-position: center,
         $pill-class: g--pill-01,
         $text-align: right,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-max-lines: 3
     );
 }

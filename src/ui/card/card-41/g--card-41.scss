@@ -2,13 +2,13 @@
     @include make-card-41();
     @include make-card-41-modifier(
         $author-color: map-get($color-options, g),
-        $author-font: g,
-        $author-font-weight: 600,
+        $author-font: f,
+        $author-font-weight: 400,
         $background-color: rgba(map-get($color-options, h), .2),
         $border-color: map-get($color-options, h),
         $border-style: solid,
         $border-width: $measure*.5,
-        $border-radius: $measure,
+        $border-radius: 0,
         $breakpoint: $tablets,
         $hover-background-color: rgba(map-get($color-options, h), .5),
         $hover-img-zoom: 1.4,

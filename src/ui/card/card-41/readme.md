@@ -85,14 +85,14 @@ It is not necessary to add aspect-ratio.
 .g--card-41{
     @include make-card-41();
     @include make-card-41-modifier(
-        // $author-color: ,
-        // $author-font: ,
-        // $author-font-weight: ,
-        // $background-color: ,
-        // $border-color: ,
-        // $border-style: ,
-        // $border-width: ,
-        // $border-radius: ,
+        // $author-color: map-get($color-options, a),
+        // $author-font: f,
+        // $author-font-weight: 400,
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $border-radius: $measure,
         // $breakpoint: ,
         // $hover-background-color: ,
         // $hover-img-zoom: ,

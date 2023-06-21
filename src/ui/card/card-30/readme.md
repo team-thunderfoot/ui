@@ -49,15 +49,15 @@
         $hover-transform: translateY(-5%),
         $img-aspect-ratio: 1.7,
         // $img-border-radius: ,
-        // $img-height: 100px,
+        // $img-height: 340px,
         $img-position: center,
         $meta-color: map-get($color-options, a),
         $meta-font: f,
-        $meta-font-weight: 600,
+        $meta-font-weight: 400,
         $text-align: right,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-max-lines: 3
     );
 }

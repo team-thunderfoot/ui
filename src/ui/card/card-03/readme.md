@@ -73,7 +73,7 @@ It is not necessary to add aspect-ratio.
     @include make-card-03-modifier(
         $background-position: ,
         $background-size: ,
-        $border-radius: ,
+        $border-radius: $measure,
         $hover-background-img-zoom: ,
         $hover-img-zoom: ,
         $hover-shadow: ,

@@ -68,7 +68,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-18-modifier(
       // $background-position: ,
       // $background-size: ,
-      // $border-radius: ,
+      // $border-radius: $measure,
       // $hover-background-img-zoom: ,
       // $hover-shadow: ,
       // $hover-title-color: ,

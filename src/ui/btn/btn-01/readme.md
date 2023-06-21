@@ -51,7 +51,7 @@
     // $background-repeat: no-repeat,
     // $background-size: 100% 0px,
     // $border-color: map-get($color-options, a),
-    // $border-radius: $measure,
+    // $border-radius: 0,
     // $border-style: solid,
     // $border-width: 1px,
     // $font-weight: 600,

@@ -54,14 +54,14 @@
 .g--card-23 {
     @include make-card-23();
     @include make-card-23-modifier(
-        $author-font: g,
-        $author-font-weight: 600,
+        $author-font: f,
+        $author-font-weight: 400,
         $author-color: map-get($color-options, a),
         $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
-        $border-style: dashed,
-        $border-width: 2px,
-        $border-radius: $measure,
+        $border-style: solid,
+        $border-width: 1px,
+        $border-radius: 0,
         $hover-background-color: map-get($color-options, g),
         $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         $hover-title-color: map-get($color-options, b),
@@ -70,11 +70,11 @@
         $link-font: f,
         $meta-color: map-get($color-options, a),
         $meta-font: f,
-        $meta-font-weight: 600,
+        $meta-font-weight: 400,
         $pill-class: g--pill-01,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-max-lines: 3
     );
 }

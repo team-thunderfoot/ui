@@ -50,7 +50,7 @@
         $img-object-fit: cover,
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $title-font-weight: false,
+        // $title-font-weight: ,
         $subtitle-color: map-get($color-options, a),
         $subtitle-font: d,
         $subtitle-font-weight: bold,

@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--cta-04" style="background-image: url(/src/img/global-components/bg-placeholder.jpg);">
     <h2 class="g--cta-04__title">CTA-04 This is the Contact call to action</h2>
     <div class="g--cta-04__subtitle c--content-a">
@@ -45,7 +45,7 @@
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
+```scss
 .g--cta-04{
     @include make-cta-04();
     @include make-cta-04-modifier(
@@ -53,20 +53,20 @@ To use it we have to import the css of the $btn-class in the entry
         $background-size: cover,
         $hover-background-img-zoom: 1.2,
         $btn-class: g--btn-01,
-        // $btn-font: false,
+        // $btn-font: ,
         $border-radius: 8px,
         $mask-color: rgba(map-get($color-options, a), .5),
         $subtitle-color: map-get($color-options, b),
         $hover-subtitle-color: map-get($color-options, c),
         $subtitle-font: d,
-        // $subtitle-font-weight: false,
+        // $subtitle-font-weight: ,
         $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, c),
         $title-font: b,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
-        // $text-align: false,
+        // $title-font-weight: ,
+        // $title-max-lines: ,
+        // $text-align: ,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
     );

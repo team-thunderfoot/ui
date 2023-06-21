@@ -46,13 +46,13 @@
 ```scss
     @include make-modal-01();
     @include make-modal-01-modifier(
-        $transition-modal: opacity $time-b $ease-standard-a,
-        $transition-backdrop: transform $time-b $ease-standard-a,
-        $modal-bg-color: map-get($color-options, b),
-        $backdrop-bg-color: rgba(map-get($color-options,a), 20%),
-        $size: medium,
-        $icon-color: map-get($color-options, g),
-        $icon-height: $measure * 2
+        // $transition-modal: opacity $time-b $ease-standard-a,
+        // $transition-backdrop: transform $time-b $ease-standard-a,
+        // $modal-bg-color: map-get($color-options, b),
+        // $backdrop-bg-color: rgba(map-get($color-options,a), 20%),
+        // $size: medium,
+        // $icon-color: map-get($color-options, g),
+        // $icon-height: $measure * 2
     );
 
 ```

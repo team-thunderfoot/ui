@@ -64,12 +64,12 @@ If you want the subtitle to be a c--content, the HTML should be:
 .g--card-29 {
     @include make-card-29();
     @include make-card-29-modifier(
-        // $background-color: ,
-        // $border-color: ,
-        // $border-style: ,
-        // $border-width: ,
-        // $border-radius: ,
-        // $full-image-height: ,
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $border-radius: $measure,
+        // $full-image-height: true,
         // $hover-background-color: ,
         // $hover-img-zoom: ,
         // $hover-shadow: ,

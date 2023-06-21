@@ -1,33 +1,39 @@
 //* project vars/mixins
-@import './scss/_var/vars.scss';
-@import './scss/_mixins/mixins.scss';
+@import "./scss/_var/vars.scss";
+@import "./scss/_mixins/mixins.scss";
 
 //* project foundations
-@import './scss/foundation/foundation.scss';
+@import "./scss/foundation/foundation.scss";
 
 //* project utilities
-@import './scss/utilities/utilities.scss';
+@import "./scss/utilities/utilities.scss";
 
 //* global components mixins
-@import './mixins.scss';
+@import "./mixins.scss";
 
 //* lazy
-@import './ui/lazy/lazy-01/g--lazy-01.scss';
+@import "./ui/lazy/lazy-01/g--lazy-01.scss";
+
+//* back-top
+@import "./ui/back-top/back-top-01/g--back-top-01.scss";
+
+//* icon
+@import "./ui/icon/icon-01/g--icon-01.scss";
 
 //* btn
-@import './ui/btn/btn-01/g--btn-01.scss';
+@import "./ui/btn/btn-01/g--btn-01.scss";
 
 //* layout
-@import './ui/layout/layout-01/g--layout-01.scss';
-@import './ui/layout/layout-02/g--layout-02.scss';
-@import './ui/layout/layout-03/g--layout-03.scss';
-@import './ui/layout/layout-04/g--layout-04.scss';
-@import './ui/layout/layout-05/g--layout-05.scss';
-@import './ui/layout/layout-06/g--layout-06.scss';
-@import './ui/layout/layout-07/g--layout-07.scss';
-@import './ui/layout/layout-08/g--layout-08.scss';
-@import './ui/layout/layout-09/g--layout-09.scss';
-@import './ui/layout/layout-10/g--layout-10.scss';
+@import "./ui/layout/layout-01/g--layout-01.scss";
+@import "./ui/layout/layout-02/g--layout-02.scss";
+@import "./ui/layout/layout-03/g--layout-03.scss";
+@import "./ui/layout/layout-04/g--layout-04.scss";
+@import "./ui/layout/layout-05/g--layout-05.scss";
+@import "./ui/layout/layout-06/g--layout-06.scss";
+@import "./ui/layout/layout-07/g--layout-07.scss";
+@import "./ui/layout/layout-08/g--layout-08.scss";
+@import "./ui/layout/layout-09/g--layout-09.scss";
+@import "./ui/layout/layout-10/g--layout-10.scss";
 
 //* link
-@import './ui/link/link-01/g--link-01.scss';
+@import "./ui/link/link-01/g--link-01.scss";

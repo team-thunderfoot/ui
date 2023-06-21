@@ -54,7 +54,7 @@
         $meta-color: map-get($color-options, a),
         $meta-font: f,
         $meta-font-weight: 400,
-        $text-align: right,
+        $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: 400,

@@ -77,12 +77,12 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $img-fit: contain,
         // $img-width: auto,
         $content-font-weight: 400,
-        $heading-font-weight: 600,
+        $heading-font-weight: 400,
         $change-order-reponsive: true,
         $content-color: map-get($color-options, a),
-        $heading-color: map-get($color-options, g),
+        $heading-color: map-get($color-options, a),
         $background-color: lighten(map-get($color-options,a), 82%),
-        $img-background-color: map-get($color-options, g),
+        $img-background-color: lighten(map-get($color-options,a), 70%),
         $text-align: left,
         $breakpoint: $tablets
     );

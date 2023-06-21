@@ -53,7 +53,7 @@
         // $img-height: 340px,
         $img-position: center,
         $pill-class: g--pill-01,
-        $text-align: right,
+        $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: 400,

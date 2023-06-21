@@ -53,7 +53,7 @@
         $input-font: f,
         // $input-font-weight: ,
         $title-color: map-get($color-options, g),
-        $title-font: f,
+        $title-font: c,
         // $title-font-weight: 
         $artwork-color: map-get($color-options, g),
         $placeholder-color: rgba(map-get($color-options, g), .5),

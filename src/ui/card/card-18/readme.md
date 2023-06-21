@@ -63,7 +63,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 ```scss
 .g--card-18 {
   @include make-card-18();
-  @include make-card-18-modifier($background-position: center, $background-size: cover, $link-class: g--link-01, $link-font: d, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: b);
+  @include make-card-18-modifier($background-position: center, $background-size: cover, $link-class: g--link-01, $link-font: f, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: b);
   &--second {
     @include make-card-18-modifier(
       // $background-position: center
@@ -73,8 +73,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
       // $hover-shadow: ,
       // $hover-title-color: ,
       // $hover-transform: ,
-      // $link-class: ,
-      // $link-font: ,
+      // $link-class: g--link-01,
+      // $link-font: f,
       // $mask-color: ,
       // $subtitle-color: map-get($color-options, a)
       // $subtitle-font: f,

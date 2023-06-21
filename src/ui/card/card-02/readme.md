@@ -59,11 +59,11 @@ It is not necessary to add aspect-ratio.
 .g--card-02{
     @include make-card-02();
     @include make-card-02-modifier(
-        $hover-img-zoom: ,
+        $hover-img-zoom: 1.2,
         $hover-title-color: ,
         $hover-transform: ,
         $img-aspect-ratio: 1.7,
-        $img-height: ,
+        $img-height: 340px,
         $img-position: ,
         $img-fit: ,
         $img-width: ,

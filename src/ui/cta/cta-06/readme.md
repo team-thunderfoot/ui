@@ -71,7 +71,7 @@ To use it we have to import the css of the $btn-class in the entry
         $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, a),
-        $title-font: d,
+        $title-font: c,
         $title-font-weight: bold,
         $title-max-lines: 1,
         //$text-align: left,

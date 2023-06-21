@@ -57,15 +57,15 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-49();
     @include make-card-49-modifier(
         // $hover-img-background-color: ,
-        // $hover-img-zoom: ,
+        // $hover-img-zoom: 1.2,
         // $hover-title-color: ,
         // $hover-transform: ,
         // $icon-class: ,
         // $img-align: ,
-        // $img-aspect-ratio: ,
+        // $img-aspect-ratio: calc(16 / 9),
         // $img-background-color: ,
         // $img-border-radius: ,
-        // $img-height: ,
+        // $img-height: 340px,
         // $img-object-fit: ,
         // $img-position: ,
         // $img-width: ,

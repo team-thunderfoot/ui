@@ -7,7 +7,7 @@
         $border-width: 1px,
         $link-class: g--link-01,
         $title-color: map-get($color-options, a),
-        $title-font: d,
+        $title-font: c,
         $title-font-weight: 400,
     );
     &--second{
@@ -21,7 +21,7 @@
             $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
-            $link-font: d,
+            $link-font: f,
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,

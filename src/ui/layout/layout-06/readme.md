@@ -75,7 +75,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
     @include make-layout-06-modifier(
         $align-text-img: bottom,
         $img-height: 600px,
-        $meta-font: g,
+        $meta-font: f,
         $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),
         $subtitle-font: f,

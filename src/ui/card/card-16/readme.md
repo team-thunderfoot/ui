@@ -64,7 +64,7 @@ It is not necessary to add aspect-ratio.
         $border-width: 1px,
         $link-class: g--link-01,
         $title-color: map-get($color-options, a),
-        $title-font: d,
+        $title-font: c,
         $title-font-weight: 400,
     );
     &--second{
@@ -78,8 +78,8 @@ It is not necessary to add aspect-ratio.
             // $hover-shadow: ,
             // $hover-title-color: ,
             // $hover-transform: ,
-            // $link-class: ,
-            // $link-font: ,
+            // $link-class: g--link-01,
+            // $link-font: f,
             // $subtitle-color: map-get($color-options, a)
             // $subtitle-font: f,
             // $subtitle-font-weight: ,

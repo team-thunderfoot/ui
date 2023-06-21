@@ -1,10 +1,10 @@
 .g--card-42{
     @include make-card-42();
     @include make-card-42-modifier(
-        $background-color: rgba(map-get($color-options, h), .2),
-        $border-color: map-get($color-options, h),
+        $background-color:lighten(map-get($color-options,a), 82%),
+        $border-color: map-get($color-options, a),
         $border-style: solid,
-        $border-width: $measure*.5,
+        $border-width: 1px,
         $border-radius: 0,
         $breakpoint: $tablets,
         $hover-background-color: rgba(map-get($color-options, h), .5),
@@ -15,13 +15,13 @@
         // $img-aspect-ratio-responsive: 1,
         $img-height-responsive: 300px,
         $img-position: left bottom,
-        $meta-color: map-get($color-options, g),
-        $meta-font: g,
+        $meta-color: map-get($color-options, a),
+        $meta-font: f,
         $meta-font-weight: false,
         $pill-class: g--pill-01,
        $text-align: left,
         $title-color: map-get($color-options, a),
-        $title-font: f,
+        $title-font: c,
         $title-font-weight: false,
         $title-max-lines: 3,
     );

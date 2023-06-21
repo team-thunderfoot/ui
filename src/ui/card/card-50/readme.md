@@ -111,7 +111,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-50 {
     @include make-card-50();
     @include make-card-50-modifier(
-        // $background-color: linear-gradient(map-get($color-options, e), map-get($color-options, h)),
+        // $background-color: lighten(map-get($color-options,a), 82%),
         // $background-position: center,
         // $background-repeat: no-repeat,
         // $background-size: cover,
@@ -131,15 +131,15 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-title-color: map-get($color-options, b),
         // $hover-transform: translateY($measure),
         // $meta-color: map-get($color-options, b),
-        // $meta-font: g,
+        // $meta-font: f,
         // $meta-font-weight: 400,
         // $link-class: g--link-01,
         // $link-hide-by-default: no,
         // $mask-background-color: rgba(map-get($color-options, a), .3),
         // $pill-class: g--pill-01,
-        // $text-align: right,
+        // $text-align: left,
         // $title-color: map-get($color-options, b),
-        // $title-font: d,
+        // $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 5,
     );

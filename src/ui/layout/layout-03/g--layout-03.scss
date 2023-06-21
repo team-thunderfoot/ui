@@ -2,7 +2,7 @@
     @include make-layout-03();
     @include make-layout-03-modifier(
         $align-text-img: center,
-        $meta-font: g,
+        $meta-font: f,
         $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),
         $subtitle-font: f,

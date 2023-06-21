@@ -46,7 +46,7 @@
         $img-aspect-ratio: 1.7,
         $img-border-radius: 20px,
         $img-height: 340px,        $img-position: center,
-        $text-align: right,
+        $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: 400,

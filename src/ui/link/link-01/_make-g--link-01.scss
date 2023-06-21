@@ -1,7 +1,7 @@
 @mixin make-link-01() {
-    text-decoration: none;
     background-position: bottom left;
     background-repeat: no-repeat;
+    text-decoration: none;
     transition: background-size $time-b $ease-standard-a;
     width: fit-content;
 }

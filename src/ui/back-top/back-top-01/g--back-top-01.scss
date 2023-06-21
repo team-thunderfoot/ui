@@ -2,16 +2,16 @@
     @include make-back-top-01();
 
     @include make-back-top-01-modifier(
-        $icon-height: $measure*5,
-        $icon-width: $measure*5,
+        $icon-height: $measure*6,
+        $icon-width: $measure*6,
         $margin-bottom: $measure*5,
         $margin-right: $measure*3,
     );
 
     &--second {
         @include make-back-top-01-modifier(
-            $icon-height: $measure * 10,
-            $icon-width: $measure * 10,
+            $icon-height: $measure * 6,
+            $icon-width: $measure * 6,
             $margin-bottom: $measure * 3,
             $margin-right: $measure * 6,
         );

@@ -1,6 +1,7 @@
 .g--layout-09 {
     @include make-layout-09();
     @include make-layout-09-modifier(
+        $align-text-img: center,
         $subtitle-font: f,
         $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
@@ -9,6 +10,7 @@
         $title-color: map-get($color-options, a),
         $object-fit: cover,
         $img-position: false,
+        $img-height: 200px,
         // $img-border-radius: $measure * 4,
         $change-order-reponsive: true,
         $btn-font: f,

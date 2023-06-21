@@ -18,12 +18,22 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
                 <div class="g--layout-06__wrapper">
                     <p class="g--layout-06__wrapper__meta">Lorem Ipsum</p>
                     <h2 class="g--layout-06__wrapper__title">Layout-06 Lorem ipsum dolor sit amet consectetur.</h2>
-                    <p class="g--layout-06__wrapper__subtitle">Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie vulputate venenatis velit.</p>
+                    <p class="g--layout-06__wrapper__subtitle">
+                        Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie
+                        vulputate venenatis velit.
+                    </p>
                 </div>
             </div>
             <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
                 <div class="g--layout-06__media-wrapper">
-                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--layout-06__media-wrapper__media g--lazy-01" width="1000" height="1000" />
+                    <img
+                        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                        src="/src/img/global-components/placeholder.jpg"
+                        alt="alt text"
+                        class="g--layout-06__media-wrapper__media g--lazy-01"
+                        width="1000"
+                        height="1000"
+                    />
                 </div>
             </div>
         </div>
@@ -33,6 +43,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
+-   $align-text-img
 -   $background-color
 -   $breakpoint
 -   $change-order-reponsive
@@ -62,6 +73,8 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-06 {
     @include make-layout-06();
     @include make-layout-06-modifier(
+        $align-text-img: bottom,
+        $img-height: 600px,
         $meta-font: g,
         $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),
@@ -75,8 +88,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $img-position: false,
         // $img-border-radius: $measure * 4,
         $change-order-reponsive: true,
-        $breakpoint: $tablets
-        // $background-color: map-get($color-options, e),
+        $breakpoint: $tablets // $background-color: map-get($color-options, e),
     );
 }
 ```

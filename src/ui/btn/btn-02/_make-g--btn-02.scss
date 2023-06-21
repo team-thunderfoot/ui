@@ -11,20 +11,20 @@
 }
 
 @mixin make-btn-02-modifier(
-    $text-color: false,
-    $text-color-hover: false,
-    $icon-top: false,
-    $icon-width: false,
-    $btn-font: false,
-    $btn-font-weight: false,
     $artwork-color-fill: false,
     $artwork-color-stroke: false,
-    $artwork-color-hover: false
+    $btn-font-weight: false,
+    $btn-font: false,
+    $hover-artwork-color: false,
+    $hover-text-color: false,
+    $icon-top: false,
+    $icon-width: false,
+    $text-color: false,
 ) {
     @if $text-color {
         color: $text-color;
     }
-    @if $text-color-hover {
+    @if $hover-text-color {
         transition: color $ease-standard-a $time-b;
     }
     @if $btn-font {
@@ -50,10 +50,10 @@
             @if $artwork-color-stroke {
                 stroke: $artwork-color-stroke;
             }
-            @if $artwork-color-hover and $artwork-color-fill {
+            @if $hover-artwork-color and $artwork-color-fill {
                 transition: fill $ease-standard-a $time-b;
             }
-            @if $artwork-color-hover and $artwork-color-stroke {
+            @if $hover-artwork-color and $artwork-color-stroke {
                 transition: stroke $ease-standard-a $time-b;
             }
         }
@@ -62,8 +62,8 @@
         &:hover,
         &:focus,
         &:active {
-            @if $text-color-hover {
-                color: $text-color-hover;
+            @if $hover-text-color {
+                color: $hover-text-color;
             }
         }
     }
@@ -74,11 +74,11 @@
             svg {
                 transform: translateX($measure);
                 path {
-                    @if $artwork-color-hover and $artwork-color-fill {
-                        fill: $artwork-color-hover;
+                    @if $hover-artwork-color and $artwork-color-fill {
+                        fill: $hover-artwork-color;
                     }
-                    @if $artwork-color-hover and $artwork-color-stroke {
-                        stroke: $artwork-color-hover;
+                    @if $hover-artwork-color and $artwork-color-stroke {
+                        stroke: $hover-artwork-color;
                     }
                 }
             }

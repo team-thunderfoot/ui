@@ -18,7 +18,10 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
                 <div class="g--layout-05__wrapper">
                     <p class="g--layout-05__wrapper__meta">Lorem Ipsum</p>
                     <h2 class="g--layout-05__wrapper__title">Layout-05 Lorem ipsum dolor sit amet consectetur.</h2>
-                    <p class="g--layout-05__wrapper__subtitle">Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie vulputate venenatis velit.</p>
+                    <p class="g--layout-05__wrapper__subtitle">
+                        Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie
+                        vulputate venenatis velit.
+                    </p>
                     <div class="g--layout-05__wrapper__ft">
                         <a href="#" class="g--layout-05__wrapper__ft__btn" target="_blank" rel="noopener noreferrer">Button</a>
                     </div>
@@ -26,7 +29,14 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
             </div>
             <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
                 <div class="g--layout-05__media-wrapper">
-                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--layout-05__media-wrapper__media g--lazy-01" width="1000" height="1000" />
+                    <img
+                        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                        src="/src/img/global-components/placeholder.jpg"
+                        alt="alt text"
+                        class="g--layout-05__media-wrapper__media g--lazy-01"
+                        width="1000"
+                        height="1000"
+                    />
                 </div>
             </div>
         </div>
@@ -36,6 +46,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
+-   $align-text-img
 -   $background-color
 -   $breakpoint
 -   $btn-class
@@ -67,6 +78,8 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-05 {
     @include make-layout-05();
     @include make-layout-05-modifier(
+        $align-text-img: bottom,
+        $img-height: 600px,
         $meta-font: g,
         $meta-font-weight: 400,
         $meta-color: map-get($color-options, a),

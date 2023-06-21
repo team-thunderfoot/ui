@@ -1,0 +1,209 @@
+@mixin make-card-36() {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+
+    &__media-wrapper {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        &__media {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+        padding-top: $measure * 6;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        &__meta {
+            margin-bottom: $measure * 3;
+        }
+        &__title {
+            margin-bottom: $measure * 4;
+        }
+    }
+}
+
+@mixin make-card-36-modifier(
+    $hover-img-zoom: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-border-radius: false,
+    $img-height: false,
+    $img-position: false,
+    $link-class: false,
+    $link-font: false,
+    $meta-color: false,
+    $meta-font-weight: false,
+    $meta-font: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
+) {
+
+    @if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    @if $hover-title-color {
+        .g--card-36 {
+            &__wrapper {
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-36 {
+                    &__wrapper {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
+        .g--card-36 {
+            &__media-wrapper {
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-36 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--card-36 {
+            &__wrapper {
+                text-align: center;
+                &__link {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        .g--card-36 {
+            &__wrapper {
+                text-align: left;
+                &__link {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        .g--card-36 {
+            &__wrapper {
+                text-align: right;
+                &__link {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .g--card-36 {
+        &__media-wrapper {
+            @if $img-border-radius {
+              border-radius: $img-border-radius;
+              overflow: hidden;
+            }
+            &__media {
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                @if $img-position {
+                    object-position: $img-position;
+                }
+            }
+        }
+        &__wrapper {
+            &__meta {
+                @if $meta-font {
+                    @extend .f--font-#{$meta-font} !optional;
+                }
+                @if $meta-font-weight {
+                    font-weight: $meta-font-weight;
+                }
+                @if $meta-color {
+                    color: $meta-color;
+                }
+            }
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            &__link {
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
+                }
+            }
+        }
+    }
+}

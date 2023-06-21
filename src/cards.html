@@ -19,8 +19,13 @@
                             <h1 class="f--font-b f--sp-a">Global Cards</h1>
                             <button class="g--btn-01 g--btn-01--third f--sp-a js--anchor-to" tf-data-target="card-10" tf-data-distance="30">Test Anchor to: card-10</button>
                             <button class="g--btn-01 g--btn-01--third f--sp-a js--anchor-to" tf-data-target="card-16" tf-data-distance="10">Test Anchor to: card-16</button>
-                            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note:</strong> To go to any card we can add "#card-cardNumber" in the url. For example, to go to card-32 add "#card-32", the url will be "https://globalcomponents.netlify.app/cards.html#card-32"</p>
-                            <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> For card modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier.</p>
+                            <p class="f--font-f f--background-a f--p-3 f--sp-a" style="overflow-wrap: break-word">
+                                <strong>Note:</strong> To go to any card we can add "#card-cardNumber" in the url. For example, to go to card-32 add "#card-32", the url will be "https://globalcomponents.netlify.app/cards.html#card-32"
+                            </p>
+                            <p class="f--font-f f--background-a f--p-3 f--sp-a">
+                                <strong>Note variables:</strong> For card modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier except variables that depend on an existing class (btns, fonts, pills...). If we want to change a font in a modifier,
+                                the default font must be the first one (starting with a).
+                            </p>
                             <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note border:</strong> For cards with border we can set different border-color, border-style or border-width for each side (or add border just to one side).</p>
                             <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note hover options:</strong> change background-color, change title-color, add box-shadow, transform card (translate, zoom...), image zoom. *If the title is a c--content we can't change the color on hover.</p>
                             <p class="f--font-f f--background-a f--p-3"><strong>Note button/links:</strong> In all places where there is a link or a button it could be either</p>
@@ -30,14 +35,6 @@
             </section>
 
             <button class="g--back-top-01 js--back-top" tf-data-distance="500">
-                <div class="g--icon-01">
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M0.5 8L8.5 -3.49691e-07L16.5 8L15.1 9.425L9.5 3.825L9.5 16L7.5 16L7.5 3.825L1.9 9.425L0.5 8Z" fill="#1A191D" />
-                    </svg>
-                </div>
-            </button>
-
-            <button class="g--back-top-01 g--back-top-01--second js--back-top" tf-data-distance="100">
                 <div class="g--icon-01">
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
                         <path d="M0.5 8L8.5 -3.49691e-07L16.5 8L15.1 9.425L9.5 3.825L9.5 16L7.5 16L7.5 3.825L1.9 9.425L0.5 8Z" fill="#1A191D" />
@@ -110,7 +107,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$subtitle-color</li>
                                         <li>$subtitle-font</li>
@@ -169,7 +166,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$subtitle-color</li>
                                         <li>$subtitle-font</li>
@@ -202,7 +199,12 @@
                                         <div class="g--card-03__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-03__ft-items">
                                             <div class="g--card-03__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-03__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-03__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-03__ft-items__title">Lorem ipsum</h3>
                                             <p class="g--card-03__ft-items__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -214,7 +216,12 @@
                                         <div class="g--card-03__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-03__ft-items">
                                             <div class="g--card-03__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-03__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-03__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-03__ft-items__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
                                             <p class="g--card-03__ft-items__subtitle">Nulla facilisi nullam vehicula ipsum a arcu cursus. Pretium quam vulputate dignissim suspendisse in est. Egestas maecenas pharetra convallis posuere morbi leo.</p>
@@ -239,7 +246,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$mask-color</li>
                                         <li>$subtitle-color</li>
@@ -328,7 +335,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -391,7 +398,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -426,7 +433,12 @@
                                         <div class="g--card-06__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-06__ft-items">
                                             <div class="g--card-06__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-06__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-06__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-06__ft-items__title">Lorem ipsum</h3>
                                             <p class="g--card-06__ft-items__subtitle">Lorem ipsum dolor sit amet.</p>
@@ -439,7 +451,12 @@
                                         <div class="g--card-06__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-06__ft-items">
                                             <div class="g--card-06__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-06__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-06__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-06__ft-items__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
                                             <p class="g--card-06__ft-items__subtitle">Nulla facilisi nullam vehicula ipsum a arcu cursus. Pretium quam vulputate dignissim suspendisse in est. Egestas maecenas pharetra convallis posuere morbi leo.</p>
@@ -465,7 +482,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-class-modifier</li>
@@ -549,7 +566,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
@@ -602,7 +619,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
@@ -631,7 +648,12 @@
                                         <div class="g--card-09__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-09__ft-items">
                                             <div class="g--card-09__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-09__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-09__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-09__ft-items__title">Lorem ipsum</h3>
                                         </div>
@@ -642,7 +664,12 @@
                                         <div class="g--card-09__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-09__ft-items">
                                             <div class="g--card-09__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-09__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-09__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-09__ft-items__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
                                         </div>
@@ -666,7 +693,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$mask-color</li>
                                         <li>$text-align</li>
@@ -747,7 +774,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -804,7 +831,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -835,7 +862,12 @@
                                         <div class="g--card-12__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-12__ft-items">
                                             <div class="g--card-12__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-12__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-12__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-12__ft-items__title">Lorem ipsum</h3>
                                             <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-12__ft-items__link">This is a link</a>
@@ -847,7 +879,12 @@
                                         <div class="g--card-12__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
                                         <div class="g--card-12__ft-items">
                                             <div class="g--card-12__ft-items__media-wrapper">
-                                                <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-12__ft-items__media-wrapper__media g--lazy-01" />
+                                                <img
+                                                    data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                                    src="/src/img/global-components/placeholder.jpg"
+                                                    alt="alt text"
+                                                    class="g--card-12__ft-items__media-wrapper__media g--lazy-01"
+                                                />
                                             </div>
                                             <h3 class="g--card-12__ft-items__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
                                             <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-12__ft-items__link">This is a link</a>
@@ -872,7 +909,7 @@
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$img-size</li>
+                                        <li>$img-fit</li>
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -1260,21 +1297,21 @@
                                     <ul style="list-style: inside">
                                         <li>$background-color</li>
                                         <li>$border-color</li>
+                                        <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
-                                        <li>$border-radius</li>
                                         <li>$hover-background-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
                                         <li>$hover-transform</li>
                                         <li>$meta-color</li>
-                                        <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
                                         <li>$pill-class</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1397,7 +1434,6 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
-                                        <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -1461,7 +1497,6 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
-                                        <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -1536,7 +1571,6 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
-                                        <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -1604,10 +1638,296 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 25 -->
+            <section class="f--section-c" id="card-25">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-25</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> we can't add a gradient for background-color, only colors or colors with opacity
+                            </p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-25">
+                                        <div class="g--card-25__media-wrapper">
+                                            <img
+                                                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                                                src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-25__media-wrapper__media g--lazy-01 f--ar"
+                                                width="604"
+                                                height="340"
+                                            />
+                                        </div>
+                                        <div class="g--card-25__wrapper">
+                                            <p class="g--card-25__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-25 g--card-25--second">
+                                        <div class="g--card-25__media-wrapper">
+                                            <img
+                                                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                                                src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-25__media-wrapper__media g--lazy-01 f--ar"
+                                                width="604"
+                                                height="340"
+                                            />
+                                        </div>
+                                        <div class="g--card-25__wrapper">
+                                            <p class="g--card-25__wrapper__title">
+                                                Risus viverra adipiscing at in tellus integer feugiat. Tortor posuere ac ut consequat semper viverra nam libero. Neque gravida in fermentum et sollicitudin ac orci phasellus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor orci
+                                                dapibus ultrices in iaculis nunc sed augue. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>
+                                            $background-color
+                                        </li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$full-image-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 26 -->
+            <section class="f--section-c" id="card-26">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-26</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-26">
+                                        <div class="g--card-26__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-26__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-26__wrapper">
+                                            <p class="g--card-26__wrapper__title">Card-26 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-26 g--card-26--second">
+                                        <div class="g--card-26__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-26__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-26__wrapper">
+                                            <p class="g--card-26__wrapper__title">Card-26 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 27 -->
+            <section class="f--section-c" id="card-27">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-27</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> it is recommended to add aspect ratio variables or img height variables, if we don't add them the pills won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+                            </p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-27">
+                                        <div class="g--card-27__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-27__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-27__wrapper">
+                                            <p class="g--card-27__wrapper__title">
+                                                Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.
+                                            </p>
+                                            <div class="g--card-27__wrapper__list-group">
+                                                <div class="g--card-27__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-27__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-27 g--card-27--second">
+                                        <div class="g--card-27__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-27__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-27__wrapper">
+                                            <p class="g--card-27__wrapper__title">
+                                                Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.Lorem ipsum dolor
+                                                sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.
+                                            </p>
+                                            <div class="g--card-27__wrapper__list-group">
+                                                <div class="g--card-27__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-27__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$full-image-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-width</li>
+                                        <li>$img-aspect-ratio-height</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 28 -->
+            <section class="f--section-c" id="card-28">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-28</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-28">
+                                        <div class="g--card-28__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-28__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-28__wrapper">
+                                            <p class="g--card-28__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-28__wrapper__list-group">
+                                                <div class="g--card-28__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-28__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-28 g--card-28--second">
+                                        <div class="g--card-28__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-28__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-28__wrapper">
+                                            <p class="g--card-28__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-28__wrapper__list-group">
+                                                <div class="g--card-28__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-28__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1622,14 +1942,24 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-29</h2>
+                            <h2 class="f--font-c f--sp-a">Card-29</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> *we can't add a gradient for background-color
+                            </p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
                                 <div class="f--col-6 f--col-tablets-12 display--flex">
                                     <div class="g--card-29">
                                         <div class="g--card-29__media-wrapper">
-                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-29__media-wrapper__media g--lazy-01 f--ar" width="604" height="340" />
+                                            <img
+                                                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                                                src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-29__media-wrapper__media g--lazy-01 f--ar"
+                                                width="604"
+                                                height="340"
+                                            />
                                         </div>
                                         <div class="g--card-29__wrapper">
                                             <p class="g--card-29__wrapper__meta">Lorem ipsum</p>
@@ -1640,18 +1970,35 @@
                                 <div class="f--col-6 f--col-tablets-12 display--flex">
                                     <div class="g--card-29 g--card-29--second">
                                         <div class="g--card-29__media-wrapper">
-                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-29__media-wrapper__media g--lazy-01 f--ar" width="604" height="340" />
+                                            <img
+                                                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                                                src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-29__media-wrapper__media g--lazy-01 f--ar"
+                                                width="604"
+                                                height="340"
+                                            />
                                         </div>
                                         <div class="g--card-29__wrapper">
                                             <p class="g--card-29__wrapper__meta">Lorem ipsum | dolor sit</p>
-                                            <p class="g--card-29__wrapper__title">Risus viverra adipiscing at in tellus integer feugiat. Tortor posuere ac ut consequat semper viverra nam libero. Neque gravida in fermentum et sollicitudin ac orci phasellus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor orci dapibus ultrices in iaculis nunc sed augue. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam.</p>
+                                            <p class="g--card-29__wrapper__title">
+                                                Risus viverra adipiscing at in tellus integer feugiat. Tortor posuere ac ut consequat semper viverra nam libero. Neque gravida in fermentum et sollicitudin ac orci phasellus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor orci
+                                                dapibus ultrices in iaculis nunc sed augue. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="f--col-6 f--col-tablets-12 display--flex">
                                     <div class="g--card-29 g--card-29--third">
                                         <div class="g--card-29__media-wrapper">
-                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-29__media-wrapper__media g--lazy-01 f--ar" width="604" height="340" />
+                                            <img
+                                                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                                                src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-29__media-wrapper__media g--lazy-01 f--ar"
+                                                width="604"
+                                                height="340"
+                                            />
                                         </div>
                                         <div class="g--card-29__wrapper">
                                             <p class="g--card-29__wrapper__meta">Lorem ipsum | dolor sit</p>
@@ -1662,11 +2009,21 @@
                                 <div class="f--col-6 f--col-tablets-12 display--flex">
                                     <div class="g--card-29 g--card-29--fourth">
                                         <div class="g--card-29__media-wrapper">
-                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-29__media-wrapper__media g--lazy-01 f--ar" width="604" height="340" />
+                                            <img
+                                                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                                                src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-29__media-wrapper__media g--lazy-01 f--ar"
+                                                width="604"
+                                                height="340"
+                                            />
                                         </div>
                                         <div class="g--card-29__wrapper">
                                             <p class="g--card-29__wrapper__meta">Lorem ipsum | dolor sit</p>
-                                            <p class="g--card-29__wrapper__title">Risus viverra adipiscing at in tellus integer feugiat. Tortor posuere ac ut consequat semper viverra nam libero. Neque gravida in fermentum et sollicitudin ac orci phasellus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor orci dapibus ultrices in iaculis nunc sed augue. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam.</p>
+                                            <p class="g--card-29__wrapper__title">
+                                                Risus viverra adipiscing at in tellus integer feugiat. Tortor posuere ac ut consequat semper viverra nam libero. Neque gravida in fermentum et sollicitudin ac orci phasellus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor orci
+                                                dapibus ultrices in iaculis nunc sed augue. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1678,7 +2035,7 @@
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
                                         <li>
-                                            $background-color <small><strong>*we can't add a gradient for background-color</strong></small>
+                                            $background-color
                                         </li>
                                         <li>$border-color</li>
                                         <li>$border-style</li>
@@ -1709,12 +2066,694 @@
                 </div>
             </section>
 
+            <!-- card 30 -->
+            <section class="f--section-c" id="card-30">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-30</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-30">
+                                        <div class="g--card-30__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-30__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-30__wrapper">
+                                            <p class="g--card-30__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-30__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-30 g--card-30--second">
+                                        <div class="g--card-30__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-30__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-30__wrapper">
+                                            <p class="g--card-30__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-30__wrapper__title">Lorem ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 31 -->
+            <section class="f--section-c" id="card-31">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-31</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> it is recommended to add aspect ratio variables or img height variables, if we don't add them the pills won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+                            </p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-31">
+                                        <div class="g--card-31__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-31__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-31__wrapper">
+                                            <div class="g--card-31__wrapper__hd">
+                                                <p class="g--card-31__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-31__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-31__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-31__wrapper__list-group">
+                                                <div class="g--card-31__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-31__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-31 g--card-31--second">
+                                        <div class="g--card-31__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-31__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-31__wrapper">
+                                            <div class="g--card-31__wrapper__hd">
+                                                <p class="g--card-31__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-31__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-31__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-31__wrapper__list-group">
+                                                <div class="g--card-31__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-31__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$author-font</li>
+                                        <li>$author-font-weight</li>
+                                        <li>$author-color</li>
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$full-image-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-width</li>
+                                        <li>$img-aspect-ratio-height</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$pill-class</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 32 -->
+            <section class="f--section-c" id="card-32">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-32</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-32">
+                                        <div class="g--card-32__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-32__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-32__wrapper">
+                                            <div class="g--card-32__wrapper__hd">
+                                                <p class="g--card-32__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-32__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-32__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-32__wrapper__list-group">
+                                                <div class="g--card-32__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-32__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-32 g--card-32--second">
+                                        <div class="g--card-32__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-32__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-32__wrapper">
+                                            <div class="g--card-32__wrapper__hd">
+                                                <p class="g--card-32__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-32__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-32__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-32__wrapper__list-group">
+                                                <div class="g--card-32__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-32__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$author-color</li>
+                                        <li>$author-font-weight</li>
+                                        <li>$author-font</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
+                                        <li>$pill-class</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 33 -->
+            <section class="f--section-c" id="card-33">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-33</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> it is recommended to add aspect ratio variables or img height variables, if we don't add them the pills won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+                            </p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-33">
+                                        <div class="g--card-33__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-33__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-33__wrapper">
+                                            <p class="g--card-33__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-33__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-33__wrapper__list-group">
+                                                <div class="g--card-33__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-33__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-33 g--card-33--second">
+                                        <div class="g--card-33__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-33__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-33__wrapper">
+                                            <p class="g--card-33__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-33__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-33__wrapper__list-group">
+                                                <div class="g--card-33__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-33__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$full-image-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-height</li>
+                                        <li>$img-aspect-ratio-width</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 34 -->
+            <section class="f--section-c" id="card-34">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-34</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-34">
+                                        <div class="g--card-34__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-34__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-34__wrapper">
+                                            <p class="g--card-34__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-34__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-34__wrapper__list-group">
+                                                <div class="g--card-34__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-34__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-34 g--card-34--second">
+                                        <div class="g--card-34__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-34__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-34__wrapper">
+                                            <p class="g--card-34__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-34__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-34__wrapper__list-group">
+                                                <div class="g--card-34__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-34__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 35 -->
+            <section class="f--section-c" id="card-35">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-35</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> it is recommended to add aspect ratio variables or img height variables, if we don't add them the link won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+                            </p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-35">
+                                        <div class="g--card-35__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-35__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-35__wrapper">
+                                            <p class="g--card-35__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-35__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-35__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-35 g--card-35--second">
+                                        <div class="g--card-35__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-35__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-35__wrapper">
+                                            <p class="g--card-35__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-35__wrapper__title">Lorem ipsum.</p>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-35__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$full-image-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-width</li>
+                                        <li>$img-aspect-ratio-height</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 36 -->
+            <section class="f--section-c" id="card-36">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-36</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-36">
+                                        <div class="g--card-36__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-36__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-36__wrapper">
+                                            <p class="g--card-36__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-36__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-36__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-36 g--card-36--second">
+                                        <div class="g--card-36__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-36__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-36__wrapper">
+                                            <p class="g--card-36__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-36__wrapper__title">Lorem ipsum.</p>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-36__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 37 -->
+            <section class="f--section-c" id="card-37">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-37</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> it is recommended to add aspect ratio variables or img height variables, if we don't add them the link won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+                            </p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-37">
+                                        <div class="g--card-37__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-37__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-37__wrapper">
+                                            <p class="g--card-37__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-37__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-37__wrapper__list-group">
+                                                <div class="g--card-37__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-37__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-37__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-37 g--card-37--second">
+                                        <div class="g--card-37__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-37__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-37__wrapper">
+                                            <p class="g--card-37__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-37__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-37__wrapper__list-group">
+                                                <div class="g--card-37__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-37__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-37__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$full-image-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-width</li>
+                                        <li>$img-aspect-ratio-height</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 38 -->
+            <section class="f--section-c" id="card-38">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-38</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-38">
+                                        <div class="g--card-38__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-38__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-38__wrapper">
+                                            <p class="g--card-38__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-38__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-38__wrapper__list-group">
+                                                <div class="g--card-38__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-38__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-38__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-38 g--card-38--second">
+                                        <div class="g--card-38__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-38__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-38__wrapper">
+                                            <p class="g--card-38__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+                                            <p class="g--card-38__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-38__wrapper__list-group">
+                                                <div class="g--card-38__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-38__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-38__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- card 39 -->
             <section class="f--section-c" id="card-39">
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-39</h2>
+                            <h2 class="f--font-c f--sp-a">Card-39</h2>
+                            <p class="f--font-f f--background-a f--p-3">
+                                <strong>Note:</strong> it is recommended to add aspect ratio variables or img height variables, if we don't add them the link won't align to the bottom and we won't be able to add a gradient as background color (only solid colors or with opacity)
+                            </p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -1728,7 +2767,7 @@
                                                 <p class="g--card-39__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
                                                 <p class="g--card-39__wrapper__hd__author">By Author</p>
                                             </div>
-                                            <p class="g--card-39__wrapper__title">Card-39 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <p class="g--card-39__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
                                             <div class="g--card-39__wrapper__list-group">
                                                 <div class="g--card-39__wrapper__list-group__list-item">Category</div>
                                                 <div class="g--card-39__wrapper__list-group__list-item">Category</div>
@@ -1747,7 +2786,45 @@
                                                 <p class="g--card-39__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
                                                 <p class="g--card-39__wrapper__hd__author">By Author</p>
                                             </div>
-                                            <p class="g--card-39__wrapper__title">Card-39 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <p class="g--card-39__wrapper__title">Lorem ipsum dolor sit amet consectetur.</p>
+                                            <div class="g--card-39__wrapper__list-group">
+                                                <div class="g--card-39__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-39__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-39__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-39 g--card-39--second">
+                                        <div class="g--card-39__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-39__wrapper">
+                                            <div class="g--card-39__wrapper__hd">
+                                                <p class="g--card-39__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-39__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-39__wrapper__title">Lorem ipsum dolor sit amet consectetur.</p>
+                                            <div class="g--card-39__wrapper__list-group">
+                                                <div class="g--card-39__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-39__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-39__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-39 g--card-39--second">
+                                        <div class="g--card-39__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-39__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-39__wrapper">
+                                            <div class="g--card-39__wrapper__hd">
+                                                <p class="g--card-39__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-39__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-39__wrapper__title">Lorem ipsum.</p>
                                             <div class="g--card-39__wrapper__list-group">
                                                 <div class="g--card-39__wrapper__list-group__list-item">Category</div>
                                                 <div class="g--card-39__wrapper__list-group__list-item">Category</div>
@@ -1777,11 +2854,226 @@
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
                                         <li>$hover-transform</li>
-                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-aspect-ratio-width</li>
+                                        <li>$img-aspect-ratio-height</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$pill-class</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 40 -->
+            <section class="f--section-c" id="card-40">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-40</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-40">
+                                        <div class="g--card-40__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-40__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-40__wrapper">
+                                            <div class="g--card-40__wrapper__hd">
+                                                <p class="g--card-40__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-40__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-40__wrapper__title">Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+                                            <div class="g--card-40__wrapper__list-group">
+                                                <div class="g--card-40__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-40__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-40__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-40 g--card-40--second">
+                                        <div class="g--card-40__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-40__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-40__wrapper">
+                                            <div class="g--card-40__wrapper__hd">
+                                                <p class="g--card-40__wrapper__hd__meta">Lorem ipsum | Lorem ipsum</p>
+                                                <p class="g--card-40__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <p class="g--card-40__wrapper__title">Lorem ipsum.</p>
+                                            <div class="g--card-40__wrapper__list-group">
+                                                <div class="g--card-40__wrapper__list-group__list-item">Category</div>
+                                                <div class="g--card-40__wrapper__list-group__list-item">Category</div>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-40__wrapper__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$author-color</li>
+                                        <li>$author-font</li>
+                                        <li>$author-font-weight</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$pill-class</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 41 -->
+            <section class="f--section-c" id="card-41">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-41</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-12 display--flex">
+                                    <div class="g--card-41">
+                                        <div class="g--card-41__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-41__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-41__wrapper">
+                                            <div class="g--card-41__wrapper__hd">
+                                                <p class="g--card-41__wrapper__hd__meta">Lorem ipsum | dolor sit</p>
+                                                <p class="g--card-41__wrapper__hd__author">By Author</p>
+                                            </div>
+                                            <h2 class="g--card-41__wrapper__bd">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus nostrum aspernatur quo ratione eveniet! Aut!
+                                            </h2>
+                                            <div class="g--card-41__wrapper__ft">
+                                                <span class="g--card-41__wrapper__ft__badge">Category</span>
+                                                <span class="g--card-41__wrapper__ft__badge">Category</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$author-color</li>
+                                        <li>$author-font</li>
+                                        <li>$author-font-weight</li>
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$breakpoint</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-responsive</li>
+                                        <li>$img-height-responsive</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$pill-class</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 42 -->
+            <section class="f--section-c" id="card-42">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-42</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-12 display--flex">
+                                    <div class="g--card-42">
+                                        <div class="g--card-42__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-42__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-42__wrapper">
+                                            <p class="g--card-42__wrapper__meta">Lorem ipsum | dolor sit</p>
+                                            <h2 class="g--card-42__wrapper__bd">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus nostrum aspernatur quo ratione eveniet! Aut!
+                                            </h2>
+                                            <div class="g--card-42__wrapper__ft">
+                                                <span class="g--card-42__wrapper__ft__badge">Category</span>
+                                                <span class="g--card-42__wrapper__ft__badge">Category</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$breakpoint</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-responsive</li>
+                                        <li>$img-height-responsive</li>
+                                        <li>$img-position</li>
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
@@ -1799,77 +3091,121 @@
                 </div>
             </section>
 
-            <!-- card 41 -->
-            <section class="f--section-c"
-            id="card-41">
-              <div class="f--container">
-                <div class="f--row f--gap-d">
-                  <div class="f--col-12">
-                    <h2 class="f--font-c">Card-41</h2>
-                  </div>
-                  <div class="f--col-8 f--col-tabletm-12">
+            <!-- card 43 -->
+            <section class="f--section-c" id="card-43">
+                <div class="f--container">
                     <div class="f--row f--gap-d">
-                      <div class="f--col-12 display--flex">
-                        <div class="g--card-41">
-                          <div class="g--card-41__media-wrapper">
-                            <img
-                            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
-                            src="/src/img/global-components/placeholder.jpg"
-                            alt="alt text"
-                            class="g--card-41__media-wrapper__media g--lazy-01" />
-                          </div>
-                          <div class="g--card-41__wrapper">
-                            <div class="g--card-41__wrapper__hd">
-                              <p class="g--card-41__wrapper__hd__meta">Lorem ipsum | dolor sit</p>
-                              <p class="g--card-41__wrapper__hd__author">By Author</p>
-                            </div>
-                            <h2 class="g--card-41__wrapper__bd">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus nostrum aspernatur quo ratione eveniet! Aut!</h2>
-                            <div class="g--card-41__wrapper__ft">
-                              <span class="g--card-41__wrapper__ft__badge">Category</span>
-                              <span class="g--card-41__wrapper__ft__badge">Category</span>
-                            </div>
-                          </div>
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-43</h2>
                         </div>
-                      </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-12 display--flex">
+                                    <div class="g--card-43">
+                                        <div class="g--card-43__wrapper">
+                                            <p class="g--card-43__wrapper__hd">This is a card lorem ispum dolor sit</p>
+                                            <p class="g--card-43__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
+                                        </div>
+                                        <div class="g--card-43__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-43__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$breakpoint</li>
+                                        <li>$change-order-reponsive</li>
+                                        <li>$content-color</li>
+                                        <li>$content-font</li>
+                                        <li>$content-font-weight</li>
+                                        <li>$content-max-lines</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-responsive</li>
+                                        <li>$img-height-responsive</li>
+                                        <li>$img-position</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="f--col-4 f--col-tabletm-12">
-                    <h2 class="f--font-c f--sp-a">Editable variables</h2>
-                    <div class="f--row f--gap-b">
-                      <div class="f--col-12">
-                        <ul style="list-style: inside">
-                          <li>$author-color</li>
-                          <li>$author-font</li>
-                          <li>$author-font-weight</li>
-                          <li>$background-color</li>
-                          <li>$border-color</li>
-                          <li>$border-style</li>
-                          <li>$border-width</li>
-                          <li>$border-radius</li>
-                          <li>$breakpoint</li>
-                          <li>$hover-background-color</li>
-                          <li>$hover-img-zoom</li>
-                          <li>$hover-shadow</li>
-                          <li>$hover-title-color</li>
-                          <li>$hover-transform</li>
-                          <li>$img-aspect-ratio-responsive</li>
-                          <li>$img-height-responsive</li>
-                          <li>$img-position</li>
-                          <li>$meta-color</li>
-                          <li>$meta-font</li>
-                          <li>$meta-font-weight</li>
-                          <li>$pill-class</li>
-                          <li>$text-align <small><strong>*it only works for bd and pills (not for meta and author)</strong></small></li>
-                          <li>$title-color</li>
-                          <li>$title-font</li>
-                          <li>$title-font-weight</li>
-                          <li>$title-max-lines</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            </section>
+
+            <!-- card 44 -->
+            <section class="f--section-c" id="card-44">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-44</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-12 display--flex">
+                                    <div class="g--card-44">
+                                        <div class="g--card-44__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-44__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                        <div class="g--card-44__wrapper">
+                                            <p class="g--card-44__wrapper__hd">This is a card lorem ispum dolor sit</p>
+                                            <p class="g--card-44__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$border-radius</li>
+                                        <li>$breakpoint</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-responsive</li>
+                                        <li>$img-height-responsive</li>
+                                        <li>$img-position</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$text-align</li>
+                                        <li>$content-color</li>
+                                        <li>$content-font</li>
+                                        <li>$content-font-weight</li>
+                                        <li>$content-max-line</li>
+                                        <li>$change-order-reponsive</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- card 45 -->
@@ -1900,6 +3236,7 @@
                                 <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                                     <ul style="list-style: inside">
                                         <li>$content-font</li>
+                                        <li>$content-max-lines</li>
                                         <li>$heading-font</li>
                                         <li>$border-radius</li>
                                         <li>$border-color</li>
@@ -2004,6 +3341,75 @@
                 </div>
             </section>
 
+            <!-- card 47 -->
+            <section class="f--section-c" id="card-47">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-47</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-12">
+                                    <div class="g--card-47">
+                                        <div class="g--card-47__wrapper">
+                                            <p class="g--card-47__wrapper__hd">Heading</p>
+                                            <p class="g--card-47__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
+                                            <div class="g--card-47__wrapper__ft">
+                                                <p class="g--card-47__wrapper__ft__title">Person Name</p>
+                                                <p class="g--card-47__wrapper__ft__subtitle">Job Position</p>
+                                            </div>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-47__wrapper__link">This is a link</a>
+                                        </div>
+                                        <div class="g--card-47__media-wrapper">
+                                            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-47__media-wrapper__media g--lazy-01" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul style="list-style: inside">
+                                        <li>$link-class</li>
+                                        <li>$content-font</li>
+                                        <li>$heading-font</li>
+                                        <li>$person-font</li>
+                                        <li>$position-font</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-color</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$content-font-weight</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio-responsive</li>
+                                        <li>$img-height-responsive</li>
+                                        <li>$img-position</li>
+                                        <li>$heading-font-weight</li>
+                                        <li>$person-font-weight</li>
+                                        <li>$position-font-weight</li>
+                                        <li>$change-order-reponsive</li>
+                                        <li>$content-color</li>
+                                        <li>$heading-color</li>
+                                        <li>$person-color</li>
+                                        <li>$position-color</li>
+                                        <li>$background-color</li>
+                                        <li>$text-align</li>
+                                        <li>$breakpoint</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- card 48 -->
             <section class="f--section-c" id="card-48">
                 <div class="f--container">
@@ -2041,7 +3447,7 @@
                                         <li>$hover-img-background-color</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
-                                        <li>$hover-translate</li>
+                                        <li>$hover-transform</li>
                                         <li>$img-align</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-background-color</li>
@@ -2121,7 +3527,7 @@
                                         <li>$hover-img-background-color</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
-                                        <li>$hover-translate</li>
+                                        <li>$hover-transform</li>
                                         <li>$icon-class</li>
                                         <li>$img-align</li>
                                         <li>$img-aspect-ratio</li>
@@ -2138,6 +3544,370 @@
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 50 -->
+            <section class="f--section-c" id="card-50">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-50</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-50">
+                                        <div class="g--card-50__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-50__bg-items__artwork"></div>
+                                        </div>
+                                        <div class="g--card-50__ft-items">
+                                            <p class="g--card-50__ft-items__meta">Type</p>
+                                            <h3 class="g--card-50__ft-items__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis obcaecati adipisci accusamus ad earum, dolorem eius veritatis explicabo blanditiis! Natus quo in ipsum deserunt nihil repellat? Saepe, asperiores quisquam?</h3>
+                                            <div class="g--card-50__ft-items__list-group">
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-50__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-50 g--card-50--second">
+                                        <div class="g--card-50__bg-items">
+                                            <div class="g--card-50__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-50__ft-items">
+                                            <p class="g--card-50__ft-items__meta">Type</p>
+                                            <h3 class="g--card-50__ft-items__title">Lorem ipsum dolor sit amet</h3>
+                                            <div class="g--card-50__ft-items__list-group">
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-50__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-50 g--card-50--third">
+                                        <div class="g--card-50__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-50__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-50__ft-items">
+                                            <p class="g--card-50__ft-items__meta">Type</p>
+                                            <h3 class="g--card-50__ft-items__title">Lorem ipsum dolor sit amet</h3>
+                                            <div class="g--card-50__ft-items__list-group">
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-50__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-50 g--card-50--third">
+                                        <div class="g--card-50__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-50__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-50__ft-items">
+                                            <p class="g--card-50__ft-items__meta">Type</p>
+                                            <h3 class="g--card-50__ft-items__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus architecto temporibus, non suscipit sapiente ipsa quos numquam libero odit sit dolorem error doloremque unde ab voluptatum tenetur saepe. Aliquid, necessitatibus.</h3>
+                                            <div class="g--card-50__ft-items__list-group">
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-50__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-50__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$background-position</li>
+                                        <li>$background-repeat</li>
+                                        <li>$background-size</li>
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-aspect-ratio</li>
+                                        <li>$card-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-background-position</li>
+                                        <li>$hover-background-repeat</li>
+                                        <li>$hover-background-size</li>
+                                        <li>$hover-mask-background-color</li>
+                                        <li>$hover-meta-color</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$link-class</li>
+                                        <li>$link-hide-by-default</li>
+                                        <li>$mask-background-color</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 51 -->
+            <section class="f--section-c" id="card-51">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-51</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-51">
+                                        <div class="g--card-51__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-51__bg-items__artwork"></div>
+                                        </div>
+                                        <div class="g--card-51__ft-items">
+                                            <p class="g--card-51__ft-items__meta">Type</p>
+                                            <h3 class="g--card-51__ft-items__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis obcaecati adipisci accusamus ad earum, dolorem eius veritatis explicabo blanditiis! Natus quo in ipsum deserunt nihil repellat? Saepe, asperiores quisquam?</h3>
+                                            <div class="g--card-51__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-51__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-51 g--card-51--second">
+                                        <div class="g--card-51__bg-items">
+                                            <div class="g--card-51__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-51__ft-items">
+                                            <p class="g--card-51__ft-items__meta">Type</p>
+                                            <h3 class="g--card-51__ft-items__title">Lorem ipsum dolor sit amet</h3>
+                                            <div class="g--card-51__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-51__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-51 g--card-51--third">
+                                        <div class="g--card-51__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-51__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-51__ft-items">
+                                            <p class="g--card-51__ft-items__meta">Type</p>
+                                            <h3 class="g--card-51__ft-items__title">Lorem ipsum dolor sit amet</h3>
+                                            <div class="g--card-51__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-51__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-51 g--card-51--third">
+                                        <div class="g--card-51__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-51__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-51__ft-items">
+                                            <p class="g--card-51__ft-items__meta">Type</p>
+                                            <h3 class="g--card-51__ft-items__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus architecto temporibus, non suscipit sapiente ipsa quos numquam libero odit sit dolorem error doloremque unde ab voluptatum tenetur saepe. Aliquid, necessitatibus.</h3>
+                                            <div class="g--card-51__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-51__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$background-position</li>
+                                        <li>$background-repeat</li>
+                                        <li>$background-size</li>
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-aspect-ratio</li>
+                                        <li>$card-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-background-position</li>
+                                        <li>$hover-background-repeat</li>
+                                        <li>$hover-background-size</li>
+                                        <li>$hover-mask-background-color</li>
+                                        <li>$hover-meta-color</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$link-class</li>
+                                        <li>$link-hide-by-default</li>
+                                        <li>$mask-background-color</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 52 -->
+            <section class="f--section-c" id="card-52">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-52</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-52">
+                                        <div class="g--card-52__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-52__bg-items__artwork"></div>
+                                        </div>
+                                        <div class="g--card-52__ft-items">
+                                            <h3 class="g--card-52__ft-items__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis obcaecati adipisci accusamus ad earum, dolorem eius veritatis explicabo blanditiis! Natus quo in ipsum deserunt nihil repellat? Saepe, asperiores quisquam?</h3>
+                                            <div class="g--card-52__ft-items__list-group">
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-52__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-52 g--card-52--second">
+                                        <div class="g--card-52__bg-items">
+                                            <div class="g--card-52__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-52__ft-items">
+                                            <h3 class="g--card-52__ft-items__title">Lorem ipsum dolor sit amet</h3>
+                                            <div class="g--card-52__ft-items__list-group">
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-52__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-52 g--card-52--third">
+                                        <div class="g--card-52__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-52__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-52__ft-items">
+                                            <h3 class="g--card-52__ft-items__title">Lorem ipsum dolor sit amet</h3>
+                                            <div class="g--card-52__ft-items__list-group">
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-52__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-mobile-12 display--flex">
+                                    <div class="g--card-52 g--card-52--third">
+                                        <div class="g--card-52__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+                                            <div class="g--card-52__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+                                        </div>
+                                        <div class="g--card-52__ft-items">
+                                            <h3 class="g--card-52__ft-items__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus architecto temporibus, non suscipit sapiente ipsa quos numquam libero odit sit dolorem error doloremque unde ab voluptatum tenetur saepe. Aliquid, necessitatibus.</h3>
+                                            <div class="g--card-52__ft-items__list-group">
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                                <span class="g--card-52__ft-items__list-group__badge">Category</span>
+                                            </div>
+                                            <div class="g--card-52__ft-items__wrapper">
+                                                <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$background-position</li>
+                                        <li>$background-repeat</li>
+                                        <li>$background-size</li>
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-aspect-ratio</li>
+                                        <li>$card-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-background-position</li>
+                                        <li>$hover-background-repeat</li>
+                                        <li>$hover-background-size</li>
+                                        <li>$hover-mask-background-color</li>
+                                        <li>$hover-meta-color</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$meta-color</li>
+                                        <li>$meta-font</li>
+                                        <li>$meta-font-weight</li>
+                                        <li>$link-class</li>
+                                        <li>$link-hide-by-default</li>
+                                        <li>$mask-background-color</li>
+                                        <li>$pill-class</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-max-lines</li>
                                     </ul>
                                 </div>
                             </div>

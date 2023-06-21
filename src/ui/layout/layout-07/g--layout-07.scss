@@ -1,6 +1,8 @@
 .g--layout-07 {
     @include make-layout-07();
     @include make-layout-07-modifier(
+        $align-text-img: center,
+        $img-height: 200px,
         $subtitle-font: f,
         $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),

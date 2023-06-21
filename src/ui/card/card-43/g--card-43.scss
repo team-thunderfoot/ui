@@ -1,0 +1,28 @@
+.g--card-43{
+    @include make-card-43();
+    @include make-card-43-modifier(
+        $background-color: rgba(map-get($color-options, h), .2),
+        $border-color: map-get($color-options, h),
+        $border-style: solid,
+        $border-width: $measure*.5,
+        $border-radius: $measure,
+        $breakpoint: $tablets,
+        $hover-background-color: rgba(map-get($color-options, h), .5),
+        $hover-img-zoom: 1.4,
+        $hover-shadow: 0 0 $measure*5 map-get($color-options, h),
+        $hover-title-color: map-get($color-options, g),
+        $hover-transform: translateY(-$measure),
+        // $img-aspect-ratio-responsive: 1,
+        $img-height-responsive: 300px,
+        $img-position: left bottom,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 600,
+        $text-align: center,
+        $content-color: map-get($color-options, a),
+        $content-font: f,
+        $content-font-weight: 400,
+        $content-max-lines: 3,
+        $change-order-reponsive: true
+    );
+}

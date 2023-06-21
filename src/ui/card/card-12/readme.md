@@ -52,7 +52,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $img-aspect-ratio
 - $img-height
 - $img-position
-- $img-size
+- $img-fit
 - $img-width
 - $link-class
 - $link-font
@@ -69,27 +69,27 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-12{
     @include make-card-12();
     @include make-card-12-modifier(
-        // $background-position: false,
-        // $background-size: false,
-        // $border-radius: false,
-        // $hover-background-img-zoom: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $link-class: false,
-        // $link-font: false,
-        // $mask-color: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $background-position: ,
+        // $background-size: ,
+        // $border-radius: ,
+        // $hover-background-img-zoom: ,
+        // $hover-img-zoom: ,
+        // $hover-shadow: ,
+        // $hover-title-color: ,
+        // $hover-transform: ,
+        // $img-aspect-ratio: ,
+        // $img-height: ,
+        // $img-position: ,
+        // $img-fit: ,
+        // $img-width: ,
+        // $link-class: ,
+        // $link-font: ,
+        // $mask-color: ,
+        // $text-align: ,
+        // $title-color: ,
+        // $title-font: ,
+        // $title-font-weight: ,
+        // $title-max-lines: ,
     );
 }
 ```

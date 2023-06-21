@@ -97,11 +97,6 @@
         }
     }
 
-    @if $hover-title-color or $hover-shadow or $hover-transform or $hover-background-img-zoom{
-        text-decoration: none !important;
-        cursor: pointer;
-    }
-
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {

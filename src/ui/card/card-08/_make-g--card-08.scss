@@ -2,6 +2,7 @@
     padding: 0 $measure*2;
     width: 100%;
     display: block;
+    text-decoration: none;
     &__media-wrapper{
         overflow: hidden;
         margin-bottom: $measure * 2;
@@ -22,7 +23,7 @@
     $img-aspect-ratio: false,
     $img-height: false,
     $img-position: false,
-    $img-size: false,
+    $img-fit: false,
     $img-width: false,
     $text-align: false,
     $title-color: false,
@@ -32,10 +33,6 @@
 
 ) {
 
-    @if $hover-title-color or $hover-img-zoom or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
     @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
@@ -130,13 +127,13 @@
                     aspect-ratio: $img-aspect-ratio;
                 }
                 @if $img-width {
-                    width: $img-width;
+                    width: 100%;
                 }
                 @if $img-height {
-                    height: $img-height;
+                    height: 100%;
                 }
-                @if $img-size{
-                    object-fit: $img-size;
+                @if $img-fit{
+                    object-fit: $img-fit;
                 }
                 @if $img-position{
                     object-position: $img-position;

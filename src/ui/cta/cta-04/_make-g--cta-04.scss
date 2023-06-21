@@ -11,10 +11,9 @@
         top: 0;
         height: 100%;
         width: 100%;
-        
 
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             height: 100%;
             left: 0;
             position: absolute;
@@ -29,40 +28,40 @@
         @media all and ($viewport-type: $tabletl) {
             padding: 8% 7%;
         }
-    
+
         @media all and ($viewport-type: $tabletm) {
             padding: 9% 7%;
         }
-    
+
         @media all and ($viewport-type: $tablets) {
             padding: 10% 6%;
         }
-    
+
         @media all and ($viewport-type: $mobile) {
             padding: 10% 8%;
         }
 
-        &__title{
-            margin-bottom: $measure*3;
+        &__title {
+            margin-bottom: $measure * 3;
             position: relative;
             z-index: 1;
-    
+
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure * 2;
             }
         }
-    
-        &__subtitle{
-            margin-bottom: $measure*6;
+
+        &__subtitle {
+            margin-bottom: $measure * 6;
             position: relative;
             z-index: 1;
-            
+
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure * 4;
             }
         }
-    
-        &__btn{
+
+        &__btn {
             position: relative;
             z-index: 1;
         }
@@ -89,9 +88,8 @@
     $title-max-lines: false,
     $text-align: false,
     $hover-shadow: false,
-    $hover-transform: false,
+    $hover-transform: false
 ) {
-
     @if $background-position {
         &__bg-items {
             background-position: $background-position;
@@ -106,20 +104,15 @@
 
     @if $mask-color {
         &__bg-items {
-            &::before{
+            &::before {
                 background: $mask-color;
             }
         }
     }
 
-    @if $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
-
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -127,18 +120,18 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-shadow{
+    } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-transform{
+    } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -148,12 +141,12 @@
     }
 
     @if $hover-background-img-zoom {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-04{
-                    &__bg-items{
+                .g--cta-04 {
+                    &__bg-items {
                         transform: scale($hover-background-img-zoom);
                     }
                 }
@@ -162,13 +155,13 @@
     }
 
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-04{
+                .g--cta-04 {
                     &__ft-items {
-                        &__title{
+                        &__title {
                             color: $hover-title-color;
                         }
                     }
@@ -178,13 +171,13 @@
     }
 
     @if $hover-subtitle-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-04{
+                .g--cta-04 {
                     &__ft-items {
-                        &__subtitle{
+                        &__subtitle {
                             color: $hover-subtitle-color;
                         }
                     }
@@ -203,17 +196,17 @@
                 padding-left: $measure * 15;
                 padding-right: $measure * 15;
                 text-align: center;
-    
+
                 @media all and ($viewport-type: $tabletl) {
                     padding-left: $measure * 10;
                     padding-right: $measure * 10;
                 }
-    
+
                 @media all and ($viewport-type: $tablets) {
                     padding-left: $measure * 5;
                     padding-right: $measure * 5;
                 }
-    
+
                 &__btn {
                     margin-left: auto;
                     margin-right: auto;
@@ -228,21 +221,21 @@
                 padding-left: $measure * 10;
                 padding-right: $measure * 30;
                 text-align: left;
-    
+
                 @media all and ($viewport-type: $tabletl) {
                     padding-left: $measure * 5;
                     padding-right: $measure * 25;
                 }
-    
+
                 @media all and ($viewport-type: $tabletm) {
                     padding-right: $measure * 20;
                 }
-    
+
                 @media all and ($viewport-type: $tablets) {
                     padding-left: $measure * 5;
                     padding-right: $measure * 5;
                 }
-    
+
                 &__btn {
                     margin-left: 0;
                     margin-right: auto;
@@ -257,21 +250,21 @@
                 padding-left: $measure * 30;
                 padding-right: $measure * 10;
                 text-align: right;
-        
+
                 @media all and ($viewport-type: $tabletl) {
                     padding-left: $measure * 25;
                     padding-right: $measure * 5;
                 }
-        
+
                 @media all and ($viewport-type: $tabletm) {
                     padding-left: $measure * 20;
                 }
-        
+
                 @media all and ($viewport-type: $tablets) {
                     padding-left: $measure * 5;
                     padding-right: $measure * 5;
                 }
-    
+
                 &__btn {
                     margin-left: auto;
                     margin-right: 0;
@@ -280,27 +273,27 @@
         }
     }
 
-    .g--cta-04{
+    .g--cta-04 {
         &__bg-items {
-            @if $hover-background-img-zoom{
+            @if $hover-background-img-zoom {
                 transition: transform $time-b $ease-standard-a;
             }
         }
 
         &__ft-items {
-            &__title{
+            &__title {
                 @if $title-color {
                     color: $title-color;
                 }
-    
+
                 @if $title-font {
                     @extend .f--font-#{$title-font} !optional;
                 }
-    
+
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
-    
+
                 @if $title-max-lines {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -308,23 +301,23 @@
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
                 }
-    
+
                 @if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 }
             }
-            &__subtitle{
+            &__subtitle {
                 @if $subtitle-color {
                     color: $subtitle-color;
                 }
-    
+
                 @if $subtitle-font {
                     @extend .f--font-#{$subtitle-font} !optional;
                 }
                 @if $subtitle-font-weight {
                     font-weight: $subtitle-font-weight;
                 }
-    
+
                 @if $subtitle-max-lines {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -332,20 +325,20 @@
                     -webkit-line-clamp: $subtitle-max-lines;
                     -webkit-box-orient: vertical;
                 }
-    
+
                 @if $hover-subtitle-color {
                     transition: color $time-b $ease-standard-a;
                 }
             }
-    
+
             @if $btn-font {
-                &__btn{
+                &__btn {
                     @extend .f--font-#{$btn-font} !optional;
                 }
             }
-            
+
             @if $btn-class {
-                &__btn{
+                &__btn {
                     @extend .#{$btn-class} !optional;
                 }
             }

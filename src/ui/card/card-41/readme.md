@@ -74,7 +74,6 @@ It is not necessary to add aspect-ratio.
 - $meta-font
 - $meta-font-weight
 - $pill-class
-- $text-align
 - $title-color
 - $title-font
 - $title-font-weight
@@ -86,32 +85,31 @@ It is not necessary to add aspect-ratio.
 .g--card-41{
     @include make-card-41();
     @include make-card-41-modifier(
-        // $author-color: false,
-        // $author-font: false,
-        // $author-font-weight: false,
-        // $background-color: false,
-        // $border-color: false,
-        // $border-style: false,
-        // $border-width: false,
-        // $border-radius: false,
-        // $breakpoint: false,
-        // $hover-background-color: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio-responsive: false,
-        // $img-height-responsive: false,
-        // $img-position: false,
-        // $meta-color: false,
-        // $meta-font: false,
-        // $meta-font-weight: false,
-        // $pill-class: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $author-color: ,
+        // $author-font: ,
+        // $author-font-weight: ,
+        // $background-color: ,
+        // $border-color: ,
+        // $border-style: ,
+        // $border-width: ,
+        // $border-radius: ,
+        // $breakpoint: ,
+        // $hover-background-color: ,
+        // $hover-img-zoom: ,
+        // $hover-shadow: ,
+        // $hover-title-color: ,
+        // $hover-transform: ,
+        // $img-aspect-ratio-responsive: ,
+        // $img-height-responsive: ,
+        // $img-position: ,
+        // $meta-color: ,
+        // $meta-font: ,
+        // $meta-font-weight: ,
+        // $pill-class: ,
+        // $title-color: ,
+        // $title-font: ,
+        // $title-font-weight: ,
+        // $title-max-lines: ,
     );
 }
 ```

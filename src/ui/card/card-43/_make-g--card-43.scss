@@ -1,0 +1,257 @@
+@mixin make-card-43() {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    &__wrapper {
+        width: 50%;
+        padding: $measure * 10;
+        @media all and ($viewport-type: $tabletm) {
+            padding: $measure * 5;
+        }
+
+        &__hd {
+            margin-bottom: $measure * 3;
+        }
+    }
+    &__media-wrapper {
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        &__media {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@mixin make-card-43-modifier(
+    $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $breakpoint: false,
+    $change-order-reponsive: false,
+    $content-color: false,
+    $content-font: false,
+    $content-font-weight: false,
+    $content-max-lines: false,
+    $hover-background-color: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio-responsive: false,
+    $img-height-responsive: false,
+    $img-position: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false,
+) {
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-43 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-background-color {
+        @media all and (hover: hover) {
+            .g--card-43 {
+                &__wrapper {
+                    transition: background-color $time-b $ease-standard-a;
+                }
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-43 {
+                    &__wrapper {
+                        background-color: $hover-background-color;
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-title-color {
+        .g--card-43 {
+            &__wrapper {
+                &__hd {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-43 {
+                    &__wrapper {
+                        &__hd {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--card-43 {
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    @if $change-order-reponsive {
+                        order: 1;
+                    }
+                }
+            }
+            @if $background-color {
+                background-color: $background-color;
+            }
+
+            &__hd {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            &__bd {
+                @if $content-color {
+                    color: $content-color;
+                }
+                @if $content-font {
+                    @extend .f--font-#{$content-font} !optional;
+                }
+                @if $content-font-weight {
+                    font-weight: $content-font-weight;
+                }
+                @if $content-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $content-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+
+        &__media-wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                }
+            }
+            &__media {
+                @if $img-position {
+                    object-position: $img-position;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        @if $img-height-responsive {
+                            height: $img-height-responsive;
+                        }
+                        @if $img-aspect-ratio-responsive {
+                            aspect-ratio: $img-aspect-ratio-responsive;
+                        }
+                    }
+                }
+                @if $hover-img-zoom {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+    }
+}

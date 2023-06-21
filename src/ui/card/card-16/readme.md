@@ -69,26 +69,26 @@ It is not necessary to add aspect-ratio.
     );
     &--second{
         @include make-card-16-modifier(
-            // $background-color: false,
-            // $border-color: false,
-            // $border-style: false,
-            // $border-width: false,
-            // $border-radius: false,
-            // $hover-background-color: false,
-            // $hover-shadow: false,
-            // $hover-title-color: false,
-            // $hover-transform: false,
-            // $link-class: false,
-            // $link-font: false,
-            // $subtitle-color: false,
-            // $subtitle-font: false,
-            // $subtitle-font-weight: false,
-            // $subtitle-max-lines: false,
-            // $text-align: false,
-            // $title-color: false,
-            // $title-font: false,
-            // $title-font-weight: false,
-            // $title-max-lines: false
+            // $background-color: ,
+            // $border-color: ,
+            // $border-style: ,
+            // $border-width: ,
+            // $border-radius: ,
+            // $hover-background-color: ,
+            // $hover-shadow: ,
+            // $hover-title-color: ,
+            // $hover-transform: ,
+            // $link-class: ,
+            // $link-font: ,
+            // $subtitle-color: ,
+            // $subtitle-font: ,
+            // $subtitle-font-weight: ,
+            // $subtitle-max-lines: ,
+            // $text-align: ,
+            // $title-color: ,
+            // $title-font: ,
+            // $title-font-weight: ,
+            // $title-max-lines: 
         );
     }
 }

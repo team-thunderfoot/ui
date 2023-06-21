@@ -1,0 +1,45 @@
+.g--subscribe-01{
+    @include make-subscribe-01();
+    @include make-subscribe-01-modifier(
+        $breakpoint: $mobile,
+        $btn-class: g--btn-01,
+        // $btn-min-height: 60px,
+        $btn-width: 105px,
+        $error-font: g,
+        $error-font-weight: 300,
+        $error-height: $measure*3,
+        $error-text-color: false,
+        $input-background-color: map-get($color-options, b),
+        $input-background-color-autofill: false,
+        $input-border-color: rgba(map-get($color-options, a), .5),
+        $input-border-color-focus: map-get($color-options, a),
+        $input-border-radius: $measure,
+        $input-border-style: solid,
+        $input-border-width: 1px,
+        // $input-error-border-color: false,
+        $input-font: f,
+        $input-font-size-mobile: 1rem,
+        $input-font-weight: 300,
+        $input-min-height: 42px,
+        $input-placeholder-color: transparent,
+        $input-text-color: map-get($color-options, a),
+        $label-color: map-get($color-options, g),
+        $label-font: f,
+        // $label-font-weight: 700,
+        $label-required-color: map-get($color-options, f),
+        // $label-required-font: a,
+        $label-required-font-weight: false,
+        $success-message-font: d,
+        $success-message-font-weight: 600,
+        $success-message-text-color: map-get($color-options, e),
+    );
+    &--second{
+        @include make-subscribe-01-modifier(
+            $btn-class: g--btn-01--fifth,
+            $input-border-radius: 0,
+            $input-border-width: 0 0 1px,
+            $label-color: map-get($color-options, a),
+            $label-required-color: map-get($color-options, a),
+        );
+    }
+}

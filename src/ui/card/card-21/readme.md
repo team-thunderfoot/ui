@@ -40,7 +40,6 @@
 -   $meta-font
 -   $meta-font-weight
 -   $pill-class
--   $text-align
 -   $title-color
 -   $title-font
 -   $title-font-weight
@@ -55,7 +54,7 @@
         $author-font: g,
         $author-font-weight: 600,
         $author-color: map-get($color-options, a),
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: dashed,
         $border-width: 2px,
@@ -68,7 +67,6 @@
         $meta-font: f,
         $meta-font-weight: 600,
         $pill-class: g--pill-01,
-        $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: 600,

@@ -15,7 +15,6 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         padding: $measure * 7 0;
         width: 100%;
 
@@ -42,6 +41,7 @@
 }
 
 @mixin make-layout-09-modifier(
+    $align-text-img: false,
     $background-color: false,
     $breakpoint: false,
     $btn-class: false,
@@ -70,22 +70,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                // width: fit-content;
-            } @else{
-                @if $img-border-radius {
-                    border-radius: $img-border-radius;
-                    overflow: hidden;
-                }
-                @if $img-min-height {
-                    min-height: $img-min-height;
-                }
-                @if $img-max-height {
-                    max-height: $img-max-height;
-                }
-                @if $img-height {
-                    height: $img-height;
-                }
             }
+            @if $img-min-height {
+                min-height: $img-min-height;
+            }
+            @if $img-height {
+                min-height: $img-height;
+            }
+            
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     height: auto;
@@ -105,26 +97,26 @@
                 @if $img-position {
                     object-position: $img-position;
                 }
+                @if $img-border-radius {
+                    border-radius: $img-border-radius;
+                    overflow: hidden;
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+                @if $img-min-height {
+                    min-height: $img-min-height;
+                }
+                @if $img-max-height {
+                    max-height: $img-max-height;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
                 @if $object-fit == contain or $object-fit== scale-down {
                     width: auto;
                     height: auto;
                     max-width: 100%;
-                    @if $img-border-radius {
-                        border-radius: $img-border-radius;
-                        overflow: hidden;
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                    }
-                    @if $img-min-height {
-                        min-height: $img-min-height;
-                    }
-                    @if $img-max-height {
-                        max-height: $img-max-height;
-                    }
-                    @if $img-height {
-                        height: $img-height;
-                    }
                 }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
@@ -132,6 +124,23 @@
                         top: auto;
                         left: auto;
                     }
+                }
+
+
+                @if $align-text-img == "top"{
+                    top: 0;
+                    bottom: auto;
+                    transform: translateY(0);
+                }
+                @if $align-text-img == "center"{
+                    top: 50%;
+                    bottom: auto;
+                    transform: translateY(-50%);
+                }
+                @if $align-text-img == "bottom"{
+                    top: auto;
+                    bottom: 0;
+                    transform: translateY(0);
                 }
             }
         }
@@ -146,6 +155,16 @@
                         margin-bottom: $measure * 5;
                     }
                 }
+            }
+
+            @if $align-text-img == "top"{
+                justify-content: flex-start;
+            }
+            @if $align-text-img == "center"{
+                justify-content: center;
+            }
+            @if $align-text-img == "bottom"{
+                justify-content: flex-end;
             }
 
 

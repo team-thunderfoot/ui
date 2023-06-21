@@ -2,13 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    text-decoration: none;
 
     &__wrapper {
         width: 50%;
         padding: $measure * 10;
 
         @media all and ($viewport-type: $tabletm) {
-            padding: $measure * 10 $measure * 4;
+            padding: $measure * 5;
         }
 
         &__hd {
@@ -163,13 +164,22 @@
         }
     }
     @if $hover-title-color {
+        .g--card-46 {
+            &__wrapper {
+                &__hd {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--card-46 {
-                    &__title {
-                        color: $hover-title-color;
+                    &__wrapper {
+                        &__hd {
+                            color: $hover-title-color;
+                        }
                     }
                 }
             }

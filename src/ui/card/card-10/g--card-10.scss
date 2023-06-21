@@ -1,7 +1,7 @@
 .g--card-10{
     @include make-card-10();
     @include make-card-10-modifier(
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $link-class: g--btn-01,
         $title-color: map-get($color-options, a),
         $title-font: b,
@@ -22,7 +22,7 @@
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
             $img-height: 50px,
-            $img-size: cover,
+            $img-fit: cover,
             $img-position: center,
             $img-width: auto,
             // $link-class: g--btn-01--second,
@@ -57,7 +57,7 @@
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
             $img-height: 50px,
-            $img-size: cover,
+            $img-fit: cover,
             $img-position: center,
             $img-width: auto,
             $link-class: g--btn-01--third,

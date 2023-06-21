@@ -71,10 +71,6 @@
     $hover-transform: false,
     $hover-img-zoom: false,
 ) {
-    @if $hover-background-color or $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform or $hover-img-zoom {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
 
     @if $hover-background-color and $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;

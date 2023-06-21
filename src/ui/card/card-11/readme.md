@@ -41,7 +41,7 @@ It is not necessary to add aspect-ratio.
 - $img-aspect-ratio
 - $img-height
 - $img-position
-- $img-size
+- $img-fit
 - $img-width
 - $link-class
 - $link-font
@@ -57,21 +57,21 @@ It is not necessary to add aspect-ratio.
 .g--card-11{
     @include make-card-11();
     @include make-card-11-modifier(
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $link-class: false,
-        // $link-font: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $hover-img-zoom: ,
+        // $hover-title-color: ,
+        // $hover-transform: ,
+        // $img-aspect-ratio: 1.7,
+        // $img-height: ,
+        // $img-position: ,
+        // $img-fit: ,
+        // $img-width: ,
+        // $link-class: ,
+        // $link-font: ,
+        // $text-align: ,
+        // $title-color: ,
+        // $title-font: ,
+        // $title-font-weight: ,
+        // $title-max-lines: ,
     );
 }
 ```

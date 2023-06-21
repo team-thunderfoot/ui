@@ -21,18 +21,18 @@
     $input-font-weight: false,
     $label-font-weight: false,
     $mobile-font-size: false,
-    $select-artwork-border-radius: false,
+    $select-artwork-border-radius: false
 ) {
     .hs-form,
-    form{
-        fieldset{
+    form {
+        fieldset {
             max-width: none;
             .field,
-            .hs-form-field{
+            .hs-form-field {
                 position: relative;
-                margin-bottom: $measure*2;
+                margin-bottom: $measure * 2;
                 width: 100%;
-                label{
+                label {
                     @extend .f--font-#{$label-font} !optional;
                     @if $label-font-weight {
                         font-weight: $label-font-weight;
@@ -40,37 +40,39 @@
                     margin-bottom: $measure;
                     display: block;
                 }
-        
+
                 //* generic input, textarea, radio, checkbox
-                .input{
+                .input {
                     //* generic input
-                    input{
+                    input {
                         @extend .f--font-#{$input-font} !optional;
                         @if $input-font-weight {
                             font-weight: $input-font-weight;
                         }
                         display: block;
                         border: $input-border-width solid;
-                        padding: $measure*.5 $measure;
-                        width:100%;
+                        padding: $measure * 0.5 $measure;
+                        width: 100%;
                         border-radius: $input-border-radius;
                         transition: border-color $time-b $ease-standard-a;
                         @if $mobile-font-size {
-                            @media all and ($viewport-type: $mobile){
+                            @media all and ($viewport-type: $mobile) {
                                 font-size: $mobile-font-size;
                             }
                         }
-                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus {
                             border: $input-border-width solid;
                         }
                         &.invalid,
-                        &.error{
+                        &.error {
                             border: $input-border-width solid;
                         }
                     }
-        
+
                     //* textarea
-                    textarea{
+                    textarea {
                         @extend .f--font-#{$input-font} !optional;
                         @if $input-font-weight {
                             font-weight: $input-font-weight;
@@ -79,51 +81,53 @@
                         resize: vertical;
                         height: $textarea-height;
                         border: $input-border-width solid;
-                        padding: $measure*.5 $measure;
-                        width:100%;
+                        padding: $measure * 0.5 $measure;
+                        width: 100%;
                         border-radius: $input-border-radius;
                         transition: border-color $time-b $ease-standard-a;
                         @if $mobile-font-size {
-                            @media all and ($viewport-type: $mobile){
+                            @media all and ($viewport-type: $mobile) {
                                 font-size: $mobile-font-size;
                             }
                         }
-                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus {
                             border: $input-border-width solid;
                         }
                         &.invalid,
-                        &.error{
+                        &.error {
                             border: $input-border-width solid;
                         }
                     }
-        
+
                     //* radio and checkbox
-                    .inputs-list{
+                    .inputs-list {
                         list-style: none;
                         display: flex;
                         flex-wrap: wrap;
-            
+
                         //* multiple radio
-                        .hs-form-radio{
+                        .hs-form-radio {
                             margin-bottom: $measure;
-                            label{
+                            label {
                                 position: relative;
                                 margin-bottom: 0;
-                                input{
+                                input {
                                     position: absolute;
                                     opacity: 0;
                                     cursor: pointer;
-                                    left:0;
-                                    top:0;
+                                    left: 0;
+                                    top: 0;
                                     width: 100%;
                                     height: 100%;
                                     z-index: 0;
                                     padding: 0;
-                                    &:checked ~ span::after{
+                                    &:checked ~ span::after {
                                         opacity: 1;
                                     }
                                 }
-                                span{
+                                span {
                                     @extend .f--font-#{$checkbox-title-font} !optional;
                                     @if $checkbox-title-font-weight {
                                         font-weight: $checkbox-title-font-weight;
@@ -132,19 +136,19 @@
                                     display: block;
                                     padding-left: calc(#{$measure} + #{$radio-circle-width});
                                     cursor: pointer;
-                                    a{
+                                    a {
                                         @extend .#{$checkbox-link-class} !optional;
                                     }
                                     .hs-form-required,
-                                    span{
+                                    span {
                                         display: inline;
                                         padding-left: 0;
-                                        &::before{
+                                        &::before {
                                             content: none;
                                         }
                                     }
-                                    &::before{
-                                        content: '';
+                                    &::before {
+                                        content: "";
                                         position: absolute;
                                         left: 0;
                                         top: 50%;
@@ -154,13 +158,13 @@
                                         border: $radio-circle-border-width solid;
                                         border-radius: 50%;
                                     }
-                                    &::after{
-                                        content: '';
+                                    &::after {
+                                        content: "";
                                         position: absolute;
-                                        width: $radio-circle-width*.75;
-                                        height: $radio-circle-width*.75;
+                                        width: $radio-circle-width * 0.75;
+                                        height: $radio-circle-width * 0.75;
                                         top: 50%;
-                                        left: $radio-circle-width*.5;
+                                        left: $radio-circle-width * 0.5;
                                         transform: translate(-50%, -50%);
                                         background-repeat: no-repeat;
                                         background-size: contain;
@@ -172,29 +176,28 @@
                                 }
                             }
                         }
-            
+
                         //* multiple checkbox
-                        .hs-form-checkbox{
+                        .hs-form-checkbox {
                             margin-bottom: $measure;
-                            label{
+                            label {
                                 position: relative;
                                 margin-bottom: 0;
-                                input{
+                                input {
                                     position: absolute;
                                     opacity: 0;
                                     cursor: pointer;
-                                    left:0;
-                                    top:0;
+                                    left: 0;
+                                    top: 0;
                                     width: 100%;
                                     height: 100%;
                                     z-index: 0;
                                     padding: 0;
-                                    &:checked ~ span::after{
+                                    &:checked ~ span::after {
                                         opacity: 1;
                                     }
                                 }
-                                span{
-                                    
+                                span {
                                     @extend .f--font-#{$checkbox-title-font} !optional;
                                     @if $checkbox-title-font-weight {
                                         font-weight: $checkbox-title-font-weight;
@@ -203,54 +206,54 @@
                                     display: block;
                                     padding-left: calc(#{$measure} + #{$checkbox-square-width});
                                     cursor: pointer;
-                                    a{
+                                    a {
                                         @extend .#{$checkbox-link-class} !optional;
                                     }
                                     .hs-form-required,
-                                    span{
+                                    span {
                                         display: inline;
                                         padding-left: 0;
-                                        &::before{
+                                        &::before {
                                             content: none;
                                         }
                                     }
-                                    &::before{
-                                        content: '';
+                                    &::before {
+                                        content: "";
                                         position: absolute;
-                                        left:0;
-                                        top:50%;
+                                        left: 0;
+                                        top: 50%;
                                         transform: translateY(-50%);
-                                        height: $measure*2;
-                                        width: $measure*2;
-                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                        height: $measure * 2;
+                                        width: $measure * 2;
+                                        border: 1px solid rgba(map-get($color-options, b), 0.3);
                                     }
                                 }
                             }
-                            &:not(:last-child){
-                                margin-right: $measure*3;
+                            &:not(:last-child) {
+                                margin-right: $measure * 3;
                             }
                         }
-            
+
                         //* single checkbox
-                        .hs-form-booleancheckbox{
-                            label{
+                        .hs-form-booleancheckbox {
+                            label {
                                 position: relative;
                                 margin-bottom: 0;
-                                input{
+                                input {
                                     position: absolute;
                                     opacity: 0;
                                     cursor: pointer;
-                                    left:0;
-                                    top:0;
+                                    left: 0;
+                                    top: 0;
                                     width: 100%;
                                     height: 100%;
                                     z-index: 0;
                                     padding: 0;
-                                    &:checked ~ span::after{
+                                    &:checked ~ span::after {
                                         opacity: 1;
                                     }
                                 }
-                                span{
+                                span {
                                     @extend .f--font-#{$checkbox-title-font} !optional;
                                     @if $checkbox-title-font-weight {
                                         font-weight: $checkbox-title-font-weight;
@@ -259,92 +262,94 @@
                                     display: block;
                                     padding-left: calc(#{$measure} + #{$checkbox-square-width});
                                     cursor: pointer;
-                                    a{
+                                    a {
                                         @extend .#{$checkbox-link-class} !optional;
                                     }
                                     .hs-form-required,
-                                    span{
+                                    span {
                                         display: inline;
                                         padding-left: 0;
-                                        &::before{
+                                        &::before {
                                             content: none;
                                         }
                                     }
-                                    &::before{
-                                        content: '';
+                                    &::before {
+                                        content: "";
                                         position: absolute;
-                                        left:0;
-                                        top:50%;
+                                        left: 0;
+                                        top: 50%;
                                         transform: translateY(-50%);
-                                        height: $measure*2;
-                                        width: $measure*2;
-                                        border: 1px solid rgba(map-get($color-options, b), .3);
+                                        height: $measure * 2;
+                                        width: $measure * 2;
+                                        border: 1px solid rgba(map-get($color-options, b), 0.3);
                                     }
                                 }
                             }
                         }
                     }
                 }
-        
+
                 //* radio label, checkbox label
                 &.hs-fieldtype-radio,
                 &.hs-fieldtype-checkbox,
-                &.hs-fieldtype-booleancheckbox{
-                    label{
+                &.hs-fieldtype-booleancheckbox {
+                    label {
                         cursor: pointer;
                     }
                 }
-    
+
                 //* select
-                &.hs-fieldtype-select{
-                    .input{
+                &.hs-fieldtype-select {
+                    .input {
                         position: relative;
-                        &::after{
-                            content: '';
+                        &::after {
+                            content: "";
                             position: absolute;
                             top: 50%;
                             right: $measure;
-                            width: $measure*1.5;
-                            height: $measure*1.5;
+                            width: $measure * 1.5;
+                            height: $measure * 1.5;
                             border-right: $select-artwork-border-width solid;
                             border-bottom: $select-artwork-border-width solid;
                             transform: rotate(45deg) translateX(-75%) translateY(-35%);
                             pointer-events: none;
-                            @if $select-artwork-border-radius{
+                            @if $select-artwork-border-radius {
                                 border-radius: $select-artwork-border-radius;
                             }
                         }
-                        select{
+                        select {
                             @extend .f--font-#{$input-font} !optional;
                             @if $input-font-weight {
                                 font-weight: $input-font-weight;
                             }
                             display: block;
                             border: $input-border-width solid;
-                            padding: $measure*.5 $measure;
-                            width:100%;
+                            padding: $measure * 0.5 $measure;
+                            width: 100%;
                             border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
                             @if $mobile-font-size {
-                                @media all and ($viewport-type: $mobile){
+                                @media all and ($viewport-type: $mobile) {
                                     font-size: $mobile-font-size;
                                 }
                             }
-                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
                                 border: $input-border-width solid;
                             }
                             &.invalid,
-                            &.error{
+                            &.error {
                                 border: $input-border-width solid;
                             }
                         }
                     }
                 }
-    
+
                 //* file
-                &.hs-fieldtype-file{
-                    .input{
-                        input{
+                &.hs-fieldtype-file {
+                    .input {
+                        input {
                             @extend .f--font-#{$input-font} !optional;
                             @if $input-font-weight {
                                 font-weight: $input-font-weight;
@@ -356,19 +361,19 @@
                             -webkit-padding-start: 0 !important;
                             display: block;
                             border: $input-border-width solid;
-                            padding: $measure*.5 $measure;
+                            padding: $measure * 0.5 $measure;
                             width: 100%;
                             border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
                             @if $mobile-font-size {
-                                @media all and ($viewport-type: $mobile){
+                                @media all and ($viewport-type: $mobile) {
                                     font-size: $mobile-font-size;
                                 }
                             }
                             &::-webkit-file-upload-button {
                                 cursor: pointer;
                                 height: 100%;
-                                padding: $measure*.5 $measure*3;
+                                padding: $measure * 0.5 $measure * 3;
                                 appearance: none;
                                 -webkit-appearance: none;
                                 border: none;
@@ -382,15 +387,15 @@
                         }
                     }
                 }
-        
+
                 //* date
-                &.hs-fieldtype-date{
-                    .input{
+                &.hs-fieldtype-date {
+                    .input {
                         position: relative;
-                        &::after{
-                            content: '';
-                            height: $measure*3;
-                            width: $measure*3;
+                        &::after {
+                            content: "";
+                            height: $measure * 3;
+                            width: $measure * 3;
                             background-repeat: no-repeat;
                             background-position: center;
                             background-size: contain;
@@ -400,54 +405,56 @@
                             transform: translateY(-50%);
                             pointer-events: none;
                         }
-                        input{
+                        input {
                             @extend .f--font-#{$input-font} !optional;
                             @if $input-font-weight {
                                 font-weight: $input-font-weight;
                             }
                             display: block;
                             border: $input-border-width solid;
-                            padding: $measure*.5 $measure;
-                            width:100%;
+                            padding: $measure * 0.5 $measure;
+                            width: 100%;
                             border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
                             @if $mobile-font-size {
-                                @media all and ($viewport-type: $mobile){
+                                @media all and ($viewport-type: $mobile) {
                                     font-size: $mobile-font-size;
                                 }
                             }
-                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
                                 border: $input-border-width solid;
                             }
                             &.invalid,
-                            &.error{
+                            &.error {
                                 border: $input-border-width solid;
                             }
                         }
                     }
                 }
-        
+
                 //* error message after each input
-                .hs-error-msgs{
+                .hs-error-msgs {
                     list-style: none;
-                    label{
+                    label {
                         @extend .f--font-#{$input-error-font} !optional;
                         @if $input-error-font-weight {
                             font-weight: $input-error-font-weight;
                         }
-                        margin-top: $measure*.5;
+                        margin-top: $measure * 0.5;
                         margin-bottom: 0;
                         display: block;
                         border: none;
                     }
                 }
             }
-    
-            &.form-columns-2{
+
+            &.form-columns-2 {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                .field{
+                .field {
                     float: none;
                     width: calc(50% - 16px);
                     @media all and ($viewport-type: $tablets) {
@@ -456,28 +463,28 @@
                 }
             }
         }
-    
+
         //* submit btn
-        .hs_submit{
-            .actions{
-                .hs-button{
+        .hs_submit {
+            .actions {
+                .hs-button {
                     border-radius: 0;
                     @extend .#{$submit-btn-class} !optional;
                 }
             }
         }
-    
+
         //* form error
-        .hs_error_rollup{
+        .hs_error_rollup {
             .hs-error-msgs,
-            .inputs-list{
+            .inputs-list {
                 list-style: none;
-                label{
+                label {
                     @extend .f--font-#{$form-error-font} !optional;
                     @if $form-error-font-weight {
                         font-weight: $form-error-font-weight;
                     }
-                    margin-bottom: $measure*2;
+                    margin-bottom: $measure * 2;
                     display: block;
                     border: none;
                 }
@@ -511,182 +518,189 @@
     $checkbox-link-class-modifier: false,
     $option-color: false,
     $option-background: false,
-    $submit-btn-class-modifier: false,
+    $submit-btn-class-modifier: false
 ) {
-    .hs-form{
-        fieldset{
+    .hs-form {
+        fieldset {
             .field,
-            .hs-form-field{
-                label{
+            .hs-form-field {
+                label {
                     color: $label-color;
                 }
-        
+
                 //* generic input, textarea, radio, checkbox
-                .input{
+                .input {
                     //* generic input
-                    input{
+                    input {
                         border-color: $input-border-color;
                         background-color: $input-background-color !important;
                         color: $input-text-color !important;
-                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus {
                             border-color: $input-border-color;
                             -webkit-text-fill-color: $input-text-color;
                             -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
                         }
-                        &::placeholder{
+                        &::placeholder {
                             color: $input-placeholder-color;
                         }
                         &:focus,
-                        &:not(:placeholder-shown){
+                        &:not(:placeholder-shown) {
                             border-color: $input-border-color-focus;
                         }
                         &.invalid,
-                        &.error{
+                        &.error {
                             border-color: $input-error-border-color;
-                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
                                 border-color: $input-error-border-color;
                             }
                             &:focus,
-                            &:not(:placeholder-shown){
+                            &:not(:placeholder-shown) {
                                 border-color: $input-error-border-color;
                             }
                         }
                     }
-        
+
                     //* textarea
-                    textarea{
+                    textarea {
                         border-color: $input-border-color;
                         background-color: $input-background-color !important;
                         color: $input-text-color !important;
-                        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus {
                             border-color: $input-border-color;
                             -webkit-text-fill-color: $input-text-color;
                             -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
                         }
-                        &::placeholder{
+                        &::placeholder {
                             color: $input-placeholder-color;
                         }
                         &:focus,
-                        &:not(:placeholder-shown){
+                        &:not(:placeholder-shown) {
                             border-color: $input-border-color-focus;
                         }
                         &.invalid,
-                        &.error{
+                        &.error {
                             border-color: $input-error-border-color;
-                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
                                 border-color: $input-error-border-color;
                             }
                             &:focus,
-                            &:not(:placeholder-shown){
+                            &:not(:placeholder-shown) {
                                 border-color: $input-error-border-color;
                             }
                         }
                     }
-        
+
                     //* radio and checkbox
-                    .inputs-list{
-            
+                    .inputs-list {
                         //* multiple radio
-                        .hs-form-radio{
-                            label{
-                                input{
+                        .hs-form-radio {
+                            label {
+                                input {
                                     &:focus ~ span::before,
-                                    &:checked ~ span::before{
+                                    &:checked ~ span::before {
                                         border-color: $radio-circle-color-focus;
                                     }
                                 }
-                                span{
+                                span {
                                     color: $checkbox-title-color;
-                                    @if $checkbox-link-class-modifier{
-                                        a{
+                                    @if $checkbox-link-class-modifier {
+                                        a {
                                             @extend .#{$checkbox-link-class-modifier} !optional;
                                         }
                                     }
-                                    &::before{
+                                    &::before {
                                         border-color: $radio-circle-color;
                                     }
-                                    &::after{
+                                    &::after {
                                         background: $radio-artwork-color;
                                     }
                                 }
                             }
                         }
-            
+
                         //* multiple checkbox
-                        .hs-form-checkbox{
-                            label{
-                                input{
+                        .hs-form-checkbox {
+                            label {
+                                input {
                                     &:focus ~ span::before,
-                                    &:checked ~ span::before{
+                                    &:checked ~ span::before {
                                         border-color: $checkbox-square-color-focus;
                                     }
                                 }
-                                span{
+                                span {
                                     color: $checkbox-title-color;
-                                    @if $checkbox-link-class-modifier{
-                                        a{
+                                    @if $checkbox-link-class-modifier {
+                                        a {
                                             @extend .#{$checkbox-link-class-modifier} !optional;
                                         }
                                     }
-                                    &::before{
+                                    &::before {
                                         border-color: $checkbox-square-color;
                                     }
-                                    &::after{
-                                        background-image: url('#{$checkbox-artwork-img}');
+                                    &::after {
+                                        background-image: url("#{$checkbox-artwork-img}");
                                     }
                                 }
                             }
                         }
-            
+
                         //* single checkbox
-                        .hs-form-booleancheckbox{
-                            label{
-                                input{
+                        .hs-form-booleancheckbox {
+                            label {
+                                input {
                                     &:focus ~ span::before,
-                                    &:checked ~ span::before{
+                                    &:checked ~ span::before {
                                         border-color: $checkbox-square-color-focus;
                                     }
                                 }
-                                span{
+                                span {
                                     color: $checkbox-title-color;
-                                    @if $checkbox-link-class-modifier{
-                                        a{
+                                    @if $checkbox-link-class-modifier {
+                                        a {
                                             @extend .#{$checkbox-link-class-modifier} !optional;
                                         }
                                     }
-                                    &::before{
+                                    &::before {
                                         border-color: $checkbox-square-color;
                                     }
-                                    &::after{
-                                        background-image: url('#{$checkbox-artwork-img}');
+                                    &::after {
+                                        background-image: url("#{$checkbox-artwork-img}");
                                     }
                                 }
                             }
                         }
                     }
                 }
-    
+
                 //* select
-                &.hs-fieldtype-select{
-                    .input{
-                        &::after{
+                &.hs-fieldtype-select {
+                    .input {
+                        &::after {
                             border-right-color: $select-artwork-color;
                             border-bottom-color: $select-artwork-color;
                         }
-                        select{
+                        select {
                             border-color: $input-border-color;
                             background-color: $input-background-color !important;
                             color: $input-text-color !important;
                             &:focus,
-                            &:valid{
+                            &:valid {
                                 border-color: $input-border-color-focus;
                             }
-                            @if $option-color or $option-background{
-                                option{
-                                    @if $option-color{
+                            @if $option-color or $option-background {
+                                option {
+                                    @if $option-color {
                                         color: $option-color;
                                     }
-                                    @if $option-background{
+                                    @if $option-background {
                                         background: $option-background;
                                     }
                                 }
@@ -694,11 +708,11 @@
                         }
                     }
                 }
-    
+
                 //* file
-                &.hs-fieldtype-file{
-                    .input{
-                        input{
+                &.hs-fieldtype-file {
+                    .input {
+                        input {
                             border-color: $input-border-color;
                             background-color: $input-background-color !important;
                             color: $input-text-color !important;
@@ -708,75 +722,79 @@
                             }
                             &:hover,
                             &:focus,
-                            &:valid{
+                            &:valid {
                                 border-color: $input-border-color-focus;
                             }
                         }
                     }
                 }
-        
+
                 //* date
-                &.hs-fieldtype-date{
-                    .input{
-                        &::after{
+                &.hs-fieldtype-date {
+                    .input {
+                        &::after {
                             background-image: $date-background-image-a;
                         }
-                        input{
+                        input {
                             border-color: $input-border-color;
                             background-color: $input-background-color !important;
                             color: $input-text-color !important;
-                            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
                                 border-color: $input-border-color;
                                 -webkit-text-fill-color: $input-text-color;
                                 -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
                             }
-                            &::placeholder{
+                            &::placeholder {
                                 color: $input-placeholder-color;
                             }
                             &:focus,
-                            &:not(:placeholder-shown){
+                            &:not(:placeholder-shown) {
                                 border-color: $input-border-color-focus;
                             }
                             &.invalid,
-                            &.error{
+                            &.error {
                                 border-color: $input-error-border-color;
-                                &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
                                     border-color: $input-error-border-color;
                                 }
                                 &:focus,
-                                &:not(:placeholder-shown){
+                                &:not(:placeholder-shown) {
                                     border-color: $input-error-border-color;
                                 }
                             }
                         }
                     }
                 }
-        
+
                 //* error message after each input
-                .hs-error-msgs{
-                    label{
+                .hs-error-msgs {
+                    label {
                         color: $input-error-text-color;
                     }
                 }
             }
         }
-    
-        @if $submit-btn-class-modifier{
+
+        @if $submit-btn-class-modifier {
             //* submit btn
-            .hs_submit{
-                .actions{
-                    .hs-button{
+            .hs_submit {
+                .actions {
+                    .hs-button {
                         @extend .#{$submit-btn-modifier} !optional;
                     }
                 }
             }
         }
-    
+
         //* form error
-        .hs_error_rollup{
+        .hs_error_rollup {
             .hs-error-msgs,
-            .inputs-list{
-                label{
+            .inputs-list {
+                label {
                     color: $form-error-text-color;
                 }
             }

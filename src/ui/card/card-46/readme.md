@@ -31,25 +31,38 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
 
--   $link-class
--   $content-font
--   $heading-font
--   $person-font
--   $position-font
--   $border-radius
--   $content-font-weight
--   $heading-font-weight
--   $person-font-weight
--   $position-font-weight
--   $change-order-reponsive
--   $content-color
--   $heading-color
--   $person-color
--   $position-color
--   $background-color
--   $img-background-color
--   $text-align
--   $breakpoint
+- $link-class
+- $content-font
+- $heading-font
+- $person-font
+- $position-font
+- $border-radius
+- $border-color
+- $border-style
+- $border-width
+- $content-font-weight
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-height
+- $img-position
+- $img-fit
+- $img-width
+- $img-background-color
+- $heading-font-weight
+- $person-font-weight
+- $position-font-weight
+- $change-order-reponsive
+- $content-color
+- $heading-color
+- $person-color
+- $position-color
+- $background-color
+- $text-align
+- $breakpoint
 
 ## use
 
@@ -85,7 +98,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $heading-color: map-get($color-options, g),
         $person-color: map-get($color-options, g),
         $position-color: map-get($color-options, a),
-        $background-color: map-get($color-options, e),
+        $background-color: lighten(map-get($color-options,a), 82%),
         $img-background-color: map-get($color-options, g),
         $text-align: left,
         $breakpoint: $tablets

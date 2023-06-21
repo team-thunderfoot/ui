@@ -1,0 +1,321 @@
+@mixin make-card-31() {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+
+    &__media-wrapper {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        &__media {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+        padding: $measure * 6 $measure * 5;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        &__hd {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            &__meta {
+                margin-bottom: $measure * 3;
+                margin-right: $measure * 2;
+            }
+            &__author {
+                margin-bottom: $measure * 3;
+            }
+        }
+
+        &__title {
+            margin-bottom: $measure * 3;
+        }
+        &__list-group {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: $measure * 2;
+            row-gap: $measure;
+            margin-top: auto;
+        }
+    }
+}
+
+@mixin make-card-31-modifier(
+    $author-font: false,
+    $author-font-weight: false,
+    $author-color: false,
+    $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $full-image-height: false,
+    $hover-background-color: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio-width: false,
+    $img-aspect-ratio-height: false,
+    $img-height: false,
+    $img-position: false,
+    $meta-color: false,
+    $meta-font: false,
+    $meta-font-weight: false,
+    $pill-class: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false
+) {
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-background-color {
+        .g--card-31 {
+            &__wrapper {
+                transition: background $time-b $ease-standard-a;
+                @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                    &::before {
+                        transition: background $time-b $ease-standard-a;
+                    }
+                }
+            }
+        }
+
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-31 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                        @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                            &::before {
+                                background: $hover-background-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-title-color {
+        .g--card-31 {
+            &__wrapper {
+                &__title {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-31 {
+                    &__wrapper {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
+        .g--card-31 {
+            &__media-wrapper {
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-31 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .g--card-31 {
+        &__media-wrapper {
+            @if $full-image-height == "no" {
+                height: auto;
+            } @else if $full-image-height {
+                height: 100%;
+            }
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                padding-top: calc((#{$img-aspect-ratio-height} / #{$img-aspect-ratio-width})*100%);
+            } @else{
+                padding-top: 0;
+            }
+            @if $img-height {
+                height: auto;
+            }
+            &__media {
+                @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                } @else{
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                @if $img-position {
+                    object-position: $img-position;
+                }
+            }
+        }
+        &__wrapper {
+            @if $full-image-height {
+                height: auto;
+            }
+            @if $background-color {
+                background: $background-color;
+            }
+
+
+            @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                height: auto;
+
+                @if $background-color {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        height: 300%;
+                        z-index: 0;
+                        background: $background-color;
+                    }
+                }
+            }
+
+            @if $img-aspect-ratio-width and $img-aspect-ratio-height {
+                height: 100%;
+            }
+
+            @if $img-height {
+                height: calc(100% - #{$img-height});
+            }
+
+            &__hd {
+                &__meta {
+                    @if $meta-font {
+                        @extend .f--font-#{$meta-font} !optional;
+                    }
+                    @if $meta-font-weight {
+                        font-weight: $meta-font-weight;
+                    }
+                    @if $meta-color {
+                        color: $meta-color;
+                    }
+                }
+                &__author {
+                    @if $author-font {
+                        @extend .f--font-#{$author-font} !optional;
+                    }
+                    @if $author-font-weight {
+                        font-weight: $author-font-weight;
+                    }
+                    @if $author-color {
+                        color: $author-color;
+                    }
+                }
+            }
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            &__list-group {
+                &__list-item {
+                    @if $pill-class {
+                        @extend .#{$pill-class} !optional;
+                    }
+                }
+            }
+        }
+    }
+}

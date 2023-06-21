@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-decoration: none;
     &__media-wrapper{
         overflow: hidden;
         margin-bottom: $measure * 2;
@@ -47,7 +48,7 @@
     $img-aspect-ratio: false,
     $img-height: false,
     $img-position: false,
-    $img-size: false,
+    $img-fit: false,
     $img-width: false,
     $link-class: false,
     $link-font: false,
@@ -75,10 +76,7 @@
     @if $border-width {
         border-width: $border-width;
     }
-    @if $hover-background-color or $hover-title-color or $hover-img-zoom or $hover-shadow or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
+
     @if $hover-background-color and $hover-shadow and $hover-transform {
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
@@ -238,13 +236,13 @@
                     aspect-ratio: $img-aspect-ratio;
                 }
                 @if $img-width {
-                    width: $img-width;
+                    width: 100%;
                 }
                 @if $img-height {
-                    height: $img-height;
+                    height: 100%;
                 }
-                @if $img-size{
-                    object-fit: $img-size;
+                @if $img-fit{
+                    object-fit: $img-fit;
                 }
                 @if $img-position{
                     object-position: $img-position;

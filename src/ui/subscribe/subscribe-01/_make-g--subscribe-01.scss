@@ -1,0 +1,274 @@
+@mixin make-subscribe-01() {
+    .hs-form{
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        column-gap: $measure*2;
+        .hs-form-field{
+            margin-bottom: $measure;
+            min-width: 50%;
+            position: relative;
+            label{
+                margin-bottom: $measure;
+                display: block;
+                span{}
+            }
+            .input{
+                input{
+                    display: block;
+                    padding: $measure*.5 $measure;
+                    width:100%;
+                    transition: border-color $time-b $ease-standard-a;
+                }
+            }
+            .hs-error-msgs{
+                position: absolute;
+                top: calc(100% + #{$measure*.5});
+                left: 0;
+                width: 100%;
+                li{
+                    label{
+                        margin-bottom: 0;
+                    }
+                }
+                & + .hs-error-msgs{
+                    display: none;
+                }
+            }
+            &.hs-recaptcha{
+                width: 100%;
+                order: 1;
+                margin-bottom: 0;
+            }
+        }
+        .hs_error_rollup{
+            display: none;
+        }
+        .hs-submit{
+            margin-bottom: $measure;
+            .actions{
+                .hs-button{}
+            }
+        }
+    }
+}
+
+@mixin make-subscribe-01-modifier(
+    $breakpoint: false,
+    $btn-class: false,
+    $btn-min-height: false,
+    $btn-width: false,
+    $error-font: false,
+    $error-font-weight: false,
+    $error-height: false,
+    $error-text-color: false,
+    $input-background-color: false,
+    $input-background-color-autofill: false,
+    $input-border-color: false,
+    $input-border-color-focus: false,
+    $input-border-radius: false,
+    $input-border-style: false,
+    $input-border-width: false,
+    $input-error-border-color: false,
+    $input-font: false,
+    $input-font-size-mobile: false,
+    $input-font-weight: false,
+    $input-min-height: false,
+    $input-placeholder-color: false,
+    $input-text-color: false,
+    $label-color: false,
+    $label-font: false,
+    $label-font-weight: false,
+    $label-required-color: false,
+    $label-required-font: false,
+    $label-required-font-weight: false,
+    $success-message-font: false,
+    $success-message-font-weight: false,
+    $success-message-text-color: false,
+) {
+    .hs-form{
+        @media all and ($viewport-type: $breakpoint){
+            position: relative;
+        }
+        .hs-form-field{
+            @if $btn-width {
+                width: calc(100% - #{$measure*2} - #{$btn-width})
+            }
+            @if $error-height {
+                margin-bottom: $error-height;
+            }
+            label{
+                @if $label-color {
+                    color: $label-color;
+                }
+                @if $label-font {
+                    @extend .f--font-#{$label-font} !optional;
+                }
+                @if $label-font-weight {
+                    font-weight: $label-font-weight;
+                }
+                span{
+                    @if $label-color {
+                        color: $label-color;
+                    }
+                    @if $label-font {
+                        @extend .f--font-#{$label-font} !optional;
+                    }
+                    @if $label-font-weight {
+                        font-weight: $label-font-weight;
+                    }
+                    &.hs-form-required{
+                        @if $label-required-color {
+                            color: $label-required-color;
+                        }
+                        @if $label-required-font {
+                            @extend .f--font-#{$label-required-font} !optional;
+                        }
+                        @if $label-required-font-weight {
+                            font-weight: $label-required-font-weight;
+                        }
+                    }
+                }
+            }
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint){
+                    width: 100%;
+                    margin-bottom: $measure;
+                    position: initial;
+                }
+            }
+            .input{
+                input{
+                    @if $input-background-color {
+                        background-color: $input-background-color !important;
+                    }
+                    @if $input-border-color {
+                        border-color: $input-border-color;
+                    }
+                    @if $input-border-radius {
+                        border-radius: $input-border-radius;
+                    }
+                    @if $input-border-style {
+                        border-style: $input-border-style;
+                    }
+                    @if $input-border-width {
+                        border-width: $input-border-width;
+                    }
+                    @if $input-font {
+                        @extend .f--font-#{$input-font} !optional;
+                    }
+                    @if $input-font-size-mobile {
+                        @media all and ($viewport-type: $mobile){
+                            font-size: $input-font-size-mobile;
+                        }
+                    }
+                    @if $input-font-weight {
+                        font-weight: $input-font-weight;
+                    }
+                    @if $input-text-color {
+                        color: $input-text-color !important;
+                    }
+                    @if $input-min-height {
+                        min-height: $input-min-height;
+                    }
+                    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                        @if $input-background-color-autofill {
+                            -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                        }
+                        @if $input-border-color {
+                            border-color: $input-border-color;
+                        }
+                        @if $input-border-width {
+                            border-width: $input-border-width;
+                        }
+                        @if $input-border-style {
+                            border-style: $input-border-style;
+                        }
+                        @if $input-text-color {
+                            -webkit-text-fill-color: $input-text-color;
+                        }
+                    }
+                    @if $input-placeholder-color {
+                        &::placeholder{
+                            color: $input-placeholder-color;
+                        }
+                    }
+                    @if $input-border-color-focus {
+                        &:focus,
+                        &:not(:placeholder-shown){
+                            border-color: $input-border-color-focus;
+                        }
+                    }
+                    @if $input-placeholder-color {
+                        &::placeholder{
+                            color: $input-placeholder-color;
+                        }
+                    }
+                    @if $input-error-border-color {
+                        &.invalid,
+                        &.error {
+                            border-color: $input-error-border-color;
+                        }
+                    }
+                }
+            }
+            .hs-error-msgs{
+                li{
+                    label{
+                        @if $error-font {
+                            @extend .f--font-#{$error-font} !optional;
+                        }
+                        @if $error-font-weight {
+                            font-weight: $error-font-weight;
+                        }
+                        @if $error-text-color {
+                            color: $error-text-color !important;
+                        }
+                    }
+                }
+            }
+            &.hs-recaptcha{
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint){
+                        order: 0;
+                        margin-bottom: $measure;
+                    }
+                }
+            }
+        }
+        .hs-submit{
+            @if $error-height {
+                margin-bottom: $error-height;
+            }
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint){
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+            .actions{
+                .hs-button{
+                    @if $btn-class {
+                        @extend .#{$btn-class} !optional;
+                    }
+                    @if $btn-min-height {
+                        min-height: $btn-min-height;
+                    }
+                }
+            }
+        }
+    }
+    .hbspt-form{
+        .submitted-message{
+            @if $success-message-font {
+                @extend .f--font-#{$success-message-font} !optional;
+            }
+            @if $success-message-font-weight {
+                font-weight: $success-message-font-weight;
+            }
+            @if $success-message-text-color {
+                color: $success-message-text-color !important;
+            }
+        }
+    }
+}

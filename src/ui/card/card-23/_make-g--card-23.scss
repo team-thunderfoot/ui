@@ -5,6 +5,7 @@
     flex-direction: column;
     position: relative;
     padding: $measure * 6 $measure * 5;
+    text-decoration: none;
 
     &__hd {
         display: flex;
@@ -54,7 +55,6 @@
     $meta-font: false,
     $meta-font-weight: false,
     $pill-class: false,
-    $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -72,9 +72,19 @@
     @if $border-width {
         border-width: $border-width;
     }
-    @if $hover-background-color or $hover-title-color or $hover-shadow or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a,
+            background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                background: $hover-background-color;
+            }
+        }
     }
 
     @if $hover-shadow and $hover-transform {
@@ -106,16 +116,62 @@
             }
         }
     }
-    @if $hover-background-color {
-        .g--card-23 {
-            transition: background $time-b $ease-standard-a;
 
-            @media all and (hover: hover) {
-                &:hover,
-                &:focus,
-                &:active {
-                    background: $hover-background-color;
-                }
+    @if $hover-shadow and $hover-background-color {
+        transition: box-shadow $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    }
+    @if $hover-transform and $hover-background-color {
+        transition: transform $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
             }
         }
     }
@@ -135,45 +191,6 @@
                         color: $hover-title-color;
                     }
                 }
-            }
-        }
-    }
-
-    @if $text-align == "center" {
-        text-align: center;
-        .g--card-23 {
-            &__list-group {
-                justify-content: center;
-            }
-            &__link {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    }
-
-    @if $text-align == "left" {
-        text-align: left;
-        .g--card-23 {
-            &__list-group {
-                justify-content: flex-start;
-            }
-            &__link {
-                margin-left: 0;
-                margin-right: auto;
-            }
-        }
-    }
-
-    @if $text-align == "right" {
-        text-align: right;
-        .g--card-23 {
-            &__list-group {
-                justify-content: flex-end;
-            }
-            &__link {
-                margin-left: auto;
-                margin-right: 0;
             }
         }
     }

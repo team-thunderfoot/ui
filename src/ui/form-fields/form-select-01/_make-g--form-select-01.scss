@@ -1,18 +1,10 @@
-@mixin make-form-select-01(
-    $artwork-url,
-    $border-radius,
-    $border-width,
-    $font,
-    $font-weight: false,
-    $mobile-font-size: false
-) {
+@mixin make-form-select-01() {
     position: relative;
     &::after{
         content: '';
         position: absolute;
         top: 50%;
         right: $measure;
-        background-image: $artwork-url;
         background-repeat: no-repeat;
         background-position: center;
         width: 1rem;
@@ -21,44 +13,77 @@
         pointer-events: none;
     }
     &__item{
-        @extend .f--font-#{$font} !optional;
-        @if $font-weight {
-            font-weight: $font-weight;
-        }
         display: block;
-        border: $border-width solid;
         padding: $measure $measure * 1.5;
         width:100%;
-        border-radius: $border-radius;
         transition: border-color $time-b $ease-standard-a;
-        @if $mobile-font-size {
-            @media all and ($viewport-type: $mobile){
-                font-size: $mobile-font-size;
-            }
-        }
-        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-            border: $border-width solid;
-        }
     }
 }
 
 @mixin make-form-select-01-modifier(
-    $background-color,
-    $border-color,
-    $border-color-focus,
-    $error-border-color,
-    $text-color,
-    $option-color: false,
+    $artwork-url: false,
+    $background-color: false,
+    $border-color: false,
+    $border-color-focus: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $error-border-color: false,
+    $font: false,
+    $font-size-mobile: false,
+    $font-weight: false,
     $option-background: false,
+    $option-color: false,
+    $text-color: false,
 ) {
+    @if $artwork-url{
+        &::after{
+            background-image: $artwork-url;
+        }
+    }
     .g--form-select-01{
         &__item{
-            border-color: $border-color;
-            background-color: $background-color !important;
-            color: $text-color !important;
-            &:focus,
-            &:valid{
-                border-color: $border-color-focus;
+            @if $border-color {
+                border-color: $border-color;
+            }
+            @if $border-width {
+                border-width: $border-width;
+
+                &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                    border-width: $border-width;
+                }
+            }
+            @if $border-style {
+                border-style: $border-style;
+                &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+                    border-style: $border-style;
+                }
+            }
+            @if $border-radius {
+                border-radius: $border-radius;
+            }
+            @if $background-color {
+                background-color: $background-color !important;
+            }
+            @if $text-color {
+                color: $text-color !important;
+            }
+            @if $font {
+                @extend .f--font-#{$font} !optional;
+            }
+            @if $font-weight {
+                font-weight: $font-weight;
+            }
+            @if $font-size-mobile {
+                @media all and ($viewport-type: $mobile){
+                    font-size: $font-size-mobile;
+                }
+            }
+            @if $border-color-focus {
+                &:focus,
+                &:valid{
+                    border-color: $border-color-focus;
+                }
             }
             @if $option-color or $option-background{
                 option{
@@ -72,13 +97,15 @@
             }
         }
     }
-    &.g--form-select-01--error{
-        .g--form-select-01{
-            &__item{
-                border-color: $error-border-color;
-                &:focus,
-                &:valid{
+    @if $error-border-color{
+        &.g--form-select-01--error{
+            .g--form-select-01{
+                &__item{
                     border-color: $error-border-color;
+                    &:focus,
+                    &:valid{
+                        border-color: $error-border-color;
+                    }
                 }
             }
         }

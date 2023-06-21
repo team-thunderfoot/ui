@@ -1,0 +1,45 @@
+.g--card-32 {
+    @include make-card-32();
+    @include make-card-32-modifier(
+        $author-color: map-get($color-options, a),
+        $author-font-weight: 600,
+        $author-font: g,
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, e),
+        $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        $img-height: 300px,
+        $img-position: center,
+        $meta-color: map-get($color-options, a),
+        $meta-font-weight: 600,
+        $meta-font: f,
+        $pill-class: g--pill-01,
+        $title-color: map-get($color-options, a),
+        $title-font-weight: 600,
+        $title-font: c,
+        $title-max-lines: 3
+    );
+
+    &--second {
+        @include make-card-32-modifier(
+            $author-color: map-get($color-options, a),
+            $author-font-weight: 320,
+            $author-font: g,
+            $hover-img-zoom: 1.5,
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: 2,
+            $img-border-radius: 20%,
+            $img-height: auto,
+            $img-position: center,
+            $meta-color: map-get($color-options, a),
+            $meta-font-weight: 600,
+            $meta-font: f,
+            $pill-class: g--pill-01,
+            $title-color: map-get($color-options, a),
+            $title-font-weight: 600,
+            $title-font: c,
+            $title-max-lines: 3
+        );
+    }
+}

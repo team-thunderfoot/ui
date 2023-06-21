@@ -44,7 +44,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $img-aspect-ratio
 - $img-height
 - $img-position
-- $img-size
+- $img-fit
 - $img-width
 
 ## Use
@@ -61,7 +61,7 @@ To use it we have to import the css of the $btn-class in the entry
         $img-aspect-ratio: false,
         $img-height: 100px,
         $img-position: center,
-        $img-size: cover,
+        $img-fit: cover,
         $img-width: auto,
         $title-color: map-get($color-options, a),
         $title-font: c,

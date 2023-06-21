@@ -16,137 +16,34 @@
         <div class="f--row">
           <div class="f--col-12">
             <a href="./index.html" class="f--font-f g--link-01 f--sp-c display--inline-block">Back to Index</a>
-            <h1 class="f--font-b">Global Form Fields</h1>
+            <h1 class="f--font-b f--sp-a">Global Form Fields</h1>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a" style="overflow-wrap: break-word">
+                <strong>Note:</strong> To go to any form field we can add "#form-formItem-formNumber" in the url. For example, to go to form-input-01 add "#form-input-01", the url will be "https://globalcomponents.netlify.app/form-fields.html#form-input-01"
+            </p>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a">
+                <strong>Note variables:</strong> For form fields modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier except variables that depend on an existing class (fonts...) and $font-size-mobile variable. If we want to change a font in a modifier, the default font must be the first one (starting with a).
+            </p>
+            <p class="f--font-f f--background-a f--p-3"><strong>Note border:</strong> For form fields with border we can set different border-color, border-style or border-width for each side (or add border just to one side).</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="f--section-c">
-      <div class="f--container">
-        <div class="f--row f--gap-d">
-          <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-01, form-input-01, form-error-01</h2>
-            <div class="f--row">
-              <div class="f--col-6 f--col-mobile-12">
-                <div class="g--form-group-01">
-                  <label for="text-01" class="g--form-label-01">This is the text input *</label>
-                  <div class="g--form-input-01">
-                    <input type="text" id="text-01" class="g--form-input-01__item" placeholder=" ">
-                  </div>
-                </div>
-              </div>
-              <div class="f--col-6 f--col-mobile-12">
-                <div class="g--form-group-01">
-                  <label for="text-01--error" class="g--form-label-01">This is the text input *</label>
-                  <div class="g--form-input-01 g--form-input-01--error">
-                    <input type="text" id="text-01--error" class="g--form-input-01__item" placeholder=" ">
-                  </div>
-                  <span class="g--form-error-01">This is an error message</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-            <div class="f--row">
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <ul class="f--sp-c" style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$border-radius</li>
-                  <li>$border-width</li>
-                  <li>$error-border-color</li>
-                  <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li>$placeholder-color</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$error-border-color</li>
-                  <li>$placeholder-color</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
+    <button class="g--back-top-01 js--back-top" tf-data-distance="500">
+      <div class="g--icon-01">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+              <path d="M0.5 8L8.5 -3.49691e-07L16.5 8L15.1 9.425L9.5 3.825L9.5 16L7.5 16L7.5 3.825L1.9 9.425L0.5 8Z" fill="#1A191D" />
+          </svg>
       </div>
-    </section>
-    <section class="f--section-c">
+    </button>
+
+
+    <!-- form-checkbox-01 -->
+    <section class="f--section-c" id="form-checkbox-01">
       <div class="f--container">
         <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-01, form-textarea-01, form-error-01</h2>
-            <div class="f--row">
-              <div class="f--col-6 f--col-mobile-12">
-                <div class="g--form-group-01">
-                  <label for="textarea-01" class="g--form-label-01">This is a textarea *</label>
-                  <div class="g--form-textarea-01">
-                    <textarea id="textarea-01" class="g--form-textarea-01__item" placeholder=" "></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="f--col-6 f--col-mobile-12">
-                <div class="g--form-group-01">
-                  <label for="textarea-01--error" class="g--form-label-01">This is a textarea *</label>
-                  <div class="g--form-textarea-01 g--form-textarea-01--error">
-                    <textarea id="textarea-01--error" class="g--form-textarea-01__item" placeholder=" "></textarea>
-                  </div>
-                  <span class="g--form-error-01">This is an error message</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="f--col-4 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-            <div class="f--row">
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <ul class="f--sp-c" style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$border-radius</li>
-                  <li>$border-width</li>
-                  <li>$error-border-color</li>
-                  <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li>$placeholder-color</li>
-                  <li>$textarea-height</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$error-border-color</li>
-                  <li>$placeholder-color</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="f--section-c">
-      <div class="f--container">
-        <div class="f--row f--gap-d">
-          <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-01, form-checkbox-01, form-error-01</h2>
+            <h2 class="f--font-c f--sp-b">form-checkbox-01</h2>
             <div class="f--row">
               <div class="f--col-6 f--col-mobile-12">
                 <fieldset class="g--form-group-01">
@@ -171,6 +68,19 @@
                   <span class="g--form-error-01">This is an error message</span>
                 </fieldset>
               </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <fieldset class="g--form-group-01">
+                  <legend class="g--form-label-01">This is the question --second</legend>
+                  <div class="g--form-checkbox-01 g--form-checkbox-01--second">
+                    <input type="checkbox" id="checkbox-01--second" class="g--form-checkbox-01__item">
+                    <label class="g--form-checkbox-01__title" for="checkbox-01--second">This is a checkbox</label>
+                  </div>
+                  <div class="g--form-checkbox-01 g--form-checkbox-01--second">
+                    <input type="checkbox" id="checkbox-01-option--second" class="g--form-checkbox-01__item">
+                    <label class="g--form-checkbox-01__title" for="checkbox-01-option--second">This is a checkbox</label>
+                  </div>
+                </fieldset>
+              </div>
             </div>
           </div>
           <div class="f--col-4 f--col-tabletm-12">
@@ -178,25 +88,21 @@
             <div class="f--row">
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul class="f--sp-c" style="list-style: inside;">
-                  <li>$artwork-img</li>
+                  <li>$artwork-background</li>
+                  <li>$artwork-background-position</li>
+                  <li>$artwork-background-repeat</li>
+                  <li>$artwork-background-size</li>
+                  <li>$artwork-border-radius</li>
                   <li>$error-border-color</li>
                   <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
+                  <li>$font-mobile-size</li>
+                  <li>$font-weight</li>
                   <li>$square-border-radius</li>
+                  <li>$square-border-style</li>
                   <li>$square-border-width</li>
-                  <li>$square-color</li>
+                  <li>$square-border-color</li>
                   <li>$square-color-focus</li>
                   <li>$square-width</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$artwork-img</li>
-                  <li>$error-border-color</li>
-                  <li>$square-color</li>
-                  <li>$square-color-focus</li>
                   <li>$text-color</li>
                 </ul>
               </div>
@@ -205,11 +111,234 @@
         </div>
       </div>
     </section>
-    <section class="f--section-c">
+
+    <!-- form-error-01 -->
+    <section class="f--section-c" id="form-error-01">
       <div class="f--container">
         <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-01, form-radio-01, form-error-01</h2>
+            <h2 class="f--font-c f--sp-b">form-error-01</h2>
+            <div class="f--row">
+              <div class="f--col-6 f--col-mobile-12">
+                <span class="g--form-error-01">This is an error message</span>
+              </div>
+            </div>
+          </div>
+          <div class="f--col-4 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row">
+              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                <ul class="f--sp-c" style="list-style: inside;">
+                  <li>$font</li>
+                  <li>$font-weight</li>
+                  <li>$text-color</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form-file-01 -->
+    <section class="f--section-c" id="form-file-01">
+      <div class="f--container">
+        <div class="f--row f--gap-d">
+          <div class="f--col-8 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-b">form-file-01</h2>
+            <div class="f--row">
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="file-01" class="g--form-label-01">This is an upload *</label>
+                  <div class="g--form-file-01">
+                    <input type="file" id="file-01" class="g--form-file-01__item" required>
+                  </div>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="file-01--error" class="g--form-label-01">This is an upload *</label>
+                  <div class="g--form-file-01 g--form-file-01--error">
+                    <input type="file" id="file-01--error" class="g--form-file-01__item" required>
+                  </div>
+                  <span class="g--form-error-01">This is an error message</span>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="file-01" class="g--form-label-01">This is an upload *</label>
+                  <div class="g--form-file-01 g--form-file-01--second">
+                    <input type="file" id="file-01" class="g--form-file-01__item" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f--col-4 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row">
+              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                <ul class="f--sp-c" style="list-style: inside;">
+                  <li>$background-color</li>
+                  <li>$border-color</li>
+                  <li>$border-color-focus</li>
+                  <li>$border-radius</li>
+                  <li>$border-style</li>
+                  <li>$border-width</li>
+                  <li>$btn-background</li>
+                  <li>$btn-background-position</li>
+                  <li>$btn-background-repeat</li>
+                  <li>$btn-background-size</li>
+                  <li>$btn-border-color</li>
+                  <li>$btn-border-style</li>
+                  <li>$btn-border-width</li>
+                  <li>$btn-font</li>
+                  <li>$btn-font-weight</li>
+                  <li>$btn-text-color</li>
+                  <li>$btn-transition</li>
+                  <li>$error-border-color</li>
+                  <li>$font</li>
+                  <li>$font-weight</li>
+                  <li>$font-mobile-size</li>
+                  <li>$hover-btn-background-color</li>
+                  <li>$hover-btn-background-position</li>
+                  <li>$hover-btn-background-size</li>
+                  <li>$hover-btn-border-color</li>
+                  <li>$hover-btn-text-color</li>
+                  <li>$text-color</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form-group-01 -->
+    <section class="f--section-c" id="form-group-01">
+      <div class="f--container">
+        <div class="f--row f--gap-d">
+          <div class="f--col-8 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-b">form-group-01</h2>
+            <div class="f--row">
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f--col-4 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-a">This component has no editable variables</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form-input-01 -->
+    <section class="f--section-c" id="form-input-01">
+      <div class="f--container">
+        <div class="f--row f--gap-d">
+          <div class="f--col-8 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-b">form-input-01</h2>
+            <div class="f--row">
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="text-01" class="g--form-label-01">This is the text input *</label>
+                  <div class="g--form-input-01">
+                    <input type="text" id="text-01" class="g--form-input-01__item" placeholder="placeholder">
+                  </div>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="text-01--error" class="g--form-label-01">This is the text input *</label>
+                  <div class="g--form-input-01 g--form-input-01--error">
+                    <input type="text" id="text-01--error" class="g--form-input-01__item" placeholder="placeholder">
+                  </div>
+                  <span class="g--form-error-01 g--form-error-01--second">This is an error message</span>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="text-01--second" class="g--form-label-01">This is the text input *</label>
+                  <div class="g--form-input-01 g--form-input-01--second">
+                    <input type="text" id="text-01--second" class="g--form-input-01__item" placeholder="placeholder">
+                  </div>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="text-01--error--second" class="g--form-label-01">This is the text input *</label>
+                  <div class="g--form-input-01 g--form-input-01--second g--form-input-01--error">
+                    <input type="text" id="text-01--error--second" class="g--form-input-01__item" placeholder="placeholder">
+                  </div>
+                  <span class="g--form-error-01">This is an error message</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f--col-4 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row">
+              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                <ul class="f--sp-c" style="list-style: inside;">
+                  <li>$background-color</li>
+                  <li>$background-color-autofill</li>
+                  <li>$border-color</li>
+                  <li>$border-color-focus</li>
+                  <li>$border-radius</li>
+                  <li>$border-style</li>
+                  <li>$border-width</li>
+                  <li>$error-border-color</li>
+                  <li>$font</li>
+                  <li>$font-size-mobile</li>
+                  <li>$font-weight</li>
+                  <li>$placeholder-color</li>
+                  <li>$text-color</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form-label-01 -->
+    <section class="f--section-c" id="form-label-01">
+      <div class="f--container">
+        <div class="f--row f--gap-d">
+          <div class="f--col-8 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-b">form-label-01</h2>
+            <div class="f--row">
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="for" class="g--form-label-01">This is the text input *</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f--col-4 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row">
+              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                <ul class="f--sp-c" style="list-style: inside;">
+                  <li>$label-color</li>
+                  <li>$label-font</li>
+                  <li>$label-font-weight</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form-radio-01 -->
+    <section class="f--section-c" id="form-radio-01">
+      <div class="f--container">
+        <div class="f--row f--gap-d">
+          <div class="f--col-8 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-b">form-radio-01</h2>
             <div class="f--row">
               <div class="f--col-6 f--col-mobile-12">
                 <fieldset class="g--form-group-01">
@@ -242,23 +371,14 @@
               <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                 <ul class="f--sp-c" style="list-style: inside;">
                   <li>$artwork-color</li>
+                  <li>$circle-border-style</li>
                   <li>$circle-border-width</li>
                   <li>$circle-color</li>
                   <li>$circle-color-focus</li>
                   <li>$circle-width</li>
                   <li>$error-border-color</li>
                   <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$artwork-color</li>
-                  <li>$circle-color</li>
-                  <li>$circle-color-focus</li>
-                  <li>$error-border-color</li>
+                  <li>$font-weight</li>
                   <li>$text-color</li>
                 </ul>
               </div>
@@ -267,11 +387,13 @@
         </div>
       </div>
     </section>
-    <section class="f--section-c">
+
+    <!-- form-select-01 -->
+    <section class="f--section-c" id="form-select-01">
       <div class="f--container">
         <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-01, form-select-01, form-error-01</h2>
+            <h2 class="f--font-c f--sp-b">form-select-01</h2>
             <div class="f--row">
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
@@ -314,24 +436,14 @@
                   <li>$border-color</li>
                   <li>$border-color-focus</li>
                   <li>$border-radius</li>
+                  <li>$border-style</li>
                   <li>$border-width</li>
                   <li>$error-border-color</li>
                   <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li class="f--color-g">$option-color: false by default</li>
-                  <li class="f--color-g">$option-background: false by default</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$error-border-color</li>
-                  <li>$placeholder-color</li>
+                  <li>$font-size-mobile</li>
+                  <li>$font-weight</li>
+                  <li>$option-background</li>
+                  <li>$option-color</li>
                   <li>$text-color</li>
                 </ul>
               </div>
@@ -340,25 +452,27 @@
         </div>
       </div>
     </section>
-    <section class="f--section-c">
+
+    <!-- form-textarea-01 -->
+    <section class="f--section-c" id="form-textarea-01">
       <div class="f--container">
         <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-01, form-file-01, form-error-01</h2>
+            <h2 class="f--font-c f--sp-b">form-textarea-01</h2>
             <div class="f--row">
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
-                  <label for="file-01" class="g--form-label-01">This is an upload *</label>
-                  <div class="g--form-file-01">
-                    <input type="file" id="file-01" class="g--form-file-01__item" required>
+                  <label for="textarea-01" class="g--form-label-01">This is a textarea *</label>
+                  <div class="g--form-textarea-01">
+                    <textarea id="textarea-01" class="g--form-textarea-01__item" placeholder="placeholder"></textarea>
                   </div>
                 </div>
               </div>
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
-                  <label for="file-01--error" class="g--form-label-01">This is an upload *</label>
-                  <div class="g--form-file-01 g--form-file-01--error">
-                    <input type="file" id="file-01--error" class="g--form-file-01__item" required>
+                  <label for="textarea-01--error" class="g--form-label-01">This is a textarea *</label>
+                  <div class="g--form-textarea-01 g--form-textarea-01--error">
+                    <textarea id="textarea-01--error" class="g--form-textarea-01__item" placeholder="placeholder"></textarea>
                   </div>
                   <span class="g--form-error-01">This is an error message</span>
                 </div>
@@ -375,25 +489,15 @@
                   <li>$border-color</li>
                   <li>$border-color-focus</li>
                   <li>$border-radius</li>
+                  <li>$border-style</li>
                   <li>$border-width</li>
                   <li>$error-border-color</li>
                   <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li class="f--color-g">$mobile-font-size: false by default</li>
+                  <li>$font-size-mobile</li>
+                  <li>$font-weight</li>
                   <li>$placeholder-color</li>
                   <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$error-border-color</li>
-                  <li>$placeholder-color</li>
-                  <li>$text-color</li>
+                  <li>$textarea-height</li>
                 </ul>
               </div>
             </div>
@@ -401,6 +505,7 @@
         </div>
       </div>
     </section>
+
     <section class="f--section-c">
       <div class="f--container">
         <div class="f--row f--gap-d">
@@ -456,16 +561,18 @@
         </div>
       </div>
     </section>
-    <section class="f--section-c">
+
+    <!-- form-input-02 -->
+    <section class="f--section-c" id="form-input-02">
       <div class="f--container">
         <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-02, form-input-02, form-error-01</h2>
+            <h2 class="f--font-c f--sp-b">form-input-02</h2>
             <div class="f--row">
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
                   <div class="g--form-input-02">
-                    <input type="text" id="text-02" class="g--form-input-02__item" placeholder=" ">
+                    <input type="text" id="text-02" class="g--form-input-02__item" placeholder="placeholder">
                     <label for="text-02" class="g--form-label-02">This is the text input *</label>
                   </div>
                 </div>
@@ -473,10 +580,18 @@
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
                   <div class="g--form-input-02 g--form-input-02--error">
-                    <input type="text" id="text-02--error" class="g--form-input-02__item" placeholder=" ">
+                    <input type="text" id="text-02--error" class="g--form-input-02__item" placeholder="placeholder">
                     <label for="text-02--error" class="g--form-label-02">This is the text input *</label>
                   </div>
                   <span class="g--form-error-01">This is an error message</span>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <div class="g--form-input-02 g--form-input-02--second">
+                    <input type="text" id="text-02--second" class="g--form-input-02__item" placeholder="placeholder">
+                    <label for="text-02--second" class="g--form-label-02">This is the text input *</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -491,22 +606,12 @@
                   <li>$border-color</li>
                   <li>$border-color-focus</li>
                   <li>$border-radius</li>
+                  <li>$border-style</li>
                   <li>$border-width</li>
                   <li>$error-border-color</li>
                   <li>$font</li>
-                  <li class="f--color-g">$font-weight: false by default</li>
-                  <li>$placeholder-color</li>
-                  <li>$text-color</li>
-                </ul>
-              </div>
-              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$background-color-autofill</li>
-                  <li>$border-color</li>
-                  <li>$border-color-focus</li>
-                  <li>$error-border-color</li>
+                  <li>$font-size-mobile</li>
+                  <li>$font-weight</li>
                   <li>$placeholder-color</li>
                   <li>$text-color</li>
                 </ul>
@@ -516,16 +621,51 @@
         </div>
       </div>
     </section>
+
+    <!-- form-label-02 -->
+    <section class="f--section-c" id="form-label-02">
+      <div class="f--container">
+        <div class="f--row f--gap-d">
+          <div class="f--col-8 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-b">form-label-02</h2>
+            <div class="f--row">
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <label for="label-02" class="g--form-label-02">This is the label *</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f--col-4 f--col-tabletm-12">
+            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+            <div class="f--row">
+              <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                <ul class="f--sp-c" style="list-style: inside;">
+                  <li>$label-color</li>
+                  <li>$label-color (focus)</li>
+                  <li>$label-font</li>
+                  <li>$label-font (focus)</li>
+                  <li>$label-font-weight</li>
+                  <li>$label-font-weight (focus)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- form-textarea-02 -->
     <section class="f--section-c">
       <div class="f--container">
         <div class="f--row f--gap-d">
           <div class="f--col-8 f--col-tabletm-12">
-            <h2 class="f--font-c f--sp-b">form-group-01, form-label-02, form-textarea-02, form-error-01</h2>
+            <h2 class="f--font-c f--sp-b">form-textarea-02</h2>
             <div class="f--row">
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
                   <div class="g--form-textarea-02">
-                    <textarea id="textarea-02" class="g--form-textarea-02__item" placeholder=" "></textarea>
+                    <textarea id="textarea-02" class="g--form-textarea-02__item" placeholder="placeholder"></textarea>
                     <label for="textarea-02" class="g--form-label-02">This is a textarea *</label>
                   </div>
                 </div>
@@ -533,10 +673,18 @@
               <div class="f--col-6 f--col-mobile-12">
                 <div class="g--form-group-01">
                   <div class="g--form-textarea-02 g--form-textarea-02--error">
-                    <textarea id="textarea-02--error" class="g--form-textarea-02__item" placeholder=" "></textarea>
+                    <textarea id="textarea-02--error" class="g--form-textarea-02__item" placeholder="placeholder"></textarea>
                     <label for="textarea-02--error" class="g--form-label-02">This is a textarea *</label>
                   </div>
                   <span class="g--form-error-01">This is an error message</span>
+                </div>
+              </div>
+              <div class="f--col-6 f--col-mobile-12">
+                <div class="g--form-group-01">
+                  <div class="g--form-textarea-02 g--form-textarea-02--second">
+                    <textarea id="textarea-02" class="g--form-textarea-02__item" placeholder="placeholder"></textarea>
+                    <label for="textarea-02" class="g--form-label-02">This is a textarea *</label>
+                  </div>
                 </div>
               </div>
             </div>

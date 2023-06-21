@@ -22,45 +22,47 @@
 
 ## Editable variables
 
-- $background-color-hover
+- $background-color
 - $background-position
-- $background-position-hover
 - $background-repeat
 - $background-size
-- $background-size-hover
 - $border-color
-- $border-color-hover
 - $border-radius
 - $border-style
 - $border-width
-- $font
 - $font-weight
+- $font
+- $hover-background-color
+- $hover-background-position
+- $hover-background-size
+- $hover-border-color
+- $hover-text-color
 - $text-color
-- $text-color-hover
 - $transition
 
 ## Use
 
 ```scss
-.g--btn-01{
-    @include make-btn-01();
-    @include make-btn-01-modifier(
-        // $background-color-hover: false,
-        // $background-position: false,
-        // $background-position-hover: false,
-        // $background-repeat: false,
-        // $background-size: false,
-        // $background-size-hover: false,
-        // $border-color: false,
-        // $border-color-hover: false,
-        // $border-radius: false,
-        // $border-style: false,
-        // $border-width: false,
-        // $font: false,
-        // $font-weight: false,
-        // $text-color: false,
-        // $text-color-hover: false,
-        // $transition: false
-    );
+.g--btn-01 {
+  @include make-btn-01();
+  @include make-btn-01-modifier(
+    // $background-color: map-get($color-options, a),
+    // $background-position: center,
+    // $background-repeat: no-repeat,
+    // $background-size: 100% 0px,
+    // $border-color: map-get($color-options, a),
+    // $border-radius: $measure,
+    // $border-style: solid,
+    // $border-width: 1px,
+    // $font-weight: 600,
+    // $font: f,
+    // $hover-background-color:  map-get($color-options, a),
+    // $hover-background-position: bottom left,
+    // $hover-background-size: 100% 100%,
+    // $hover-border-color: map-get($color-options, a),
+    // $hover-text-color: map-get($color-options, a),
+    // $text-color: map-get($color-options, a),
+    // $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a, background-size $time-b $ease-standard-a)
+  );
 }
 ```

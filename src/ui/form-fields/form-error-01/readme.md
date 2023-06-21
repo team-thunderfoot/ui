@@ -10,30 +10,25 @@
 
 The error html should be inside the g--form-group-01 div, after the g--form-input-01 component.
 
-```sh
+```html
 <span class="g--form-error-01">Please complete this required field.</span>
 ```
 
 ## Editable variables
 
 - $font
-- $font-weight: false by default
-- $text-color
-
-### For Modifiers
-
+- $font-weight
 - $text-color
 
 ## Use
 
-```sh
+```scss
 .g--form-error-01{
-    @include make-form-error-01(
-        $font: g,
-        // $font-weight: default,
-    );
+    @include make-form-error-01();
     @include make-form-error-01-modifier(
-        $text-color: map-get($color-options, g),
+        // $text-color: map-get($color-options, g),
+        // $font: g,
+        // $font-weight: 700,
     );
 }
 ```

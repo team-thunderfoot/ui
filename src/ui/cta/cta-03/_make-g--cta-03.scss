@@ -19,23 +19,23 @@
         padding: 19% 7%;
     }
 
-    &__title{
-        margin-bottom: $measure*3;
+    &__title {
+        margin-bottom: $measure * 3;
 
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 2;
         }
     }
 
-    &__subtitle{
-        margin-bottom: $measure*6;
-        
+    &__subtitle {
+        margin-bottom: $measure * 6;
+
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 4;
         }
     }
 
-    &__btn{
+    &__btn {
     }
 }
 
@@ -57,20 +57,16 @@
     $title-max-lines: false,
     $text-align: false,
     $hover-shadow: false,
-    $hover-transform: false,
+    $hover-transform: false
 ) {
     @if $background-color {
         background: $background-color;
     }
 
-    @if $hover-background-color or $hover-title-color or $hover-subtitle-color or $hover-shadow or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
-
     @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -79,9 +75,9 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-background-color and $hover-shadow{
+    } @else if $hover-background-color and $hover-shadow {
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -89,9 +85,9 @@
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-background-color and $hover-transform{
+    } @else if $hover-background-color and $hover-transform {
         transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -99,9 +95,9 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-background-color{
+    } @else if $hover-background-color {
         transition: background $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -110,7 +106,7 @@
         }
     } @else if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -120,7 +116,7 @@
         }
     } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -129,7 +125,7 @@
         }
     } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -139,12 +135,12 @@
     }
 
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-03{
-                    &__title{
+                .g--cta-03 {
+                    &__title {
                         color: $hover-title-color;
                     }
                 }
@@ -153,12 +149,12 @@
     }
 
     @if $hover-subtitle-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-03{
-                    &__subtitle{
+                .g--cta-03 {
+                    &__subtitle {
                         color: $hover-subtitle-color;
                     }
                 }
@@ -242,8 +238,8 @@
         }
     }
 
-    .g--cta-03{
-        &__title{
+    .g--cta-03 {
+        &__title {
             @if $title-color {
                 color: $title-color;
             }
@@ -269,7 +265,7 @@
             }
         }
 
-        &__subtitle{
+        &__subtitle {
             @if $subtitle-color {
                 color: $subtitle-color;
             }
@@ -295,13 +291,13 @@
         }
 
         @if $btn-font {
-            &__btn{
+            &__btn {
                 @extend .f--font-#{$btn-font} !optional;
             }
         }
-        
+
         @if $btn-class {
-            &__btn{
+            &__btn {
                 @extend .#{$btn-class} !optional;
             }
         }

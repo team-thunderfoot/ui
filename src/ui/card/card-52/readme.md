@@ -4,59 +4,133 @@
 
 ![alt text][card-52]
 
-[card-52]: /src/img/global-components/card/card-52.png
+[card-52]: /src/img/global-components/card/card-52.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-52">
-    <div class="g--card-52__wrapper">
-        <h2 class="g--card-52__wrapper__title">Card 49 This is a card lorem ispum dolor sit</h2>
-        <div class="c--content-a">
-        <p>Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+    <div class="g--card-52__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+        <div class="g--card-52__bg-items__artwork"></div>
+    </div>
+    <div class="g--card-52__ft-items">
+        <h3 class="g--card-52__ft-items__title">Lorem ipsum dolor sit amet</h3>
+        <div class="g--card-52__ft-items__list-group">
+            <span class="g--card-52__ft-items__list-group__badge">Category</span>
+            <span class="g--card-52__ft-items__list-group__badge">Category</span>
+        </div>
+        <div class="g--card-52__ft-items__wrapper">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
         </div>
     </div>
-    <div class="g--card-52__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="img alt" class="g--card-52__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
+</div>
+```
+
+If you want the image appear at hover, the HTML should be:
+```html
+<div class="g--card-52">
+    <div class="g--card-52__bg-items">
+        <div class="g--card-52__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+    </div>
+    <div class="g--card-52__ft-items">
+        <h3 class="g--card-52__ft-items__title">Lorem ipsum dolor sit amet</h3>
+        <div class="g--card-52__ft-items__list-group">
+            <span class="g--card-52__ft-items__list-group__badge">Category</span>
+            <span class="g--card-52__ft-items__list-group__badge">Category</span>
+        </div>
+        <div class="g--card-52__ft-items__wrapper">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
+        </div>
+    </div>
+</div>
+```
+
+If you want the title to be a c--content, the HTML should be:
+```html
+<div class="g--card-52">
+    <div class="g--card-52__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+        <div class="g--card-52__bg-items__artwork"></div>
+    </div>
+    <div class="g--card-52__ft-items">
+        <div class="g--card-52__ft-items__title c--content-a">Lorem ipsum dolor sit amet</div>
+        <div class="g--card-52__ft-items__list-group">
+            <span class="g--card-52__ft-items__list-group__badge">Category</span>
+            <span class="g--card-52__ft-items__list-group__badge">Category</span>
+        </div>
+        <div class="g--card-52__ft-items__wrapper">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-52__ft-items__wrapper__link">This is a link</a>
+        </div>
     </div>
 </div>
 ```
 
 ##### \*Aspect Ratio
 
-For the image, we have to add width, height and aspect ratio dynamically.
+It is not necessary to add aspect-ratio because the images have height in the css.
 
 ## Editable variables
 
-- $background-color: false by default
-- $border-radius: false by default
-- $change-order-responsive: false by default
-- $img-position: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
 - $background-color
+- $background-position
+- $background-repeat
+- $background-size
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $card-aspect-ratio
+- $card-height
+- $hover-background-color
+- $hover-background-position
+- $hover-background-repeat
+- $hover-background-size
+- $hover-mask-background-color
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $link-class
+- $link-hide-by-default
+- $mask-background-color
+- $pill-class
+- $text-align
 - $title-color
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
 ## use
 
-```sh
-.g--card-52{
-    @include make-card-52(
-        // $change-order-reponsive: default
-        // $border-radius: default,
-        // $img-position: default,
-    );
+```scss
+.g--card-52 {
+    @include make-card-52();
     @include make-card-52-modifier(
-        $background-color: rgba(map-get($color-options, a), .1),
-        $title-color: map-get($color-options, a),
-        // $title-font: default,
-        // title-font-weight: default
+        // $background-color: linear-gradient(map-get($color-options, e), map-get($color-options, h)),
+        // $background-position: center,
+        // $background-repeat: no-repeat,
+        // $background-size: cover,
+        // $border-color: map-get($color-options, f),
+        // $border-radius: $measure*4,
+        // $border-style: double,
+        // $border-width: 6px,
+        // $card-aspect-ratio: calc(3 / 4),
+        // $card-height: 200px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-background-position: bottom right,
+        // $hover-background-repeat: no-repeat,
+        // $hover-background-size: cover,
+        // $hover-mask-background-color: rgba(map-get($color-options, f), .3),
+        // $hover-shadow: 0 0 $measure*2 map-get($color-options, f),
+        // $hover-title-color: map-get($color-options, b),
+        // $hover-transform: translateY($measure),
+        // $link-class: g--link-01,
+        // $link-hide-by-default: no,
+        // $mask-background-color: rgba(map-get($color-options, a), .3),
+        // $pill-class: g--pill-01,
+        // $text-align: right,
+        // $title-color: map-get($color-options, b),
+        // $title-font: d,
+        // $title-font-weight: 400,
+        // $title-max-lines: 5,
     );
 }
 ```

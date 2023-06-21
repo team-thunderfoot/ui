@@ -1,24 +1,24 @@
 .g--card-48 {
     @include make-card-48();
     @include make-card-48-modifier(
-        $title-font: e,
-        $subtitle-font: f,
+        // $img-aspect-ratio: false,
         // $img-border-radius: false,
+        // $img-height: false,
         // $img-object-fit: false,
         // $img-position: false,
         // $img-width: false,
-        // $img-height: false,
-        // $img-aspect-ratio: false,
-        // $title-font-weight: false,
-        // $subtitle-font-weight: false,
-        $title-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
-        $img-background-color: map-get($color-options, a),
+        $title-font-weight: 600,
         $hover-img-background-color: map-get($color-options, g),
-        $text-align: false,
-        $img-align: center,
-        $hover-title-color: map-get($color-options, g),
         $hover-img-zoom: 1.1,
-        $hover-transform: translateY(-5%)
+        $hover-title-color: map-get($color-options, g),
+        $hover-transform: translateY(-5%),
+        $img-align: center,
+        $img-background-color: map-get($color-options, a),
+        $subtitle-color: lighten(map-get($color-options,a), 50%),
+        $subtitle-font-weight: 600,
+        $subtitle-font: f,
+        $text-align: false,
+        $title-color: map-get($color-options, a),
+        $title-font: f,
     );
 }

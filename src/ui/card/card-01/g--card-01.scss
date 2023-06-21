@@ -63,7 +63,7 @@
     &--fourth{
         @include make-card-01-modifier(
             $background-color: rgba(map-get($color-options, g), .7),
-            $border-color: map-get($color-options, h),
+            $border-color: map-get($color-options, a),
             $border-style: solid,
             $border-width: 1px,
             $subtitle-color: map-get($color-options, a),

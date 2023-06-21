@@ -18,7 +18,7 @@
     &--second{
         @include make-form-input-01-modifier(
             $border-width: 0 0 1px,
-            $border-color: map-get($color-options, h),
+            $border-color: map-get($color-options, a),
         );
     }
 }

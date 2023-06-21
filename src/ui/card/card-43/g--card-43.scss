@@ -2,9 +2,9 @@
     @include make-card-43();
     @include make-card-43-modifier(
         $background-color:lighten(map-get($color-options,a), 82%),
-        $border-color: map-get($color-options, h),
+        $border-color: map-get($color-options, a),
         $border-style: solid,
-        $border-width: $measure*.5,
+        $border-width: 1px,
         $border-radius: 0,
         $breakpoint: $tablets,
         $hover-background-color: rgba(map-get($color-options, h), .5),

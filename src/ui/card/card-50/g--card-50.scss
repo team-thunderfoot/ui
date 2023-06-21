@@ -9,7 +9,7 @@
         $hover-meta-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, b),
         $meta-color: map-get($color-options, a),
-        $meta-font: g,
+        $meta-font: f,
         $mask-background-color: rgba(map-get($color-options, a), .15),
         $link-class: g--link-01,
         $link-hide-by-default: true,
@@ -30,7 +30,7 @@
             $meta-font-weight: 400,
             $link-class: g--link-01--second,
             $link-hide-by-default: no,
-            $text-align: right,
+            $text-align: left,
         );
     }
     &--third {

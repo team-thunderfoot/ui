@@ -93,7 +93,7 @@ It is not necessary to add aspect-ratio.
         // $img-height-responsive: ,
         // $img-position: ,
         // $meta-color: ,
-        // $meta-font: ,
+        // $meta-font: f,
         // $meta-font-weight: ,
         // $pill-class: ,
         //$text-align: left,

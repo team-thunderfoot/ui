@@ -91,7 +91,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         // $img-height: 340px,
         // $img-position: ,
         // $meta-color: ,
-        // $meta-font: ,
+        // $meta-font: f,
         // $meta-font-weight: ,
         // $object-fit: ,
         // $subtitle-color: map-get($color-options, a)

@@ -3,6 +3,9 @@
     @include make-card-29-modifier(
         $background-color: lighten(map-get($color-options,a), 82%),
         $img-aspect-ratio: calc(16 / 9),
+        $img-height: 340px,
+        $title-font: c,
+        $title-max-lines: 3,
     );
     &--second{
         @include make-card-29-modifier(
@@ -22,7 +25,6 @@
             $meta-font-weight: false,
            $text-align: left,
             $title-color: map-get($color-options, b),
-            $title-font: false,
             $title-font-weight: false,
             $title-max-lines: 6,
         );
@@ -43,9 +45,9 @@
             $meta-color: map-get($color-options, b),
             $meta-font: false,
             $meta-font-weight: false,
-            $text-align: right,
+            $text-align: left,
             $title-color: map-get($color-options, b),
-            $title-font: false,
+            $title-font: c,
             $title-font-weight: false,
             $border-color: map-get($color-options, e),
             $border-style: solid,
@@ -67,7 +69,7 @@
             $img-aspect-ratio: false,
             $img-height: 200px,
             $img-position: false,
-            $meta-font: g,
+            $meta-font: f,
             $meta-font-weight: 400,
             $text-align: false,
             $title-font: c,

@@ -72,9 +72,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
     @include make-card-46-modifier(
         $link-class: g--link-01,
         $content-font: f,
-        $heading-font: h,
-        $person-font: h,
-        $position-font: h,
+        $heading-font: f,
+        $person-font: f,
+        $position-font: f,
         $border-radius: 0,
         $border-color: map-get($color-options, g),
         $border-style: solid,
@@ -95,11 +95,11 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $position-font-weight: 400,
         $change-order-reponsive: true,
         $content-color: map-get($color-options, a),
-        $heading-color: map-get($color-options, g),
-        $person-color: map-get($color-options, g),
+        $heading-color: map-get($color-options, a),
+        $person-color: map-get($color-options, a),
         $position-color: map-get($color-options, a),
         $background-color: lighten(map-get($color-options,a), 82%),
-        $img-background-color: map-get($color-options, g),
+        $img-background-color: lighten(map-get($color-options,a), 70%),
         $text-align: left,
         $breakpoint: $tablets
     );

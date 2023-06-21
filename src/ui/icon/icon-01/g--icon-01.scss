@@ -2,6 +2,7 @@
     @include make-icon-01();
 
     @include make-icon-01-modifier(
+        $border-radius: 100%,
         $background-color: transparent,
         // $hover-background-color: false,
         $border-width: 1px,
@@ -20,7 +21,7 @@
 
     &--second {
         @include make-icon-01-modifier(
-            $border-radius: 100%,
+            $border-radius: 0,
             $hover-background-color: map-get($color-options, a ),
             $border-style: dotted,
             $border-color: map-get($color-options, g ),

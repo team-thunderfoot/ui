@@ -80,7 +80,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         $meta-font-weight: 400,
         $meta-font: f,
         $pill-class: g--pill-01,
-        $text-align: right,
+        $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font-weight: 400,
         $title-font: c,

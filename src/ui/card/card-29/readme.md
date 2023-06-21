@@ -79,7 +79,7 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $img-height: 340px,
         // $img-position: ,
         // $meta-color: ,
-        // $meta-font: ,
+        // $meta-font: f,
         // $meta-font-weight: ,
         //$text-align: left,
         // $title-color: map-get($color-options, a),

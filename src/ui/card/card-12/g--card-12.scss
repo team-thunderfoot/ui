@@ -11,26 +11,26 @@
     );
     &--second{
         @include make-card-12-modifier(
-            $background-position: bottom right,
+            $background-position: center,
             $background-size: cover,
-            $link-font: e,
-            $mask-color: rgba(map-get($color-options, g), .5),
-            $title-color: map-get($color-options, d),
+            $link-font: f,
+            $mask-color: rgba(map-get($color-options, a), .2),
+            $title-color: map-get($color-options, a),
             $title-font: c,
-            $border-radius: $measure*2,
+            $border-radius: 0,
             $hover-background-img-zoom: 2,
             $hover-img-zoom: 1.2,
             $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
-            $img-height: 50px,
+            $img-height: 100px,
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
             $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
 }

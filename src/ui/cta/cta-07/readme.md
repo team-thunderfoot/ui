@@ -53,8 +53,8 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-cta-07();
     @include make-cta-07-modifier(
         // $text-align: ,
-        // $title-font-weight: ,
-        // $title-max-lines: ,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
         $background-position: left top,
         $background-size: cover,
         $border-radius: 8px,

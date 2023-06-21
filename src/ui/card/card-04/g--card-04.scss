@@ -9,8 +9,8 @@
     &--second{
         @include make-card-04-modifier(
             $background-color: rgba(map-get($color-options, g), .7),
-            $subtitle-color: map-get($color-options, b),
-            $title-color: map-get($color-options, d),
+            $subtitle-color: map-get($color-options, a),
+            $title-color: map-get($color-options, a),
             $title-font: c,
             // $border-radius: false,
             $hover-background-color: map-get($color-options, g),
@@ -19,18 +19,18 @@
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
-            $img-height: 50px,
+            $img-height: 100px,
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
             $link-class: g--btn-01--second,
             // $link-font: false,
-            $subtitle-font: d,
+            $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
             $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
     &--third{
@@ -43,7 +43,7 @@
             $link-class: g--btn-01,
             $title-color: map-get($color-options, a),
             $title-font: b,
-            $title-max-lines: 2,
+            $title-max-lines: 3,
         );
     }
     &--fourth{
@@ -52,8 +52,8 @@
             $border-color: map-get($color-options, a),
             $border-style: solid,
             $border-width: 0 0 8px,
-            $subtitle-color: map-get($color-options, b),
-            $title-color: map-get($color-options, d),
+            $subtitle-color: map-get($color-options, a),
+            $title-color: map-get($color-options, a),
             $title-font: c,
             // $border-radius: false,
             $hover-background-color: map-get($color-options, g),
@@ -62,18 +62,18 @@
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
-            $img-height: 50px,
+            $img-height: 100px,
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
             $link-class: g--btn-01--second,
             // $link-font: false,
-            $subtitle-font: d,
+            $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
             $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
 }

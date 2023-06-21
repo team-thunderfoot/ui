@@ -57,9 +57,9 @@
         $link-font: ,
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $title-font-weight: ,
+        // $title-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
-        $subtitle-font: d,
+        $subtitle-font: f,
         $subtitle-font-weight: bold,
         // $text-align: center
     );

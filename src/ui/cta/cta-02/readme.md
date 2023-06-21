@@ -51,10 +51,10 @@ To use it we have to import the css of the $btn-class in the entry
         $hover-title-color: map-get($color-options, a),
         // $text-align: ,
         $title-font: b,
-        // $title-font-weight: ,
+        // $title-font-weight: 400,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
-        // $title-max-lines: ,
+        // $title-max-lines: 3,
     );
 }
 ```

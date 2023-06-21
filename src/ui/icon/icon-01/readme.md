@@ -61,7 +61,7 @@
         // $artwork-width: ,
         $background-color: transparent,
         // $hover-background-color: ,
-        // $border-radius: ,
+        // $border-radius: 0,
         $border-width: 1px,
         $border-style: solid,
         $border-color: map-get($color-options, a ),

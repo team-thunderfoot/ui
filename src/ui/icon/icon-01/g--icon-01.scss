@@ -34,7 +34,7 @@
 
     &--third {
         @include make-icon-01-modifier(
-            $border-radius: $measure*2,
+            $border-radius: 0,
             $background-color: map-get($color-options, a ),
             $hover-background-color: map-get($color-options, g ),
             $border-width: 1px,

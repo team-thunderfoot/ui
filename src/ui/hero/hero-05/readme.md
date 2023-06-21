@@ -53,7 +53,7 @@
         $link-font: ,
         $title-color: map-get($color-options, a),
         $title-font: b,
-        // $title-font-weight: ,
+        // $title-font-weight: 400,
         // $text-align: center
     );
 }

@@ -37,7 +37,7 @@
     @include make-message-01-modifier(
         // $background-color: ,
         // $border-color: ,
-        // $border-radius: ,
+        // $border-radius: 0,
         // $border-style: ,
         // $border-width: ,
         // $text-align: ,

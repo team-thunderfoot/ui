@@ -64,7 +64,7 @@ To use it we have to import the css of the $btn-class in the entry
         $btn-class: g--btn-01,
         // $btn-font: ,
         $border-radius: 90px,
-        $subtitle-color: map-get($color-options, b),
+        $subtitle-color: map-get($color-options, a),
         $hover-subtitle-color: map-get($color-options, a),
         $subtitle-font: f,
         // $subtitle-font-weight: ,

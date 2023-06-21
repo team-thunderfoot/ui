@@ -82,10 +82,10 @@ It is not necessary to add aspect-ratio.
         $link-class: ,
         $link-font: ,
         $text-align: ,
-        $title-color: ,
+        $title-color: map-get($color-options, a),
         $title-font: ,
-        $title-font-weight: ,
-        $title-max-lines: ,
+        $title-font-weight: 400,
+        $title-max-lines: 3,
     );
 }
 ```

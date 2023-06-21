@@ -69,10 +69,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-12{
     @include make-card-12();
     @include make-card-12-modifier(
-        // $background-position: ,
-        // $background-size: ,
+        // $background-position: center
+        // $background-size: cover,
         // $border-radius: $measure,
-        // $hover-background-img-zoom: ,
+        // $hover-background-img-zoom: 2,
         // $hover-img-zoom: ,
         // $hover-shadow: ,
         // $hover-title-color: ,
@@ -86,10 +86,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $link-font: ,
         // $mask-color: ,
         // $text-align: ,
-        // $title-color: ,
+        // $title-color: map-get($color-options, a),
         // $title-font: ,
-        // $title-font-weight: ,
-        // $title-max-lines: ,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
     );
 }
 ```

@@ -36,7 +36,7 @@
     &--third {
         @include make-card-50-modifier(
             // $background-color: false,
-            $background-position: bottom right,
+            $background-position: center,
             // $background-repeat: false,
             // $background-size: false,
             $border-color: map-get($color-options, f),

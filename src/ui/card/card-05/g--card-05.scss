@@ -14,18 +14,18 @@
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio:calc(1 / 1),
-            $img-height: 50px,
+            $img-height: 100px,
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
             $link-class: g--link-02--second,
             $link-font: b,
-            $subtitle-font: d,
+            $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
             $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
 }

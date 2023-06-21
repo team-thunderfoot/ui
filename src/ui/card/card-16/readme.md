@@ -80,14 +80,14 @@ It is not necessary to add aspect-ratio.
             // $hover-transform: ,
             // $link-class: ,
             // $link-font: ,
-            // $subtitle-color: ,
-            // $subtitle-font: ,
+            // $subtitle-color: map-get($color-options, a)
+            // $subtitle-font: f,
             // $subtitle-font-weight: ,
             // $subtitle-max-lines: ,
             // $text-align: ,
-            // $title-color: ,
+            // $title-color: map-get($color-options, a),
             // $title-font: ,
-            // $title-font-weight: ,
+            // $title-font-weight: 400,
             // $title-max-lines: 
         );
     }

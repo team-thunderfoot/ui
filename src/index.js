@@ -9,7 +9,6 @@
 import Blazy from "blazy"
 import BackToTop from "@teamthunderfoot/back-to-top"
 import AnchorTo from "@teamthunderfoot/anchor-to"
-// import PreventBounceIOS from "@teamthunderfoot/prevent-bounce-ios";
 
 import "@lottiefiles/lottie-player"
 
@@ -38,10 +37,6 @@ class Index {
             offsetTop: "tf-data-distance",
             offsetTopURL: 100,
         })
-
-        //
-
-        // const preventBounceIOS = new PreventBounceIOS();
     }
 }
 

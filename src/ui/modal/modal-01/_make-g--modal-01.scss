@@ -1,68 +1,94 @@
 @mixin make-modal-01() {
-    .g--modal-01 {
-        $padding: $measure * 7;
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-        padding: $padding;
-        padding-right: calc((#{$padding} * 0.5) - (#{$measure}));
-        &__btn {
-            position: absolute;
-            top: $measure * 2;
-            right: $measure * 2;
-        }
+    $padding: $measure * 7;
+    padding: $padding;
+    padding-right: calc((#{$padding} * 0.5) - (#{$measure}));
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    visibility: hidden;
+    z-index: 1000;
 
-        &__wrapper {
-            max-height: calc(90vh - (#{$padding} * 2));
-            overflow-y: auto;
-            padding-right: calc((#{$padding} * 0.5) + (#{$measure}));
-        }
+    &__btn {
+        position: absolute;
+        right: $measure * 2;
+        top: $measure * 2;
+    }
 
-        &--is-active {
-            visibility: visible;
-            opacity: 1;
-        }
+    &__wrapper {
+        max-height: calc(90vh - (#{$padding} * 2));
+        overflow-y: auto;
+        padding-right: calc((#{$padding} * 0.5) + (#{$measure}));
+    }
+
+    &--is-active {
+        visibility: visible;
     }
 }
 
-@mixin make-modal-01-modifier($transition-modal: false, $modal-bg-color: false, $size: false, $icon-color: false, $icon-height: false, $icon-width: false) {
-    .g--modal-01 {
-        @if $transition-modal {
-            transition: $transition-modal;
-        }
-        @if $modal-bg-color {
-            background-color: $modal-bg-color;
-        }
-        @if $size == small {
-            width: 50%;
-        }
-        @if $size == medium {
-            width: 70%;
-        }
-        @if $size == large {
-            width: 90%;
-        }
+@mixin make-modal-01-modifier(
+    $transition: false,
+    $background-color: false,
+    $size: false,
+    $icon-color: false,
+    $icon-height: false,
+    $icon-width: false,
+    $opacity: false,
+    $opacity-active: false,
+    $zoom: false,
+    $zoom-active: false
+) {
+    @if $transition {
+        transition: $transition;
+    }
+    @if $background-color {
+        background-color: $background-color;
+    }
+    @if $size == small {
+        width: 50%;
+    }
+    @if $size == medium {
+        width: 70%;
+    }
+    @if $size == large {
+        width: 90%;
+    }
+    @if $opacity {
+        opacity: $opacity;
+    }
 
-        &__btn {
-            &__icon {
-                @if $icon-height {
-                    height: $icon-height;
-                }
-                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                    @if $icon-width {
-                        width: $icon-width;
-                    }
-                }
-                path {
-                    @if $icon-color {
-                        fill: $icon-color;
-                    }
+    @if $zoom {
+        transform: translate(-50%, -50%) scale($zoom);
+    } @else {
+        transform: translate(-50%, -50%);
+    }
+
+    &__btn {
+        &__icon {
+            @if $icon-height {
+                height: $icon-height;
+            }
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                @if $icon-width {
+                    width: $icon-width;
                 }
             }
+            path {
+                @if $icon-color {
+                    fill: $icon-color;
+                }
+            }
+        }
+    }
+
+    &--is-active {
+        @if $opacity-active {
+            opacity: $opacity-active;
+        }
+
+        @if $zoom-active {
+            transform: translate(-50%, -50%) scale($zoom-active);
+        } @else {
+            transform: translate(-50%, -50%);
         }
     }
 }

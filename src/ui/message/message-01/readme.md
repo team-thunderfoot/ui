@@ -35,16 +35,16 @@
 .g--message-01 {
     @include make-message-01();
     @include make-message-01-modifier(
-        // $background-color: false,
-        // $border-color: false,
-        // $border-radius: false,
-        // $border-style: false,
-        // $border-width: false,
-        // $text-align: false,
-        // $text-color: false,
-        // $text-font: false,
-        // $text-font-weight: false,
-        // $text-max-lines: false,
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: ,
+        // $border-width: 1px,
+        //$text-align: left,
+        // $text-color: ,
+        // $text-font: ,
+        // $text-font-weight: ,
+        // $text-max-lines: ,
     );
 }
 ```

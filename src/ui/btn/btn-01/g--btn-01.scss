@@ -95,7 +95,7 @@
     }
     &--seventh{
         @include make-btn-01-modifier(
-            $border-width: 2px,
+            $border-width: 1px,
             $border-color: map-get($color-options, e),
             $hover-border-color: map-get($color-options, a),
             $text-color: map-get($color-options, e),

@@ -32,9 +32,9 @@
     @include make-link-04();
     @include make-link-04-modifier(
         // $hover-text-color: map-get($color-options, g),
-        $text-color: map-get($color-options, a),
-        $underline-color: map-get($color-options, a)
-        $underline-height: 1px,
+        // $text-color: map-get($color-options, a),
+        // $underline-color: map-get($color-options, a)
+        // $underline-height: 1px,
     );
 }
 ```

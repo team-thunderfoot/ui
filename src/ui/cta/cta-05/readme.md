@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--cta-05">
     <div class="g--cta-05__wrapper">
         <h2 class="g--cta-05__wrapper__title">Card 50 This is a card lorem ispum dolor sit</h2>
@@ -55,29 +55,29 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
+```scss
 .g--cta-05{
     @include make-cta-05();
     @include make-cta-05-modifier(
         $background-color: map-get($color-options, f),
         $hover-background-color: map-get($color-options, e),
         $btn-class: g--btn-02,
-        // $btn-font: false,
+        // $btn-font: ,
         $border-radius: 25px,
-        $subtitle-color: map-get($color-options, b),
+        $subtitle-color: map-get($color-options, a),
         $hover-subtitle-color: map-get($color-options, a),
         $subtitle-font: f,
-        // $subtitle-font-weight: false,
+        // $subtitle-font-weight: ,
         $subtitle-max-lines: 1,
         $title-color: map-get($color-options, b),
         $hover-title-color: map-get($color-options, a),
-        $title-font: d,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
-        // $text-align: false,
+        $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
+        //$text-align: left,
         $one-col-bkt: $tablets,
-        // $change-order-reponsive: false,
-        // $hide-img-reponsive: false,
+        // $change-order-reponsive: ,
+        // $hide-img-reponsive: ,
         $img-position: center,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),

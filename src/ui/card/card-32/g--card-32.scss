@@ -2,8 +2,8 @@
     @include make-card-32();
     @include make-card-32-modifier(
         $author-color: map-get($color-options, a),
-        $author-font-weight: 600,
-        $author-font: g,
+        $author-font-weight: 400,
+        $author-font: f,
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
@@ -11,11 +11,11 @@
         $img-height: 300px,
         $img-position: center,
         $meta-color: map-get($color-options, a),
-        $meta-font-weight: 600,
+        $meta-font-weight: 400,
         $meta-font: f,
         $pill-class: g--pill-01,
         $title-color: map-get($color-options, a),
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-font: c,
         $title-max-lines: 3
     );
@@ -24,7 +24,7 @@
         @include make-card-32-modifier(
             $author-color: map-get($color-options, a),
             $author-font-weight: 320,
-            $author-font: g,
+            $author-font: f,
             $hover-img-zoom: 1.5,
             $hover-title-color: map-get($color-options, e),
             $hover-transform: scale(105%),
@@ -33,11 +33,11 @@
             $img-height: auto,
             $img-position: center,
             $meta-color: map-get($color-options, a),
-            $meta-font-weight: 600,
+            $meta-font-weight: 400,
             $meta-font: f,
             $pill-class: g--pill-01,
             $title-color: map-get($color-options, a),
-            $title-font-weight: 600,
+            $title-font-weight: 400,
             $title-font: c,
             $title-max-lines: 3
         );

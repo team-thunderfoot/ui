@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--hero-02">
     <div class="g--hero-02__wrapper">
         <div class="f--container">
@@ -43,7 +43,7 @@
 
 ## Use
 
-```sh
+```scss
 .g--hero-02 {
     @include make-hero-02();
     @include make-hero-02-modifier(
@@ -58,7 +58,7 @@
         $title-color: map-get($color-options, a),
         $title-font: a,
         $title-font-weight: bold,
-        // $text-align: false
+        // $text-align: 
     );
 }
 ```

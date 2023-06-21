@@ -58,7 +58,7 @@
         // $hover-icon-color: false,
         $icon-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        $title-font: d,
+        $title-font: c,
         // $title-font-weight: false,
     );
 }
@@ -76,7 +76,7 @@ npm i @andresclua/accordion
 
 Import the package and initialize it.
 
-```sh
+```js
 import Accordion from "@andresclua/accordion";
 
 
@@ -97,7 +97,7 @@ const accordion = new Accordion({
 
 1- Create a file accordion.js inside plugins folder & add this.
 
-```sh
+```js
 import Accordion from '@andresclua/accordion';
 
 export default ({ app }, inject) => {
@@ -107,7 +107,7 @@ export default ({ app }, inject) => {
 
 2- Reference in your nuxt.config.js
 
-```sh
+```js
 plugins: [
     { src: '~/plugins/accordion.js', ssr: false }
   ]
@@ -115,7 +115,7 @@ plugins: [
 
 3- Use it in your .vue file
 
-```sh
+```js
 mounted() {
    const accordion = this.$Accordion({
         accActive : 'accordion-1', //id of the initially active accordion

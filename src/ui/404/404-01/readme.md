@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--404-01">
     <div class="f--container">
         <div class="f--row justify-content--center">
@@ -51,22 +51,21 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 To use it we have to import the css of the $btn-class in the entry
 
-```sh
+```scss
 .g--404-01 {
     @include make-404-01();
     @include make-404-01-modifier(
         // $background-color: map-get($color-options, e),
         $btn-class: g--btn-02,
         // $btn-font: a,
-        $img-aspect-ratio: false,
-        $img-height: 100px,
-        $img-position: center,
+        $img-aspect-ratio: ,
+        $img-height: 340px,        $img-position: center,
         $img-fit: cover,
         $img-width: auto,
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: bold,
-        // $text-align: false,
+        //$text-align: left,
         $min-height: calc(100vh - 109px),
     );
 

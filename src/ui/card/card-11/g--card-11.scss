@@ -1,9 +1,9 @@
 .g--card-11{
     @include make-card-11();
     @include make-card-11-modifier(
-        $link-class: g--link-02,
+        $link-class: g--link-01,
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c,
     );
     &--second{
         @include make-card-11-modifier(
@@ -13,14 +13,14 @@
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio:calc(1 / 1),
-            $img-height: 50px,
+            $img-height: 100px,
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
-            $link-font: g,
-            $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            $link-font: f,
+           $text-align: left,
+            $title-font-weight: 400,
+            $title-max-lines: 3,
         );
     }
 }

@@ -49,11 +49,11 @@
         $img-height: 200px,
         $img-position: center,
         $img-object-fit: cover,
-        $link-class: g--btn-01,
-        $link-font: false,
+        $link-class: g--link-01,
+        $link-font: ,
         $title-color: map-get($color-options, a),
-        $title-font: b,
-        // $title-font-weight: false,
+        $title-font: c,
+        // $title-font-weight: 400,
         // $text-align: center
     );
 }

@@ -1,11 +1,11 @@
 .g--card-44{
     @include make-card-44();
     @include make-card-44-modifier(
-        $background-color: rgba(map-get($color-options, h), .2),
+        $background-color:lighten(map-get($color-options,a), 82%),
         $border-color: map-get($color-options, h),
         $border-style: solid,
         $border-width: $measure*.5,
-        $border-radius: $measure,
+        $border-radius: 0,
         $breakpoint: $tablets,
         $hover-background-color: rgba(map-get($color-options, h), .5),
         $hover-img-zoom: 1.4,
@@ -17,8 +17,8 @@
         $img-position: left bottom,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 600,
-        $text-align: center,
+        $title-font-weight: 400,
+       $text-align: left,
         $content-color: map-get($color-options, a),
         $content-font: f,
         $content-font-weight: 400,

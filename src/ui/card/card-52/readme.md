@@ -104,13 +104,13 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-52 {
     @include make-card-52();
     @include make-card-52-modifier(
-        // $background-color: linear-gradient(map-get($color-options, e), map-get($color-options, h)),
+        // $background-color: lighten(map-get($color-options,a), 82%),
         // $background-position: center,
         // $background-repeat: no-repeat,
         // $background-size: cover,
         // $border-color: map-get($color-options, f),
         // $border-radius: $measure*4,
-        // $border-style: double,
+        // $border-style: solid,
         // $border-width: 6px,
         // $card-aspect-ratio: calc(3 / 4),
         // $card-height: 200px,
@@ -128,7 +128,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $pill-class: g--pill-01,
         // $text-align: right,
         // $title-color: map-get($color-options, b),
-        // $title-font: d,
+        // $title-font: c,
         // $title-font-weight: 400,
         // $title-max-lines: 5,
     );

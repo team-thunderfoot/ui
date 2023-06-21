@@ -57,31 +57,31 @@ It is not necessary to add aspect-ratio.
         $background-color: rgba(map-get($color-options, a), .1),
         $border-color: map-get($color-options, a),
         $border-style: solid,    
-        $border-width: 2px,
+        $border-width: 1px,
         $title-color: map-get($color-options, a),
-        $title-font: d,
-        $title-font-weight: 600,
+        $title-font: c,
+        $title-font-weight: 400,
     );
     &--second{
         @include make-card-13-modifier(
-            // $background-color: false,
-            // $border-color: false,
-            // $border-style: false,
-            // $border-width: false,
-            // $border-radius: false,
-            // $hover-background-color: false,
-            // $hover-shadow: false,
-            // $hover-title-color: false,
-            // $hover-transform: false,
-            // $subtitle-color: false,
-            // $subtitle-font: false,
-            // $subtitle-font-weight: false,
-            // $subtitle-max-lines: false,
-            // $text-align: false,
-            // $title-color: false,
-            // $title-font: false,
-            // $title-font-weight: false,
-            // $title-max-lines: false
+            // $background-color: lighten(map-get($color-options,a), 82%),
+            // $border-color: map-get($color-options, a),
+            // $border-style: solid,
+            // $border-width: 1px,
+            // $border-radius: $measure,
+            // $hover-background-color: ,
+            // $hover-shadow: ,
+            // $hover-title-color: ,
+            // $hover-transform: ,
+            // $subtitle-color: map-get($color-options, a)
+            // $subtitle-font: f,
+            // $subtitle-font-weight: ,
+            // $subtitle-max-lines: ,
+            //$text-align: left,
+            // $title-color: map-get($color-options, a),
+            // $title-font: c,
+            // $title-font-weight: 400,
+            // $title-max-lines: 
         );
     }
 }

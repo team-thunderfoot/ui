@@ -5,12 +5,12 @@
         $hover-transform: translateY(-5%),
         $meta-color: map-get($color-options, a),
         $meta-font: f,
-        $meta-font-weight: 600,
+        $meta-font-weight: 400,
         $pill-class: g--pill-01,
         $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-max-lines: 3
     );
 
@@ -20,12 +20,12 @@
             $hover-transform: scale(105%),
             $meta-color: map-get($color-options, a),
             $meta-font: f,
-            $meta-font-weight: 600,
+            $meta-font-weight: 400,
             $pill-class: g--pill-01,
-            $text-align: center,
+           $text-align: left,
             $title-color: map-get($color-options, a),
             $title-font: c,
-            $title-font-weight: 600,
+            $title-font-weight: 400,
             $title-max-lines: 5
         );
     }

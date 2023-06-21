@@ -20,7 +20,7 @@
             $meta-color: map-get($color-options, b),
             $meta-font: false,
             $meta-font-weight: false,
-            $text-align: center,
+           $text-align: left,
             $title-color: map-get($color-options, b),
             $title-font: false,
             $title-font-weight: false,
@@ -68,9 +68,9 @@
             $img-height: 200px,
             $img-position: false,
             $meta-font: g,
-            $meta-font-weight: 600,
+            $meta-font-weight: 400,
             $text-align: false,
-            $title-font: d,
+            $title-font: c,
             $title-font-weight: false,
         );
     }

@@ -43,9 +43,9 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-layout-01();
     @include make-layout-01-modifier(
         $title-font: c,
-        $title-font-weight: 600,
+        $title-font-weight: 400,
         $title-color: map-get($color-options, a),
-        $subtitle-font: d,
+        $subtitle-font: f,
         $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
         $btn-font: d,

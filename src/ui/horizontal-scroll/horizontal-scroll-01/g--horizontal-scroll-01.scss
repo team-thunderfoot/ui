@@ -9,10 +9,19 @@
         display: flex;
         flex-wrap: nowrap;
         min-height: 80vh;
-        padding: $measure*4 10vw $measure*4;
+        padding: $measure*4 10vw;
+        @media all and ($viewport-type: $laptop) {
+            padding: $measure*4 calc(5vw + 16px);
+        }
+        @media all and ($viewport-type: $mobile) {
+            padding: $measure*4 calc(2.5vw + 16px);
+        }
         &__item{
             width: 80vw;
             padding-right: 10vw;
+            @media all and ($viewport-type: $tabletm) {
+                width: 85vw;
+            }
         }
     }
     &--second {

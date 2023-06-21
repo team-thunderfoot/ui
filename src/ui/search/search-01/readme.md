@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--search-01">
     <label for="text-01" class="g--search-01__title">Search by:</label>
     <div class="g--search-01__wrapper">
@@ -39,7 +39,7 @@
 
 ## Use
 
-```sh
+```scss
 .g--search-01{
     @include make-search-01();
     @include make-search-01-modifier(
@@ -51,10 +51,10 @@
         $input-border-color: map-get($color-options, e),
         $input-text-color: map-get($color-options, f),
         $input-font: f,
-        // $input-font-weight: false,
+        // $input-font-weight: ,
         $title-color: map-get($color-options, g),
         $title-font: f,
-        // $title-font-weight: false
+        // $title-font-weight: 
         $artwork-color: map-get($color-options, g),
         $placeholder-color: rgba(map-get($color-options, g), .5),
     );

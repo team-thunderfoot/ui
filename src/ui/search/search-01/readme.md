@@ -43,20 +43,20 @@
 .g--search-01{
     @include make-search-01();
     @include make-search-01-modifier(
-        $input-background-color: transparent,
-        $input-background-color-autofill: transparent,
-        $input-border-radius: 8px,
-        $input-border-width: 3px,
-        $input-border-style: dotted,
-        $input-border-color: map-get($color-options, e),
-        $input-text-color: map-get($color-options, f),
-        $input-font: f,
-        // $input-font-weight: ,
-        $title-color: map-get($color-options, g),
-        $title-font: c,
-        // $title-font-weight: 
-        $artwork-color: map-get($color-options, g),
-        $placeholder-color: rgba(map-get($color-options, g), .5),
+        // $artwork-color: map-get($color-options, g),
+        // $input-background-color-autofill: transparent,
+        // $input-background-color: transparent,
+        // $input-border-color: map-get($color-options, a),
+        // $input-border-radius: 0,
+        // $input-border-style: solid,
+        // $input-border-width: 1px,
+        // $input-font-weight: 600,
+        // $input-font: f,
+        // $input-text-color: map-get($color-options, f),
+        // $placeholder-color: rgba(map-get($color-options, a), .5),
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: f,
     );
 }
 ```

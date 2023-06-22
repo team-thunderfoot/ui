@@ -16,15 +16,15 @@
         padding: 11% 12%;
     }
 
-    &__title{
-        margin-bottom: $measure*6;
+    &__title {
+        margin-bottom: $measure * 6;
 
         @media all and ($viewport-type: $tablets) {
             margin-bottom: $measure * 4;
         }
     }
 
-    &__btn{
+    &__btn {
         margin-left: auto;
         margin-right: auto;
     }
@@ -32,25 +32,26 @@
 
 @mixin make-cta-01-modifier(
     $background-color: false,
-    $hover-background-color: false,
     $btn-class: false,
     $btn-font: false,
-    $title-color: false,
-    $hover-title-color: false,
-    $title-font: false,
-    $title-font-weight: false,
-    $title-max-lines: false,
-    $text-align: false,
+    $hover-background-color: false,
     $hover-shadow: false,
+    $hover-title-color: false,
     $hover-transform: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
 ) {
     @if $background-color {
         background: $background-color;
     }
 
     @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -59,9 +60,9 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-background-color and $hover-shadow{
+    } @else if $hover-background-color and $hover-shadow {
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -69,9 +70,9 @@
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-background-color and $hover-transform{
+    } @else if $hover-background-color and $hover-transform {
         transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -79,9 +80,9 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-background-color{
+    } @else if $hover-background-color {
         transition: background $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -90,7 +91,7 @@
         }
     } @else if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -100,7 +101,7 @@
         }
     } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -109,7 +110,7 @@
         }
     } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -119,12 +120,12 @@
     }
 
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-01{
-                    &__title{
+                .g--cta-01 {
+                    &__title {
                         color: $hover-title-color;
                     }
                 }
@@ -141,7 +142,6 @@
                 margin-right: auto;
             }
         }
-        
     }
 
     @if $text-align == "left" {
@@ -166,8 +166,8 @@
         }
     }
 
-    .g--cta-01{
-        &__title{
+    .g--cta-01 {
+        &__title {
             @if $title-color {
                 color: $title-color;
             }
@@ -191,15 +191,15 @@
                 transition: color $time-b $ease-standard-a;
             }
         }
-        
+
         @if $btn-font {
-            &__btn{
+            &__btn {
                 @extend .f--font-#{$btn-font} !optional;
             }
         }
 
         @if $btn-class {
-            &__btn{
+            &__btn {
                 @extend .#{$btn-class} !optional;
             }
         }

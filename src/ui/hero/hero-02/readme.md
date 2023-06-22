@@ -21,25 +21,30 @@
         </div>
     </div>
     <div class="g--hero-02__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/bg-placeholder.jpg" alt="alt text" class="g--hero-02__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+            src="/src/img/global-components/bg-placeholder.jpg"
+            alt="alt text"
+            class="g--hero-02__media-wrapper__media g--lazy-01"
+        />
     </div>
 </section>
 ```
 
 ## Editable variables
 
-- $background-color,
-- $header-height,
-- $img-height,
-- $img-position,
-- $img-object-fit,
-- $tagline-color,
-- $tagline-font,
-- $tagline-font-weight,
-- $title-color,
-- $title-font,
-- $title-font-weight,
-- $text-align
+-   $background-color,
+-   $header-height,
+-   $img-height,
+-   $img-object-fit,
+-   $img-position,
+-   $tagline-color,
+-   $tagline-font-weight,
+-   $tagline-font,
+-   $text-align
+-   $title-color,
+-   $title-font-weight,
+-   $title-font,
 
 ## Use
 
@@ -47,18 +52,18 @@
 .g--hero-02 {
     @include make-hero-02();
     @include make-hero-02-modifier(
-        $background-color:  map-get($color-options, d),
-        $header-height: 96px,
-        $img-height: 500px,
-        $img-position: center,
-        $img-object-fit: cover,
-        $tagline-color: map-get($color-options, f),
-        $tagline-font: d,
-        $tagline-font-weight: medium,
-        $title-color: map-get($color-options, a),
-        $title-font: a,
-        $title-font-weight: bold,
-        // $text-align: 
+        // $background-color: map-get($color-options, d),
+        // $header-height: 96px,
+        // $img-height: 500px,
+        // $img-object-fit: cover,
+        // $img-position: center,
+        // $tagline-color: map-get($color-options, f),
+        // $tagline-font-weight: medium,
+        // $tagline-font: d,
+        // $text-align: left
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: bold,
+        // $title-font: a,
     );
 }
 ```

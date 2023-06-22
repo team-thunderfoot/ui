@@ -1,7 +1,7 @@
-.g--form-input-02{
+.g--form-input-02 {
     @include make-form-input-02();
     @include make-form-input-02-modifier(
-        $border-color: rgba(map-get($color-options, a), .2),
+        $border-color: rgba(map-get($color-options, a), 0.2),
         $border-color-focus: map-get($color-options, a),
         $background-color: transparent,
         $background-color-autofill: transparent,
@@ -15,9 +15,15 @@
         $border-style: solid,
         // $mobile-font-size: false
     );
-    &--second{
+    &--second {
+        @include make-form-input-02-modifier($border-width: 1px);
+    }
+
+    &--third {
         @include make-form-input-02-modifier(
-            $border-width: 1px,
+            $border-color: map-get($color-options, b),
+            $border-color-focus: map-get($color-options, b),
+            $text-color: map-get($color-options, b)
         );
     }
 }

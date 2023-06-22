@@ -1,18 +1,19 @@
 .g--hero-03 {
     @include make-hero-03();
     @include make-hero-03-modifier(
+        $breakpoint: $tablets,
         $header-height: 96px,
-        $img-position: center,
         $img-object-fit: cover,
-        $link-class: g--link-01,
-        // $link-font: false,    
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $title-font-weight: false,
+        $img-position: center,
+        $link-class: g--btn-01,
         $subtitle-color: map-get($color-options, a),
-        $subtitle-font: f,
-        $subtitle-font-weight: bold,
-        $text-align: left,
-        $breakpoint: $tablets
+        $subtitle-font: d,
+        $title-color: map-get($color-options, a),
+        $title-font: a,
+        // $link-font: false,
+        // $subtitle-font-weight: false,
+        // $text-align: false,
+        // $title-font-weight: false,
     );
+    @include make-hero-03-modifier($link-class: g--btn-01--second);
 }

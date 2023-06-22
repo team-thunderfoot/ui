@@ -11,10 +11,9 @@
         top: 0;
         height: 100%;
         width: 100%;
-        
 
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             height: 100%;
             left: 0;
             position: absolute;
@@ -34,25 +33,25 @@
         @media all and ($viewport-type: $tabletl) {
             padding: 14% 6%;
         }
-    
+
         @media all and ($viewport-type: $tabletm) {
             padding: 12% 6%;
         }
-    
+
         @media all and ($viewport-type: $mobile) {
             padding: 30% 5%;
         }
 
-        &__title{
+        &__title {
             margin-bottom: $measure * 6;
             position: relative;
-    
+
             @media all and ($viewport-type: $tablets) {
                 margin-bottom: $measure * 4;
             }
         }
-    
-        &__btn{
+
+        &__btn {
             margin-left: auto;
             margin-right: auto;
             position: relative;
@@ -63,20 +62,19 @@
 @mixin make-cta-02-modifier(
     $background-position: false,
     $background-size: false,
-    $hover-background-img-zoom: false,
     $btn-class: false,
     $btn-font: false,
-    $mask-color: false,
-    $title-color: false,
-    $hover-title-color: false,
-    $title-font: false,
-    $title-font-weight: false,
-    $title-max-lines: false,
-    $text-align: false,
+    $hover-background-img-zoom: false,
     $hover-shadow: false,
+    $hover-title-color: false,
     $hover-transform: false,
+    $mask-color: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
 ) {
-
     @if $background-position {
         &__bg-items {
             background-position: $background-position;
@@ -91,7 +89,7 @@
 
     @if $mask-color {
         &__bg-items {
-            &::before{
+            &::before {
                 background: $mask-color;
             }
         }
@@ -99,7 +97,7 @@
 
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -107,18 +105,18 @@
                 transform: $hover-transform;
             }
         }
-    } @else if $hover-shadow{
+    } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 box-shadow: $hover-shadow;
             }
         }
-    } @else if $hover-transform{
+    } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -128,12 +126,12 @@
     }
 
     @if $hover-background-img-zoom {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-02{
-                    &__bg-items{
+                .g--cta-02 {
+                    &__bg-items {
                         transform: scale($hover-background-img-zoom);
                     }
                 }
@@ -142,13 +140,13 @@
     }
 
     @if $hover-title-color {
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--cta-02{
+                .g--cta-02 {
                     &__ft-items {
-                        &__title{
+                        &__title {
                             color: $hover-title-color;
                         }
                     }
@@ -196,26 +194,26 @@
         }
     }
 
-    .g--cta-02{
+    .g--cta-02 {
         &__bg-items {
-            @if $hover-background-img-zoom{
+            @if $hover-background-img-zoom {
                 transition: transform $time-b $ease-standard-a;
             }
         }
         &__ft-items {
-            &__title{
+            &__title {
                 @if $title-color {
                     color: $title-color;
                 }
-                
+
                 @if $title-font {
                     @extend .f--font-#{$title-font} !optional;
                 }
-    
+
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
-    
+
                 @if $title-max-lines {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -223,20 +221,20 @@
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
                 }
-    
+
                 @if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 }
             }
-    
+
             @if $btn-font {
-                &__btn{
+                &__btn {
                     @extend .f--font-#{$btn-font} !optional;
                 }
             }
-    
+
             @if $btn-class {
-                &__btn{
+                &__btn {
                     @extend .#{$btn-class} !optional;
                 }
             }

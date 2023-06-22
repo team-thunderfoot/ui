@@ -1,19 +1,19 @@
 .g--cta-07 {
     @include make-cta-07();
     @include make-cta-07-modifier(
+        $background-position: left top,
+        $background-size: cover,
+        $breakpoint: $tablets,
+        $mask-color: rgba(map-get($color-options, a), 0.5),
+        $title-color: map-get($color-options, b),
+        $title-font: c,
+        // $border-radius: false,
+        // $hover-background-img-zoom: false,
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
         // $text-align: false,
         // $title-font-weight: false,
         // $title-max-lines: false,
-        $background-position: left top,
-        $background-size: cover,
-        $border-radius: 8px,
-        $breakpoint: $tablets,
-        $hover-background-img-zoom: 1.2,
-        $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
-        $hover-title-color: map-get($color-options, c),
-        $hover-transform: translateY(-$measure),
-        $mask-color: rgba(map-get($color-options, a), 0.5),
-        $title-color: map-get($color-options, b),
-        $title-font: c
     );
 }

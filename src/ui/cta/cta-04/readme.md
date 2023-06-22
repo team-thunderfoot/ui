@@ -9,10 +9,16 @@
 ## Html
 
 ```html
-<div class="g--cta-04" style="background-image: url(/src/img/global-components/bg-placeholder.jpg);">
+<div
+    class="g--cta-04"
+    style="background-image: url(/src/img/global-components/bg-placeholder.jpg);"
+>
     <h2 class="g--cta-04__title">CTA-04 This is the Contact call to action</h2>
     <div class="g--cta-04__subtitle c--content-a">
-        <p>Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam
+            consectetur pretium fringilla metus.
+        </p>
     </div>
     <a href="#" class="g--cta-04__btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
 </div>
@@ -20,55 +26,55 @@
 
 ## Editable variables
 
-- $background-position
-- $background-size
-- $$hover-background-img-zoom
-- $btn-class
-- $btn-font
-- $border-radius
-- $mask-color
-- $subtitle-color
-- $hover-subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $title-color
-- $hover-title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
-- $text-align
-- $hover-shadow
-- $hover-transform
+-   $$hover-background-img-zoom
+-   $background-position
+-   $background-size
+-   $border-radius
+-   $btn-class
+-   $btn-font
+-   $hover-shadow
+-   $hover-subtitle-color
+-   $hover-title-color
+-   $hover-transform
+-   $mask-color
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 To use it we have to import the css of the $btn-class in the entry
 
 ```scss
-.g--cta-04{
+.g--cta-04 {
     @include make-cta-04();
     @include make-cta-04-modifier(
-        $background-position: left top,
-        $background-size: cover,
-        $hover-background-img-zoom: 1.2,
-        $btn-class: g--btn-01,
-        // $btn-font: ,
-        $border-radius: 8px,
-        $mask-color: rgba(map-get($color-options, a), .5),
-        $subtitle-color: map-get($color-options, a),
-        $hover-subtitle-color: map-get($color-options, c),
-        $subtitle-font: f,
-        // $subtitle-font-weight: ,
-        $subtitle-max-lines: 1,
-        $title-color: map-get($color-options, b),
-        $hover-title-color: map-get($color-options, c),
-        $title-font: c,
+        // $background-position: left top,
+        // $background-size: cover,
+        // $border-radius: 8px,
+        // $btn-class: g--btn-01,
+        // $btn-font: d,
+        // $hover-background-img-zoom: 1.2,
+        // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        // $hover-subtitle-color: map-get($color-options, c),
+        // $hover-title-color: map-get($color-options, c),
+        // $hover-transform: translateY(-$measure),
+        // $mask-color: rgba(map-get($color-options, a), .5),
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font-weight: 400,
+        // $subtitle-font: f,
+        // $subtitle-max-lines: 1,
+        // $title-color: map-get($color-options, b),
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3,
-        //$text-align: left,
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-        $hover-transform: translateY(-$measure),
+        // $text-align: left,
     );
 }
 ```

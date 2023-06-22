@@ -58,10 +58,10 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
     @include make-back-top-01();
 
     @include make-back-top-01-modifier(
-        $icon-height: $measure*5,
-        $icon-width: $measure*5,
-        $margin-bottom: $measure*5,
-        $margin-right: $measure*3,
+        // $icon-height: $measure*5,
+        // $icon-width: $measure*5,
+        // $margin-bottom: $measure*5,
+        // $margin-right: $measure*3,
     );
 }
 ```

@@ -58,14 +58,14 @@
 
 ## Editable variables
 
--   $transition
 -   $background-color
--   $size
 -   $icon-color
 -   $icon-height
 -   $icon-width
 -   $opacity
 -   $opacity-active
+-   $size
+-   $transition
 -   $zoom
 -   $zoom-active
 
@@ -78,6 +78,7 @@
         // $background-color: map-get($color-options, b),
         // $icon-color: map-get($color-options, g),
         // $icon-height: $measure * 2,
+        // $icon-width: $measure * 2,
         // $opacity-active: 1,
         // $opacity: 0,
         // $size: small,

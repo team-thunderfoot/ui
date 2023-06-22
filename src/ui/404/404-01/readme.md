@@ -36,16 +36,16 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $background-color
 - $btn-class
 - $btn-font
+- $img-aspect-ratio
+- $img-fit
+- $img-height
+- $img-position
+- $img-width
+- $min-height
+- $text-align
 - $title-color
 - $title-font
 - $title-font-weight
-- $text-align
-- $min-height
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $img-fit
-- $img-width
 
 ## Use
 

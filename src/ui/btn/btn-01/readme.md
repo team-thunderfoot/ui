@@ -30,8 +30,8 @@
 - $border-radius
 - $border-style
 - $border-width
-- $font-weight
 - $font
+- $font-weight
 - $hover-background-color
 - $hover-background-position
 - $hover-background-size

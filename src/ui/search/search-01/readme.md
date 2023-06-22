@@ -22,21 +22,20 @@
 
 ## Editable variables
 
+- $artwork-color
 - $input-background-color
 - $input-background-color-autofill
-- $input-border-radius
-- $input-border-width
-- $input-border-style
 - $input-border-color
-- $input-text-color
+- $input-border-radius
+- $input-border-style
+- $input-border-width
 - $input-font
 - $input-font-weight
+- $input-text-color
+- $placeholder-color
 - $title-color
 - $title-font
 - $title-font-weight
-- $artwork-color
-- $placeholder-color
-
 ## Use
 
 ```scss

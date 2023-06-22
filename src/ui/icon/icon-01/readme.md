@@ -37,17 +37,17 @@
 - $artwork-height
 - $artwork-width
 - $background-color
-- $hover-background-color
-- $border-radius
-- $border-width
-- $border-style
 - $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $height
+- $hover-background-color
 - $hover-border-color
-- $path-fill-color
 - $hover-path-fill-color
 - $hover-shadow
 - $hover-transform
-- $height
+- $path-fill-color
 - $width
 
 ## Use

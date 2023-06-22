@@ -38,13 +38,13 @@
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
         // $border-radius: 0,
-        // $border-style: ,
+        // $border-style: solid,
         // $border-width: 1px,
-        //$text-align: left,
-        // $text-color: ,
-        // $text-font: ,
-        // $text-font-weight: ,
-        // $text-max-lines: ,
+        // $text-align: center,
+        // $text-color: map-get($color-options, a),
+        // $text-font-weight: 400,
+        // $text-font: f,
+        // $text-max-lines: 5,
     );
 }
 ```

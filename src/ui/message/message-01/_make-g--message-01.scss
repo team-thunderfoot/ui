@@ -7,8 +7,6 @@
     @media all and ($viewport-type: $tabletm) {
         padding: $measure * 10 $measure * 5;
     }
-
-    &__content {}
 }
 
 @mixin make-message-01-modifier(

@@ -69,7 +69,5 @@ To use it we have to import the css of the $btn-class in the entry
         // $title-font: c,
         // $title-max-lines: 3,
     );
-
-    @include make-cta-03-modifier($btn-class: g--btn-02--second);
 }
 ```

@@ -57,21 +57,21 @@
     @include make-icon-01();
 
     @include make-icon-01-modifier(
-        // $artwork-height: ,
-        // $artwork-width: ,
-        $background-color: transparent,
-        // $hover-background-color: ,
-        // $border-radius: 0,
-        $border-width: 1px,
-        $border-style: solid,
-        $border-color: map-get($color-options, a ),
-        $hover-border-color: map-get($color-options, g ),
-        $path-fill-color: map-get($color-options, a ),
-        $hover-path-fill-color: map-get($color-options, g ),
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-        $hover-transform: translateY(-$measure),
-        $height: $measure * 5,
-        $width: $measure * 5,
+        // $artwork-height: $measure * 2,
+        // $artwork-width: $measure*3,
+        // $background-color: transparent,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 100%,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $height: $measure * 6,
+        // $hover-background-color: map-get($color-options, a),
+        // $hover-border-color: map-get($color-options, g),
+        // $hover-path-fill-color: map-get($color-options, g),
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $path-fill-color: map-get($color-options, a),
+        // $width: $measure * 6,
     );
 }
 ```

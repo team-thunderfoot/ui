@@ -2,8 +2,10 @@
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
-    column-gap: $measure*2;
-    &__wrapper{
+    column-gap: $measure * 2;
+    width: 100%;
+
+    &__wrapper {
         min-width: 50%;
         position: relative;
     }
@@ -15,10 +17,10 @@
     $btn-width: false,
     $error-height: false,
     $input-min-height: false,
-    $recaptcha: false,
+    $recaptcha: false
 ) {
-    .g--subscribe-03{
-        &__wrapper{
+    .g--subscribe-03 {
+        &__wrapper {
             @if $recaptcha {
                 margin-bottom: $measure;
             }
@@ -26,34 +28,34 @@
                 margin-bottom: $error-height;
             }
             @if $btn-width {
-                width: calc(100% - #{$measure*2} - #{$btn-width})
+                width: calc(100% - #{$measure * 2} - #{$btn-width});
             }
             @if $breakpoint {
-                @media all and ($viewport-type: $breakpoint){
+                @media all and ($viewport-type: $breakpoint) {
                     width: 100%;
                     margin-bottom: $measure;
                     position: initial;
                 }
             }
             @if $input-min-height {
-                input{
+                input {
                     min-height: $input-min-height;
                 }
             }
         }
         @if $recaptcha {
-            &__item{
+            &__item {
                 order: 1;
                 width: 100%;
                 @if $breakpoint {
-                    @media all and ($viewport-type: $breakpoint){
+                    @media all and ($viewport-type: $breakpoint) {
                         order: 0;
                         margin-bottom: $measure;
                     }
                 }
             }
         }
-        &__btn{
+        &__btn {
             @if $recaptcha {
                 margin-bottom: $measure;
             }
@@ -61,7 +63,7 @@
                 margin-bottom: $error-height;
             }
             @if $breakpoint {
-                @media all and ($viewport-type: $breakpoint){
+                @media all and ($viewport-type: $breakpoint) {
                     width: 100%;
                     margin-bottom: 0;
                 }

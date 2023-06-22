@@ -3,7 +3,7 @@
     @include make-card-45-modifier(
         // $img-width: auto,
         $background-color: lighten(map-get($color-options,a), 82%),
-        $border-color: map-get($color-options, g),
+        $border-color: map-get($color-options, a),
         $border-radius: 0,
         $border-style: solid,
         $border-width: 1px,

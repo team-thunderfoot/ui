@@ -76,7 +76,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $person-font: f,
         $position-font: f,
         $border-radius: 0,
-        $border-color: map-get($color-options, g),
+        $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
         $content-font-weight: 600,

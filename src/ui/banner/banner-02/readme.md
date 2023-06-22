@@ -45,11 +45,11 @@ If you want the subtitle to be a c--content, the HTML should be:
 ## Editable variables
 
 - $background-color
+- $btn-class
+- $btn-font
+- $title-color
 - $title-font
 - $title-font-weight
-- $title-color
-- $btn-font
-- $btn-class
 
 ## Use
 
@@ -57,12 +57,12 @@ If you want the subtitle to be a c--content, the HTML should be:
 .g--banner-02 {
     @include make-banner-02();
     @include make-banner-02-modifier(
-        $background-color: map-get($color-options, a),
-        $title-font:f,
-        $title-font-weight: 400,
-        $title-color: map-get($color-options, b),
-        $btn-font: f,
-        $btn-class: g--btn-01,
+        // $background-color: map-get($color-options, a),
+        // $btn-class: g--btn-01,
+        // $btn-font: f,
+        // $title-color: map-get($color-options, b),
+        // $title-font-weight: 400,
+        // $title-font:f,
     );
 }
 ```

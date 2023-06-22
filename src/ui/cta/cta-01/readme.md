@@ -17,39 +17,41 @@
 
 ## Editable variables
 
-- $background-color
-- $hover-background-color
-- $btn-class
-- $btn-font
-- $title-color
-- $hover-title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
-- $text-align
-- $hover-shadow
-- $hover-transform
+-   $background-color
+-   $btn-class
+-   $btn-font
+-   $hover-background-color
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-transform
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 To use it we have to import the css of the $btn-class in the entry
 
 ```scss
-.g--cta-01{
+.g--cta-01 {
     @include make-cta-01();
     @include make-cta-01-modifier(
-        $background-color: lighten(map-get($color-options,a), 82%),
-        $hover-background-color: map-get($color-options, h),
-        $btn-class: g--btn-01,
-        // $btn-font: ,
-        $title-color: map-get($color-options, a),
-        $hover-title-color: map-get($color-options, e),
-        $title-font: c,
+        // $background-color: lighten(map-get($color-options, a), 82%),
+        // $btn-class: g--btn-01,
+        // $btn-font: d,
+        // $hover-background-color: map-get($color-options, h),
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-title-color: map-get($color-options, e),
+        // $hover-transform: translateY(-$measure),
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3,
-        //$text-align: left,
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-        $hover-transform: translateY(-$measure),
     );
+
+    @include make-cta-01-modifier($btn-class: g--btn-01--second);
 }
 ```

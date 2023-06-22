@@ -12,7 +12,10 @@
 <div class="g--cta-03">
     <h2 class="g--cta-03__title">CTA-03 This is the Contact call to action</h2>
     <div class="g--cta-03__subtitle c--content-a">
-        <p>Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam
+            consectetur pretium fringilla metus.
+        </p>
     </div>
     <a href="#" class="g--cta-03__btn" target="_blank" rel="noopener noreferrer">Contact Us</a>
 </div>
@@ -20,55 +23,53 @@
 
 ## Editable variables
 
-- $background-color
-- $hover-background-color
-- $btn-class
-- $btn-font
-- $border-radius
-- $subtitle-color
-- $hover-subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $title-color
-- $hover-title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
-- $text-align
-- $hover-shadow
-- $hover-transform
+-   $background-color
+-   $border-radius
+-   $btn-class
+-   $btn-font
+-   $hover-background-color
+-   $hover-shadow
+-   $hover-subtitle-color
+-   $hover-title-color
+-   $hover-transform
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 To use it we have to import the css of the $btn-class in the entry
 
 ```scss
-.g--cta-03{
+.g--cta-03 {
     @include make-cta-03();
     @include make-cta-03-modifier(
-        $background-color: rgba(map-get($color-options, a), .5),
-        // $hover-background-color: ,
-        $btn-class: g--btn-02,
-        // $btn-font: ,
+        // $background-color: rgba(map-get($color-options, a), .5),
         // $border-radius: 0,
-        $subtitle-color: map-get($color-options, a),
-        // $hover-subtitle-color: ,
-        $subtitle-font: f,
-        // $subtitle-font-weight: ,
-        // $subtitle-max-lines: ,
-        $title-color: map-get($color-options, b),
-        // $hover-title-color: ,
-        $title-font: c,
+        // $btn-class: g--btn-02,
+        // $btn-font: d,
+        // $hover-background-color: map-get($color-options, e),
+        // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+        // $hover-subtitle-color: map-get($color-options, c),
+        // $hover-title-color: map-get($color-options, e),
+        // $hover-transform: translateY(-$measure),
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font-weight: 600,
+        // $subtitle-font: f,
+        // $subtitle-max-lines: 2,
+        // $text-align: left,
+        // $title-color: map-get($color-options, b),
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3,
-        $text-align: left,
-        // $hover-shadow: ,
-        // $hover-transform: ,
     );
 
-    @include make-cta-03-modifier(
-        $btn-class: g--btn-02--second,
-    );
+    @include make-cta-03-modifier($btn-class: g--btn-02--second);
 }
 ```

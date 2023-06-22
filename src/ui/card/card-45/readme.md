@@ -63,7 +63,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         $content-max-lines: 3,
         $heading-font: c,
         $border-radius: 0,
-        $border-color: map-get($color-options, g),
+        $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
         $hover-background-color: map-get($color-options, b),

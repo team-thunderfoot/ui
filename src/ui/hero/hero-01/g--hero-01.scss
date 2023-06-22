@@ -1,27 +1,22 @@
 .g--hero-01 {
     @include make-hero-01();
     @include make-hero-01-modifier(
-        $background-color: map-get($color-options, d),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $header-height: 96px,
         $img-height: 500px,
-        $img-position: center,
         $img-object-fit: cover,
-        $title-color: map-get($color-options, f),
+        $img-position: center,
+        $title-color: map-get($color-options, a),
         $title-font: a,
-        $title-font-weight: bold,
         // $text-align: false
+        // $title-font-weight: false,
     );
 
-    @media all and ( $viewport-type: $tabletm) {
-        @include make-hero-01-modifier(
-            $img-height: 400px,
-        );
+    @media all and ($viewport-type: $tabletm) {
+        @include make-hero-01-modifier($img-height: 400px);
     }
 
-    @media all and ( $viewport-type: $tablets) {
-        @include make-hero-01-modifier(
-            $header-height: 86px,
-            $img-height: 300px,
-        );
+    @media all and ($viewport-type: $tablets) {
+        @include make-hero-01-modifier($header-height: 86px, $img-height: 300px);
     }
 }

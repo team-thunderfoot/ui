@@ -24,44 +24,169 @@
             }
         }
     }
-    &--second {
-        // display: flex;
-        // overflow-x: hidden;
-        // height: fit-content !important;
-        // align-items: center;
-        // min-height: 100vh;
-        // background-color: map-get($color-options, a);
-    }
+    &--second {}
     &--second & {
         &__wrapper{
-            // display: flex;
-            // flex-wrap: nowrap;
-            // min-height: 80vh;
             padding: $measure*4 0;
             &__item{
                 padding-right: 0;
                 width: calc(100vw - var(--scrollbar-width));
-                // width: 100vw;
+            }
+        }
+    }
+    &--third {
+        overflow: hidden;
+    }
+    &--third & {
+        &__wrapper{
+            padding: $measure*4 0;
+            &__item{
+                padding-right: 0;
+                min-width: calc(100vw - var(--scrollbar-width));
+                // min-width: 100vw;
+                max-height: 100vh;
             }
         }
     }
 }
 
-.g--horizontal-scroll-02{
-    display: flex;
-    overflow-x: hidden;
-    height: fit-content !important;
-    align-items: center;
-    min-height: 100vh;
-    background-color: map-get($color-options, a);
-    &__wrapper{
-        display: flex;
-        flex-wrap: nowrap;
-        min-height: 80vh;
-        padding: $measure*4 0;
-        &__item{
-            width: calc(100vw - var(--scrollbar-width));
-            // width: 100vw;
-        }
+.c--container{
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    min-width: $g-container-width;
+    margin-left: calc((100vw - #{$g-container-width}) / 2);
+    margin-right: calc((100vw - #{$g-container-width}) / 2);
+    max-height: 100%;
+    @media all and ($viewport-type: $laptop){
+      min-width: 90vw;
+      margin-left: calc((100vw - 90vw) / 2);
+      margin-right: calc((100vw - 90vw) / 2);
+    }
+    @media all and ($viewport-type: $mobile){
+      min-width: 95vh;
+      margin-left: calc((100vw - 95vw) / 2);
+      margin-right: calc((100vw - 95vw) / 2);
     }
 }
+
+.c--row{
+    margin-right: -$half-gutter-width;
+    margin-left: -$half-gutter-width;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: calc(100vh - $measure*4 - $measure*4 - 83px);
+    row-gap: 32px;
+    column-gap: 0;
+}
+
+
+$viewport-layouts-l: (
+  'all': $all,
+  'desktop': $desktop,
+);
+
+$viewport-layouts-m: (
+  'laptop': $laptop,
+  'tabletl': $tabletl,
+  'tabletm': $tabletm,
+  'tablets': $tablets,
+);
+
+$viewport-layouts-s: (
+  'mobile': $mobile,
+);
+
+//* Columns
+@mixin make-col($i) {
+    max-height: 100%;
+    // $value-component: calc((($g-container-width - $gutter-width) / $columns)*$i);
+    // @media all and ($viewport-type: $laptop){
+    //     $value-component: calc(((90vw - $gutter-width) / $columns)*$i);
+    // }
+    // @media all and ($viewport-type: $mobile){
+    //     $value-component: calc(((95vw - $gutter-width) / $columns)*$i);
+    // }
+    // flex: 0 0 calc((($g-container-width - $gutter-width) / $columns)*$i);
+    width: calc((($g-container-width) / $columns)*$i);
+    // position: relative;
+    // min-height: 1px;
+    // height: fit-content;
+    // max-height: 100%;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    // transition: $time-b;
+    @media all and ($viewport-type: $laptop){
+        // flex: 0 0 calc(((90vw - $gutter-width) / $columns)*$i);
+        width: calc(((90vw) / $columns)*$i);
+    }
+    @media all and ($viewport-type: $mobile){
+        // flex: 0 0 calc(((95vw - $gutter-width) / $columns)*$i);
+        width: calc(((95vw) / $columns)*$i);
+    }
+  }
+
+/*Start loop columns*/
+@mixin build-columns($size, $bkpt) {
+    @for $i from 1 through $columns {
+      @if ($size == 'all') {
+        .c--col-#{$i} {
+          @include make-col($i);
+        }
+      } @else {
+        .c--col-#{$size}-#{$i} {
+            max-height: 100%;
+            $value-component: calc((($g-container-width) / $columns)*$i);
+            @media all and ($viewport-type: #{$bkpt}) {
+                // flex: 0 0 $value-component;
+                width: $value-component;
+                // transition: $time-b;
+            }
+        }
+      }
+    }
+  }
+  // Build Columns
+  @each $size, $bkpt in $viewport-layouts-l {
+    @include build-columns($size, $bkpt);
+  }
+
+  /*Start loop columns*/
+@mixin build-columns($size, $bkpt) {
+    @for $i from 1 through $columns {
+        .c--col-#{$size}-#{$i} {
+            $value-component: calc(((90vw) / $columns)*$i);
+            @media all and ($viewport-type: #{$bkpt}) {
+                // flex: 0 0 $value-component;
+                width: $value-component;
+                // transition: $time-b;
+            }
+        }
+    }
+  }
+  // Build Columns
+  @each $size, $bkpt in $viewport-layouts-m {
+    @include build-columns($size, $bkpt);
+  }
+
+    /*Start loop columns*/
+@mixin build-columns($size, $bkpt) {
+    @for $i from 1 through $columns {
+        .c--col-#{$size}-#{$i} {
+            $value-component: calc(((95vw) / $columns)*$i);
+            @media all and ($viewport-type: #{$bkpt}) {
+                // flex: 0 0 $value-component;
+                width: $value-component;
+                // transition: $time-b;
+            }
+        }
+    }
+  }
+  // Build Columns
+  @each $size, $bkpt in $viewport-layouts-s {
+    @include build-columns($size, $bkpt);
+  }
+
+  .c--offset{
+    margin-bottom: 100%;
+  }

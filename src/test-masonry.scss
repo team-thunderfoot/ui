@@ -1,0 +1,44 @@
+//* project vars/mixins
+@import './scss/_var/vars.scss';
+@import './scss/_mixins/mixins.scss';
+
+//* project foundations
+@import './scss/foundation/foundation.scss';
+
+//* project utilities
+@import './scss/utilities/utilities.scss';
+
+//* global components mixins
+@import './mixins.scss';
+
+//* lazy
+@import './ui/lazy/lazy-01/g--lazy-01.scss';
+
+//* back-top
+@import './ui/back-top/back-top-01/g--back-top-01.scss';
+
+//* btn
+@import './ui/btn/btn-01/g--btn-01.scss';
+
+//* card
+@import './ui/card/card-13/g--card-13.scss';
+
+//* icon
+@import './ui/icon/icon-01/g--icon-01.scss';
+
+//* link
+@import './ui/link/link-01/g--link-01.scss';
+
+//* subscribe
+@import './ui/subscribe/subscribe-01/g--subscribe-01.scss';
+@import './ui/subscribe/subscribe-02/g--subscribe-02.scss';
+@import './ui/subscribe/subscribe-03/g--subscribe-03.scss';
+
+
+.c--masonry-a {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+    gap: 32px;
+    &__item{}
+}

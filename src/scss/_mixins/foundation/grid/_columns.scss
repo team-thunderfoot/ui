@@ -1,6 +1,5 @@
 @mixin make-col($i) {
-    // $value: (100% / $columns)*$i;
-    $value: 0.6944444444444% * ($columns * $i);
+    $value: calc((100% / $columns)*$i);
     flex: 0 0 $value;
     max-width: $value;
     position: relative;
@@ -12,8 +11,7 @@
   
   /* Start Responsive Offset */
   @mixin make-offset($i) {
-    // $value: (100% / $columns)*$i;
-    $value: 0.6944444444444% * ($columns * $i);
+    $value: calc((100% / $columns)*$i);
     margin-left: $value;
     transition: $time-b;
   }

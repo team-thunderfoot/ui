@@ -14,23 +14,30 @@
         <h1 class="g--hero-06__left-items__title">Heading lorem ipsum dolor</h1>
     </div>
     <div class="g--hero-06__right-items">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--hero-06__right-items__media g--lazy-01" />
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--hero-06__right-items__media g--lazy-01"
+        />
     </div>
 </section>
 ```
 
 ## Editable variables
 
-- $background-color
-- $breakpoint
-- $header-height
-- $img-height
-- $img-position
-- $img-object-fit
-- $title-color
-- $title-font
-- $title-font-weight
-- $text-align
+-   $background-color
+-   $breakpoint
+-   $header-height
+-   $img-height
+-   $img-object-fit
+-   $img-position
+-   $link-class
+-   $link-font
+-   $text-align
+-   $title-color
+-   $title-font-weight
+-   $title-font
 
 ## Use
 
@@ -38,16 +45,18 @@
 .g--hero-06 {
     @include make-hero-06();
     @include make-hero-06-modifier(
-        $background-color: rgba(map-get($color-options, a), 30%),
-        $breakpoint: $tablets,
-        $header-height: 96px,
-        $img-height: 200px,
-        $img-position: center,
-        $img-object-fit: cover,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $title-font-weight: 400,
+        // $background-color: lighten(map-get($color-options, a), 82%),
+        // $breakpoint: $tablets,
+        // $header-height: 96px,
+        // $img-height: 200px,
+        // $img-object-fit: cover,
+        // $img-position: center,
+        // $link-class: g--btn-01,
+        // $link-font: c,
         // $text-align: center
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: a,
     );
 }
 ```

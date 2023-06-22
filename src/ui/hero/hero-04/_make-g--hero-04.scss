@@ -58,17 +58,17 @@
     $breakpoint: false,
     $header-height: false,
     $img-height: false,
-    $img-position: false,
     $img-object-fit: false,
+    $img-position: false,
     $link-class: false,
     $link-font: false,
-    $title-color: false,
-    $title-font: false,
-    $title-font-weight: false,
     $subtitle-color: false,
-    $subtitle-font: false,
     $subtitle-font-weight: false,
-    $text-align: false
+    $subtitle-font: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false
 ) {
     @if $background-color {
         background-color: $background-color;

@@ -1,17 +1,18 @@
 .g--hero-05 {
     @include make-hero-05();
     @include make-hero-05-modifier(
-        $background-color:  rgba(map-get($color-options,a), 30%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $breakpoint: $tablets,
         $header-height: 96px,
         $img-height: 200px,
-        $img-position: center,
         $img-object-fit: cover,
-        $link-class: g--link-01,
-        $link-font: false,    
+        $img-position: center,
+        $link-class: g--btn-01,
         $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $title-font-weight: false,
+        $title-font: a,
+        // $link-font: false,
         // $text-align: center
+        // $title-font-weight: false,
     );
+    @include make-hero-05-modifier($link-class: g--btn-01--second);
 }

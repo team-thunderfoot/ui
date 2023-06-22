@@ -8,4 +8,7 @@
         $btn-font: f,
         $btn-class: g--btn-01,
     );
+    @include make-banner-02-modifier(
+        $btn-class: g--btn-01--third,
+    );
 }

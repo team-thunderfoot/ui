@@ -44,6 +44,7 @@
         @include make-btn-01-modifier(
             $border-radius: 200px,
             $border-width: 1px,
+            $border-color: map-get($color-options, b),
             $hover-border-color: map-get($color-options, a),
             $text-color: map-get($color-options, b),
             $hover-text-color: map-get($color-options, a),

@@ -26,16 +26,16 @@
 }
 
 @mixin make-modal-01-modifier(
-    $transition: false,
     $background-color: false,
-    $size: false,
     $icon-color: false,
     $icon-height: false,
     $icon-width: false,
-    $opacity: false,
     $opacity-active: false,
+    $opacity: false,
+    $size: false,
+    $transition: false,
+    $zoom-active: false,
     $zoom: false,
-    $zoom-active: false
 ) {
     @if $transition {
         transition: $transition;

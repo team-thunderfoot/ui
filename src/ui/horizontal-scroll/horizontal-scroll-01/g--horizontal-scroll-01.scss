@@ -63,24 +63,36 @@
     padding-right: $half-gutter-width;
     padding-left: $half-gutter-width;
     min-width: $g-container-width;
-    margin-left: calc((100vw - #{$g-container-width}) / 2);
-    margin-right: calc((100vw - #{$g-container-width}) / 2);
+    margin-left: calc((100vw - #{$g-container-width})*.5);
+    margin-right: calc((100vw - #{$g-container-width})*.5);
     max-height: 100%;
     width: auto;
     @media all and ($viewport-type: $laptop){
       min-width: 90vw;
-      margin-left: calc((100vw - 90vw) / 2);
-      margin-right: calc((100vw - 90vw) / 2);
+      margin-left: calc((100vw - 90vw)*.5);
+      margin-right: calc((100vw - 90vw)*.5);
     }
     @media all and ($viewport-type: $mobile){
       min-width: 95vw;
-      margin-left: calc((100vw - 95vw) / 2);
-      margin-right: calc((100vw - 95vw) / 2);
+      margin-left: calc((100vw - 95vw)*.5);
+      margin-right: calc((100vw - 95vw)*.5);
     //   display: flex;
     }
 }
 
 .c--row{
+    margin-right: -$half-gutter-width;
+    margin-left: -$half-gutter-width;
+    display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    max-height: 100vh;
+    row-gap: 32px;
+    column-gap: 0;
+    width: auto;
+}
+
+.t--row{
     margin-right: -$half-gutter-width;
     margin-left: -$half-gutter-width;
     display: flex;

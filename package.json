@@ -28,6 +28,7 @@
     "@teamthunderfoot/back-to-top": "^0.0.4",
     "blazy": "^1.8.2",
     "gsap": "^3.12.1",
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "tiny-slider": "^2.9.4"
   }
 }

@@ -1,0 +1,61 @@
+@mixin make-slider-01() {
+    .tns-ovh {
+        overflow: visible;
+
+        @media all and ($viewport-type: $tablets) {
+            overflow: hidden;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+        &__item {
+            display: flex !important;
+        }
+    }
+
+    &__controls {
+        width: 100%;
+
+        &__dash {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            &__artwork {
+                position: absolute;
+                width: 0;
+                height: calc(100% + 4px);
+                top: -2px;
+                left: 0;
+            }
+        }
+    }
+}
+
+@mixin make-slider-01-modifier(
+    $background-color-dash: false,
+    $background-color-line: false,
+    $height-dash: false
+) {
+    .g--slider-01 {
+        &__controls {
+            &__dash {
+                @if $background-color-dash {
+                    background: $background-color-dash;
+                }
+
+                @if $height-dash {
+                    height: $height-dash;
+                }
+
+                &__artwork {
+                    @if $background-color-line {
+                        background: $background-color-line;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,10 +3,10 @@ import { sliderIndex } from "./sliderIndex"
 
 import gsap from "gsap"
 
-class SliderA {
+class Slider01 {
     constructor() {
         this.DOM = {
-            element: document.querySelectorAll(".js--slider-a"),
+            element: document.querySelectorAll(".js--slider-01"),
         }
         this.autoplayTime = 15
         this.tl = gsap.timeline()
@@ -16,7 +16,7 @@ class SliderA {
     init() {
         this.DOM.element.forEach((el) => {
             var tl = gsap.timeline()
-            var sliderAWrapper = tns({
+            var slider01Wrapper = tns({
                 container: el,
                 items: 1,
                 center: true,
@@ -35,30 +35,30 @@ class SliderA {
                 speed: 1000,
             })
 
-            if (sliderAWrapper) {
-                this.customizedFunction(el, sliderAWrapper, tl)
+            if (slider01Wrapper) {
+                this.customizedFunction(el, slider01Wrapper, tl)
 
-                const sliderA = document.querySelectorAll(".g--slider-01")
+                const slider01 = document.querySelectorAll(".g--slider-01")
 
-                sliderA.forEach((element) => {
+                slider01.forEach((element) => {
                     element.addEventListener("mouseover", () => {
                         tl.pause()
                     })
                 })
 
-                sliderA.forEach((element) => {
+                slider01.forEach((element) => {
                     element.addEventListener("mouseout", () => {
                         tl.resume()
                     })
                 })
 
-                sliderAWrapper.events.on("indexChanged", () => {
+                slider01Wrapper.events.on("indexChanged", () => {
                     el.closest(".g--slider-01").querySelector(".js--dash").style.width = 0
                     tl.restart()
                 })
 
-                sliderAWrapper.events.on("transitionEnd", () => {
-                    sliderIndex(".js--slider-a")
+                slider01Wrapper.events.on("transitionEnd", () => {
+                    sliderIndex(".js--slider-01")
                 })
             }
         })
@@ -80,4 +80,4 @@ class SliderA {
         )
     }
 }
-export default SliderA
+export default Slider01

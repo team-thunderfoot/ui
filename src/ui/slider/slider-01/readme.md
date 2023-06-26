@@ -1,4 +1,4 @@
-# Slider-01
+# Slider-01 without controls
 
 ## Layout
 
@@ -6,11 +6,11 @@
 
 [slider-01]: /src/img/global-components/slider/slider-01.jpg
 
-## Html for a card
+## Html for the slider
 
 ```html
 <div class="g--slider-01">
-    <div class="g--slider-01__wrapper js--slider-a">
+    <div class="g--slider-01__wrapper js--slider-01">
         <div class="g--slider-01__wrapper__item">// item</div>
     </div>
     <div class="g--slider-01__controls js--controls-a">
@@ -48,7 +48,7 @@
 npm install tiny-slider
 ```
 
-2- Create a SliderA.js class with all the necessary settings
+2- Create a Slider01.js class with all the necessary settings
 
 ```sh
 import { tns } from "/node_modules/tiny-slider/src/tiny-slider.js"
@@ -56,10 +56,10 @@ import { sliderIndex } from "./sliderIndex"
 
 import gsap from "gsap"
 
-class SliderA {
+class Slider01 {
     constructor() {
         this.DOM = {
-            element: document.querySelectorAll(".js--slider-a"),
+            element: document.querySelectorAll(".js--slider-01"),
         }
         this.autoplayTime = 15
         this.tl = gsap.timeline()
@@ -69,7 +69,7 @@ class SliderA {
     init() {
         this.DOM.element.forEach((el) => {
             var tl = gsap.timeline()
-            var sliderAWrapper = tns({
+            var slider01Wrapper = tns({
                 container: el,
                 items: 1,
                 center: true,
@@ -88,30 +88,30 @@ class SliderA {
                 speed: 1000,
             })
 
-            if (sliderAWrapper) {
-                this.customizedFunction(el, sliderAWrapper, tl)
+            if (slider01Wrapper) {
+                this.customizedFunction(el, slider01Wrapper, tl)
 
-                const sliderA = document.querySelectorAll(".g--slider-01")
+                const slider01 = document.querySelectorAll(".g--slider-01")
 
-                sliderA.forEach((element) => {
+                slider01.forEach((element) => {
                     element.addEventListener("mouseover", () => {
                         tl.pause()
                     })
                 })
 
-                sliderA.forEach((element) => {
+                slider01.forEach((element) => {
                     element.addEventListener("mouseout", () => {
                         tl.resume()
                     })
                 })
 
-                sliderAWrapper.events.on("indexChanged", () => {
+                slider01Wrapper.events.on("indexChanged", () => {
                     el.closest(".g--slider-01").querySelector(".js--dash").style.width = 0
                     tl.restart()
                 })
 
-                sliderAWrapper.events.on("transitionEnd", () => {
-                    sliderIndex(".js--slider-a")
+                slider01Wrapper.events.on("transitionEnd", () => {
+                    sliderIndex(".js--slider-01")
                 })
             }
         })
@@ -133,7 +133,7 @@ class SliderA {
         )
     }
 }
-export default SliderA
+export default Slider01
 
 ```
 
@@ -157,17 +157,17 @@ export const sliderIndex = (wrapperClass) => {
 }
 ```
 
-3- Import and instance the class SliderA.js in your Index.js
+3- Import and instance the class Slider01.js in your Index.js
 
 ```sh
-import SliderA from "./SliderA"
+import Slider01from "./Slider01"
 
 class Index {
     constructor() {
         this.init()
     }
     init() {
-        new SliderA()
+        new Slider01()
     }
 }
 

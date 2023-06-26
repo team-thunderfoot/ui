@@ -6,14 +6,14 @@
 /**
  * Lazy Loading
  */
-import SliderA from "./SliderA"
+import Slider01 from "./Slider01"
 
 class Index {
     constructor() {
         this.init()
     }
     init() {
-        new SliderA()
+        new Slider01()
     }
 }
 

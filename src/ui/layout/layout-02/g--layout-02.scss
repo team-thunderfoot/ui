@@ -1,10 +1,10 @@
 .g--layout-02 {
     @include make-layout-02();
     @include make-layout-02-modifier(
-        $title-font: c,
-        $title-font-weight: 400,
+        $title-font: f,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
-        $subtitle-font: f,
+        $subtitle-font: c,
         $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
         //$background-color: map-get($color-options, e),

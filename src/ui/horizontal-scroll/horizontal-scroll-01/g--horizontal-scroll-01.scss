@@ -4,7 +4,7 @@
     height: fit-content !important;
     align-items: center;
     min-height: 100vh;
-    background-color: rgba(map-get($color-options, a), .8);
+    background-color: red;
     &__wrapper{
         display: flex;
         flex-wrap: nowrap;
@@ -31,11 +31,16 @@
             &__item{
                 padding-right: 0;
                 width: calc(100vw - var(--scrollbar-width));
+                @media all and ($viewport-type: $tabletm) {
+                    width: calc(100vw - var(--scrollbar-width));
+                }
             }
         }
     }
     &--third {
         overflow: hidden;
+        background-color: map-get($color-options, d);
+        // overflow: visible;
     }
     &--third & {
         &__wrapper{
@@ -45,6 +50,10 @@
                 min-width: calc(100vw - var(--scrollbar-width));
                 // min-width: 100vw;
                 max-height: 100vh;
+                width: auto;
+                @media all and ($viewport-type: $tabletm) {
+                    width: auto;
+                }
             }
         }
     }
@@ -54,18 +63,20 @@
     padding-right: $half-gutter-width;
     padding-left: $half-gutter-width;
     min-width: $g-container-width;
-    margin-left: calc((100vw - #{$g-container-width}) / 2);
-    margin-right: calc((100vw - #{$g-container-width}) / 2);
+    margin-left: calc((100vw - #{$g-container-width})*.5);
+    margin-right: calc((100vw - #{$g-container-width})*.5);
     max-height: 100%;
+    width: auto;
     @media all and ($viewport-type: $laptop){
       min-width: 90vw;
-      margin-left: calc((100vw - 90vw) / 2);
-      margin-right: calc((100vw - 90vw) / 2);
+      margin-left: calc((100vw - 90vw)*.5);
+      margin-right: calc((100vw - 90vw)*.5);
     }
     @media all and ($viewport-type: $mobile){
-      min-width: 95vh;
-      margin-left: calc((100vw - 95vw) / 2);
-      margin-right: calc((100vw - 95vw) / 2);
+      min-width: 95vw;
+      margin-left: calc((100vw - 95vw)*.5);
+      margin-right: calc((100vw - 95vw)*.5);
+    //   display: flex;
     }
 }
 
@@ -73,13 +84,36 @@
     margin-right: -$half-gutter-width;
     margin-left: -$half-gutter-width;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: calc(100vh - $measure*4 - $measure*4 - 83px);
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    max-height: 100vh;
     row-gap: 32px;
     column-gap: 0;
+    width: auto;
 }
 
+.t--row{
+    margin-right: -$half-gutter-width;
+    margin-left: -$half-gutter-width;
+    display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    max-height: 100vh;
+    row-gap: 32px;
+    column-gap: 0;
+    width: auto;
+}
+
+.flex-direction-mobile--row{
+    @media all and ($viewport-type: $mobile){
+        flex-direction: row;
+    }
+}
+.flex-direction-mobile--column{
+    @media all and ($viewport-type: $mobile){
+        flex-direction: column;
+    }
+}
 
 $viewport-layouts-l: (
   'all': $all,
@@ -100,28 +134,13 @@ $viewport-layouts-s: (
 //* Columns
 @mixin make-col($i) {
     max-height: 100%;
-    // $value-component: calc((($g-container-width - $gutter-width) / $columns)*$i);
-    // @media all and ($viewport-type: $laptop){
-    //     $value-component: calc(((90vw - $gutter-width) / $columns)*$i);
-    // }
-    // @media all and ($viewport-type: $mobile){
-    //     $value-component: calc(((95vw - $gutter-width) / $columns)*$i);
-    // }
-    // flex: 0 0 calc((($g-container-width - $gutter-width) / $columns)*$i);
     width: calc((($g-container-width) / $columns)*$i);
-    // position: relative;
-    // min-height: 1px;
-    // height: fit-content;
-    // max-height: 100%;
     padding-right: $half-gutter-width;
     padding-left: $half-gutter-width;
-    // transition: $time-b;
     @media all and ($viewport-type: $laptop){
-        // flex: 0 0 calc(((90vw - $gutter-width) / $columns)*$i);
         width: calc(((90vw) / $columns)*$i);
     }
     @media all and ($viewport-type: $mobile){
-        // flex: 0 0 calc(((95vw - $gutter-width) / $columns)*$i);
         width: calc(((95vw) / $columns)*$i);
     }
   }
@@ -138,9 +157,7 @@ $viewport-layouts-s: (
             max-height: 100%;
             $value-component: calc((($g-container-width) / $columns)*$i);
             @media all and ($viewport-type: #{$bkpt}) {
-                // flex: 0 0 $value-component;
                 width: $value-component;
-                // transition: $time-b;
             }
         }
       }
@@ -157,36 +174,49 @@ $viewport-layouts-s: (
         .c--col-#{$size}-#{$i} {
             $value-component: calc(((90vw) / $columns)*$i);
             @media all and ($viewport-type: #{$bkpt}) {
-                // flex: 0 0 $value-component;
                 width: $value-component;
-                // transition: $time-b;
             }
         }
     }
   }
-  // Build Columns
   @each $size, $bkpt in $viewport-layouts-m {
     @include build-columns($size, $bkpt);
   }
-
-    /*Start loop columns*/
+  
 @mixin build-columns($size, $bkpt) {
-    @for $i from 1 through $columns {
+    @for $i from 1 through 24 {
         .c--col-#{$size}-#{$i} {
             $value-component: calc(((95vw) / $columns)*$i);
             @media all and ($viewport-type: #{$bkpt}) {
-                // flex: 0 0 $value-component;
                 width: $value-component;
-                // transition: $time-b;
             }
         }
     }
   }
-  // Build Columns
   @each $size, $bkpt in $viewport-layouts-s {
     @include build-columns($size, $bkpt);
   }
 
-  .c--offset{
-    margin-bottom: 100%;
+
+  //* bottom space
+  @mixin build-space($size, $bkpt) {
+      @if ($size == 'all') {
+        .c--sp {
+          margin-bottom: 100%;
+        }
+      } @else {
+        .c--sp-#{$size} {
+            @media all and ($viewport-type: #{$bkpt}) {
+                margin-bottom: 100%;
+            }
+        }
+        .c--sp-#{$size}-0 {
+            @media all and ($viewport-type: #{$bkpt}) {
+                margin-bottom: 0;
+            }
+        }
+      }
+  }
+  @each $size, $bkpt in $viewport-layouts {
+    @include build-space($size, $bkpt);
   }

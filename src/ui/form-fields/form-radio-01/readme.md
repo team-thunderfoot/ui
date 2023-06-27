@@ -10,37 +10,39 @@
 
 ```html
 <div class="g--form-radio-01">
-    <input type="radio" id="radio-01" class="g--form-radio-01__item" name="radio-01">
+    <input type="radio" id="radio-01" class="g--form-radio-01__item" name="radio-01" />
     <label class="g--form-radio-01__title" for="radio-01">This is a radio</label>
 </div>
 ```
+
 When there's an error in the input the class "g--form-radio-01--error" should be added:
+
 ```html
 <div class="g--form-radio-01 g--form-radio-01--error">
-    <input type="radio" id="radio-01" class="g--form-radio-01__item" name="radio-01">
+    <input type="radio" id="radio-01" class="g--form-radio-01__item" name="radio-01" />
     <label class="g--form-radio-01__title" for="radio-01">This is a radio</label>
 </div>
 ```
 
 ## Editable variables
 
-- $artwork-color
-- $circle-border-style
-- $circle-border-width
-- $circle-color
-- $circle-color-focus
-- $circle-width
-- $error-border-color
-- $font
-- $font-weight
-- $text-color
+-   $artwork-color
+-   $circle-border-style
+-   $circle-border-width
+-   $circle-color
+-   $circle-color-focus
+-   $circle-width
+-   $error-border-color
+-   $font
+-   $font-weight
+-   $text-color
 
 ## Use
 
 `$circle-color-focus` variable is used for focus and filled styles.
 
 ```scss
-.g--form-radio-01{
+.g--form-radio-01 {
     @include make-form-radio-01();
     @include make-form-radio-01-modifier(
         // $artwork-color: map-get($color-options, g),

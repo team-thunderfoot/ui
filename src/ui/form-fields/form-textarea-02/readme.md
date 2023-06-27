@@ -15,6 +15,7 @@
 ```
 
 When there's an error in the textarea the class "g--form-textarea-02--error" should be added:
+
 ```html
 <div class="g--form-textarea-02 g--form-textarea-02--error">
     <textarea type="text" id="text-02--error" class="g--form-textarea-02__item" placeholder="placeholder">
@@ -22,6 +23,7 @@ When there's an error in the textarea the class "g--form-textarea-02--error" sho
 ```
 
 In this case, the label should be inside "g--form-textarea-02":
+
 ```html
 <div class="g--form-textarea-02">
     <textarea type="text" id="text-02" class="g--form-textarea-02__item" placeholder="placeholder">
@@ -31,27 +33,27 @@ In this case, the label should be inside "g--form-textarea-02":
 
 ## Editable variables
 
-- $background-color
-- $background-color-autofill
-- $border-color
-- $border-color-focus
-- $border-radius
-- $border-style
-- $border-width
-- $error-border-color
-- $font
-- $font-size-mobile
-- $font-weight
-- $placeholder-color
-- $text-color
-- $textarea-height
+-   $background-color
+-   $background-color-autofill
+-   $border-color
+-   $border-color-focus
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $error-border-color
+-   $font
+-   $font-size-mobile
+-   $font-weight
+-   $placeholder-color
+-   $text-color
+-   $textarea-height
 
 ## Use
 
 `$border-color-focus` variable is used for focus and filled styles, if placeholder is not added, it won't work and it'll be always look as if it's filled/focused.
 
 ```scss
-.g--form-textarea-02{
+.g--form-textarea-02 {
     @include make-form-textarea-02();
     @include make-form-textarea-02-modifier(
         // $background-color: transparent,

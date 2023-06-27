@@ -14,18 +14,18 @@
 
 ## Editable variables
 
-- $label-color
-- $label-color (focus)
-- $label-font
-- $label-font (focus)
-- $label-font-weight
-- $label-font-weight (focus)
+-   $label-color
+-   $label-color (focus)
+-   $label-font
+-   $label-font (focus)
+-   $label-font-weight
+-   $label-font-weight (focus)
 
 ## Use
 
 ```scss
-.g--form-label-02{
-    .g--form-label-02{
+.g--form-label-02 {
+    .g--form-label-02 {
         @include make-form-label-02();
         @include make-form-label-02-modifier(
             // $label-color: map-get($color-options, a),

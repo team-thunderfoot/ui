@@ -36,27 +36,27 @@ When there's an error in the select the class "g--form-select-01--error" should 
 
 ## Editable variables
 
-- $artwork-url
-- $background-color
-- $border-color
-- $border-color-focus
-- $border-radius
-- $border-style
-- $border-width
-- $error-border-color
-- $font
-- $font-weight
-- $font-size-mobile
-- $option-background
-- $option-color
-- $text-color
+-   $artwork-url
+-   $background-color
+-   $border-color
+-   $border-color-focus
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $error-border-color
+-   $font
+-   $font-weight
+-   $font-size-mobile
+-   $option-background
+-   $option-color
+-   $text-color
 
 ## Use
 
 `$border-color-focus` variable is used for focus and filled styles, if it's not required, it won't work and it'll be always look as if it's filled/focused.
 
 ```scss
-.g--form-select-01{
+.g--form-select-01 {
     @include make-form-select-01();
     @include make-form-select-01-modifier(
         // $artwork-url: url('/src/img/global-components/form-fields/select-01.jpg'),

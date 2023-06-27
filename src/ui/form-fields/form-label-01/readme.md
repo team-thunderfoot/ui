@@ -14,14 +14,14 @@
 
 ## Editable variables
 
-- $label-color
-- $label-font
-- $label-font-weight
+-   $label-color
+-   $label-font
+-   $label-font-weight
 
 ## Use
 
 ```scss
-.g--form-label-01{
+.g--form-label-01 {
     @include make-form-label-01();
     @include make-form-label-01-modifier(
         // $label-color: map-get($color-options, a),

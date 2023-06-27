@@ -37,9 +37,9 @@ It is not necessary to add aspect-ratio.
 - $hover-title-color
 - $hover-transform
 - $img-aspect-ratio
+- $img-fit
 - $img-height
 - $img-position
-- $img-fit
 - $img-width
 - $text-align
 - $title-color
@@ -53,19 +53,19 @@ It is not necessary to add aspect-ratio.
 .g--card-08{
     @include make-card-08();
     @include make-card-08-modifier(
-        $hover-img-zoom: 1.2,
-        $hover-title-color: ,
-        $hover-transform: ,
-        $img-aspect-ratio: 1.7,
-        $img-height: 340px,
-        $img-position: center,
-        $img-fit: ,
-        $img-width: ,
-       $text-align: left,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 400,
-        $title-max-lines: 3,
+    //     $hover-img-zoom: 1.2,
+    //     $hover-title-color: map-get($color-options, h),
+    //     $hover-transform: translateY(-$measure),
+    //     $img-aspect-ratio: 1.7,
+    //     $img-fit: cover,
+    //     $img-height: 340px,
+    //     $img-position: center,
+    //     $img-width: auto,
+    //     $title-color: map-get($color-options, a),
+    //     $title-font-weight: 400,
+    //     $title-font: c,
+    //     $title-max-lines: 3,
+    //    $text-align: left,
     );
 }
 ```

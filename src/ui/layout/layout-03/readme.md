@@ -96,7 +96,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         // $object-fit: ,
         // $subtitle-color: map-get($color-options, a)
         // $subtitle-font: f,
-        // $subtitle-font-weight: ,
+        // $subtitle-font-weight: 400,
         // $title-color: map-get($color-options, a),
         // $title-font: c,
         // $title-font-weight: 400,

@@ -52,8 +52,8 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     @include make-card-48-modifier(
         // $hover-img-background-color: ,
         // $hover-img-zoom:,
-        // $hover-title-color: ,
-        // $hover-transform: ,
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
         // $img-align: ,
         // $img-aspect-ratio: calc(16 / 9),
         // $img-background-color: ,
@@ -61,10 +61,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $img-height: 340px,
         // $img-object-fit: ,
         // $img-position: center,
-        // $img-width: ,
+        // $img-width: auto,
         // $subtitle-color: map-get($color-options, a)
         // $subtitle-font: f,
-        // $subtitle-font-weight: ,
+        // $subtitle-font-weight: 400,
         //$text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

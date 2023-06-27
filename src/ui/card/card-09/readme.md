@@ -13,7 +13,12 @@
     <div class="g--card-09__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
     <div class="g--card-09__ft-items">
         <div class="g--card-09__ft-items__media-wrapper">
-            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-09__ft-items__media-wrapper__media g--lazy-01">
+            <img
+                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                src="/src/img/global-components/placeholder.jpg"
+                alt="alt text"
+                class="g--card-09__ft-items__media-wrapper__media g--lazy-01"
+            />
         </div>
         <h3 class="g--card-09__ft-items__title">Lorem ipsum</h3>
     </div>
@@ -21,12 +26,18 @@
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
+
 ```html
 <div class="g--card-09 g--card-09--second">
     <div class="g--card-09__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
     <div class="g--card-09__ft-items">
         <div class="g--card-09__ft-items__media-wrapper">
-            <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-09__ft-items__media-wrapper__media g--lazy-01">
+            <img
+                data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                src="/src/img/global-components/placeholder.jpg"
+                alt="alt text"
+                class="g--card-09__ft-items__media-wrapper__media g--lazy-01"
+            />
         </div>
         <div class="g--card-09__ft-items__title c--content-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     </div>
@@ -39,51 +50,50 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $background-position
-- $background-size
-- $border-radius
-- $hover-background-img-zoom
-- $hover-img-zoom
-- $hover-shadow
-- $hover-title-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $img-fit
-- $img-width
-- $mask-color
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-position
+-   $background-size
+-   $border-radius
+-   $hover-background-img-zoom
+-   $hover-img-zoom
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-fit
+-   $img-height
+-   $img-position
+-   $img-width
+-   $mask-color
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 ```scss
-.g--card-09{
+.g--card-09 {
     @include make-card-09();
     @include make-card-09-modifier(
-        $background-position: center
-        $background-size: cover,
+        $background-position: center $background-size: cover,
         $border-radius: $measure,
         $hover-background-img-zoom: 2,
         $hover-img-zoom: 1.2,
-        $hover-shadow: ,
-        $hover-title-color: ,
-        $hover-transform: ,
+        $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
+        $hover-title-color: map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
         $img-aspect-ratio: 1.7,
+        $img-fit: cover,
         $img-height: 340px,
         $img-position: center,
-        $img-fit: ,
-        $img-width: ,
-        $mask-color: ,
-       $text-align: left,
+        $img-width: auto,
+        $mask-color: rgba(map-get($color-options, a), 0.2),
         $title-color: map-get($color-options, a),
-        $title-font: c,
         $title-font-weight: 400,
+        $title-font: c,
         $title-max-lines: 3,
+        $text-align: left
     );
 }
 ```

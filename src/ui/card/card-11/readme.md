@@ -58,13 +58,13 @@ It is not necessary to add aspect-ratio.
     @include make-card-11();
     @include make-card-11-modifier(
         // $hover-img-zoom: 1.2,
-        // $hover-title-color: ,
-        // $hover-transform: ,
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: 1.7,
         // $img-height: 340px,
         // $img-position: center,
-        // $img-fit: ,
-        // $img-width: ,
+        // $img-fit: cover,
+        // $img-width: auto,
         // $link-class: g--link-01,
         // $link-font: f,
         //$text-align: left,

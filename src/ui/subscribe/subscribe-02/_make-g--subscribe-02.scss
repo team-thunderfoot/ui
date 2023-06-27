@@ -252,8 +252,6 @@
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     width: 100%;
-                    margin-bottom: $measure;
-                    position: initial;
                 }
             }
             .input {

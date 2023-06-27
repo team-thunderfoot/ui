@@ -64,7 +64,7 @@ It is not necessary to add aspect-ratio.
         $hover-transform: ,
         $img-aspect-ratio: 1.7,
         $img-height: 340px,
-        $img-position: ,
+        $img-position: center,
         $img-fit: ,
         $img-width: ,
         $subtitle-color: map-get($color-options, a)

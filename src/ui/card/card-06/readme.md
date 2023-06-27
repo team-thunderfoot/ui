@@ -86,7 +86,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         $hover-transform: ,
         $img-aspect-ratio: 1.7,
         $img-height: 340px,
-        $img-position: ,
+        $img-position: center,
         $img-fit: ,
         $img-width: ,
         $link-class: g--link-01,

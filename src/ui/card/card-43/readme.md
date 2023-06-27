@@ -89,7 +89,7 @@ It is not necessary to add aspect-ratio.
         // $hover-transform: ,
         // $img-aspect-ratio-responsive: ,
         // $img-height-responsive: ,
-        // $img-position: ,
+        // $img-position: center,
         //$text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

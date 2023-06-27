@@ -101,7 +101,7 @@ It is not necessary to add aspect-ratio.
         // $hover-transform: ,
         // $img-aspect-ratio-responsive: ,
         // $img-height-responsive: ,
-        // $img-position: ,
+        // $img-position: center,
         // $meta-color: ,
         // $meta-font: f,
         // $meta-font-weight: ,

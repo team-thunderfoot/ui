@@ -79,7 +79,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-03 {
     @include make-layout-03();
     @include make-layout-03-modifier(
-        // $align-text-img: ,
+        // $align-text-img: center,
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $breakpoint: ,
         // $btn-class: ,
@@ -89,7 +89,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         // $img-max-height: ,
         // $img-min-height: ,
         // $img-height: 340px,
-        // $img-position: ,
+        // $img-position: center,
         // $meta-color: ,
         // $meta-font: f,
         // $meta-font-weight: ,

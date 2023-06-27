@@ -67,7 +67,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $img-border-radius: ,
         // $img-height: 340px,
         // $img-object-fit: ,
-        // $img-position: ,
+        // $img-position: center,
         // $img-width: ,
         // $subtitle-color: map-get($color-options, a)
         // $subtitle-font: f,

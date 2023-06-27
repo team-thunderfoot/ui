@@ -70,7 +70,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-08 {
     @include make-layout-08();
     @include make-layout-08-modifier(
-        $align-text-img: bottom,
+        $align-text-img: center,
         $img-height: 600px,
         $subtitle-font: f,
         $subtitle-font-weight: 400,
@@ -79,7 +79,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $title-font-weight: 400,
         $title-color: map-get($color-options, a),
         $object-fit: cover,
-        $img-position: ,
+        $img-position: center,
         // $img-border-radius: $measure * 4,
         $change-order-reponsive: true,
         $breakpoint: $tablets // $background-color: map-get($color-options, e),

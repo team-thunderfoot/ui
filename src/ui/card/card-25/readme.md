@@ -72,7 +72,7 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $hover-transform: ,
         // $img-aspect-ratio: calc(16 / 9),
         // $img-height: 340px,
-        // $img-position: ,
+        // $img-position: center,
         //$text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

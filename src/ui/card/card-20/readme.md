@@ -38,6 +38,18 @@
 ```scss
 .g--card-20 {
     @include make-card-20();
-    @include make-card-20-modifier($hover-title-color: map-get($color-options, b), $hover-transform: translateY(-5%), $meta-color: map-get($color-options, a), $meta-font: f, $meta-font-weight: 400, $pill-class: g--pill-01, $text-align: left, $title-color: map-get($color-options, a), $title-font: c, $title-font-weight: 400, $title-max-lines: 3);
+    @include make-card-20-modifier(
+        // $hover-title-color: map-get($color-options, b), 
+        // $hover-transform: translateY(-5%), 
+        // $meta-color: map-get($color-options, a), 
+        // $meta-font: f, 
+        // $meta-font-weight: 400, 
+        // $pill-class: g--pill-01, 
+        // $text-align: left, 
+        // $title-color: map-get($color-options, a), 
+        // $title-font: c, 
+        // $title-font-weight: 400, 
+        // $title-max-lines: 3
+    );
 }
 ```

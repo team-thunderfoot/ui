@@ -58,14 +58,14 @@ It is not necessary to add aspect-ratio.
 .g--card-16{
     @include make-card-16();
     @include make-card-16-modifier(
-        $background-color: rgba(map-get($color-options, a), .1),
-        $border-color: map-get($color-options, a),
-        $border-style: solid,    
-        $border-width: 1px,
-        $link-class: g--link-01,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 400,
+        // $background-color: rgba(map-get($color-options, a), .1),
+        // $border-color: map-get($color-options, a),
+        // $border-style: solid,    
+        // $border-width: 1px,
+        // $link-class: g--link-01,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
     );
     &--second{
         @include make-card-16-modifier(

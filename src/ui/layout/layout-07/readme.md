@@ -89,7 +89,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         $change-order-reponsive: true,
         $btn-font: f,
         $btn-class: g--btn-01,
-        $breakpoint: $tablets // $background-color: map-get($color-options, e),
+        $breakpoint: $tablets, ,// $background-color: map-get($color-options, e),
     );
 }
 ```

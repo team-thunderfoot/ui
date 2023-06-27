@@ -44,19 +44,19 @@
 .g--card-22 {
     @include make-card-22();
     @include make-card-22-modifier(
-        $author-font: f,
-        $author-font-weight: 400,
-        $author-color: map-get($color-options, a),
-        $hover-title-color: map-get($color-options, b),
-        $hover-transform: translateY(-5%),
-        $meta-color: map-get($color-options, a),
-        $meta-font: f,
-        $meta-font-weight: 400,
-        $pill-class: g--pill-01,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 400,
-        $title-max-lines: 3
+        // $author-font: f,
+        // $author-font-weight: 400,
+        // $author-color: map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, b),
+        // $hover-transform: translateY(-5%),
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
+        // $pill-class: g--pill-01,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

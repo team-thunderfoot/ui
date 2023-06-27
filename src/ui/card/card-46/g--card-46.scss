@@ -32,6 +32,6 @@
         $background-color: lighten(map-get($color-options,a), 82%),
         $img-background-color: lighten(map-get($color-options,a), 70%),
         $text-align: left,
-        $breakpoint: $tablets
+        $breakpoint: $tablets,
     );
 }

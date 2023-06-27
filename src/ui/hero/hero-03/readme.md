@@ -65,7 +65,7 @@
 .g--hero-03 {
     @include make-hero-03();
     @include make-hero-03-modifier(
-        // $breakpoint: $tablets
+        // $breakpoint: $tablets,
         // $header-height: 96px,
         // $img-object-fit: cover,
         // $img-position: center,

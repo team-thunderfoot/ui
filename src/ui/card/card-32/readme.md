@@ -54,24 +54,24 @@
 .g--card-32 {
     @include make-card-32();
     @include make-card-32-modifier(
-        $author-font: f,
-        $author-font-weight: 400,
-        $author-color: map-get($color-options, a),
-        $hover-img-zoom: 1.1,
-        $hover-title-color: map-get($color-options, e),
-        $hover-transform: translateY(-5%),
-        $img-aspect-ratio: 1.7,
-        // $img-border-radius: ,
+        // $author-font: f,
+        // $author-font-weight: 400,
+        // $author-color: map-get($color-options, a),
+        // $hover-img-zoom: 1.1,
+        // $hover-title-color: map-get($color-options, e),
+        // $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        // $img-border-radius: $measure,
         // $img-height: 340px,
-        $img-position: center,
-        $meta-color: map-get($color-options, a),
-        $meta-font: f,
-        $meta-font-weight: 400,
-        $pill-class: g--pill-01,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 400,
-        $title-max-lines: 3
+        // $img-position: center,
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
+        // $pill-class: g--pill-01,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

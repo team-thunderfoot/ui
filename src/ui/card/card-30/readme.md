@@ -44,21 +44,21 @@
 .g--card-30 {
     @include make-card-30();
     @include make-card-30-modifier(
-        $hover-img-zoom: 1.1,
-        $hover-title-color: map-get($color-options, e),
-        $hover-transform: translateY(-5%),
-        $img-aspect-ratio: 1.7,
-        // $img-border-radius: ,
+        // $hover-img-zoom: 1.1,
+        // $hover-title-color: map-get($color-options, e),
+        // $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        // $img-border-radius: $measure,
         // $img-height: 340px,
-        $img-position: center,
-        $meta-color: map-get($color-options, a),
-        $meta-font: f,
-        $meta-font-weight: 400,
-        $text-align: left,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 400,
-        $title-max-lines: 3
+        // $img-position: center,
+        // $meta-color: map-get($color-options, a),
+        // $meta-font-weight: 400,
+        // $meta-font: f,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
+        // $title-max-lines: 3
     );
 }
 ```

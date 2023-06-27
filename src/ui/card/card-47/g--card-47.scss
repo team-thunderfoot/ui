@@ -29,6 +29,6 @@
         $position-color: map-get($color-options, a),
         $background-color: lighten(map-get($color-options,a), 82%),
         $text-align: left,
-        $breakpoint: $tablets
+        $breakpoint: $tablets,
     );
 }

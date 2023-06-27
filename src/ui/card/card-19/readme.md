@@ -46,24 +46,24 @@
 .g--card-19 {
     @include make-card-19();
     @include make-card-19-modifier(
-        $background-color: lighten(map-get($color-options,a), 82%),
-        $border-color: map-get($color-options, a),
-        $border-radius: 0,
-        $border-style: solid,
-        $border-width: 1px,
-        $hover-background-color: map-get($color-options, g),
-        $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
-        $hover-title-color: map-get($color-options, b),
-        $hover-transform: translateY(-5%),
-        $meta-color: map-get($color-options, a),
-        $meta-font-weight: 400,
-        $meta-font: f,
-        $pill-class: g--pill-01,
-        $text-align: left,
-        $title-color: map-get($color-options, a),
-        $title-font-weight: 400,
-        $title-font: c,
-        $title-max-lines: 3
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
+        // $hover-title-color: map-get($color-options, b),
+        // $hover-transform: translateY(-5%),
+        // $meta-color: map-get($color-options, a),
+        // $meta-font-weight: 400,
+        // $meta-font: f,
+        // $pill-class: g--pill-01,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
+        // $title-max-lines: 3
     );
 }
 ```

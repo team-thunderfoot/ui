@@ -42,9 +42,9 @@ It is not necessary to add aspect-ratio.
 
 - $background-color
 - $border-color
+- $border-radius
 - $border-style
 - $border-width
-- $border-radius
 - $breakpoint
 - $change-order-reponsive
 - $content-color
@@ -59,11 +59,11 @@ It is not necessary to add aspect-ratio.
 - $img-aspect-ratio-responsive
 - $img-height-responsive
 - $img-position
+- $text-align
 - $title-color
 - $title-font
 - $title-font-weight
 - $title-max-lines
-- $text-align
 
 ## Use
 
@@ -73,26 +73,26 @@ It is not necessary to add aspect-ratio.
     @include make-card-44-modifier(
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
+        // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
-        // $border-radius: $measure,
-        // $breakpoint: ,
+        // $breakpoint: $tablets,
         // $change-order-reponsive: ,
-        // $content-color: ,
-        // $content-font: ,
-        // $content-font-weight: ,
-        // $content-max-lines: ,
+        // $content-color: map-get($color-options, a),
+        // $content-font-weight: 400,
+        // $content-font: f,
+        // $content-max-lines: 3,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
-        // $img-aspect-ratio-responsive: ,
-        // $img-height-responsive: ,
+        // $img-aspect-ratio-responsive: 1.7,
+        // $img-height-responsive: 340px,
         // $img-position: center,
         // $title-color: map-get($color-options, a),
-        // $title-font: c,
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3,
         //$text-align: left,
     );

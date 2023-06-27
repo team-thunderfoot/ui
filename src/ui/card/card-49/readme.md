@@ -56,17 +56,17 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-49 {
     @include make-card-49();
     @include make-card-49-modifier(
-        // $hover-img-background-color: ,
+        // $hover-img-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
         // $hover-title-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
-        // $icon-class: ,
-        // $img-align: ,
+        // $icon-class: g--icon-01,
+        // $img-align: center,
         // $img-aspect-ratio: calc(16 / 9),
-        // $img-background-color: ,
-        // $img-border-radius: ,
+        // $img-background-color: lighten(map-get($color-options,a), 70%),
+        // $img-border-radius: $measure,
         // $img-height: 340px,
-        // $img-object-fit: ,
+        // $img-object-fit: cover,
         // $img-position: center,
         // $img-width: auto,
         // $subtitle-color: map-get($color-options, a)

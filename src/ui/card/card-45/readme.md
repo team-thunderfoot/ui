@@ -26,32 +26,32 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
 
-- $content-font
-- $content-max-lines
-- $heading-font
-- $border-radius
+- $background-color
 - $border-color
+- $border-radius
 - $border-style
 - $border-width
+- $breakpoint
+- $change-order-reponsive
+- $content-color
+- $content-font
 - $content-font-weight
+- $content-max-lines
+- $heading-color
+- $heading-font
+- $heading-font-weight
 - $hover-background-color
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
 - $img-aspect-ratio
+- $img-background-color
+- $img-fit
 - $img-height
 - $img-position
-- $img-fit
 - $img-width
-- $heading-font-weight
-- $change-order-reponsive
-- $content-color
-- $heading-color
-- $background-color
-- $img-background-color
 - $text-align
-- $breakpoin
 
 ## use
 
@@ -59,32 +59,32 @@ For the image, we have to add width, height and aspect ratio dynamically.
 .g--card-45 {
     @include make-card-45();
     @include make-card-45-modifier(
-        $content-font: d,
-        $content-max-lines: 3,
-        $heading-font: c,
-        $border-radius: 0,
-        $border-color: map-get($color-options, a),
-        $border-style: solid,
-        $border-width: 1px,
-        $hover-background-color: map-get($color-options, b),
-        $hover-img-zoom: 1.2,
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
-        $hover-title-color: map-get($color-options, h),
-        $hover-transform: translateY(-$measure),
-        $img-aspect-ratio: 2,
-        // $img-height: 300px,
-        $img-position: center,
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $breakpoint: $tablets,
+        // $change-order-reponsive: true,
+        // $content-color: map-get($color-options, a),
+        // $content-font-weight: 400,
+        // $content-font: d,
+        // $content-max-lines: 3,
+        // $heading-color: map-get($color-options, a),
+        // $heading-font-weight: 400,
+        // $heading-font: c,
+        // $hover-background-color: map-get($color-options, b),
+        // $hover-img-zoom: 1.2,
+        // $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $img-aspect-ratio: 2,
+        // $img-background-color: lighten(map-get($color-options,a), 70%),
         // $img-fit: contain,
+        // $img-height: 300px,
+        // $img-position: center,
         // $img-width: auto,
-        $content-font-weight: 400,
-        $heading-font-weight: 400,
-        $change-order-reponsive: true,
-        $content-color: map-get($color-options, a),
-        $heading-color: map-get($color-options, a),
-        $background-color: lighten(map-get($color-options,a), 82%),
-        $img-background-color: lighten(map-get($color-options,a), 70%),
-        $text-align: left,
-        $breakpoint: $tablets
+        // $text-align: left,
     );
 }
 ```

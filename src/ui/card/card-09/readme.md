@@ -76,24 +76,24 @@ It is not necessary to add aspect-ratio.
 .g--card-09 {
     @include make-card-09();
     @include make-card-09-modifier(
-        $background-position: center $background-size: cover,
-        $border-radius: $measure,
-        $hover-background-img-zoom: 2,
-        $hover-img-zoom: 1.2,
-        $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
-        $hover-title-color: map-get($color-options, h),
-        $hover-transform: translateY(-$measure),
-        $img-aspect-ratio: 1.7,
-        $img-fit: cover,
-        $img-height: 340px,
-        $img-position: center,
-        $img-width: auto,
-        $mask-color: rgba(map-get($color-options, a), 0.2),
-        $title-color: map-get($color-options, a),
-        $title-font-weight: 400,
-        $title-font: c,
-        $title-max-lines: 3,
-        $text-align: left
+        // $background-position: center $background-size: cover,
+        // $border-radius: $measure,
+        // $hover-background-img-zoom: 2,
+        // $hover-img-zoom: 1.2,
+        // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $img-aspect-ratio: 1.7,
+        // $img-fit: cover,
+        // $img-height: 340px,
+        // $img-position: center,
+        // $img-width: auto,
+        // $mask-color: rgba(map-get($color-options, a), 0.2),
+        // $text-align: left
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
+        // $title-max-lines: 3,
     );
 }
 ```

@@ -52,9 +52,9 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 -   $btn-font
 -   $change-order-reponsive
 -   $img-border-radius
+-   $img-height
 -   $img-max-height
 -   $img-min-height
--   $img-height
 -   $img-position
 -   $object-fit
 -   $subtitle-color
@@ -75,20 +75,20 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
     @include make-layout-09();
     @include make-layout-09-modifier(
         // $align-text-img: center,
-        // $subtitle-font: f,
-        // $subtitle-font-weight: 400,
-        // $subtitle-color: map-get($color-options, a),
-        // $title-font: c,
-        // $title-font-weight: 400,
-        // $title-color: map-get($color-options, a),
-        // $object-fit: cover,
-        // $img-position: center,
-        // $img-border-radius: $measure * 4,
-        // $change-order-reponsive: true,
-        // $btn-font: f,
-        // $btn-class: g--btn-01,
-        // $breakpoint: $tablets,
         // $background-color: map-get($color-options, e),
+        // $breakpoint: $tablets,
+        // $btn-class: g--btn-01,
+        // $btn-font: f,
+        // $change-order-reponsive: true,
+        // $img-border-radius: $measure * 4,
+        // $img-position: center,
+        // $object-fit: cover,
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font-weight: 400,
+        // $subtitle-font: f,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
     );
 }
 ```

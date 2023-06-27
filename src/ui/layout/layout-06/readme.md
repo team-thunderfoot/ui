@@ -48,9 +48,9 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 -   $breakpoint
 -   $change-order-reponsive
 -   $img-border-radius
+-   $img-height
 -   $img-max-height
 -   $img-min-height
--   $img-height
 -   $img-position
 -   $meta-color
 -   $meta-font
@@ -73,22 +73,23 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 .g--layout-06 {
     @include make-layout-06();
     @include make-layout-06-modifier(
-        $align-text-img: center,
-        $img-height: 600px,
-        $meta-font: f,
-        $meta-font-weight: 400,
-        $meta-color: map-get($color-options, a),
-        $subtitle-font: f,
-        $subtitle-font-weight: 400,
-        $subtitle-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 400,
-        $title-color: map-get($color-options, a),
-        $object-fit: cover,
-        $img-position: center,
+        // $align-text-img: center,
+        // $background-color: map-get($color-options, e),
+        // $breakpoint: $tablets,
+        // $change-order-reponsive: true,
         // $img-border-radius: $measure * 4,
-        $change-order-reponsive: true,
-        $breakpoint: $tablets, ,// $background-color: map-get($color-options, e),
+        // $img-height: 600px,
+        // $img-position: center,
+        // $meta-color: map-get($color-options, a),
+        // $meta-font-weight: 400,
+        // $meta-font: f,
+        // $object-fit: cover,
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font-weight: 400,
+        // $subtitle-font: f,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
     );
 }
 ```

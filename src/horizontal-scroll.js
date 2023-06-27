@@ -8,6 +8,7 @@ class HorizontalScroll{
   
     constructor(){
         this.DOM = {
+            container: document.querySelectorAll(".c--container"),
             sections: document.querySelectorAll(".js--horizontal-wrapper"),
             trigger: document.querySelectorAll('.js--horizontal-section'),
         };
@@ -36,6 +37,31 @@ class HorizontalScroll{
             });
            
         }
+
+        this.containerHeight();
+        window.addEventListener("resize", this._debounce((e) => {
+            this.containerHeight();
+        }));
+
+    }
+
+    containerHeight(){
+        this.DOM.container.forEach((el) => {
+            if(el.classList.contains('c--container--second')) {
+                el.classList.remove("c--container--second");
+            }
+            if(el.offsetHeight > window.innerHeight){
+                el.classList.add("c--container--second");
+            }
+        })
+    }
+
+    _debounce(func) {
+        let timer;
+        return function (event) {
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(func, 750, event);
+        };
     }
 }
 

@@ -54,7 +54,7 @@ When there's an error in the textarea the class "g--form-textarea-01--error" sho
         // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
-        // $error-border-color: map-get($color-options, g),
+        // $error-border-color: map-get($color-options, f),
         // $font: f,
         // $font-size-mobile: 1rem,
         // $font-weight: 300,

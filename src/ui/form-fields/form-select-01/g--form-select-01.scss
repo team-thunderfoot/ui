@@ -4,7 +4,7 @@
         $background-color: transparent,
         $border-color: rgba(map-get($color-options, a), .2),
         $border-color-focus: map-get($color-options, a),
-        $error-border-color: map-get($color-options, g),
+        $error-border-color: map-get($color-options, f),
         $text-color: map-get($color-options, a),
         $artwork-url: url('./img/global-components/form-fields/select-artwork.svg'),
         $border-radius: 0,

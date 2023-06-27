@@ -63,7 +63,7 @@ In this case, the label should be inside "g--form-textarea-02":
         // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
-        // $error-border-color: map-get($color-options, g),
+        // $error-border-color: map-get($color-options, f),
         // $font: f,
         // $font-size-mobile: 1rem,
         // $font-weight: 800,

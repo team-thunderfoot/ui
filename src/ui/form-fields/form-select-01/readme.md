@@ -66,7 +66,7 @@ When there's an error in the select the class "g--form-select-01--error" should 
         // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
-        // $error-border-color: map-get($color-options, g),
+        // $error-border-color: map-get($color-options, f),
         // $font: f,
         // $font-size-mobile: 1rem,
         // $font-weight: 500

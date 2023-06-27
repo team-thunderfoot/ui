@@ -38,13 +38,13 @@
 .g--accordion-02 {
     @include make-accordion-02();
     @include make-accordion-02-modifier(
-        $border-color: map-get($color-options, a),
-        $border-style: solid,
-        $border-width: 1px,
-        $icon-color: map-get($color-options, g),
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $title-font-weight: false,
+        // $border-color: map-get($color-options, a),
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $icon-color: map-get($color-options, g),
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
     );
 }
 ```

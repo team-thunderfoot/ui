@@ -27,14 +27,14 @@
 ## Editable variables
 
 - $active-background-color
-- $active-title-color
 - $active-icon-color
+- $active-title-color
 - $border-color
 - $border-style
 - $border-width
 - $hover-background-color
-- $hover-title-color
 - $hover-icon-color
+- $hover-title-color
 - $icon-color
 - $title-color
 - $title-font
@@ -45,21 +45,20 @@
 ```scss
 .g--accordion-01 {
     @include make-accordion-01();
-
     @include make-accordion-01-modifier(
-        // $active-background-color: false,
-        // $active-title-color: false,
-        // $active-icon-color: false,
-        $border-color: map-get($color-options, a),
-        $border-style: solid,
-        $border-width: 1px,
-        // $hover-background-color: false,
-        // $hover-title-color: false,
-        // $hover-icon-color: false,
-        $icon-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $title-font-weight: false,
+        // $active-background-color: map-get($color-options, g),
+        // $active-icon-color: map-get($color-options, g),
+        // $active-title-color: map-get($color-options, b),
+        // $border-color: map-get($color-options, a),
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-icon-color: map-get($color-options, g),
+        // $hover-title-color: map-get($color-options, g),
+        // $icon-color: map-get($color-options, a),
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
     );
 }
 ```

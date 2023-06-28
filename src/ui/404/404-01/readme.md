@@ -66,14 +66,8 @@ To use it we have to import the css of the $btn-class in the entry
         // $min-height: calc(100vh - 109px),
         // $text-align: false,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: bold,
         // $title-font: b
+        // $title-font-weight: bold,
     );
-
-    // @media all and ($viewport-type: $tablets) {
-    //     @include make-404-01-modifier(
-    //         $min-height: calc(100vh - 99px),
-    //     );
-    // }
 }
 ```

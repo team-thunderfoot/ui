@@ -32,7 +32,10 @@
     $title-font: false,
     $title-font-weight: false,
     $icon-width: false,
-    $icon-color: false
+    $icon-color: false,
+    $hover-icon-color: false,
+    $icon-top: false,
+    $hover-icon-transform: false,
 ) {
     @if $background-color {
         background: $background-color;
@@ -131,6 +134,45 @@
             }
         }
     }
+    @if $hover-icon-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        &__artwork {
+                            path {
+                                transition: fill $time-b $ease-standard-a;
+                                fill: $hover-icon-color;
+                            }
+
+                            rect {
+                                transition: stroke $time-b $ease-standard-a;
+                                stroke: $hover-icon-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-icon-transform {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        &__artwork {
+                            transition: transform $time-b $ease-standard-a;
+                            transform: $hover-icon-transform ;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     @if $border-radius {
         border-radius: $border-radius;
@@ -205,6 +247,14 @@
                     rect {
                         stroke: $icon-color;
                     }
+                }
+            }
+        }
+
+        @if $icon-top {
+            &__wrapper {
+                &__artwork{
+                    margin-top: $icon-top;
                 }
             }
         }

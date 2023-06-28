@@ -8,7 +8,9 @@
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: 400,
-        $icon-align: center
+        $icon-align: center,
+        $icon-width: 42px,
+        $hover-icon-transform: translateX(4px)
     );
     &--second {
         @include make-card-54-modifier(
@@ -25,9 +27,11 @@
             $subtitle-font-weight: 400,
             $text-align: right,
             $title-font-weight: 400,
-            $icon-align: bottom,
+            $icon-align: top,
             $icon-width: 24px,
-            $icon-color: map-get($color-options, b)
+            $icon-top: 6px,
+            $icon-color: map-get($color-options, b),
+            $hover-icon-color: map-get($color-options, a),
         );
     }
 }

@@ -1,0 +1,82 @@
+.g--horizontal-scroll-01{
+    display: flex;
+    overflow-x: hidden;
+    height: fit-content !important;
+    align-items: center;
+    min-height: 100vh;
+    background-color: red;
+    &__wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        min-height: 80vh;
+        padding: $measure*4 10vw;
+        @media all and ($viewport-type: $laptop) {
+            padding: $measure*4 calc(5vw + 16px);
+        }
+        @media all and ($viewport-type: $mobile) {
+            padding: $measure*4 calc(2.5vw + 16px);
+        }
+        &__item{
+            width: 80vw;
+            padding-right: 10vw;
+            @media all and ($viewport-type: $tabletm) {
+                width: 85vw;
+            }
+        }
+    }
+    &--second {}
+    &--second & {
+        &__wrapper{
+            padding: $measure*4 0;
+            &__item{
+                padding-right: 0;
+                width: calc(100vw - var(--scrollbar-width));
+                @media all and ($viewport-type: $tabletm) {
+                    width: calc(100vw - var(--scrollbar-width));
+                }
+            }
+        }
+    }
+    &--third {
+        overflow: hidden;
+        background-color: map-get($color-options, d);
+        // overflow: visible;
+    }
+    &--third & {
+        &__wrapper{
+            padding: $measure*4 0;
+            &__item{
+                padding-right: 0;
+                min-width: calc(100vw - var(--scrollbar-width));
+                // min-width: 100vw;
+                max-height: 100vh;
+                width: auto;
+                @media all and ($viewport-type: $tabletm) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+    
+
+ .section{
+    display: flex;
+    overflow-x: hidden;
+    height: fit-content !important;
+    align-items: center;
+    min-height: 100vh;
+    background-color: red;
+    .wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+ }

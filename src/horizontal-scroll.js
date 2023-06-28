@@ -8,7 +8,8 @@ class HorizontalScroll{
   
     constructor(){
         this.DOM = {
-            container: document.querySelectorAll(".c--container"),
+            container: document.querySelectorAll(".g--container"),
+            columns: document.querySelectorAll("*[class*='g--col']"),
             sections: document.querySelectorAll(".js--horizontal-wrapper"),
             trigger: document.querySelectorAll('.js--horizontal-section'),
         };
@@ -47,11 +48,19 @@ class HorizontalScroll{
 
     containerHeight(){
         this.DOM.container.forEach((el) => {
-            if(el.classList.contains('c--container--second')) {
-                el.classList.remove("c--container--second");
+            if(el.classList.contains('g--container--second')) {
+                el.classList.remove("g--container--second");
             }
             if(el.offsetHeight > window.innerHeight){
-                el.classList.add("c--container--second");
+                el.classList.add("g--container--second");
+            }
+        })
+        this.DOM.columns.forEach((element) => {
+            if(element.classList.contains('g--col--second')) {
+                element.classList.remove("g--col--second");
+            }
+            if(element.offsetHeight > window.innerHeight){
+                element.classList.add("g--col--second");
             }
         })
     }

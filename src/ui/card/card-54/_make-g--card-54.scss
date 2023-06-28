@@ -1,0 +1,212 @@
+@mixin make-card-54() {
+    padding: $measure * 3;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+
+    &__bd {
+        width: 100%;
+    }
+
+    &__wrapper {
+        margin-left: $measure * 3;
+    }
+}
+
+@mixin make-card-54-modifier(
+    $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $hover-background-color: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $text-align: false,
+    $icon-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $icon-width: false,
+    $icon-color: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__bd {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $text-align == "center" {
+        text-align: center;
+    }
+    @if $text-align == "left" {
+        text-align: left;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+    }
+    @if $icon-align == "center" {
+        align-items: center;
+    }
+    @if $icon-align == "top" {
+        align-items: flex-start;
+    }
+    @if $icon-align == "bottom" {
+        align-items: flex-end;
+    }
+    .g--card-54 {
+        &__bd {
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+
+            &__subtitle {
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+            }
+        }
+
+        @if $icon-width {
+            &__wrapper {
+                width: $icon-width;
+                height: $icon-width;
+
+                &__artwork {
+                    width: $icon-width;
+                    height: $icon-width;
+                }
+            }
+        }
+
+        @if $icon-color {
+            &__wrapper {
+                &__artwork {
+                    path {
+                        fill: $icon-color;
+                    }
+
+                    rect {
+                        stroke: $icon-color;
+                    }
+                }
+            }
+        }
+    }
+}

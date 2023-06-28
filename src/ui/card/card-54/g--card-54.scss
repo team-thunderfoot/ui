@@ -1,0 +1,33 @@
+.g--card-54 {
+    @include make-card-54();
+    @include make-card-54-modifier(
+        $background-color: rgba(map-get($color-options, a), 0.1),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 400,
+        $icon-align: center
+    );
+    &--second {
+        @include make-card-54-modifier(
+            $background-color: rgba(map-get($color-options, g), 0.7),
+            $subtitle-color: map-get($color-options, a),
+            $title-color: map-get($color-options, a),
+            $title-font: c,
+            // $border-radius: false,
+            $hover-background-color: map-get($color-options, g),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+            $hover-title-color: map-get($color-options, h),
+            $hover-transform: translateY(-$measure),
+            $subtitle-font: f,
+            $subtitle-font-weight: 400,
+            $text-align: right,
+            $title-font-weight: 400,
+            $icon-align: bottom,
+            $icon-width: 24px,
+            $icon-color: map-get($color-options, b)
+        );
+    }
+}

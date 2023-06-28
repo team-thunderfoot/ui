@@ -32,11 +32,11 @@ $viewport-layouts-s: (
 @mixin build-columns($size, $bkpt) {
     @for $i from 1 through $columns {
         @if ($size == 'all') {
-            .g--col-#{$i} {
+            .f--vw-col-#{$i} {
                 @include make-col($i);
             }
         } @else {
-            .g--col-#{$size}-#{$i} {
+            .f--vw-col-#{$size}-#{$i} {
                 max-height: 100%;
                 @media all and ($viewport-type: #{$bkpt}) {
                     width: calc((($g-container-width) / $columns)*$i);
@@ -58,7 +58,7 @@ $viewport-layouts-s: (
 //* columns for medium breakpoints
 @mixin build-columns($size, $bkpt) {
     @for $i from 1 through $columns {
-        .g--col-#{$size}-#{$i} {
+        .f--vw-col-#{$size}-#{$i} {
             @media all and ($viewport-type: #{$bkpt}) {
                 width: calc(((90vw) / $columns)*$i);
             }
@@ -75,7 +75,7 @@ $viewport-layouts-s: (
 //* columns for small breakpoints
 @mixin build-columns($size, $bkpt) {
     @for $i from 1 through $columns {
-        .g--col-#{$size}-#{$i} {
+        .f--vw-col-#{$size}-#{$i} {
             $value-component: calc(((95vw) / $columns)*$i);
             @media all and ($viewport-type: #{$bkpt}) {
                 width: $value-component;
@@ -87,14 +87,10 @@ $viewport-layouts-s: (
     @include build-columns($size, $bkpt);
 }
 
-.g--col--second{
-    display: flex;
-}
-
 //* Columns changes with vertical breakpoints
 @mixin build-columns($size, $bkpt) {
     @for $i from 1 through $columns*2 {
-        .g--hcol-#{$size}-#{$i} {
+        .f--vh-col-#{$size}-#{$i} {
             @media all and (max-height: #{$bkpt}) {
                 width: calc((($g-container-width) / $columns)*$i);
             }
@@ -128,11 +124,11 @@ $viewport-layouts-s: (
 @mixin build-offset($size, $bkpt) {
     @for $i from 0 through $columns {
         @if ($size == 'all') {
-            .g--offset-#{$i} {
+            .f--vw-offset-#{$i} {
                 @include make-offset($i);
             }
         } @else {
-            .g--offset-#{$size}-#{$i} {
+            .f--vw-offset-#{$size}-#{$i} {
                 @media all and ($viewport-type: #{$bkpt}) {
                     @include make-offset($i);
                 }
@@ -147,7 +143,7 @@ $viewport-layouts-s: (
 //* offset for medium breakpoints
 @mixin build-offset($size, $bkpt) {
     @for $i from 0 through $columns {
-        .g--offset-#{$size}-#{$i} {
+        .f--vw-offset-#{$size}-#{$i} {
             @media all and ($viewport-type: #{$bkpt}) {
                 margin-left: calc(((90vw) / $columns)*$i);
             }
@@ -164,7 +160,7 @@ $viewport-layouts-s: (
 //* offset for small breakpoints
 @mixin build-offset($size, $bkpt) {
     @for $i from 0 through $columns {
-        .g--offset-#{$size}-#{$i} {
+        .f--vw-offset-#{$size}-#{$i} {
             @media all and ($viewport-type: #{$bkpt}) {
                 margin-left: calc(((95vw) / $columns)*$i);
             }

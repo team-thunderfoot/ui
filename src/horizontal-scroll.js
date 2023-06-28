@@ -2,22 +2,28 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+import { tns } from "/node_modules/tiny-slider/src/tiny-slider.js"
+
 import DOMTF from './DOMTF.js';
 
 class HorizontalScroll{
   
     constructor(){
         this.DOM = {
-            container: document.querySelectorAll(".g--container"),
-            columns: document.querySelectorAll("*[class*='g--col']"),
+            container: document.querySelectorAll(".f--vw-container"),
+            columns: document.querySelectorAll("*[class*='f--vw-col']"),
             sections: document.querySelectorAll(".js--horizontal-wrapper"),
             trigger: document.querySelectorAll('.js--horizontal-section'),
+            slider: document.querySelectorAll(".js--slider-01")
         };
+        this.classes = {
+            container: 'f--vw-container--remove-row',
+            col: 'display--flex',
+        }
         this.init();
     }
 
     init(){
-      document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
 
         this.dom_tf = new DOMTF();
 
@@ -36,7 +42,6 @@ class HorizontalScroll{
                     }
                 })
             });
-           
         }
 
         this.containerHeight();
@@ -44,23 +49,49 @@ class HorizontalScroll{
             this.containerHeight();
         }));
 
+        this.DOM.slider.forEach((el) => {
+            var slider = tns({
+                container: el,
+                items: 1,
+                center: true,
+                gutter: 32,
+                slideBy: 1,
+                nav: false,
+                controls: true,
+                controlsContainer: el.nextElementSibling,
+                rewind: false,
+                swipeAngle: false,
+                lazyload: false,
+                lazyloadSelector: ".g--lazy-01",
+                preventActionWhenRunning: true,
+                mouseDrag: true,
+                autoplayButtonOutput: false,
+                speed: 1000,
+                responsive: {
+                    1025: {
+                        items: 2,
+                    },
+                },
+            })
+        })
+
     }
 
     containerHeight(){
         this.DOM.container.forEach((el) => {
-            if(el.classList.contains('g--container--second')) {
-                el.classList.remove("g--container--second");
+            if(el.classList.contains(this.classes.container)) {
+                el.classList.remove(this.classes.container);
             }
             if(el.offsetHeight > window.innerHeight){
-                el.classList.add("g--container--second");
+                el.classList.add(this.classes.container);
             }
         })
         this.DOM.columns.forEach((element) => {
-            if(element.classList.contains('g--col--second')) {
-                element.classList.remove("g--col--second");
+            if(element.classList.contains(this.classes.col)) {
+                element.classList.remove(this.classes.col);
             }
             if(element.offsetHeight > window.innerHeight){
-                element.classList.add("g--col--second");
+                element.classList.add(this.classes.col);
             }
         })
     }

@@ -2,9 +2,11 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import { tns } from "/node_modules/tiny-slider/src/tiny-slider.js"
+import { tns } from "/node_modules/tiny-slider/src/tiny-slider.js";
 
 import DOMTF from './DOMTF.js';
+import JSUTIL from "@andresclua/jsutil";
+import {tf_debounce,tf_throttle} from '@andresclua/debounce-throttle';
 
 class HorizontalScroll{
   
@@ -26,6 +28,7 @@ class HorizontalScroll{
     init(){
 
         this.dom_tf = new DOMTF();
+        this.js_ui = new JSUTIL();
 
         if(this.DOM.sections && this.DOM.trigger){
             this.DOM.sections.forEach(section => {
@@ -45,9 +48,9 @@ class HorizontalScroll{
         }
 
         this.containerHeight();
-        window.addEventListener("resize", this._debounce((e) => {
+        window.addEventListener('resize', tf_debounce((e)=>{
             this.containerHeight();
-        }));
+        },500));
 
         this.DOM.slider.forEach((el) => {
             var slider = tns({
@@ -79,29 +82,23 @@ class HorizontalScroll{
 
     containerHeight(){
         this.DOM.container.forEach((el) => {
-            if(el.classList.contains(this.classes.container)) {
-                el.classList.remove(this.classes.container);
+
+
+            if(this.js_ui.matches(el, this.classes.container)) {
+                this.js_ui.removeClass(el, this.classes.container);
             }
             if(el.offsetHeight > window.innerHeight){
-                el.classList.add(this.classes.container);
+                this.js_ui.addClass(el, this.classes.container);
             }
         })
         this.DOM.columns.forEach((element) => {
-            if(element.classList.contains(this.classes.col)) {
-                element.classList.remove(this.classes.col);
+            if(this.js_ui.matches(element, this.classes.col)) {
+                this.js_ui.removeClass(element, this.classes.col);
             }
             if(element.offsetHeight > window.innerHeight){
-                element.classList.add(this.classes.col);
+                this.js_ui.addClass(element, this.classes.col);
             }
         })
-    }
-
-    _debounce(func) {
-        let timer;
-        return function (event) {
-            if (timer) clearTimeout(timer);
-            timer = setTimeout(func, 750, event);
-        };
     }
 }
 

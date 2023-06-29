@@ -55,24 +55,32 @@ class HorizontalScroll{
         this.DOM.slider.forEach((el) => {
             var slider = tns({
                 container: el,
-                items: 1,
-                center: true,
+                items: 2,
                 gutter: 32,
-                slideBy: 1,
+                slideBy: 2,
                 nav: false,
-                controls: true,
-                controlsContainer: el.nextElementSibling,
+                controls: false,
                 rewind: false,
                 swipeAngle: false,
-                lazyload: false,
+                lazyload: true,
                 lazyloadSelector: ".g--lazy-01",
                 preventActionWhenRunning: true,
                 mouseDrag: true,
                 autoplayButtonOutput: false,
                 speed: 1000,
+                autoplay: true,
                 responsive: {
+                    581: {
+                        items: 3,
+                        slideBy: 3,
+                    },
+                    811: {
+                        items: 4,
+                        slideBy: 4,
+                    },
                     1025: {
-                        items: 2,
+                        items: 6,
+                        slideBy: 6,
                     },
                 },
             })

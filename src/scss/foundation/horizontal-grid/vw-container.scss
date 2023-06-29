@@ -18,6 +18,9 @@
     margin-left: calc((100vw - 95vw)*.5);
     margin-right: calc((100vw - 95vw)*.5);
   }
+  &--second{
+    flex-direction: row;
+  }
   &--remove-row{
     flex-direction: row;
     column-gap: 32px;

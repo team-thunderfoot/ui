@@ -25,4 +25,18 @@
         $content-max-lines: 3,
         $change-order-reponsive: true
     );
+    &--second{
+        @include make-card-44-modifier(
+            $background-color: transparent,
+            $border-style: none,
+            $hover-background-color: transparent,
+            $hover-img-zoom: 1.1,
+            $hover-shadow: none,
+            $hover-transform: none,
+            $img-position: center,
+            $title-color: map-get($color-options, b),
+            $title-font: d,
+            $content-color: map-get($color-options, b),
+        );
+    }
 }

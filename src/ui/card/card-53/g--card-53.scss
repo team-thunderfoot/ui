@@ -33,4 +33,10 @@
     @media all and ($viewport-type: $tablets) {
         @include make-card-53-modifier($background-size: 30%, $background-position: -3% -18%);
     }
+
+    &--second{
+        @include make-card-53-modifier(
+            $background-position: -24px -24px,
+        );
+    }
 }

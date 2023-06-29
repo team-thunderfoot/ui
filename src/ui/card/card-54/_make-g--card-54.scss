@@ -35,7 +35,7 @@
     $text-align: false,
     $title-color: false,
     $title-font-weight: false,
-    $title-font: false,
+    $title-font: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -135,6 +135,17 @@
         }
     }
     @if $hover-icon-color {
+        &__wrapper {
+            &__artwork {
+                path {
+                    transition: fill $time-b $ease-standard-a;
+                }
+
+                rect {
+                    transition: stroke $time-b $ease-standard-a;
+                }
+            }
+        }
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -143,12 +154,10 @@
                     &__wrapper {
                         &__artwork {
                             path {
-                                transition: fill $time-b $ease-standard-a;
                                 fill: $hover-icon-color;
                             }
 
                             rect {
-                                transition: stroke $time-b $ease-standard-a;
                                 stroke: $hover-icon-color;
                             }
                         }
@@ -158,6 +167,18 @@
         }
     }
     @if $hover-icon-transform {
+        &__wrapper {
+            &__artwork {
+                transition: transform $time-b $ease-standard-a;
+                path {
+                    transition: fill $time-b $ease-standard-a;
+                }
+
+                rect {
+                    transition: stroke $time-b $ease-standard-a;
+                }
+            }
+        }
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -165,7 +186,6 @@
                 .g--card-54 {
                     &__wrapper {
                         &__artwork {
-                            transition: transform $time-b $ease-standard-a;
                             transform: $hover-icon-transform;
                         }
                     }

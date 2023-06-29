@@ -3,7 +3,7 @@
     overflow: hidden;
     &__media{
         width: 100vw;
-        height: 100vh;
+        height: auto;
         object-fit: cover;
         display: block;
     }

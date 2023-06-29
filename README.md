@@ -203,3 +203,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--subscribe-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/subscribe/subscribe-01/readme.md)
 - [g--subscribe-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/subscribe/subscribe-02/readme.md)
 - [g--subscribe-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/subscribe/subscribe-03/readme.md)
+
+### Video
+
+- [g--video-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/video/video-01/readme.md)

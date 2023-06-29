@@ -45,12 +45,12 @@ It is not necessary to add aspect-ratio.
 -   $icon-top
 -   $icon-width
 -   $subtitle-color
--   $subtitle-font-weight
 -   $subtitle-font
+-   $subtitle-font-weight
 -   $text-align
 -   $title-color
--   $title-font-weight
 -   $title-font
+-   $title-font-weight
 
 ## Use
 
@@ -74,12 +74,12 @@ It is not necessary to add aspect-ratio.
         // $icon-top: 6px,
         // $icon-width: 24px,
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font-weight: 400,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
         // $text-align: right,
         // $title-color: map-get($color-options, a),
+        // $title-font: c,
         // $title-font-weight: 400,
-        // $title-font: c
     );
 }
 ```

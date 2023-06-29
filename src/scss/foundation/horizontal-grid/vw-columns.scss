@@ -28,6 +28,16 @@ $viewport-layouts-s: (
     }
 }
 
+.f--vw-col {
+    width: auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+}
+.f--vw-col-max {
+    width: max-content;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+}
 //* columns for large breakpoints
 @mixin build-columns($size, $bkpt) {
     @for $i from 1 through $columns {

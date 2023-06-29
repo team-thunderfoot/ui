@@ -12,14 +12,16 @@ class HorizontalScroll{
   
     constructor(){
         this.DOM = {
-            container: document.querySelectorAll(".f--vw-container"),
+            // container: document.querySelectorAll(".f--vw-container"),
+            container: document.querySelectorAll(".g--horizontal-scroll-01__wrapper__item"),
             columns: document.querySelectorAll("*[class*='f--vw-col']"),
             sections: document.querySelectorAll(".js--horizontal-wrapper"),
             trigger: document.querySelectorAll('.js--horizontal-section'),
             slider: document.querySelectorAll(".js--slider-01")
         };
         this.classes = {
-            container: 'f--vw-container--remove-row',
+            // container: 'f--vw-container--remove-row',
+            container: 'g--horizontal-scroll-01__wrapper__item--remove-row',
             col: 'display--flex',
         }
         this.init();
@@ -32,7 +34,7 @@ class HorizontalScroll{
 
         if(this.DOM.sections && this.DOM.trigger){
             this.DOM.sections.forEach(section => {
-                gsap.to(section, {
+                var tl = gsap.to(section, {
                     x: () => -(section.scrollWidth - document.documentElement.clientWidth) + "px",
                     ease: "none",
                     duration: 4,
@@ -44,8 +46,23 @@ class HorizontalScroll{
                         end: () => "+=" + section.offsetWidth,
                     }
                 })
+
+                const newLocal = gsap.to(".js--test", {
+                    left: "-50%",
+                    ease: "none",
+                    scrollTrigger: {
+                    trigger: ".js--test",
+                    containerAnimation: tl,
+                    start: "left 90%",
+                    end: "left 10%",
+                    scrub: true,
+                    id: "2",
+                    markers: true
+                    }
+                });
             });
         }
+
 
         this.containerHeight();
         window.addEventListener('resize', tf_debounce((e)=>{

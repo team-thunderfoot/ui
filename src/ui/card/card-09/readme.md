@@ -76,7 +76,8 @@ It is not necessary to add aspect-ratio.
 .g--card-09 {
     @include make-card-09();
     @include make-card-09-modifier(
-        // $background-position: center $background-size: cover,
+        // $background-position: center,
+        // $background-size: cover,
         // $border-radius: $measure,
         // $hover-background-img-zoom: 2,
         // $hover-img-zoom: 1.2,
@@ -91,8 +92,8 @@ It is not necessary to add aspect-ratio.
         // $mask-color: rgba(map-get($color-options, a), 0.2),
         // $text-align: left
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3,
     );
 }

@@ -79,12 +79,13 @@ It is not necessary to add aspect-ratio.
         // $img-position: center,
         // $img-width: auto,
         // $subtitle-color: map-get($color-options, a) $subtitle-font: f,
+        // $subtitle-font: d,
         // $subtitle-font-weight: 400,
         // $subtitle-max-lines: 3,
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3
     );
 }

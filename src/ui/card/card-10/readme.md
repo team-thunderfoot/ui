@@ -94,8 +94,8 @@ It is not necessary to add aspect-ratio.
         // $link-font: f,
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3
     );
 }

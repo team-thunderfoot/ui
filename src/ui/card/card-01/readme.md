@@ -59,6 +59,7 @@ It is not necessary to add aspect-ratio.
 -   $img-aspect-ratio
 -   $img-fit
 -   $img-height
+-   $img-position
 -   $img-width
 -   $subtitle-color
 -   $subtitle-font
@@ -93,11 +94,12 @@ It is not necessary to add aspect-ratio.
         // $img-width: auto,
         // $subtitle-color: map-get($color-options, a) $subtitle-font-weight: 400,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 300,
         // $subtitle-max-lines: 3,
         // $text-align: left
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3,
     );
 }

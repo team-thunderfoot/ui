@@ -53,8 +53,8 @@ If you want the subtitle to be a c--content, the HTML should be:
     @include make-banner-01-modifier(
         // $background-color: map-get($color-options, a),
         // $title-color: map-get($color-options, b),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

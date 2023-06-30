@@ -61,8 +61,8 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $btn-class: g--btn-01,
         // $btn-font: f,
         // $title-color: map-get($color-options, b),
-        // $title-font-weight: 400,
         // $title-font:f,
+        // $title-font-weight: 400,
     );
 }
 ```

@@ -51,13 +51,13 @@ class HorizontalScroll{
                     left: "-50%",
                     ease: "none",
                     scrollTrigger: {
-                    trigger: ".js--test",
-                    containerAnimation: tl,
-                    start: "left 90%",
-                    end: "left 10%",
-                    scrub: true,
-                    id: "2",
-                    markers: true
+                        trigger: ".js--test",
+                        containerAnimation: tl,
+                        start: "left 90%",
+                        end: "left 10%",
+                        scrub: true,
+                        // id: "2",
+                        markers: true
                     }
                 });
             });

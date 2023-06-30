@@ -49,8 +49,8 @@
 - $border-radius
 - $border-style
 - $border-width
-- $font-weight
 - $font
+- $font-weight
 - $hover-artwork-color
 - $hover-background-color
 - $hover-background-position
@@ -79,8 +79,8 @@
     // $border-radius: 0,
     // $border-style: solid,
     // $border-width: 1px,
-    // $font-weight: 600,
     // $font: f,
+    // $font-weight: 600,
     // $hover-artwork-color: map-get($color-options, a),
     // $hover-background-color:  map-get($color-options, a),
     // $hover-background-position: bottom left,

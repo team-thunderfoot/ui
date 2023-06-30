@@ -35,6 +35,7 @@
 - $hover-artwork-color
 - $hover-text-color
 - $icon-top
+- $icon-width
 - $text-color
 
 ## Use
@@ -45,8 +46,8 @@
     @include make-btn-02-modifier(
         // $artwork-color-fill: map-get($color-options, a),
         // $artwork-color-stroke: map-get($color-options, a),
-        // $btn-font-weight: 600,
         // $btn-font: f,
+        // $btn-font-weight: 600,
         // $hover-artwork-color: map-get($color-options, g),
         // $hover-text-color: map-get($color-options, g),
         // $icon-top: 0px,

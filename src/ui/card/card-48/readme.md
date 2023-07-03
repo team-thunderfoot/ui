@@ -62,13 +62,13 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $img-object-fit: cover,
         // $img-position: center,
         // $img-width: auto,
-        // $subtitle-color: map-get($color-options, a)
-        // $subtitle-font-weight: 400,
+        // $subtitle-color: map-get($color-options, a),
         // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
-        //$text-align: left,
+        // $title-font-weight: 400,
     );
 }
 ```

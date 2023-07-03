@@ -80,12 +80,12 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $meta-color
-- $meta-font
-- $meta-font-weight
 - $link-class
 - $link-hide-by-default
 - $mask-background-color
+- $meta-color
+- $meta-font
+- $meta-font-weight
 - $text-align
 - $title-color
 - $title-font
@@ -117,12 +117,12 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, f),
         // $hover-title-color: map-get($color-options, b),
         // $hover-transform: translateY($measure),
-        // $meta-color: map-get($color-options, b),
-        // $meta-font: f,
-        // $meta-font-weight: 400,
         // $link-class: g--link-01,
         // $link-hide-by-default: no,
         // $mask-background-color: rgba(map-get($color-options, a), .3),
+        // $meta-color: map-get($color-options, b),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
         // $text-align: left,
         // $title-color: map-get($color-options, b),
         // $title-font: c,

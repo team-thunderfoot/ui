@@ -46,16 +46,18 @@
 }
 
 @mixin make-card-47-modifier(
-    $link-class: false,
-    $content-font: false,
-    $heading-font: false,
-    $person-font: false,
-    $position-font: false,
-    $border-radius: false,
+    $background-color: false,
     $border-color: false,
+    $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $breakpoint: false,
+    $change-order-reponsive: false,
+    $content-color: false,
+    $content-font: false,
     $content-font-weight: false,
+    $heading-color: false,
+    $heading-font: false,
     $heading-font-weight: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
@@ -65,16 +67,14 @@
     $img-aspect-ratio-responsive: false,
     $img-height-responsive: false,
     $img-position: false,
-    $person-font-weight: false,
-    $position-font-weight: false,
-    $change-order-reponsive: false,
-    $content-color: false,
-    $heading-color: false,
+    $link-class: false,
     $person-color: false,
+    $person-font: false,
+    $person-font-weight: false,
     $position-color: false,
-    $background-color: false,
+    $position-font: false,
+    $position-font-weight: false,
     $text-align: false,
-    $breakpoint: false
 ) {
     @if $background-color {
         background: $background-color;

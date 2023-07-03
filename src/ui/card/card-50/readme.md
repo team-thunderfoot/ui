@@ -134,13 +134,13 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $link-hide-by-default: no,
         // $mask-background-color: rgba(map-get($color-options, a), .3),
         // $meta-color: map-get($color-options, b),
-        // $meta-font-weight: 400,
         // $meta-font: f,
+        // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
         // $text-align: left,
         // $title-color: map-get($color-options, b),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 5,
     );
 }

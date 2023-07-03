@@ -50,9 +50,9 @@ It is not necessary to add aspect-ratio.
 
 -   $background-color
 -   $border-color
+-   $border-radius
 -   $border-style
 -   $border-width
--   $border-radius
 -   $breakpoint
 -   $hover-background-color
 -   $hover-img-zoom
@@ -80,9 +80,9 @@ It is not necessary to add aspect-ratio.
     @include make-card-42-modifier(
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
+        // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
-        // $border-radius: $measure,
         // $breakpoint: $tablets,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
@@ -96,7 +96,7 @@ It is not necessary to add aspect-ratio.
         // $meta-font: f,
         // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
-        //$text-align: left,
+        // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,
         // $title-font-weight: 400,

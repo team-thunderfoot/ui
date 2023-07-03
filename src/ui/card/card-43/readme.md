@@ -79,8 +79,8 @@ It is not necessary to add aspect-ratio.
         // $breakpoint: $tablets,
         // $change-order-reponsive: ,
         // $content-color: map-get($color-options, a),
-        // $content-font-weight: 400,
         // $content-font: f,
+        // $content-font-weight: 400,
         // $content-max-lines: 3,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
@@ -90,11 +90,11 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio-responsive: 1.7,
         // $img-height-responsive: 340px,
         // $img-position: center,
+        // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3,
-        //$text-align: left,
     );
 }
 ```

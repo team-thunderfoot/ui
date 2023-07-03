@@ -58,9 +58,9 @@ It is not necessary to add aspect-ratio.
 - $author-font-weight
 - $background-color
 - $border-color
+- $border-radius
 - $border-style
 - $border-width
-- $border-radius
 - $breakpoint
 - $hover-background-color
 - $hover-img-zoom
@@ -90,9 +90,9 @@ It is not necessary to add aspect-ratio.
         // $author-font-weight: 400,
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
+        // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
-        // $border-radius: $measure,
         // $breakpoint: $tablets,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,

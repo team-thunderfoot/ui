@@ -39,12 +39,12 @@
     $img-position: false,
     $img-width: false,
     $subtitle-color: false,
-    $subtitle-font-weight: false,
     $subtitle-font: false,
+    $subtitle-font-weight: false,
     $text-align: false,
     $title-color: false,
-    $title-font-weight: false,
     $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $text-align == "center" {
         text-align: center;

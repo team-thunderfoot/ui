@@ -51,26 +51,19 @@ It is not necessary to add aspect-ratio.
 .g--card-17{
     @include make-card-17();
     @include make-card-17-modifier(
-        // $link-class: g--link-01,
-        // $title-color: map-get($color-options, a),
-        // $title-font: c,
+    //     $hover-title-color: map-get($color-options, h),
+    //     $hover-transform: translateY(-$measure),
+    //     $link-class: g--link-02--second,
+    //     $link-font: f,
+    //     $subtitle-color: map-get($color-options, g),
+    //     $subtitle-font: f,
+    //     $subtitle-font-weight: 400,
+    //     $subtitle-max-lines: 3,
+    //     $text-align: left,
+    //     $title-color: map-get($color-options, g),
+    //     $title-font: c,
+    //     $title-font-weight: 400,
+    //     $title-max-lines: 3,
     );
-    &--second{
-        @include make-card-17-modifier(
-        //     $subtitle-color: map-get($color-options, g),
-        //     $title-color: map-get($color-options, g),
-        //     $title-font: c,
-        //     $hover-title-color: map-get($color-options, h),
-        //     $hover-transform: translateY(-$measure),
-        //     $link-class: g--link-02--second,
-        //     $link-font: f,
-        //     $subtitle-font: f,
-        //     $subtitle-font-weight: 400,
-        //     $subtitle-max-lines: 3,
-        //    $text-align: left,
-        //     $title-font-weight: 400,
-        //     $title-max-lines: 3,
-        );
-    }
 }
 ```

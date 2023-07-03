@@ -60,32 +60,23 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-15 {
     @include make-card-15();
     @include make-card-15-modifier(
-        // $background-position: center, 
-        // $background-size: cover, 
-        // $mask-color: rgba(map-get($color-options, b), 0.5), 
-        // $title-color: map-get($color-options, a), 
-        // $title-font: c
+        // $background-position: center,
+        // $background-size: cover,
+        // $border-radius: 0,
+        // $hover-background-img-zoom: 2,
+        // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $mask-color: rgba(map-get($color-options, a), 0.2),
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $subtitle-max-lines: 3,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
-    &--second {
-        @include make-card-15-modifier(
-            // $background-position: center,
-            // $background-size: cover,
-            // $mask-color: rgba(map-get($color-options, a), 0.2),
-            // $subtitle-color: map-get($color-options, a),
-            // $title-color: map-get($color-options, a),
-            // $title-font: c,
-            // $border-radius: 0,
-            // $hover-background-img-zoom: 2,
-            // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
-            // $hover-title-color: map-get($color-options, h),
-            // $hover-transform: translateY(-$measure),
-            // $subtitle-font: f,
-            // $subtitle-font-weight: 400,
-            // $subtitle-max-lines: 3,
-            // $text-align: left,
-            // $title-font-weight: 400,
-            // $title-max-lines: 3
-        );
-    }
 }
 ```

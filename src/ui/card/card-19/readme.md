@@ -56,13 +56,13 @@
         // $hover-title-color: map-get($color-options, b),
         // $hover-transform: translateY(-5%),
         // $meta-color: map-get($color-options, a),
-        // $meta-font-weight: 400,
         // $meta-font: f,
+        // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3
     );
 }

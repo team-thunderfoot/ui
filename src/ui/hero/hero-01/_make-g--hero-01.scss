@@ -31,8 +31,8 @@
     $img-position: false,
     $text-align: false,
     $title-color: false,
+    $title-font: false,
     $title-font-weight: false,
-    $title-font: false
 ) {
     @if $background-color {
         background: $background-color;

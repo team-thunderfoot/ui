@@ -36,8 +36,8 @@
 -   $link-font
 -   $text-align
 -   $title-color
--   $title-font-weight
 -   $title-font
+-   $title-font-weight
 
 ## Use
 
@@ -55,8 +55,8 @@
         // $link-font: c,
         // $text-align: center
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: a,
+        // $title-font-weight: 400,
     );
 }
 ```

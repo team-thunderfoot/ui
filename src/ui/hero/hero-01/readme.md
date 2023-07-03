@@ -32,15 +32,15 @@
 
 ## Editable variables
 
--   $background-color,
--   $header-height,
--   $img-height,
--   $img-object-fit,
--   $img-position,
+-   $background-color
+-   $header-height
+-   $img-height
+-   $img-object-fit
+-   $img-position
 -   $text-align
--   $title-color,
--   $title-font-weight,
--   $title-font,
+-   $title-color
+-   $title-font
+-   $title-font-weight
 
 ## Use
 
@@ -55,16 +55,8 @@
         // $img-position: center,
         // $text-align: left
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: bold,
         // $title-font: a,
+        // $title-font-weight: bold,
     );
-
-    @media all and ($viewport-type: $tabletm) {
-        // @include make-hero-01-modifier($img-height: 400px);
-    }
-
-    @media all and ($viewport-type: $tablets) {
-        // @include make-hero-01-modifier($header-height: 86px, $img-height: 300px);
-    }
 }
 ```

@@ -64,8 +64,8 @@
         // $link-font: f,
         // $text-align: center
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

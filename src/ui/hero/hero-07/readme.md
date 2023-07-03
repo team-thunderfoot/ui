@@ -57,12 +57,12 @@
         // $img-object-fit: cover,
         // $img-position: center,
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font-weight: bold,
         // $subtitle-font: f,
+        // $subtitle-font-weight: bold,
         // $text-align: center
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

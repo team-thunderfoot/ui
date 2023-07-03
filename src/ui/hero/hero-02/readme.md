@@ -33,18 +33,18 @@
 
 ## Editable variables
 
--   $background-color,
--   $header-height,
--   $img-height,
--   $img-object-fit,
--   $img-position,
--   $tagline-color,
--   $tagline-font-weight,
--   $tagline-font,
+-   $background-color
+-   $header-height
+-   $img-height
+-   $img-object-fit
+-   $img-position
+-   $tagline-color
+-   $tagline-font
+-   $tagline-font-weight
 -   $text-align
--   $title-color,
--   $title-font-weight,
--   $title-font,
+-   $title-color
+-   $title-font
+-   $title-font-weight
 
 ## Use
 
@@ -58,12 +58,12 @@
         // $img-object-fit: cover,
         // $img-position: center,
         // $tagline-color: map-get($color-options, f),
-        // $tagline-font-weight: medium,
         // $tagline-font: d,
+        // $tagline-font-weight: medium,
         // $text-align: left
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: bold,
         // $title-font: a,
+        // $title-font-weight: bold,
     );
 }
 ```

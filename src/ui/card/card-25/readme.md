@@ -35,9 +35,9 @@ If you want the subtitle to be a c--content, the HTML should be:
 
 - $background-color
 - $border-color
+- $border-radius
 - $border-style
 - $border-width
-- $border-radius
 - $full-image-height
 - $hover-background-color
 - $hover-img-zoom
@@ -47,6 +47,9 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $img-aspect-ratio
 - $img-height
 - $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
 - $text-align
 - $title-color
 - $title-font
@@ -61,9 +64,9 @@ If you want the subtitle to be a c--content, the HTML should be:
     @include make-card-25-modifier(
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
+        // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
-        // $border-radius: $measure,
         // $full-image-height: true,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
@@ -73,7 +76,10 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $img-aspect-ratio: calc(16 / 9),
         // $img-height: 340px,
         // $img-position: center,
-        //$text-align: left,
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: c,
+        // $meta-font-weight: 400,
+        // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,
         // $title-font-weight: 400,

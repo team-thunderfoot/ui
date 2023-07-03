@@ -34,9 +34,9 @@
 }
 
 @mixin make-card-24-modifier(
+    $author-color: false,
     $author-font: false,
     $author-font-weight: false,
-    $author-color: false,
     $hover-title-color: false,
     $hover-transform: false,
     $link-class: false,

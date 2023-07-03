@@ -25,9 +25,9 @@
 
 ## Editable variables
 
+-   $author-color
 -   $author-font
 -   $author-font-weight
--   $author-color
 -   $hover-title-color
 -   $hover-transform
 -   $link-class
@@ -47,9 +47,9 @@
 .g--card-24 {
     @include make-card-24();
     @include make-card-24-modifier(
+        // $author-color: map-get($color-options, a),
         // $author-font: f,
         // $author-font-weight: 400,
-        // $author-color: map-get($color-options, a),
         // $hover-title-color: map-get($color-options, b),
         // $hover-transform: translateY(-5%),
         // $link-class: g--link-01,

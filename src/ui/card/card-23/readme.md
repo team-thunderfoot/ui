@@ -25,14 +25,14 @@
 
 ## Editable variables
 
+-   $author-color
 -   $author-font
 -   $author-font-weight
--   $author-color
 -   $background-color
 -   $border-color
+-   $border-radius
 -   $border-style
 -   $border-width
--   $border-radius
 -   $hover-background-color
 -   $hover-shadow
 -   $hover-title-color
@@ -54,14 +54,14 @@
 .g--card-23 {
     @include make-card-23();
     @include make-card-23-modifier(
+        // $author-color: map-get($color-options, a),
         // $author-font: f,
         // $author-font-weight: 400,
-        // $author-color: map-get($color-options, a),
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
-        // $border-radius: 0,
         // $hover-background-color: map-get($color-options, g),
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, b),

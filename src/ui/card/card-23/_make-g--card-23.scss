@@ -38,14 +38,14 @@
 }
 
 @mixin make-card-23-modifier(
+    $author-color: false,
     $author-font: false,
     $author-font-weight: false,
-    $author-color: false,
     $background-color: false,
     $border-color: false,
+    $border-radius: false,
     $border-style: false,
     $border-width: false,
-    $border-radius: false,
     $hover-background-color: false,
     $hover-shadow: false,
     $hover-title-color: false,

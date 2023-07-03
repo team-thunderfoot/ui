@@ -52,12 +52,12 @@
         // $img-height: 340px,
         // $img-position: center,
         // $meta-color: map-get($color-options, a),
-        // $meta-font-weight: 400,
         // $meta-font: f,
+        // $meta-font-weight: 400,
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3
     );
 }

@@ -26,10 +26,10 @@
 - $background-color
 - $subtitle-color
 - $subtitle-font
-- $subtitle-font-weight,
+- $subtitle-font-weight
 - $title-color
 - $title-font
-- $title-font-weight,
+- $title-font-weight
 
 ## Use
 
@@ -39,11 +39,11 @@
     @include make-layout-02-modifier(
         // $background-color: map-get($color-options, e),
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font-weight: 400,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 

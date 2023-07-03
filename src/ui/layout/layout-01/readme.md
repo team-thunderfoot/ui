@@ -46,11 +46,11 @@ To use it we have to import the css of the $btn-class in the entry
         // $btn-class: g--btn-01,
         // $btn-font: d,
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font-weight: 400,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

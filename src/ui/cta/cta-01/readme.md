@@ -47,8 +47,8 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-transform: translateY(-$measure),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3,
     );
 }

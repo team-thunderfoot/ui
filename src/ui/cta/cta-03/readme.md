@@ -60,13 +60,13 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-title-color: map-get($color-options, e),
         // $hover-transform: translateY(-$measure),
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font-weight: 600,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 600,
         // $subtitle-max-lines: 2,
         // $text-align: left,
         // $title-color: map-get($color-options, b),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3,
     );
 }

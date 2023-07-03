@@ -81,13 +81,13 @@
     $hover-transform: false,
     $mask-color: false,
     $subtitle-color: false,
-    $subtitle-font-weight: false,
     $subtitle-font: false,
+    $subtitle-font-weight: false,
     $subtitle-max-lines: false,
     $text-align: false,
     $title-color: false,
-    $title-font-weight: false,
     $title-font: false,
+    $title-font-weight: false,
     $title-max-lines: false
 ) {
     @if $background-position {

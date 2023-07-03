@@ -87,14 +87,14 @@ To use it we have to import the css of the $btn-class in the entry
         // $img-position: center,
         // $one-col-bkt: $tabletm,
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font-weight: 400,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
         // $subtitle-max-lines: 1,
+        // $text-align: left,
         // $title-color: map-get($color-options, b),
-        // $title-font-weight: bold,
         // $title-font: c,
+        // $title-font-weight: bold,
         // $title-max-lines: 1,
-        //$text-align: left,
     );
 }
 ```

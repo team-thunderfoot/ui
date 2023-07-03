@@ -70,8 +70,8 @@
     $mask-color: false,
     $text-align: false,
     $title-color: false,
-    $title-font-weight: false,
     $title-font: false,
+    $title-font-weight: false,
     $title-max-lines: false
 ) {
     @if $background-position {

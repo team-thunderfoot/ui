@@ -53,8 +53,8 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-transform: translateY(-$measure),
         // $mask-color: rgba(map-get($color-options, a), 0.5),
         // $title-color: map-get($color-options, b),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
         // $title-max-lines: 3,
         // $text-align: left,
     );

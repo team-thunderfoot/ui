@@ -31,6 +31,9 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 
 ## Editable variables
 
+-   $author-color
+-   $author-font
+-   $author-font-weight
 -   $background-color
 -   $border-color
 -   $border-style
@@ -52,7 +55,6 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 -   $meta-font
 -   $meta-font-weight
 -   $pill-class
--   $text-align
 -   $title-color
 -   $title-font
 -   $title-font-weight
@@ -64,6 +66,9 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 .g--card-37 {
     @include make-card-37();
     @include make-card-37-modifier(
+        // $author-color: map-get($color-options, a),
+        // $author-font: c,
+        // $author-font-weight: 400,
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
         // $border-style: solid,
@@ -85,7 +90,6 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $meta-font: f,
         // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
-        // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,
         // $title-font-weight: 400,

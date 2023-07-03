@@ -33,9 +33,9 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 
 ## Editable variables
 
+- $author-color
 - $author-font
 - $author-font-weight
-- $author-color
 - $background-color
 - $border-color
 - $border-style
@@ -47,8 +47,8 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
-- $img-aspect-ratio-width
 - $img-aspect-ratio-height
+- $img-aspect-ratio-width
 - $img-height
 - $img-position
 - $link-class
@@ -68,9 +68,9 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 .g--card-39 {
     @include make-card-39();
     @include make-card-39-modifier(
+        // $author-color: map-get($color-options, a),
         // $author-font: f,
         // $author-font-weight: 400,
-        // $author-color: map-get($color-options, a),
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
         // $border-style: solid,
@@ -82,8 +82,8 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, e),
         // $hover-transform: translateY(-5%),
-        // $img-aspect-ratio-width: 16,
         // $img-aspect-ratio-height: 9,
+        // $img-aspect-ratio-width: 16,
         // $img-height: 340px,
         // $img-position: center,
         // $link-class: g--link-01,

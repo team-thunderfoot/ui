@@ -56,9 +56,9 @@
 }
 
 @mixin make-card-39-modifier(
+    $author-color: false,
     $author-font: false,
     $author-font-weight: false,
-    $author-color: false,
     $background-color: false,
     $border-color: false,
     $border-style: false,
@@ -70,8 +70,8 @@
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
-    $img-aspect-ratio-width: false,
     $img-aspect-ratio-height: false,
+    $img-aspect-ratio-width: false,
     $img-height: false,
     $img-position: false,
     $link-class: false,

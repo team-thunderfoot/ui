@@ -57,9 +57,9 @@
 .g--card-40 {
     @include make-card-40();
     @include make-card-40-modifier(
+        // $author-color: map-get($color-options, a),
         // $author-font: f,
         // $author-font-weight: 400,
-        // $author-color: map-get($color-options, a),
         // $hover-img-zoom: 1.1,
         // $hover-title-color: map-get($color-options, e),
         // $hover-transform: translateY(-5%),

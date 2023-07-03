@@ -54,9 +54,9 @@ When there's an error in the input the class "g--form-input-01--error" should be
         // $border-style: solid,
         // $border-width: 1px,
         // $error-border-color: map-get($color-options, f),
+        // $font: f,
         // $font-size-mobile: 1rem,
         // $font-weight: 400,
-        // $font: f,
         // $placeholder-color: transparent,
         // $text-color: map-get($color-options, a),
     );

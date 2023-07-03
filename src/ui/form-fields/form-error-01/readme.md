@@ -18,6 +18,7 @@ The error html should be inside the g--form-group-01 div, after the g--form-inpu
 
 - $font
 - $font-weight
+- $position-absolute
 - $text-color
 
 ## Use
@@ -26,9 +27,10 @@ The error html should be inside the g--form-group-01 div, after the g--form-inpu
 .g--form-error-01{
     @include make-form-error-01();
     @include make-form-error-01-modifier(
-        // $text-color: map-get($color-options, g),
         // $font: g,
         // $font-weight: 700,
+        // $position-absolute: true,
+        // $text-color: map-get($color-options, g),
     );
 }
 ```

@@ -106,6 +106,8 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--card-50](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-50/readme.md)
 - [g--card-51](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-51/readme.md)
 - [g--card-52](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-52/readme.md)
+- [g--card-53](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-53/readme.md)
+- [g--card-54](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-54/readme.md)
 
 ### Cta
 
@@ -115,6 +117,7 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--cta-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-04/readme.md)
 - [g--cta-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-05/readme.md)
 - [g--cta-06](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-06/readme.md)
+- [g--cta-07](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-07/readme.md)
 
 ### Form fields
 

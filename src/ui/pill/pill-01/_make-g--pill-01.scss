@@ -16,8 +16,8 @@
     $hover-text-color: false,
     $hover-transform: false,
     $text-color: false,
-    $text-font-weight: false,
     $text-font: false,
+    $text-font-weight: false,
 ) {
     @if $background-color {
         background: $background-color;

@@ -30,12 +30,12 @@
     $icon-color: false,
     $icon-height: false,
     $icon-width: false,
-    $opacity-active: false,
     $opacity: false,
+    $opacity-active: false,
     $size: false,
     $transition: false,
-    $zoom-active: false,
     $zoom: false,
+    $zoom-active: false,
 ) {
     @if $transition {
         transition: $transition;

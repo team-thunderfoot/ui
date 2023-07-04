@@ -43,19 +43,19 @@
     @include make-search-01();
     @include make-search-01-modifier(
         // $artwork-color: map-get($color-options, g),
-        // $input-background-color-autofill: transparent,
         // $input-background-color: transparent,
+        // $input-background-color-autofill: transparent,
         // $input-border-color: map-get($color-options, a),
         // $input-border-radius: 0,
         // $input-border-style: solid,
         // $input-border-width: 1px,
-        // $input-font-weight: 600,
         // $input-font: f,
+        // $input-font-weight: 600,
         // $input-text-color: map-get($color-options, f),
         // $placeholder-color: rgba(map-get($color-options, a), .5),
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: f,
+        // $title-font-weight: 400,
     );
 }
 ```

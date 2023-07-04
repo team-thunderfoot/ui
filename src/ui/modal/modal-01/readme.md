@@ -79,12 +79,12 @@
         // $icon-color: map-get($color-options, g),
         // $icon-height: $measure * 2,
         // $icon-width: $measure * 2,
-        // $opacity-active: 1,
         // $opacity: 0,
+        // $opacity-active: 1,
         // $size: small,
         // $transition: all $time-b * 2 $ease-standard-a,
-        // $zoom-active: 1
         // $zoom: 0,
+        // $zoom-active: 1
     );
 }
 ```

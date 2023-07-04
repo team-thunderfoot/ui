@@ -42,8 +42,8 @@
         // $border-width: 1px,
         // $text-align: center,
         // $text-color: map-get($color-options, a),
-        // $text-font-weight: 400,
         // $text-font: f,
+        // $text-font-weight: 400,
         // $text-max-lines: 5,
     );
 }

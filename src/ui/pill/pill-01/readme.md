@@ -49,8 +49,8 @@
     // $hover-text-color: map-get($color-options, b),
     // $hover-transform: translateY(-$measure),
     // $text-color: map-get($color-options, a),
+    // $text-font: f,
     // $text-font-weight: 600,
-    // $text-font: f
     );
 }
 ```

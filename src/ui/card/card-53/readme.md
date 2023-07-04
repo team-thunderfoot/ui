@@ -10,10 +10,7 @@
 
 ```html
 <div class="g--card-53">
-    <div
-        class="g--card-53__bg-items"
-        style="background-image: url(/src/img/global-components/slider/quotes.svg);"
-    ></div>
+    <div class="g--card-53__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/slider/quotes.svg"></div>
     <div class="g--card-53__ft-items">
         <h3 class="g--card-53__ft-items__title">
             “Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit
@@ -28,31 +25,35 @@
 
 ## Editable variables
 
--   $author-color
--   $author-font-weight
--   $author-font
--   $author-max-lines
--   $background-color
--   $background-position
--   $background-size
--   $hover-author-color
--   $hover-background-color
--   $hover-shadow
--   $hover-subtitle-color
--   $hover-title-color
--   $hover-transform
--   $link-class
--   $link-font
--   $mask-color
--   $subtitle-color
--   $subtitle-font-weight
--   $subtitle-font
--   $subtitle-max-lines
--   $text-align
--   $title-color
--   $title-font-weight
--   $title-font
--   $title-max-lines
+- $author-color
+- $author-font
+- $author-font-weight
+- $author-max-lines
+- $background-color
+- $background-position
+- $background-size
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $hover-author-color
+- $hover-background-color
+- $hover-shadow
+- $hover-subtitle-color
+- $hover-title-color
+- $hover-transform
+- $link-class
+- $link-font
+- $mask-color
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
@@ -61,12 +62,16 @@
     @include make-card-53();
     @include make-card-53-modifier(
         // $author-color: map-get($color-options, d),
-        // $author-font-weight: 400,
         // $author-font: d,
+        // $author-font-weight: 400,
         // $author-max-lines: false,
         // $background-color: map-get($color-options, a),
         // $background-position: -3% -28%,
         // $background-size: 20%,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 20px,
+        // $border-style: solid,
+        // $border-width: 2px,
         // $hover-author-color: map-get($color-options, g),
         // $hover-background-color: map-get($color-options, e),
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
@@ -77,13 +82,13 @@
         // $link-font: f,
         // $mask-color: rgba(map-get($color-options, b), 0.5),
         // $subtitle-color: map-get($color-options, d),
-        // $subtitle-font-weight: 400,
         // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
         // $subtitle-max-lines: 2,
         // $text-align: center,
         // $title-color: map-get($color-options, d),
-        // $title-font-weight: 400,
         // $title-font: b,
+        // $title-font-weight: 400,
         // $title-max-lines: 3
     );
 }

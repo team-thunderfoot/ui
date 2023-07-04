@@ -66,12 +66,16 @@
 
 @mixin make-card-53-modifier(
     $author-color: false,
-    $author-font-weight: false,
     $author-font: false,
+    $author-font-weight: false,
     $author-max-lines: false,
     $background-color: false,
     $background-position: false,
     $background-size: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
     $hover-author-color: false,
     $hover-background-color: false,
     $hover-shadow: false,
@@ -82,15 +86,30 @@
     $link-font: false,
     $mask-color: false,
     $subtitle-color: false,
-    $subtitle-font-weight: false,
     $subtitle-font: false,
+    $subtitle-font-weight: false,
     $subtitle-max-lines: false,
     $text-align: false,
     $title-color: false,
-    $title-font-weight: false,
     $title-font: false,
-    $title-max-lines: false
+    $title-font-weight: false,
+    $title-max-lines: false,
 ) {
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    
     @if $hover-background-color and $hover-shadow and $hover-transform {
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
             transform $time-b $ease-standard-a;

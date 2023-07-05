@@ -1,0 +1,314 @@
+@mixin make-card-55() {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-decoration: none;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding: $measure * 10;
+
+        @media all and ($viewport-type: $tabletm) {
+            padding: $measure * 5;
+        }
+
+        &__hd {
+            margin-bottom: $measure * 3;
+        }
+
+        &__bd {
+            margin-bottom: $measure * 3;
+        }
+    }
+
+    &__media-wrapper {
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        &__media {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@mixin make-card-55-modifier(
+    $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $breakpoint: false,
+    $change-order-reponsive: false,
+    $content-color: false,
+    $content-font: false,
+    $content-font-weight: false,
+    $heading-color: false,
+    $heading-font: false,
+    $heading-font-weight: false,
+    $hover-background-color: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio-responsive: false,
+    $img-height-responsive: false,
+    $img-position: false,
+    $person-color: false,
+    $person-font: false,
+    $person-font-weight: false,
+    $position-color: false,
+    $position-font: false,
+    $position-font-weight: false,
+    $text-align: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+    @if $hover-title-color {
+        .g--card-55 {
+            &__wrapper {
+                &__hd {
+                    transition: color $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-55 {
+                    &__wrapper {
+                        &__hd {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-img-zoom {
+        .g--card-55 {
+            &__media-wrapper {
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-55 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--card-55 {
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                }
+            }
+            &__hd {
+                @if $heading-color {
+                    color: $heading-color;
+                }
+                @if $heading-font {
+                    @extend .f--font-#{$heading-font} !optional;
+                }
+                @if $heading-font-weight {
+                    font-weight: $heading-font-weight;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
+            }
+
+            &__bd {
+                @if $content-color {
+                    color: $content-color;
+                }
+                @if $content-font {
+                    @extend .f--font-#{$content-font} !optional;
+                }
+                @if $content-font-weight {
+                    font-weight: $content-font-weight;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
+            }
+
+            &__ft {
+                &__title {
+                    @if $person-color {
+                        color: $person-color;
+                    }
+                    @if $person-font {
+                        @extend .f--font-#{$person-font} !optional;
+                    }
+                    @if $person-font-weight {
+                        font-weight: $person-font-weight;
+                    }
+                }
+                &__subtitle {
+                    @if $position-color {
+                        color: $position-color;
+                    }
+                    @if $position-font {
+                        @extend .f--font-#{$position-font} !optional;
+                    }
+                    @if $position-font-weight {
+                        font-weight: $position-font-weight;
+                    }
+                }
+            }
+        }
+        &__media-wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    @if $change-order-reponsive {
+                        order: 1;
+                    }
+                }
+            }
+            &__media {
+                @if $img-position {
+                    object-position: $img-position;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        @if $img-height-responsive {
+                            height: $img-height-responsive;
+                        }
+                        @if $img-aspect-ratio-responsive {
+                            aspect-ratio: $img-aspect-ratio-responsive;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 .g--subscribe-03{
     @include make-subscribe-03();
     @include make-subscribe-03-modifier(
-        $breakpoint: $tablets,
+        $breakpoint: $mobile,
         $btn-width: 105px,
     );
     &--second{

@@ -47,6 +47,11 @@
         &__left-items {
             width: calc(50% - #{$measure} * 15);
             margin-right: $measure * 15;
+
+            @media all and ($viewport-type: $tabletm) {
+                width: calc(50% - #{$measure} * 10);
+                margin-right: $measure * 10;
+            }
         }
 
         &__right-items {

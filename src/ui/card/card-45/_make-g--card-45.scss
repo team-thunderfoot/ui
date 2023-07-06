@@ -57,12 +57,8 @@
     $img-height: false,
     $img-position: false,
     $img-width: false,
-    $text-align: false,
+    $text-align: false
 ) {
-    @if $background-color {
-        background: $background-color;
-    }
-
     @if $border-color {
         border-color: $border-color;
     }
@@ -78,48 +74,7 @@
         overflow: hidden;
     }
 
-    @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
-            transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color and $hover-shadow {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-color and $hover-transform {
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color {
-        transition: background $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
+    @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
@@ -187,6 +142,23 @@
                         &__media {
                             transform: scale($hover-img-zoom);
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-background-color {
+        &__wrapper {
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-45 {
+                    &__wrapper {
+                        background: $hover-background-color;
                     }
                 }
             }
@@ -274,10 +246,10 @@
                 @if $img-height {
                     height: $img-height;
                 }
-                @if $img-fit{
+                @if $img-fit {
                     object-fit: $img-fit;
                 }
-                @if $img-position{
+                @if $img-position {
                     object-position: $img-position;
                 }
                 @if $breakpoint {

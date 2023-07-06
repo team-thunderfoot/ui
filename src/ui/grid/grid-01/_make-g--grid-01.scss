@@ -1,0 +1,36 @@
+@mixin make-grid-01() {
+    height: 100vh;
+    overflow-y: auto;
+    &__wrapper{
+        display: grid;
+        gap: 32px;
+        grid-auto-rows: 1fr;
+        &__item{
+            display: flex;
+        }
+    }
+    
+}
+
+@mixin make-grid-01-modifier(
+    $columns: false,
+    $item-background-color: false,
+    $item-min-height: false,
+) {
+
+    .g--grid-01 {
+        &__wrapper {
+            @if $columns {
+                grid-template-columns: repeat($columns, 1fr);
+            }
+            &__item{
+                @if $item-background-color {
+                    background: $item-background-color;
+                }
+                @if $item-min-height {
+                    min-height: $item-min-height;
+                }
+            }
+        }
+    }
+}

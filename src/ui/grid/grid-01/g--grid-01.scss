@@ -1,0 +1,23 @@
+.g--grid-01 {
+    @include make-grid-01();
+    @include make-grid-01-modifier(
+        $columns: 4,
+        $item-background-color: rgba(map-get($color-options, a), .1),
+        $item-min-height: 50vh,
+    );
+    @media all and ($viewport-type: $tabletl) {
+        @include make-grid-01-modifier(
+            $columns: 3,
+        );
+    }
+    @media all and ($viewport-type: $tablets) {
+        @include make-grid-01-modifier(
+            $columns: 2,
+        );
+    }
+    @media all and ($viewport-type: $mobile) {
+        @include make-grid-01-modifier(
+            $columns: 1,
+        );
+    }
+}

@@ -59,6 +59,15 @@
     $img-width: false,
     $text-align: false
 ) {
+
+    @if $background-color {
+        .g--card-45 {
+            &__wrapper {
+                background: $background-color;
+            }
+        }
+    }
+
     @if $border-color {
         border-color: $border-color;
     }

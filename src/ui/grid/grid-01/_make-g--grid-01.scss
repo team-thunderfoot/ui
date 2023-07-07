@@ -1,12 +1,26 @@
 @mixin make-grid-01() {
     height: 100vh;
-    overflow-y: auto;
+    overflow: hidden;
+    // overflow-y: auto;
+    // &__wrapper{
+    //     display: grid;
+    //     gap: 32px;
+    //     grid-auto-rows: 1fr;
+    //     &__item{
+    //         display: flex;
+    //     }
+    // }
     &__wrapper{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         gap: 32px;
-        grid-auto-rows: 1fr;
         &__item{
             display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+            &__content{
+                display: flex;
+            }
         }
     }
     
@@ -20,15 +34,17 @@
 
     .g--grid-01 {
         &__wrapper {
-            @if $columns {
-                grid-template-columns: repeat($columns, 1fr);
-            }
             &__item{
-                @if $item-background-color {
-                    background: $item-background-color;
+                @if $columns {
+                    width: calc(((100% - (32px * (#{$columns} - 1))) / #{$columns}));
                 }
-                @if $item-min-height {
-                    min-height: $item-min-height;
+                &__content{
+                    @if $item-background-color {
+                        background: $item-background-color;
+                    }
+                    @if $item-min-height {
+                        min-height: $item-min-height;
+                    }
                 }
             }
         }

@@ -12,19 +12,19 @@
             label {
                 display: block;
                 position: absolute;
-                top: calc(50% + #{$measure});
+                top: 0;
+                transform: none;
                 left: $measure;
-                transform: translateY(-50%);
                 transition: all $time-b $ease-standard-a;
                 pointer-events: none;
                 span {
                     transition: all $time-b $ease-standard-a;
                 }
-                &:has(~ .input input:focus, ~ .input input:not(:placeholder-shown)) {
-                    top: 0;
-                    transform: none;
+                &:has(~ .input) {
+                    top: calc(50% + #{$measure});
+                    transform: translateY(-50%);
                 }
-                @supports not selector(:has(*)) {
+                &:has(~ .input input:focus, ~ .input input:not(:placeholder-shown)) {
                     top: 0;
                     transform: none;
                 }
@@ -111,12 +111,6 @@
     $label-font-weight-focus: false,
     $label-line-height-focus: false,
     $label-required-color: false,
-    $label-required-color-focus: false,
-    $label-required-font: false,
-    $label-required-font-size-focus: false,
-    $label-required-font-weight: false,
-    $label-required-font-weight-focus: false,
-    $label-required-line-height-focus: false,
     $success-message-font: false,
     $success-message-font-weight: false,
     $success-message-text-color: false
@@ -133,30 +127,19 @@
                 margin-bottom: $error-height;
             }
             label {
-                @if $label-color {
-                    color: $label-color;
+                @if $label-color-focus {
+                    color: $label-color-focus;
                 }
-                @if $label-font {
-                    @extend .f--font-#{$label-font} !optional;
+                @if $label-font-size-focus {
+                    font-size: $label-font-size-focus;
                 }
-                @if $label-font-weight {
-                    font-weight: $label-font-weight;
+                @if $label-line-height-focus {
+                    line-height: $label-line-height-focus;
                 }
-                @supports not selector(:has(*)) {
-                    @if $label-color-focus {
-                        color: $label-color-focus;
-                    }
-                    @if $label-font-size-focus {
-                        font-size: $label-font-size-focus;
-                    }
-                    @if $label-line-height-focus {
-                        line-height: $label-line-height-focus;
-                    }
-                    @if $label-font-weight-focus {
-                        font-weight: $label-font-weight-focus;
-                    }
+                @if $label-font-weight-focus {
+                    font-weight: $label-font-weight-focus;
                 }
-                span {
+                &:has(~ .input) {
                     @if $label-color {
                         color: $label-color;
                     }
@@ -166,43 +149,11 @@
                     @if $label-font-weight {
                         font-weight: $label-font-weight;
                     }
-                    @supports not selector(:has(*)) {
-                        @if $label-color-focus {
-                            color: $label-color-focus;
-                        }
-                        @if $label-font-size-focus {
-                            font-size: $label-font-size-focus;
-                        }
-                        @if $label-line-height-focus {
-                            line-height: $label-line-height-focus;
-                        }
-                        @if $label-font-weight-focus {
-                            font-weight: $label-font-weight-focus;
-                        }
-                    }
+                }
+                span {
                     &.hs-form-required {
                         @if $label-required-color {
                             color: $label-required-color;
-                        }
-                        @if $label-required-font {
-                            @extend .f--font-#{$label-required-font} !optional;
-                        }
-                        @if $label-required-font-weight {
-                            font-weight: $label-required-font-weight;
-                        }
-                        @supports not selector(:has(*)) {
-                            @if $label-required-color-focus {
-                                color: $label-required-color-focus;
-                            }
-                            @if $label-required-font-size-focus {
-                                font-size: $label-required-font-size-focus;
-                            }
-                            @if $label-required-line-height-focus {
-                                line-height: $label-required-line-height-focus;
-                            }
-                            @if $label-required-font-weight-focus {
-                                font-weight: $label-required-font-weight-focus;
-                            }
                         }
                     }
                 }
@@ -218,34 +169,6 @@
                     }
                     @if $label-font-weight-focus {
                         font-weight: $label-font-weight-focus;
-                    }
-                    span {
-                        @if $label-color-focus {
-                            color: $label-color-focus;
-                        }
-                        @if $label-font-size-focus {
-                            font-size: $label-font-size-focus;
-                        }
-                        @if $label-line-height-focus {
-                            line-height: $label-line-height-focus;
-                        }
-                        @if $label-font-weight-focus {
-                            font-weight: $label-font-weight-focus;
-                        }
-                        &.hs-form-required {
-                            @if $label-required-color-focus {
-                                color: $label-required-color-focus;
-                            }
-                            @if $label-required-font-size-focus {
-                                font-size: $label-required-font-size-focus;
-                            }
-                            @if $label-required-line-height-focus {
-                                line-height: $label-required-line-height-focus;
-                            }
-                            @if $label-required-font-weight-focus {
-                                font-weight: $label-required-font-weight-focus;
-                            }
-                        }
                     }
                 }
             }

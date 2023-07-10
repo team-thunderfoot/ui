@@ -26,6 +26,7 @@
     $hover-title-color: false,
     $hover-transform: false,
     $icon-align: false,
+    $icon-background: false,
     $icon-color: false,
     $icon-top: false,
     $icon-width: false,
@@ -158,7 +159,7 @@
                             }
 
                             rect {
-                                stroke: $hover-icon-color;
+                                // stroke: $hover-icon-color;
                             }
                         }
                     }
@@ -265,7 +266,7 @@
                     }
 
                     rect {
-                        stroke: $icon-color;
+                        // stroke: $icon-color;
                     }
                 }
             }

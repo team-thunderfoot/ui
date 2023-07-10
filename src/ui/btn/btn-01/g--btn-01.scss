@@ -20,36 +20,45 @@
 
     &--second {
         @include make-btn-01-modifier(
-            $border-radius: 200px,
+            $border-radius: 42px,
             $border-width: 1px,
             $hover-border-color: map-get($color-options, a),
+            $hover-border-radius: $measure*2,
             $text-color: map-get($color-options, a),
             $hover-text-color: map-get($color-options, b),
-            $transition: (
-                border-color $time-b $ease-standard-a,
-                color $time-b $ease-standard-a,
-                background $time-b $ease-standard-a,
-                background-size $time-b $ease-standard-a,
-            ),
             $background-color:
                 linear-gradient(map-get($color-options, a), map-get($color-options, a)),
             $background-repeat: no-repeat,
             $background-size: 100% 0px,
             $hover-background-size: 100% 100%,
-            $background-position: bottom left
+            $background-position: bottom left,
+            $transition: (
+                border-color $time-b $ease-standard-a,
+                color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a,
+                background-size $time-b $ease-standard-a,
+                border-radius $time-b $ease-standard-a,
+            ),
         );
     }
 
     &--third {
         @include make-btn-01-modifier(
-            $border-radius: 200px,
+            $border-radius: 42px,
             $border-width: 1px,
             $border-color: map-get($color-options, b),
+            $hover-border-radius: $measure*2,
             $hover-border-color: map-get($color-options, a),
             $text-color: map-get($color-options, b),
             $hover-text-color: map-get($color-options, a),
             $background-color: map-get($color-options, a),
-            $hover-background-color: map-get($color-options, b)
+            $hover-background-color: map-get($color-options, b),
+            $transition: (
+                border-color $time-b $ease-standard-a,
+                color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a,
+                border-radius $time-b $ease-standard-a,
+            )
         );
     }
     &--fourth {

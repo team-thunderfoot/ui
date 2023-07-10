@@ -36,6 +36,7 @@
 - $hover-background-position
 - $hover-background-size
 - $hover-border-color
+- $hover-border-radius
 - $hover-text-color
 - $text-color
 - $transition
@@ -60,6 +61,7 @@
     // $hover-background-position: bottom left,
     // $hover-background-size: 100% 100%,
     // $hover-border-color: map-get($color-options, a),
+    // $hover-border-radius: 20px,
     // $hover-text-color: map-get($color-options, a),
     // $text-color: map-get($color-options, a),
     // $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a, background-size $time-b $ease-standard-a)

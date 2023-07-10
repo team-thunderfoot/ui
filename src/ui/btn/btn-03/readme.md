@@ -56,6 +56,7 @@
 - $hover-background-position
 - $hover-background-size
 - $hover-border-color
+- $hover-border-radius
 - $hover-text-color
 - $text-color
 - $transition
@@ -83,6 +84,7 @@
     // $font-weight: 600,
     // $hover-artwork-color: map-get($color-options, a),
     // $hover-background-color:  map-get($color-options, a),
+    // $hover-border-radius: $measure,
     // $hover-background-position: bottom left,
     // $hover-background-size: 100% 100%,
     // $hover-border-color: map-get($color-options, a),

@@ -64,11 +64,6 @@
                 @media all and ($viewport-type: $breakpoint) {
                     height: auto;
                     min-height: 0;
-                    @if $change-order-reponsive == true {
-                        margin-bottom: $measure * 5;
-                    } @else {
-                        margin-bottom: 0;
-                    }
                 }
             }
 
@@ -132,10 +127,10 @@
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     padding: 0;
-                  
-
-                    @if $change-order-reponsive == false {
-                        margin-bottom: $measure * 5;
+                    @if $change-order-reponsive == true {
+                        padding: $measure*5 0 0;
+                    } @else {
+                        padding: 0 0 $measure*5;
                     }
                 }
             }

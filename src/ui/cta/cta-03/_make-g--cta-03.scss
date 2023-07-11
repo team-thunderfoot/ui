@@ -45,6 +45,7 @@
     $btn-class: false,
     $btn-font: false,
     $hover-background-color: false,
+    $hover-border-radius: false,
     $hover-shadow: false,
     $hover-subtitle-color: false,
     $hover-title-color: false,
@@ -63,7 +64,20 @@
         background: $background-color;
     }
 
-    @if $hover-background-color and $hover-shadow and $hover-transform {
+    @if $hover-background-color and $hover-shadow and $hover-transform and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow and $hover-transform {
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
             transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
@@ -73,6 +87,29 @@
                 background: $hover-background-color;
                 box-shadow: $hover-shadow;
                 transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform and $hover-border-radius {
+        transition: background $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
             }
         }
     } @else if $hover-background-color and $hover-shadow {
@@ -95,6 +132,16 @@
                 transform: $hover-transform;
             }
         }
+    } @else if $hover-background-color and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-radius: $hover-border-radius;
+            }
+        }
     } @else if $hover-background-color {
         transition: background $time-b $ease-standard-a;
         @media all and (hover: hover) {
@@ -102,6 +149,18 @@
             &:focus,
             &:active {
                 background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform and $hover-border-radius {
+        transition: box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
             }
         }
     } @else if $hover-shadow and $hover-transform {
@@ -114,6 +173,16 @@
                 transform: $hover-transform;
             }
         }
+    } @else if $hover-shadow and $hover-border-radius {
+        transition: box-shadow $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                border-radius: $hover-border-radius;
+            }
+        }
     } @else if $hover-shadow {
         transition: box-shadow $time-b $ease-standard-a;
         @media all and (hover: hover) {
@@ -123,6 +192,16 @@
                 box-shadow: $hover-shadow;
             }
         }
+    } @else if $hover-transform and $hover-border-radius {
+        transition: transform $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
+            }
+        }
     } @else if $hover-transform {
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
@@ -130,6 +209,15 @@
             &:focus,
             &:active {
                 transform: $hover-transform;
+            }
+        }
+    } @else if $hover-border-radius {
+        transition: border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-radius: $hover-border-radius;
             }
         }
     }

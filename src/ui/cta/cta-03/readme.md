@@ -23,24 +23,25 @@
 
 ## Editable variables
 
--   $background-color
--   $border-radius
--   $btn-class
--   $btn-font
--   $hover-background-color
--   $hover-shadow
--   $hover-subtitle-color
--   $hover-title-color
--   $hover-transform
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $subtitle-max-lines
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $border-radius
+- $btn-class
+- $btn-font
+- $hover-background-color
+- $hover-border-radius
+- $hover-shadow
+- $hover-subtitle-color
+- $hover-title-color
+- $hover-transform
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
@@ -55,6 +56,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $btn-class: g--btn-02,
         // $btn-font: d,
         // $hover-background-color: map-get($color-options, e),
+        // $hover-border-radius: $measure*3,
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, c),
         // $hover-title-color: map-get($color-options, e),

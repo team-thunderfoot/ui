@@ -159,6 +159,7 @@
     }
     &--seventh {
         @include make-btn-03-modifier(
+            $shadow: 0 0 $measure*2 map-get($color-options, a),
             $artwork-color-fill: map-get($color-options, e),
             $border-width: 1px,
             $border-color: map-get($color-options, e),
@@ -190,30 +191,6 @@
                 background-size $time-b $ease-standard-a,
             ),
             // $hover-background-color: map-get($color-options, b)
-        );
-    }
-
-    &--eight {
-        @include make-btn-03-modifier(
-            $artwork-color-fill: map-get($color-options, b),
-            $border-color: map-get($color-options, b),
-            $border-radius: 200px,
-            $hover-border-color: map-get($color-options, b),
-            $text-color: map-get($color-options, b),
-            $hover-artwork-color: map-get($color-options, a),
-            $hover-text-color: map-get($color-options, a),
-            $transition: (
-                border-color $time-b $ease-standard-a,
-                color $time-b $ease-standard-a,
-                background $time-b $ease-standard-a,
-                background-size $time-b $ease-standard-a,
-            ),
-            $background-color:
-                linear-gradient(map-get($color-options, b), map-get($color-options, b)),
-            $background-repeat: no-repeat,
-            $background-size: 100% 0px,
-            $hover-background-size: 100% 100%,
-            $background-position: bottom left
         );
     }
 }

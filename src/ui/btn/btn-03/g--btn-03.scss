@@ -28,6 +28,8 @@
             $artwork-color-fill: map-get($color-options, a),
             $border-radius: 50px,
             $border-width: 1px,
+            // $shadow: 0 0 $measure*2 map-get($color-options, a),
+            $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
             $hover-border-color: map-get($color-options, a),
             $hover-border-radius: $measure,
             $text-color: map-get($color-options, a),
@@ -39,6 +41,7 @@
                 color $time-b $ease-standard-a,
                 background $time-b $ease-standard-a,
                 background-size $time-b $ease-standard-a,
+                box-shadow $time-b $ease-standard-a,
             ),
             $background-color:
                 linear-gradient(map-get($color-options, a), map-get($color-options, a)),

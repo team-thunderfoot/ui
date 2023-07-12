@@ -18,8 +18,9 @@
               <a href="./index.html" class="f--font-f g--link-01 f--sp-c display--inline-block">Back to Index</a>
               <h1 class="f--font-b f--sp-a">Global Buttons</h1>
               <p class="f--font-f f--background-a f--p-3 f--sp-a" style="overflow-wrap: break-word;"><strong>Note:</strong> To go to any button we can add "#btn-btnNumber" in the url. For example, to go to btn-02 add "#btn-02", the url will be "https://globalcomponents.netlify.app/buttons.html#btn-02"</p>
-              <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> For button modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier.</p>
-              <p class="f--font-f f--background-a f--p-3"><strong>Note border:</strong> We can set different border-color, border-style or border-width for each side (or add border just to one side).</p>
+              <p class="f--font-f f--background-a f--p-3 f--sp-a"><strong>Note variables:</strong> For button modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier except variables
+              that depend on an existing class (fonts...). If we want to change a font in a modifier, the default font must be the first one (starting with a).</p>
+              <p class="f--font-f f--background-a f--p-3"><strong>Note border:</strong> We can set different border-color, border-style or border-width for each side (or add border just to one side). Borders cannot be gradients or images, only colors or colors with opacity.</p>
             </div>
           </div>
         </div>
@@ -67,7 +68,9 @@
                     <li>$hover-background-size</li>
                     <li>$hover-border-color</li>
                     <li>$hover-border-radius</li>
+                    <li>$hover-shadow</li>
                     <li>$hover-text-color</li>
+                    <li>$shadow</li>
                     <li>$text-color</li>
                     <li>$transition</li>
                   </ul>
@@ -106,6 +109,7 @@
                     <li>$btn-font</li>
                     <li>$hover-artwork-color</li>
                     <li>$hover-text-color</li>
+                    <li>$hover-transform-icon</li>
                     <li>$icon-top</li>
                     <li>$icon-width</li>
                     <li>$text-color</li>
@@ -238,9 +242,121 @@
                     <li>$hover-background-size</li>
                     <li>$hover-border-color</li>
                     <li>$hover-border-radius</li>
+                    <li>$hover-shadow</li>
                     <li>$hover-text-color</li>
+                    <li>$shadow</li>
                     <li>$text-color</li>
                     <li>$transition</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="f--section-c" id="btn-04">
+        <div class="f--container">
+          <div class="f--row">
+            <div class="f--col-8 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-b">btn-04</h2>
+              <button class="g--btn-04 f--font-f display--inline-block f--sp-b">
+                btn 04
+                <svg class="g--btn-04__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </button>
+              <a href="#" class="g--btn-04 f--font-f display--inline-block f--sp-b"
+                >btn 04 link
+                <svg class="g--btn-04__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </a>
+              <button class="g--btn-04 g--btn-04--second f--font-f display--inline-block f--sp-b">
+                btn 04--second
+                <svg class="g--btn-04__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </button>
+              <a href="#" class="g--btn-04 g--btn-04--third f--font-f display--inline-block f--sp-b"
+                >btn 04--third link
+                <svg class="g--btn-04__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
+            <div class="f--col-4 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-a">Editable variables</h2>
+              <div class="f--row">
+                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                  <ul class="f--sp-c" style="list-style: inside">
+                    <li>$artwork-color-fill</li>
+                    <li>$artwork-color-stroke</li>
+                    <li>$btn-font</li>
+                    <li>$btn-font-weight</li>
+                    <li>$hover-artwork-color</li>
+                    <li>$hover-text-color</li>
+                    <li>$hover-transform</li>
+                    <li>$icon-top</li>
+                    <li>$icon-width</li>
+                    <li>$text-color</li>
+                    <li>$underline-color</li>
+                    <li>$underline-gradient</li>
+                    <li>$underline-height</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="f--section-c" id="btn-05">
+        <div class="f--container">
+          <div class="f--row">
+            <div class="f--col-8 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-b">btn-05</h2>
+              <button class="g--btn-05 f--font-f display--inline-block f--sp-b">
+                btn 05
+                <svg class="g--btn-05__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </button>
+              <a href="#" class="g--btn-05 f--font-f display--inline-block f--sp-b"
+                >btn 05 link
+                <svg class="g--btn-05__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </a>
+              <button class="g--btn-05 g--btn-05--second f--font-f display--inline-block f--sp-b">
+                btn 05--second
+                <svg class="g--btn-05__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </button>
+              <a href="#" class="g--btn-05 g--btn-05--third f--font-f display--inline-block f--sp-b"
+                >btn 05--third link
+                <svg class="g--btn-05__artwork" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
+            <div class="f--col-4 f--col-tabletm-12">
+              <h2 class="f--font-c f--sp-a">Editable variables</h2>
+              <div class="f--row">
+                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                  <ul class="f--sp-c" style="list-style: inside">
+                    <li>$artwork-color-fill</li>
+                    <li>$artwork-color-stroke</li>
+                    <li>$btn-font</li>
+                    <li>$btn-font-weight</li>
+                    <li>$hover-artwork-color</li>
+                    <li>$hover-text-color</li>
+                    <li>$hover-transform</li>
+                    <li>$icon-top</li>
+                    <li>$icon-width</li>
+                    <li>$text-color</li>
+                    <li>$underline-color</li>
+                    <li>$underline-gradient</li>
+                    <li>$underline-height</li>
                   </ul>
                 </div>
               </div>

@@ -3,13 +3,16 @@
     width: 100%;
     display: flex;
     text-decoration: none;
+    justify-content: space-between;
 
     &__bd {
-        width: 100%;
+        &__title{
+            margin-bottom: $measure;
+        }
     }
 
     &__wrapper {
-        margin-left: $measure * 3;
+        margin-left: $measure * 4;
     }
 }
 

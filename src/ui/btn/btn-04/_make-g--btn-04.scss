@@ -1,38 +1,52 @@
-@mixin make-btn-02() {
+@mixin make-btn-04() {
     text-decoration: none;
     width: fit-content;
     display: flex;
     align-items: center;
-
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    transition: background-size $ease-standard-a $time-b;
     svg {
         height: auto;
         margin-left: $measure;
     }
 }
 
-@mixin make-btn-02-modifier(
+@mixin make-btn-04-modifier(
     $artwork-color-fill: false,
     $artwork-color-stroke: false,
-    $btn-font-weight: false,
     $btn-font: false,
+    $btn-font-weight: false,
     $hover-artwork-color: false,
     $hover-text-color: false,
-    $hover-transform-icon: false,
+    $hover-transform: false,
     $icon-top: false,
     $icon-width: false,
     $text-color: false,
+    $underline-color: false,
+    $underline-gradient: false,
+    $underline-height: false,
 ) {
     @if $text-color {
         color: $text-color;
     }
     @if $hover-text-color {
-        transition: color $ease-standard-a $time-b;
+        transition: color $ease-standard-a $time-b, background-size $ease-standard-a $time-b;
     }
     @if $btn-font {
         @extend .f--font-#{$btn-font} !optional;
     }
     @if $btn-font-weight {
         font-weight: $btn-font-weight;
+    }
+    @if $underline-color {
+        background-image: linear-gradient($underline-color, $underline-color);
+    }
+    @if $underline-gradient {
+        background-image: $underline-gradient;
+    }
+    @if $underline-height {
+        background-size: 100% $underline-height;
     }
     svg {
         @if $icon-width {
@@ -43,7 +57,7 @@
             position: relative;
             top: $icon-top;
         }
-        @if $hover-transform-icon {
+        @if $hover-transform {
             transition: transform $ease-standard-a $time-b;
         }
         path {
@@ -68,6 +82,9 @@
             @if $hover-text-color {
                 color: $hover-text-color;
             }
+            @if $underline-height {
+                background-size: 0 $underline-height;
+            }
         }
     }
     @media (hover: hover) {
@@ -75,8 +92,8 @@
         &:focus,
         &:active {
             svg {
-                @if $hover-transform-icon {
-                    transform: $hover-transform-icon;
+                @if $hover-transform {
+                    transform: $hover-transform;
                 }
                 path {
                     @if $hover-artwork-color and $artwork-color-fill {

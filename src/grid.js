@@ -1,7 +1,7 @@
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-// import {ScrollSmoother} from "gsap/ScrollSmoother";
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+import {ScrollSmoother} from "gsap/ScrollSmoother";
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 // import { tns } from "/node_modules/tiny-slider/src/tiny-slider.js";
 
 // import DOMTF from './DOMTF.js';
@@ -29,10 +29,10 @@ class Grid{
 
     init(){
 
-        // let smoother = ScrollSmoother.create({
-        //     smooth: 2,   // seconds it takes to "catch up" to native scroll position
-        //     effects: true // look for data-speed and data-lag attributes on elements and animate accordingly
-        //   });
+        let smoother = ScrollSmoother.create({
+            smooth: 2,   // seconds it takes to "catch up" to native scroll position
+            effects: true // look for data-speed and data-lag attributes on elements and animate accordingly
+          });
 
     }
 }

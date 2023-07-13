@@ -1,5 +1,4 @@
 @mixin make-pill-01() {
-    border-radius: 100px;
     display: inline-block;
     padding: $measure $measure * 2;
     text-align: center;
@@ -8,6 +7,7 @@
 @mixin make-pill-01-modifier(
     $background-color: false,
     $border-color: false,
+    $border-radius: false,
     $border-style: false,
     $border-width: false,
     $hover-background-color: false,
@@ -21,6 +21,9 @@
 ) {
     @if $background-color {
         background: $background-color;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
     }
 
     @if $hover-background-color and $hover-border-color and $hover-shadow and $hover-transform and $hover-text-color {

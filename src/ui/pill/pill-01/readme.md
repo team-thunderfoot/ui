@@ -22,6 +22,7 @@
 
 - $background-color
 - $border-color
+- $border-radius
 - $border-style
 - $border-width
 - $hover-background-color
@@ -41,6 +42,7 @@
     @include make-pill-01-modifier(
     // $background-color: lighten(map-get($color-options, a), 75%),
     // $border-color: map-get($color-options, e),
+    // $border-radius: 100px,
     // $border-style: solid,
     // $border-width: 1px,
     // $hover-background-color: map-get($color-options, a),

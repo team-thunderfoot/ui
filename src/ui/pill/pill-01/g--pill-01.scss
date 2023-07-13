@@ -19,6 +19,7 @@
     @include make-pill-01-modifier(
       $background-color: map-get($color-options, g),
       $border-color: map-get($color-options, e),
+      $border-radius: 100px,
       $border-style: dotted,
       $border-width: 3px,
       $hover-background-color: map-get($color-options, f),

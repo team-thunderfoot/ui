@@ -35,12 +35,15 @@ It is not necessary to add aspect-ratio.
 - $border-style
 - $border-width
 - $hover-background-color
+- $hover-border-color
 - $hover-icon-background
 - $hover-icon-border-color
 - $hover-icon-color
 - $hover-icon-transform
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
+- $hover-title-underline-height
 - $hover-transform
 - $icon-align
 - $icon-background
@@ -67,37 +70,40 @@ It is not necessary to add aspect-ratio.
 .g--card-54 {
     @include make-card-54();
     @include make-card-54-modifier(
-        $background-color: rgba(map-get($color-options, g), 0.7),
-        $border-color: map-get($color-options, g),
-        $border-radius: $measure,
-        $border-style: double,
-        $border-width: 2px,
-        $hover-background-color: map-get($color-options, g),
-        $hover-icon-background: map-get($color-options, a),
-        $hover-icon-border-color: map-get($color-options, b),
-        $hover-icon-color: map-get($color-options, b),
-        $hover-icon-transform: translateX($measure),
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
-        $hover-title-color: map-get($color-options, a),
-        $hover-transform: translateY(-$measure*2),
-        $icon-align: top,
-        $icon-background: map-get($color-options, g),
-        $icon-border-color: map-get($color-options, a),
-        $icon-border-radius: 50%,
-        $icon-border-style: solid,
-        $icon-border-width: 1px,
-        $icon-color-fill: map-get($color-options, a),
-        $icon-color-stroke: map-get($color-options, a),
-        $icon-top: 2px,
-        $icon-width: $measure*4,
-        $shadow: 0 0 $measure*2 map-get($color-options, g),
-        $subtitle-color: map-get($color-options, a),
-        $subtitle-font: b,
-        $subtitle-font-weight: 400,
-        $text-align: center,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        $title-font-weight: 600,
+        // $background-color: rgba(map-get($color-options, g), 0.7),
+        // $border-color: map-get($color-options, g),
+        // $border-radius: $measure,
+        // $border-style: double,
+        // $border-width: 2px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, e),
+        // $hover-icon-background: map-get($color-options, a),
+        // $hover-icon-border-color: map-get($color-options, b),
+        // $hover-icon-color: map-get($color-options, b),
+        // $hover-icon-transform: translateX($measure),
+        // $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $hover-title-color: map-get($color-options, a),
+        // $hover-title-underline-color: map-get($color-options, a),
+        // $hover-title-underline-height: 2px,
+        // $hover-transform: translateY(-$measure*2),
+        // $icon-align: top,
+        // $icon-background: map-get($color-options, g),
+        // $icon-border-color: map-get($color-options, a),
+        // $icon-border-radius: 50%,
+        // $icon-border-style: solid,
+        // $icon-border-width: 1px,
+        // $icon-color-fill: map-get($color-options, a),
+        // $icon-color-stroke: map-get($color-options, a),
+        // $icon-top: 2px,
+        // $icon-width: $measure*4,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: b,
+        // $subtitle-font-weight: 400,
+        // $text-align: center,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 600,
     );
 }
 ```

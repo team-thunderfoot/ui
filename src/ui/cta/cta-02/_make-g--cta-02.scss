@@ -62,6 +62,7 @@
 @mixin make-cta-02-modifier(
     $background-position: false,
     $background-size: false,
+    $border-radius: false,
     $btn-class: false,
     $btn-font: false,
     $hover-background-img-zoom: false,
@@ -75,6 +76,9 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
     @if $background-position {
         &__bg-items {
             background-position: $background-position;

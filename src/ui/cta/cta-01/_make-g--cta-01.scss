@@ -32,6 +32,7 @@
 
 @mixin make-cta-01-modifier(
     $background-color: false,
+    $border-radius: false,
     $btn-class: false,
     $btn-font: false,
     $hover-background-color: false,
@@ -46,6 +47,9 @@
 ) {
     @if $background-color {
         background: $background-color;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
     }
 
     @if $hover-background-color and $hover-shadow and $hover-transform {

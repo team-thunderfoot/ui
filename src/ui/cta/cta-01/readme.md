@@ -18,6 +18,7 @@
 ## Editable variables
 
 -   $background-color
+-   $border-radius
 -   $btn-class
 -   $btn-font
 -   $hover-background-color
@@ -39,6 +40,7 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-cta-01();
     @include make-cta-01-modifier(
         // $background-color: lighten(map-get($color-options, a), 82%),
+        // $border-radius: $measure*2,
         // $btn-class: g--btn-01,
         // $btn-font: d,
         // $hover-background-color: map-get($color-options, h),

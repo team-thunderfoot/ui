@@ -43,7 +43,6 @@ It is not necessary to add aspect-ratio.
 - $hover-shadow
 - $hover-title-color
 - $hover-title-underline-color
-- $hover-title-underline-height
 - $hover-transform
 - $icon-align
 - $icon-background
@@ -84,7 +83,6 @@ It is not necessary to add aspect-ratio.
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
         // $hover-title-color: map-get($color-options, a),
         // $hover-title-underline-color: map-get($color-options, a),
-        // $hover-title-underline-height: 2px,
         // $hover-transform: translateY(-$measure*2),
         // $icon-align: top,
         // $icon-background: map-get($color-options, g),

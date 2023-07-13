@@ -8,7 +8,7 @@
     &__bd {
         &__title{
             margin-bottom: $measure;
-            width: fit-content;
+            // width: fit-content;
         }
     }
 
@@ -40,7 +40,6 @@
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
-    $hover-title-underline-height: false,
     $hover-transform: false,
     $icon-align: false,
     $icon-background: false,
@@ -416,7 +415,8 @@
                     &__bd {
                         &__title {
                             color: $hover-title-color;
-                            background-size: 100% $hover-title-underline-height;
+                            text-decoration: underline;
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -436,7 +436,7 @@
                 }
             }
         }
-    } @else if $hover-title-underline-height {
+    } @else if $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -444,7 +444,8 @@
                 .g--card-54 {
                     &__bd {
                         &__title {
-                            background-size: 100% $hover-title-underline-height;
+                            text-decoration: underline;
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -618,36 +619,12 @@
     }
     @if $text-align == "center" {
         text-align: center;
-        .g--card-54 {
-            &__bd {
-                &__title {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
     }
     @if $text-align == "left" {
         text-align: left;
-        .g--card-54 {
-            &__bd {
-                &__title {
-                    margin-left: 0;
-                    margin-right: auto;
-                }
-            }
-        }
     }
     @if $text-align == "right" {
         text-align: right;
-        .g--card-54 {
-            &__bd {
-                &__title {
-                    margin-left: auto;
-                    margin-right: 0;
-                }
-            }
-        }
     }
     @if $icon-align == "center" {
         align-items: center;
@@ -673,18 +650,14 @@
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
-                @if $hover-title-underline-color{
-                    background-repeat: no-repeat;
-                    background-position: left bottom;
-                    background-size: 0% $hover-title-underline-height;
-                    background-image: linear-gradient($hover-title-underline-color, $hover-title-underline-color);
-                }
                 @if $hover-title-color and $hover-title-underline-color {
-                    transition: color $time-b $ease-standard-a, background-size $time-b $ease-standard-a;
+                    text-decoration-color: $hover-title-underline-color;
+                    transition: color $time-b $ease-standard-a, text-decoration $time-b $ease-standard-a;
                 } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 } @else if $hover-title-underline-color {
-                    transition: background-size $time-b $ease-standard-a;
+                    text-decoration-color: $hover-title-underline-color;
+                    transition: text-decoration $time-b $ease-standard-a;
                 }
             }
 

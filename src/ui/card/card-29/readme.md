@@ -47,6 +47,8 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
+- $hover-title-underline-height
 - $hover-transform
 - $img-aspect-ratio
 - $img-height
@@ -54,6 +56,7 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $meta-color
 - $meta-font
 - $meta-font-weight
+- $shadow
 - $text-align
 - $title-color
 - $title-font
@@ -78,6 +81,7 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: calc(16 / 9),
         // $img-height: 340px,
@@ -85,6 +89,7 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $meta-color: map-get($color-options, a),
         // $meta-font: f,
         // $meta-font-weight: 400,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

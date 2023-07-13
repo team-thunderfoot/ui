@@ -46,7 +46,7 @@
         @if $hover-transform-icon {
             transition: transform $ease-standard-a $time-b;
         }
-        path {
+        * {
             @if $artwork-color-fill {
                 fill: $artwork-color-fill;
             }

@@ -1,16 +1,17 @@
 @mixin make-btn-03() {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: fit-content;
     padding: $measure $measure * 3;
     text-align: center;
     text-decoration: none;
+    column-gap: $measure;
 
     @media all and ($viewport-type: $mobile) {
         width: 100%;
     }
     &__artwork{
-        margin-right: $measure;
         display: block;
     }
 }

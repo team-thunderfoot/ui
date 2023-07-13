@@ -36,6 +36,7 @@
 @mixin make-hero-02-modifier(
     $background-color: false,
     $header-height: false,
+    $img-border-radius: false,
     $img-height: false,
     $img-object-fit: false,
     $img-position: false,
@@ -105,6 +106,9 @@
         &__media-wrapper {
             @if $img-height {
                 height: $img-height;
+            }
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
             }
 
             &__media {

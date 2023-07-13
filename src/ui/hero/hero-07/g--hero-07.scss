@@ -4,6 +4,7 @@
         $background-color: lighten(map-get($color-options, a), 82%),
         $breakpoint: $tablets,
         $header-height: 96px,
+        // $img-border-radius: $measure*8 0 0 $measure*8,
         $img-height: 200px,
         $img-object-fit: cover,
         $img-position: center,

@@ -48,6 +48,7 @@
     $background-color: false,
     $breakpoint: false,
     $header-height: false,
+    $img-border-radius: false,
     $img-height: false,
     $img-object-fit: false,
     $img-position: false,
@@ -104,6 +105,9 @@
                         height: $img-height;
                     }
                 }
+            }
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
             }
 
             &__media {

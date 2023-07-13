@@ -32,15 +32,16 @@
 
 ## Editable variables
 
--   $background-color
--   $header-height
--   $img-height
--   $img-object-fit
--   $img-position
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
+- $background-color
+- $header-height
+- $img-border-radius
+- $img-height
+- $img-object-fit
+- $img-position
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -50,6 +51,7 @@
     @include make-hero-01-modifier(
         // $background-color: map-get($color-options, f),
         // $header-height: 96px,
+        // $img-border-radius: $measure*10,
         // $img-height: 500px,
         // $img-object-fit: cover,
         // $img-position: center,

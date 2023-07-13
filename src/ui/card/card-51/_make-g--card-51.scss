@@ -77,7 +77,7 @@
     $border-style: false,
     $border-width: false,
     $card-aspect-ratio: false,
-    $card-height: false,
+    $card-min-height: false,
     $hover-background-color: false,
     $hover-background-position: false,
     $hover-background-repeat: false,
@@ -256,8 +256,8 @@
             }
         }
         &__ft-items{
-            @if $card-height {
-                min-height: $card-height;
+            @if $card-min-height {
+                min-height: $card-min-height;
             }
             @if $card-aspect-ratio {
                 aspect-ratio: $card-aspect-ratio;

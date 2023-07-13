@@ -8,6 +8,7 @@
     );
     &--second{
         @include make-card-10-modifier(
+            $card-min-height: 500px,
             $background-color: linear-gradient(217deg, map-get($color-options, e), map-get($color-options, g) 70.71%),
             $border-color: map-get($color-options, a),
             // $border-style: false,
@@ -27,6 +28,7 @@
             $img-width: auto,
             // $link-class: g--btn-01--second,
             // $link-font: false,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
            $text-align: left,
             $title-font-weight: 400,
             $title-max-lines: 3,

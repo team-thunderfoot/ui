@@ -9,6 +9,7 @@
     );
     &--second{
         @include make-card-09-modifier(
+            $card-min-height: 500px,
             $background-position: center,
             $background-size: cover,
             $mask-color: rgba(map-get($color-options, a), .2),
@@ -25,6 +26,7 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
            $text-align: left,
             $title-font-weight: 400,
             $title-max-lines: 3,

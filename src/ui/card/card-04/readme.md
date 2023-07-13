@@ -53,6 +53,7 @@ It is not necessary to add aspect-ratio.
 -   $border-radius
 -   $border-style
 -   $border-width
+-   $card-min-height
 -   $hover-background-color
 -   $hover-img-zoom
 -   $hover-shadow
@@ -65,6 +66,7 @@ It is not necessary to add aspect-ratio.
 -   $img-width
 -   $link-class
 -   $link-font
+-   $shadow
 -   $subtitle-color
 -   $subtitle-font
 -   $subtitle-font-weight
@@ -86,6 +88,7 @@ It is not necessary to add aspect-ratio.
         // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
+        // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
@@ -98,6 +101,7 @@ It is not necessary to add aspect-ratio.
         // $img-width: auto,
         // $link-class: g--link-01,
         // $link-font: f,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a) $subtitle-font-weight: 400,
         // $subtitle-font: f,
         // $subtitle-font-weight: 600,

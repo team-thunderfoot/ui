@@ -11,6 +11,7 @@
     );
     &--second{
         @include make-card-07-modifier(
+            $card-min-height: 500px,
             $background-color: rgba(map-get($color-options, g), .7),
             $title-color: map-get($color-options, a),
             $title-font: c,
@@ -25,6 +26,7 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
            $text-align: left,
             $title-font-weight: 400,
             $title-max-lines: 3,

@@ -3,8 +3,10 @@
     @include make-card-03-modifier($background-position: center, $background-size: cover, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: c);
     &--second {
         @include make-card-03-modifier(
-            $background-position: center,
-            $background-size: cover,
+            $background-color: map-get($color-options, f),
+            $card-min-height: 500px,
+            $background-position: right top,
+            $background-size: 50% auto,
             $mask-color: rgba(map-get($color-options, a), 0.2),
             $subtitle-color: map-get($color-options, a),
             $title-color: map-get($color-options, a),
@@ -20,6 +22,7 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,

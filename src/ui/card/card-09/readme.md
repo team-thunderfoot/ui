@@ -50,9 +50,11 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
+-   $background-color
 -   $background-position
 -   $background-size
 -   $border-radius
+-   $card-min-height
 -   $hover-background-img-zoom
 -   $hover-img-zoom
 -   $hover-shadow
@@ -64,6 +66,7 @@ It is not necessary to add aspect-ratio.
 -   $img-position
 -   $img-width
 -   $mask-color
+-   $shadow
 -   $text-align
 -   $title-color
 -   $title-font
@@ -76,9 +79,11 @@ It is not necessary to add aspect-ratio.
 .g--card-09 {
     @include make-card-09();
     @include make-card-09-modifier(
+        // $background-color: map-get($color-options, f),
         // $background-position: center,
         // $background-size: cover,
         // $border-radius: $measure,
+        // $card-min-height: 500px,
         // $hover-background-img-zoom: 2,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
@@ -90,6 +95,7 @@ It is not necessary to add aspect-ratio.
         // $img-position: center,
         // $img-width: auto,
         // $mask-color: rgba(map-get($color-options, a), 0.2),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left
         // $title-color: map-get($color-options, a),
         // $title-font: c,

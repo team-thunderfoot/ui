@@ -82,7 +82,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $border-style
 - $border-width
 - $card-aspect-ratio
-- $card-height
+- $card-min-height
 - $hover-background-color
 - $hover-background-position
 - $hover-background-repeat
@@ -120,7 +120,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $border-style: solid,
         // $border-width: 6px,
         // $card-aspect-ratio: calc(3 / 4),
-        // $card-height: 200px,
+        // $card-min-height: 200px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-background-position: bottom right,
         // $hover-background-repeat: no-repeat,

@@ -46,28 +46,30 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
--   $background-color
--   $border-color
--   $border-radius
--   $border-style
--   $border-width
--   $hover-background-color
--   $hover-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $img-aspect-ratio
--   $img-fit
--   $img-height
--   $img-position
--   $img-width
--   $link-class
--   $link-font
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $card-min-height
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-fit
+- $img-height
+- $img-position
+- $img-width
+- $link-class
+- $link-font
+- $shadow
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
@@ -80,6 +82,7 @@ It is not necessary to add aspect-ratio.
         // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
+        // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
@@ -92,6 +95,7 @@ It is not necessary to add aspect-ratio.
         // $img-width: auto,
         // $link-class: g--link-01,
         // $link-font: f,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

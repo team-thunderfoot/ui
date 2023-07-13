@@ -48,6 +48,8 @@
             $border-style: solid,
             $border-width: 2px,
             $mask-color: rgba(map-get($color-options, e), 0.4),
+            $card-min-height: 500px,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
         );
     }
 }

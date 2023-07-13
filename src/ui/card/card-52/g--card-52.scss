@@ -26,6 +26,7 @@
             $link-class: g--link-01--second,
             $link-hide-by-default: no,
             $text-align: left,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
         );
     }
     &--third {

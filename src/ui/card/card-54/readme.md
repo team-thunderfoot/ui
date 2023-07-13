@@ -74,6 +74,7 @@ It is not necessary to add aspect-ratio.
         // $border-radius: $measure,
         // $border-style: double,
         // $border-width: 2px,
+        // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-border-color: map-get($color-options, e),
         // $hover-icon-background: map-get($color-options, a),

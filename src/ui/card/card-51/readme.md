@@ -86,6 +86,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $meta-color
 - $meta-font
 - $meta-font-weight
+- $shadow
 - $text-align
 - $title-color
 - $title-font
@@ -123,6 +124,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $meta-color: map-get($color-options, b),
         // $meta-font: f,
         // $meta-font-weight: 400,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, b),
         // $title-font: c,

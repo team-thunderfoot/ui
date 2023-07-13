@@ -101,6 +101,7 @@
     $link-hide-by-default: false,
     $mask-background-color: false,
     $pill-class: false,
+    $shadow: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
@@ -123,6 +124,9 @@
 
     @if $background-color {
         background: $background-color;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     @if $text-align == "center" {

@@ -64,6 +64,7 @@
             // $title-font: false,
             $title-font-weight: 800,
             $title-max-lines: initial,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
         );
     }
 }

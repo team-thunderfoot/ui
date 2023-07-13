@@ -99,6 +99,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $link-hide-by-default
 - $mask-background-color
 - $pill-class
+- $shadow
 - $text-align
 - $title-color
 - $title-font
@@ -137,6 +138,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $meta-font: f,
         // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, b),
         // $title-font: c,

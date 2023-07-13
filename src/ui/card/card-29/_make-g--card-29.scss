@@ -284,7 +284,6 @@
                             &__wrapper {
                                 &__title {
                                     color: $hover-title-color;
-                                    text-decoration: underline;
                                     text-decoration-color: $hover-title-underline-color;
                                 }
                             }
@@ -315,7 +314,6 @@
                 .g--card-29 {
                     &__wrapper {
                         &__title {
-                            text-decoration: underline;
                             text-decoration-color: $hover-title-underline-color;
                         }
                     }
@@ -433,14 +431,16 @@
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
                 }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
                 @if $hover-title-color and $hover-title-underline-color {
-                    text-decoration-color: $hover-title-underline-color;
-                    transition: color $time-b $ease-standard-a, text-decoration $time-b $ease-standard-a;
+                    transition: color $time-b $ease-standard-a, text-decoration-color $time-b $ease-standard-a;
                 } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 } @else if $hover-title-underline-color {
-                    text-decoration-color: $hover-title-underline-color;
-                    transition: text-decoration $time-b $ease-standard-a;
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
             }
         }

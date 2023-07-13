@@ -38,6 +38,7 @@
     $border-style: false,
     $border-width: false,
     $breakpoint: false,
+    $card-min-height: false,
     $change-order-reponsive: false,
     $content-color: false,
     $content-font: false,
@@ -57,9 +58,16 @@
     $img-height: false,
     $img-position: false,
     $img-width: false,
+    $shadow: false,
     $text-align: false
 ) {
 
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
     @if $background-color {
         .g--card-45 {
             &__wrapper {

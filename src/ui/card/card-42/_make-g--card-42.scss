@@ -42,6 +42,7 @@
     $border-style: false,
     $border-width: false,
     $breakpoint: false,
+    $card-min-height: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
@@ -54,6 +55,7 @@
     $meta-font: false,
     $meta-font-weight: false,
     $pill-class: false,
+    $shadow: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
@@ -71,6 +73,12 @@
     }
     @if $border-radius {
         border-radius: $border-radius;
+    }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     @if $hover-shadow and $hover-transform {

@@ -36,6 +36,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $border-style
 - $border-width
 - $breakpoint
+- $card-min-height
 - $change-order-reponsive
 - $content-color
 - $content-font
@@ -58,6 +59,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $position-color
 - $position-font
 - $position-font-weight
+- $shadow
 - $text-align
 
 ## use
@@ -72,6 +74,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $border-style: solid,
         // $border-width: 1px,
         // $breakpoint: $tablets,
+        // $card-min-height: 500px,
         // $change-order-reponsive: true,
         // $content-color: map-get($color-options, a),
         // $content-font: f,
@@ -94,6 +97,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $position-color: map-get($color-options, a),
         // $position-font: f,
         // $position-font-weight: 400,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
     );
 }

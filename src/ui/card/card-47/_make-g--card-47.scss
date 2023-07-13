@@ -52,6 +52,7 @@
     $border-style: false,
     $border-width: false,
     $breakpoint: false,
+    $card-min-height: false,
     $change-order-reponsive: false,
     $content-color: false,
     $content-font: false,
@@ -74,15 +75,15 @@
     $position-color: false,
     $position-font: false,
     $position-font-weight: false,
+    $shadow: false,
     $text-align: false,
 ) {
 
-    @if $background-color {
-        .g--card-47 {
-            &__wrapper {
-                background: $background-color;
-            }
-        }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     @if $border-color {
@@ -229,6 +230,9 @@
 
     .g--card-47 {
         &__wrapper {
+            @if $background-color {
+                background: $background-color;
+            }
             @if $breakpoint {
                 @media all and ($viewport-type: $breakpoint) {
                     width: 100%;

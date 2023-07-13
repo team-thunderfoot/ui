@@ -46,6 +46,7 @@ It is not necessary to add aspect-ratio.
 - $border-style
 - $border-width
 - $breakpoint
+- $card-min-height
 - $change-order-reponsive
 - $content-color
 - $content-font
@@ -59,6 +60,7 @@ It is not necessary to add aspect-ratio.
 - $img-aspect-ratio-responsive
 - $img-height-responsive
 - $img-position
+- $shadow
 - $text-align
 - $title-color
 - $title-font
@@ -77,7 +79,8 @@ It is not necessary to add aspect-ratio.
         // $border-style: solid,
         // $border-width: 1px,
         // $breakpoint: $tablets,
-        // $change-order-reponsive: ,
+        // $card-min-height: 500px,
+        // $change-order-reponsive: true,
         // $content-color: map-get($color-options, a),
         // $content-font: f,
         // $content-font-weight: 400,
@@ -90,6 +93,7 @@ It is not necessary to add aspect-ratio.
         // $img-aspect-ratio-responsive: 1.7,
         // $img-height-responsive: 340px,
         // $img-position: center,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

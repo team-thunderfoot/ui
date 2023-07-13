@@ -49,7 +49,6 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $hover-shadow
 - $hover-title-color
 - $hover-title-underline-color
-- $hover-title-underline-height
 - $hover-transform
 - $img-aspect-ratio
 - $img-height

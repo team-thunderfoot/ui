@@ -62,6 +62,7 @@ It is not necessary to add aspect-ratio.
 - $border-style
 - $border-width
 - $breakpoint
+- $card-min-height
 - $hover-background-color
 - $hover-img-zoom
 - $hover-shadow
@@ -74,6 +75,7 @@ It is not necessary to add aspect-ratio.
 - $meta-font
 - $meta-font-weight
 - $pill-class
+- $shadow
 - $title-color
 - $title-font
 - $title-font-weight
@@ -94,6 +96,7 @@ It is not necessary to add aspect-ratio.
         // $border-style: solid,
         // $border-width: 1px,
         // $breakpoint: $tablets,
+        // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
@@ -106,6 +109,7 @@ It is not necessary to add aspect-ratio.
         // $meta-font: f,
         // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $title-color: map-get($color-options, a),
         // $title-font: c,
         // $title-font-weight: 400,

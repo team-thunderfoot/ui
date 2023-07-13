@@ -44,6 +44,8 @@
 
 ## Use
 
+We need to add `$icon-width` for the underline to work. This is because we need to know the width of the underline.
+
 ```scss
 .g--btn-05{
     @include make-btn-05();

@@ -42,6 +42,8 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $border-width
 - $full-image-height
 - $hover-background-color
+- $hover-border-color
+- $hover-border-radius
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
@@ -71,6 +73,8 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $border-width: 1px,
         // $full-image-height: true,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, a),
+        // $hover-border-radius: $measure*2,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),

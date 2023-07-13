@@ -24,6 +24,7 @@
         @include make-btn-05-modifier(
             $artwork-color-stroke: map-get($color-options, a),
             $hover-artwork-color: map-get($color-options, a),
+            $hover-icon-transform: translateX($measure),
             $hover-text-color: map-get($color-options, a),
             // $icon-top: 0px,
             $icon-width: $measure*2,

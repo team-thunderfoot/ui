@@ -34,7 +34,7 @@
 - $btn-font-weight
 - $hover-artwork-color
 - $hover-text-color
-- $hover-transform
+- $hover-icon-transform
 - $icon-top
 - $icon-width
 - $text-color
@@ -54,7 +54,7 @@
         // $btn-font-weight: 600,
         // $hover-artwork-color: map-get($color-options, g),
         // $hover-text-color: map-get($color-options, g),
-        // $hover-transform: translateX($measure,)
+        // $hover-icon-transform: translateX($measure,)
         // $icon-top: 0px,
         // $icon-width: $measure,
         // $text-color: map-get($color-options, a),

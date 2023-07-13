@@ -17,7 +17,7 @@
     $btn-font: false,
     $hover-artwork-color: false,
     $hover-text-color: false,
-    $hover-transform-icon: false,
+    $hover-icon-transform: false,
     $icon-top: false,
     $icon-width: false,
     $text-color: false,
@@ -43,7 +43,7 @@
             position: relative;
             top: $icon-top;
         }
-        @if $hover-transform-icon {
+        @if $hover-icon-transform {
             transition: transform $ease-standard-a $time-b;
         }
         * {
@@ -75,8 +75,8 @@
         &:focus,
         &:active {
             svg {
-                @if $hover-transform-icon {
-                    transform: $hover-transform-icon;
+                @if $hover-icon-transform {
+                    transform: $hover-icon-transform;
                 }
                 path {
                     @if $hover-artwork-color and $artwork-color-fill {

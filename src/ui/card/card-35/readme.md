@@ -32,6 +32,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 -   $border-radius
 -   $border-style
 -   $border-width
+-   $card-min-height
 -   $full-image-height
 -   $hover-background-color
 -   $hover-img-zoom
@@ -47,6 +48,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 -   $meta-color
 -   $meta-font
 -   $meta-font-weight
+-   $shadow
 -   $text-align
 -   $title-color
 -   $title-font
@@ -64,6 +66,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
+        // $card-min-height: 500px,
         // $full-image-height: false,
         // $hover-background-color: map-get($color-options, g),
         // $hover-img-zoom: 1.1,
@@ -79,6 +82,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $meta-color: map-get($color-options, a),
         // $meta-font: f,
         // $meta-font-weight: 400,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

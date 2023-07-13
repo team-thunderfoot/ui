@@ -12,6 +12,7 @@
     &--second{
         @include make-card-13-modifier(
             $background-color: rgba(map-get($color-options, g), .7),
+            $card-min-height: 500px,
             $subtitle-color: map-get($color-options, a),
             $title-color: map-get($color-options, a),
             $title-font: c,

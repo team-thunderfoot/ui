@@ -34,10 +34,12 @@ It is not necessary to add aspect-ratio.
 - $border-style
 - $border-width
 - $border-radius
+- $card-min-height
 - $hover-background-color
 - $hover-shadow
 - $hover-title-color
 - $hover-transform
+- $shadow
 - $subtitle-color
 - $subtitle-font
 - $subtitle-font-weight
@@ -54,24 +56,26 @@ It is not necessary to add aspect-ratio.
 .g--card-13{
     @include make-card-13();
     @include make-card-13-modifier(
-            // $background-color: lighten(map-get($color-options,a), 82%),
-            // $border-color: map-get($color-options, a),
-            // $border-radius: $measure,
-            // $border-style: solid,
-            // $border-width: 1px,
-            // $hover-background-color: map-get($color-options, g),
-            // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
-            // $hover-title-color: map-get($color-options, h),
-            // $hover-transform: translateY(-$measure),
-            // $subtitle-color: map-get($color-options, a),
-            // $subtitle-font: f,
-            // $subtitle-font-weight: 400,
-            // $subtitle-max-lines: 3,
-            // $text-align: left,
-            // $title-color: map-get($color-options, a),
-            // $title-font: c,
-            // $title-font-weight: 400,
-            // $title-max-lines: 3
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: $measure,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $card-min-height: 500px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $subtitle-max-lines: 3,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

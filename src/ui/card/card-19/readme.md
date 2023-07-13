@@ -26,6 +26,7 @@
 -   $border-radius
 -   $border-style
 -   $border-width
+-   $card-min-height
 -   $hover-background-color
 -   $hover-shadow
 -   $hover-title-color
@@ -34,6 +35,7 @@
 -   $meta-font
 -   $meta-font-weight
 -   $pill-class
+-   $shadow
 -   $text-align
 -   $title-color
 -   $title-font
@@ -51,6 +53,7 @@
         // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
+        // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, b),
@@ -59,6 +62,7 @@
         // $meta-font: f,
         // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
         // $title-font: c,

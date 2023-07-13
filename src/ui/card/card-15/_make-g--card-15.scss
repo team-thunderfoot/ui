@@ -41,14 +41,17 @@
 }
 
 @mixin make-card-15-modifier(
+    $background-color: false,
     $background-position: false,
     $background-size: false,
     $border-radius: false,
+    $card-min-height: false,
     $hover-background-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
     $mask-color: false,
+    $shadow: false,
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
@@ -59,6 +62,15 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
+    @if $background-color{
+        background: $background-color;
+    }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
 
     @if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;

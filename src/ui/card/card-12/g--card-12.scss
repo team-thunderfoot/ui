@@ -13,6 +13,7 @@
         @include make-card-12-modifier(
             $background-position: center,
             $background-size: cover,
+            $card-min-height: 500px,
             $link-font: f,
             $mask-color: rgba(map-get($color-options, a), .2),
             $title-color: map-get($color-options, a),

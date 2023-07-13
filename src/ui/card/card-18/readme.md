@@ -38,9 +38,11 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
+- $background-color
 - $background-position
 - $background-size
 - $border-radius
+- $card-min-height
 - $hover-background-img-zoom
 - $hover-shadow
 - $hover-title-color
@@ -48,6 +50,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $link-class
 - $link-font
 - $mask-color
+- $shadow
 - $subtitle-color
 - $subtitle-font
 - $subtitle-font-weight
@@ -64,9 +67,11 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 .g--card-18 {
   @include make-card-18();
   @include make-card-18-modifier(
+    // $background-color: map-get($color-options, f),
     // $background-position: center
     // $background-size: cover,
     // $border-radius: $measure,
+    // $card-min-height: 500px,
     // $hover-background-img-zoom: 2,
     // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
     // $hover-title-color: map-get($color-options, h),
@@ -74,6 +79,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     // $link-class: g--link-01,
     // $link-font: f,
     // $mask-color: rgba(map-get($color-options, a), .2),
+    // $shadow: 0 0 $measure*2 map-get($color-options, g),
     // $subtitle-color: map-get($color-options, a)
     // $subtitle-font: f,
     // $subtitle-font-weight: 400,

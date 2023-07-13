@@ -11,6 +11,7 @@
         @include make-card-15-modifier(
             $background-position: center,
             $background-size: cover,
+            $card-min-height: 500px,
             $mask-color: rgba(map-get($color-options, a), .2),
             $subtitle-color: map-get($color-options, a),
             $title-color: map-get($color-options, a),

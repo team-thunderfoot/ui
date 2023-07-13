@@ -41,6 +41,8 @@ If you want the subtitle to be a c--content, the HTML should be:
 ## Editable variables
 
 - $background-color
+- $min-height
+- $shadow
 - $title-color
 - $title-font
 - $title-font-weight
@@ -52,6 +54,8 @@ If you want the subtitle to be a c--content, the HTML should be:
     @include make-banner-01();
     @include make-banner-01-modifier(
         // $background-color: map-get($color-options, a),
+        // $min-height: 100px,
+        // $shadow: 0 $measure $measure*2 map-get($color-options, a),
         // $title-color: map-get($color-options, b),
         // $title-font: c,
         // $title-font-weight: 400,

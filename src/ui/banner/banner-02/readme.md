@@ -47,6 +47,8 @@ If you want the subtitle to be a c--content, the HTML should be:
 - $background-color
 - $btn-class
 - $btn-font
+- $min-height
+- $shadow
 - $title-color
 - $title-font
 - $title-font-weight
@@ -60,6 +62,8 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $background-color: map-get($color-options, a),
         // $btn-class: g--btn-01,
         // $btn-font: f,
+        // $min-height: 100px,
+        // $shadow: 0 $measure $measure*2 map-get($color-options, a),
         // $title-color: map-get($color-options, b),
         // $title-font:f,
         // $title-font-weight: 400,

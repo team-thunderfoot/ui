@@ -30,6 +30,7 @@
 - $hover-shadow
 - $hover-text-color
 - $hover-transform
+- $shadow
 - $text-color
 - $text-font
 - $text-font-weight
@@ -50,6 +51,7 @@
     // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
     // $hover-text-color: map-get($color-options, b),
     // $hover-transform: translateY(-$measure),
+    // $shadow: 0 0 $measure*2 map-get($color-options, g),
     // $text-color: map-get($color-options, a),
     // $text-font: f,
     // $text-font-weight: 600,

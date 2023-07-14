@@ -15,6 +15,7 @@
     $hover-shadow: false,
     $hover-text-color: false,
     $hover-transform: false,
+    $shadow: false,
     $text-color: false,
     $text-font: false,
     $text-font-weight: false,
@@ -24,6 +25,9 @@
     }
     @if $border-radius {
         border-radius: $border-radius;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     @if $hover-background-color and $hover-border-color and $hover-shadow and $hover-transform and $hover-text-color {

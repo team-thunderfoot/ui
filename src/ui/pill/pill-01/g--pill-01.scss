@@ -3,6 +3,7 @@
   @include make-pill-01-modifier(
     $background-color: lighten(map-get($color-options, a), 75%),
     // $border-color: map-get($color-options, e),
+    $border-radius: 100px,
     // $border-style: solid,
     // $border-width: 1px,
     $hover-background-color: map-get($color-options, a),
@@ -19,7 +20,6 @@
     @include make-pill-01-modifier(
       $background-color: map-get($color-options, g),
       $border-color: map-get($color-options, e),
-      $border-radius: 100px,
       $border-style: dotted,
       $border-width: 3px,
       $hover-background-color: map-get($color-options, f),
@@ -27,6 +27,7 @@
       $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
       $hover-text-color: map-get($color-options, b),
       $hover-transform: translateY(-$measure),
+      $shadow: 0 0 $measure*2 map-get($color-options, g),
       $text-color: map-get($color-options, a),
       $text-font-weight: false,
       $text-font: f,

@@ -15,6 +15,8 @@
     $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $message-min-height: false,
+    $shadow: false,
     $text-align: false,
     $text-color: false,
     $text-font: false,
@@ -51,6 +53,20 @@
 
     @if $text-align == "right" {
         text-align: right;
+    }
+    @if $message-min-height {
+        min-height: $message-min-height;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .g--message-01 {
+            &__content {
+                width: 100%;
+            }
+        }
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     .g--message-01 {

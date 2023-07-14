@@ -23,6 +23,8 @@
 - $border-radius
 - $border-style
 - $border-width
+- $message-min-height
+- $shadow
 - $text-align
 - $text-color
 - $text-font
@@ -40,6 +42,8 @@
         // $border-radius: 0,
         // $border-style: solid,
         // $border-width: 1px,
+        // $message-min-height: 300px,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: center,
         // $text-color: map-get($color-options, a),
         // $text-font: f,

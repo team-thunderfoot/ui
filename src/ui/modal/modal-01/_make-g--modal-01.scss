@@ -27,11 +27,16 @@
 
 @mixin make-modal-01-modifier(
     $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
     $icon-color: false,
     $icon-height: false,
     $icon-width: false,
     $opacity: false,
     $opacity-active: false,
+    $shadow: false,
     $size: false,
     $transition: false,
     $zoom: false,
@@ -41,7 +46,22 @@
         transition: $transition;
     }
     @if $background-color {
-        background-color: $background-color;
+        background: $background-color;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
     @if $size == small {
         width: 50%;

@@ -36,26 +36,27 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
--   $background-color
--   $background-position
--   $background-size
--   $border-radius
--   $card-min-height
--   $hover-background-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $mask-color
--   $shadow
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $subtitle-max-lines
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $background-position
+- $background-size
+- $border-radius
+- $card-min-height
+- $hover-background-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $mask-color
+- $shadow
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
@@ -71,6 +72,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-background-img-zoom: 2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $mask-color: rgba(map-get($color-options, a), 0.2),
         // $shadow: 0 0 $measure*2 map-get($color-options, g),

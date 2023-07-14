@@ -14,9 +14,9 @@
 
 ## Editable variables
 
--   $label-color
--   $label-font
--   $label-font-weight
+- $label-color
+- $label-font
+- $label-font-weight
 
 ## Use
 

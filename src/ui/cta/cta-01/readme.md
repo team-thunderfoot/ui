@@ -17,21 +17,21 @@
 
 ## Editable variables
 
--   $background-color
--   $border-radius
--   $btn-class
--   $btn-font
--   $cta-min-height
--   $hover-background-color
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $shadow
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $border-radius
+- $btn-class
+- $btn-font
+- $cta-min-height
+- $hover-background-color
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $shadow
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 

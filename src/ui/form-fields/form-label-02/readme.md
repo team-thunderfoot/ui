@@ -14,12 +14,12 @@
 
 ## Editable variables
 
--   $label-color
--   $label-color (focus)
--   $label-font
--   $label-font (focus)
--   $label-font-weight
--   $label-font-weight (focus)
+- $label-color
+- $label-color (focus)
+- $label-font
+- $label-font (focus)
+- $label-font-weight
+- $label-font-weight (focus)
 
 ## Use
 

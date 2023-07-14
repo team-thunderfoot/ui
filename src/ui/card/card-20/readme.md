@@ -21,17 +21,18 @@
 
 ## Editable variables
 
--   $hover-title-color
--   $hover-transform
--   $meta-color
--   $meta-font
--   $meta-font-weight
--   $pill-class
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
@@ -40,6 +41,7 @@
     @include make-card-20();
     @include make-card-20-modifier(
         // $hover-title-color: map-get($color-options, b), 
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-5%), 
         // $meta-color: map-get($color-options, a), 
         // $meta-font: f, 

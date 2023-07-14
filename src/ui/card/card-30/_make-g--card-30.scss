@@ -30,6 +30,7 @@
 @mixin make-card-30-modifier(
     $hover-img-zoom: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $img-aspect-ratio: false,
     $img-border-radius: false,
@@ -56,15 +57,28 @@
         }
     }
 
-    @if $hover-title-color {
-        .g--card-30 {
-            &__wrapper {
-                &__title {
-                    transition: color $time-b $ease-standard-a;
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-30 {
+                            &__wrapper {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -73,6 +87,20 @@
                     &__wrapper {
                         &__title {
                             color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-30 {
+                    &__wrapper {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -173,6 +201,17 @@
                     display: -webkit-box;
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
+                }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a, text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
             }
         }

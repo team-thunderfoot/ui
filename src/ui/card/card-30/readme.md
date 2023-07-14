@@ -24,6 +24,7 @@
 
 - $hover-img-zoom
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-aspect-ratio
 - $img-border-radius
@@ -46,6 +47,7 @@
     @include make-card-30-modifier(
         // $hover-img-zoom: 1.1,
         // $hover-title-color: map-get($color-options, e),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-5%),
         // $img-aspect-ratio: 1.7,
         // $img-border-radius: $measure,

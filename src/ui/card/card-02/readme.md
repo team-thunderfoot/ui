@@ -46,23 +46,24 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
--   $hover-img-zoom
--   $hover-title-color
--   $hover-transform
--   $img-aspect-ratio
--   $img-fit
--   $img-height
--   $img-position
--   $img-width
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $subtitle-max-lines
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $hover-img-zoom
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $img-aspect-ratio
+- $img-fit
+- $img-height
+- $img-position
+- $img-width
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
@@ -72,6 +73,7 @@ It is not necessary to add aspect-ratio.
     @include make-card-02-modifier(
         // $hover-img-zoom: 1.2,
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: 1.7,
         // $img-fit: cover,

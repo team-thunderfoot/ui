@@ -24,19 +24,19 @@ When there's an error in the input the class "g--form-input-01--error" should be
 
 ## Editable variables
 
--   $background-color
--   $background-color-autofill
--   $border-color
--   $border-color-focus
--   $border-radius
--   $border-style
--   $border-width
--   $error-border-color
--   $font
--   $font-size-mobile
--   $font-weight
--   $placeholder-color
--   $text-color
+- $background-color
+- $background-color-autofill
+- $border-color
+- $border-color-focus
+- $border-radius
+- $border-style
+- $border-width
+- $error-border-color
+- $font
+- $font-size-mobile
+- $font-weight
+- $placeholder-color
+- $text-color
 
 ## Use
 

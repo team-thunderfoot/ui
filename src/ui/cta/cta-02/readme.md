@@ -20,23 +20,23 @@
 
 ## Editable variables
 
--   $background-color
--   $background-position
--   $background-size
--   $btn-class
--   $btn-font
--   $cta-min-height
--   $hover-background-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $mask-color
--   $shadow
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $background-position
+- $background-size
+- $btn-class
+- $btn-font
+- $cta-min-height
+- $hover-background-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $mask-color
+- $shadow
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 

@@ -26,24 +26,24 @@ When there's an error in the input the class "g--form-checkbox-01--error" should
 
 ## Editable variables
 
--   $artwork-img
--   $error-border-color
--   $font
--   $font-weight: false by default
--   $square-border-radius
--   $square-border-width
--   $square-color
--   $square-color-focus
--   $square-width
--   $text-color
+- $artwork-img
+- $error-border-color
+- $font
+- $font-weight: false by default
+- $square-border-radius
+- $square-border-width
+- $square-color
+- $square-color-focus
+- $square-width
+- $text-color
 
 ### For Modifiers
 
--   $artwork-img
--   $error-border-color
--   $square-color
--   $square-color-focus
--   $text-color
+- $artwork-img
+- $error-border-color
+- $square-color
+- $square-color-focus
+- $text-color
 
 ## Use
 

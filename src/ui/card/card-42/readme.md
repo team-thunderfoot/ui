@@ -48,31 +48,32 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
--   $background-color
--   $border-color
--   $border-radius
--   $border-style
--   $border-width
--   $breakpoint
--   $card-min-height
--   $hover-background-color
--   $hover-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $img-aspect-ratio-responsive
--   $img-height-responsive
--   $img-position
--   $meta-color
--   $meta-font
--   $meta-font-weight
--   $pill-class
--   $shadow
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $breakpoint
+- $card-min-height
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $img-aspect-ratio-responsive
+- $img-height-responsive
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
+- $shadow
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
@@ -91,6 +92,7 @@ It is not necessary to add aspect-ratio.
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio-responsive: 1.7,
         // $img-height-responsive: 340px,

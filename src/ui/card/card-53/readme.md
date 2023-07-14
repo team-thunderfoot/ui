@@ -41,6 +41,7 @@
 - $hover-shadow
 - $hover-subtitle-color
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $link-class
 - $link-font
@@ -78,6 +79,7 @@
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-subtitle-color: map-get($color-options, g),
         // $hover-title-color: map-get($color-options, g),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $link-class: g--link-01,
         // $link-font: f,

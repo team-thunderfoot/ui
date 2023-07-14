@@ -26,29 +26,29 @@
 
 ## Editable variables
 
--   $background-color
--   $$hover-background-img-zoom
--   $background-position
--   $background-size
--   $border-radius
--   $btn-class
--   $btn-font
--   $cta-min-height
--   $hover-shadow
--   $hover-subtitle-color
--   $hover-title-color
--   $hover-transform
--   $mask-color
--   $shadow
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $subtitle-max-lines
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $$hover-background-img-zoom
+- $background-position
+- $background-size
+- $border-radius
+- $btn-class
+- $btn-font
+- $cta-min-height
+- $hover-shadow
+- $hover-subtitle-color
+- $hover-title-color
+- $hover-transform
+- $mask-color
+- $shadow
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 

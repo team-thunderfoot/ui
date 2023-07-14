@@ -32,6 +32,7 @@ It is not necessary to add aspect-ratio.
 ## Editable variables
 
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $link-class
 - $link-font
@@ -51,19 +52,20 @@ It is not necessary to add aspect-ratio.
 .g--card-17{
     @include make-card-17();
     @include make-card-17-modifier(
-    //     $hover-title-color: map-get($color-options, h),
-    //     $hover-transform: translateY(-$measure),
-    //     $link-class: g--link-02--second,
-    //     $link-font: f,
-    //     $subtitle-color: map-get($color-options, g),
-    //     $subtitle-font: f,
-    //     $subtitle-font-weight: 400,
-    //     $subtitle-max-lines: 3,
-    //     $text-align: left,
-    //     $title-color: map-get($color-options, g),
-    //     $title-font: c,
-    //     $title-font-weight: 400,
-    //     $title-max-lines: 3,
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $link-class: g--link-02--second,
+        // $link-font: f,
+        // $subtitle-color: map-get($color-options, g),
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $subtitle-max-lines: 3,
+        // $text-align: left,
+        // $title-color: map-get($color-options, g),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
     );
 }
 ```

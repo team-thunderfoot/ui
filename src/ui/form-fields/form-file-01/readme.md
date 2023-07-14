@@ -24,33 +24,33 @@ When there's an error in the input the class "g--form-input-01--error" should be
 
 ## Editable variables
 
--   $background-color
--   $border-color
--   $border-color-focus
--   $border-radius
--   $border-style
--   $border-width
--   $btn-background
--   $btn-background-position
--   $btn-background-repeat
--   $btn-background-size
--   $btn-border-color
--   $btn-border-style
--   $btn-border-width
--   $btn-font
--   $btn-font-weight
--   $btn-text-color
--   $btn-transition
--   $error-border-color
--   $font
--   $font-size-mobile
--   $font-weight
--   $hover-btn-background-color
--   $hover-btn-background-position
--   $hover-btn-background-size
--   $hover-btn-border-color
--   $hover-btn-text-color
--   $text-color
+- $background-color
+- $border-color
+- $border-color-focus
+- $border-radius
+- $border-style
+- $border-width
+- $btn-background
+- $btn-background-position
+- $btn-background-repeat
+- $btn-background-size
+- $btn-border-color
+- $btn-border-style
+- $btn-border-width
+- $btn-font
+- $btn-font-weight
+- $btn-text-color
+- $btn-transition
+- $error-border-color
+- $font
+- $font-size-mobile
+- $font-weight
+- $hover-btn-background-color
+- $hover-btn-background-position
+- $hover-btn-background-size
+- $hover-btn-border-color
+- $hover-btn-text-color
+- $text-color
 
 ## Use
 

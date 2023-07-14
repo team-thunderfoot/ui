@@ -25,30 +25,31 @@
 
 ## Editable variables
 
--   $author-color
--   $author-font
--   $author-font-weight
--   $background-color
--   $border-color
--   $border-radius
--   $border-style
--   $border-width
--   $card-min-height
--   $hover-background-color
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $link-class
--   $link-font
--   $meta-color
--   $meta-font
--   $meta-font-weight
--   $pill-class
--   $shadow
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $author-color
+- $author-font
+- $author-font-weight
+- $background-color
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $card-min-height
+- $hover-background-color
+- $hover-shadow
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $link-class
+- $link-font
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
+- $shadow
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
@@ -68,6 +69,7 @@
         // $hover-background-color: map-get($color-options, g),
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-5%),
         // $link-class: g--link-01,
         // $link-font: f,

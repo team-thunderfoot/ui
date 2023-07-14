@@ -24,19 +24,20 @@
 
 ## Editable variables
 
--   $author-font
--   $author-font-weight
--   $author-color
--   $hover-title-color
--   $hover-transform
--   $meta-color
--   $meta-font
--   $meta-font-weight
--   $pill-class
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $author-font
+- $author-font-weight
+- $author-color
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
@@ -48,6 +49,7 @@
         // $author-font-weight: 400,
         // $author-color: map-get($color-options, a),
         // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-5%),
         // $meta-color: map-get($color-options, a),
         // $meta-font: f,

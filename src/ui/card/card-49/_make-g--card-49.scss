@@ -2,6 +2,7 @@
     padding: 0 $measure * 2;
     width: 100%;
     text-decoration: none;
+    display: block;
 
     @media all and ($viewport-type: $tabletm) {
         padding: 0;
@@ -34,6 +35,7 @@
     $hover-img-background-color: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $icon-class: false,
     $img-align: false,
@@ -64,18 +66,10 @@
         text-align: right;
     }
 
-    @if $hover-img-background-color or $hover-img-zoom or $hover-title-color or $hover-transform {
-        display: block;
-    }
-
-    @if $hover-img-background-color and $hover-title-color and $hover-transform {
+    @if $hover-img-background-color {
         .g--card-49 {
-            transition: transform $time-b $ease-standard-a;
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
-            }
-            &__title {
-                transition: color $time-b $ease-standard-a;
             }
         }
 
@@ -84,53 +78,58 @@
             &:focus,
             &:active {
                 .g--card-49 {
-                    transform: $hover-transform;
                     &__media-wrapper {
                         background: $hover-img-background-color;
-                    }
-                    &__title {
-                        color: $hover-title-color;
                     }
                 }
             }
         }
-    } @else if $hover-img-background-color {
-        .g--card-49 {
-            &__media-wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
+    }
 
+    @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-49 {
-                    &__media-wrapper {
-                        background: $hover-img-background-color;
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-49{
+                            &__title{
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
                     }
                 }
             }
         }
     } @else if $hover-title-color {
-        .g--card-49 {
-            &__title {
-                transition: color $time-b $ease-standard-a;
-            }
-        }
-
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-49 {
-                    &__title {
+                .g--card-49{
+                    &__title{
                         color: $hover-title-color;
                     }
                 }
             }
         }
-    } 
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49{
+                    &__title{
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
     
     @if $hover-transform{
         transition: transform $time-b $ease-standard-a;
@@ -224,6 +223,17 @@
             }
             @if $title-font-weight {
                 font-weight: $title-font-weight;
+            }
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a, text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
             }
         }
 

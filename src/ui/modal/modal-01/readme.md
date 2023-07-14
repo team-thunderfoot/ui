@@ -58,21 +58,21 @@
 
 ## Editable variables
 
--   $background-color
--   $border-color
--   $border-radius
--   $border-style
--   $border-width
--   $icon-color
--   $icon-height
--   $icon-width
--   $opacity
--   $opacity-active
--   $shadow
--   $size
--   $transition
--   $zoom
--   $zoom-active
+- $background-color
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $icon-color
+- $icon-height
+- $icon-width
+- $opacity
+- $opacity-active
+- $shadow
+- $size
+- $transition
+- $zoom
+- $zoom-active
 
 ## Use
 

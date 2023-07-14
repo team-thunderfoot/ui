@@ -45,19 +45,19 @@
 
 ## Editable variables
 
--   $breakpoint
--   $header-height
--   $img-object-fit
--   $img-position
--   $link-class
--   $link-font
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
+- $breakpoint
+- $header-height
+- $img-object-fit
+- $img-position
+- $link-class
+- $link-font
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 

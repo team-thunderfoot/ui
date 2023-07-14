@@ -419,7 +419,6 @@
                     &__bd {
                         &__title {
                             color: $hover-title-color;
-                            text-decoration: underline;
                             text-decoration-color: $hover-title-underline-color;
                         }
                     }
@@ -448,7 +447,6 @@
                 .g--card-54 {
                     &__bd {
                         &__title {
-                            text-decoration: underline;
                             text-decoration-color: $hover-title-underline-color;
                         }
                     }
@@ -654,13 +652,15 @@
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
                 @if $hover-title-color and $hover-title-underline-color {
-                    text-decoration-color: $hover-title-underline-color;
                     transition: color $time-b $ease-standard-a, text-decoration $time-b $ease-standard-a;
                 } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 } @else if $hover-title-underline-color {
-                    text-decoration-color: $hover-title-underline-color;
                     transition: text-decoration $time-b $ease-standard-a;
                 }
             }

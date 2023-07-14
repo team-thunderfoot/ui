@@ -36,20 +36,20 @@ When there's an error in the select the class "g--form-select-01--error" should 
 
 ## Editable variables
 
--   $artwork-url
--   $background-color
--   $border-color
--   $border-color-focus
--   $border-radius
--   $border-style
--   $border-width
--   $error-border-color
--   $font
--   $font-weight
--   $font-size-mobile
--   $option-background
--   $option-color
--   $text-color
+- $artwork-url
+- $background-color
+- $border-color
+- $border-color-focus
+- $border-radius
+- $border-style
+- $border-width
+- $error-border-color
+- $font
+- $font-weight
+- $font-size-mobile
+- $option-background
+- $option-color
+- $text-color
 
 ## Use
 

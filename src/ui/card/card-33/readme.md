@@ -30,31 +30,32 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 
 ## Editable variables
 
--   $background-color
--   $border-color
--   $border-radius
--   $border-style
--   $border-width
--   $card-min-height
--   $full-image-height
--   $hover-background-color
--   $hover-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $img-aspect-ratio-height
--   $img-aspect-ratio-width
--   $img-height
--   $img-position
--   $meta-color
--   $meta-font
--   $meta-font-weight
--   $pill-class
--   $shadow
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $card-min-height
+- $full-image-height
+- $hover-background-color
+- $hover-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $img-aspect-ratio-height
+- $img-aspect-ratio-width
+- $img-height
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
+- $shadow
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## use
 
@@ -73,6 +74,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $hover-img-zoom: 1.1,
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, e),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-5%),
         // $img-aspect-ratio-height: 9,
         // $img-aspect-ratio-width: 16,

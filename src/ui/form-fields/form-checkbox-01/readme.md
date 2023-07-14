@@ -43,22 +43,22 @@ Example with label and checkbox
 
 ## Editable variables
 
--   $artwork-background
--   $artwork-background-position
--   $artwork-background-repeat
--   $artwork-background-size
--   $artwork-border-radius
--   $error-border-color
--   $font
--   $font-mobile-size
--   $font-weight
--   $square-border-color
--   $square-border-radius
--   $square-border-style
--   $square-border-width
--   $square-color-focus
--   $square-width
--   $text-color
+- $artwork-background
+- $artwork-background-position
+- $artwork-background-repeat
+- $artwork-background-size
+- $artwork-border-radius
+- $error-border-color
+- $font
+- $font-mobile-size
+- $font-weight
+- $square-border-color
+- $square-border-radius
+- $square-border-style
+- $square-border-width
+- $square-color-focus
+- $square-width
+- $text-color
 
 ## Use
 

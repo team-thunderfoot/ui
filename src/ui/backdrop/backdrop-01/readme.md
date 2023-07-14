@@ -2,12 +2,12 @@
 
 ## Editable variables
 
--   $background-color
--   $opacity
--   $opacity-active
--   $transform
--   $transform-active
--   $transition
+- $background-color
+- $opacity
+- $opacity-active
+- $transform
+- $transform-active
+- $transition
 
 ## Use
 

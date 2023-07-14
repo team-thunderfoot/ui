@@ -91,6 +91,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $hover-meta-color
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $meta-color
 - $meta-font
@@ -130,6 +131,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-meta-color: map-get($color-options, a),
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, f),
         // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY($measure),
         // $link-class: g--link-01,
         // $link-hide-by-default: no,

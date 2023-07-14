@@ -26,16 +26,16 @@ When there's an error in the input the class "g--form-radio-01--error" should be
 
 ## Editable variables
 
--   $artwork-color
--   $circle-border-style
--   $circle-border-width
--   $circle-color
--   $circle-color-focus
--   $circle-width
--   $error-border-color
--   $font
--   $font-weight
--   $text-color
+- $artwork-color
+- $circle-border-style
+- $circle-border-width
+- $circle-color
+- $circle-color-focus
+- $circle-width
+- $error-border-color
+- $font
+- $font-weight
+- $text-color
 
 ## Use
 

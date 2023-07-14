@@ -42,13 +42,11 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $content-color
 - $content-font
 - $content-font-weight
-- $heading-color
-- $heading-font
-- $heading-font-weight
 - $hover-background-color
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-aspect-ratio
 - $img-background-color
@@ -65,6 +63,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $position-font-weight
 - $shadow
 - $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## use
 
@@ -83,13 +84,11 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $content-color: map-get($color-options, a),
         // $content-font: f,
         // $content-font-weight: 600,
-        // $heading-color: map-get($color-options, a),
-        // $heading-font: f,
-        // $heading-font-weight: 400,
         // $hover-background-color: map-get($color-options, b),
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: 2,
         // $img-background-color: lighten(map-get($color-options,a), 70%),
@@ -106,6 +105,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $position-font-weight: 400,
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font: f,
+        // $title-font-weight: 400,
     );
 }
 ```

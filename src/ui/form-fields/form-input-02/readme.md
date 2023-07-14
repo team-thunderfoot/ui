@@ -33,19 +33,19 @@ In this case, the label should be inside "g--form-input-02":
 
 ## Editable variables
 
--   $background-color
--   $background-color-autofill
--   $border-color
--   $border-color-focus
--   $border-radius
--   $border-style
--   $border-width
--   $error-border-color
--   $font
--   $font-size-mobile
--   $font-weight
--   $placeholder-color
--   $text-color
+- $background-color
+- $background-color-autofill
+- $border-color
+- $border-color-focus
+- $border-radius
+- $border-style
+- $border-width
+- $error-border-color
+- $font
+- $font-size-mobile
+- $font-weight
+- $placeholder-color
+- $text-color
 
 ## Use
 

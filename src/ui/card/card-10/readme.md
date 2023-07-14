@@ -56,6 +56,7 @@ It is not necessary to add aspect-ratio.
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-aspect-ratio
 - $img-fit
@@ -87,6 +88,7 @@ It is not necessary to add aspect-ratio.
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: 1.7,
         // $img-fit: cover,

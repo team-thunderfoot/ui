@@ -36,23 +36,23 @@ You can add whatever you want inside right div ("g--cta-07**ft-items**right-item
 
 ## Editable variables
 
--   $background-color
--   $background-position
--   $background-size
--   $border-radius
--   $breakpoint
--   $cta-min-height
--   $hover-background-img-zoom
--   $hover-shadow
--   $hover-title-color
--   $hover-transform
--   $mask-color
--   $shadow
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $background-color
+- $background-position
+- $background-size
+- $border-radius
+- $breakpoint
+- $cta-min-height
+- $hover-background-img-zoom
+- $hover-shadow
+- $hover-title-color
+- $hover-transform
+- $mask-color
+- $shadow
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 

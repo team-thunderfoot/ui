@@ -39,6 +39,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-aspect-ratio-width
 - $img-aspect-ratio-height
@@ -68,6 +69,7 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $hover-img-zoom: 1.1,
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, e),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-5%),
         // $img-aspect-ratio-width: 16,
         // $img-aspect-ratio-height: 9,

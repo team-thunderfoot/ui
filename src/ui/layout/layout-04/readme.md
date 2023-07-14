@@ -44,25 +44,25 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 
 ## Editable variables
 
--   $align-text-img
--   $background-color
--   $breakpoint
--   $change-order-reponsive
--   $img-border-radius
--   $img-height
--   $img-max-height
--   $img-min-height
--   $img-position
--   $meta-color
--   $meta-font
--   $meta-font-weight
--   $object-fit
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $title-color
--   $title-font
--   $title-font-weight
+- $align-text-img
+- $background-color
+- $breakpoint
+- $change-order-reponsive
+- $img-border-radius
+- $img-height
+- $img-max-height
+- $img-min-height
+- $img-position
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $object-fit
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 

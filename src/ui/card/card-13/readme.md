@@ -38,6 +38,7 @@ It is not necessary to add aspect-ratio.
 - $hover-background-color
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $shadow
 - $subtitle-color
@@ -65,6 +66,7 @@ It is not necessary to add aspect-ratio.
         // $hover-background-color: map-get($color-options, g),
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),

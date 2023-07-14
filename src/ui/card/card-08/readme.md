@@ -35,6 +35,7 @@ It is not necessary to add aspect-ratio.
 
 - $hover-img-zoom
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-aspect-ratio
 - $img-fit
@@ -55,6 +56,7 @@ It is not necessary to add aspect-ratio.
     @include make-card-08-modifier(
     //     $hover-img-zoom: 1.2,
     //     $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
     //     $hover-transform: translateY(-$measure),
     //     $img-aspect-ratio: 1.7,
     //     $img-fit: cover,

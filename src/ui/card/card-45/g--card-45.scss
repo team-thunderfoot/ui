@@ -13,9 +13,6 @@
         $content-font-weight: 400,
         $content-font: d,
         $content-max-lines: 3,
-        $heading-color: map-get($color-options, a),
-        $heading-font-weight: 400,
-        $heading-font: c,
         $hover-background-color: map-get($color-options, g),
         $hover-img-zoom: 1.2,
         $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
@@ -27,5 +24,8 @@
         $img-height: 250px,
         $img-position: center,
         $text-align: left,
+        $title-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 400,
     );
 }

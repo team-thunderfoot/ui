@@ -50,6 +50,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $hover-img-zoom
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-aspect-ratio
 - $img-height
@@ -81,6 +82,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: calc(16 / 9),
         // $img-height: 340px,

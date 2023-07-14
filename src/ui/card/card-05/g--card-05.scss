@@ -13,6 +13,7 @@
             $title-font: c,
             $hover-img-zoom: 1.2,
             $hover-title-color: map-get($color-options, h),
+            $hover-title-underline-color: map-get($color-options, f),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio:calc(1 / 1),
             $img-height: 100px,

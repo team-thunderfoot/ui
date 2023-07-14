@@ -48,6 +48,7 @@
 - $hover-shadow
 - $hover-transform
 - $path-fill-color
+- $shadow
 - $width
 
 ## Use
@@ -71,6 +72,7 @@
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $path-fill-color: map-get($color-options, a),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $width: $measure * 6,
     );
 }

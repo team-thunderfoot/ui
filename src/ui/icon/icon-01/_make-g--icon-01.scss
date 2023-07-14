@@ -26,6 +26,7 @@
     $hover-shadow: false,
     $hover-transform: false,
     $path-fill-color: false,
+    $shadow: false,
     $width: false,
 ) {
     @if $background-color {
@@ -34,6 +35,9 @@
 
     @if $border-radius {
         border-radius: $border-radius;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     @if $hover-background-color or $hover-border-color or $hover-path-fill-color or $hover-shadow or $hover-transform {

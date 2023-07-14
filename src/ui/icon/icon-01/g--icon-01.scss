@@ -28,7 +28,8 @@
             $path-fill-color: map-get($color-options, a),
             $hover-path-fill-color: map-get($color-options, b),
             $hover-shadow: 0 0 $measure * 2 map-get($color-options, a),
-            $hover-transform: none
+            $hover-transform: none,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
         );
     }
 

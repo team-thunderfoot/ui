@@ -44,12 +44,14 @@
     $border-radius: false,
     $btn-class: false,
     $btn-font: false,
+    $cta-min-height: false,
     $hover-background-color: false,
     $hover-border-radius: false,
     $hover-shadow: false,
     $hover-subtitle-color: false,
     $hover-title-color: false,
     $hover-transform: false,
+    $shadow: false,
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
@@ -62,6 +64,12 @@
 ) {
     @if $background-color {
         background: $background-color;
+    }
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     @if $hover-background-color and $hover-shadow and $hover-transform and $hover-border-radius {

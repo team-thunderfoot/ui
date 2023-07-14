@@ -60,24 +60,36 @@
 }
 
 @mixin make-cta-02-modifier(
+    $background-color: false,
     $background-position: false,
     $background-size: false,
     $border-radius: false,
     $btn-class: false,
     $btn-font: false,
+    $cta-min-height: false,
     $hover-background-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-transform: false,
     $mask-color: false,
+    $shadow: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
     $title-max-lines: false
 ) {
+    @if $background-color{
+        background: $background-color;
+    }
     @if $border-radius {
         border-radius: $border-radius;
+    }
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
     @if $background-position {
         &__bg-items {

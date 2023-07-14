@@ -53,6 +53,7 @@
     $btn-class: false,
     $btn-font: false,
     $change-order-reponsive: false,
+    $cta-min-height: false,
     $hide-img-reponsive: false,
     $hover-background-color: false,
     $hover-img-zoom: false,
@@ -62,6 +63,7 @@
     $hover-transform: false,
     $img-position: false,
     $one-col-bkt: false,
+    $shadow: false,
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
@@ -72,6 +74,12 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
     @if $hover-background-color and $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
 

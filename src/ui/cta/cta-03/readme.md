@@ -27,12 +27,14 @@
 - $border-radius
 - $btn-class
 - $btn-font
+- $cta-min-height
 - $hover-background-color
 - $hover-border-radius
 - $hover-shadow
 - $hover-subtitle-color
 - $hover-title-color
 - $hover-transform
+- $shadow
 - $subtitle-color
 - $subtitle-font
 - $subtitle-font-weight
@@ -55,12 +57,14 @@ To use it we have to import the css of the $btn-class in the entry
         // $border-radius: 0,
         // $btn-class: g--btn-02,
         // $btn-font: d,
+        // $cta-min-height: 500px,
         // $hover-background-color: map-get($color-options, e),
         // $hover-border-radius: $measure*3,
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, c),
         // $hover-title-color: map-get($color-options, e),
         // $hover-transform: translateY(-$measure),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),
         // $subtitle-font: f,
         // $subtitle-font-weight: 600,

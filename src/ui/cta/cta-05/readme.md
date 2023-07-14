@@ -45,6 +45,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $btn-class
 -   $btn-font
 -   $change-order-reponsive
+-   $cta-min-height
 -   $hide-img-reponsive
 -   $hover-background-color
 -   $hover-img-zoom
@@ -54,6 +55,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $hover-transform
 -   $img-position
 -   $one-col-bkt
+-   $shadow
 -   $subtitle-color
 -   $subtitle-font
 -   $subtitle-font-weight
@@ -77,6 +79,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $btn-class: g--btn-02,
         // $btn-font: d,
         // $change-order-reponsive: true,
+        // $cta-min-height: 500px,
         // $hide-img-reponsive: true,
         // $hover-background-color: map-get($color-options, e),
         // $hover-img-zoom: 1.2,
@@ -86,6 +89,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-transform: translateY(-$measure),
         // $img-position: center,
         // $one-col-bkt: $tablets,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),
         // $subtitle-font: f,
         // $subtitle-font-weight: 400,

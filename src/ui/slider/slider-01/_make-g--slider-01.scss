@@ -1,11 +1,4 @@
 @mixin make-slider-01() {
-    .tns-ovh {
-        overflow: visible;
-
-        @media all and ($viewport-type: $tablets) {
-            overflow: hidden;
-        }
-    }
 
     &__wrapper {
         display: flex;

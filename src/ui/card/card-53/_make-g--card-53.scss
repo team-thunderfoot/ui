@@ -79,6 +79,7 @@
     $card-min-height: false,
     $hover-author-color: false,
     $hover-background-color: false,
+    $hover-mask-color: false,
     $hover-shadow: false,
     $hover-subtitle-color: false,
     $hover-title-color: false,
@@ -329,6 +330,20 @@
     @if $mask-color {
         &::after {
             background: $mask-color;
+        }
+    }
+    @if $hover-mask-color {
+        &::after{
+            transition: background $time-a $ease-standard-a;
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::after{
+                    background: $hover-mask-color;
+                }
+            }
         }
     }
 

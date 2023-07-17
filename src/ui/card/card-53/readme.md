@@ -38,6 +38,7 @@
 - $border-width
 - $hover-author-color
 - $hover-background-color
+- $hover-mask-color
 - $hover-shadow
 - $hover-subtitle-color
 - $hover-title-color
@@ -76,6 +77,7 @@
         // $card-min-height: 500px,
         // $hover-author-color: map-get($color-options, g),
         // $hover-background-color: map-get($color-options, e),
+        // $hover-mask-color: rgba(map-get($color-options, a), .5),
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-subtitle-color: map-get($color-options, g),
         // $hover-title-color: map-get($color-options, g),

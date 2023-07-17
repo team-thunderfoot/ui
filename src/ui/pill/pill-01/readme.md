@@ -27,6 +27,7 @@
 - $border-width
 - $hover-background-color
 - $hover-border-color
+- $hover-border-radius
 - $hover-shadow
 - $hover-text-color
 - $hover-transform
@@ -48,6 +49,7 @@
     // $border-width: 1px,
     // $hover-background-color: map-get($color-options, a),
     // $hover-border-color: map-get($color-options, a),
+    // $hover-border-radius: 8px,
     // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
     // $hover-text-color: map-get($color-options, b),
     // $hover-transform: translateY(-$measure),

@@ -33,6 +33,7 @@
 - $hover-shadow
 - $hover-subtitle-color
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $shadow
 - $subtitle-color
@@ -63,6 +64,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, c),
         // $hover-title-color: map-get($color-options, e),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),

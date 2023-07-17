@@ -52,6 +52,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 - $hover-shadow
 - $hover-subtitle-color
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $img-position
 - $one-col-bkt
@@ -86,6 +87,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, a),
         // $hover-title-color: map-get($color-options, a),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-position: center,
         // $one-col-bkt: $tablets,

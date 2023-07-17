@@ -29,6 +29,7 @@
 - $hover-background-img-zoom
 - $hover-shadow
 - $hover-title-color
+- $hover-title-underline-color
 - $hover-transform
 - $mask-color
 - $shadow
@@ -55,6 +56,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-background-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
         // $hover-title-color: map-get($color-options, a),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $mask-color: rgba(map-get($color-options, a), 0.5),
         // $shadow: 0 0 $measure*2 map-get($color-options, g),

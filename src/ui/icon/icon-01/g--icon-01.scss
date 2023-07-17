@@ -11,10 +11,10 @@
         $height: $measure * 6,
         $hover-background-color: map-get($color-options, a),
         $hover-border-color: map-get($color-options, g),
-        $hover-path-fill-color: map-get($color-options, g),
+        $hover-icon-color: map-get($color-options, g),
         $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
         $hover-transform: translateY(-$measure),
-        $path-fill-color: map-get($color-options, a),
+        $icon-fill-color: map-get($color-options, a),
         $width: $measure * 6,
     );
 
@@ -25,8 +25,8 @@
             $border-style: dotted,
             $border-color: map-get($color-options, g),
             $hover-border-color: map-get($color-options, f),
-            $path-fill-color: map-get($color-options, a),
-            $hover-path-fill-color: map-get($color-options, b),
+            $icon-fill-color: map-get($color-options, a),
+            $hover-icon-color: map-get($color-options, b),
             $hover-shadow: 0 0 $measure * 2 map-get($color-options, a),
             $hover-transform: none,
             $shadow: 0 0 $measure*2 map-get($color-options, g),
@@ -42,8 +42,9 @@
             $border-style: solid,
             $border-color: map-get($color-options, f),
             $hover-border-color: map-get($color-options, e),
-            $path-fill-color: map-get($color-options, b),
-            $hover-path-fill-color: map-get($color-options, b),
+            $hover-border-radius: $measure,
+            $icon-fill-color: map-get($color-options, b),
+            $hover-icon-color: map-get($color-options, b),
             $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-transform: translateY($measure)
         );
@@ -55,8 +56,8 @@
             $hover-background-color: transparent,
             $border-color: map-get($color-options, a),
             $hover-border-color: map-get($color-options, a),
-            $path-fill-color: map-get($color-options, b),
-            $hover-path-fill-color: map-get($color-options, a),
+            $icon-fill-color: map-get($color-options, b),
+            $hover-icon-color: map-get($color-options, a),
             $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-transform: translateY($measure)
         );

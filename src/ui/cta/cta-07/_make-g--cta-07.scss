@@ -71,6 +71,7 @@
     $breakpoint: false,
     $cta-min-height: false,
     $hover-background-img-zoom: false,
+    $hover-mask-color: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
@@ -86,22 +87,12 @@
     @if $background-color{
         background: $background-color;
     }
-    @if $background-position {
-        &__bg-items {
-            background-position: $background-position;
-        }
-    }
 
     @if $cta-min-height {
         min-height: $cta-min-height;
     }
     @if $shadow {
         box-shadow: $shadow;
-    }
-    @if $background-size {
-        &__bg-items {
-            background-size: $background-size;
-        }
     }
     @if $breakpoint {
         @media all and ($viewport-type: $breakpoint) {
@@ -121,10 +112,18 @@
         }
     }
 
-    @if $mask-color {
-        &__bg-items {
-            &::before {
-                background: $mask-color;
+    @if $hover-mask-color {
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-07{
+                    &__bg-items {
+                        &::before {
+                            background: $hover-mask-color;
+                        }
+                    }
+                }
             }
         }
     }
@@ -304,8 +303,24 @@
 
     .g--cta-07 {
         &__bg-items {
+            @if $background-size {
+                background-size: $background-size;
+            }
+            @if $background-position {
+                background-position: $background-position;
+            }
             @if $hover-background-img-zoom {
                 transition: transform $time-b $ease-standard-a;
+            }
+            @if $mask-color {
+                &::before {
+                    background: $mask-color;
+                }
+            }
+            @if $hover-mask-color {
+                &::before {
+                    transition: background $time-b $ease-standard-a;
+                }
             }
         }
 

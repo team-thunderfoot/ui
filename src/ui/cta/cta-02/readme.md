@@ -27,6 +27,7 @@
 - $btn-font
 - $cta-min-height
 - $hover-background-img-zoom
+- $hover-mask-color
 - $hover-shadow
 - $hover-title-color
 - $hover-title-underline-color
@@ -54,6 +55,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $btn-font: d,
         // $cta-min-height: 500px,
         // $hover-background-img-zoom: 1.2,
+        // $hover-mask-color: rgba(map-get($color-options, a), .5),
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
         // $hover-title-color: map-get($color-options, a),
         // $hover-title-underline-color: map-get($color-options, h),

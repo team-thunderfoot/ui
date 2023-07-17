@@ -27,13 +27,14 @@
 ## Editable variables
 
 - $background-color
-- $$hover-background-img-zoom
 - $background-position
 - $background-size
 - $border-radius
 - $btn-class
 - $btn-font
 - $cta-min-height
+- $$hover-background-img-zoom
+- $hover-mask-color
 - $hover-shadow
 - $hover-subtitle-color
 - $hover-title-color
@@ -67,6 +68,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $btn-font: d,
         // $cta-min-height: 500px,
         // $hover-background-img-zoom: 1.2,
+        // $hover-mask-color: rgba(map-get($color-options, a), .5),
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, c),
         // $hover-title-color: map-get($color-options, c),

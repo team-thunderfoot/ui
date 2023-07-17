@@ -198,7 +198,7 @@
     }
     @if $hover-mask-color {
         &::after{
-            transition: background $time-a $ease-standard-a;
+            transition: background $time-b $ease-standard-a;
         }
         @media all and (hover : hover) {
             &:hover,

@@ -28,6 +28,13 @@
     }
 
     &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $measure * 2;
+        row-gap: $measure;
+        margin-top: auto;
+        width: fit-content;
+
         &__btn {
         }
     }
@@ -311,10 +318,8 @@
         }
 
         &__wrapper {
-            &__btn {
-                margin-left: auto;
-                margin-right: auto;
-            }
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -338,10 +343,8 @@
         }
 
         &__wrapper {
-            &__btn {
-                margin-left: 0;
-                margin-right: auto;
-            }
+            margin-left: 0;
+            margin-right: auto;
         }
     }
 
@@ -365,10 +368,8 @@
         }
 
         &__wrapper {
-            &__btn {
-                margin-left: auto;
-                margin-right: 0;
-            }
+            margin-left: auto;
+            margin-right: 0;
         }
     }
 

@@ -1,13 +1,13 @@
 .g--cta-08 {
     @include make-cta-08();
     @include make-cta-08-modifier(
-        $background-color: linear-gradient(226deg, #e0ff4f 0%, #36ba9f 100%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         // $border-radius: $measure,
         $btn-child-class: g--btn-01--second,
         // $btn-child-font: c,
         $btn-child: 2,
-        $btn-class: g--btn-02,
-        $btn-font: g,
+        $btn-class: g--btn-01,
+        $btn-font: f,
         // $cta-min-height: 300px,
         // $hover-background-color: map-get($color-options, g),
         // $hover-border-radius: 0px,

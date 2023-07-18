@@ -56,7 +56,7 @@ To use it we have to import the css of the $btn-class in the entry
 .g--cta-08 {
     @include make-cta-08();
     @include make-cta-08-modifier(
-        $background-color: linear-gradient(226deg, #e0ff4f 0%, #36ba9f 100%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $border-radius: $measure,
         $btn-child-class: g--btn-01--second,
         $btn-child-font: c,

@@ -14,6 +14,7 @@
             $border-radius: 0,
             // $hover-background-img-zoom: 2,
             $hover-img-zoom: 1.2,
+            $hover-mask-color: rgba(map-get($color-options, a), .5),
             $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
             $hover-title-color: map-get($color-options, h),
             $hover-title-underline-color: map-get($color-options, b),

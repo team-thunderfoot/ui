@@ -57,6 +57,7 @@
     $border-radius: false,
     $card-min-height: false,
     $hover-background-img-zoom: false,
+    $hover-mask-color: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
@@ -205,6 +206,20 @@
     @if $mask-color {
         &::after {
             background: $mask-color;
+        }
+    }
+    @if $hover-mask-color {
+        &::after{
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover : hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::after{
+                    background: $hover-mask-color;
+                }
+            }
         }
     }
 

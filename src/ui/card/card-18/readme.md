@@ -44,6 +44,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 - $border-radius
 - $card-min-height
 - $hover-background-img-zoom
+- $hover-mask-color
 - $hover-shadow
 - $hover-title-color
 - $hover-title-underline-color
@@ -74,6 +75,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
     // $border-radius: $measure,
     // $card-min-height: 500px,
     // $hover-background-img-zoom: 2,
+    // $hover-mask-color: rgba(map-get($color-options, a), .5),
     // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
     // $hover-title-color: map-get($color-options, h),
     // $hover-title-underline-color: map-get($color-options, h),

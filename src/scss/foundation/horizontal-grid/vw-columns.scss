@@ -17,14 +17,14 @@ $viewport-layouts-s: (
 //* Columns
 @mixin make-col($i) {
     max-height: 100%;
-    width: calc((($g-container-width) / $columns)*$i);
+    width: calc(((#{$g-container-width}) / #{$columns})*#{$i});
     padding-right: $half-gutter-width;
     padding-left: $half-gutter-width;
     @media all and ($viewport-type: $laptop){
-        width: calc(((90vw) / $columns)*$i);
+        width: calc(((90vw) / #{$columns})*#{$i});
     }
     @media all and ($viewport-type: $mobile){
-        width: calc(((95vw) / $columns)*$i);
+        width: calc(((95vw) / #{$columns})*#{$i});
     }
 }
 
@@ -49,13 +49,13 @@ $viewport-layouts-s: (
             .f--vw-col-#{$size}-#{$i} {
                 max-height: 100%;
                 @media all and ($viewport-type: #{$bkpt}) {
-                    width: calc((($g-container-width) / $columns)*$i);
+                    width: calc(((#{$g-container-width}) / #{$columns})*#{$i});
                 }
                 @media all and ($viewport-type: $laptop){
-                    width: calc(((90vw) / $columns)*$i);
+                    width: calc(((90vw) / #{$columns})*#{$i});
                 }
                 @media all and ($viewport-type: $mobile){
-                    width: calc(((95vw) / $columns)*$i);
+                    width: calc(((95vw) / #{$columns})*#{$i});
                 }
             }
         }
@@ -70,10 +70,10 @@ $viewport-layouts-s: (
     @for $i from 1 through $columns {
         .f--vw-col-#{$size}-#{$i} {
             @media all and ($viewport-type: #{$bkpt}) {
-                width: calc(((90vw) / $columns)*$i);
+                width: calc(((90vw) / #{$columns})*#{$i});
             }
             @media all and ($viewport-type: $mobile){
-                width: calc(((95vw) / $columns)*$i);
+                width: calc(((95vw) / #{$columns})*#{$i});
             }
         }
     }
@@ -86,7 +86,7 @@ $viewport-layouts-s: (
 @mixin build-columns($size, $bkpt) {
     @for $i from 1 through $columns {
         .f--vw-col-#{$size}-#{$i} {
-            $value-component: calc(((95vw) / $columns)*$i);
+            $value-component: calc(((95vw) / #{$columns})*#{$i});
             @media all and ($viewport-type: #{$bkpt}) {
                 width: $value-component;
             }
@@ -102,13 +102,13 @@ $viewport-layouts-s: (
     @for $i from 1 through $columns*2 {
         .f--vh-col-#{$size}-#{$i} {
             @media all and (max-height: #{$bkpt}) {
-                width: calc((($g-container-width) / $columns)*$i);
+                width: calc(((#{$g-container-width}) / #{$columns})*#{$i});
             }
             @media all and (max-height: #{$bkpt}) and ($viewport-type: $laptop) {
-                width: calc(((90vw) / $columns)*$i);
+                width: calc(((90vw) / #{$columns})*#{$i});
             }
             @media all and (max-height: #{$bkpt}) and ($viewport-type: $mobile){
-                width: calc(((95vw) / $columns)*$i);
+                width: calc(((95vw) / #{$columns})*#{$i});
             }
         }
     }
@@ -120,13 +120,13 @@ $viewport-layouts-s: (
 
 //* Offset
 @mixin make-offset($i) {
-    margin-left: calc((($g-container-width) / $columns)*$i);
+    margin-left: calc(((#{$g-container-width}) / #{$columns})*#{$i});
     transition: $time-b;
     @media all and ($viewport-type: $laptop){
-        margin-left: calc(((90vw) / $columns)*$i);
+        margin-left: calc(((90vw) / #{$columns})*#{$i});
     }
     @media all and ($viewport-type: $mobile){
-        margin-left: calc(((95vw) / $columns)*$i);
+        margin-left: calc(((95vw) / #{$columns})*#{$i});
     }
 }
 
@@ -155,10 +155,10 @@ $viewport-layouts-s: (
     @for $i from 0 through $columns {
         .f--vw-offset-#{$size}-#{$i} {
             @media all and ($viewport-type: #{$bkpt}) {
-                margin-left: calc(((90vw) / $columns)*$i);
+                margin-left: calc(((90vw) / #{$columns})*#{$i});
             }
             @media all and ($viewport-type: $mobile){
-                margin-left: calc(((95vw) / $columns)*$i);
+                margin-left: calc(((95vw) / #{$columns})*#{$i});
             }
         }
     }
@@ -172,7 +172,7 @@ $viewport-layouts-s: (
     @for $i from 0 through $columns {
         .f--vw-offset-#{$size}-#{$i} {
             @media all and ($viewport-type: #{$bkpt}) {
-                margin-left: calc(((95vw) / $columns)*$i);
+                margin-left: calc(((95vw) / #{$columns})*#{$i});
             }
         }
     }

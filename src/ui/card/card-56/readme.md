@@ -101,7 +101,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $hover-quote-underline-color: map-get($color-options, e),
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, g),
         // $hover-transform: translateY(-$measure),
-        // $img-aspect-ratio: 1,
+        // $img-aspect-ratio: calc(1 / 1),
         // $img-border-radius: 50%,
         // $img-fit: cover,
         // $img-height: 156px,

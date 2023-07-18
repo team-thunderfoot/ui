@@ -71,7 +71,7 @@ Inside the `<button>` you can add whatever you want. If you add an icon, it can'
 You have to install [back-to-top package](https://www.npmjs.com/package/@teamthunderfoot/back-to-top),
 
 ```sh
-npm i @andresclua/jsutil
+npm install @teamthunderfoot/back-to-top
 ```
 
 ## JS

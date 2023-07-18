@@ -37,7 +37,6 @@ For the image, we have to add width, height and aspect ratio dynamically.
 
 ## Editable variables
 
--   $background-color
 -   $border-color
 -   $border-radius
 -   $border-style
@@ -47,7 +46,6 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $company-color
 -   $company-font
 -   $company-font-weight
--   $hover-background-color
 -   $hover-company-color
 -   $hover-company-underline-color
 -   $hover-img-zoom
@@ -80,7 +78,6 @@ For the image, we have to add width, height and aspect ratio dynamically.
 .g--card-56 {
     @include make-card-56();
     @include make-card-56-modifier(
-        // $background-color: map-get($color-options, e),
         // $border-color: map-get($color-options, f),
         // $border-radius: $measure * 2,
         // $border-style: solid,
@@ -90,7 +87,6 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $company-color: map-get($color-options, a),
         // $company-font-weight: bold,
         // $company-font: g,
-        // $hover-background-color: map-get($color-options, g),
         // $hover-company-color: map-get($color-options, e),
         // $hover-company-underline-color: map-get($color-options, e),
         // $hover-img-zoom: 1.2,

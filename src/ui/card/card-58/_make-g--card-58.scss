@@ -1,0 +1,151 @@
+@mixin make-card-58() {
+    padding: 0 $measure * 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+
+    &__title {
+        margin-bottom: $measure * 2;
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
+}
+
+@mixin make-card-58-modifier(
+    $card-min-height: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $link-class: false,
+    $link-font: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
+) {
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+
+    @if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-58 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-58 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-58 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+        align-items: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .g--card-58 {
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
+
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
+            }
+        }
+
+        &__link {
+            @if $link-class {
+                @extend .#{$link-class} !optional;
+            }
+            @if $link-font {
+                @extend .f--font-#{$link-font} !optional;
+            }
+        }
+    }
+}

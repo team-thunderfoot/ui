@@ -11,12 +11,12 @@
     @media all and ($viewport-type: $mobile) {
         width: 100%;
     }
-    &__artwork{
+    svg {
         display: block;
     }
 }
 
-@mixin make-btn-03-modifier (
+@mixin make-btn-03-modifier(
     $artwork-color-fill: false,
     $artwork-color-stroke: false,
     $artwork-height: false,
@@ -42,7 +42,7 @@
     $hover-text-color: false,
     $shadow: false,
     $text-color: false,
-    $transition: false,
+    $transition: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -81,9 +81,15 @@
         font-weight: $font-weight;
     }
 
-
-    @if $hover-background-color or $hover-border-color or $hover-border-radius or $hover-text-color or $hover-background-size or $hover-background-position or $hover-shadow {
-        @if $transition{
+    @if $hover-background-color or
+        $hover-border-color or
+        $hover-border-radius or
+        $hover-text-color or
+        $hover-background-size or
+        $hover-background-position or
+        $hover-shadow
+    {
+        @if $transition {
             transition: $transition;
         }
         @media (hover: hover) {
@@ -118,9 +124,9 @@
         &:hover,
         &:focus,
         &:active {
-            .g--btn-03{
-                &__artwork{
-                    path{
+            .g--btn-03 {
+                svg {
+                    path {
                         @if $hover-artwork-color and $artwork-color-fill {
                             fill: $hover-artwork-color;
                         }
@@ -133,8 +139,8 @@
         }
     }
 
-    .g--btn-03{
-        &__artwork{
+    .g--btn-03 {
+        svg {
             @if $artwork-top {
                 margin-top: $artwork-top;
             }
@@ -144,7 +150,7 @@
             @if $artwork-height {
                 height: $artwork-height;
             }
-            path{
+            path {
                 @if $artwork-color-fill {
                     fill: $artwork-color-fill;
                 }

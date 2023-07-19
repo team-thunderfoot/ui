@@ -1,0 +1,461 @@
+@mixin make-cta-08() {
+    display: block;
+    padding: $measure * 7 15%;
+    width: 100%;
+
+    @media all and ($viewport-type: $tabletl) {
+        padding: $measure * 7 7%;
+    }
+
+    @media all and ($viewport-type: $tabletm) {
+        padding: $measure * 7 7%;
+    }
+
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 7 6%;
+    }
+
+    @media all and ($viewport-type: $mobile) {
+        padding: $measure * 7 8%;
+    }
+
+    &__title {
+        margin-bottom: $measure;
+    }
+
+    &__subtitle {
+        margin-bottom: $measure * 3;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $measure * 2;
+        row-gap: $measure;
+        margin-top: auto;
+        width: fit-content;
+
+        &__btn {
+        }
+    }
+}
+
+@mixin make-cta-08-modifier(
+    $background-color: false,
+    $border-radius: false,
+    $btn-child-class: false,
+    $btn-child-font: false,
+    $btn-child: false,
+    $btn-class: false,
+    $btn-font: false,
+    $cta-min-height: false,
+    $hover-background-color: false,
+    $hover-border-radius: false,
+    $hover-shadow: false,
+    $hover-subtitle-color: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $shadow: false,
+    $subtitle-color: false,
+    $subtitle-font-weight: false,
+    $subtitle-font: false,
+    $subtitle-max-lines: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    @if $hover-background-color and $hover-shadow and $hover-transform and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow and $hover-transform {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a,
+            border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-background-color and $hover-shadow {
+        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-background-color and $hover-transform {
+        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-background-color and $hover-border-radius {
+        transition: background $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-background-color {
+        transition: background $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background: $hover-background-color;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform and $hover-border-radius {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a,
+            border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow and $hover-border-radius {
+        transition: box-shadow $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform and $hover-border-radius {
+        transition: transform $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-border-radius {
+        transition: border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-radius: $hover-border-radius;
+            }
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--cta-08 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-08 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-08 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-subtitle-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-08 {
+                    &__subtitle {
+                        color: $hover-subtitle-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
+    @if $text-align == "center" {
+        padding-left: $measure * 15;
+        padding-right: $measure * 15;
+        text-align: center;
+
+        @media all and ($viewport-type: $tabletl) {
+            padding-left: $measure * 10;
+            padding-right: $measure * 10;
+        }
+
+        @media all and ($viewport-type: $tablets) {
+            padding-left: $measure * 5;
+            padding-right: $measure * 5;
+        }
+
+        &__wrapper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @if $text-align == "left" {
+        padding-left: $measure * 10;
+        padding-right: $measure * 30;
+        text-align: left;
+
+        @media all and ($viewport-type: $tabletl) {
+            padding-left: $measure * 5;
+            padding-right: $measure * 25;
+        }
+
+        @media all and ($viewport-type: $tabletm) {
+            padding-right: $measure * 20;
+        }
+
+        @media all and ($viewport-type: $tablets) {
+            padding-left: $measure * 5;
+            padding-right: $measure * 5;
+        }
+
+        &__wrapper {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    @if $text-align == "right" {
+        padding-left: $measure * 30;
+        padding-right: $measure * 10;
+        text-align: right;
+
+        @media all and ($viewport-type: $tabletl) {
+            padding-left: $measure * 25;
+            padding-right: $measure * 5;
+        }
+
+        @media all and ($viewport-type: $tabletm) {
+            padding-left: $measure * 20;
+        }
+
+        @media all and ($viewport-type: $tablets) {
+            padding-left: $measure * 5;
+            padding-right: $measure * 5;
+        }
+
+        &__wrapper {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    .g--cta-08 {
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
+
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
+            }
+        }
+
+        &__subtitle {
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
+
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
+
+            @if $subtitle-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $subtitle-max-lines;
+                -webkit-box-orient: vertical;
+            }
+
+            @if $hover-subtitle-color {
+                transition: color $time-b $ease-standard-a;
+            }
+        }
+
+        &__wrapper {
+            &__btn {
+                @if $btn-font {
+                    @extend .f--font-#{$btn-font} !optional;
+                }
+
+                @if $btn-class {
+                    @extend .#{$btn-class} !optional;
+                }
+
+                @if $btn-child {
+                    &:nth-child(#{$btn-child}) {
+                        @if $btn-child-font {
+                            @extend .f--font-#{$btn-child-font} !optional;
+                        }
+
+                        @if $btn-child-class {
+                            @extend .#{$btn-child-class} !optional;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

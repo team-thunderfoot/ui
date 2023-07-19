@@ -1,0 +1,301 @@
+@mixin make-card-59() {
+    padding: $measure * 7 $measure * 5;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+
+    &__bg-items {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-repeat: no-repeat;
+    }
+
+    &__ft-items {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            margin-bottom: $measure * 2;
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
+        }
+
+        &__link {
+            margin-top: auto;
+        }
+    }
+}
+
+@mixin make-card-59-modifier(
+    $background-color: false,
+    $background-position: false,
+    $background-size: false,
+    $border-radius: false,
+    $card-min-height: false,
+    $hover-background-img-zoom: false,
+    $hover-mask-color: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $link-class: false,
+    $link-font: false,
+    $mask-color: false,
+    $shadow: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-59 {
+                            &__ft-items {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-59 {
+                    &__ft-items {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-59 {
+                    &__ft-items {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-background-img-zoom {
+        .g--card-59 {
+            &__bg-items {
+                transition: transform $time-b $ease-standard-a;
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-59 {
+                    &__bg-items {
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $background-position {
+        .g--card-59 {
+            &__bg-items {
+                background-position: $background-position;
+            }
+        }
+    }
+
+    @if $background-size {
+        .g--card-59 {
+            &__bg-items {
+                background-size: $background-size;
+            }
+        }
+    }
+
+    @if $mask-color {
+        &::after {
+            background: $mask-color;
+        }
+    }
+
+    @if $hover-mask-color {
+        &::after {
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::after {
+                    background: $hover-mask-color;
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--card-59 {
+            &__ft-items {
+                text-align: center;
+                align-items: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        .g--card-59 {
+            &__ft-items {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        .g--card-59 {
+            &__ft-items {
+                text-align: right;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    .g--card-59 {
+        &__ft-items {
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
+                }
+            }
+
+            &__link {
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
+
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
+                }
+            }
+        }
+    }
+}

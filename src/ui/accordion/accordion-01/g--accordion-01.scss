@@ -10,6 +10,8 @@
         $hover-title-color: map-get($color-options, e),
         $hover-icon-background: map-get($color-options, h),
         $hover-icon-border-color: map-get($color-options, a),
+        $active-icon-background: map-get($color-options, h),
+        $active-icon-border-color: map-get($color-options, a),
         // $hover-icon-border-radius: 8px,
         $hover-icon-color: map-get($color-options, e),
         $icon-color: map-get($color-options, a),

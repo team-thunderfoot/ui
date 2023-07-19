@@ -29,16 +29,19 @@
 ## Editable variables
 
 - $active-background-color
-- $active-title-color
+- $active-icon-background
+- $active-icon-border-color
+- $active-icon-border-radius
 - $active-icon-color
+- $active-title-color
 - $border-color
 - $border-style
 - $border-width
-- $hover-title-color
 - $hover-icon-background
 - $hover-icon-border-color
 - $hover-icon-border-radius
 - $hover-icon-color
+- $hover-title-color
 - $icon-background
 - $icon-border-color
 - $icon-border-radius
@@ -58,16 +61,19 @@
     @include make-accordion-01();
     @include make-accordion-01-modifier(
         // $active-background-color: rgba(map-get($color-options, h), .2),
-        // $active-title-color: map-get($color-options, h),
+        // $active-icon-background: map-get($color-options, h),
+        // $active-icon-border-color: map-get($color-options, h),
+        // $active-icon-border-radius: 2px,
         // $active-icon-color: map-get($color-options, h),
+        // $active-title-color: map-get($color-options, h),
         // $border-color: map-get($color-options, a),
         // $border-style: solid,
         // $border-width: 1px,
-        // $hover-title-color: map-get($color-options, a),
         // $hover-icon-background: map-get($color-options, a),
         // $hover-icon-border-color: map-get($color-options, a),
         // $hover-icon-border-radius: $measure,
         // $hover-icon-color: map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, a),
         // $icon-background: map-get($color-options, a),
         // $icon-border-color: map-get($color-options, a),
         // $icon-border-radius: 50%,

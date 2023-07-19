@@ -27,15 +27,27 @@
 ## Editable variables
 
 - $active-background-color
+- $active-icon-background
+- $active-icon-border-color
+- $active-icon-border-radius
 - $active-icon-color
 - $active-title-color
 - $border-color
 - $border-style
 - $border-width
-- $hover-background-color
+- $hover-icon-background
+- $hover-icon-border-color
+- $hover-icon-border-radius
 - $hover-icon-color
 - $hover-title-color
+- $icon-background
 - $icon-color
+- $icon-border-color
+- $icon-border-radius
+- $icon-border-style
+- $icon-border-width
+- $icon-height
+- $icon-width
 - $title-color
 - $title-font
 - $title-font-weight
@@ -43,22 +55,34 @@
 ## Use
 
 ```scss
-.g--accordion-01 {
-    @include make-accordion-01();
-    @include make-accordion-01-modifier(
+.g--accordion-02 {
+    @include make-accordion-02();
+    @include make-accordion-02-modifier (
         // $active-background-color: map-get($color-options, g),
-        // $active-icon-color: map-get($color-options, g),
+        // $active-icon-background: map-get($color-options, b),
+        // $active-icon-border-color:  map-get($color-options, a),
+        // $active-icon-border-radius: 50%,
+        // $active-icon-color:  map-get($color-options, a),
         // $active-title-color: map-get($color-options, b),
         // $border-color: map-get($color-options, a),
         // $border-style: solid,
         // $border-width: 1px,
-        // $hover-background-color: map-get($color-options, g),
-        // $hover-icon-color: map-get($color-options, g),
+        // $hover-icon-background: map-get($color-options, b),
+        // $hover-icon-border-color: map-get($color-options, a),
+        // $hover-icon-border-radius: 20%,
+        // $hover-icon-color: map-get($color-options, a),
         // $hover-title-color: map-get($color-options, g),
+        // $icon-background: map-get($color-options, b),
         // $icon-color: map-get($color-options, a),
+        // $icon-border-color: map-get($color-options, a),
+        // $icon-border-radius: $measure,
+        // $icon-border-style: solid,
+        // $icon-border-width: 1px,
+        // $icon-height: 1px,
+        // $icon-width: $measure*2,
         // $title-color: map-get($color-options, a),
-        // $title-font-weight: 400,
         // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

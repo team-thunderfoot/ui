@@ -13,9 +13,11 @@
     <div class="g--accordion-01" id="accordion-1" tf-ds-acc-body-a="accordion-1"> 
         <button class="g--accordion-01__hd" tf-ds-acc-target-a="accordion-1">
             <p class="g--accordion-01__hd__title">Accordion 1</p>
-            <svg class="g--accordion-01__hd__icon" viewBox="0 0 21 12" fill="none">
-            <path d="M21.0003 1.81432L10.8146 12L0.628906 1.81432L2.4114 -7.79153e-08L10.8146 8.18037L19.2178 -8.12545e-07L21.0003 1.81432Z" fill="#1A191D"/>
-            </svg>
+            <div class="g--accordion-01__hd__icon">
+                <svg viewBox="0 0 21 12" fill="none">
+                    <path d="M21.0003 1.81432L10.8146 12L0.628906 1.81432L2.4114 -7.79153e-08L10.8146 8.18037L19.2178 -8.12545e-07L21.0003 1.81432Z" fill="#1A191D"/>
+                </svg>
+            </div>
         </button>
         <div class="g--accordion-01__bd">
             <div class="g--accordion-01__bd__content c--content-a">

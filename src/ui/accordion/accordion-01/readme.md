@@ -18,7 +18,7 @@
             </svg>
         </button>
         <div class="g--accordion-01__bd">
-            <div class="g--accordion-01__bd__content b--content-a">
+            <div class="g--accordion-01__bd__content c--content-a">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur nesciunt, sed quaerat ut a sapiente quia ea! Doloribus architecto aut voluptates quasi perspiciatis fugiat non nisi magni libero rem! Ducimus.
             </div>
         </div>

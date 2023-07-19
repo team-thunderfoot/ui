@@ -36,7 +36,9 @@ If you want the subtitle to be a c--content, the HTML should be:
         />
     </div>
     <h3 class="g--card-01__title">Lorem ipsum</h3>
-    <div class="g--card-01__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
+    <div class="g--card-01__subtitle c--content-a">
+        Solution description lorem ipsum dolor sit amet consectetur.
+    </div>
 </div>
 ```
 
@@ -46,33 +48,34 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $background-color
-- $border-color
-- $border-radius
-- $border-style
-- $border-width
-- $card-min-height
-- $hover-background-color
-- $hover-img-zoom
-- $hover-shadow
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-fit
-- $img-height
-- $img-position
-- $img-width
-- $shadow
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-radius
+-   $hover-img-zoom
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-fit
+-   $img-height
+-   $img-position
+-   $img-width
+-   $shadow
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
@@ -87,6 +90,7 @@ It is not necessary to add aspect-ratio.
         // $border-width: 1px,
         // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),

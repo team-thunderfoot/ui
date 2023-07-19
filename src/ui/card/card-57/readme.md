@@ -37,6 +37,7 @@ If you want the subtitle to be a c--content, the HTML should be:
 -   $border-width
 -   $card-min-height
 -   $hover-background-color
+-   $hover-border-radius
 -   $hover-shadow
 -   $hover-title-color
 -   $hover-title-underline-color
@@ -56,28 +57,29 @@ If you want the subtitle to be a c--content, the HTML should be:
 .g--card-57 {
     @include make-card-57();
     @include make-card-57-modifier(
-        $background-color: lighten(map-get($color-options, a), 82%),
-        $border-color: map-get($color-options, a),
-        $border-radius: $measure * 3,
-        $border-style: solid,
-        $border-width: 1px,
-        $card-min-height: 500px,
-        $hover-background-color: linear-gradient(217deg, map-get($color-options, e), map-get(
-                        $color-options,
-                        g
-                    ) 70.71%),
-        $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
-        $hover-title-color: map-get($color-options, f),
-        $hover-title-underline-color: map-get($color-options, f),
-        $hover-transform: translateY(-$measure),
-        $link-class: g--link-01,
-        $link-font: a,
-        $shadow: 0 0 $measure * 2 map-get($color-options, a),
-        $text-align: left,
-        $title-color: map-get($color-options, a),
-        $title-font-weight: bold,
-        $title-font: c,
-        $title-max-lines: 2
+        // $background-color: lighten(map-get($color-options, a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: $measure * 3,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $card-min-height: 500px,
+        // $hover-background-color: linear-gradient(217deg, map-get($color-options, e), map-get(
+        //                 $color-options,
+        //                 g
+        //             ) 70.71%),
+        // $hover-border-radius: $measure * 4,
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-title-color: map-get($color-options, f),
+        // $hover-title-underline-color: map-get($color-options, f),
+        // $hover-transform: translateY(-$measure),
+        // $link-class: g--link-01,
+        // $link-font: a,
+        // $shadow: 0 0 $measure * 2 map-get($color-options, a),
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: bold,
+        // $title-font: c,
+        // $title-max-lines: 2
     );
 }
 ```

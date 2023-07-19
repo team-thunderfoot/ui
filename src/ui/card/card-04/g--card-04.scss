@@ -1,25 +1,26 @@
-.g--card-04{
+.g--card-04 {
     @include make-card-04();
     @include make-card-04-modifier(
-        $background-color:lighten(map-get($color-options,a), 82%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
         $link-class: g--link-01,
         $title-color: map-get($color-options, a),
-        $title-font: c,
+        $title-font: c
     );
-    &--second{
+    &--second {
         @include make-card-04-modifier(
             $card-min-height: 500px,
-            $background-color: rgba(map-get($color-options, g), .7),
+            $background-color: rgba(map-get($color-options, g), 0.7),
             $subtitle-color: map-get($color-options, a),
             $title-color: map-get($color-options, a),
             $title-font: c,
             // $border-radius: false,
             $hover-background-color: map-get($color-options, g),
+            $hover-border-radius: $measure * 4,
             $hover-img-zoom: 1.2,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
             $hover-title-underline-color: map-get($color-options, b),
             $hover-transform: translateY(-$measure),
@@ -30,31 +31,32 @@
             $img-width: auto,
             $link-class: g--btn-01--second,
             // $link-font: false,
-            $shadow: 0 0 $measure*2 map-get($color-options, g),
+            $shadow: 0 0 $measure * 2 map-get($color-options, g),
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-           $text-align: left,
+            $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
-    &--third{
+    &--third {
         @include make-card-04-modifier(
-            $background-color: rgba(map-get($color-options, e), .2),
+            $background-color: rgba(map-get($color-options, e), 0.2),
             $border-color: map-get($color-options, e),
             $border-style: dotted,
             $border-width: 1px,
-            $border-radius: $measure*3 $measure*6,
+            $border-radius: $measure * 3 $measure * 6,
+            $hover-border-radius: 0px,
             $link-class: g--link-01,
             $title-color: map-get($color-options, a),
             $title-font: c,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
-    &--fourth{
+    &--fourth {
         @include make-card-04-modifier(
-            $background-color: rgba(map-get($color-options, g), .7),
+            $background-color: rgba(map-get($color-options, g), 0.7),
             $border-color: map-get($color-options, a),
             $border-style: solid,
             $border-width: 0 0 8px,
@@ -64,7 +66,7 @@
             // $border-radius: false,
             $hover-background-color: map-get($color-options, g),
             $hover-img-zoom: 1.2,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
@@ -77,9 +79,9 @@
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-           $text-align: left,
+            $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
 }

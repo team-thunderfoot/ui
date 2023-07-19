@@ -19,7 +19,9 @@
         />
     </div>
     <h3 class="g--card-10__title">Lorem ipsum</h3>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-10__link">This is a link</a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-10__link"
+        >This is a link</a
+    >
 </div>
 ```
 
@@ -35,8 +37,12 @@ If you want the subtitle to be a c--content, the HTML should be:
             class="g--card-10__media-wrapper__media g--lazy-01"
         />
     </div>
-    <div class="g--card-10__title c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-10__link">This is a link</a>
+    <div class="g--card-10__title c--content-a">
+        Solution description lorem ipsum dolor sit amet consectetur.
+    </div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-10__link"
+        >This is a link</a
+    >
 </div>
 ```
 
@@ -46,31 +52,32 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $background-color
-- $border-color
-- $border-radius
-- $border-style
-- $border-width
-- $card-min-height
-- $hover-background-color
-- $hover-img-zoom
-- $hover-shadow
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-fit
-- $img-height
-- $img-position
-- $img-width
-- $link-class
-- $link-font
-- $shadow
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-radius
+-   $hover-img-zoom
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-fit
+-   $img-height
+-   $img-position
+-   $img-width
+-   $link-class
+-   $link-font
+-   $shadow
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
@@ -85,6 +92,7 @@ It is not necessary to add aspect-ratio.
         // $border-width: 1px,
         // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
@@ -100,8 +108,8 @@ It is not necessary to add aspect-ratio.
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font: c,
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3
     );
 }

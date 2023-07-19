@@ -1,24 +1,25 @@
-.g--card-07{
+.g--card-07 {
     @include make-card-07();
     @include make-card-07-modifier(
-        $background-color: lighten(map-get($color-options,a), 82%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
         $border-radius: 0,
         $title-color: map-get($color-options, a),
-        $title-font: c,
+        $title-font: c
     );
-    &--second{
+    &--second {
         @include make-card-07-modifier(
             $card-min-height: 500px,
-            $background-color: rgba(map-get($color-options, g), .7),
+            $background-color: rgba(map-get($color-options, g), 0.7),
             $title-color: map-get($color-options, a),
             $title-font: c,
             $border-radius: 0,
             $hover-background-color: map-get($color-options, g),
+            $hover-border-radius: $measure * 4,
             $hover-img-zoom: 1.2,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
@@ -26,15 +27,16 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
-            $shadow: 0 0 $measure*2 map-get($color-options, g),
+            $shadow: 0 0 $measure * 2 map-get($color-options, g),
             $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
-    &--third{
+    &--third {
         @include make-card-07-modifier(
-            $background-color: linear-gradient(45deg, map-get($color-options, a), map-get($color-options, e)),
+            $background-color:
+                linear-gradient(45deg, map-get($color-options, a), map-get($color-options, e)),
             $border-color: map-get($color-options, a),
             $border-style: solid,
             $border-width: 1px,
@@ -50,10 +52,10 @@
             $img-width: auto,
             $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
-    &--fourth{
+    &--fourth {
         @include make-card-07-modifier(
             $background-color: transparent,
             $border-color: map-get($color-options, a),
@@ -64,7 +66,7 @@
             $border-radius: 0,
             $hover-background-color: map-get($color-options, h),
             $hover-img-zoom: 1.2,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             // $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
@@ -72,9 +74,9 @@
             $img-fit: cover,
             $img-position: center,
             $img-width: auto,
-           $text-align: left,
+            $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
 }

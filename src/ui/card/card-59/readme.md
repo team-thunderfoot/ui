@@ -48,6 +48,7 @@ If you want the subtitle to be a c--content, the HTML should be:
 -   border-radius
 -   card-min-height
 -   hover-background-img-zoom
+-   hover-border-radius
 -   hover-mask-color
 -   hover-shadow
 -   hover-title-color
@@ -69,26 +70,27 @@ If you want the subtitle to be a c--content, the HTML should be:
 .g--card-59 {
     @include make-card-59();
     @include make-card-59-modifier(
-        $background-color: map-get($color-options, a),
-        $background-position: center,
-        $background-size: cover,
-        $border-radius: $measure * 2,
-        $card-min-height: 100px,
-        $hover-background-img-zoom: 1.2,
-        $hover-mask-color: rgba(map-get($color-options, b), 0.8),
-        $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
-        $hover-title-color: rgba(map-get($color-options, e), 0.8),
-        $hover-title-underline-color: rgba(map-get($color-options, e), 0.8),
-        $hover-transform: translateY(-$measure),
-        $link-class: g--link-01,
-        $link-font: f,
-        $mask-color: rgba(map-get($color-options, b), 0.5),
-        $shadow: 0 0 $measure * 2 map-get($color-options, a),
-        $text-align: left,
-        $title-color: map-get($color-options, a),
-        $title-font-weight: bold,
-        $title-font: d,
-        $title-max-lines: 3
+        // $background-color: map-get($color-options, a),
+        // $background-position: center,
+        // $background-size: cover,
+        // $border-radius: $measure * 2,
+        // $card-min-height: 100px,
+        // $hover-background-img-zoom: 1.2,
+        // $hover-border-radius: $measure * 4,
+        // $hover-mask-color: rgba(map-get($color-options, b), 0.8),
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-title-color: rgba(map-get($color-options, e), 0.8),
+        // $hover-title-underline-color: rgba(map-get($color-options, e), 0.8),
+        // $hover-transform: translateY(-$measure),
+        // $link-class: g--link-01,
+        // $link-font: f,
+        // $mask-color: rgba(map-get($color-options, b), 0.5),
+        // $shadow: 0 0 $measure * 2 map-get($color-options, a),
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: bold,
+        // $title-font: d,
+        // $title-max-lines: 3
     );
 }
 ```

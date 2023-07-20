@@ -20,7 +20,9 @@
     </div>
     <h3 class="g--card-05__title">Lorem ipsum</h3>
     <p class="g--card-05__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-05__link">This is a link</a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-05__link"
+        >This is a link</a
+    >
 </div>
 ```
 
@@ -37,8 +39,12 @@ If you want the subtitle to be a c--content, the HTML should be:
         />
     </div>
     <h3 class="g--card-05__title">Lorem ipsum</h3>
-    <div class="g--card-05__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-05__link">This is a link</a>
+    <div class="g--card-05__subtitle c--content-a">
+        Solution description lorem ipsum dolor sit amet consectetur.
+    </div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-05__link"
+        >This is a link</a
+    >
 </div>
 ```
 
@@ -48,26 +54,27 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $hover-img-zoom
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-fit
-- $img-height
-- $img-position
-- $img-width
-- $link-class
-- $link-font
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $hover-img-border-radius
+-   $hover-img-zoom
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-fit
+-   $img-height
+-   $img-position
+-   $img-width
+-   $link-class
+-   $link-font
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
@@ -75,6 +82,7 @@ It is not necessary to add aspect-ratio.
 .g--card-05 {
     @include make-card-05();
     @include make-card-05-modifier(
+        // $hover-img-border-radius: $measure
         // $hover-img-zoom: 1.2,
         // $hover-title-color: map-get($color-options, h),
         // $hover-title-underline-color: map-get($color-options, h),

@@ -23,6 +23,7 @@
 }
 
 @mixin make-card-02-modifier(
+    $hover-img-border-radius: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
@@ -98,6 +99,20 @@
         }
     }
 
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-02 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
     @if $hover-img-zoom {
         @media all and (hover: hover) {
             &:hover,
@@ -113,6 +128,7 @@
             }
         }
     }
+
     @if $text-align == "center" {
         text-align: center;
         .g--card-02 {
@@ -162,6 +178,9 @@
             }
             @if $img-height {
                 height: $img-height;
+            }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
             }
             &__media {
                 @if $img-aspect-ratio {

@@ -59,7 +59,9 @@ It is not necessary to add aspect-ratio.
 -   $border-width
 -   $card-min-height
 -   $hover-background-color
+-   $hover-border-color
 -   $hover-border-radius
+-   $hover-img-border-radius
 -   $hover-img-zoom
 -   $hover-shadow
 -   $hover-title-color
@@ -92,7 +94,9 @@ It is not necessary to add aspect-ratio.
         // $border-width: 1px,
         // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
         // $hover-border-radius: $measure * 4,
+        // $hover-img-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),

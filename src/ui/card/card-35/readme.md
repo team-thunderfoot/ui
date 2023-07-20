@@ -11,12 +11,22 @@
 ```html
 <div class="g--card-35">
     <div class="g--card-35__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-35__media-wrapper__media g--lazy-01" />
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-35__media-wrapper__media g--lazy-01"
+        />
     </div>
     <div class="g--card-35__wrapper">
         <p class="g--card-35__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
-        <p class="g--card-35__wrapper__title">Card-35 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-35__wrapper__link">This is a link</a>
+        <p class="g--card-35__wrapper__title">
+            Card-35 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam
+            consectetur pretium fringilla metus.
+        </p>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-35__wrapper__link"
+            >This is a link</a
+        >
     </div>
 </div>
 ```
@@ -27,34 +37,36 @@ it is recommended to add aspect ratio variables or img height variables, if we d
 
 ## Editable variables
 
-- $background-color
-- $border-color
-- $border-radius
-- $border-style
-- $border-width
-- $card-min-height
-- $full-image-height
-- $hover-background-color
-- $hover-img-zoom
-- $hover-shadow
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $img-aspect-ratio-width
-- $img-aspect-ratio-height
-- $img-height
-- $img-position
-- $link-class
-- $link-font
-- $meta-color
-- $meta-font
-- $meta-font-weight
-- $shadow
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-min-height
+-   $full-image-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-img-zoom
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio-width
+-   $img-aspect-ratio-height
+-   $img-height
+-   $img-position
+-   $link-class
+-   $link-font
+-   $meta-color
+-   $meta-font
+-   $meta-font-weight
+-   $shadow
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## use
 
@@ -70,6 +82,8 @@ it is recommended to add aspect ratio variables or img height variables, if we d
         // $card-min-height: 500px,
         // $full-image-height: false,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.1,
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, e),

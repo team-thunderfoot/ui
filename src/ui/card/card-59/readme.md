@@ -45,9 +45,13 @@ If you want the subtitle to be a c--content, the HTML should be:
 -   background-color
 -   background-position
 -   background-size
--   border-radius
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
 -   card-min-height
 -   hover-background-img-zoom
+-   hover-border-color
 -   hover-border-radius
 -   hover-mask-color
 -   hover-shadow
@@ -73,9 +77,13 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $background-color: map-get($color-options, a),
         // $background-position: center,
         // $background-size: cover,
-        // $border-radius: $measure * 2,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
         // $card-min-height: 100px,
         // $hover-background-img-zoom: 1.2,
+        // $hover-border-color: map-get($color-options, f),
         // $hover-border-radius: $measure * 4,
         // $hover-mask-color: rgba(map-get($color-options, b), 0.8),
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),

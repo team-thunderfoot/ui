@@ -62,6 +62,7 @@ If you want the subtitle to be a c--content, the HTML should be:
 -   $card-min-height
 -   $full-image-height
 -   $hover-background-color
+-   $hover-border-color
 -   $hover-border-radius
 -   $hover-img-zoom
 -   $hover-shadow
@@ -95,6 +96,7 @@ If you want the subtitle to be a c--content, the HTML should be:
         // $card-min-height: 500px,
         // $full-image-height: true,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
         // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),

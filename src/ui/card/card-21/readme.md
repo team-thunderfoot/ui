@@ -14,7 +14,10 @@
         <p class="g--card-21__hd__meta">Lorem ipsum | Lorem ipsum</p>
         <p class="g--card-21__hd__author">By Author</p>
     </div>
-    <p class="g--card-21__title">Card-21 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+    <p class="g--card-21__title">
+        Card-21 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam
+        consectetur pretium fringilla metus.
+    </p>
     <div class="g--card-21__list-group">
         <div class="g--card-21__list-group__list-item">Category</div>
         <div class="g--card-21__list-group__list-item">Category</div>
@@ -24,29 +27,31 @@
 
 ## Editable variables
 
-- $author-font
-- $author-font-weight
-- $author-color
-- $background-color
-- $border-color
-- $border-style
-- $border-width
-- $border-radius
-- $card-min-height
-- $hover-background-color
-- $hover-shadow
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $meta-color
-- $meta-font
-- $meta-font-weight
-- $pill-class
-- $shadow
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $author-font
+-   $author-font-weight
+-   $author-color
+-   $background-color
+-   $border-color
+-   $border-style
+-   $border-width
+-   $border-radius
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $meta-color
+-   $meta-font
+-   $meta-font-weight
+-   $pill-class
+-   $shadow
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## use
 
@@ -64,6 +69,8 @@
         // $border-radius: 0,
         // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, b),
         // $hover-title-underline-color: map-get($color-options, h),

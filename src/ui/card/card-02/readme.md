@@ -48,6 +48,7 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
+-   $hover-img-border-radius
 -   $hover-img-zoom
 -   $hover-title-color
 -   $hover-title-underline-color
@@ -73,6 +74,7 @@ It is not necessary to add aspect-ratio.
 .g--card-02 {
     @include make-card-02();
     @include make-card-02-modifier(
+        // $hover-img-border-radius: $measure,
         // $hover-img-zoom: 1.2,
         // $hover-title-color: map-get($color-options, h),
         // $hover-title-underline-color: map-get($color-options, h),

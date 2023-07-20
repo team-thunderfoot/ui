@@ -28,6 +28,7 @@
 }
 
 @mixin make-card-30-modifier(
+    $hover-img-border-radius: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
@@ -45,7 +46,6 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
-
     @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
@@ -108,6 +108,20 @@
         }
     }
 
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-30 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
     @if $hover-img-zoom {
         .g--card-30 {
             &__media-wrapper {
@@ -158,8 +172,11 @@
     .g--card-30 {
         &__media-wrapper {
             @if $img-border-radius {
-              border-radius: $img-border-radius;
-              overflow: hidden;
+                border-radius: $img-border-radius;
+                overflow: hidden;
+            }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
             }
             &__media {
                 @if $img-aspect-ratio {
@@ -207,7 +224,8 @@
                     text-decoration-color: transparent;
                 }
                 @if $hover-title-color and $hover-title-underline-color {
-                    transition: color $time-b $ease-standard-a, text-decoration-color $time-b $ease-standard-a;
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
                 } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 } @else if $hover-title-underline-color {

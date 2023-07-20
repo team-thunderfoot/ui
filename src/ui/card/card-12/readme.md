@@ -65,7 +65,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 -   $background-color
 -   $background-position
 -   $background-size
+-   $border-color
 -   $border-radius
+-   $border-style
+-   $border-width
 -   $card-min-height
 -   $hover-background-img-zoom
 -   $hover-border-radius
@@ -99,10 +102,15 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $background-color: map-get($color-options, f),
         // $background-position: center
         // $background-size: cover,
-        // $border-radius: $measure,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
         // $card-min-height: 500px,
         // $hover-background-img-zoom: 2,
+        // $hover-border-color: map-get($color-options, f),
         // $hover-border-radius: $measure * 4,
+        // $hover-img-border-radius: $measure * 2,
         // $hover-img-zoom: 1.2,
         // $hover-mask-color: rgba(map-get($color-options, a), .5),
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),

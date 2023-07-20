@@ -42,6 +42,8 @@
     $card-min-height: false,
     $full-image-height: false,
     $hover-background-color: false,
+    $hover-border-radius: false,
+    $hover-img-border-radius: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
@@ -63,23 +65,69 @@
     @if $border-radius {
         border-radius: $border-radius;
     }
+
     @if $border-color {
         border-color: $border-color;
     }
+
     @if $border-style {
         border-style: $border-style;
     }
+
     @if $border-width {
         border-width: $border-width;
     }
+
     @if $card-min-height {
         min-height: $card-min-height;
     }
+
     @if $shadow {
         box-shadow: $shadow;
     }
 
-    @if $hover-shadow and $hover-transform {
+    @if $hover-border-radius and $hover-shadow and $hover-transform {
+        transition: border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a,
+            transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-radius: $hover-border-radius;
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-border-radius and $hover-shadow {
+        transition: border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-radius: $hover-border-radius;
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-border-radius and $hover-transform {
+        transition: border-radius $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-radius: $hover-border-radius;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-border-radius {
+        transition: border-radius $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                border-radius: $hover-border-radius;
+            }
+        }
+    } @else if $hover-shadow and $hover-transform {
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
@@ -108,6 +156,7 @@
             }
         }
     }
+
     @if $hover-background-color {
         .g--card-25 {
             &__wrapper {
@@ -185,6 +234,25 @@
                         &__title {
                             text-decoration-color: $hover-title-underline-color;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-border-radius {
+        .g--card-25 {
+            &__media-wrapper {
+                transition: border-radius $time-b $ease-standard-a;
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-25 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
                     }
                 }
             }
@@ -295,7 +363,8 @@
                     text-decoration-color: transparent;
                 }
                 @if $hover-title-color and $hover-title-underline-color {
-                    transition: color $time-b $ease-standard-a, text-decoration-color $time-b $ease-standard-a;
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
                 } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 } @else if $hover-title-underline-color {

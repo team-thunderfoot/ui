@@ -17,22 +17,27 @@
 
 ## Editable variables
 
-- $background-color
-- $border-radius
-- $btn-class
-- $btn-font
-- $cta-min-height
-- $hover-background-color
-- $hover-shadow
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $shadow
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $btn-class
+-   $btn-font
+-   $cta-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $shadow
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
@@ -43,11 +48,16 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-cta-01();
     @include make-cta-01-modifier(
         // $background-color: lighten(map-get($color-options, a), 82%),
-        // $border-radius: $measure*2,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
         // $btn-class: g--btn-01,
         // $btn-font: d,
         // $cta-min-height: 500px,
         // $hover-background-color: map-get($color-options, h),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
         // $hover-title-color: map-get($color-options, e),
         // $hover-title-underline-color: map-get($color-options, h),
@@ -55,8 +65,8 @@ To use it we have to import the css of the $btn-class in the entry
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, a),
-        // $title-font: c,
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3,
     );
 }

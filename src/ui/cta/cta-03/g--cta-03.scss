@@ -2,6 +2,10 @@
     @include make-cta-03();
     @include make-cta-03-modifier(
         $background-color: lighten(map-get($color-options, a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
         $btn-class: g--btn-01,
         $subtitle-color: map-get($color-options, a),
         $subtitle-font: d,
@@ -9,7 +13,9 @@
         $title-font: b,
         // $border-radius: $measure*8,
         // $btn-font: false,
-        // $hover-background-color: false,
+        // $hover-background-color: map-get($color-options, h),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-shadow: false,
         // $hover-subtitle-color: false,
         // $hover-title-color: false,

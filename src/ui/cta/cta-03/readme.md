@@ -23,28 +23,32 @@
 
 ## Editable variables
 
-- $background-color
-- $border-radius
-- $btn-class
-- $btn-font
-- $cta-min-height
-- $hover-background-color
-- $hover-border-radius
-- $hover-shadow
-- $hover-subtitle-color
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $shadow
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $btn-class
+-   $btn-font
+-   $cta-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-shadow
+-   $hover-subtitle-color
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $shadow
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
@@ -55,12 +59,16 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-cta-03();
     @include make-cta-03-modifier(
         // $background-color: rgba(map-get($color-options, a), .5),
+        // $border-color: map-get($color-options, a),
         // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
         // $btn-class: g--btn-02,
         // $btn-font: d,
         // $cta-min-height: 500px,
-        // $hover-background-color: map-get($color-options, e),
-        // $hover-border-radius: $measure*3,
+        // $hover-background-color: map-get($color-options, h),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, c),
         // $hover-title-color: map-get($color-options, e),
@@ -68,13 +76,13 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-transform: translateY(-$measure),
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font: f,
         // $subtitle-font-weight: 600,
+        // $subtitle-font: f,
         // $subtitle-max-lines: 2,
         // $text-align: left,
         // $title-color: map-get($color-options, b),
-        // $title-font: c,
         // $title-font-weight: 400,
+        // $title-font: c,
         // $title-max-lines: 3,
     );
 }

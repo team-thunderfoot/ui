@@ -59,6 +59,7 @@
     $border-width: false,
     $border-radius: false,
     $card-min-height: false,
+    $hover-background-color: false,
     $hover-background-img-zoom: false,
     $hover-border-color: false,
     $hover-border-radius: false,
@@ -133,6 +134,7 @@
 
     // Handling hover styles
     $hover-options: (
+        "background-color": $hover-background-color,
         "border-color": $hover-border-color,
         "border-radius": $hover-border-radius,
         "box-shadow": $hover-shadow,

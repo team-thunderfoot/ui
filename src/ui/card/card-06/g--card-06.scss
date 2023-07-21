@@ -40,7 +40,7 @@
             $border-radius: 0,
             $border-width: 1px,
             $hover-background-img-zoom: 2,
-            $hover-border-radius: 0px,
+            $hover-border-radius: $measure * 4,
             $hover-img-zoom: 1.2,
             $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
             $hover-title-color: map-get($color-options, h),

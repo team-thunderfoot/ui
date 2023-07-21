@@ -48,6 +48,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $company-font-weight
 -   $hover-company-color
 -   $hover-company-underline-color
+-   $hover-img-border-radius
 -   $hover-img-zoom
 -   $hover-mask-color
 -   $hover-person-color
@@ -89,6 +90,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $company-font: g,
         // $hover-company-color: map-get($color-options, e),
         // $hover-company-underline-color: map-get($color-options, e),
+        // $hover-img-border-radius: $measure * 2,
         // $hover-img-zoom: 1.2,
         // $hover-mask-color: transparent,
         // $hover-person-color: map-get($color-options, e),

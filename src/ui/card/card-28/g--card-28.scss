@@ -1,6 +1,7 @@
 .g--card-28 {
     @include make-card-28();
     @include make-card-28-modifier(
+        $hover-img-border-radius: $measure * 2,
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
@@ -25,7 +26,7 @@
             $img-height: auto,
             $img-position: center,
             $pill-class: g--pill-01,
-           $text-align: left,
+            $text-align: left,
             $title-color: map-get($color-options, a),
             $title-font-weight: 400,
             $title-font: c,

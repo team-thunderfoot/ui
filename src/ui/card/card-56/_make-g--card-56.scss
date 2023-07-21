@@ -63,6 +63,7 @@
     $hover-mask-color: false,
     $hover-quote-color: false,
     $hover-quote-underline-color: false,
+    $hover-img-border-radius: false,
     $hover-img-zoom: false,
     $hover-person-color: false,
     $hover-person-underline-color: false,
@@ -301,6 +302,20 @@
         }
     }
 
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-56 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
     @if $hover-img-zoom {
         @media all and (hover: hover) {
             &:hover,
@@ -381,6 +396,10 @@
                 &::after {
                     transition: background $time-b $ease-standard-a;
                 }
+            }
+
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
             }
 
             &__media {

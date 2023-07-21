@@ -27,8 +27,9 @@
 }
 
 @mixin make-card-48-modifier(
+    $hover-img-border-radius: false,
     $hover-img-background-color: false,
-    $hover-img-zoom:false,
+    $hover-img-zoom: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
     $hover-transform: false,
@@ -46,7 +47,7 @@
     $text-align: false,
     $title-color: false,
     $title-font: false,
-    $title-font-weight: false,
+    $title-font-weight: false
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -84,6 +85,20 @@
         }
     }
 
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-48 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
     @if $hover-img-background-color {
         .g--card-48 {
             &__media-wrapper {
@@ -103,7 +118,7 @@
             }
         }
     }
-    
+
     @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
@@ -113,8 +128,8 @@
                     &:hover,
                     &:focus,
                     &:active {
-                        .g--card-48{
-                            &__title{
+                        .g--card-48 {
+                            &__title {
                                 color: $hover-title-color;
                                 text-decoration-color: $hover-title-underline-color;
                             }
@@ -128,8 +143,8 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-48{
-                    &__title{
+                .g--card-48 {
+                    &__title {
                         color: $hover-title-color;
                     }
                 }
@@ -140,8 +155,8 @@
             &:hover,
             &:focus,
             &:active {
-                .g--card-48{
-                    &__title{
+                .g--card-48 {
+                    &__title {
                         text-decoration-color: $hover-title-underline-color;
                     }
                 }
@@ -149,9 +164,9 @@
         }
     }
 
-    @if $hover-transform{
+    @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -192,6 +207,9 @@
             }
             @if $img-background-color {
                 background: $img-background-color;
+            }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
             }
 
             &__media {
@@ -244,7 +262,8 @@
                 text-decoration-color: transparent;
             }
             @if $hover-title-color and $hover-title-underline-color {
-                transition: color $time-b $ease-standard-a, text-decoration-color $time-b $ease-standard-a;
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
             } @else if $hover-title-color {
                 transition: color $time-b $ease-standard-a;
             } @else if $hover-title-underline-color {

@@ -11,14 +11,23 @@
 ```html
 <div class="g--card-41">
     <div class="g--card-41__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-41__media-wrapper__media g--lazy-01" />
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-41__media-wrapper__media g--lazy-01"
+        />
     </div>
     <div class="g--card-41__wrapper">
         <div class="g--card-41__wrapper__hd">
             <p class="g--card-41__wrapper__hd__meta">Lorem ipsum | dolor sit</p>
             <p class="g--card-41__wrapper__hd__author">By Author</p>
         </div>
-        <h2 class="g--card-41__wrapper__bd">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus nostrum aspernatur quo ratione eveniet! Aut!</h2>
+        <h2 class="g--card-41__wrapper__bd">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci
+            vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus
+            nostrum aspernatur quo ratione eveniet! Aut!
+        </h2>
         <div class="g--card-41__wrapper__ft">
             <span class="g--card-41__wrapper__ft__badge">Category</span>
             <span class="g--card-41__wrapper__ft__badge">Category</span>
@@ -28,17 +37,27 @@
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
+
 ```html
 <div class="g--card-41">
     <div class="g--card-41__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-41__media-wrapper__media g--lazy-01" />
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-41__media-wrapper__media g--lazy-01"
+        />
     </div>
     <div class="g--card-41__wrapper">
         <div class="g--card-41__wrapper__hd">
             <p class="g--card-41__wrapper__hd__meta">Lorem ipsum | dolor sit</p>
             <p class="g--card-41__wrapper__hd__author">By Author</p>
         </div>
-        <div class="g--card-41__wrapper__bd c--content-a">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus nostrum aspernatur quo ratione eveniet! Aut!</div>
+        <div class="g--card-41__wrapper__bd c--content-a">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque alias sit adipisci
+            vero ab, repellendus quam delectus recusandae, maxime officiis quisquam porro possimus
+            nostrum aspernatur quo ratione eveniet! Aut!
+        </div>
         <div class="g--card-41__wrapper__ft">
             <span class="g--card-41__wrapper__ft__badge">Category</span>
             <span class="g--card-41__wrapper__ft__badge">Category</span>
@@ -53,39 +72,41 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $author-color
-- $author-font
-- $author-font-weight
-- $background-color
-- $border-color
-- $border-radius
-- $border-style
-- $border-width
-- $breakpoint
-- $card-min-height
-- $hover-background-color
-- $hover-img-zoom
-- $hover-shadow
-- $hover-title-color
-- $hover-title-underline-color
-- $hover-transform
-- $img-aspect-ratio-responsive
-- $img-height-responsive
-- $img-position
-- $meta-color
-- $meta-font
-- $meta-font-weight
-- $pill-class
-- $shadow
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $author-color
+-   $author-font
+-   $author-font-weight
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $breakpoint
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-img-zoom
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio-responsive
+-   $img-height-responsive
+-   $img-position
+-   $meta-color
+-   $meta-font
+-   $meta-font-weight
+-   $pill-class
+-   $shadow
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 ```scss
-.g--card-41{
+.g--card-41 {
     @include make-card-41();
     @include make-card-41-modifier(
         // $author-color: map-get($color-options, a),
@@ -99,6 +120,8 @@ It is not necessary to add aspect-ratio.
         // $breakpoint: $tablets,
         // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),

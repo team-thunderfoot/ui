@@ -1,7 +1,10 @@
 .g--card-49 {
     @include make-card-49();
     @include make-card-49-modifier(
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
         $hover-img-background-color: map-get($color-options, g),
+        // $hover-img-border-radius: $measure * 2,
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, g),
         $hover-transform: translateY(-5%),
@@ -14,12 +17,12 @@
         // $img-object-fit: false,
         // $img-position: false,
         // $img-width: false,
-        $subtitle-color: lighten(map-get($color-options,a), 50%),
+        $subtitle-color: lighten(map-get($color-options, a), 50%),
         $subtitle-font-weight: 600,
         $subtitle-font: f,
         $text-align: left,
         $title-color: map-get($color-options, a),
         $title-font-weight: 600,
-        $title-font: f,
+        $title-font: f
     );
 }

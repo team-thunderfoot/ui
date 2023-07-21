@@ -3,6 +3,7 @@
     @include make-card-54-modifier(
         $background-color: rgba(map-get($color-options, a), 0.1),
         $border-color: map-get($color-options, a),
+        // $hover-border-radius: $measure * 4,
         $border-style: solid,
         $border-width: 1px,
         $hover-icon-transform: translateX(4px),
@@ -14,13 +15,13 @@
         $icon-width: 42px,
         $title-color: map-get($color-options, a),
         $title-font-weight: 400,
-        $title-font: c,
+        $title-font: c
     );
     &--second {
         @include make-card-54-modifier(
             $background-color: rgba(map-get($color-options, g), 0.3),
             $border-color: map-get($color-options, g),
-            $border-radius: $measure*4,
+            $border-radius: $measure * 4,
             $border-style: double,
             $border-width: 4px,
             $hover-background-color: rgba(map-get($color-options, g), 0.5),
@@ -30,13 +31,13 @@
             $hover-title-underline-color: map-get($color-options, b),
             $hover-icon-border-color: map-get($color-options, g),
             $hover-icon-color: map-get($color-options, g),
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, g),
             $hover-title-color: map-get($color-options, b),
             $hover-transform: translateY(-$measure),
             $icon-align: top,
             $icon-color-fill: map-get($color-options, a),
-            $icon-width: $measure*3,
-            $text-align: right,
+            $icon-width: $measure * 3,
+            $text-align: right
         );
     }
 }

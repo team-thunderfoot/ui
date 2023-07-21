@@ -6,7 +6,7 @@
     justify-content: space-between;
 
     &__bd {
-        &__title{
+        &__title {
             margin-bottom: $measure;
             // width: fit-content;
         }
@@ -17,7 +17,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        &__artwork{
+        &__artwork {
             width: 50%;
             height: 60%;
         }
@@ -59,7 +59,7 @@
     $text-align: false,
     $title-color: false,
     $title-font: false,
-    $title-font-weight: false,
+    $title-font-weight: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -80,333 +80,30 @@
         box-shadow: $shadow;
     }
 
-    @if $hover-border-color and $hover-border-radius and $hover-background-color and $hover-shadow and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
             }
-        }
-    } @else if $hover-border-color and $hover-border-radius and $hover-background-color and $hover-shadow  {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-border-color and $hover-border-radius and $hover-background-color and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color and $hover-border-radius and $hover-shadow and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color and $hover-background-color and $hover-shadow and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color and $hover-border-radius and $hover-background-color {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-border-color and $hover-border-radius and $hover-shadow {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-border-color and $hover-border-radius and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color and $hover-background-color and $hover-shadow {
-        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-border-color and $hover-background-color and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color and $hover-shadow and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color and $hover-border-radius {
-        transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                border-radius: $hover-border-radius;
-            }
-        }
-    } @else if $hover-border-color and $hover-background-color {
-        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-border-color and $hover-shadow {
-        transition: border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-border-color and $hover-transform {
-        transition: border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-color {
-        transition: border-color $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $hover-border-color;
-            }
-        }
-    } @else if $hover-border-radius and $hover-background-color and $hover-shadow and $hover-transform {
-        transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-radius and $hover-background-color and $hover-shadow {
-        transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-border-radius and $hover-background-color and $hover-transform {
-        transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-radius and $hover-shadow and $hover-transform {
-        transition: border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-radius and $hover-background-color {
-        transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-border-radius and $hover-shadow {
-        transition: border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-border-radius and $hover-transform {
-        transition: border-radius $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color and $hover-shadow {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-color and $hover-transform {
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color {
-        transition: background $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-border-radius {
-        transition: border-radius $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-radius: $hover-border-radius;
-            }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
     }
 
@@ -506,7 +203,8 @@
 
     @if $hover-icon-transform and $hover-icon-border-color and $hover-icon-background {
         &__wrapper {
-            transition: transform $time-b $ease-standard-a, border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
+            transition: transform $time-b $ease-standard-a, border-color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a;
         }
         @media all and (hover: hover) {
             &:hover,
@@ -640,7 +338,7 @@
     .g--card-54 {
         &__bd {
             @if $icon-width {
-                width: calc(100% - #{$icon-width} - #{$measure*4});
+                width: calc(100% - #{$icon-width} - #{$measure * 4});
             }
             &__title {
                 @if $title-color {
@@ -657,7 +355,8 @@
                     text-decoration-color: transparent;
                 }
                 @if $hover-title-color and $hover-title-underline-color {
-                    transition: color $time-b $ease-standard-a, text-decoration $time-b $ease-standard-a;
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration $time-b $ease-standard-a;
                 } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
                 } @else if $hover-title-underline-color {
@@ -677,7 +376,7 @@
                 }
             }
         }
-        &__wrapper{
+        &__wrapper {
             @if $icon-background {
                 background: $icon-background;
             }
@@ -700,8 +399,8 @@
             @if $icon-top {
                 margin-top: $icon-top;
             }
-            &__artwork{
-                *{
+            &__artwork {
+                * {
                     @if $icon-color-fill {
                         fill: $icon-color-fill;
                     }

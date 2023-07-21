@@ -12,8 +12,10 @@
         $content-font-weight: 400,
         $title-font-weight: 600,
         $hover-background-color: map-get($color-options, g),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
         $hover-img-zoom: 1.2,
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
+        $hover-shadow: 0 0 $measure * 2 map-get($color-options, g),
         $hover-title-color: map-get($color-options, h),
         $hover-transform: translateY(-$measure),
         $img-aspect-ratio-responsive: 1.7,
@@ -26,8 +28,8 @@
         $title-color: map-get($color-options, a),
         $person-color: map-get($color-options, a),
         $position-color: map-get($color-options, a),
-        $background-color: lighten(map-get($color-options,a), 82%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $text-align: left,
-        $breakpoint: $tablets,
+        $breakpoint: $tablets
     );
 }

@@ -4,12 +4,12 @@
 
 ![alt text][btn-05]
 
-[btn-05]: /src/img/global-components/btn/g--btn-05.png
+[btn-05]: /src/img/global-components/btn/g--btn-05.jpg
 
 ## Html for a button
 
 ```html
-<button class="g--btn-05">btn 03
+<button class="g--btn-05">btn 05
     <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
     </svg>
@@ -19,7 +19,7 @@
 ## Html for a btn
 
 ```html
-<a href="#" class="g--btn-05" target="_blank" rel="noopener noreferrer">btn 03 btn
+<a href="#" class="g--btn-05" target="_blank" rel="noopener noreferrer">btn 05 btn
     <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
     </svg>

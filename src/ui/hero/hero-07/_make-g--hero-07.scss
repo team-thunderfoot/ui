@@ -2,7 +2,6 @@
     display: block;
     width: 100%;
     display: flex;
-    min-height: 100vh;
 
     &__right-items,
     &__left-items {
@@ -47,11 +46,11 @@
 @mixin make-hero-07-modifier(
     $background-color: false,
     $breakpoint: false,
-    $header-height: false,
     $img-border-radius: false,
     $img-height: false,
     $img-object-fit: false,
     $img-position: false,
+    $min-height: false,
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
@@ -63,10 +62,8 @@
     @if $background-color {
         background-color: $background-color;
     }
-
-    @if $header-height {
-        min-height: calc(100vh - #{$header-height});
-        margin-top: $header-height;
+    @if $min-height {
+        min-height: $min-height;
     }
 
     @if $text-align == "center" {

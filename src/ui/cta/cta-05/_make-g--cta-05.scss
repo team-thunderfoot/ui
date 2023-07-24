@@ -68,6 +68,7 @@
     $hover-title-color: false,
     $hover-title-underline-color: false,
     $hover-transform: false,
+    $img-background-color: false,
     $img-position: false,
     $one-col-bkt: false,
     $shadow: false,
@@ -269,45 +270,50 @@
     }
 
     .g--cta-05 {
-        @if $one-col-bkt {
-            &__wrapper {
-                @if $background-color {
-                    background: $background-color;
-                }
+        &__wrapper {
+            @if $background-color {
+                background: $background-color;
+            }
 
-                @if $hover-background-color {
-                    transition: background $time-b $ease-standard-a;
-                }
+            @if $hover-background-color {
+                transition: background $time-b $ease-standard-a;
+            }
 
+            @if $one-col-bkt {
                 @media all and ($viewport-type: $one-col-bkt) {
                     width: 100%;
-                }
-
-                &__title {
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        margin-bottom: $measure * 2;
-                    }
-                }
-
-                &__subtitle {
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        margin-bottom: $measure * 4;
-                    }
                 }
             }
 
-            &__media-wrapper {
+            &__title {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    margin-bottom: $measure * 2;
+                }
+            }
+
+            &__subtitle {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    margin-bottom: $measure * 4;
+                }
+            }
+        }
+
+        &__media-wrapper {
+            @if $img-background-color {
+                background: $img-background-color;
+            }
+            @if $one-col-bkt {
                 @media all and ($viewport-type: $one-col-bkt) {
                     width: 100%;
                 }
+            }
 
-                &__media {
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                        height: auto;
-                    }
+            &__media {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    height: auto;
                 }
             }
         }
@@ -315,7 +321,6 @@
         @if $one-col-bkt and $change-order-reponsive {
             &__wrapper {
                 @media all and ($viewport-type: $one-col-bkt) {
-                    width: 100%;
                     order: 1;
                 }
             }
@@ -324,11 +329,7 @@
         @if $one-col-bkt and $hide-img-reponsive {
             &__media-wrapper {
                 @media all and ($viewport-type: $one-col-bkt) {
-                    position: absolute;
-                    height: 0;
-                    overflow: hidden;
-                    pointer-events: none;
-                    visibility: hidden;
+                    display: none;
                 }
             }
         }

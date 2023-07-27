@@ -50,6 +50,7 @@ When there's an error in the select the class "g--form-select-01--error" should 
 - $option-background
 - $option-color
 - $text-color
+- $text-color-valid
 
 ## Use
 
@@ -72,7 +73,8 @@ When there's an error in the select the class "g--form-select-01--error" should 
         // $font-weight: 500
         // $option-background: map-get($color-options, g),
         // $option-color: map-get($color-options, g),
-        // $text-color: map-get($color-options, a),
+        // $text-color: rgba(map-get($color-options, a), .2),
+        // $text-color-valid: map-get($color-options, a),
     );
 }
 ```

@@ -35,6 +35,7 @@
     $option-background: false,
     $option-color: false,
     $text-color: false,
+    $text-color-valid: false,
 ) {
     @if $artwork-url{
         &::after{
@@ -77,6 +78,11 @@
             @if $font-size-mobile {
                 @media all and ($viewport-type: $mobile){
                     font-size: $font-size-mobile;
+                }
+            }
+            @if $text-color-valid {
+                &:valid{
+                    color: $text-color-valid !important;
                 }
             }
             @if $border-color-focus {

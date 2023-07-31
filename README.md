@@ -18,7 +18,7 @@ Import all mixins before any global component
 @import '@/node_modules/@teamthunderfoot/ui/src/mixins';
 ```
 
-### Wordpres
+### Wordpress
 
 Create one SCSS entry for each JS entry and import global mixins before any global component
 

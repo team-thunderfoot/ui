@@ -81,6 +81,32 @@
         font-weight: $font-weight;
     }
 
+    svg {
+        @if $artwork-top {
+            margin-top: $artwork-top;
+        }
+        @if $artwork-width {
+            width: $artwork-width;
+        }
+        @if $artwork-height {
+            height: $artwork-height;
+        }
+        * {
+            @if $artwork-color-fill {
+                fill: $artwork-color-fill;
+            }
+            @if $artwork-color-stroke {
+                stroke: $artwork-color-stroke;
+            }
+            @if $hover-artwork-color and $artwork-color-fill {
+                transition: fill $ease-standard-a $time-b;
+            }
+            @if $hover-artwork-color and $artwork-color-stroke {
+                transition: stroke $ease-standard-a $time-b;
+            }
+        }
+    }
+
     @if $hover-background-color or
         $hover-border-color or
         $hover-border-radius or
@@ -117,16 +143,8 @@
                 @if $hover-text-color {
                     color: $hover-text-color;
                 }
-            }
-        }
-    }
-    @media (hover: hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            .g--btn-03 {
                 svg {
-                    path {
+                    * {
                         @if $hover-artwork-color and $artwork-color-fill {
                             fill: $hover-artwork-color;
                         }
@@ -134,34 +152,6 @@
                             stroke: $hover-artwork-color;
                         }
                     }
-                }
-            }
-        }
-    }
-
-    .g--btn-03 {
-        svg {
-            @if $artwork-top {
-                margin-top: $artwork-top;
-            }
-            @if $artwork-width {
-                width: $artwork-width;
-            }
-            @if $artwork-height {
-                height: $artwork-height;
-            }
-            path {
-                @if $artwork-color-fill {
-                    fill: $artwork-color-fill;
-                }
-                @if $artwork-color-stroke {
-                    stroke: $artwork-color-stroke;
-                }
-                @if $hover-artwork-color and $artwork-color-fill {
-                    transition: fill $ease-standard-a $time-b;
-                }
-                @if $hover-artwork-color and $artwork-color-stroke {
-                    transition: stroke $ease-standard-a $time-b;
                 }
             }
         }

@@ -61,37 +61,20 @@
     font-size: 1.25rem;
     /*this font does not have responsive option */
   }
-  @mixin make-font-f($weight: 300, $style: normal, $important: false) {
-    @if $important {
-      font-family: $type-b !important;
-      font-weight: $weight !important;
-      line-height: 1.5rem !important;
-      letter-spacing: normal !important;
-      font-style: $style !important;
-      font-size: 1rem !important;
-    } @else {
+  @mixin make-font-f($weight: 300, $style: normal) {
       font-family: $type-b;
       font-weight: $weight;
       line-height: 1.5rem;
       letter-spacing: normal;
       font-style: $style;
       font-size: 1rem;
-    }
     /*this font does not have responsive option */
   }
-  @mixin make-font-g($weight: 300, $important: false) {
-    @if $important {
-      font-family: $type-b !important;
-      font-weight: $weight !important;
-      line-height: 1rem !important;
-      letter-spacing: normal !important;
-      font-size: 0.75rem !important;
-    } @else {
+  @mixin make-font-g($weight: 300) {
       font-family: $type-b;
       font-weight: $weight;
       line-height: 1rem;
       letter-spacing: normal;
       font-size: 0.75rem;
-    }
     /*this font does not have responsive option */
   }

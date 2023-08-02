@@ -25,6 +25,7 @@
 
 - $checkbox-artwork-background
 - $checkbox-link-class
+- $checkbox-square-border-radius
 - $checkbox-square-border-width
 - $checkbox-square-color
 - $checkbox-square-color-focus
@@ -67,9 +68,7 @@
 - $radio-circle-color
 - $radio-circle-color-focus
 - $radio-circle-width
-- $select-artwork-border-radius
-- $select-artwork-border-width
-- $select-artwork-color
+- $select-artwork
 - $submit-btn-class
 - $textarea-height
 
@@ -84,6 +83,7 @@
         // $checkbox-artwork-background: url('./img/global-components/form-fields/checkbox-artwork.svg'),
         // $checkbox-artwork-border-radius: $measure,
         // $checkbox-link-class: g--link-01,
+        // $checkbox-square-border-radius: 8px,
         // $checkbox-square-border-width: 1px,
         // $checkbox-square-color: rgba(map-get($color-options, a), .2),
         // $checkbox-square-color-focus: map-get($color-options, a),

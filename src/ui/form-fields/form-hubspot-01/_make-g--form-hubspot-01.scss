@@ -1,28 +1,4 @@
-@mixin make-form-hubspot-01(
-    $checkbox-link-class,
-    $checkbox-square-width,
-    $checkbox-title-font,
-    $file-input-btn-font,
-    $form-error-font,
-    $input-border-radius,
-    $input-border-width,
-    $input-error-font,
-    $input-font,
-    $label-font,
-    $radio-circle-border-width,
-    $radio-circle-width,
-    $select-artwork-border-width,
-    $submit-btn-class,
-    $textarea-height,
-    $checkbox-title-font-weight: false,
-    $file-input-btn-font-weight: false,
-    $form-error-font-weight: false,
-    $input-error-font-weight: false,
-    $input-font-weight: false,
-    $label-font-weight: false,
-    $mobile-font-size: false,
-    $select-artwork-border-radius: false
-) {
+@mixin make-form-hubspot-01() {
     .hs-form,
     form {
         fieldset {
@@ -33,10 +9,6 @@
                 margin-bottom: $measure * 2;
                 width: 100%;
                 label {
-                    @extend .f--font-#{$label-font} !optional;
-                    @if $label-font-weight {
-                        font-weight: $label-font-weight;
-                    }
                     margin-bottom: $measure;
                     display: block;
                 }
@@ -45,60 +17,19 @@
                 .input {
                     //* generic input
                     input {
-                        @extend .f--font-#{$input-font} !optional;
-                        @if $input-font-weight {
-                            font-weight: $input-font-weight;
-                        }
                         display: block;
-                        border: $input-border-width solid;
                         padding: $measure * 0.5 $measure;
                         width: 100%;
-                        border-radius: $input-border-radius;
                         transition: border-color $time-b $ease-standard-a;
-                        @if $mobile-font-size {
-                            @media all and ($viewport-type: $mobile) {
-                                font-size: $mobile-font-size;
-                            }
-                        }
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover,
-                        &:-webkit-autofill:focus {
-                            border: $input-border-width solid;
-                        }
-                        &.invalid,
-                        &.error {
-                            border: $input-border-width solid;
-                        }
                     }
 
                     //* textarea
                     textarea {
-                        @extend .f--font-#{$input-font} !optional;
-                        @if $input-font-weight {
-                            font-weight: $input-font-weight;
-                        }
                         display: block;
                         resize: vertical;
-                        height: $textarea-height;
-                        border: $input-border-width solid;
                         padding: $measure * 0.5 $measure;
                         width: 100%;
-                        border-radius: $input-border-radius;
                         transition: border-color $time-b $ease-standard-a;
-                        @if $mobile-font-size {
-                            @media all and ($viewport-type: $mobile) {
-                                font-size: $mobile-font-size;
-                            }
-                        }
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover,
-                        &:-webkit-autofill:focus {
-                            border: $input-border-width solid;
-                        }
-                        &.invalid,
-                        &.error {
-                            border: $input-border-width solid;
-                        }
                     }
 
                     //* radio and checkbox
@@ -110,6 +41,9 @@
                         //* multiple radio
                         .hs-form-radio {
                             margin-bottom: $measure;
+                            &:not(:last-child) {
+                                margin-right: $measure * 3;
+                            }
                             label {
                                 position: relative;
                                 margin-bottom: 0;
@@ -128,17 +62,9 @@
                                     }
                                 }
                                 span {
-                                    @extend .f--font-#{$checkbox-title-font} !optional;
-                                    @if $checkbox-title-font-weight {
-                                        font-weight: $checkbox-title-font-weight;
-                                    }
                                     position: relative;
                                     display: block;
-                                    padding-left: calc(#{$measure} + #{$radio-circle-width});
                                     cursor: pointer;
-                                    a {
-                                        @extend .#{$checkbox-link-class} !optional;
-                                    }
                                     .hs-form-required,
                                     span {
                                         display: inline;
@@ -153,18 +79,12 @@
                                         left: 0;
                                         top: 50%;
                                         transform: translateY(-50%);
-                                        height: $radio-circle-width;
-                                        width: $radio-circle-width;
-                                        border: $radio-circle-border-width solid;
                                         border-radius: 50%;
                                     }
                                     &::after {
                                         content: "";
                                         position: absolute;
-                                        width: $radio-circle-width * 0.75;
-                                        height: $radio-circle-width * 0.75;
                                         top: 50%;
-                                        left: $radio-circle-width * 0.5;
                                         transform: translate(-50%, -50%);
                                         background-repeat: no-repeat;
                                         background-size: contain;
@@ -198,17 +118,10 @@
                                     }
                                 }
                                 span {
-                                    @extend .f--font-#{$checkbox-title-font} !optional;
-                                    @if $checkbox-title-font-weight {
-                                        font-weight: $checkbox-title-font-weight;
-                                    }
                                     position: relative;
-                                    display: block;
-                                    padding-left: calc(#{$measure} + #{$checkbox-square-width});
                                     cursor: pointer;
-                                    a {
-                                        @extend .#{$checkbox-link-class} !optional;
-                                    }
+                                    display: flex;
+                                    align-items: center;
                                     .hs-form-required,
                                     span {
                                         display: inline;
@@ -223,9 +136,18 @@
                                         left: 0;
                                         top: 50%;
                                         transform: translateY(-50%);
-                                        height: $measure * 2;
-                                        width: $measure * 2;
-                                        border: 1px solid rgba(map-get($color-options, b), 0.3);
+                                        border-style: solid;
+                                    }
+                                    &::after {
+                                        content: "";
+                                        opacity: 0;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        transition: opacity $time-b $ease-standard-a;
                                     }
                                 }
                             }
@@ -254,17 +176,10 @@
                                     }
                                 }
                                 span {
-                                    @extend .f--font-#{$checkbox-title-font} !optional;
-                                    @if $checkbox-title-font-weight {
-                                        font-weight: $checkbox-title-font-weight;
-                                    }
                                     position: relative;
-                                    display: block;
-                                    padding-left: calc(#{$measure} + #{$checkbox-square-width});
                                     cursor: pointer;
-                                    a {
-                                        @extend .#{$checkbox-link-class} !optional;
-                                    }
+                                    display: flex;
+                                    align-items: center;
                                     .hs-form-required,
                                     span {
                                         display: inline;
@@ -279,9 +194,18 @@
                                         left: 0;
                                         top: 50%;
                                         transform: translateY(-50%);
-                                        height: $measure * 2;
-                                        width: $measure * 2;
-                                        border: 1px solid rgba(map-get($color-options, b), 0.3);
+                                        border-style: solid;
+                                    }
+                                    &::after {
+                                        content: "";
+                                        opacity: 0;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        transition: opacity $time-b $ease-standard-a;
                                     }
                                 }
                             }
@@ -309,39 +233,14 @@
                             right: $measure;
                             width: $measure * 1.5;
                             height: $measure * 1.5;
-                            border-right: $select-artwork-border-width solid;
-                            border-bottom: $select-artwork-border-width solid;
                             transform: rotate(45deg) translateX(-75%) translateY(-35%);
                             pointer-events: none;
-                            @if $select-artwork-border-radius {
-                                border-radius: $select-artwork-border-radius;
-                            }
                         }
                         select {
-                            @extend .f--font-#{$input-font} !optional;
-                            @if $input-font-weight {
-                                font-weight: $input-font-weight;
-                            }
                             display: block;
-                            border: $input-border-width solid;
                             padding: $measure * 0.5 $measure;
                             width: 100%;
-                            border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
-                            @if $mobile-font-size {
-                                @media all and ($viewport-type: $mobile) {
-                                    font-size: $mobile-font-size;
-                                }
-                            }
-                            &:-webkit-autofill,
-                            &:-webkit-autofill:hover,
-                            &:-webkit-autofill:focus {
-                                border: $input-border-width solid;
-                            }
-                            &.invalid,
-                            &.error {
-                                border: $input-border-width solid;
-                            }
                         }
                     }
                 }
@@ -350,26 +249,15 @@
                 &.hs-fieldtype-file {
                     .input {
                         input {
-                            @extend .f--font-#{$input-font} !optional;
-                            @if $input-font-weight {
-                                font-weight: $input-font-weight;
-                            }
                             cursor: pointer;
                             position: relative;
                             -webkit-padding-before: 0 !important;
                             -webkit-padding-after: 0 !important;
                             -webkit-padding-start: 0 !important;
                             display: block;
-                            border: $input-border-width solid;
                             padding: $measure * 0.5 $measure;
                             width: 100%;
-                            border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
-                            @if $mobile-font-size {
-                                @media all and ($viewport-type: $mobile) {
-                                    font-size: $mobile-font-size;
-                                }
-                            }
                             &::-webkit-file-upload-button {
                                 cursor: pointer;
                                 height: 100%;
@@ -378,10 +266,6 @@
                                 -webkit-appearance: none;
                                 border: none;
                                 margin-right: $measure;
-                                @extend .f--font-#{$file-input-btn-font} !optional;
-                                @if $file-input-btn-font-weight {
-                                    font-weight: $file-input-btn-font-weight;
-                                }
                                 transition: all $time-b ease-in-out;
                             }
                         }
@@ -406,30 +290,10 @@
                             pointer-events: none;
                         }
                         input {
-                            @extend .f--font-#{$input-font} !optional;
-                            @if $input-font-weight {
-                                font-weight: $input-font-weight;
-                            }
                             display: block;
-                            border: $input-border-width solid;
                             padding: $measure * 0.5 $measure;
                             width: 100%;
-                            border-radius: $input-border-radius;
                             transition: border-color $time-b $ease-standard-a;
-                            @if $mobile-font-size {
-                                @media all and ($viewport-type: $mobile) {
-                                    font-size: $mobile-font-size;
-                                }
-                            }
-                            &:-webkit-autofill,
-                            &:-webkit-autofill:hover,
-                            &:-webkit-autofill:focus {
-                                border: $input-border-width solid;
-                            }
-                            &.invalid,
-                            &.error {
-                                border: $input-border-width solid;
-                            }
                         }
                     }
                 }
@@ -438,10 +302,6 @@
                 .hs-error-msgs {
                     list-style: none;
                     label {
-                        @extend .f--font-#{$input-error-font} !optional;
-                        @if $input-error-font-weight {
-                            font-weight: $input-error-font-weight;
-                        }
                         margin-top: $measure * 0.5;
                         margin-bottom: 0;
                         display: block;
@@ -469,7 +329,6 @@
             .actions {
                 .hs-button {
                     border-radius: 0;
-                    @extend .#{$submit-btn-class} !optional;
                 }
             }
         }
@@ -480,10 +339,6 @@
             .inputs-list {
                 list-style: none;
                 label {
-                    @extend .f--font-#{$form-error-font} !optional;
-                    @if $form-error-font-weight {
-                        font-weight: $form-error-font-weight;
-                    }
                     margin-bottom: $measure * 2;
                     display: block;
                     border: none;
@@ -494,106 +349,234 @@
 }
 
 @mixin make-form-hubspot-01-modifier(
-    $checkbox-artwork-img,
-    $checkbox-square-color,
-    $checkbox-square-color-focus,
-    $checkbox-title-color,
-    $date-background-image-a,
-    $input-error-text-color,
-    $file-input-btn-background-color,
-    $file-input-btn-text-color,
-    $form-error-text-color,
-    $input-background-color,
-    $input-background-color-autofill,
-    $input-border-color,
-    $input-border-color-focus,
-    $input-error-border-color,
-    $input-placeholder-color,
-    $input-text-color,
-    $label-color,
-    $radio-artwork-color,
-    $radio-circle-color,
-    $radio-circle-color-focus,
-    $select-artwork-color,
-    $checkbox-link-class-modifier: false,
-    $option-color: false,
+    $checkbox-artwork-img: false,
+    $checkbox-link-class: false,
+    $checkbox-square-border-width: false,
+    $checkbox-square-color: false,
+    $checkbox-square-color-focus: false,
+    $checkbox-square-width: false,
+    $checkbox-title-color: false,
+    $checkbox-title-font: false,
+    $checkbox-title-font-weight: false,
+    $date-background-image-a: false,
+    $file-input-btn-background-color: false,
+    $file-input-btn-font: false,
+    $file-input-btn-font-weight: false,
+    $file-input-btn-text-color: false,
+    $form-error-font: false,
+    $form-error-font-weight: false,
+    $form-error-text-color: false,
+    $input-background-color: false,
+    $input-background-color-autofill: false,
+    $input-border-color: false,
+    $input-border-color-focus: false,
+    $input-border-radius: false,
+    $input-border-style: false,
+    $input-border-width: false,
+    $input-error-border-color: false,
+    $input-error-font: false,
+    $input-error-font-weight: false,
+    $input-error-text-color: false,
+    $input-font: false,
+    $input-font-size-mobile: false,
+    $input-font-weight: false,
+    $input-placeholder-color: false,
+    $input-text-color: false,
+    $label-color: false,
+    $label-font: false,
+    $label-font-weight: false,
     $option-background: false,
-    $submit-btn-class-modifier: false
+    $option-color: false,
+    $radio-artwork-color: false,
+    $radio-circle-border-style: false,
+    $radio-circle-border-width: false,
+    $radio-circle-color: false,
+    $radio-circle-color-focus: false,
+    $radio-circle-width: false,
+    $select-artwork-border-radius: false,
+    $select-artwork-border-width: false,
+    $select-artwork-color: false,
+    $submit-btn-class: false,
+    $textarea-height: false,
 ) {
     .hs-form {
         fieldset {
             .field,
             .hs-form-field {
                 label {
-                    color: $label-color;
+                    @if $label-font {
+                        @extend .f--font-#{$label-font} !optional;
+                    }
+                    @if $label-font-weight {
+                        font-weight: $label-font-weight;
+                    }
+                    @if $label-color {
+                        color: $label-color;
+                    }
                 }
 
                 //* generic input, textarea, radio, checkbox
                 .input {
                     //* generic input
                     input {
-                        border-color: $input-border-color;
-                        background-color: $input-background-color !important;
-                        color: $input-text-color !important;
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover,
-                        &:-webkit-autofill:focus {
+                        @if $input-border-style {
+                            border-style: $input-border-style;
+                        }
+                        @if $input-border-color {
                             border-color: $input-border-color;
-                            -webkit-text-fill-color: $input-text-color;
-                            -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
-                        }
-                        &::placeholder {
-                            color: $input-placeholder-color;
-                        }
-                        &:focus,
-                        &:not(:placeholder-shown) {
-                            border-color: $input-border-color-focus;
-                        }
-                        &.invalid,
-                        &.error {
-                            border-color: $input-error-border-color;
                             &:-webkit-autofill,
                             &:-webkit-autofill:hover,
                             &:-webkit-autofill:focus {
-                                border-color: $input-error-border-color;
+                                border-color: $input-border-color;
                             }
+                        }
+                        @if $input-border-width {
+                            border-width: $input-border-width;
+                        }
+                        @if $input-border-radius {
+                            border-radius: $input-border-radius;
+                        }
+                        @if $input-font {
+                            @extend .f--font-#{$input-font} !optional;
+                        }
+                        @if $input-font-weight {
+                            font-weight: $input-font-weight;
+                        }
+                        @if $input-background-color {
+                            background-color: $input-background-color !important;
+                        }
+                        @if $input-text-color {
+                            color: $input-text-color !important;
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                -webkit-text-fill-color: $input-text-color;
+                            }
+                        }
+                        @if $input-font-size-mobile {
+                            @media all and ($viewport-type: $mobile) {
+                                font-size: $input-font-size-mobile;
+                            }
+                        }
+                        @if $input-background-color-autofill {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                            }
+                        }
+                        @if $input-placeholder-color {
+                            &::placeholder {
+                                color: $input-placeholder-color;
+                            }
+                        }
+                        @if $input-border-color-focus {
                             &:focus,
                             &:not(:placeholder-shown) {
+                                border-color: $input-border-color-focus;
+                            }
+                        }
+                        @if $input-error-border-color {
+                            &.invalid,
+                            &.error {
                                 border-color: $input-error-border-color;
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    border-color: $input-error-border-color;
+                                }
+                                &:focus,
+                                &:not(:placeholder-shown) {
+                                    border-color: $input-error-border-color;
+                                }
                             }
                         }
                     }
 
                     //* textarea
                     textarea {
-                        border-color: $input-border-color;
-                        background-color: $input-background-color !important;
-                        color: $input-text-color !important;
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover,
-                        &:-webkit-autofill:focus {
-                            border-color: $input-border-color;
-                            -webkit-text-fill-color: $input-text-color;
-                            -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                        @if $input-background-color {
+                            background-color: $input-background-color !important;
                         }
-                        &::placeholder {
-                            color: $input-placeholder-color;
-                        }
-                        &:focus,
-                        &:not(:placeholder-shown) {
-                            border-color: $input-border-color-focus;
-                        }
-                        &.invalid,
-                        &.error {
-                            border-color: $input-error-border-color;
+                        @if $input-text-color {
+                            color: $input-text-color !important;
                             &:-webkit-autofill,
                             &:-webkit-autofill:hover,
                             &:-webkit-autofill:focus {
-                                border-color: $input-error-border-color;
+                                -webkit-text-fill-color: $input-text-color;
                             }
+                        }
+                        @if $input-font {
+                            @extend .f--font-#{$input-font} !optional;
+                        }
+                        @if $input-font-weight {
+                            font-weight: $input-font-weight;
+                        }
+                        @if $textarea-height {
+                            height: $textarea-height;
+                        }
+                        @if $input-border-width {
+                            border-width: $input-border-width;
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                border-width: $input-border-width;
+                            }
+                            &.invalid,
+                            &.error {
+                                border-width: $input-border-width;
+                            }
+                        }
+                        @if $input-border-style {
+                            border-style: $input-border-style;
+                        }
+                        @if $input-border-color {
+                            border-color: $input-border-color;
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                border-color: $input-border-color;
+                            }
+                        }
+                        @if $input-border-radius {
+                            border-radius: $input-border-radius;
+                        }
+                        @if $input-font-size-mobile {
+                            @media all and ($viewport-type: $mobile) {
+                                font-size: $input-font-size-mobile;
+                            }
+                        }
+                        @if $input-background-color-autofill {
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover,
+                            &:-webkit-autofill:focus {
+                                -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                            }
+                        }
+                        @if $input-placeholder-color {
+                            &::placeholder {
+                                color: $input-placeholder-color;
+                            }
+                        }
+                        @if $input-border-color-focus {
                             &:focus,
                             &:not(:placeholder-shown) {
+                                border-color: $input-border-color-focus;
+                            }
+                        }
+                        @if $input-error-border-color {
+                            &.invalid,
+                            &.error {
                                 border-color: $input-error-border-color;
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    border-color: $input-error-border-color;
+                                }
+                                &:focus,
+                                &:not(:placeholder-shown) {
+                                    border-color: $input-error-border-color;
+                                }
                             }
                         }
                     }
@@ -604,23 +587,55 @@
                         .hs-form-radio {
                             label {
                                 input {
-                                    &:focus ~ span::before,
-                                    &:checked ~ span::before {
-                                        border-color: $radio-circle-color-focus;
+                                    @if $radio-circle-color-focus {
+                                        &:focus ~ span::before,
+                                        &:checked ~ span::before {
+                                            border-color: $radio-circle-color-focus;
+                                        }
                                     }
                                 }
                                 span {
-                                    color: $checkbox-title-color;
-                                    @if $checkbox-link-class-modifier {
+                                    @if $checkbox-title-color {
+                                        color: $checkbox-title-color;
+                                    }
+                                    @if $checkbox-title-font {
+                                        @extend .f--font-#{$checkbox-title-font} !optional;
+                                    }
+                                    @if $checkbox-title-font-weight {
+                                        font-weight: $checkbox-title-font-weight;
+                                    }
+                                    @if $checkbox-link-class {
                                         a {
-                                            @extend .#{$checkbox-link-class-modifier} !optional;
+                                            @extend .#{$checkbox-link-class} !optional;
                                         }
                                     }
+                                    @if $radio-circle-width {
+                                        padding-left: calc(#{$measure} + #{$radio-circle-width});
+                                    }
                                     &::before {
-                                        border-color: $radio-circle-color;
+                                        @if $radio-circle-color {
+                                            border-color: $radio-circle-color;
+                                        }
+                                        @if $radio-circle-width {
+                                            height: $radio-circle-width;
+                                            width: $radio-circle-width;
+                                        }
+                                        @if $radio-circle-border-width {
+                                            border-width: $radio-circle-border-width;
+                                        }
+                                        @if $radio-circle-border-style {
+                                            border-style: $radio-circle-border-style;
+                                        }
                                     }
                                     &::after {
-                                        background: $radio-artwork-color;
+                                        @if $radio-circle-width {
+                                            width: $radio-circle-width * 0.75;
+                                            height: $radio-circle-width * 0.75;
+                                            left: $radio-circle-width * 0.5;
+                                        }
+                                        @if $radio-artwork-color {
+                                            background: $radio-artwork-color;
+                                        }
                                     }
                                 }
                             }
@@ -630,23 +645,57 @@
                         .hs-form-checkbox {
                             label {
                                 input {
-                                    &:focus ~ span::before,
-                                    &:checked ~ span::before {
-                                        border-color: $checkbox-square-color-focus;
+                                    @if $checkbox-square-color-focus {
+                                        &:focus ~ span::before,
+                                        &:checked ~ span::before {
+                                            border-color: $checkbox-square-color-focus;
+                                        }
                                     }
                                 }
                                 span {
-                                    color: $checkbox-title-color;
-                                    @if $checkbox-link-class-modifier {
+                                    @if $checkbox-title-color {
+                                        color: $checkbox-title-color;
+                                    }
+                                    @if $checkbox-title-font {
+                                        @extend .f--font-#{$checkbox-title-font} !optional;
+                                    }
+                                    @if $checkbox-title-font-weight {
+                                        font-weight: $checkbox-title-font-weight;
+                                    }
+                                    @if $checkbox-link-class {
                                         a {
-                                            @extend .#{$checkbox-link-class-modifier} !optional;
+                                            @extend .#{$checkbox-link-class} !optional;
                                         }
                                     }
-                                    &::before {
-                                        border-color: $checkbox-square-color;
+                                    @if $checkbox-square-width {
+                                        min-height: $checkbox-square-width;
+                                        padding-left: calc(#{$measure} + #{$checkbox-square-width});
+                                        &::before {
+                                            height: $checkbox-square-width;
+                                            width: $checkbox-square-width;
+                                        }
+                                        &::after {
+                                            left: calc(#{$checkbox-square-width}*.5);
+                                            width: calc(#{$checkbox-square-width}*.9);
+                                            height: calc(#{$checkbox-square-width}*.9);
+                                            max-width: calc(#{$checkbox-square-width} - 4px);
+                                            max-height: calc(#{$checkbox-square-width} - 4px);
+                                        }
                                     }
-                                    &::after {
-                                        background-image: url("#{$checkbox-artwork-img}");
+                                    @if $checkbox-square-color {
+                                        &::before {
+                                            border-color: $checkbox-square-color;
+                                        }
+                                    }
+                                    @if $checkbox-square-border-width {
+                                        &::before {
+                                            border-width: $checkbox-square-border-width;
+                                        }
+                                    }
+                                    @if $checkbox-artwork-img {
+                                        &::after {
+                                            background-image: url("#{$checkbox-artwork-img}");
+                                        }
                                     }
                                 }
                             }
@@ -656,23 +705,57 @@
                         .hs-form-booleancheckbox {
                             label {
                                 input {
-                                    &:focus ~ span::before,
-                                    &:checked ~ span::before {
-                                        border-color: $checkbox-square-color-focus;
+                                    @if $checkbox-square-color-focus {
+                                        &:focus ~ span::before,
+                                        &:checked ~ span::before {
+                                            border-color: $checkbox-square-color-focus;
+                                        }
                                     }
                                 }
                                 span {
-                                    color: $checkbox-title-color;
-                                    @if $checkbox-link-class-modifier {
+                                    @if $checkbox-title-color {
+                                        color: $checkbox-title-color;
+                                    }
+                                    @if $checkbox-title-font {
+                                        @extend .f--font-#{$checkbox-title-font} !optional;
+                                    }
+                                    @if $checkbox-title-font-weight {
+                                        font-weight: $checkbox-title-font-weight;
+                                    }
+                                    @if $checkbox-link-class {
                                         a {
-                                            @extend .#{$checkbox-link-class-modifier} !optional;
+                                            @extend .#{$checkbox-link-class} !optional;
                                         }
                                     }
-                                    &::before {
-                                        border-color: $checkbox-square-color;
+                                    @if $checkbox-square-width {
+                                        min-height: $checkbox-square-width;
+                                        padding-left: calc(#{$measure} + #{$checkbox-square-width});
+                                        &::before {
+                                            height: $checkbox-square-width;
+                                            width: $checkbox-square-width;
+                                        }
+                                        &::after {
+                                            left: calc(#{$checkbox-square-width}*.5);
+                                            width: calc(#{$checkbox-square-width}*.9);
+                                            height: calc(#{$checkbox-square-width}*.9);
+                                            max-width: calc(#{$checkbox-square-width} - 4px);
+                                            max-height: calc(#{$checkbox-square-width} - 4px);
+                                        }
                                     }
-                                    &::after {
-                                        background-image: url("#{$checkbox-artwork-img}");
+                                    @if $checkbox-square-color {
+                                        &::before {
+                                            border-color: $checkbox-square-color;
+                                        }
+                                    }
+                                    @if $checkbox-square-border-width {
+                                        &::before {
+                                            border-width: $checkbox-square-border-width;
+                                        }
+                                    }
+                                    @if $checkbox-artwork-img {
+                                        &::after {
+                                            background-image: url("#{$checkbox-artwork-img}");
+                                        }
                                     }
                                 }
                             }
@@ -684,16 +767,62 @@
                 &.hs-fieldtype-select {
                     .input {
                         &::after {
-                            border-right-color: $select-artwork-color;
-                            border-bottom-color: $select-artwork-color;
+                            @if $select-artwork-border-width {
+                                border-right: $select-artwork-border-width solid;
+                                border-bottom: $select-artwork-border-width solid;
+                            }
+                            @if $select-artwork-color {
+                                border-right-color: $select-artwork-color;
+                                border-bottom-color: $select-artwork-color;
+                            }
+                            @if $select-artwork-border-radius {
+                                border-radius: $select-artwork-border-radius;
+                            }
                         }
                         select {
-                            border-color: $input-border-color;
-                            background-color: $input-background-color !important;
-                            color: $input-text-color !important;
-                            &:focus,
-                            &:valid {
-                                border-color: $input-border-color-focus;
+                            @if $input-background-color {
+                                background-color: $input-background-color !important;
+                            }
+                            @if $input-text-color {
+                                color: $input-text-color !important;
+                            }
+                            @if $input-border-width {
+                                border-width: $input-border-width;
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    border-width: $input-border-width;
+                                }
+                                &.invalid,
+                                &.error {
+                                    border-width: $input-border-width;
+                                }
+                            }
+                            @if $input-border-style {
+                                border-style: $input-border-style;
+                            }
+                            @if $input-border-color {
+                                border-color: $input-border-color;
+                            }
+                            @if $input-border-radius {
+                                border-radius: $input-border-radius;
+                            }
+                            @if $input-font {
+                                @extend .f--font-#{$input-font} !optional;
+                            }
+                            @if $input-font-weight {
+                                font-weight: $input-font-weight;
+                            }
+                            @if $input-font-size-mobile {
+                                @media all and ($viewport-type: $mobile) {
+                                    font-size: $input-font-size-mobile;
+                                }
+                            }
+                            @if $input-border-color-focus {
+                                &:focus,
+                                &:valid {
+                                    border-color: $input-border-color-focus;
+                                }
                             }
                             @if $option-color or $option-background {
                                 option {
@@ -713,17 +842,52 @@
                 &.hs-fieldtype-file {
                     .input {
                         input {
-                            border-color: $input-border-color;
-                            background-color: $input-background-color !important;
-                            color: $input-text-color !important;
-                            &::-webkit-file-upload-button {
-                                background-color: $file-input-btn-background-color;
-                                color: $file-input-btn-text-color;
+                            @if $input-border-style {
+                                border-style: $input-border-style;
                             }
-                            &:hover,
-                            &:focus,
-                            &:valid {
-                                border-color: $input-border-color-focus;
+                            @if $input-border-color {
+                                border-color: $input-border-color;
+                            }
+                            @if $input-border-radius {
+                                border-radius: $input-border-radius;
+                            }
+                            @if $input-font {
+                                @extend .f--font-#{$input-font} !optional;
+                            }
+                            @if $input-font-weight {
+                                font-weight: $input-font-weight;
+                            }
+                            @if $input-font-size-mobile {
+                                @media all and ($viewport-type: $mobile) {
+                                    font-size: $input-font-size-mobile;
+                                }
+                            }
+                            @if $input-background-color {
+                                background-color: $input-background-color !important;
+                            }
+                            @if $input-text-color {
+                                color: $input-text-color !important;
+                            }
+                            &::-webkit-file-upload-button {
+                                @if $file-input-btn-background-color {
+                                    background-color: $file-input-btn-background-color;
+                                }
+                                @if $file-input-btn-text-color {
+                                    color: $file-input-btn-text-color;
+                                }
+                                @if $file-input-btn-font {
+                                    @extend .f--font-#{$file-input-btn-font} !optional;
+                                }
+                                @if $file-input-btn-font-weight {
+                                    font-weight: $file-input-btn-font-weight;
+                                }
+                            }
+                            @if $input-border-color-focus {
+                                &:hover,
+                                &:focus,
+                                &:valid {
+                                    border-color: $input-border-color-focus;
+                                }
                             }
                         }
                     }
@@ -732,38 +896,79 @@
                 //* date
                 &.hs-fieldtype-date {
                     .input {
-                        &::after {
-                            background-image: $date-background-image-a;
+                        @if $date-background-image-a {
+                            &::after {
+                                background-image: $date-background-image-a;
+                            }
                         }
                         input {
-                            border-color: $input-border-color;
-                            background-color: $input-background-color !important;
-                            color: $input-text-color !important;
-                            &:-webkit-autofill,
-                            &:-webkit-autofill:hover,
-                            &:-webkit-autofill:focus {
+                            @if $input-border-style {
+                                border-style: $input-border-style;
+                            }
+                            @if $input-border-color {
                                 border-color: $input-border-color;
-                                -webkit-text-fill-color: $input-text-color;
-                                -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
-                            }
-                            &::placeholder {
-                                color: $input-placeholder-color;
-                            }
-                            &:focus,
-                            &:not(:placeholder-shown) {
-                                border-color: $input-border-color-focus;
-                            }
-                            &.invalid,
-                            &.error {
-                                border-color: $input-error-border-color;
                                 &:-webkit-autofill,
                                 &:-webkit-autofill:hover,
                                 &:-webkit-autofill:focus {
-                                    border-color: $input-error-border-color;
+                                    border-color: $input-border-color;
                                 }
+                            }
+                            @if $input-border-radius {
+                                border-radius: $input-border-radius;
+                            }
+                            @if $input-font {
+                                @extend .f--font-#{$input-font} !optional;
+                            }
+                            @if $input-font-weight {
+                                font-weight: $input-font-weight;
+                            }
+                            @if $input-font-size-mobile {
+                                @media all and ($viewport-type: $mobile) {
+                                    font-size: $input-font-size-mobile;
+                                }
+                            }
+                            @if $input-background-color {
+                                background-color: $input-background-color !important;
+                            }
+                            @if $input-text-color {
+                                color: $input-text-color !important;
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-text-fill-color: $input-text-color;
+                                }
+                            }
+                            @if $input-background-color-autofill {
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-box-shadow: 0 0 0px 1000px $input-background-color-autofill inset;
+                                }
+                            }
+                            @if $input-placeholder-color {
+                                &::placeholder {
+                                    color: $input-placeholder-color;
+                                }
+                            }
+                            @if $input-border-color-focus {
                                 &:focus,
                                 &:not(:placeholder-shown) {
+                                    border-color: $input-border-color-focus;
+                                }
+                            }
+                            @if $input-error-border-color {
+                                &.invalid,
+                                &.error {
                                     border-color: $input-error-border-color;
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        border-color: $input-error-border-color;
+                                    }
+                                    &:focus,
+                                    &:not(:placeholder-shown) {
+                                        border-color: $input-error-border-color;
+                                    }
                                 }
                             }
                         }
@@ -773,18 +978,26 @@
                 //* error message after each input
                 .hs-error-msgs {
                     label {
-                        color: $input-error-text-color;
+                        @if $input-error-font {
+                            @extend .f--font-#{$input-error-font} !optional;
+                        }
+                        @if $input-error-font-weight {
+                            font-weight: $input-error-font-weight;
+                        }
+                        @if $input-error-text-color {
+                            color: $input-error-text-color;
+                        }
                     }
                 }
             }
         }
 
-        @if $submit-btn-class-modifier {
+        @if $submit-btn-class {
             //* submit btn
             .hs_submit {
                 .actions {
                     .hs-button {
-                        @extend .#{$submit-btn-modifier} !optional;
+                        @extend .#{$submit-btn-class} !optional;
                     }
                 }
             }
@@ -795,7 +1008,15 @@
             .hs-error-msgs,
             .inputs-list {
                 label {
-                    color: $form-error-text-color;
+                    @if $form-error-font {
+                        @extend .f--font-#{$form-error-font} !optional;
+                    }
+                    @if $form-error-font-weight {
+                        font-weight: $form-error-font-weight;
+                    }
+                    @if $form-error-text-color {
+                        color: $form-error-text-color;
+                    }
                 }
             }
         }

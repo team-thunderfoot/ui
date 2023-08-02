@@ -144,9 +144,9 @@
                                         position: absolute;
                                         top: 50%;
                                         transform: translate(-50%, -50%);
-                                        background-size: contain;
-                                        background-position: center;
-                                        background-repeat: no-repeat;
+                                        background-size: contain !important;
+                                        background-position: center !important;
+                                        background-repeat: no-repeat !important;
                                         transition: opacity $time-b $ease-standard-a;
                                     }
                                 }
@@ -202,9 +202,9 @@
                                         position: absolute;
                                         top: 50%;
                                         transform: translate(-50%, -50%);
-                                        background-size: contain;
-                                        background-position: center;
-                                        background-repeat: no-repeat;
+                                        background-size: contain !important;
+                                        background-position: center !important;
+                                        background-repeat: no-repeat !important;
                                         transition: opacity $time-b $ease-standard-a;
                                     }
                                 }
@@ -355,6 +355,7 @@
     $checkbox-artwork-background: false,
     $checkbox-artwork-border-radius: false,
     $checkbox-link-class: false,
+    $checkbox-square-border-radius: false,
     $checkbox-square-border-width: false,
     $checkbox-square-color: false,
     $checkbox-square-color-focus: false,
@@ -631,8 +632,8 @@
                                     }
                                     &::after {
                                         @if $radio-circle-width {
-                                            width: $radio-circle-width * 0.75;
-                                            height: $radio-circle-width * 0.75;
+                                            width: $radio-circle-width * 0.6;
+                                            height: $radio-circle-width * 0.6;
                                             left: $radio-circle-width * 0.5;
                                         }
                                         @if $radio-artwork-color {
@@ -678,8 +679,8 @@
                                         }
                                         &::after {
                                             left: calc(#{$checkbox-square-width}*.5);
-                                            width: calc(#{$checkbox-square-width}*.9);
-                                            height: calc(#{$checkbox-square-width}*.9);
+                                            width: calc(#{$checkbox-square-width}*.6);
+                                            height: calc(#{$checkbox-square-width}*.6);
                                             max-width: calc(#{$checkbox-square-width} - 4px);
                                             max-height: calc(#{$checkbox-square-width} - 4px);
                                         }
@@ -687,6 +688,11 @@
                                     @if $checkbox-square-color {
                                         &::before {
                                             border-color: $checkbox-square-color;
+                                        }
+                                    }
+                                    @if $checkbox-square-border-radius {
+                                        &::before {
+                                            border-radius: $checkbox-square-border-radius;
                                         }
                                     }
                                     @if $checkbox-square-border-width {
@@ -743,8 +749,8 @@
                                         }
                                         &::after {
                                             left: calc(#{$checkbox-square-width}*.5);
-                                            width: calc(#{$checkbox-square-width}*.9);
-                                            height: calc(#{$checkbox-square-width}*.9);
+                                            width: calc(#{$checkbox-square-width}*.6);
+                                            height: calc(#{$checkbox-square-width}*.6);
                                             max-width: calc(#{$checkbox-square-width} - 4px);
                                             max-height: calc(#{$checkbox-square-width} - 4px);
                                         }
@@ -752,6 +758,11 @@
                                     @if $checkbox-square-color {
                                         &::before {
                                             border-color: $checkbox-square-color;
+                                        }
+                                    }
+                                    @if $checkbox-square-border-radius {
+                                        &::before {
+                                            border-radius: $checkbox-square-border-radius;
                                         }
                                     }
                                     @if $checkbox-square-border-width {

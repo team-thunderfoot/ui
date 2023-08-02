@@ -1,7 +1,7 @@
 .g--form-hubspot-01{
     @include make-form-hubspot-01();
     @include make-form-hubspot-01-modifier(
-        $checkbox-artwork-img: './img/global-components/form-fields/checkbox-artwork.svg',
+        $checkbox-artwork-background: url('./img/global-components/form-fields/checkbox-artwork.svg'),
         $checkbox-square-border-width: 1px,
         $checkbox-square-color: rgba(map-get($color-options, a), .2),
         $checkbox-square-color-focus: map-get($color-options, a),
@@ -23,7 +23,7 @@
         $radio-artwork-color: map-get($color-options, g),
         $radio-circle-color: rgba(map-get($color-options, a), .2),
         $radio-circle-color-focus: map-get($color-options, a),
-        $select-artwork-color: map-get($color-options, a),
+        $select-artwork: url('./img/global-components/form-fields/checkbox-artwork.svg'),
         $option-color: false,
         $option-background: false,
         $checkbox-link-class: g--link-01,
@@ -39,7 +39,6 @@
         $radio-circle-border-width: 1px,
         $radio-circle-border-style: solid,
         $radio-circle-width: $measure*2,
-        $select-artwork-border-width: 1px,
         $submit-btn-class: g--btn-01,
         $textarea-height: $measure*10,
         $checkbox-title-font-weight: false,
@@ -48,6 +47,5 @@
         $input-error-font-weight: false,
         $input-font-weight: false,
         $label-font-weight: false,
-        $select-artwork-border-radius: false,
     );
 }

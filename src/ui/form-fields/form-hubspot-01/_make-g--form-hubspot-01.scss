@@ -233,8 +233,11 @@
                             right: $measure;
                             width: $measure * 1.5;
                             height: $measure * 1.5;
-                            transform: rotate(45deg) translateX(-75%) translateY(-35%);
+                            transform: translateY(-50%);
                             pointer-events: none;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
                         }
                         select {
                             display: block;
@@ -325,13 +328,13 @@
         }
 
         //* submit btn
-        .hs_submit {
-            .actions {
-                .hs-button {
-                    border-radius: 0;
-                }
-            }
-        }
+        // .hs_submit {
+        //     .actions {
+        //         .hs-button {
+        //             border-radius: 0;
+        //         }
+        //     }
+        // }
 
         //* form error
         .hs_error_rollup {
@@ -349,7 +352,8 @@
 }
 
 @mixin make-form-hubspot-01-modifier(
-    $checkbox-artwork-img: false,
+    $checkbox-artwork-background: false,
+    $checkbox-artwork-border-radius: false,
     $checkbox-link-class: false,
     $checkbox-square-border-width: false,
     $checkbox-square-color: false,
@@ -393,9 +397,7 @@
     $radio-circle-color: false,
     $radio-circle-color-focus: false,
     $radio-circle-width: false,
-    $select-artwork-border-radius: false,
-    $select-artwork-border-width: false,
-    $select-artwork-color: false,
+    $select-artwork: false,
     $submit-btn-class: false,
     $textarea-height: false,
 ) {
@@ -692,9 +694,14 @@
                                             border-width: $checkbox-square-border-width;
                                         }
                                     }
-                                    @if $checkbox-artwork-img {
+                                    @if $checkbox-artwork-background {
                                         &::after {
-                                            background-image: url("#{$checkbox-artwork-img}");
+                                            background: $checkbox-artwork-background;
+                                        }
+                                    }
+                                    @if $checkbox-artwork-border-radius {
+                                        &::after {
+                                            border-radius: $checkbox-artwork-border-radius;
                                         }
                                     }
                                 }
@@ -752,9 +759,14 @@
                                             border-width: $checkbox-square-border-width;
                                         }
                                     }
-                                    @if $checkbox-artwork-img {
+                                    @if $checkbox-artwork-background {
                                         &::after {
-                                            background-image: url("#{$checkbox-artwork-img}");
+                                            background: $checkbox-artwork-background;
+                                        }
+                                    }
+                                    @if $checkbox-artwork-border-radius {
+                                        &::after {
+                                            border-radius: $checkbox-artwork-border-radius;
                                         }
                                     }
                                 }
@@ -767,16 +779,8 @@
                 &.hs-fieldtype-select {
                     .input {
                         &::after {
-                            @if $select-artwork-border-width {
-                                border-right: $select-artwork-border-width solid;
-                                border-bottom: $select-artwork-border-width solid;
-                            }
-                            @if $select-artwork-color {
-                                border-right-color: $select-artwork-color;
-                                border-bottom-color: $select-artwork-color;
-                            }
-                            @if $select-artwork-border-radius {
-                                border-radius: $select-artwork-border-radius;
+                            @if $select-artwork {
+                                background-image: $select-artwork;
                             }
                         }
                         select {

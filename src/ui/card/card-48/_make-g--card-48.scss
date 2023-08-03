@@ -53,6 +53,10 @@
         text-align: center;
         .g--card-48 {
             &__media-wrapper {
+                @if $img-border-radius {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
                 &__media {
                     margin-left: auto;
                     margin-right: auto;
@@ -65,6 +69,10 @@
         text-align: left;
         .g--card-48 {
             &__media-wrapper {
+                @if $img-border-radius {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
                 &__media {
                     margin-left: 0;
                     margin-right: auto;
@@ -77,6 +85,10 @@
         text-align: right;
         .g--card-48 {
             &__media-wrapper {
+                @if $img-border-radius {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
                 &__media {
                     margin-left: auto;
                     margin-right: 0;
@@ -204,6 +216,7 @@
             @if $img-border-radius {
                 border-radius: $img-border-radius;
                 overflow: hidden;
+                width: fit-content;
             }
             @if $img-background-color {
                 background: $img-background-color;

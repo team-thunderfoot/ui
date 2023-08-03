@@ -18,6 +18,7 @@
 
         &__media {
             display: block;
+            width: 100%;
         }
     }
 
@@ -232,7 +233,6 @@
                 @if $img-object-fit {
                     object-fit: $img-object-fit;
                 }
-
                 @if $img-position {
                     object-position: $img-position;
                 }

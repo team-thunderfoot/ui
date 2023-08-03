@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+.f--vw-container {
+  padding-right: 16px;
+  padding-left: 16px;
+  min-width: 1300px;
+  margin-left: calc((100vw - 1300px)*.5);
+  margin-right: calc((100vw - 1300px)*.5);
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  @media all and (max-width: 1570px){
+    min-width: 90vw;
+    margin-left: calc((100vw - 90vw)*.5);
+    margin-right: calc((100vw - 90vw)*.5);
+  }
+  @media all and (max-width: 580px){
+    min-width: 95vw;
+    margin-left: calc((100vw - 95vw)*.5);
+    margin-right: calc((100vw - 95vw)*.5);
+  }
+  &--second{
+    flex-direction: row;
+  }
+  &--remove-row{
+    flex-direction: row;
+    column-gap: 32px;
+    *[class*="f--vw-offset"]{
+      margin-left: 0;
+    }
+  }
+}
+
+.f--vw-row {
+  margin-right: -16px;
+  margin-left: -16px;
+  display: flex;
+  row-gap: 32px;
+  column-gap: 0;
+  width: auto;
+}
+
+.f--vw-col {
+  max-height: 100%;
+  width: calc((1300px / 12)*6);
+  padding-right: 16px;
+  padding-left: 16px;
+  display: flex;
+  @media all and (max-width: 1570px){
+    width: calc((90vw / 12)*6);
+  }
+  @media all and (max-width: 1024px){
+    width: calc((90vw / 12)*8);
+  }
+  @media all and (max-width: 810px){
+    width: calc((90vw / 12)*10);
+  }
+  @media all and (max-width: 580px){
+    width: calc((95vw / 12)*12);
+  }
+  @media all and (max-height: 800px){
+    width: calc((95vw / 12)*12);
+  }
+}
+
+.extra-section {
+  width: 100%;
+  height: 500px;
+  background: grey;
+}
+
+.c--horizontal-scroll-a {
+    display: flex;
+    overflow-x: hidden;
+    height: fit-content !important;
+    align-items: center;
+    // min-height: 100vh;
+    padding: .5rem*15 0;
+    width: fit-content;
+    &__wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+        &__item{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.c--media {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+}

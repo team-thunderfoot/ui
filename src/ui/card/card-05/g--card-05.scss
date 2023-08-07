@@ -1,32 +1,34 @@
-.g--card-05{
+.g--card-05 {
     @include make-card-05();
     @include make-card-05-modifier(
         $link-class: g--link-01,
         $link-font: f,
         $title-color: map-get($color-options, a),
-        $title-font: c,
+        $title-font: c
     );
-    &--second{
+    &--second {
         @include make-card-05-modifier(
-            $subtitle-color: map-get($color-options, g),
-            $title-color: map-get($color-options, g),
-            $title-font: c,
+            $hover-img-border-radius: $measure,
             $hover-img-zoom: 1.2,
             $hover-title-color: map-get($color-options, h),
+            $hover-title-underline-color: map-get($color-options, f),
             $hover-transform: translateY(-$measure),
-            $img-aspect-ratio:calc(1 / 1),
-            $img-height: 100px,
+            $img-aspect-ratio: calc(1 / 1),
             $img-fit: cover,
+            $img-height: 100px,
             $img-position: center,
             $img-width: auto,
             $link-class: g--link-01--second,
             $link-font: b,
-            $subtitle-font: f,
+            $subtitle-color: map-get($color-options, g),
             $subtitle-font-weight: 400,
+            $subtitle-font: f,
             $subtitle-max-lines: 3,
-           $text-align: left,
+            $title-color: map-get($color-options, g),
             $title-font-weight: 400,
+            $title-font: c,
             $title-max-lines: 3,
+            $text-align: left
         );
     }
 }

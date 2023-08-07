@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     text-decoration: none;
+    overflow: hidden;
     &__bg-items {
         position: absolute;
         top: 0;
@@ -17,7 +18,7 @@
             height: 0;
             transition: height $time-b $ease-standard-a;
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -26,7 +27,7 @@
             }
         }
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
@@ -38,21 +39,22 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: $measure*5 $measure*7 $measure*5 $measure*5;
+        padding: $measure * 5 $measure * 7 $measure * 5 $measure * 5;
         position: relative;
         z-index: 1;
         &__meta {
-            margin-bottom: $measure*2;
+            margin-bottom: $measure * 2;
         }
         &__title {
-            margin-bottom: $measure*3;
+            margin-bottom: $measure * 3;
         }
         &__list-group {
             display: flex;
             flex-wrap: wrap;
             gap: $measure $measure * 2;
-            margin-bottom: $measure*3;
-            &__badge {}
+            margin-bottom: $measure * 3;
+            &__badge {
+            }
         }
         &__wrapper {
             margin-top: auto;
@@ -84,8 +86,10 @@
     $border-style: false,
     $border-width: false,
     $card-aspect-ratio: false,
-    $card-height: false,
+    $card-min-height: false,
     $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
     $hover-background-position: false,
     $hover-background-repeat: false,
     $hover-background-size: false,
@@ -93,6 +97,7 @@
     $hover-meta-color: false,
     $hover-shadow: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $meta-color: false,
     $meta-font: false,
@@ -101,11 +106,12 @@
     $link-hide-by-default: false,
     $mask-background-color: false,
     $pill-class: false,
+    $shadow: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $title-max-lines: false,
+    $title-max-lines: false
 ) {
     @if $border-radius {
         border-radius: $border-radius;
@@ -124,24 +130,26 @@
     @if $background-color {
         background: $background-color;
     }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
 
     @if $text-align == "center" {
         text-align: center;
         .g--card-50 {
             &__ft-items {
-                padding: $measure*5 $measure*7;
+                padding: $measure * 5 $measure * 7;
                 &__list-group {
                     justify-content: center;
                 }
             }
         }
-        
     }
     @if $text-align == "left" {
         text-align: left;
         .g--card-50 {
             &__ft-items {
-                padding: $measure*5 $measure*7 $measure*5 $measure*5;
+                padding: $measure * 5 $measure * 7 $measure * 5 $measure * 5;
                 &__list-group {
                     justify-content: flex-start;
                 }
@@ -152,7 +160,7 @@
         text-align: right;
         .g--card-50 {
             &__ft-items {
-                padding: $measure*5 $measure*5 $measure*5 $measure*7;
+                padding: $measure * 5 $measure * 5 $measure * 5 $measure * 7;
                 &__list-group {
                     justify-content: flex-end;
                 }
@@ -160,35 +168,32 @@
         }
     }
 
-    @if $hover-transform and $hover-shadow {
-        transition: transform $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-                box-shadow: $hover-shadow;
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
             }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
     }
+
     @if $hover-meta-color {
         @media all and (hover: hover) {
             &:hover,
@@ -204,7 +209,29 @@
             }
         }
     }
-    @if $hover-title-color {
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-50 {
+                            &__ft-items {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -218,6 +245,20 @@
                 }
             }
         }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-50 {
+                    &__ft-items {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @if $link-hide-by-default {
@@ -226,8 +267,8 @@
             &:focus,
             &:active {
                 .g--card-50 {
-                    &__ft-items{
-                        &__wrapper{
+                    &__ft-items {
+                        &__wrapper {
                             opacity: 1;
                         }
                     }
@@ -236,8 +277,8 @@
         }
     }
 
-    .g--card-50{
-        &__bg-items{
+    .g--card-50 {
+        &__bg-items {
             @if $background-position {
                 background-position: $background-position;
             }
@@ -247,7 +288,7 @@
             @if $background-size {
                 background-size: $background-size;
             }
-            &__artwork{
+            &__artwork {
                 @if $hover-background-color {
                     background: $hover-background-color;
                 }
@@ -261,25 +302,25 @@
                     background-size: $hover-background-size;
                 }
                 @if $hover-mask-background-color {
-                    &::before{
+                    &::before {
                         background: $hover-mask-background-color;
                     }
                 }
             }
             @if $mask-background-color {
-                &::before{
+                &::before {
                     background: $mask-background-color;
                 }
             }
         }
-        &__ft-items{
-            @if $card-height {
-                min-height: $card-height;
+        &__ft-items {
+            @if $card-min-height {
+                min-height: $card-min-height;
             }
             @if $card-aspect-ratio {
                 aspect-ratio: $card-aspect-ratio;
             }
-            &__meta{
+            &__meta {
                 @if $meta-color {
                     color: $meta-color;
                 }
@@ -293,7 +334,7 @@
                     transition: color $time-b $ease-standard-a;
                 }
             }
-            &__title{
+            &__title {
                 @if $title-color {
                     color: $title-color;
                 }
@@ -310,18 +351,27 @@
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
                 }
-                @if $hover-title-color {
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
             }
-            &__list-group{
-                &__badge{
+            &__list-group {
+                &__badge {
                     @if $pill-class {
                         @extend .#{$pill-class} !optional;
                     }
                 }
             }
-            &__wrapper{
+            &__wrapper {
                 @if $link-hide-by-default == true {
                     @media all and (hover: hover) {
                         opacity: 0;
@@ -330,7 +380,7 @@
                 } @else if $link-hide-by-default == "no" {
                     opacity: 1;
                 }
-                &__link{
+                &__link {
                     @if $link-class {
                         @extend .#{$link-class} !optional;
                     }

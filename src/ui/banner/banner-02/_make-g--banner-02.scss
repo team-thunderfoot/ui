@@ -16,12 +16,22 @@
     $background-color: false,
     $btn-class: false,
     $btn-font: false,
+    $min-height: false,
+    $shadow: false,
     $title-color: false,
     $title-font-weight: false,
     $title-font: false,
 ) {
     @if $background-color {
         background-color: $background-color;
+    }
+    @if $min-height {
+        min-height: $min-height;
+        display: flex;
+        align-items: center;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
     .g--banner-02 {

@@ -9,6 +9,7 @@
         $hover-text-color: map-get($color-options, g),
         $icon-top: 0px,
         $icon-width: $measure,
+        $hover-icon-transform: translateX($measure),
         $text-color: map-get($color-options, a),
     );
 }

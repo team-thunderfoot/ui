@@ -28,13 +28,13 @@
                                 that depend on an existing class (btns, fonts, pills...). If we want to change a font in a modifier, the default font must be the first one (starting with a).
                             </p>
                             <p class="f--font-f f--background-a f--p-3 f--sp-a">
-                                <strong>Note border:</strong> For cards with border we can set different border-color, border-style or border-width for each side (or add border just to one side).
+                                <strong>Note border:</strong> For cards with border we can set different border-color, border-style or border-width for each side (or add border just to one side). Borders cannot be gradients or images, only colors or colors with opacity.
                             </p>
                             <p class="f--font-f f--background-a f--p-3 f--sp-a">
                                 <strong>Note hover options:</strong> change background-color, change title-color, add box-shadow, transform card (translate, zoom...), image zoom. *If the title is a
                                 c--content we can't change the color on hover.
                             </p>
-                            <p class="f--font-f f--background-a f--p-3"><strong>Note button/links:</strong> In all places where there is a link or a button it could be either</p>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note button/links/pills:</strong> In all places where there is a link, pill or a button it can be any of them</p>
                         </div>
                     </div>
                 </div>
@@ -133,24 +133,30 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
                                         <li>$img-width</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -207,8 +213,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -216,13 +224,13 @@
                                         <li>$img-position</li>
                                         <li>$img-width</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -237,7 +245,8 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-03</h2>
+                            <h2 class="f--font-c f--sp-a">Card-03</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -291,13 +300,24 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$background-color</li>
                                         <li>$background-position</li>
                                         <li>$background-size</li>
+                                        <li>$border-color</li>
                                         <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
                                         <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -305,14 +325,15 @@
                                         <li>$img-position</li>
                                         <li>$img-width</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -412,10 +433,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -424,14 +450,15 @@
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -490,8 +517,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -522,7 +551,8 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-06</h2>
+                            <h2 class="f--font-c f--sp-a">Card-06</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -578,13 +608,24 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$background-color</li>
                                         <li>$background-position</li>
                                         <li>$background-size</li>
+                                        <li>$border-color</li>
                                         <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
                                         <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -594,14 +635,15 @@
                                         <li>$link-class</li>
                                         <li>$link-font</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -684,20 +726,26 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
                                         <li>$img-width</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -749,8 +797,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -775,7 +825,8 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-09</h2>
+                            <h2 class="f--font-c f--sp-a">Card-09</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -824,13 +875,24 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$background-color</li>
                                         <li>$background-position</li>
                                         <li>$background-size</li>
+                                        <li>$border-color</li>
                                         <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
                                         <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -838,10 +900,11 @@
                                         <li>$img-position</li>
                                         <li>$img-width</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -928,10 +991,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -940,10 +1008,11 @@
                                         <li>$img-width</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -997,8 +1066,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -1025,7 +1096,8 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-12</h2>
+                            <h2 class="f--font-c f--sp-a">Card-12</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -1076,13 +1148,24 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$background-color</li>
                                         <li>$background-position</li>
                                         <li>$background-size</li>
+                                        <li>$border-color</li>
                                         <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
                                         <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-fit</li>
@@ -1092,10 +1175,11 @@
                                         <li>$link-class</li>
                                         <li>$link-font</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1141,18 +1225,23 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1191,6 +1280,7 @@
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$subtitle-color</li>
                                         <li>$subtitle-font</li>
@@ -1214,7 +1304,8 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-15</h2>
+                            <h2 class="f--font-c f--sp-a">Card-15</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -1252,22 +1343,33 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$background-color</li>
                                         <li>$background-position</li>
                                         <li>$background-size</li>
+                                        <li>$border-color</li>
                                         <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
                                         <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1315,20 +1417,25 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1369,6 +1476,7 @@
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -1394,7 +1502,8 @@
                 <div class="f--container">
                     <div class="f--row f--gap-d">
                         <div class="f--col-12">
-                            <h2 class="f--font-c">Card-18</h2>
+                            <h2 class="f--font-c f--sp-a">Card-18</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
                         </div>
                         <div class="f--col-8 f--col-tabletm-12">
                             <div class="f--row f--gap-d">
@@ -1434,24 +1543,35 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$background-color</li>
                                         <li>$background-position</li>
                                         <li>$background-size</li>
+                                        <li>$border-color</li>
                                         <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
                                         <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$subtitle-max-lines</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1502,18 +1622,23 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$meta-color</li>
-                                        <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1560,6 +1685,7 @@
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
@@ -1628,14 +1754,19 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -1694,6 +1825,7 @@
                                         <li>$author-font</li>
                                         <li>$author-font-weight</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
@@ -1756,26 +1888,31 @@
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
                                         <li>$author-color</li>
-                                        <li>$author-font</li>
                                         <li>$author-font-weight</li>
+                                        <li>$author-font</li>
                                         <li>$background-color</li>
                                         <li>$border-color</li>
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
-                                        <li>$hover-shadow</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-shadow</li> 
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
                                         <li>$meta-color</li>
-                                        <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1833,6 +1970,7 @@
                                         <li>$author-font</li>
                                         <li>$author-font-weight</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
@@ -1914,22 +2052,25 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
-                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-aspect-ratio-height</li>
+                                        <li>$img-aspect-ratio-width</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
-                                        <li>$meta-color</li>
-                                        <li>$meta-font</li>
-                                        <li>$meta-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -1989,8 +2130,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -2079,17 +2222,22 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-height</li>
                                         <li>$img-aspect-ratio-width</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -2158,8 +2306,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -2286,11 +2436,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-height</li>
@@ -2298,6 +2452,7 @@
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -2361,8 +2516,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -2460,11 +2617,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-height</li>
                                         <li>$img-aspect-ratio-width</li>
@@ -2474,6 +2635,7 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -2551,22 +2713,24 @@
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
                                         <li>$author-color</li>
-                                        <li>$author-font</li>
                                         <li>$author-font-weight</li>
+                                        <li>$author-font</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
                                         <li>$img-height</li>
                                         <li>$img-position</li>
                                         <li>$meta-color</li>
-                                        <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
                                         <li>$pill-class</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -2643,11 +2807,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius/li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-height</li>
                                         <li>$img-aspect-ratio-width</li>
@@ -2657,6 +2825,7 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -2727,8 +2896,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -2812,11 +2983,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-height</li>
                                         <li>$img-aspect-ratio-width</li>
@@ -2827,6 +3002,7 @@
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -2892,8 +3068,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -2989,11 +3167,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-height</li>
                                         <li>$img-aspect-ratio-width</li>
@@ -3005,6 +3187,7 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -3077,8 +3260,10 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -3229,11 +3414,15 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$full-image-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-height</li>
                                         <li>$img-aspect-ratio-width</li>
@@ -3245,6 +3434,7 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -3326,8 +3516,10 @@
                                         <li>$author-color</li>
                                         <li>$author-font</li>
                                         <li>$author-font-weight</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-border-radius</li>
@@ -3402,10 +3594,14 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-responsive</li>
                                         <li>$img-height-responsive</li>
@@ -3414,6 +3610,7 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
                                         <li>$title-font-weight</li>
@@ -3471,22 +3668,27 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-responsive</li>
                                         <li>$img-height-responsive</li>
                                         <li>$img-position</li>
                                         <li>$meta-color</li>
-                                        <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$meta-font</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                         <li>$title-max-lines</li>
                                     </ul>
                                 </div>
@@ -3534,19 +3736,24 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$change-order-reponsive</li>
                                         <li>$content-color</li>
                                         <li>$content-font</li>
                                         <li>$content-font-weight</li>
                                         <li>$content-max-lines</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-responsive</li>
                                         <li>$img-height-responsive</li>
                                         <li>$img-position</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -3598,19 +3805,24 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$change-order-reponsive</li>
                                         <li>$content-color</li>
                                         <li>$content-font</li>
                                         <li>$content-font-weight</li>
                                         <li>$content-max-line</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-responsive</li>
                                         <li>$img-height-responsive</li>
                                         <li>$img-position</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -3662,18 +3874,19 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$change-order-reponsive</li>
                                         <li>$content-color</li>
                                         <li>$content-font</li>
                                         <li>$content-font-weight</li>
                                         <li>$content-max-lines</li>
-                                        <li>$heading-color</li>
-                                        <li>$heading-font</li>
-                                        <li>$heading-font-weight</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-background-color</li>
@@ -3681,7 +3894,11 @@
                                         <li>$img-height</li>
                                         <li>$img-position</li>
                                         <li>$img-width</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
                                     </ul>
                                 </div>
                             </div>
@@ -3733,17 +3950,18 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$change-order-reponsive</li>
                                         <li>$content-color</li>
                                         <li>$content-font</li>
                                         <li>$content-font-weight</li>
-                                        <li>$heading-color</li>
-                                        <li>$heading-font</li>
-                                        <li>$heading-font-weight</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio</li>
                                         <li>$img-background-color</li>
@@ -3758,7 +3976,11 @@
                                         <li>$position-color</li>
                                         <li>$position-font</li>
                                         <li>$position-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
                                     </ul>
                                 </div>
                             </div>
@@ -3810,17 +4032,18 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$change-order-reponsive</li>
                                         <li>$content-color</li>
                                         <li>$content-font</li>
                                         <li>$content-font-weight</li>
-                                        <li>$heading-color</li>
-                                        <li>$heading-font</li>
-                                        <li>$heading-font-weight</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-responsive</li>
                                         <li>$img-height-responsive</li>
@@ -3832,7 +4055,11 @@
                                         <li>$position-color</li>
                                         <li>$position-font</li>
                                         <li>$position-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
                                     </ul>
                                 </div>
                             </div>
@@ -3886,8 +4113,10 @@
                                 <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                                     <ul style="list-style: inside">
                                         <li>$hover-img-background-color</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-align</li>
                                         <li>$img-aspect-ratio</li>
@@ -3975,9 +4204,13 @@
                             <div class="f--row f--gap-b">
                                 <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
                                     <ul style="list-style: inside">
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-background-color</li>
+                                        <li>$hover-img-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$icon-class</li>
                                         <li>$img-align</li>
@@ -4116,8 +4349,10 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$card-aspect-ratio</li>
-                                        <li>$card-height</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-background-position</li>
                                         <li>$hover-background-repeat</li>
                                         <li>$hover-background-size</li>
@@ -4125,6 +4360,7 @@
                                         <li>$hover-meta-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-hide-by-default</li>
@@ -4133,6 +4369,7 @@
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -4243,8 +4480,10 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$card-aspect-ratio</li>
-                                        <li>$card-height</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-background-position</li>
                                         <li>$hover-background-repeat</li>
                                         <li>$hover-background-size</li>
@@ -4252,6 +4491,7 @@
                                         <li>$hover-meta-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-hide-by-default</li>
@@ -4259,6 +4499,7 @@
                                         <li>$meta-color</li>
                                         <li>$meta-font</li>
                                         <li>$meta-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -4381,19 +4622,23 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$card-aspect-ratio</li>
-                                        <li>$card-height</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-background-position</li>
                                         <li>$hover-background-repeat</li>
                                         <li>$hover-background-size</li>
                                         <li>$hover-mask-background-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-hide-by-default</li>
                                         <li>$mask-background-color</li>
                                         <li>$pill-class</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
                                         <li>$title-font</li>
@@ -4466,15 +4711,21 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-author-color</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-mask-color</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-subtitle-color</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$link-class</li>
                                         <li>$link-font</li>
                                         <li>$mask-color</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
                                         <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
@@ -4508,9 +4759,8 @@
                                             <p class="g--card-54__bd__subtitle">Location</p>
                                         </div>
                                         <div class="g--card-54__wrapper">
-                                            <svg class="g--card-54__wrapper__artwork" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M22 14L30 22L22 30L20.575 28.6L26.175 23L14 23L14 21L26.175 21L20.575 15.4L22 14Z" fill="black" />
-                                                <rect x="43.5" y="43" width="43" height="42" rx="21" transform="rotate(-180 43.5 43)" stroke="black" />
+                                            <svg class="g--card-54__wrapper__artwork" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8 -6.99382e-07L16 8L8 16L6.575 14.6L12.175 9L6.11959e-07 9L7.86805e-07 7L12.175 7L6.575 1.4L8 -6.99382e-07Z" fill="black"/>
                                             </svg>
                                         </div>
                                     </div>
@@ -4522,9 +4772,8 @@
                                             <p class="g--card-54__bd__subtitle">Location</p>
                                         </div>
                                         <div class="g--card-54__wrapper">
-                                            <svg class="g--card-54__wrapper__artwork" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M22 14L30 22L22 30L20.575 28.6L26.175 23L14 23L14 21L26.175 21L20.575 15.4L22 14Z" fill="black" />
-                                                <rect x="43.5" y="43" width="43" height="42" rx="21" transform="rotate(-180 43.5 43)" stroke="black" />
+                                            <svg class="g--card-54__wrapper__artwork" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8 -6.99382e-07L16 8L8 16L6.575 14.6L12.175 9L6.11959e-07 9L7.86805e-07 7L12.175 7L6.575 1.4L8 -6.99382e-07Z" fill="black"/>
                                             </svg>
                                         </div>
                                     </div>
@@ -4541,23 +4790,36 @@
                                         <li>$border-radius</li>
                                         <li>$border-style</li>
                                         <li>$border-width</li>
+                                        <li>$card-min-height</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-icon-background</li>
+                                        <li>$hover-icon-border-color</li>
                                         <li>$hover-icon-color</li>
                                         <li>$hover-icon-transform</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$icon-align</li>
-                                        <li>$icon-color</li>
+                                        <li>$icon-background</li>
+                                        <li>$icon-border-color</li>
+                                        <li>$icon-border-radius</li>
+                                        <li>$icon-border-style</li>
+                                        <li>$icon-border-width</li>
+                                        <li>$icon-color-fill</li>
+                                        <li>$icon-color-stroke</li>
                                         <li>$icon-top</li>
                                         <li>$icon-width</li>
+                                        <li>$shadow</li>
                                         <li>$subtitle-color</li>
-                                        <li>$subtitle-font</li>
                                         <li>$subtitle-font-weight</li>
+                                        <li>$subtitle-font</li>
                                         <li>$text-align</li>
                                         <li>$title-color</li>
-                                        <li>$title-font</li>
                                         <li>$title-font-weight</li>
+                                        <li>$title-font</li>
                                     </ul>
                                 </div>
                             </div>
@@ -4608,17 +4870,18 @@
                                         <li>$border-style</li>
                                         <li>$border-width</li>
                                         <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
                                         <li>$change-order-reponsive</li>
                                         <li>$content-color</li>
                                         <li>$content-font</li>
                                         <li>$content-font-weight</li>
-                                        <li>$heading-color</li>
-                                        <li>$heading-font</li>
-                                        <li>$heading-font-weight</li>
                                         <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
                                         <li>$hover-img-zoom</li>
                                         <li>$hover-shadow</li>
                                         <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
                                         <li>$hover-transform</li>
                                         <li>$img-aspect-ratio-responsive</li>
                                         <li>$img-height-responsive</li>
@@ -4629,7 +4892,274 @@
                                         <li>$position-color</li>
                                         <li>$position-font</li>
                                         <li>$position-font-weight</li>
+                                        <li>$shadow</li>
                                         <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font</li>
+                                        <li>$title-font-weight</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- card 56 -->
+             <section class="f--section-c" id="card-56">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-56</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-12">
+                                    <div class="g--card-56">
+                                        <div class="g--card-56__media-wrapper">
+                                            <img
+                                            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+                                            src="/src/img/global-components/placeholder.jpg"
+                                                alt="alt text"
+                                                class="g--card-56__media-wrapper__media g--lazy-01"
+                                            />
+                                        </div>
+                                        <div class="g--card-56__wrapper">
+                                            <p class="g--card-56__wrapper__hd">“This is a quote lorem ipsum dolor sit amet consectetur. Justo quam consectetur consequat suspendisse consectetur quam lorem. “</>
+                                            <div class="g--card-56__wrapper__bd">
+                                                <p class="g--card-56__wrapper__bd__title">PERSON NAME, Position</p>
+                                                <p class="g--card-56__wrapper__bd__subtitle">Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12 f--col-tabletm-6 f--col-mobile-12">
+                                    <ul style="list-style: inside">
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$breakpoint</li>
+                                        <li>$card-min-height</li>
+                                        <li>$company-color</li>
+                                        <li>$company-font-weight</li>
+                                        <li>$company-font</li>
+                                        <li>$hover-company-color</li>
+                                        <li>$hover-company-underline-color</li>
+                                        <li>$hover-img-border-radius</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-mask-color</li>
+                                        <li>$hover-person-color</li>
+                                        <li>$hover-person-underline-color</li>
+                                        <li>$hover-quote-color</li>
+                                        <li>$hover-quote-underline-color</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-border-radius</li>
+                                        <li>$img-fit</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$img-width</li>
+                                        <li>$mask-color</li>
+                                        <li>$person-color</li>
+                                        <li>$person-font-weight</li>
+                                        <li>$person-font</li>
+                                        <li>$quote-color</li>
+                                        <li>$quote-font-weight</li>
+                                        <li>$quote-font</li>
+                                        <li>$shadow</li>
+                                        <li>$text-align</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- card 57 -->
+             <section class="f--section-c" id="card-57">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-57</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-57">
+                                        <h3 class="g--card-57__title">Solution Name</h3>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-57__link">This is a link</a>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-57 g--card-57--second">
+                                        <h3 class="g--card-57__title">Solution Name</h3>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-57__link">This is a link</a>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-57 g--card-57--third">
+                                        <h3 class="g--card-57__title">Solution Name</h3>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-57__link">This is a link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-color</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-fit</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$img-width</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$shadow</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 58 -->
+            <section class="f--section-c" id="card-58">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c">Card-58</h2>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-58">
+                                        <h3 class="g--card-58__title">Solution Name</h3>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-58__link">This is a link</a>
+                                    </div>
+                                </div>
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-58 g--card-58--second">
+                                        <h3 class="g--card-58__title">At risus viverra adipiscing at in tellus integer feugiat. Ut venenatis tellus in metus vulputate.</h3>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-58__link">This is a link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$card-min-height</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- card 59 -->
+            <section class="f--section-c" id="card-59">
+                <div class="f--container">
+                    <div class="f--row f--gap-d">
+                        <div class="f--col-12">
+                            <h2 class="f--font-c f--sp-a">Card-59</h2>
+                            <p class="f--font-f f--background-a f--p-3"><strong>Note:</strong> if we add background color and border radius then the background color will show in the corners</p>
+                        </div>
+                        <div class="f--col-8 f--col-tabletm-12">
+                            <div class="f--row f--gap-d">
+                                <div class="f--col-6 f--col-tablets-12 display--flex">
+                                    <div class="g--card-59">
+                                        <div
+                                            class="g--card-59__bg-items g--lazy-01"
+                                            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+                                        ></div>
+                                        <div class="g--card-59__ft-items">
+                                            <h3 class="g--card-59__ft-items__title">Solution Name</h3>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-59__ft-items__link">This is a link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f--col-4 f--col-tabletm-12">
+                            <h2 class="f--font-c f--sp-a">Editable variables</h2>
+                            <div class="f--row f--gap-b">
+                                <div class="f--col-12">
+                                    <ul style="list-style: inside">
+                                        <li>$background-color</li>
+                                        <li>$background-position</li>
+                                        <li>$background-size</li>
+                                        <li>$border-color</li>
+                                        <li>$border-radius</li>
+                                        <li>$border-style</li>
+                                        <li>$border-width</li>
+                                        <li>$card-min-height</li>
+                                        <li>$hover-background-img-zoom</li>
+                                        <li>$hover-border-color</li>
+                                        <li>$hover-border-radius</li>
+                                        <li>$hover-img-zoom</li>
+                                        <li>$hover-mask-color</li>
+                                        <li>$hover-shadow</li>
+                                        <li>$hover-title-color</li>
+                                        <li>$hover-title-underline-color</li>
+                                        <li>$hover-transform</li>
+                                        <li>$img-aspect-ratio</li>
+                                        <li>$img-fit</li>
+                                        <li>$img-height</li>
+                                        <li>$img-position</li>
+                                        <li>$img-width</li>
+                                        <li>$link-class</li>
+                                        <li>$link-font</li>
+                                        <li>$mask-color</li>
+                                        <li>$shadow</li>
+                                        <li>$text-align</li>
+                                        <li>$title-color</li>
+                                        <li>$title-font-weight</li>
+                                        <li>$title-font</li>
+                                        <li>$title-max-lines</li>
                                     </ul>
                                 </div>
                             </div>

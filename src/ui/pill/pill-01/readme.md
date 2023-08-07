@@ -22,13 +22,16 @@
 
 - $background-color
 - $border-color
+- $border-radius
 - $border-style
 - $border-width
 - $hover-background-color
 - $hover-border-color
+- $hover-border-radius
 - $hover-shadow
 - $hover-text-color
 - $hover-transform
+- $shadow
 - $text-color
 - $text-font
 - $text-font-weight
@@ -41,13 +44,16 @@
     @include make-pill-01-modifier(
     // $background-color: lighten(map-get($color-options, a), 75%),
     // $border-color: map-get($color-options, e),
+    // $border-radius: 100px,
     // $border-style: solid,
     // $border-width: 1px,
     // $hover-background-color: map-get($color-options, a),
     // $hover-border-color: map-get($color-options, a),
+    // $hover-border-radius: 8px,
     // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
     // $hover-text-color: map-get($color-options, b),
     // $hover-transform: translateY(-$measure),
+    // $shadow: 0 0 $measure*2 map-get($color-options, g),
     // $text-color: map-get($color-options, a),
     // $text-font: f,
     // $text-font-weight: 600,

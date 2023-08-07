@@ -41,19 +41,28 @@ For the image, we have to add width, height and aspect ratio dynamically.
 ## Editable variables
 
 -   $background-color
+-   $border-color
 -   $border-radius
+-   $border-style
+-   $border-width
 -   $btn-class
 -   $btn-font
 -   $change-order-reponsive
+-   $cta-min-height
 -   $hide-img-reponsive
 -   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
 -   $hover-img-zoom
 -   $hover-shadow
 -   $hover-subtitle-color
 -   $hover-title-color
+-   $hover-title-underline-color
 -   $hover-transform
+-   $img-background-color: false,
 -   $img-position
 -   $one-col-bkt
+-   $shadow
 -   $subtitle-color
 -   $subtitle-font
 -   $subtitle-font-weight
@@ -73,28 +82,37 @@ To use it we have to import the css of the $btn-class in the entry
     @include make-cta-05();
     @include make-cta-05-modifier(
         // $background-color: map-get($color-options, f),
-        // $border-radius: 25px,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
         // $btn-class: g--btn-02,
         // $btn-font: d,
         // $change-order-reponsive: true,
+        // $cta-min-height: 500px,
         // $hide-img-reponsive: true,
-        // $hover-background-color: map-get($color-options, e),
+        // $hover-background-color: map-get($color-options, h),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
         // $hover-subtitle-color: map-get($color-options, a),
         // $hover-title-color: map-get($color-options, a),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
+        // $img-background-color: map-get($color-options, f),
         // $img-position: center,
         // $one-col-bkt: $tablets,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),
-        // $subtitle-font: f,
         // $subtitle-font-weight: 400,
+        // $subtitle-font: f,
         // $subtitle-max-lines: 1,
-        // $title-color: map-get($color-options, b),
-        // $title-font: c,
-        // $title-font-weight: 400,
-        // $title-max-lines: 3,
         // $text-align: left,
+        // $title-color: map-get($color-options, b),
+        // $title-font-weight: 400,
+        // $title-font: c,
+        // $title-max-lines: 3,
     );
 }
 ```

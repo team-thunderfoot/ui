@@ -44,10 +44,12 @@
 - $height
 - $hover-background-color
 - $hover-border-color
+- $hover-border-radius
 - $hover-path-fill-color
 - $hover-shadow
 - $hover-transform
 - $path-fill-color
+- $shadow
 - $width
 
 ## Use
@@ -67,10 +69,12 @@
         // $height: $measure * 6,
         // $hover-background-color: map-get($color-options, a),
         // $hover-border-color: map-get($color-options, g),
+        // $hover-border-radius: $measure,
         // $hover-path-fill-color: map-get($color-options, g),
         // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $path-fill-color: map-get($color-options, a),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $width: $measure * 6,
     );
 }

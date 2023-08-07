@@ -23,9 +23,9 @@
 
 ## Editable variables
 
--   $background-color-dash
--   $background-color-line
--   $height-dash
+- $background-color-dash
+- $background-color-line
+- $height-dash
 
 ## use
 

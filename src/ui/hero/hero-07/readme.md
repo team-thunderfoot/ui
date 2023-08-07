@@ -30,19 +30,20 @@
 
 ## Editable variables
 
--   $background-color
--   $breakpoint
--   $header-height
--   $img-height
--   $img-object-fit
--   $img-position
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
+- $background-color
+- $breakpoint
+- $img-border-radius
+- $img-height
+- $img-object-fit
+- $img-position
+- $min-height
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -52,10 +53,11 @@
     @include make-hero-07-modifier(
         // $background-color: rgba(map-get($color-options, a), 30%),
         // $breakpoint: $tablets,
-        // $header-height: 96px,
+        // $img-border-radius: $measure*8 0 0 $measure*8,
         // $img-height: 200px,
         // $img-object-fit: cover,
         // $img-position: center,
+        // $min-height: 100vh,
         // $subtitle-color: map-get($color-options, a),
         // $subtitle-font: f,
         // $subtitle-font-weight: bold,

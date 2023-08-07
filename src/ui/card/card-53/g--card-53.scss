@@ -6,6 +6,8 @@
         $author-font: d,
         // $author-max-lines: false,
         $background-color: map-get($color-options, a),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
         $background-position: -3% -28%,
         $background-size: 20%,
         // $hover-author-color: false,
@@ -34,20 +36,20 @@
         @include make-card-53-modifier($background-size: 30%, $background-position: -3% -18%);
     }
 
-    &--second{
-        @include make-card-53-modifier(
-            $background-position: -24px -24px,
-        );
+    &--second {
+        @include make-card-53-modifier($background-position: -24px -24px);
     }
-    &--third{
+    &--third {
         @include make-card-53-modifier(
             $background-position: top left,
             $background-size: cover,
             $border-color: map-get($color-options, f),
-            $border-radius: $measure*4,
+            $border-radius: $measure * 4,
             $border-style: solid,
             $border-width: 2px,
             $mask-color: rgba(map-get($color-options, e), 0.4),
+            $card-min-height: 500px,
+            $shadow: 0 0 $measure * 2 map-get($color-options, g)
         );
     }
 }

@@ -36,7 +36,9 @@ If you want the subtitle to be a c--content, the HTML should be:
         />
     </div>
     <h3 class="g--card-01__title">Lorem ipsum</h3>
-    <div class="g--card-01__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
+    <div class="g--card-01__subtitle c--content-a">
+        Solution description lorem ipsum dolor sit amet consectetur.
+    </div>
 </div>
 ```
 
@@ -51,16 +53,22 @@ It is not necessary to add aspect-ratio.
 -   $border-radius
 -   $border-style
 -   $border-width
+-   $card-min-height
 -   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-img-border-radius
 -   $hover-img-zoom
 -   $hover-shadow
 -   $hover-title-color
+-   $hover-title-underline-color
 -   $hover-transform
 -   $img-aspect-ratio
 -   $img-fit
 -   $img-height
 -   $img-position
 -   $img-width
+-   $shadow
 -   $subtitle-color
 -   $subtitle-font
 -   $subtitle-font-weight
@@ -82,16 +90,22 @@ It is not necessary to add aspect-ratio.
         // $border-radius: $measure,
         // $border-style: solid,
         // $border-width: 1px,
+        // $card-min-height: 500px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-img-border-radius: $measure,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: 1.7,
         // $img-fit: cover,
         // $img-height: 340px,
         // $img-position: center,
         // $img-width: auto,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a) $subtitle-font-weight: 400,
         // $subtitle-font: f,
         // $subtitle-font-weight: 300,

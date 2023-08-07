@@ -1,6 +1,7 @@
 .g--card-30 {
     @include make-card-30();
     @include make-card-30-modifier(
+        $hover-img-border-radius: $measure * 2,
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),
@@ -23,13 +24,13 @@
             $hover-title-color: map-get($color-options, e),
             $hover-transform: scale(105%),
             $img-aspect-ratio: 2,
-            $img-border-radius: $measure*2,
+            $img-border-radius: $measure * 2,
             $img-height: auto,
             $img-position: center,
             $meta-color: map-get($color-options, a),
             $meta-font-weight: 400,
             $meta-font: f,
-           $text-align: left,
+            $text-align: left,
             $title-color: map-get($color-options, a),
             $title-font-weight: 400,
             $title-font: c,

@@ -25,7 +25,10 @@
     $hover-background-position: false,
     $hover-background-size: false,
     $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-shadow: false,
     $hover-text-color: false,
+    $shadow: false,
     $text-color: false,
     $transition: false
 ) {
@@ -53,6 +56,9 @@
     @if $border-style {
         border-style: $border-style;
     }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
     @if $text-color {
         color: $text-color;
     }
@@ -64,7 +70,7 @@
     }
 
 
-    @if $hover-background-color or $hover-border-color or $hover-text-color or $hover-background-size or $hover-background-position {
+    @if $hover-background-color or $hover-border-color or $hover-border-radius or $hover-text-color or $hover-background-size or $hover-background-position or $hover-shadow {
         @if $transition{
             transition: $transition;
         }
@@ -83,6 +89,12 @@
                 }
                 @if $hover-border-color {
                     border-color: $hover-border-color;
+                }
+                @if $hover-border-radius {
+                    border-radius: $hover-border-radius;
+                }
+                @if $hover-shadow {
+                    box-shadow: $hover-shadow;
                 }
                 @if $hover-text-color {
                     color: $hover-text-color;

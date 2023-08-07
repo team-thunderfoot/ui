@@ -1,13 +1,15 @@
 .g--card-37 {
     @include make-card-37();
     @include make-card-37-modifier(
-        $background-color: lighten(map-get($color-options,a), 82%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
         $border-radius: 0,
         $full-image-height: true,
         $hover-background-color: map-get($color-options, g),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
         $hover-img-zoom: 1.1,
         $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         $hover-title-color: map-get($color-options, e),
@@ -30,7 +32,7 @@
 
     &--second {
         @include make-card-37-modifier(
-            $background-color: lighten(map-get($color-options,a), 82%),
+            $background-color: lighten(map-get($color-options, a), 82%),
             $border-color: map-get($color-options, a),
             $border-style: solid,
             $border-width: 1px,
@@ -42,7 +44,8 @@
             $hover-title-color: map-get($color-options, e),
             $hover-transform: scale(105%),
             // $img-aspect-ratio: 2,
-            $img-height: 340px,            $img-position: center,
+            $img-height: 340px,
+            $img-position: center,
             $link-class: g--link-01,
             $link-font: f,
             $meta-color: map-get($color-options, a),

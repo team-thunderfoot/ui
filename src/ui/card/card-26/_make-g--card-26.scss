@@ -1,158 +1,216 @@
 @mixin make-card-26() {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  text-decoration: none;
-
-  &__media-wrapper {
     overflow: hidden;
+    width: 100%;
     position: relative;
-    z-index: 1;
-    &__media {
-      display: block;
-      object-fit: cover;
-      width: 100%;
-    }
-  }
+    text-decoration: none;
 
-  &__wrapper {
-    padding-top: $measure * 6;
-  }
+    &__media-wrapper {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        &__media {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+        padding-top: $measure * 6;
+    }
 }
 
 @mixin make-card-26-modifier(
-  $hover-img-zoom: false,
-  $hover-title-color: false,
-  $hover-transform: false,
-  $img-aspect-ratio: false,
-  $img-border-radius: false,
-  $img-height: false,
-  $img-position: false,
-  $text-align: false,
-  $title-color: false,
-  $title-font: false,
-  $title-font-weight: false,
-  $title-max-lines: false
+    $hover-img-border-radius: false,
+    $hover-img-zoom: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-border-radius: false,
+    $img-height: false,
+    $img-position: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+    $title-max-lines: false
 ) {
-  @if $hover-transform {
-    transition: transform $time-b $ease-standard-a;
-    @media all and (hover: hover) {
-      &:hover,
-      &:focus,
-      &:active {
-        transform: $hover-transform;
-      }
-    }
-  }
-
-  @if $hover-title-color {
-    .g--card-26 {
-      &__wrapper {
-        &__title {
-          transition: color $time-b $ease-standard-a;
-        }
-      }
-    }
-
-    @media all and (hover: hover) {
-      &:hover,
-      &:focus,
-      &:active {
-        .g--card-26 {
-          &__wrapper {
-            &__title {
-              color: $hover-title-color;
+    @if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
             }
-          }
         }
-      }
     }
-  }
 
-  @if $hover-img-zoom {
-    .g--card-26 {
-      &__media-wrapper {
-        &__media {
-          transition: transform $time-b $ease-standard-a;
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-26 {
+                            &__wrapper {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-26 {
+                    &__wrapper {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-26 {
+                    &__wrapper {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
     }
-    @media all and (hover: hover) {
-      &:hover,
-      &:focus,
-      &:active {
+
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-26 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
         .g--card-26 {
-          &__media-wrapper {
+            &__media-wrapper {
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-26 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--card-26 {
+            &__wrapper {
+                text-align: center;
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        .g--card-26 {
+            &__wrapper {
+                text-align: left;
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        .g--card-26 {
+            &__wrapper {
+                text-align: right;
+            }
+        }
+    }
+
+    .g--card-26 {
+        &__media-wrapper {
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
+                overflow: hidden;
+            }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
+            }
             &__media {
-              transform: scale($hover-img-zoom);
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                @if $img-position {
+                    object-position: $img-position;
+                }
             }
-          }
         }
-      }
+        &__wrapper {
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
+                }
+            }
+        }
     }
-  }
-
-  @if $text-align == "center" {
-    .g--card-26 {
-      &__wrapper {
-        text-align: center;
-      }
-    }
-  }
-
-  @if $text-align == "left" {
-    .g--card-26 {
-      &__wrapper {
-        text-align: left;
-      }
-    }
-  }
-
-  @if $text-align == "right" {
-    .g--card-26 {
-      &__wrapper {
-        text-align: right;
-      }
-    }
-  }
-
-  .g--card-26 {
-    &__media-wrapper {
-      @if $img-border-radius {
-        border-radius: $img-border-radius;
-        overflow: hidden;
-      }
-      &__media {
-        @if $img-aspect-ratio {
-          aspect-ratio: $img-aspect-ratio;
-        }
-        @if $img-height {
-          height: $img-height;
-        }
-        @if $img-position {
-          object-position: $img-position;
-        }
-      }
-    }
-    &__wrapper {
-      &__title {
-        @if $title-color {
-          color: $title-color;
-        }
-        @if $title-font {
-          @extend .f--font-#{$title-font} !optional;
-        }
-        @if $title-font-weight {
-          font-weight: $title-font-weight;
-        }
-        @if $title-max-lines {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: $title-max-lines;
-          -webkit-box-orient: vertical;
-        }
-      }
-    }
-  }
 }

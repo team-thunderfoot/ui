@@ -36,7 +36,10 @@
 - $hover-background-position
 - $hover-background-size
 - $hover-border-color
+- $hover-border-radius
+- $hover-shadow
 - $hover-text-color
+- $shadow
 - $text-color
 - $transition
 
@@ -60,7 +63,10 @@
     // $hover-background-position: bottom left,
     // $hover-background-size: 100% 100%,
     // $hover-border-color: map-get($color-options, a),
+    // $hover-border-radius: 20px,
+    // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
     // $hover-text-color: map-get($color-options, a),
+    // $shadow: 0 0 $measure*2 map-get($color-options, a),
     // $text-color: map-get($color-options, a),
     // $transition: (border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a, background-size $time-b $ease-standard-a)
   );

@@ -20,12 +20,14 @@
             $border-width: 3px,
             $border-style: solid dotted dotted solid,
             $border-color: map-get($color-options, f),
+            $message-min-height: 300px,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
             $text-color: map-get($color-options, a),
-            // $hover-text-color: false,
             $text-font: d,
             $text-font-weight: bold,
             $text-max-lines: 2,
             $text-align: left,
+            
         );
     }
 }

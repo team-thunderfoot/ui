@@ -1,24 +1,39 @@
 .g--accordion-01 {
     @include make-accordion-01();
 
-    @include make-accordion-01-modifier(
+    @include make-accordion-01-modifier (
+        $active-background-color: rgba(map-get($color-options, h), .2),
+        $active-title-color: rgba(map-get($color-options, h), 1),
         $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
+        $hover-title-color: map-get($color-options, e),
+        $hover-icon-background: map-get($color-options, h),
+        $hover-icon-border-color: map-get($color-options, a),
+        $active-icon-background: map-get($color-options, h),
+        $active-icon-border-color: map-get($color-options, a),
+        // $hover-icon-border-radius: 8px,
+        $hover-icon-color: map-get($color-options, e),
         $icon-color: map-get($color-options, a),
+        $icon-width: $measure*2,
         $title-color: map-get($color-options, a),
         $title-font: c,
+        // $icon-background: red,
+        $icon-border-color: transparent,
+        $icon-border-radius: 50%,
+        $icon-border-style: solid,
+        $icon-border-width: 1px,
+        // $icon-top: 2px,
         // $title-font-weight: false,
     );
     &--second{
-        @include make-accordion-01-modifier(
-            $hover-background-color: rgba(map-get($color-options, a), .2),
-            $hover-title-color: map-get($color-options, e),
-            $hover-icon-color: map-get($color-options, e),
-            $active-background-color: rgba(map-get($color-options, h), .2),
-            $active-title-color: map-get($color-options, f),
-            $active-icon-color: map-get($color-options, g),
-            // $title-font-weight: false,
-        );
+        // @include make-accordion-01-modifier(
+        //     $hover-title-color: map-get($color-options, e),
+        //     $hover-icon-color: map-get($color-options, e),
+        //     $active-background-color: rgba(map-get($color-options, h), .2),
+        //     $active-title-color: map-get($color-options, f),
+        //     $active-icon-color: map-get($color-options, g),
+        //     // $title-font-weight: false,
+        // );
     }
 }

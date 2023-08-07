@@ -10,7 +10,10 @@
 
 ```html
 <div class="g--card-53">
-    <div class="g--card-53__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/slider/quotes.svg"></div>
+    <div
+        class="g--card-53__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/slider/quotes.svg"
+    ></div>
     <div class="g--card-53__ft-items">
         <h3 class="g--card-53__ft-items__title">
             “Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit
@@ -25,35 +28,39 @@
 
 ## Editable variables
 
-- $author-color
-- $author-font
-- $author-font-weight
-- $author-max-lines
-- $background-color
-- $background-position
-- $background-size
-- $border-color
-- $border-radius
-- $border-style
-- $border-width
-- $hover-author-color
-- $hover-background-color
-- $hover-shadow
-- $hover-subtitle-color
-- $hover-title-color
-- $hover-transform
-- $link-class
-- $link-font
-- $mask-color
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $author-color
+-   $author-font
+-   $author-font-weight
+-   $author-max-lines
+-   $background-color
+-   $background-position
+-   $background-size
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $hover-author-color
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-mask-color
+-   $hover-shadow
+-   $hover-subtitle-color
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $link-class
+-   $link-font
+-   $mask-color
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## use
 
@@ -72,15 +79,21 @@
         // $border-radius: 20px,
         // $border-style: solid,
         // $border-width: 2px,
+        // $card-min-height: 500px,
         // $hover-author-color: map-get($color-options, g),
         // $hover-background-color: map-get($color-options, e),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-mask-color: rgba(map-get($color-options, a), .5),
         // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
         // $hover-subtitle-color: map-get($color-options, g),
         // $hover-title-color: map-get($color-options, g),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $link-class: g--link-01,
         // $link-font: f,
         // $mask-color: rgba(map-get($color-options, b), 0.5),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, d),
         // $subtitle-font: f,
         // $subtitle-font-weight: 400,

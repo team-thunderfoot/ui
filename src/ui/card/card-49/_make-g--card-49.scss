@@ -2,6 +2,7 @@
     padding: 0 $measure * 2;
     width: 100%;
     text-decoration: none;
+    display: block;
 
     @media all and ($viewport-type: $tabletm) {
         padding: 0;
@@ -31,9 +32,13 @@
 }
 
 @mixin make-card-49-modifier(
+    $hover-border-color: false,
+    $hover-border-radius: false,
     $hover-img-background-color: false,
+    $hover-img-border-radius: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $icon-class: false,
     $img-align: false,
@@ -50,7 +55,7 @@
     $text-align: false,
     $title-color: false,
     $title-font: false,
-    $title-font-weight: false,
+    $title-font-weight: false
 ) {
     @if $text-align == "center" {
         text-align: center;
@@ -64,18 +69,10 @@
         text-align: right;
     }
 
-    @if $hover-img-background-color or $hover-img-zoom or $hover-title-color or $hover-transform {
-        display: block;
-    }
-
-    @if $hover-img-background-color and $hover-title-color and $hover-transform {
+    @if $hover-img-background-color {
         .g--card-49 {
-            transition: transform $time-b $ease-standard-a;
             &__media-wrapper {
                 transition: background $time-b $ease-standard-a;
-            }
-            &__title {
-                transition: color $time-b $ease-standard-a;
             }
         }
 
@@ -84,41 +81,34 @@
             &:focus,
             &:active {
                 .g--card-49 {
-                    transform: $hover-transform;
                     &__media-wrapper {
                         background: $hover-img-background-color;
-                    }
-                    &__title {
-                        color: $hover-title-color;
                     }
                 }
             }
         }
-    } @else if $hover-img-background-color {
-        .g--card-49 {
-            &__media-wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
+    }
 
+    @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-49 {
-                    &__media-wrapper {
-                        background: $hover-img-background-color;
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-49 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
                     }
                 }
             }
         }
     } @else if $hover-title-color {
-        .g--card-49 {
-            &__title {
-                transition: color $time-b $ease-standard-a;
-            }
-        }
-
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -130,15 +120,55 @@
                 }
             }
         }
-    } 
-    
-    @if $hover-transform{
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                transform: $hover-transform;
+                .g--card-49 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
             }
         }
     }
@@ -176,6 +206,9 @@
             @if $img-background-color {
                 background: $img-background-color;
             }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
+            }
 
             &__media {
                 @if $img-object-fit {
@@ -202,12 +235,12 @@
                     margin-left: auto;
                     margin-right: auto;
                 }
-            
+
                 @if $img-align == "left" {
                     margin-left: 0;
                     margin-right: auto;
                 }
-            
+
                 @if $img-align == "right" {
                     margin-left: auto;
                     margin-right: 0;
@@ -224,6 +257,18 @@
             }
             @if $title-font-weight {
                 font-weight: $title-font-weight;
+            }
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
             }
         }
 

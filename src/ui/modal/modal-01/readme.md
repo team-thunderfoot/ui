@@ -58,16 +58,21 @@
 
 ## Editable variables
 
--   $background-color
--   $icon-color
--   $icon-height
--   $icon-width
--   $opacity
--   $opacity-active
--   $size
--   $transition
--   $zoom
--   $zoom-active
+- $background-color
+- $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $icon-color
+- $icon-height
+- $icon-width
+- $opacity
+- $opacity-active
+- $shadow
+- $size
+- $transition
+- $zoom
+- $zoom-active
 
 ## Use
 
@@ -76,11 +81,16 @@
     @include make-modal-01();
     @include make-modal-01-modifier(
         // $background-color: map-get($color-options, b),
+        // $border-color: map-get($color-options, g),
+        // $border-radius: $measure*5,
+        // $border-style: solid,
+        // $border-width: 4px,
         // $icon-color: map-get($color-options, g),
         // $icon-height: $measure * 2,
         // $icon-width: $measure * 2,
         // $opacity: 0,
         // $opacity-active: 1,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $size: small,
         // $transition: all $time-b * 2 $ease-standard-a,
         // $zoom: 0,

@@ -24,20 +24,20 @@ When there's an error in the textarea the class "g--form-textarea-01--error" sho
 
 ## Editable variables
 
--   $background-color
--   $background-color-autofill
--   $border-color
--   $border-color-focus
--   $border-radius
--   $border-style
--   $border-width
--   $error-border-color
--   $font
--   $font-size-mobile
--   $font-weight
--   $placeholder-color
--   $text-color
--   $textarea-height
+- $background-color
+- $background-color-autofill
+- $border-color
+- $border-color-focus
+- $border-radius
+- $border-style
+- $border-width
+- $error-border-color
+- $font
+- $font-size-mobile
+- $font-weight
+- $placeholder-color
+- $text-color
+- $textarea-height
 
 ## Use
 

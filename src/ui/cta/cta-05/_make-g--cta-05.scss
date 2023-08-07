@@ -37,6 +37,7 @@
         width: 50%;
 
         &__media {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
@@ -49,19 +50,28 @@
 
 @mixin make-cta-05-modifier(
     $background-color: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
     $border-radius: false,
     $btn-class: false,
     $btn-font: false,
     $change-order-reponsive: false,
+    $cta-min-height: false,
     $hide-img-reponsive: false,
     $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-subtitle-color: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
+    $img-background-color: false,
     $img-position: false,
     $one-col-bkt: false,
+    $shadow: false,
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
@@ -72,80 +82,58 @@
     $title-font-weight: false,
     $title-max-lines: false
 ) {
-    @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
 
-        .g--cta-05 {
-            &__wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
+    @if $border-color {
+        border-color: $border-color;
+    }
 
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
+    @if $border-style {
+        border-style: $border-style;
+    }
 
-                .g--cta-05 {
-                    &__wrapper {
-                        background: $hover-background-color;
-                    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
                 }
             }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
-    } @else if $hover-background-color and $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
+    }
 
-        .g--cta-05 {
-            &__wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
-
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-
-                .g--cta-05 {
-                    &__wrapper {
-                        background: $hover-background-color;
-                    }
-                }
-            }
-        }
-    } @else if $hover-background-color and $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-
-        .g--cta-05 {
-            &__wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
-
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-
-                .g--cta-05 {
-                    &__wrapper {
-                        background: $hover-background-color;
-                    }
-                }
-            }
-        }
-    } @else if $hover-background-color {
-        .g--cta-05 {
-            &__wrapper {
-                transition: background $time-b $ease-standard-a;
-            }
-        }
-
+    @if $hover-background-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -155,34 +143,6 @@
                         background: $hover-background-color;
                     }
                 }
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
             }
         }
     }
@@ -203,7 +163,28 @@
         }
     }
 
-    @if $hover-title-color {
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--cta-05 {
+                            &__wrapper {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -212,6 +193,20 @@
                     &__wrapper {
                         &__title {
                             color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-05 {
+                    &__wrapper {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -233,11 +228,6 @@
                 }
             }
         }
-    }
-
-    @if $border-radius {
-        border-radius: $border-radius;
-        overflow: hidden;
     }
 
     @if $text-align == "center" {
@@ -280,41 +270,50 @@
     }
 
     .g--cta-05 {
-        @if $one-col-bkt {
-            &__wrapper {
-                @if $background-color {
-                    background: $background-color;
-                }
+        &__wrapper {
+            @if $background-color {
+                background: $background-color;
+            }
 
+            @if $hover-background-color {
+                transition: background $time-b $ease-standard-a;
+            }
+
+            @if $one-col-bkt {
                 @media all and ($viewport-type: $one-col-bkt) {
                     width: 100%;
-                }
-
-                &__title {
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        margin-bottom: $measure * 2;
-                    }
-                }
-
-                &__subtitle {
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        margin-bottom: $measure * 4;
-                    }
                 }
             }
 
-            &__media-wrapper {
+            &__title {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    margin-bottom: $measure * 2;
+                }
+            }
+
+            &__subtitle {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    margin-bottom: $measure * 4;
+                }
+            }
+        }
+
+        &__media-wrapper {
+            @if $img-background-color {
+                background: $img-background-color;
+            }
+            @if $one-col-bkt {
                 @media all and ($viewport-type: $one-col-bkt) {
                     width: 100%;
                 }
+            }
 
-                &__media {
-                    @media all and ($viewport-type: $one-col-bkt) {
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                        height: auto;
-                    }
+            &__media {
+                @media all and ($viewport-type: $one-col-bkt) {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    height: auto;
                 }
             }
         }
@@ -322,7 +321,6 @@
         @if $one-col-bkt and $change-order-reponsive {
             &__wrapper {
                 @media all and ($viewport-type: $one-col-bkt) {
-                    width: 100%;
                     order: 1;
                 }
             }
@@ -331,11 +329,7 @@
         @if $one-col-bkt and $hide-img-reponsive {
             &__media-wrapper {
                 @media all and ($viewport-type: $one-col-bkt) {
-                    position: absolute;
-                    height: 0;
-                    overflow: hidden;
-                    pointer-events: none;
-                    visibility: hidden;
+                    display: none;
                 }
             }
         }
@@ -362,8 +356,17 @@
                     -webkit-box-orient: vertical;
                 }
 
-                @if $hover-title-color {
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
 
                 @if $one-col-bkt {

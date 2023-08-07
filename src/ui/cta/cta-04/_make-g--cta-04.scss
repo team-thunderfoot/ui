@@ -69,74 +69,102 @@
 }
 
 @mixin make-cta-04-modifier(
+    $background-color: false,
     $background-position: false,
     $background-size: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
     $border-radius: false,
     $btn-class: false,
     $btn-font: false,
+    $cta-min-height: false,
+    $hover-background-color: false,
     $hover-background-img-zoom: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-mask-color: false,
     $hover-shadow: false,
     $hover-subtitle-color: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $mask-color: false,
+    $shadow: false,
     $subtitle-color: false,
-    $subtitle-font: false,
     $subtitle-font-weight: false,
+    $subtitle-font: false,
     $subtitle-max-lines: false,
     $text-align: false,
     $title-color: false,
-    $title-font: false,
     $title-font-weight: false,
+    $title-font: false,
     $title-max-lines: false
 ) {
-    @if $background-position {
-        &__bg-items {
-            background-position: $background-position;
-        }
+    @if $background-color {
+        background: $background-color;
+    }
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-color {
+        border-color: $border-color;
     }
 
-    @if $background-size {
-        &__bg-items {
-            background-size: $background-size;
-        }
+    @if $border-style {
+        border-style: $border-style;
     }
 
-    @if $mask-color {
-        &__bg-items {
-            &::before {
-                background: $mask-color;
-            }
-        }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
     }
 
-    @if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+    @if $hover-mask-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
+                .g--cta-04 {
+                    &__bg-items {
+                        &::before {
+                            background: $hover-mask-color;
+                        }
+                    }
+                }
             }
         }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
             }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-            }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
     }
 
@@ -154,7 +182,28 @@
         }
     }
 
-    @if $hover-title-color {
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--cta-04 {
+                            &__ft-items {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -163,6 +212,20 @@
                     &__ft-items {
                         &__title {
                             color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-04 {
+                    &__ft-items {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -184,10 +247,6 @@
                 }
             }
         }
-    }
-
-    @if $border-radius {
-        border-radius: $border-radius;
     }
 
     @if $text-align == "center" {
@@ -275,8 +334,24 @@
 
     .g--cta-04 {
         &__bg-items {
+            @if $background-position {
+                background-position: $background-position;
+            }
+            @if $background-size {
+                background-size: $background-size;
+            }
             @if $hover-background-img-zoom {
                 transition: transform $time-b $ease-standard-a;
+            }
+            @if $mask-color {
+                &::before {
+                    background: $mask-color;
+                }
+            }
+            @if $hover-mask-color {
+                &::before {
+                    transition: background $time-b $ease-standard-a;
+                }
             }
         }
 
@@ -302,8 +377,17 @@
                     -webkit-box-orient: vertical;
                 }
 
-                @if $hover-title-color {
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
             }
             &__subtitle {

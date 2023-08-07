@@ -1,10 +1,30 @@
-.g--card-02{
+.g--card-02 {
     @include make-card-02();
-    @include make-card-02-modifier(
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-    );
-    &--second{
+    @include make-card-02-modifier($title-color: map-get($color-options, a), $title-font: c);
+    &--second {
+        @include make-card-02-modifier(
+            $hover-img-border-radius: $measure,
+            $hover-img-zoom: 1.2,
+            $hover-title-color: map-get($color-options, h),
+            $hover-title-underline-color: map-get($color-options, g),
+            $hover-transform: translateY(-$measure),
+            $img-aspect-ratio: calc(1 / 1),
+            $img-fit: cover,
+            // $img-height: 100px,
+            $img-position: center,
+            $img-width: 100%,
+            $subtitle-color: map-get($color-options, g),
+            $subtitle-font-weight: 400,
+            $subtitle-font: f,
+            $subtitle-max-lines: 3,
+            $text-align: left,
+            $title-color: map-get($color-options, g),
+            $title-font-weight: 400,
+            $title-font: c,
+            $title-max-lines: 3
+        );
+    }
+    &--third {
         @include make-card-02-modifier(
             $subtitle-color: map-get($color-options, g),
             $title-color: map-get($color-options, g),
@@ -12,7 +32,7 @@
             $hover-img-zoom: 1.2,
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
-            $img-aspect-ratio:calc(1 / 1),
+            $img-aspect-ratio: calc(16 / 9),
             // $img-height: 100px,
             $img-fit: cover,
             $img-position: center,
@@ -20,52 +40,31 @@
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-           $text-align: left,
+            $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
-    &--third{
+    &--fourth {
         @include make-card-02-modifier(
-            $subtitle-color: map-get($color-options, g),
-            $title-color: map-get($color-options, g),
-            $title-font: c,
-            $hover-img-zoom: 1.2,
-            $hover-title-color: map-get($color-options, h),
-            $hover-transform: translateY(-$measure),
-            $img-aspect-ratio:calc(16 / 9),
-            // $img-height: 100px,
-            $img-fit: cover,
-            $img-position: center,
-            $img-width: 100%,
-            $subtitle-font: f,
-            $subtitle-font-weight: 400,
-            $subtitle-max-lines: 3,
-           $text-align: left,
-            $title-font-weight: 400,
-            $title-max-lines: 3,
-        );
-    }
-    &--fourth{
-        @include make-card-02-modifier(
-        //     $subtitle-color: map-get($color-options, g),
+            //     $subtitle-color: map-get($color-options, g),
             $title-color: map-get($color-options, b),
             $subtitle-color: map-get($color-options, b),
             $title-font: d,
-        //     $hover-img-zoom: 1.2,
-        //     $hover-title-color: map-get($color-options, h),
-        //     $hover-transform: translateY(-$measure),
-        //     $img-aspect-ratio:calc(16 / 9),
-        //     // $img-height: 100px,
-        //     $img-fit: cover,
+            //     $hover-img-zoom: 1.2,
+            //     $hover-title-color: map-get($color-options, h),
+            //     $hover-transform: translateY(-$measure),
+            //     $img-aspect-ratio:calc(16 / 9),
+            //     // $img-height: 100px,
+            //     $img-fit: cover,
             // $img-position: center,
             $img-width: 100%,
             $subtitle-font: f,
-        //     $subtitle-font-weight: 400,
-        //     $subtitle-max-lines: 3,
-        //    $text-align: left,
-        //     $title-font-weight: 400,
-        //     $title-max-lines: 3,
+            //     $subtitle-font-weight: 400,
+            //     $subtitle-max-lines: 3,
+            //    $text-align: left,
+            //     $title-font-weight: 400,
+            //     $title-max-lines: 3,
         );
     }
 }

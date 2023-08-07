@@ -10,7 +10,10 @@
 
 ```html
 <div class="g--card-50">
-    <div class="g--card-50__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+    <div
+        class="g--card-50__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+    >
         <div class="g--card-50__bg-items__artwork"></div>
     </div>
     <div class="g--card-50__ft-items">
@@ -21,17 +24,27 @@
             <span class="g--card-50__ft-items__list-group__badge">Category</span>
         </div>
         <div class="g--card-50__ft-items__wrapper">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="g--card-50__ft-items__wrapper__link"
+                >This is a link</a
+            >
         </div>
     </div>
 </div>
 ```
 
 If you want the image appear at hover, the HTML should be:
+
 ```html
 <div class="g--card-50">
     <div class="g--card-50__bg-items">
-        <div class="g--card-50__bg-items__artwork g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"></div>
+        <div
+            class="g--card-50__bg-items__artwork g--lazy-01"
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+        ></div>
     </div>
     <div class="g--card-50__ft-items">
         <p class="g--card-50__ft-items__meta">Type</p>
@@ -41,16 +54,26 @@ If you want the image appear at hover, the HTML should be:
             <span class="g--card-50__ft-items__list-group__badge">Category</span>
         </div>
         <div class="g--card-50__ft-items__wrapper">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="g--card-50__ft-items__wrapper__link"
+                >This is a link</a
+            >
         </div>
     </div>
 </div>
 ```
 
 If you want the title to be a c--content, the HTML should be:
+
 ```html
 <div class="g--card-50">
-    <div class="g--card-50__bg-items g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg">
+    <div
+        class="g--card-50__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+    >
         <div class="g--card-50__bg-items__artwork"></div>
     </div>
     <div class="g--card-50__ft-items">
@@ -61,7 +84,13 @@ If you want the title to be a c--content, the HTML should be:
             <span class="g--card-50__ft-items__list-group__badge">Category</span>
         </div>
         <div class="g--card-50__ft-items__wrapper">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-50__ft-items__wrapper__link">This is a link</a>
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="g--card-50__ft-items__wrapper__link"
+                >This is a link</a
+            >
         </div>
     </div>
 </div>
@@ -73,37 +102,41 @@ It is not necessary to add aspect-ratio because the images have height in the cs
 
 ## Editable variables
 
-- $background-color
-- $background-position
-- $background-repeat
-- $background-size
-- $border-color
-- $border-radius
-- $border-style
-- $border-width
-- $card-aspect-ratio
-- $card-height
-- $hover-background-color
-- $hover-background-position
-- $hover-background-repeat
-- $hover-background-size
-- $hover-mask-background-color
-- $hover-meta-color
-- $hover-shadow
-- $hover-title-color
-- $hover-transform
-- $meta-color
-- $meta-font
-- $meta-font-weight
-- $link-class
-- $link-hide-by-default
-- $mask-background-color
-- $pill-class
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $background-position
+-   $background-repeat
+-   $background-size
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-aspect-ratio
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-raidus
+-   $hover-background-position
+-   $hover-background-repeat
+-   $hover-background-size
+-   $hover-mask-background-color
+-   $hover-meta-color
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $meta-color
+-   $meta-font
+-   $meta-font-weight
+-   $link-class
+-   $link-hide-by-default
+-   $mask-background-color
+-   $pill-class
+-   $shadow
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## use
 
@@ -120,8 +153,10 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $border-style: solid,
         // $border-width: 6px,
         // $card-aspect-ratio: calc(3 / 4),
-        // $card-height: 200px,
+        // $card-min-height: 200px,
         // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-background-position: bottom right,
         // $hover-background-repeat: no-repeat,
         // $hover-background-size: cover,
@@ -129,6 +164,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $hover-meta-color: map-get($color-options, a),
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, f),
         // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY($measure),
         // $link-class: g--link-01,
         // $link-hide-by-default: no,
@@ -137,6 +173,7 @@ It is not necessary to add aspect-ratio because the images have height in the cs
         // $meta-font: f,
         // $meta-font-weight: 400,
         // $pill-class: g--pill-01,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
         // $title-color: map-get($color-options, b),
         // $title-font: c,

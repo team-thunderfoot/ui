@@ -41,55 +41,134 @@
 }
 
 @mixin make-card-15-modifier(
+    $background-color: false,
     $background-position: false,
     $background-size: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
     $border-radius: false,
+    $card-min-height: false,
+    $hover-background-color: false,
     $hover-background-img-zoom: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-mask-color: false,
     $hover-shadow: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $mask-color: false,
+    $shadow: false,
     $subtitle-color: false,
-    $subtitle-font: false,
     $subtitle-font-weight: false,
+    $subtitle-font: false,
     $subtitle-max-lines: false,
     $text-align: false,
     $title-color: false,
-    $title-font: false,
     $title-font-weight: false,
+    $title-font: false,
     $title-max-lines: false
 ) {
+    @if $background-color {
+        background: $background-color;
+    }
 
-    @if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
+    @if $background-position {
+        .g--card-15 {
+            &__bg-items {
+                background-position: $background-position;
             }
         }
     }
-    @if $hover-title-color {
+
+    @if $background-size {
+        .g--card-15 {
+            &__bg-items {
+                background-size: $background-size;
+            }
+        }
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+
+    @if $mask-color {
+        &::after {
+            background: $mask-color;
+        }
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-15 {
+                            &__ft-items {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -98,6 +177,20 @@
                     &__ft-items {
                         &__title {
                             color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-15 {
+                    &__ft-items {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -123,27 +216,19 @@
             }
         }
     }
-    @if $border-radius {
-        border-radius: $border-radius;
-    }
-    @if $background-position {
-        .g--card-15 {
-            &__bg-items {
-                background-position: $background-position;
-            }
-        }
-    }
-    @if $background-size {
-        .g--card-15 {
-            &__bg-items {
-                background-size: $background-size;
-            }
-        }
-    }
 
-    @if $mask-color {
+    @if $hover-mask-color {
         &::after {
-            background: $mask-color;
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::after {
+                    background: $hover-mask-color;
+                }
+            }
         }
     }
 
@@ -155,6 +240,7 @@
             }
         }
     }
+
     @if $text-align == "left" {
         .g--card-15 {
             &__ft-items {
@@ -163,6 +249,7 @@
             }
         }
     }
+
     @if $text-align == "right" {
         .g--card-15 {
             &__ft-items {
@@ -171,6 +258,7 @@
             }
         }
     }
+
     .g--card-15 {
         &__ft-items {
             &__title {
@@ -190,8 +278,17 @@
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
                 }
-                @if $hover-title-color {
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
             }
 

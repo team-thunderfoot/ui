@@ -1,33 +1,36 @@
-.g--card-16{
+.g--card-16 {
     @include make-card-16();
     @include make-card-16-modifier(
-        $background-color: rgba(map-get($color-options, a), .1),
+        $background-color: rgba(map-get($color-options, a), 0.1),
         $border-color: map-get($color-options, a),
-        $border-style: solid,    
+        $border-style: solid,
         $border-width: 1px,
         $link-class: g--link-01,
         $title-color: map-get($color-options, a),
         $title-font: c,
-        $title-font-weight: 400,
+        $title-font-weight: 400
     );
-    &--second{
+    &--second {
         @include make-card-16-modifier(
-            $background-color: rgba(map-get($color-options, g), .7),
+            $background-color: rgba(map-get($color-options, g), 0.7),
+            $card-min-height: 500px,
             $subtitle-color: map-get($color-options, a),
             $title-color: map-get($color-options, a),
             $title-font: c,
             // $border-radius: false,
             $hover-background-color: map-get($color-options, g),
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-border-color: map-get($color-options, f),
+            $hover-border-radius: $measure * 4,
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $link-font: f,
             $subtitle-font: f,
             $subtitle-font-weight: 400,
             $subtitle-max-lines: 3,
-           $text-align: left,
+            $text-align: left,
             $title-font-weight: 400,
-            $title-max-lines: 3,
+            $title-max-lines: 3
         );
     }
 }

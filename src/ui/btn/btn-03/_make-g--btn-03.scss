@@ -1,21 +1,22 @@
 @mixin make-btn-03() {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: fit-content;
     padding: $measure $measure * 3;
     text-align: center;
     text-decoration: none;
+    column-gap: $measure;
 
     @media all and ($viewport-type: $mobile) {
         width: 100%;
     }
-    &__artwork{
-        margin-right: $measure;
+    svg {
         display: block;
     }
 }
 
-@mixin make-btn-03-modifier (
+@mixin make-btn-03-modifier(
     $artwork-color-fill: false,
     $artwork-color-stroke: false,
     $artwork-height: false,
@@ -36,9 +37,12 @@
     $hover-background-position: false,
     $hover-background-size: false,
     $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-shadow: false,
     $hover-text-color: false,
+    $shadow: false,
     $text-color: false,
-    $transition: false,
+    $transition: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -64,6 +68,9 @@
     @if $border-style {
         border-style: $border-style;
     }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
     @if $text-color {
         color: $text-color;
     }
@@ -74,9 +81,41 @@
         font-weight: $font-weight;
     }
 
+    svg {
+        @if $artwork-top {
+            margin-top: $artwork-top;
+        }
+        @if $artwork-width {
+            width: $artwork-width;
+        }
+        @if $artwork-height {
+            height: $artwork-height;
+        }
+        * {
+            @if $artwork-color-fill {
+                fill: $artwork-color-fill;
+            }
+            @if $artwork-color-stroke {
+                stroke: $artwork-color-stroke;
+            }
+            @if $hover-artwork-color and $artwork-color-fill {
+                transition: fill $ease-standard-a $time-b;
+            }
+            @if $hover-artwork-color and $artwork-color-stroke {
+                transition: stroke $ease-standard-a $time-b;
+            }
+        }
+    }
 
-    @if $hover-background-color or $hover-border-color or $hover-text-color or $hover-background-size or $hover-background-position {
-        @if $transition{
+    @if $hover-background-color or
+        $hover-border-color or
+        $hover-border-radius or
+        $hover-text-color or
+        $hover-background-size or
+        $hover-background-position or
+        $hover-shadow
+    {
+        @if $transition {
             transition: $transition;
         }
         @media (hover: hover) {
@@ -95,19 +134,17 @@
                 @if $hover-border-color {
                     border-color: $hover-border-color;
                 }
+                @if $hover-border-radius {
+                    border-radius: $hover-border-radius;
+                }
+                @if $hover-shadow {
+                    box-shadow: $hover-shadow;
+                }
                 @if $hover-text-color {
                     color: $hover-text-color;
                 }
-            }
-        }
-    }
-    @media (hover: hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            .g--btn-03{
-                &__artwork{
-                    path{
+                svg {
+                    * {
                         @if $hover-artwork-color and $artwork-color-fill {
                             fill: $hover-artwork-color;
                         }
@@ -115,34 +152,6 @@
                             stroke: $hover-artwork-color;
                         }
                     }
-                }
-            }
-        }
-    }
-
-    .g--btn-03{
-        &__artwork{
-            @if $artwork-top {
-                margin-top: $artwork-top;
-            }
-            @if $artwork-width {
-                width: $artwork-width;
-            }
-            @if $artwork-height {
-                height: $artwork-height;
-            }
-            path{
-                @if $artwork-color-fill {
-                    fill: $artwork-color-fill;
-                }
-                @if $artwork-color-stroke {
-                    stroke: $artwork-color-stroke;
-                }
-                @if $hover-artwork-color and $artwork-color-fill {
-                    transition: fill $ease-standard-a $time-b;
-                }
-                @if $hover-artwork-color and $artwork-color-stroke {
-                    transition: stroke $ease-standard-a $time-b;
                 }
             }
         }

@@ -20,7 +20,10 @@
     </div>
     <div class="g--card-55__wrapper">
         <p class="g--card-55__wrapper__hd">Heading</p>
-        <p class="g--card-55__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
+        <p class="g--card-55__wrapper__bd">
+            Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit
+            vel sit eu nascetur vitae.
+        </p>
         <div class="g--card-55__wrapper__ft">
             <p class="g--card-55__wrapper__ft__title">Person Name</p>
             <p class="g--card-55__wrapper__ft__subtitle">Job Position</p>
@@ -45,13 +48,13 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $content-color
 -   $content-font
 -   $content-font-weight
--   $heading-color
--   $heading-font
--   $heading-font-weight
 -   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
 -   $hover-img-zoom
 -   $hover-shadow
 -   $hover-title-color
+-   $hover-title-underline-color
 -   $hover-transform
 -   $img-aspect-ratio-responsive
 -   $img-height-responsive
@@ -63,6 +66,9 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $position-font
 -   $position-font-weight
 -   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
 
 ## use
 
@@ -76,17 +82,18 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $border-style: solid,
         // $border-width: 1px,
         // $breakpoint: $tablets,
+        // $card-min-height: 500px,
         // $change-order-reponsive: true,
         // $content-color: map-get($color-options, a),
         // $content-font: f,
         // $content-font-weight: 600,
-        // $heading-color: map-get($color-options, a),
-        // $heading-font: f,
-        // $heading-font-weight: 400,
         // $hover-background-color: map-get($color-options, b),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
         // $hover-img-zoom: 1.2,
         // $hover-shadow: 0 0 $measure*2 map-get($color-options, g),
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio-responsive: 1.7,
         // $img-height-responsive: 1300px,
@@ -97,7 +104,11 @@ For the image, we have to add width, height and aspect ratio dynamically.
         // $position-color: map-get($color-options, a),
         // $position-font: f,
         // $position-font-weight: 400,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font: f,
+        // $title-font-weight: 400,
     );
 }
 ```

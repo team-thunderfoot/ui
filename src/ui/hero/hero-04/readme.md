@@ -39,21 +39,22 @@
 
 ## Editable variables
 
--   $background-color
--   $breakpoint
--   $header-height
--   $img-height
--   $img-object-fit
--   $img-position
--   $link-class
--   $link-font
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
+- $background-color
+- $breakpoint
+- $header-height
+- $img-border-radius
+- $img-height
+- $img-object-fit
+- $img-position
+- $link-class
+- $link-font
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -64,6 +65,7 @@
         // $background-color: rgba(map-get($color-options, a), 30%),
         // $breakpoint: $tablets,
         // $header-height: 96px,
+        // $img-border-radius: 2px,
         // $img-height: 200px,
         // $img-object-fit: cover,
         // $img-position: center,

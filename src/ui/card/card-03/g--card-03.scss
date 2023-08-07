@@ -1,30 +1,48 @@
 .g--card-03 {
     @include make-card-03();
-    @include make-card-03-modifier($background-position: center, $background-size: cover, $mask-color: rgba(map-get($color-options, b), 0.5), $title-color: map-get($color-options, a), $title-font: c);
+    @include make-card-03-modifier(
+        $background-position: center,
+        $background-size: cover,
+        $mask-color: rgba(map-get($color-options, b), 0.5),
+        $title-color: map-get($color-options, a),
+        $title-font: c
+    );
+
     &--second {
         @include make-card-03-modifier(
-            $background-position: center,
-            $background-size: cover,
-            $mask-color: rgba(map-get($color-options, a), 0.2),
-            $subtitle-color: map-get($color-options, a),
-            $title-color: map-get($color-options, a),
-            $title-font: c,
+            $background-color: map-get($color-options, f),
+            $background-position: right top,
+            $background-size: 50% auto,
+            // $border-color: false,
             $border-radius: 0,
-            $hover-background-img-zoom: 2,
+            $border-style: solid,
+            $border-width: 1px,
+            $card-min-height: 500px,
+            // $hover-background-img-zoom: 2,
+            $hover-border-color: map-get($color-options, f),
+            $hover-border-radius: $measure * 4,
+            $hover-img-border-radius: $measure,
             $hover-img-zoom: 1.2,
+            $hover-mask-color: rgba(map-get($color-options, a), 0.5),
             $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
             $hover-title-color: map-get($color-options, h),
+            $hover-title-underline-color: map-get($color-options, b),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
-            $img-height: 100px,
             $img-fit: cover,
+            $img-height: 100px,
             $img-position: center,
             $img-width: auto,
-            $subtitle-font: f,
+            $mask-color: rgba(map-get($color-options, a), 0.2),
+            $shadow: 0 0 $measure * 2 map-get($color-options, g),
+            $subtitle-color: map-get($color-options, a),
             $subtitle-font-weight: 400,
+            $subtitle-font: f,
             $subtitle-max-lines: 3,
             $text-align: left,
+            $title-color: map-get($color-options, a),
             $title-font-weight: 400,
+            $title-font: c,
             $title-max-lines: 3
         );
     }

@@ -1,70 +1,134 @@
-# Form-checkbox-01
+# Form-hubspot-01
 
 ## Layout
 
-![alt text][checkbox-01]
+![alt text][hubspot-01]
 
-[checkbox-01]: /src/img/global-components/form-fields/checkbox-01.jpg
+[hubspot-01]: /src/img/global-components/form-fields/hubspot-01.jpg
 
 ## Html
 
 ```html
-<div class="g--form-checkbox-01">
-    <input type="checkbox" id="checkbox-01" class="g--form-checkbox-01__item" />
-    <label class="g--form-checkbox-01__title" for="checkbox-01">This is a checkbox</label>
-</div>
-```
-
-When there's an error in the input the class "g--form-checkbox-01--error" should be added:
-
-```html
-<div class="g--form-checkbox-01 g--form-checkbox-01--error">
-    <input type="checkbox" id="checkbox-01--error" class="g--form-checkbox-01__item" />
-    <label class="g--form-checkbox-01__title" for="checkbox-01--error">This is a checkbox</label>
+<div class="g--form-hubspot-01">
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+    hbspt.forms.create({
+        region: "na1",
+        portalId: "3120747",
+        formId: "4b80d891-cf03-4eba-a32e-8fa9e4b1e024"
+    });
+    </script>
 </div>
 ```
 
 ## Editable variables
 
--   $artwork-img
--   $error-border-color
--   $font
--   $font-weight: false by default
--   $square-border-radius
--   $square-border-width
--   $square-color
--   $square-color-focus
--   $square-width
--   $text-color
-
-### For Modifiers
-
--   $artwork-img
--   $error-border-color
--   $square-color
--   $square-color-focus
--   $text-color
+- $checkbox-artwork-background
+- $checkbox-link-class
+- $checkbox-square-border-radius
+- $checkbox-square-border-width
+- $checkbox-square-color
+- $checkbox-square-color-focus
+- $checkbox-square-width
+- $checkbox-title-color
+- $checkbox-title-font
+- $checkbox-title-font-weight
+- $date-background-image-a
+- $file-input-btn-background-color
+- $file-input-btn-font
+- $file-input-btn-font-weight
+- $file-input-btn-text-color
+- $form-error-font
+- $form-error-font-weight
+- $form-error-text-color
+- $input-background-color
+- $input-background-color-autofill
+- $input-border-color
+- $input-border-color-focus
+- $input-border-radius
+- $input-border-style
+- $input-border-width
+- $input-error-border-color
+- $input-error-font
+- $input-error-font-weight
+- $input-error-text-color
+- $input-font
+- $input-font-size-mobile
+- $input-font-weight
+- $input-placeholder-color
+- $input-text-color
+- $label-color
+- $label-font
+- $label-font-weight
+- $option-background
+- $option-color
+- $radio-artwork-color
+- $radio-circle-border-style
+- $radio-circle-border-width
+- $radio-circle-color
+- $radio-circle-color-focus
+- $radio-circle-width
+- $select-artwork
+- $submit-btn-class
+- $textarea-height
 
 ## Use
 
-$square-color-focus variable is used for focus and filled styles.
+`$X-color-focus` variable is used for focus and filled styles.
 
 ```scss
-.g--form-checkbox-01 {
-    @include make-form-checkbox-01(
-        // $font: f, 
-        // $square-border-radius: 0, 
-        // $square-border-width: 1px, 
-        // $square-width: $measure * 2, 
-        // $font-weight: default,
-    );
-
-    @include make-form-checkbox-01-modifier(
-        // $artwork-img: "./img/global-components/form-fields/checkbox-artwork.svg",
-        // $error-border-color: map-get($color-options, f),
-        // $square-color: rgba(map-get($color-options, a), 0.2),
-        // $square-color-focus: map-get($color-options, a),
-        // $text-color: map-get($color-options, a)
+.g--form-hubspot-01{
+    @include make-form-hubspot-01();
+    @include make-form-hubspot-01-modifier(
+        // $checkbox-artwork-background: url('./img/global-components/form-fields/checkbox-artwork.svg'),
+        // $checkbox-artwork-border-radius: $measure,
+        // $checkbox-link-class: g--link-01,
+        // $checkbox-square-border-radius: 8px,
+        // $checkbox-square-border-width: 1px,
+        // $checkbox-square-color: rgba(map-get($color-options, a), .2),
+        // $checkbox-square-color-focus: map-get($color-options, a),
+        // $checkbox-square-width: $measure*2,
+        // $checkbox-title-color: map-get($color-options, a),
+        // $checkbox-title-font: f,
+        // $checkbox-title-font-weight: 300,
+        // $date-background-image-a: './img/global-components/form-fields/checkbox-artwork.svg',
+        // $file-input-btn-background-color: map-get($color-options, a),
+        // $file-input-btn-font: f,
+        // $file-input-btn-font-weight: 400,
+        // $file-input-btn-text-color: map-get($color-options, b),
+        // $form-error-font: g,
+        // $form-error-font-weight: 400,
+        // $form-error-text-color: map-get($color-options, g),
+        // $input-background-color: transparent,
+        // $input-background-color-autofill: transparent,
+        // $input-border-color: rgba(map-get($color-options, a), .2),
+        // $input-border-color-focus: map-get($color-options, a),
+        // $input-border-radius: 0,
+        // $input-border-style: solid,
+        // $input-border-width: 1px,
+        // $input-error-border-color: map-get($color-options, g),
+        // $input-error-font: f,
+        // $input-error-font-weight: 300,
+        // $input-error-text-color: map-get($color-options, g),
+        // $input-font: f,
+        // $input-font-size-mobile: 1rem,
+        // $input-font-weight: 500,
+        // $input-placeholder-color: transparent,
+        // $input-text-color: map-get($color-options, a),
+        // $label-color: map-get($color-options, a),
+        // $label-font: f,
+        // $label-font-weight: 500,
+        // $option-background: map-get($color-options, g),
+        // $option-color: map-get($color-options, a),
+        // $radio-artwork-color: map-get($color-options, g),
+        // $radio-circle-border-style: solid,
+        // $radio-circle-border-width: 1px,
+        // $radio-circle-color: rgba(map-get($color-options, a), .2),
+        // $radio-circle-color-focus: map-get($color-options, a),
+        // $radio-circle-width: $measure*2,
+        // $select-artwork: url('./img/global-components/form-fields/checkbox-artwork.svg'),
+        // $submit-btn-class: g--btn-01,
+        // $textarea-height: $measure*10,
     );
 }
 ```

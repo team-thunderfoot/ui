@@ -1,6 +1,7 @@
 .g--card-26 {
     @include make-card-26();
     @include make-card-26-modifier(
+        $hover-img-border-radius: $measure * 2,
         $hover-img-zoom: 1.1,
         $hover-title-color: map-get($color-options, e),
         $hover-transform: translateY(-5%),

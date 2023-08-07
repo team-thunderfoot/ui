@@ -3,13 +3,24 @@
     width: 100%;
     display: flex;
     text-decoration: none;
+    justify-content: space-between;
 
     &__bd {
-        width: 100%;
+        &__title {
+            margin-bottom: $measure;
+            // width: fit-content;
+        }
     }
 
     &__wrapper {
-        margin-left: $measure * 3;
+        margin-left: $measure * 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__artwork {
+            width: 50%;
+            height: 60%;
+        }
     }
 }
 
@@ -19,23 +30,36 @@
     $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $card-min-height: false,
     $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-icon-background: false,
+    $hover-icon-border-color: false,
     $hover-icon-color: false,
     $hover-icon-transform: false,
     $hover-shadow: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $icon-align: false,
-    $icon-color: false,
+    $icon-background: false,
+    $icon-border-color: false,
+    $icon-border-radius: false,
+    $icon-border-style: false,
+    $icon-border-width: false,
+    $icon-color-fill: false,
+    $icon-color-stroke: false,
     $icon-top: false,
     $icon-width: false,
+    $shadow: false,
     $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
-    $title-font-weight: false,
+    $title-font-weight: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -49,77 +73,56 @@
     @if $border-width {
         border-width: $border-width;
     }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
 
-    @if $hover-background-color and $hover-shadow and $hover-transform {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
             }
-        }
-    } @else if $hover-background-color and $hover-shadow {
-        transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-background-color and $hover-transform {
-        transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-background-color {
-        transition: background $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $hover-background-color;
-            }
-        }
-    } @else if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
-            }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-            }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
     }
-    @if $hover-title-color {
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__bd {
+                        &__title {
+                            color: $hover-title-color;
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -133,15 +136,50 @@
                 }
             }
         }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__bd {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
     }
-    @if $hover-icon-color {
+
+    @if $hover-icon-color and $icon-color-fill {
         &__wrapper {
             &__artwork {
-                path {
+                * {
                     transition: fill $time-b $ease-standard-a;
                 }
-
-                rect {
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        &__artwork {
+                            * {
+                                fill: $hover-icon-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-icon-color and $icon-color-stroke {
+        &__wrapper {
+            &__artwork {
+                * {
                     transition: stroke $time-b $ease-standard-a;
                 }
             }
@@ -153,11 +191,7 @@
                 .g--card-54 {
                     &__wrapper {
                         &__artwork {
-                            path {
-                                fill: $hover-icon-color;
-                            }
-
-                            rect {
+                            * {
                                 stroke: $hover-icon-color;
                             }
                         }
@@ -166,18 +200,11 @@
             }
         }
     }
-    @if $hover-icon-transform {
-        &__wrapper {
-            &__artwork {
-                transition: transform $time-b $ease-standard-a;
-                path {
-                    transition: fill $time-b $ease-standard-a;
-                }
 
-                rect {
-                    transition: stroke $time-b $ease-standard-a;
-                }
-            }
+    @if $hover-icon-transform and $hover-icon-border-color and $hover-icon-background {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a, border-color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a;
         }
         @media all and (hover: hover) {
             &:hover,
@@ -185,9 +212,102 @@
             &:active {
                 .g--card-54 {
                     &__wrapper {
-                        &__artwork {
-                            transform: $hover-icon-transform;
-                        }
+                        transform: $hover-icon-transform;
+                        background: $hover-icon-background;
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-transform and $hover-icon-border-color {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-transform and $hover-icon-background {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                        background: $hover-icon-background;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-transform {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-border-color and $hover-icon-background {
+        &__wrapper {
+            transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        background: $hover-icon-background;
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-border-color {
+        &__wrapper {
+            transition: border-color $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-background {
+        &__wrapper {
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        background: $hover-icon-background;
                     }
                 }
             }
@@ -217,6 +337,9 @@
     }
     .g--card-54 {
         &__bd {
+            @if $icon-width {
+                width: calc(100% - #{$icon-width} - #{$measure * 4});
+            }
             &__title {
                 @if $title-color {
                     color: $title-color;
@@ -227,8 +350,17 @@
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
-                @if $hover-title-color {
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration $time-b $ease-standard-a;
+                } @else if $hover-title-color {
                     transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration $time-b $ease-standard-a;
                 }
             }
 
@@ -244,37 +376,37 @@
                 }
             }
         }
-
-        @if $icon-width {
-            &__wrapper {
+        &__wrapper {
+            @if $icon-background {
+                background: $icon-background;
+            }
+            @if $icon-width {
                 width: $icon-width;
                 height: $icon-width;
-
-                &__artwork {
-                    width: $icon-width;
-                    height: $icon-width;
-                }
             }
-        }
-
-        @if $icon-color {
-            &__wrapper {
-                &__artwork {
-                    path {
-                        fill: $icon-color;
-                    }
-
-                    rect {
-                        stroke: $icon-color;
-                    }
-                }
+            @if $icon-border-color {
+                border-color: $icon-border-color;
             }
-        }
-
-        @if $icon-top {
-            &__wrapper {
-                &__artwork {
-                    margin-top: $icon-top;
+            @if $icon-border-radius {
+                border-radius: $icon-border-radius;
+            }
+            @if $icon-border-style {
+                border-style: $icon-border-style;
+            }
+            @if $icon-border-width {
+                border-width: $icon-border-width;
+            }
+            @if $icon-top {
+                margin-top: $icon-top;
+            }
+            &__artwork {
+                * {
+                    @if $icon-color-fill {
+                        fill: $icon-color-fill;
+                    }
+                    @if $icon-color-stroke {
+                        stroke: $icon-color-stroke;
+                    }
                 }
             }
         }

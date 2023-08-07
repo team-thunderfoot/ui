@@ -48,11 +48,15 @@
     $border-radius: false,
     $border-style: false,
     $border-width: false,
+    $card-min-height: false,
     $full-image-height: false,
     $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $img-aspect-ratio-height: false,
     $img-aspect-ratio-width: false,
@@ -62,6 +66,7 @@
     $meta-font: false,
     $meta-font-weight: false,
     $pill-class: false,
+    $shadow: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -79,41 +84,47 @@
     @if $border-width {
         border-width: $border-width;
     }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
 
-    @if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
             }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-            }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
     }
+
     @if $hover-background-color {
         .g--card-33 {
             &__wrapper {
                 transition: background $time-b $ease-standard-a;
-                @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                @if $img-aspect-ratio-width==false or
+                    $img-aspect-ratio-height==false and
+                    $img-height==false
+                {
                     &::before {
                         transition: background $time-b $ease-standard-a;
                     }
@@ -128,7 +139,10 @@
                 .g--card-33 {
                     &__wrapper {
                         background: $hover-background-color;
-                        @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+                        @if $img-aspect-ratio-width==false or
+                            $img-aspect-ratio-height==false and
+                            $img-height==false
+                        {
                             &::before {
                                 background: $hover-background-color;
                             }
@@ -138,15 +152,29 @@
             }
         }
     }
-    @if $hover-title-color {
-        .g--card-33 {
-            &__wrapper {
-                &__title {
-                    transition: color $time-b $ease-standard-a;
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-33 {
+                            &__wrapper {
+                                &__title {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -155,6 +183,20 @@
                     &__wrapper {
                         &__title {
                             color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-33 {
+                    &__wrapper {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -193,7 +235,9 @@
                 height: 100%;
             }
             @if $img-aspect-ratio-width and $img-aspect-ratio-height {
-                padding-top: calc((#{$img-aspect-ratio-height} / #{$img-aspect-ratio-width}) * 100%);
+                padding-top: calc(
+                    (#{$img-aspect-ratio-height} / #{$img-aspect-ratio-width}) * 100%
+                );
             } @else {
                 padding-top: 0;
             }
@@ -228,7 +272,10 @@
                 background: $background-color;
             }
 
-            @if $img-aspect-ratio-width==false or $img-aspect-ratio-height==false and $img-height==false {
+            @if $img-aspect-ratio-width==false or
+                $img-aspect-ratio-height==false and
+                $img-height==false
+            {
                 height: auto;
 
                 @if $background-color {
@@ -282,6 +329,18 @@
                     -webkit-line-clamp: $title-max-lines;
                     -webkit-box-orient: vertical;
                 }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
+                }
             }
 
             &__list-group {
@@ -294,4 +353,3 @@
         }
     }
 }
-

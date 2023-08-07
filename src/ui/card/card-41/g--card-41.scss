@@ -1,18 +1,20 @@
-.g--card-41{
+.g--card-41 {
     @include make-card-41();
     @include make-card-41-modifier(
         $author-color: map-get($color-options, a),
         $author-font: f,
         $author-font-weight: 400,
-        $background-color:lighten(map-get($color-options,a), 82%),
+        $background-color: lighten(map-get($color-options, a), 82%),
         $border-color: map-get($color-options, a),
         $border-style: solid,
         $border-width: 1px,
         $border-radius: 0,
         $breakpoint: $tablets,
-        $hover-background-color: rgba(map-get($color-options, h), .5),
+        $hover-background-color: rgba(map-get($color-options, h), 0.5),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
         $hover-img-zoom: 1.4,
-        $hover-shadow: 0 0 $measure*5 map-get($color-options, h),
+        $hover-shadow: 0 0 $measure * 5 map-get($color-options, h),
         $hover-title-color: map-get($color-options, g),
         $hover-transform: translateY(-$measure),
         // $img-aspect-ratio-responsive: 1,
@@ -25,6 +27,6 @@
         $title-color: map-get($color-options, a),
         $title-font: c,
         $title-font-weight: false,
-        $title-max-lines: 3,
+        $title-max-lines: 3
     );
 }

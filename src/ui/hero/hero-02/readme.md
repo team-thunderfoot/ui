@@ -33,18 +33,19 @@
 
 ## Editable variables
 
--   $background-color
--   $header-height
--   $img-height
--   $img-object-fit
--   $img-position
--   $tagline-color
--   $tagline-font
--   $tagline-font-weight
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
+- $background-color
+- $header-height
+- $img-border-radius
+- $img-height
+- $img-object-fit
+- $img-position
+- $tagline-color
+- $tagline-font
+- $tagline-font-weight
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -54,6 +55,7 @@
     @include make-hero-02-modifier(
         // $background-color: map-get($color-options, d),
         // $header-height: 96px,
+        // $img-border-radius: $measure*2,
         // $img-height: 500px,
         // $img-object-fit: cover,
         // $img-position: center,

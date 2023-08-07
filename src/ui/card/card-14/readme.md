@@ -30,17 +30,18 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
--   $hover-title-color
--   $hover-transform
--   $subtitle-color
--   $subtitle-font
--   $subtitle-font-weight
--   $subtitle-max-lines
--   $text-align
--   $title-color
--   $title-font
--   $title-font-weight
--   $title-max-lines
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $subtitle-max-lines
+- $text-align
+- $title-color
+- $title-font
+- $title-font-weight
+- $title-max-lines
 
 ## Use
 
@@ -49,6 +50,7 @@ It is not necessary to add aspect-ratio.
     @include make-card-14();
     @include make-card-14-modifier(
         // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $subtitle-color: map-get($color-options, g),
         // $subtitle-font: f,

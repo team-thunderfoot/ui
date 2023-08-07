@@ -47,17 +47,18 @@
     $border-style: false,
     $border-width: false,
     $breakpoint: false,
+    $card-min-height: false,
     $change-order-reponsive: false,
     $content-color: false,
     $content-font: false,
     $content-font-weight: false,
-    $heading-color: false,
-    $heading-font: false,
-    $heading-font-weight: false,
     $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
     $hover-img-zoom: false,
     $hover-shadow: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $img-aspect-ratio-responsive: false,
     $img-height-responsive: false,
@@ -68,7 +69,11 @@
     $position-color: false,
     $position-font: false,
     $position-font-weight: false,
-    $text-align: false
+    $shadow: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false
 ) {
     @if $background-color {
         .g--card-55 {
@@ -92,44 +97,61 @@
         border-radius: $border-radius;
         overflow: hidden;
     }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
 
-    @if $hover-shadow and $hover-transform {
-        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-                transform: $hover-transform;
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
             }
-        }
-    } @else if $hover-shadow {
-        transition: box-shadow $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: $hover-shadow;
-            }
-        }
-    } @else if $hover-transform {
-        transition: transform $time-b $ease-standard-a;
-        @media all and (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                transform: $hover-transform;
-            }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
     }
-    @if $hover-title-color {
-        .g--card-55 {
-            &__wrapper {
-                &__hd {
-                    transition: color $time-b $ease-standard-a;
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-55 {
+                            &__wrapper {
+                                &__hd {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
+    } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
             &:focus,
@@ -143,7 +165,22 @@
                 }
             }
         }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-55 {
+                    &__wrapper {
+                        &__hd {
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
     }
+
     @if $hover-img-zoom {
         .g--card-55 {
             &__media-wrapper {
@@ -204,19 +241,31 @@
                 }
             }
             &__hd {
-                @if $heading-color {
-                    color: $heading-color;
+                @if $title-color {
+                    color: $title-color;
                 }
-                @if $heading-font {
-                    @extend .f--font-#{$heading-font} !optional;
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
                 }
-                @if $heading-font-weight {
-                    font-weight: $heading-font-weight;
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
                 }
                 @if $breakpoint {
                     @media all and ($viewport-type: $breakpoint) {
                         margin-bottom: $measure * 2;
                     }
+                }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
                 }
             }
 

@@ -33,6 +33,7 @@
 -   $hover-background-color
 -   $hover-border-color
 -   $hover-border-radius
+-   $hover-meta-color
 -   $hover-shadow
 -   $hover-title-color
 -   $hover-title-underline-color
@@ -63,6 +64,7 @@
         // $hover-background-color: map-get($color-options, g),
         // $hover-border-color: map-get($color-options, f)
         // $hover-border-radius: $measure * 4,
+        // $hover-meta-color: map-get($color-options, g),
         // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
         // $hover-title-color: map-get($color-options, b),
         // $hover-title-underline-color: map-get($color-options, h),

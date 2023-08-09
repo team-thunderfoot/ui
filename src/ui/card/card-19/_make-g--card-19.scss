@@ -33,6 +33,7 @@
     $hover-background-color: false,
     $hover-border-color: false,
     $hover-border-radius: false,
+    $hover-meta-color: false,
     $hover-shadow: false,
     $hover-title-color: false,
     $hover-title-underline-color: false,
@@ -142,6 +143,20 @@
                 .g--card-19 {
                     &__title {
                         text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-meta-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-19 {
+                    &__meta {
+                        color: $hover-meta-color;
                     }
                 }
             }

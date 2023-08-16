@@ -2,6 +2,7 @@
     &__media-wrapper {
         position: relative;
         width: 100%;
+        overflow: hidden;
 
         &__media {
             position: absolute;
@@ -34,6 +35,7 @@
     $img-min-height: false,
     $img-height: false,
     $img-position: false,
+    $img-width: false,
     $object-fit: false,
     $subtitle-color: false,
     $subtitle-font: false,
@@ -90,9 +92,10 @@
                 @if $img-height {
                     height: $img-height;
                 }
+                @if $img-width {
+                    width: $img-width;
+                }
                 @if $object-fit == contain or $object-fit== scale-down {
-                    width: auto;
-                    height: auto;
                     max-width: 100%;
                 }
                 @if $breakpoint {

@@ -52,6 +52,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
 - $img-max-height
 - $img-min-height
 - $img-position
+- $img-width
 - $object-fit
 - $subtitle-color
 - $subtitle-font
@@ -79,6 +80,7 @@ If we change the order in responsive we have to add "f--order-tablets-1" class t
         // $img-max-height: 600px,
         // $img-min-height: 600px,
         // $img-position: center,
+        // $img-width: 100%,
         // $object-fit: cover,
         // $subtitle-color: map-get($color-options, a),
         // $subtitle-font: f,

@@ -2,6 +2,7 @@
     display: inline-block;
     padding: $measure $measure * 2;
     text-align: center;
+    text-decoration: none;
 }
 
 @mixin make-pill-01-modifier(

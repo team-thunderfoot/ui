@@ -48,6 +48,7 @@ Example with label and checkbox
 - $artwork-background-repeat
 - $artwork-background-size
 - $artwork-border-radius
+- $artwork-width
 - $error-border-color
 - $font
 - $font-mobile-size
@@ -73,6 +74,7 @@ Example with label and checkbox
         // $artwork-background-size: contain,
         // $artwork-background: url('./img/global-components/form-fields/checkbox-artwork.svg'),
         // $artwork-border-radius: 4px,
+        // $artwork-width: 10px,
         // $error-border-color: map-get($color-options, f),
         // $font: f,
         // $font-mobile-size: 1rem,

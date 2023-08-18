@@ -46,6 +46,7 @@
     $artwork-background-repeat: false,
     $artwork-background-size: false,
     $artwork-border-radius: false,
+    $artwork-width: false,
     $error-border-color: false,
     $font: false,
     $font-mobile-size: false,
@@ -114,9 +115,11 @@
                 @if $artwork-background-size {
                     background-size: $artwork-background-size;
                 }
+                @if $artwork-width {
+                    width: $artwork-width;
+                    height: $artwork-width;
+                }
                 @if $square-width {
-                    width: $square-width*.65;
-                    height: $square-width*.65;
                     left: $square-width*.5;
                 }
             }

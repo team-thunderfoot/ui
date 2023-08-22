@@ -24,6 +24,7 @@
 
 ## Editable variables
 
+-   $align-pills-at-bottom
 -   $background-color
 -   $border-color
 -   $border-radius
@@ -55,6 +56,7 @@
 .g--card-19 {
     @include make-card-19();
     @include make-card-19-modifier(
+        // $align-pills-at-bottom: yes
         // $background-color: lighten(map-get($color-options,a), 82%),
         // $border-color: map-get($color-options, a),
         // $border-radius: 0,

@@ -19,11 +19,11 @@
         flex-wrap: wrap;
         column-gap: $measure * 2;
         row-gap: $measure;
-        margin-top: auto;
     }
 }
 
 @mixin make-card-19-modifier(
+    $align-pills-at-bottom: false,
     $background-color: false,
     $border-color: false,
     $border-radius: false,
@@ -235,6 +235,11 @@
         }
 
         &__list-group {
+            @if $align-pills-at-bottom == "yes" {
+                margin-top: auto;
+            } @else if $align-pills-at-bottom == "no" {
+                margin-top: 0;
+            }
             &__list-item {
                 @if $pill-class {
                     @extend .#{$pill-class} !optional;

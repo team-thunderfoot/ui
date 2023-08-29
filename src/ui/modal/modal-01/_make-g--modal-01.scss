@@ -1,12 +1,16 @@
 @mixin make-modal-01() {
     $padding: $measure * 7;
     padding: $padding;
-    padding-right: calc((#{$padding} * 0.5) - (#{$measure}));
+    // padding-right: calc((#{$padding} * 0.5) - (#{$measure}));
     position: fixed;
     left: 50%;
     top: 50%;
     visibility: hidden;
     z-index: 1000;
+
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 4;
+    }
 
     &__btn {
         position: absolute;
@@ -40,7 +44,7 @@
     $size: false,
     $transition: false,
     $zoom: false,
-    $zoom-active: false,
+    $zoom-active: false
 ) {
     @if $transition {
         transition: $transition;

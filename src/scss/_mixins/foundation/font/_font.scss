@@ -41,7 +41,7 @@
   font-weight: $weight;
   font-style: $style;
   line-height: 1.4;
-  font-size: 1.375rem;
+  font-size: 1.625rem;
   @media all and ($viewport-type: $mobile) {
       font-size: 1.25rem;
   }
@@ -51,7 +51,7 @@
   letter-spacing: normal;
   font-weight: 700;
   line-height: 1.4;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 @mixin make-font-f($weight: 400, $style: normal) {
   font-family: $type-a;

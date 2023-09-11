@@ -15,7 +15,7 @@
   .f--font-d {
     @include make-font-d();
     &--bold {
-      @include make-font-d(600);
+      @include make-font-d(700);
     }
   }
   
@@ -26,7 +26,7 @@
   .f--font-f {
     @include make-font-f();
     &--bold {
-      @include make-font-f(600);
+      @include make-font-f(700);
     }
   }
   
@@ -35,67 +35,94 @@
   }
   
   /* ================================================= Here import the Fonts */
-  
-  // RED HAT DISPLAY
-  
+
+
   @font-face {
-    font-family: "Red Hat Display";
-    src: url("./fonts/redhatdisplay/RedHatDisplay-Bold.eot");
-    src: url("./fonts/redhatdisplay/RedHatDisplay-Bold.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/redhatdisplay/RedHatDisplay-Bold.woff") format("woff"),
-      url("./fonts/redhatdisplay/RedHatDisplay-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  // WORK SANS
-  
-  @font-face {
-    font-family: "Work Sans";
-    src: url("./fonts/worksans/WorkSans-SemiBold.eot");
-    src: url("./fonts/worksans/WorkSans-SemiBold.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/worksans/WorkSans-SemiBold.woff") format("woff"),
-      url("./fonts/worksans/WorkSans-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "Work Sans";
-    src: url("./fonts/worksans/WorkSans-SemiBoldItalic.eot");
-    src: url("./fonts/worksans/WorkSans-SemiBoldItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/worksans/WorkSans-SemiBoldItalic.woff") format("woff"),
-      url("./fonts/worksans/WorkSans-SemiBoldItalic.ttf") format("truetype");
-    font-weight: 600;
+    font-family: 'Uncut Sans Book';
+    src: url('./fonts/uncut-sans/UncutSans-BookItalic.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-BookItalic.woff') format('woff');
+    font-weight: normal;
     font-style: italic;
     font-display: swap;
   }
   
   @font-face {
-    font-family: "Work Sans";
-    src: url("./fonts/worksans/WorkSans-Light.eot");
-    src: url("./fonts/worksans/WorkSans-Light.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/worksans/WorkSans-Light.woff") format("woff"),
-      url("./fonts/worksans/WorkSans-Light.ttf") format("truetype");
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-Bold.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans Book';
+    src: url('./fonts/uncut-sans/UncutSans-Book.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-Light.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
   
   @font-face {
-    font-family: "Work Sans";
-    src: url("./fonts/worksans/WorkSans-LightItalic.eot");
-    src: url("./fonts/worksans/WorkSans-LightItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/worksans/WorkSans-LightItalic.woff") format("woff"),
-      url("./fonts/worksans/WorkSans-LightItalic.ttf") format("truetype");
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-BoldItalic.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-MediumItalic.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-LightItalic.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-RegularItalic.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-Medium.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Uncut Sans';
+    src: url('./fonts/uncut-sans/UncutSans-Regular.woff2') format('woff2'),
+        url('./fonts/uncut-sans/UncutSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
   }

@@ -5,16 +5,16 @@
 /* Colors */
 
 /* Core Colors */
-$color-a:#1A191D;
-$color-b:#F8F8F8;
-$color-c:#111113;
+$color-a:#0F0F0F;
+$color-b:#F7F8F4;
+$color-c:#0F0F0F;
 $color-d:#FFFFFF;
 
 /* Accent Color */
-$color-e:#78F2C5;
-$color-f:#FF6666;
-$color-g:#9999FF;
-$color-h:#49C5F3;
+$color-e:#7CE55E;
+$color-f:#F76E4A;
+$color-g:#F58DD7;
+$color-h:#429ED6;
 
 $color-options: (
     a:$color-a,
@@ -33,8 +33,7 @@ $colorbg-options: (
 );
 
 /* Typography */
-$type-a : 'Red Hat Display', sans-serif;
-$type-b : 'Work Sans', sans-serif;
+$type-a : 'Uncut Sans';
 
 /* Grid */
 //Container

@@ -70,6 +70,7 @@
     $hover-transform: false,
     $img-background-color: false,
     $img-position: false,
+    $media-bkt: false,
     $one-col-bkt: false,
     $shadow: false,
     $subtitle-color: false,
@@ -326,9 +327,15 @@
             }
         }
 
-        @if $one-col-bkt and $hide-img-reponsive {
+        @if $media-bkt and $hide-img-reponsive == "no" {
             &__media-wrapper {
-                @media all and ($viewport-type: $one-col-bkt) {
+                @media all and ($viewport-type: $media-bkt) {
+                    display: block;
+                }
+            }
+        }@else if $media-bkt and $hide-img-reponsive {
+            &__media-wrapper {
+                @media all and ($viewport-type: $media-bkt) {
                     display: none;
                 }
             }

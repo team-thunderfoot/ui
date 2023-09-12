@@ -61,6 +61,7 @@ For the image, we have to add width, height and aspect ratio dynamically.
 -   $hover-transform
 -   $img-background-color: false,
 -   $img-position
+-   $media-bkt
 -   $one-col-bkt
 -   $shadow
 -   $subtitle-color
@@ -102,6 +103,7 @@ To use it we have to import the css of the $btn-class in the entry
         // $hover-transform: translateY(-$measure),
         // $img-background-color: map-get($color-options, f),
         // $img-position: center,
+        // $media-bkt: $tablets,
         // $one-col-bkt: $tablets,
         // $shadow: 0 0 $measure*2 map-get($color-options, g),
         // $subtitle-color: map-get($color-options, a),

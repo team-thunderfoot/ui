@@ -4,6 +4,8 @@
         $icon-width: $measure*5,
         $margin-bottom: $measure*5,
         $margin-right: $measure*3,
+    );
+    @include make-back-top-01-modifier(
         $breakpoint: $tablets,
         $icon-height-responsive: $measure*5,
         $icon-width-responsive: $measure*5,

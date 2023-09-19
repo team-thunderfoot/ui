@@ -1,68 +1,249 @@
 @mixin make-card-19() {
-    padding: 0 $measure*2;
-    position: relative;
+    overflow: hidden;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: $measure * 6 $measure * 5;
+    text-decoration: none;
 
-    &__media{
-        display: block;
-        height: 100px;
-        margin-bottom: $measure * 2;
-        object-fit: cover;
-        width: auto;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
-        }
+    &__meta {
+        margin-bottom: $measure * 3;
     }
-    &__title{}
+
+    &__title {
+        margin-bottom: $measure * 3;
+    }
+    &__list-group {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $measure * 2;
+        row-gap: $measure;
+    }
 }
 
 @mixin make-card-19-modifier(
-    $title-color,
+    $align-pills-at-bottom: false,
+    $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $card-min-height: false,
+    $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-meta-color: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $meta-color: false,
+    $meta-font: false,
+    $meta-font-weight: false,
+    $pill-class: false,
+    $shadow: false,
     $text-align: false,
+    $title-color: false,
     $title-font: false,
     $title-font-weight: false,
+    $title-max-lines: false
 ) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-19 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-19 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-19 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-meta-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-19 {
+                    &__meta {
+                        color: $hover-meta-color;
+                    }
+                }
+            }
+        }
+    }
+
     @if $text-align == "center" {
         text-align: center;
-
         .g--card-19 {
-            &__media {
-                margin-left: auto;
-                margin-right: auto;
+            &__list-group {
+                justify-content: center;
             }
         }
-        
     }
+
     @if $text-align == "left" {
         text-align: left;
-
         .g--card-19 {
-            &__media {
-                margin-left: 0;
-                margin-right: auto;
+            &__list-group {
+                justify-content: flex-start;
             }
         }
     }
+
     @if $text-align == "right" {
         text-align: right;
-
         .g--card-19 {
-            &__media {
-                margin-left: auto;
-                margin-right: 0;
+            &__list-group {
+                justify-content: flex-end;
             }
         }
     }
 
     .g--card-19 {
-        &__title{
-            color: $title-color;
+        &__meta {
+            @if $meta-font {
+                @extend .f--font-#{$meta-font} !optional;
+            }
+            @if $meta-font-weight {
+                font-weight: $meta-font-weight;
+            }
+            @if $meta-color {
+                color: $meta-color;
+            }
+        }
+
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
             @if $title-font {
                 @extend .f--font-#{$title-font} !optional;
             }
             @if $title-font-weight {
                 font-weight: $title-font-weight;
+            }
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
+            }
+        }
+
+        &__list-group {
+            @if $align-pills-at-bottom == "yes" {
+                margin-top: auto;
+            } @else if $align-pills-at-bottom == "no" {
+                margin-top: 0;
+            }
+            &__list-item {
+                @if $pill-class {
+                    @extend .#{$pill-class} !optional;
+                }
             }
         }
     }

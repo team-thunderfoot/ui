@@ -3,11 +3,6 @@
         position: relative;
         width: 100%;
 
-        @media all and ($viewport-type: $tablets) {
-            height: auto;
-            min-height: 0;
-        }
-
         &__media {
             position: absolute;
             top: 0;
@@ -15,47 +10,24 @@
             width: 100%;
             height: 100%;
             display: block;
-
-            @media all and ($viewport-type: $tablets) {
-                position: relative;
-                top: auto;
-                left: auto;
-            }
         }
     }
     &__wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         padding: $measure * 7 0;
         width: 100%;
 
-        @media all and ($viewport-type: $tablets) {
-            padding: 0;
-        }
-
         &__meta {
             margin-bottom: $measure * 7;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 5;
-            }
         }
 
         &__title {
             margin-bottom: $measure * 4;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 3;
-            }
         }
 
         &__subtitle {
             margin-bottom: $measure * 4;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 3;
-            }
         }
 
         &__ft {
@@ -73,22 +45,27 @@
 }
 
 @mixin make-layout-03-modifier(
+    $align-text-img: false,
+    $background-color: false,
+    $breakpoint: false,
+    $btn-class: false,
+    $btn-font: false,
+    $change-order-reponsive: false,
+    $img-border-radius: false,
+    $img-max-height: false,
+    $img-min-height: false,
+    $img-height: false,
+    $img-position: false,
+    $meta-color: false,
     $meta-font: false,
     $meta-font-weight: false,
-    $meta-color: false,
-    $title-font: false,
-    $title-font-weight: false,
-    $title-color: false,
+    $object-fit: false,
+    $subtitle-color: false,
     $subtitle-font: false,
     $subtitle-font-weight: false,
-    $subtitle-color: false,
-    $object-fit: cover,
-    $img-position: false,
-    $img-border-radius: false,
-    $change-order-reponsive: false,
-    $background-color: false,
-    $btn-class: false,
-    $btn-class-modifier: false
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
 ) {
     @if $background-color {
         background: $background-color;
@@ -99,24 +76,19 @@
             @if $object-fit == contain or $object-fit== scale-down {
                 display: flex;
                 align-items: center;
-            } @else {
-                min-height: 500px;
-                @if $img-border-radius {
-                    border-radius: $img-border-radius;
-                    overflow: hidden;
-                }
-                @media all and ($viewport-type: $tabletl) {
-                    min-height: 450px;
-                }
-
-                @media all and ($viewport-type: $tabletm) {
-                    min-height: 400px;
-                }
+                justify-content: center;
             }
-
-            @media all and ($viewport-type: $tablets) {
-                @if $change-order-reponsive == false {
-                    margin-bottom: $measure * 5;
+            @if $img-min-height {
+                min-height: $img-min-height;
+            }
+            @if $img-height {
+                min-height: $img-height;
+            }
+            
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    height: auto;
+                    min-height: 0;
                 }
             }
 
@@ -127,59 +99,138 @@
                 @if $img-position {
                     object-position: $img-position;
                 }
+                @if $img-border-radius {
+                    border-radius: $img-border-radius;
+                    overflow: hidden;
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+                @if $img-min-height {
+                    min-height: $img-min-height;
+                }
+                @if $img-max-height {
+                    max-height: $img-max-height;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                @if $object-fit == contain or $object-fit== scale-down {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        transform: none;
+                    }
+                }
+
+
+                @if $align-text-img == "top"{
+                    top: 0;
+                    bottom: auto;
+                    transform: translateY(0);
+                }
+                @if $align-text-img == "center"{
+                    top: 50%;
+                    bottom: auto;
+                    transform: translateY(-50%);
+                }
+                @if $align-text-img == "bottom"{
+                    top: auto;
+                    bottom: 0;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    padding: $measure*5 0 0;
+                    @if $change-order-reponsive == true {
+                        padding: 0 0 $measure*5;
+                    } @else {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            @if $align-text-img == "top"{
+                justify-content: flex-start;
+            }
+            @if $align-text-img == "center"{
+                justify-content: center;
+            }
+            @if $align-text-img == "bottom"{
+                justify-content: flex-end;
             }
 
-            &__wrapper {
-                @media all and ($viewport-type: $tablets) {
-                    @if $change-order-reponsive {
+            &__meta {
+                @if $meta-font {
+                    @extend .f--font-#{$meta-font} !optional;
+                }
+                @if $meta-font-weight {
+                    font-weight: $meta-font-weight;
+                }
+
+                @if $meta-color {
+                    color: $meta-color;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
                         margin-bottom: $measure * 5;
                     }
                 }
-                &__meta {
-                    @if $meta-font {
-                        @extend .f--font-#{$meta-font} !optional;
-                    }
-                    @if $meta-font-weight {
-                        font-weight: $meta-font-weight;
-                    }
+            }
 
-                    @if $meta-color {
-                        color: $meta-color;
-                    }
+            &__title {
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-color {
+                    color: $title-color;
                 }
 
-                &__title {
-                    @if $title-font {
-                        @extend .f--font-#{$title-font} !optional;
-                    }
-                    @if $title-font-weight {
-                        font-weight: $title-font-weight;
-                    }
-                    @if $title-color {
-                        color: $title-color;
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 3;
                     }
                 }
-                &__subtitle {
-                    @if $subtitle-font {
-                        @extend .f--font-#{$subtitle-font} !optional;
-                    }
-                    @if $subtitle-font-weight {
-                        font-weight: $subtitle-font-weight;
-                    }
-
-                    @if $subtitle-color {
-                        color: $subtitle-color;
-                    }
+            }
+            &__subtitle {
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
                 }
 
-                &__ft {
-                    &__btn {
-                        @if $btn-class {
-                            @extend .#{$btn-class} !optional;
-                        }
-                        @if $btn-class-modifier {
-                            @extend .#{$btn-class-modifier} !optional;
-                        }
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 3;
+                    }
+                }
+            }
+
+            &__ft {
+                &__btn {
+                    @if $btn-class {
+                        @extend .#{$btn-class} !optional;
+                    }
+                    @if $btn-font {
+                        @extend .f--font-#{$btn-font} !optional;
                     }
                 }
             }

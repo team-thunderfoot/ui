@@ -1,12 +1,28 @@
-.g--card-49{
-    @include make-card-49(
-        // $change-order-reponsive: default,
-        // $border-radius: default,
-    );
+.g--card-49 {
+    @include make-card-49();
     @include make-card-49-modifier(
-        $background-color: rgba(map-get($color-options, a), .1),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
+        $hover-img-background-color: map-get($color-options, g),
+        // $hover-img-border-radius: $measure * 2,
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, g),
+        $hover-transform: translateY(-5%),
+        $icon-class: g--icon-01,
+        $img-align: center,
+        // $img-aspect-ratio: false,
+        $img-background-color: map-get($color-options, a),
+        // $img-border-radius: false,
+        // $img-height: false,
+        // $img-object-fit: false,
+        // $img-position: false,
+        // $img-width: false,
+        $subtitle-color: lighten(map-get($color-options, a), 50%),
+        $subtitle-font-weight: 600,
+        $subtitle-font: f,
+        $text-align: left,
         $title-color: map-get($color-options, a),
-        $title-font: d,
-        // title-font-weight: default
+        $title-font-weight: 600,
+        $title-font: f
     );
 }

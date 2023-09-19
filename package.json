@@ -1,6 +1,6 @@
 {
   "name": "@teamthunderfoot/ui",
-  "version": "0.0.100",
+  "version": "0.1.13",
   "source": [
     "src/*.html"
   ],
@@ -20,9 +20,16 @@
     "sass": "^1.26.12"
   },
   "dependencies": {
-    "@andresclua/accordion": "^0.0.9",
-    "@andresclua/jsutil": "^2.0.4",
+    "@andresclua/debounce-throttle": "^0.0.82",
+    "@andresclua/jsutil": "^2.0.6",
+    "@andresclua/modal": "^0.0.13",
+    "@lottiefiles/lottie-player": "^1.7.1",
+    "@teamthunderfoot/accordion": "^0.0.10",
+    "@teamthunderfoot/anchor-to": "^0.0.1",
+    "@teamthunderfoot/back-to-top": "^0.0.4",
     "blazy": "^1.8.2",
-    "push-dir": "^0.4.1"
+    "gsap": "^3.12.1",
+    "push-dir": "^0.4.1",
+    "tiny-slider": "^2.9.4"
   }
 }

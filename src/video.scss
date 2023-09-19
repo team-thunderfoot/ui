@@ -1,0 +1,21 @@
+//* project vars/mixins
+@import './scss/_var/vars.scss';
+@import './scss/_mixins/mixins.scss';
+
+//* project foundations
+@import './scss/foundation/foundation.scss';
+
+//* project utilities
+@import './scss/utilities/utilities.scss';
+
+//* global components mixins
+@import './mixins.scss';
+
+//* lazy
+@import './ui/lazy/lazy-01/g--lazy-01.scss';
+
+//* link
+@import './ui/link/link-01/g--link-01.scss';
+
+//* video
+@import './ui/video/video-01/g--video-01.scss';

@@ -1,18 +1,24 @@
 .g--404-01 {
-    @include make-404-01(
-        $btn-class: g--btn-02,
-        $min-height: calc(100vh - 109px),
-        $title-font: c,
-        // $min-height-desktop: default,
-        // $min-height-tabletl: default,
-        // $min-height-tabletm: default,
-        // $min-height-tablets: default,
-        // $min-height-mobile: default
-    );
+    @include make-404-01();
     @include make-404-01-modifier(
+        $background-color: map-get($color-options, b),
+        $btn-class: g--btn-01,
+        $btn-font: f,
+        $img-aspect-ratio: false,
+        $img-fit: cover,
+        $img-height: 100px,
+        $img-position: center,
+        $img-width: auto,
+        $min-height: calc(100vh - 109px),
+        $text-align: false,
         $title-color: map-get($color-options, a),
-        // $background-color: default,
-        $btn-class-modifier: g--btn-02--second,
-        // $text-align: default
+        $title-font-weight: bold,
+        $title-font: b
     );
+
+    @include make-404-01-modifier($btn-class: g--btn-01--third);
+
+    @media all and ($viewport-type: $tablets) {
+        @include make-404-01-modifier($min-height: calc(100vh - 99px));
+    }
 }

@@ -4,63 +4,66 @@
 
 ![alt text][card-24]
 
-[card-24]: /src/img/global-components/card/card-24.png
+[card-24]: /src/img/global-components/card/card-24.jpg
 
 ## Html for a card
 
-```sh
-<div class="g--card-24 g--lazy-01" data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg">
-    <div class="g--card-24__wrapper">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-24__wrapper__media g--lazy-01">
-    <p class="g--card-24__wrapper__title">Card 24 description lorem ipsum dolor sit amet consectetur.</p>
-    <a href="" class="g--card-24__wrapper__link">This is a link</a>
+```html
+<div class="g--card-24">
+    <div class="g--card-24__hd">
+        <p class="g--card-24__hd__meta">Lorem ipsum | Lorem ipsum</p>
+        <p class="g--card-24__hd__author">By Author</p>
     </div>
+    <p class="g--card-24__title">Card-24 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+    <div class="g--card-24__list-group">
+        <div class="g--card-24__list-group__list-item">Category</div>
+        <div class="g--card-24__list-group__list-item">Category</div>
+    </div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-24__link">This is a link</a>
 </div>
 ```
 
-##### \*Aspect Ratio
-
-It is not necessary to add aspect-ratio because the images have height in the css.
-
 ## Editable variables
 
-- $background-position
-- $background-size
-- $border-radius: false by default
+- $author-color
+- $author-font
+- $author-font-weight
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
 - $link-class
-- $link-class-modifier: false by default
-- $mask-color
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $link-class-modifier
-- $mask-color
-- $text-align
+- $link-font
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
 - $title-color
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
 ## use
 
-```sh
-.g--card-24{
-    @include make-card-24(
-        $link-class: g--link-01,
-        $background-size: cover,
-        $background-position: center,
-        // $border-radius: default,
-    );
+```scss
+.g--card-24 {
+    @include make-card-24();
     @include make-card-24-modifier(
-        $mask-color: rgba(map-get($color-options, b), .5),
-        $title-color: map-get($color-options, a),
-        // $link-class-modifier: default,
-        // $text-align: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        // $author-color: map-get($color-options, a),
+        // $author-font: f,
+        // $author-font-weight: 400,
+        // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-5%),
+        // $link-class: g--link-01,
+        // $link-font: f,
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
+        // $pill-class: g--pill-01,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

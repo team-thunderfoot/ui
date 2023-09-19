@@ -1,0 +1,379 @@
+@mixin make-cta-07() {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &__bg-items {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        &::before {
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    &__ft-items {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10%;
+
+        @media all and ($viewport-type: $tabletl) {
+            padding: 8% 7%;
+        }
+
+        @media all and ($viewport-type: $tabletm) {
+            padding: 9% 7%;
+        }
+
+        @media all and ($viewport-type: $tablets) {
+            padding: 10% 6%;
+        }
+
+        @media all and ($viewport-type: $mobile) {
+            padding: 10% 8%;
+        }
+
+        &__left-items {
+            width: calc(50% - #{$measure} * 15);
+            margin-right: $measure * 15;
+
+            @media all and ($viewport-type: $tabletm) {
+                width: calc(50% - #{$measure} * 10);
+                margin-right: $measure * 10;
+            }
+        }
+
+        &__right-items {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+@mixin make-cta-07-modifier(
+    $background-color: false,
+    $background-position: false,
+    $background-size: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $breakpoint: false,
+    $cta-min-height: false,
+    $hover-background-color: false,
+    $hover-background-img-zoom: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-mask-color: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $mask-color: false,
+    $shadow: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
+) {
+    @if $background-color {
+        background: $background-color;
+    }
+
+    @if $cta-min-height {
+        min-height: $cta-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $breakpoint {
+        @media all and ($viewport-type: $breakpoint) {
+            &__ft-items {
+                display: block;
+
+                &__left-items,
+                &__right-items {
+                    width: 100%;
+                }
+
+                &__right-items {
+                    margin-top: $measure * 4;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @if $hover-mask-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-07 {
+                    &__bg-items {
+                        &::before {
+                            background: $hover-mask-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-background-img-zoom {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-07 {
+                    &__bg-items {
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--cta-07 {
+                            &__ft-items {
+                                &__left-items {
+                                    &__title {
+                                        color: $hover-title-color;
+                                        text-decoration-color: $hover-title-underline-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-07 {
+                    &__ft-items {
+                        &__left-items {
+                            &__title {
+                                color: $hover-title-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--cta-07 {
+                    &__ft-items {
+                        &__left-items {
+                            &__title {
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        .g--cta-07 {
+            &__ft-items {
+                padding-left: $measure * 15;
+                padding-right: $measure * 15;
+                text-align: center;
+
+                @media all and ($viewport-type: $tabletl) {
+                    padding-left: $measure * 10;
+                    padding-right: $measure * 10;
+                }
+
+                @media all and ($viewport-type: $tablets) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 5;
+                }
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        .g--cta-07 {
+            &__ft-items {
+                padding-left: $measure * 10;
+                padding-right: $measure * 30;
+                text-align: left;
+
+                @media all and ($viewport-type: $tabletl) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 25;
+                }
+
+                @media all and ($viewport-type: $tabletm) {
+                    padding-right: $measure * 20;
+                }
+
+                @media all and ($viewport-type: $tablets) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 5;
+                }
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        .g--cta-07 {
+            &__ft-items {
+                padding-left: $measure * 30;
+                padding-right: $measure * 10;
+                text-align: right;
+
+                @media all and ($viewport-type: $tabletl) {
+                    padding-left: $measure * 25;
+                    padding-right: $measure * 5;
+                }
+
+                @media all and ($viewport-type: $tabletm) {
+                    padding-left: $measure * 20;
+                }
+
+                @media all and ($viewport-type: $tablets) {
+                    padding-left: $measure * 5;
+                    padding-right: $measure * 5;
+                }
+            }
+        }
+    }
+
+    .g--cta-07 {
+        &__bg-items {
+            @if $background-size {
+                background-size: $background-size;
+            }
+            @if $background-position {
+                background-position: $background-position;
+            }
+            @if $hover-background-img-zoom {
+                transition: transform $time-b $ease-standard-a;
+            }
+            @if $mask-color {
+                &::before {
+                    background: $mask-color;
+                }
+            }
+            @if $hover-mask-color {
+                &::before {
+                    transition: background $time-b $ease-standard-a;
+                }
+            }
+        }
+
+        &__ft-items {
+            &__left-items {
+                &__title {
+                    @if $title-color {
+                        color: $title-color;
+                    }
+
+                    @if $title-font {
+                        @extend .f--font-#{$title-font} !optional;
+                    }
+
+                    @if $title-font-weight {
+                        font-weight: $title-font-weight;
+                    }
+
+                    @if $title-max-lines {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: $title-max-lines;
+                        -webkit-box-orient: vertical;
+                    }
+
+                    @if $hover-title-underline-color {
+                        text-decoration: underline;
+                        text-decoration-color: transparent;
+                    }
+                    @if $hover-title-color and $hover-title-underline-color {
+                        transition: color $time-b $ease-standard-a,
+                            text-decoration-color $time-b $ease-standard-a;
+                    } @else if $hover-title-color {
+                        transition: color $time-b $ease-standard-a;
+                    } @else if $hover-title-underline-color {
+                        transition: text-decoration-color $time-b $ease-standard-a;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.g--hero-04 {
+    @include make-hero-04();
+    @include make-hero-04-modifier(
+        $background-color: lighten(map-get($color-options, a), 82%),
+        $breakpoint: $tablets,
+        $header-height: 96px,
+        $img-height: 200px,
+        $img-object-fit: cover,
+        $img-position: center,
+        $link-class: g--btn-01,
+        $subtitle-color: map-get($color-options, a),
+        $subtitle-font: d,
+        $title-color: map-get($color-options, a),
+        $title-font: a,
+        // $link-font: false,
+        // $subtitle-font-weight: false,
+        // $text-align: center
+        // $title-font-weight: false,
+    );
+    @include make-hero-04-modifier($link-class: g--btn-01--second);
+}

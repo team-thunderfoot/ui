@@ -1,19 +1,39 @@
+
+
+
+
+
+
+
+
+
 .g--card-33 {
-    @include make-card-33(
-        $meta-font: g,
-        $author-font: g,
-        $title-font: c,
-        $pill-class: g--pill-01,
-        // $border-radius: default
-    );
+    @include make-card-33();
     @include make-card-33-modifier(
-        $background-color: map-get($color-options, g),
-        $meta-color: map-get($color-options, a),
-        $author-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        $title-color-hover: map-get($color-options, b),
-        $background-color-hover: map-get($color-options, f),
-        // $pill-class-modifier: default,
-        // $text-align: default 
+        $background-color: map-get($color-options, a),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 0px,
+        $border-radius: 20px,
+        $full-image-height: true,
+        $hover-background-color: map-get($color-options, a),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
+        $hover-img-zoom: 1.1,
+        $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
+        $hover-title-color: map-get($color-options, b),
+        $hover-transform: translateY(-5%),
+        $img-aspect-ratio-width: 16,
+        $img-aspect-ratio-height: 9,
+        $img-height: auto,
+        $img-position: center,
+        $meta-color: rgba(map-get($color-options,b), 0.6),
+        $meta-font: e,
+        $meta-font-weight: 500,
+        $pill-class: g--pill-01--third,
+        $title-color: map-get($color-options, b),
+        $title-font: d,
+        $title-font-weight: 700,
+        $title-max-lines: 3
     );
 }

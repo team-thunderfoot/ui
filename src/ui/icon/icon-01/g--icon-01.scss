@@ -1,49 +1,65 @@
 .g--icon-01 {
-    @include make-icon-01(
-        $border-width: 1px,
-        $width: $measure * 5,
-        $height: $measure * 5
-    );
-
+    @include make-icon-01();
     @include make-icon-01-modifier(
+        $artwork-height: $measure * 2,
+        $artwork-width: $measure*3,
         $background-color: transparent,
-        $border-color: map-get($color-options, a ),
-        $path-fill-color: map-get($color-options, a ),
-        // $background-color-hover: default,
-        $border-color-hover: map-get($color-options, g ),
-        $path-fill-color-hover: map-get($color-options, g ),
+        $border-color: map-get($color-options, a),
+        $border-radius: 100%,
+        $border-style: solid,
+        $border-width: 1px,
+        $height: $measure * 6,
+        $hover-background-color: map-get($color-options, a),
+        $hover-border-color: map-get($color-options, g),
+        $hover-icon-color: map-get($color-options, g),
+        $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
+        $icon-fill-color: map-get($color-options, a),
+        $width: $measure * 6,
     );
 
     &--second {
         @include make-icon-01-modifier(
-            $background-color: transparent,
-            $border-color: map-get($color-options, a ),
-            $path-fill-color: map-get($color-options, a ),
-            $background-color-hover: map-get($color-options, a ),
-            $border-color-hover: map-get($color-options, a ),
-            $path-fill-color-hover: map-get($color-options, b ),
+            $border-radius: 0,
+            $hover-background-color: map-get($color-options, a),
+            $border-style: dotted,
+            $border-color: map-get($color-options, g),
+            $hover-border-color: map-get($color-options, f),
+            $icon-fill-color: map-get($color-options, a),
+            $hover-icon-color: map-get($color-options, b),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, a),
+            $hover-transform: none,
+            $shadow: 0 0 $measure*2 map-get($color-options, g),
         );
     }
 
     &--third {
         @include make-icon-01-modifier(
-            $background-color: map-get($color-options, a ),
-            $border-color: map-get($color-options, a ),
-            $path-fill-color: map-get($color-options, b ),
-            $background-color-hover: map-get($color-options, g ),
-            $border-color-hover: map-get($color-options, g ),
-            $path-fill-color-hover: map-get($color-options, b ),
+            $border-radius: 0,
+            $background-color: map-get($color-options, a),
+            $hover-background-color: map-get($color-options, g),
+            $border-width: 1px,
+            $border-style: solid,
+            $border-color: map-get($color-options, f),
+            $hover-border-color: map-get($color-options, e),
+            $hover-border-radius: $measure,
+            $icon-fill-color: map-get($color-options, b),
+            $hover-icon-color: map-get($color-options, b),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+            $hover-transform: translateY($measure)
         );
     }
 
     &--fourth {
         @include make-icon-01-modifier(
-            $background-color: map-get($color-options, a ),
-            $border-color: map-get($color-options, a ),
-            $path-fill-color: map-get($color-options, b ),
-            $background-color-hover: transparent,
-            $border-color-hover: map-get($color-options, a ),
-            $path-fill-color-hover: map-get($color-options, a ),
+            $background-color: map-get($color-options, a),
+            $hover-background-color: transparent,
+            $border-color: map-get($color-options, a),
+            $hover-border-color: map-get($color-options, a),
+            $icon-fill-color: map-get($color-options, b),
+            $hover-icon-color: map-get($color-options, a),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+            $hover-transform: translateY($measure)
         );
     }
 }

@@ -1,25 +1,50 @@
 .g--card-40 {
-    @include make-card-40(
-        $border-width: 1px,
-        $meta-font: g,
-        $author-font: g,
-        $pill-class: g--pill-01,
-        $title-font: f,
-        // $border-radius: default
-    );
+    @include make-card-40();
     @include make-card-40-modifier(
-        $background-color: map-get($color-options, e),
-        $border-color: map-get($color-options, a),
+        $author-font: f,
+        $author-font-weight: 400,
         $author-color: map-get($color-options, a),
+        $hover-img-border-radius: $measure * 2,
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, e),
+        $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        $img-height: 300px,
+        $img-position: center,
+        $link-class: g--link-01,
+        $link-font: f,
         $meta-color: map-get($color-options, a),
+        $meta-font: f,
+        $meta-font-weight: 400,
+        $pill-class: g--pill-01,
         $title-color: map-get($color-options, a),
-        // $full-image-height: default,
-        // $background-color-hover: default,
-        // $pill-class-modifier: default,
-        // $text-align: default,
-        // $title-color-hover: default,
-        $zoom-hover: 2,
-        $shadow-hover: 0 0 16px 0 rgba(map-get($color-options, a), .5),
-        $translate-hover: translateY(-32px)
+        $title-font: c,
+        $title-font-weight: 400,
+        $title-max-lines: 3
     );
+
+    &--second {
+        @include make-card-40-modifier(
+            $author-font: f,
+            $author-font-weight: 400,
+            $author-color: map-get($color-options, a),
+            $hover-img-zoom: 1.5,
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: 2,
+            $img-border-radius: 50%,
+            $img-height: auto,
+            $img-position: center,
+            $link-class: g--link-01,
+            $link-font: f,
+            $meta-color: map-get($color-options, a),
+            $meta-font: f,
+            $meta-font-weight: 400,
+            $pill-class: g--pill-01,
+            $title-color: map-get($color-options, a),
+            $title-font: c,
+            $title-font-weight: 400,
+            $title-max-lines: 3
+        );
+    }
 }

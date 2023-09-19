@@ -20,8 +20,8 @@
 
 ## Editable variables
 
+- $hover-text-color
 - $text-color
-- $text-color-hover
 
 ## Use
 
@@ -29,8 +29,8 @@
 .g--link-03{
     @include make-link-03();
     @include make-link-03-modifier(
-        $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g)
+        // $hover-text-color: map-get($color-options, g)
+        // $text-color: map-get($color-options, a),
     );
 }
 ```

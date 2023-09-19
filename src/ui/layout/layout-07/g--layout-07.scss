@@ -1,19 +1,21 @@
-.g--layout-07{
-    @include make-layout-07(
-        $btn-class: g--btn-01,
-        $subtitle-font: d,
-        $title-font: c,
-        // $btn-font: default,
-        // $img-border-radius: default,
-        // $img-position: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        $change-order-reponsive: true
-    );
+.g--layout-07 {
+    @include make-layout-07();
     @include make-layout-07-modifier(
-        $background-color: map-get($color-options, d),
+        $align-text-img: center,
+        $img-height: 200px,
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
+        $title-font: c,
+        $title-font-weight: 400,
         $title-color: map-get($color-options, a),
-        // $btn-class-modifier: default
+        $object-fit: cover,
+        $img-position: false,
+        // $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
+        $btn-font: f,
+        $btn-class: g--btn-01,
+        $breakpoint: $tablets,
+        // $background-color: map-get($color-options, e),
     );
 }

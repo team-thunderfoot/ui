@@ -4,54 +4,84 @@
 
 ![alt text][card-57]
 
-[card-57]: /src/img/global-components/card/card-57.png
+[card-57]: /src/img/global-components/card/card-57.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-57">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-57__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
-    <h3 class="g--card-57__title">Card 57</h3>
-    <h4 class="g--card-57__subtitle">Job Position</h4>
+    <h3 class="g--card-57__title">Lorem ipsum</h3>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-57__link"
+        >This is a link</a
+    >
 </div>
 ```
 
-##### \*Aspect Ratio
+If you want the subtitle to be a c--content, the HTML should be:
 
-For the image, we have to add width, height and aspect ratio dynamically.
+```html
+<div class="g--card-57">
+    <div class="g--card-57__title c--content-a">Lorem ipsum</div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-57__link"
+        >This is a link</a
+    >
+</div>
+```
 
 ## Editable variables
 
-- $img-border-radius: false by default
-- $text-align: false by default
-- $subtitle-color
-- $subtitle-font
-- $title-color
-- $title-font
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $link-class
+-   $link-font
+-   $shadow
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
-### For modifiers
+## Use
 
-- $subtitle-color
-- $text-align
-- $title-color
-
-## use
-
-```sh
-.g--card-57{
-    @include make-card-57(
-        $subtitle-font: f,
-        $title-font: d,
-        // $img-border-radius: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-    );
+```scss
+.g--card-57 {
+    @include make-card-57();
     @include make-card-57-modifier(
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $text-align: default,
+        // $background-color: lighten(map-get($color-options, a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: $measure * 3,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $card-min-height: 500px,
+        // $hover-background-color: linear-gradient(217deg, map-get($color-options, e), map-get(
+        //                 $color-options,
+        //                 g
+        //             ) 70.71%),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-title-color: map-get($color-options, f),
+        // $hover-title-underline-color: map-get($color-options, f),
+        // $hover-transform: translateY(-$measure),
+        // $link-class: g--link-01,
+        // $link-font: a,
+        // $shadow: 0 0 $measure * 2 map-get($color-options, a),
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: bold,
+        // $title-font: c,
+        // $title-max-lines: 2
     );
 }
 ```

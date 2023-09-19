@@ -1,13 +1,196 @@
-.g--btn-03{
+.g--btn-03 {
     @include make-btn-03();
     @include make-btn-03-modifier(
+        // $artwork-top: -3px,
+        $artwork-color-fill: map-get($color-options, a),
+        // $artwork-height: false,
+        $artwork-width: $measure*2,
+        $background-color: map-get($color-options, b),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
+        $font-weight: 400,
+        $font: f,
+        $hover-artwork-color: map-get($color-options, g),
+        // $hover-background-color: map-get($color-options, a)
+        $hover-border-color: map-get($color-options, g),
+        $hover-text-color: map-get($color-options, g),
         $text-color: map-get($color-options, a),
-        $text-color-hover: map-get($color-options, g),
-        $icon-top: 0px,
-        $btn-font: c,
-        $btn-font-weight: 600,
-        $artwork-color-fill: map-get($color-options, f),
-        $artwork-color-stroke: map-get($color-options, g),
-        $artwork-color-hover: map-get($color-options, h)
+        $transition: (
+            border-color $time-b $ease-standard-a,
+            color $time-b $ease-standard-a,
+            background $time-b $ease-standard-a,
+        )
     );
+
+    &--second {
+        @include make-btn-03-modifier(
+            $artwork-color-fill: map-get($color-options, a),
+            $border-radius: 50px,
+            $border-width: 1px,
+            // $shadow: 0 0 $measure*2 map-get($color-options, a),
+            $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
+            $hover-border-color: map-get($color-options, a),
+            $hover-border-radius: $measure,
+            $text-color: map-get($color-options, a),
+            $hover-artwork-color: map-get($color-options, b),
+            $hover-text-color: map-get($color-options, b),
+            $transition: (
+                border-color $time-b $ease-standard-a,
+                border-radius $time-b $ease-standard-a,
+                color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a,
+                background-size $time-b $ease-standard-a,
+                box-shadow $time-b $ease-standard-a,
+            ),
+            $background-color:
+                linear-gradient(map-get($color-options, a), map-get($color-options, a)),
+            $background-repeat: no-repeat,
+            $background-size: 100% 0px,
+            $hover-background-size: 100% 100%,
+            $background-position: bottom left
+        );
+    }
+
+    &--third {
+        @include make-btn-03-modifier(
+            $artwork-color-fill: map-get($color-options, b),
+            $border-radius: 200px,
+            $border-width: 1px,
+            $border-color: map-get($color-options, b),
+            $hover-artwork-color: map-get($color-options, a),
+            $hover-border-color: map-get($color-options, a),
+            $text-color: map-get($color-options, b),
+            $hover-text-color: map-get($color-options, a),
+            $background-color: map-get($color-options, a),
+            $hover-background-color: map-get($color-options, b)
+        );
+    }
+    &--fourth {
+        @include make-btn-03-modifier(
+            // $border-radius: 200px,
+        $artwork-color-fill: map-get($color-options, a),
+            $border-width: 1px,
+            $hover-border-color: map-get($color-options, a),
+            $text-color: map-get($color-options, a),
+            $hover-artwork-color: map-get($color-options, b),
+            $hover-text-color: map-get($color-options, b),
+            $background-color: (
+                linear-gradient(map-get($color-options, a), map-get($color-options, a)),
+                linear-gradient(map-get($color-options, e), map-get($color-options, e))
+            ),
+            $background-size: (0 0, 100%),
+            $background-repeat: no-repeat,
+            $background-position: (center, center),
+            $hover-background-size: (100% 100%, 100%),
+            $transition: (
+                border-color $time-b $ease-standard-a,
+                color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a,
+                background-size $time-b $ease-standard-a
+            ),
+            // $hover-background-color: map-get($color-options, b)
+        );
+    }
+    &--fifth {
+        @include make-btn-03-modifier(
+            $artwork-color-fill: map-get($color-options, a),
+            $border-radius: 200px,
+            $border-width: 1px,
+            $hover-border-color: map-get($color-options, a),
+            $text-color: map-get($color-options, a),
+            $hover-artwork-color: map-get($color-options, b),
+            $hover-text-color: map-get($color-options, b),
+            $background-color: (
+                radial-gradient(
+                    circle at 100%,
+                    transparent 33.33%,
+                    map-get($color-options, a) 66.66%
+                ),
+                linear-gradient(map-get($color-options, e), map-get($color-options, e)),
+            ),
+            $background-size: (
+                300% 300%,
+                100%,
+            ),
+            $background-repeat: no-repeat,
+            $background-position: (
+                right center,
+                center,
+            ),
+            $hover-background-position: (
+                left center,
+                center,
+            ),
+            // $hover-background-size: (100% 100%, 100%),
+            // $hover-background-color: (radial-gradient(transparent 0%, map-get($color-options, a)0.5%, map-get($color-options, a)), linear-gradient(map-get($color-options, e), map-get($color-options, e))),
+            $transition:
+                (
+                    border-color $time-b $ease-standard-a,
+                    color $time-b $ease-standard-a,
+                    background-position $time-b * 2 $ease-standard-a,
+                ),
+            // $hover-background-color: map-get($color-options, b)
+        );
+    }
+    &--sixth {
+        @include make-btn-03-modifier(
+            // $border-color: map-get($color-options, a),
+            // $hover-border-color: map-get($color-options, g),
+            $border-width: 2px 2px 4px,
+            // $border-style: solid,
+            // $font: f,
+            // $font-weight: 400,
+            // $text-color: map-get($color-options, a),
+            // $hover-text-color: map-get($color-options, a),
+            $background-size: 8px 100%,
+            $background-repeat: no-repeat,
+            $background-position: calc(100% + 4px) top,
+            $hover-background-size: calc(100% + 4px) 100%,
+            $background-color:
+                linear-gradient(map-get($color-options, a), map-get($color-options, a)),
+            $transition: (
+                border-color $time-b $ease-standard-a,
+                color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a,
+                background-size $time-b $ease-standard-a
+            )
+        );
+    }
+    &--seventh {
+        @include make-btn-03-modifier(
+            $shadow: 0 0 $measure*2 map-get($color-options, a),
+            $artwork-color-fill: map-get($color-options, e),
+            $border-width: 1px,
+            $border-color: map-get($color-options, e),
+            $hover-border-color: map-get($color-options, a),
+            $text-color: map-get($color-options, e),
+            $hover-artwork-color: map-get($color-options, a),
+            $hover-text-color: map-get($color-options, a),
+            $background-color: (
+                linear-gradient(map-get($color-options, a), map-get($color-options, a)),
+                linear-gradient(map-get($color-options, e), map-get($color-options, e)),
+            ),
+            $background-size: (
+                100% 100%,
+                100%,
+            ),
+            $background-repeat: no-repeat,
+            $background-position: (
+                center,
+                center,
+            ),
+            $hover-background-size: (
+                0% 0%,
+                100%,
+            ),
+            $transition: (
+                border-color $time-b $ease-standard-a,
+                color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a,
+                background-size $time-b $ease-standard-a,
+            ),
+            // $hover-background-color: map-get($color-options, b)
+        );
+    }
 }

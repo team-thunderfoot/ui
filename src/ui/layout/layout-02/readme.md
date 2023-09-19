@@ -23,13 +23,13 @@
 
 ## Editable variables
 
-- $title-font
-- $title-font-weight,
-- $title-color
-- $subtitle-font
-- $subtitle-font-weight,
-- $subtitle-color
 - $background-color
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -37,13 +37,13 @@
 .g--layout-02 {
     @include make-layout-02();
     @include make-layout-02-modifier(
-        $title-font: a,
-        $title-font-weight: 600,
-        $title-color: map-get($color-options, a),
-        $subtitle-font: f,
-        $subtitle-font-weight: 400,
-        $subtitle-color: map-get($color-options, a),
-        //$background-color: map-get($color-options, e),
+        // $background-color: map-get($color-options, e),
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 

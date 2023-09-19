@@ -1,20 +1,33 @@
 .g--form-file-01{
-    @include make-form-file-01(
-        $border-radius: 0,
-        $border-width: 1px,
-        $btn-font: f,
-        $font: f,
-        // $btn-font-weight: default,
-        // $font-weight: default
-    );
+    @include make-form-file-01();
     @include make-form-file-01-modifier(
         $background-color: transparent,
-        $btn-background-color: map-get($color-options, a),
+        $btn-background: map-get($color-options, a),
         $btn-text-color: map-get($color-options, b),
         $border-color: rgba(map-get($color-options, a), .2),
         $border-color-focus: map-get($color-options, a),
         $error-border-color: map-get($color-options, f),
-        // $placeholder-color: transparent,
         $text-color: map-get($color-options, a),
+        $border-radius: 0,
+        $border-width: 1px,
+        $border-style: solid,
+        $btn-font: f,
+        $font: f,
     );
+    &--second{
+        @include make-form-file-01-modifier(
+            $border-width: 0 0 1px 0,
+            $btn-background: (linear-gradient(map-get($color-options, b), map-get($color-options, b)), linear-gradient(map-get($color-options, a), map-get($color-options, a))),
+            $btn-background-position: (left center, center),
+            $btn-background-repeat: no-repeat,
+            $btn-background-size: (0% 100%, 100%),
+            $btn-border-color: map-get($color-options, a),
+            $btn-border-style: solid,
+            $btn-border-width: 1px 1px 0,
+            $border-color: map-get($color-options, a),
+            $hover-btn-background-size: (100% 100%, 100%),
+            $hover-btn-text-color: map-get($color-options, a),
+            $btn-transition: (color $time-b $ease-standard-a, background-size $time-b $ease-standard-a)
+        );
+    }
 }

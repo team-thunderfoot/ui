@@ -1,8 +1,11 @@
 @mixin make-card-11() {
-    padding: 0 $measure*2;
+    padding: 0 $measure * 2;
     width: 100%;
-    display: block;
-    &__media-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    &__media-wrapper {
         overflow: hidden;
         margin-bottom: $measure * 2;
         &__media {
@@ -13,32 +16,36 @@
         }
     }
 
+    &__title {
+        margin-bottom: $measure * 2;
+        @media all and ($viewport-type: $tablets) {
+            margin-bottom: $measure;
+        }
+    }
 }
 
 @mixin make-card-11-modifier(
+    $hover-img-border-radius: false,
     $hover-img-zoom: false,
     $hover-title-color: false,
+    $hover-title-underline-color: false,
     $hover-transform: false,
     $img-aspect-ratio: false,
     $img-height: false,
     $img-position: false,
-    $img-size: false,
+    $img-fit: false,
     $img-width: false,
+    $link-class: false,
+    $link-font: false,
     $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $title-max-lines: false,
-
+    $title-max-lines: false
 ) {
-
-    @if $hover-title-color or $hover-img-zoom or $hover-transform {
-        text-decoration: none !important;
-        cursor: pointer;
-    }
     @if $hover-transform {
         transition: transform $time-b $ease-standard-a;
-        @media all and (hover : hover) {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
@@ -46,27 +53,74 @@
             }
         }
     }
-    @if $hover-title-color {
-        @media all and (hover : hover) {
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-11{
-                    &__title{
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-11 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-11 {
+                    &__title {
                         color: $hover-title-color;
                     }
                 }
             }
         }
-    }
-    @if $hover-img-zoom {
-        @media all and (hover : hover) {
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
-                .g--card-11{
-                    &__media-wrapper{
-                        &__media{
+                .g--card-11 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-11 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-11 {
+                    &__media-wrapper {
+                        &__media {
                             transform: scale($hover-img-zoom);
                         }
                     }
@@ -76,25 +130,26 @@
     }
     @if $text-align == "center" {
         text-align: center;
-        .g--card-11{
-            &__media-wrapper{
+        align-items: center;
+        .g--card-11 {
+            &__media-wrapper {
                 margin-left: auto;
                 margin-right: auto;
-                &__media{
+                &__media {
                     margin-left: auto;
                     margin-right: auto;
                 }
             }
         }
-        
     }
     @if $text-align == "left" {
         text-align: left;
-        .g--card-11{
-            &__media-wrapper{
+        align-items: flex-start;
+        .g--card-11 {
+            &__media-wrapper {
                 margin-left: 0;
                 margin-right: auto;
-                &__media{
+                &__media {
                     margin-left: 0;
                     margin-right: auto;
                 }
@@ -103,19 +158,20 @@
     }
     @if $text-align == "right" {
         text-align: right;
-        .g--card-11{
-            &__media-wrapper{
+        align-items: flex-end;
+        .g--card-11 {
+            &__media-wrapper {
                 margin-left: auto;
                 margin-right: 0;
-                &__media{
+                &__media {
                     margin-left: auto;
                     margin-right: 0;
                 }
             }
         }
     }
-    .g--card-11{
-        &__media-wrapper{
+    .g--card-11 {
+        &__media-wrapper {
             @if $img-aspect-ratio {
                 aspect-ratio: $img-aspect-ratio;
             }
@@ -125,20 +181,23 @@
             @if $img-height {
                 height: $img-height;
             }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
+            }
             &__media {
                 @if $img-aspect-ratio {
                     aspect-ratio: $img-aspect-ratio;
                 }
                 @if $img-width {
-                    width: $img-width;
+                    width: 100%;
                 }
                 @if $img-height {
-                    height: $img-height;
+                    height: 100%;
                 }
-                @if $img-size{
-                    object-fit: $img-size;
+                @if $img-fit {
+                    object-fit: $img-fit;
                 }
-                @if $img-position{
+                @if $img-position {
                     object-position: $img-position;
                 }
                 @if $hover-img-zoom {
@@ -146,7 +205,7 @@
                 }
             }
         }
-    
+
         &__title {
             @if $title-color {
                 color: $title-color;
@@ -164,8 +223,25 @@
                 -webkit-line-clamp: $title-max-lines;
                 -webkit-box-orient: vertical;
             }
-            @if $hover-title-color {
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
                 transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
+            }
+        }
+        &__link {
+            @if $link-class {
+                @extend .#{$link-class} !optional;
+            }
+            @if $link-font {
+                @extend .f--font-#{$link-font} !optional;
             }
         }
     }

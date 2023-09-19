@@ -9,8 +9,6 @@
         @media all and ($viewport-type: $tablets) {
             padding-bottom: $measure * 5;
         }
-
-        &__title {}
     }
 
     &__media-wrapper {
@@ -28,13 +26,14 @@
 @mixin make-hero-01-modifier(
     $background-color: false,
     $header-height: false,
+    $img-border-radius: false,
     $img-height: false,
-    $img-position: false,
     $img-object-fit: false,
+    $img-position: false,
+    $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $text-align: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -56,7 +55,7 @@
         &__wrapper {
             @if $header-height {
                 padding-top: calc(#{$measure} * 14 + #{$header-height});
-    
+
                 @media all and ($viewport-type: $tablets) {
                     padding-top: calc(#{$measure} * 7 + #{$header-height});
                 }
@@ -80,6 +79,9 @@
         &__media-wrapper {
             @if $img-height {
                 height: $img-height;
+            }
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
             }
 
             &__media {

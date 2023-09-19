@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Links</title>
+
+  <link rel="stylesheet" href="https://use.typekit.net/gll7dfd.css">
+  <link rel="stylesheet" href="./test-horizontal.scss">
+</head>
+  <body>
+    <main>
+      <section class="extra-section"></section>
+      <section class="c--horizontal-scroll-a c--horizontal-scroll-a--second js--horizontal-section">
+        <div class="c--horizontal-scroll-a__wrapper js--horizontal-wrapper">
+          <div class="c--horizontal-scroll-a__wrapper__item">
+            <div class="f--vw-container">
+                <div class="f--vw-row">
+                  <div class="f--vw-col">
+                                <img class="c--media" src="https://picsum.photos/200/300" width="200" height="300" style="">
+                            </div>
+                  <div class="f--vw-col">
+                                <img class="c--media" src="https://picsum.photos/250/300" width="250" height="300" style="">
+                            </div>
+                  <div class="f--vw-col">
+                                <img class="c--media" src="https://picsum.photos/200/350" width="200" height="350" style="">
+                            </div>
+                  <div class="f--vw-col">
+                                <img class="c--media" src="https://picsum.photos/300/300" width="300" height="300" style="">
+                            </div>
+                  
+                    <div class="f--vw-col-4 f--vw-col-tabletm-6 f--vw-col-tablets-8 f--vw-col-mobile-12 display-flex align-items-center">
+                        <Ccard05
+                            imgAlt={item.image.alt}
+                            imgWidth={item.image.width}
+                            imgHeight={item.image.height}
+                            imgSrc={item.image.url}
+                            title={item.title}
+                            subtitle={item.subtitle}
+                            btn={item.link}
+                        />
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+      <section class="extra-section"></section>
+    </main>
+    <script type="module" src="./testHorizontal.js"></script>
+  </body>
+</html>

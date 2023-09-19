@@ -2,52 +2,70 @@
  * Accordion
  */
 
-import Accordion from "@andresclua/accordion";
-
-const accordion = new Accordion({
-  accActive: "accordion-1", //id of the initially active accordion
-  accActiveClass: "g--accordion-01--is-active", //class for the active accordion
-  accClose: true, //preset if the accordion should start closed
-  accAllOpen: false, //preset if all accordion items should start open
-  accTrigger: "tf-ds-acc-target", //class for all links that trigger an accordion item
-  accBody: "tf-ds-acc-body", //class for the accordion body
-  onChange: () => {
-    //do something
-  },
-});
-
-const accordionB = new Accordion({
-  accActive: "accordion-4", //id of the initially active accordion
-  accActiveClass: "g--accordion-02--is-active", //class for the active accordion
-  accClose: true, //preset if the accordion should start closed
-  accAllOpen: false, //preset if all accordion items should start open
-  accTrigger: "tf-ds-acc-target", //class for all links that trigger an accordion item
-  accBody: "tf-ds-acc-body", //class for the accordion body
-  onChange: () => {
-    //do something
-  },
-});
+import Accordion from "@teamthunderfoot/accordion"
+import BackToTop from "@teamthunderfoot/back-to-top"
 
 /**
  * Lazy Loading
  */
-import Blazy from "blazy";
+import Blazy from "blazy"
 
 class Index {
-  constructor() {
-    this.init();
-  }
-  init() {
-    // lazy loading for images
-    new Blazy({
-      selector: ".g--lazy-01",
-      successClass: "g--lazy-01--is-loaded",
-      errorClass: "g--lazy-01--is-error",
-    });
-  }
+    constructor() {
+        this.init()
+    }
+    init() {
+        // lazy loading for images
+        new Blazy({
+            selector: ".g--lazy-01",
+            successClass: "g--lazy-01--is-loaded",
+            errorClass: "g--lazy-01--is-error",
+        })
+        const backToTop = new BackToTop({
+            linkClass: "js--back-top",
+            activeClass: "g--back-top-01--is-active",
+            distanceTrigger: "tf-data-distance",
+        })
+
+        const accordionA = new Accordion({
+            element:  document.querySelector(".js--container-a"),
+            accActive: "tf-ds-acc-active-a",
+            accActiveClass: "g--accordion-01--is-active",
+            accBodyClass: "g--accordion-01__bd",
+            accClose: true,
+            accAllOpen: false,
+            accTrigger: "tf-ds-acc-target-a",
+            accExternalTrigger: "tf-ds-acc-external-target-a",
+            accBody: "tf-ds-acc-body-a",
+            onHide: () => {
+                //do something
+            },
+            onShow: () => {
+                //do something
+            },
+        })
+        
+        const accordionB = new Accordion({
+            element:  document.querySelector(".js--container-b"),
+            accActive: "tf-ds-acc-active-b",
+            accActiveClass: "g--accordion-02--is-active",
+            accBodyClass: "g--accordion-02__bd",
+            accClose: false,
+            accAllOpen: false,
+            accTrigger: "tf-ds-acc-target-b",
+            accExternalTrigger: "tf-ds-acc-external-target-b",
+            accBody: "tf-ds-acc-body-b",
+            onHide: () => {
+                //do something
+            },
+            onShow: () => {
+                //do something
+            },
+        })
+    }
 }
 
-export default Index;
-new Index();
+export default Index
+new Index()
 
 //

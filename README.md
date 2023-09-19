@@ -18,7 +18,7 @@ Import all mixins before any global component
 @import '@/node_modules/@teamthunderfoot/ui/src/mixins';
 ```
 
-### Wordpres
+### Wordpress
 
 Create one SCSS entry for each JS entry and import global mixins before any global component
 
@@ -41,10 +41,18 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--back-top-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/back-top/back-top-01/readme.md)
 
+### Banner
+
+- [g--banner-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/banner/banner-01/readme.md)
+- [g--banner-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/banner/banner-02/readme.md)
+
 ### Btn
 
 - [g--btn-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-01/readme.md)
 - [g--btn-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-02/readme.md)
+- [g--btn-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-03/readme.md)
+- [g--btn-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-04/readme.md)
+- [g--btn-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/btn/btn-05/readme.md)
 
 ### Card
 
@@ -81,11 +89,27 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--card-31](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-31/readme.md)
 - [g--card-32](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-32/readme.md)
 - [g--card-33](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-33/readme.md)
+- [g--card-34](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-34/readme.md)
+- [g--card-35](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-35/readme.md)
+- [g--card-36](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-36/readme.md)
+- [g--card-37](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-37/readme.md)
+- [g--card-38](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-38/readme.md)
+- [g--card-39](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-39/readme.md)
+- [g--card-40](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-40/readme.md)
+- [g--card-41](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-41/readme.md)
+- [g--card-42](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-42/readme.md)
+- [g--card-43](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-43/readme.md)
+- [g--card-44](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-44/readme.md)
+- [g--card-45](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-45/readme.md)
+- [g--card-46](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-46/readme.md)
+- [g--card-47](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-47/readme.md)
+- [g--card-48](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-48/readme.md)
 - [g--card-49](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-49/readme.md)
 - [g--card-50](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-50/readme.md)
 - [g--card-51](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-51/readme.md)
-- [g--card-55](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-55/readme.md)
-- [g--card-58](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-58/readme.md)
+- [g--card-52](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-52/readme.md)
+- [g--card-53](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-53/readme.md)
+- [g--card-54](https://github.com/team-thunderfoot/ui/blob/main/src/ui/card/card-54/readme.md)
 
 ### Cta
 
@@ -95,27 +119,36 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--cta-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-04/readme.md)
 - [g--cta-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-05/readme.md)
 - [g--cta-06](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-06/readme.md)
+- [g--cta-07](https://github.com/team-thunderfoot/ui/blob/main/src/ui/cta/cta-07/readme.md)
 
 ### Form fields
 
 - [g--form-checkbox-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-checkbox-01/readme.md)
 - [g--form-error-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-error-01/readme.md)
+- [g--form-file-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-file-01/readme.md)
 - [g--form-group-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-group-01/readme.md)
 - [g--form-input-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-input-01/readme.md)
 - [g--form-label-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-label-01/readme.md)
 - [g--form-radio-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-radio-01/readme.md)
 - [g--form-select-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-select-01/readme.md)
 - [g--form-textarea-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-textarea-01/readme.md)
+- [g--form-input-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-input-02/readme.md)
+- [g--form-label-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-label-02/readme.md)
+- [g--form-textarea-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/form-fields/form-textarea-02/readme.md)
 
 ### Hero
 
 - [g--hero-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-01/readme.md)
 - [g--hero-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-02/readme.md)
+- [g--hero-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-03/readme.md)
+- [g--hero-04](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-04/readme.md)
+- [g--hero-05](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-05/readme.md)
+- [g--hero-06](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-06/readme.md)
+- [g--hero-07](https://github.com/team-thunderfoot/ui/blob/main/src/ui/hero/hero-07/readme.md)
 
 ### Icon
 
 - [g--icon-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/icon/icon-01/readme.md)
-- [g--icon-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/icon/icon-02/readme.md)
 
 ### Layout
 
@@ -125,6 +158,10 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--layout-04](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-04/readme.md)
 - [g--layout-05](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-05/readme.md)
 - [g--layout-06](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-06/readme.md)
+- [g--layout-07](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-07/readme.md)
+- [g--layout-08](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-08/readme.md)
+- [g--layout-09](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-09/readme.md)
+- [g--layout-10](https://github.com/team-thunderfoot/ui/tree/main/src/ui/layout/layout-10/readme.md)
 
 ### Lazy
 
@@ -142,6 +179,14 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 - [g--list-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/list/g--list-01/readme.md)
 - [g--list-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/list/g--list-02/readme.md)
 
+### Message
+
+- [g--message-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/message/message-01/readme.md)
+
+### Modal
+
+- [g--modal-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/modal/modal-01/readme.md)
+
 ### Pill
 
 - [g--pill-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/pill/pill-01/readme.md)
@@ -150,6 +195,20 @@ Create one SCSS entry for each JS entry and import global mixins before any glob
 
 - [g--search-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/search/search-01/readme.md)
 
+### Social
+
+- [g--social-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/social/social-01/readme.md)
+
 ### Spinner
 
 - [g--spinner-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/spinner/spinner-01/readme.md)
+
+### Subscribe
+
+- [g--subscribe-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/subscribe/subscribe-01/readme.md)
+- [g--subscribe-02](https://github.com/team-thunderfoot/ui/blob/main/src/ui/subscribe/subscribe-02/readme.md)
+- [g--subscribe-03](https://github.com/team-thunderfoot/ui/blob/main/src/ui/subscribe/subscribe-03/readme.md)
+
+### Video
+
+- [g--video-01](https://github.com/team-thunderfoot/ui/blob/main/src/ui/video/video-01/readme.md)

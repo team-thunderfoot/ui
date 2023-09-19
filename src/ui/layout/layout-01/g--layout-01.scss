@@ -1,13 +1,14 @@
 .g--layout-01 {
     @include make-layout-01();
     @include make-layout-01-modifier(
-        $subtitle-font: d,
-        $title-font: b,
-        $background-color: map-get($color-options, d),
-        $subtitle-color: map-get($color-options, a),
+        $title-font: f,
+        $title-font-weight: 600,
         $title-color: map-get($color-options, a),
+        $subtitle-font: c,
+        $subtitle-font-weight: 400,
+        $subtitle-color: map-get($color-options, a),
+        $btn-font: f,
         $btn-class: g--btn-01,
-        //$btn-font: d,
-        //$btn-class-modifier: g--btn-02--second,
+        // $background-color: map-get($color-options, d),
     );
 }

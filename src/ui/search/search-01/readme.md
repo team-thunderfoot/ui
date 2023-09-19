@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <div class="g--search-01">
     <label for="text-01" class="g--search-01__title">Search by:</label>
     <div class="g--search-01__wrapper">
@@ -27,42 +27,35 @@
 - $input-background-color-autofill
 - $input-border-color
 - $input-border-radius
+- $input-border-style
 - $input-border-width
 - $input-font
+- $input-font-weight
 - $input-text-color
-- $input-font-weight: false by default
 - $placeholder-color
+- $title-color
 - $title-font
-- $title-font-weight: false by default
-
-### For Modifiers
-
-- $artwork-color
-- $input-background-color
-- $input-background-color-autofill
-- $input-border-color
-- $placeholder-color
-- $input-text-color
-
+- $title-font-weight
 ## Use
 
-```sh
+```scss
 .g--search-01{
-    @include make-search-01(
-        $input-border-radius: 0,
-        $input-border-width: 1px,
-        $input-font: f,
-        $title-font: f,
-        // $input-font-weight: default,
-        // $title-font-weight: default
-    );
+    @include make-search-01();
     @include make-search-01-modifier(
-        $artwork-color: map-get($color-options, a),
-        $input-background-color: transparent,
-        $input-background-color-autofill: transparent,
-        $input-border-color: map-get($color-options, a),
-        $placeholder-color: rgba(map-get($color-options, a), .5),
-        $input-text-color: map-get($color-options, a),
+        // $artwork-color: map-get($color-options, g),
+        // $input-background-color: transparent,
+        // $input-background-color-autofill: transparent,
+        // $input-border-color: map-get($color-options, a),
+        // $input-border-radius: 0,
+        // $input-border-style: solid,
+        // $input-border-width: 1px,
+        // $input-font: f,
+        // $input-font-weight: 600,
+        // $input-text-color: map-get($color-options, f),
+        // $placeholder-color: rgba(map-get($color-options, a), .5),
+        // $title-color: map-get($color-options, a),
+        // $title-font: f,
+        // $title-font-weight: 400,
     );
 }
 ```

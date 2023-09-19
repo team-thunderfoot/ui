@@ -1,118 +1,91 @@
 @mixin make-btn-02() {
-    border-radius: 0;
-    display: inline-block;
-    padding: $measure $measure * 3;
-    text-align: center;
     text-decoration: none;
-    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
-    @media all and ($viewport-type: $mobile) {
-        display: block;
-        width: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    svg {
+        height: auto;
+        margin-left: $measure;
     }
 }
 
 @mixin make-btn-02-modifier(
-    $border-width: false,
-    $border-color: false,
-    $border-color-hover: false,
-    $border-style: false,
-    $font: false,
-    $font-weight: false,
+    $artwork-color-fill: false,
+    $artwork-color-stroke: false,
+    $btn-font-weight: false,
+    $btn-font: false,
+    $hover-artwork-color: false,
+    $hover-text-color: false,
+    $hover-icon-transform: false,
+    $icon-top: false,
+    $icon-width: false,
     $text-color: false,
-    $text-color-hover: false,
-    $background-color: false,
-    $background-color-hover: false
 ) {
-    @if $font {
-        @extend .f--font-#{$font} !optional;
-    }
-    @if $font-weight {
-        font-weight: $font-weight;
-    }
-    @if $border-style {
-        border-style: $border-style;
-    }
-    @if $border-width {
-        border-width: $border-width;
-    }
-    @if $border-color {
-        border-color: $border-color;
-    }
     @if $text-color {
         color: $text-color;
     }
-
-    @if $background-color {
-        background: $background-color;
+    @if $hover-text-color {
+        transition: color $ease-standard-a $time-b;
     }
+    @if $btn-font {
+        @extend .f--font-#{$btn-font} !optional;
+    }
+    @if $btn-font-weight {
+        font-weight: $btn-font-weight;
+    }
+    svg {
+        @if $icon-width {
+            width: $icon-width;
+        }
 
-    @if $background-color-hover and $border-color-hover and $text-color-hover {
-        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a,
-            background $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $background-color-hover;
-                border-color: $border-color-hover;
-                color: $text-color-hover;
+        @if $icon-top {
+            position: relative;
+            top: $icon-top;
+        }
+        @if $hover-icon-transform {
+            transition: transform $ease-standard-a $time-b;
+        }
+        * {
+            @if $artwork-color-fill {
+                fill: $artwork-color-fill;
+            }
+            @if $artwork-color-stroke {
+                stroke: $artwork-color-stroke;
+            }
+            @if $hover-artwork-color and $artwork-color-fill {
+                transition: fill $ease-standard-a $time-b;
+            }
+            @if $hover-artwork-color and $artwork-color-stroke {
+                transition: stroke $ease-standard-a $time-b;
             }
         }
-    } @else if $background-color-hover and $border-color-hover {
-        transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $background-color-hover;
-                border-color: $border-color-hover;
+    }
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            @if $hover-text-color {
+                color: $hover-text-color;
             }
         }
-    } @else if $background-color-hover and $text-color-hover {
-        transition: color $time-b $ease-standard-a, background $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $background-color-hover;
-                color: $text-color-hover;
-            }
-        }
-    } @else if $background-color-hover {
-        transition: background $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $background-color-hover;
-            }
-        }
-    } @else if $border-color-hover and $text-color-hover {
-        transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $border-color-hover;
-                color: $text-color-hover;
-            }
-        }
-    } @else if $border-color-hover {
-        transition: border-color $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                border-color: $border-color-hover;
-            }
-        }
-    } @else if $text-color-hover {
-        transition: color $time-b $ease-standard-a;
-        @media (hover: hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                color: $text-color-hover;
+    }
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            svg {
+                @if $hover-icon-transform {
+                    transform: $hover-icon-transform;
+                }
+                path {
+                    @if $hover-artwork-color and $artwork-color-fill {
+                        fill: $hover-artwork-color;
+                    }
+                    @if $hover-artwork-color and $artwork-color-stroke {
+                        stroke: $hover-artwork-color;
+                    }
+                }
             }
         }
     }

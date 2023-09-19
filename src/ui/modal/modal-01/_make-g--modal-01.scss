@@ -1,0 +1,118 @@
+@mixin make-modal-01() {
+    $padding: $measure * 7;
+    padding: $padding;
+    // padding-right: calc((#{$padding} * 0.5) - (#{$measure}));
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    visibility: hidden;
+    z-index: 1000;
+
+    @media all and ($viewport-type: $tablets) {
+        padding: $measure * 4;
+    }
+
+    &__btn {
+        position: absolute;
+        right: $measure * 2;
+        top: $measure * 2;
+    }
+
+    &__wrapper {
+        max-height: calc(90vh - (#{$padding} * 2));
+        overflow-y: auto;
+        padding-right: calc((#{$padding} * 0.5) + (#{$measure}));
+    }
+
+    &--is-active {
+        visibility: visible;
+    }
+}
+
+@mixin make-modal-01-modifier(
+    $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $icon-color: false,
+    $icon-height: false,
+    $icon-width: false,
+    $opacity: false,
+    $opacity-active: false,
+    $shadow: false,
+    $size: false,
+    $transition: false,
+    $zoom: false,
+    $zoom-active: false
+) {
+    @if $transition {
+        transition: $transition;
+    }
+    @if $background-color {
+        background: $background-color;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+    @if $size == small {
+        width: 50%;
+    }
+    @if $size == medium {
+        width: 70%;
+    }
+    @if $size == large {
+        width: 90%;
+    }
+    @if $opacity {
+        opacity: $opacity;
+    }
+
+    @if $zoom {
+        transform: translate(-50%, -50%) scale($zoom);
+    } @else {
+        transform: translate(-50%, -50%);
+    }
+
+    &__btn {
+        &__icon {
+            @if $icon-height {
+                height: $icon-height;
+            }
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                @if $icon-width {
+                    width: $icon-width;
+                }
+            }
+            path {
+                @if $icon-color {
+                    fill: $icon-color;
+                }
+            }
+        }
+    }
+
+    &--is-active {
+        @if $opacity-active {
+            opacity: $opacity-active;
+        }
+
+        @if $zoom-active {
+            transform: translate(-50%, -50%) scale($zoom-active);
+        } @else {
+            transform: translate(-50%, -50%);
+        }
+    }
+}

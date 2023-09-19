@@ -1,91 +1,241 @@
-@mixin make-card-23(
-    $link-class,
-) {
+@mixin make-card-23() {
+    overflow: hidden;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0 $measure*2;
     position: relative;
-    width: 100%;
+    padding: $measure * 6 $measure * 5;
+    text-decoration: none;
 
-    &__media{
-        display: block;
-        height: 100px;
-        margin-bottom: $measure * 2;
-        object-fit: cover;
-        width: auto;
-
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
+    &__hd {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        &__meta {
+            margin-bottom: $measure * 3;
+            margin-right: $measure;
         }
-    }
-    &__title{
-        margin-bottom: $measure * 2;
-        
-        @media all and ($viewport-type: $tablets) {
-            margin-bottom: $measure;
+        &__author {
+            margin-bottom: $measure * 3;
         }
     }
 
-    &__link{
-        @extend .#{$link-class} !optional;
+    &__title {
+        margin-bottom: $measure * 3;
+    }
+    &__list-group {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $measure * 2;
+        row-gap: $measure;
+        margin-bottom: $measure * 4;
+    }
+
+    &__link {
         margin-top: auto;
     }
 }
 
 @mixin make-card-23-modifier(
-    $title-color,
-    $link-class-modifier: false,
-    $text-align: false,
-    $title-font: false,
+    $author-color: false,
+    $author-font-weight: false,
+    $author-font: false,
+    $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $card-min-height: false,
+    $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $link-class: false,
+    $link-font: false,
+    $meta-color: false,
+    $meta-font-weight: false,
+    $meta-font: false,
+    $pill-class: false,
+    $shadow: false,
+    $title-color: false,
     $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
 ) {
-    @if $text-align == "center" {
-        text-align: center;
+    @if $background-color {
+        background-color: $background-color;
+    }
 
-        .g--card-23 {
-            &__media {
-                margin-left: auto;
-                margin-right: auto;
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-23 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
             }
         }
-        
-    }
-    @if $text-align == "left" {
-        text-align: left;
-
-        .g--card-23 {
-            &__media {
-                margin-left: 0;
-                margin-right: auto;
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-23 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
             }
         }
-    }
-    @if $text-align == "right" {
-        text-align: right;
-
-        .g--card-23 {
-            &__media {
-                margin-left: auto;
-                margin-right: 0;
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-23 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
             }
         }
     }
 
     .g--card-23 {
-        @if $link-class-modifier {
-            &__link{
-                @extend .#{$link-class-modifier} !optional;
+        &__hd {
+            &__meta {
+                @if $meta-font {
+                    @extend .f--font-#{$meta-font} !optional;
+                }
+                @if $meta-font-weight {
+                    font-weight: $meta-font-weight;
+                }
+                @if $meta-color {
+                    color: $meta-color;
+                }
+            }
+            &__author {
+                @if $author-font {
+                    @extend .f--font-#{$author-font} !optional;
+                }
+                @if $author-font-weight {
+                    font-weight: $author-font-weight;
+                }
+                @if $author-color {
+                    color: $author-color;
+                }
             }
         }
-
-        &__title{
-            color: $title-color;
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
             @if $title-font {
                 @extend .f--font-#{$title-font} !optional;
             }
             @if $title-font-weight {
                 font-weight: $title-font-weight;
+            }
+            @if $title-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $title-max-lines;
+                -webkit-box-orient: vertical;
+            }
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
+            }
+        }
+
+        &__list-group {
+            &__list-item {
+                @if $pill-class {
+                    @extend .#{$pill-class} !optional;
+                }
+            }
+        }
+
+        &__link {
+            @if $link-class {
+                @extend .#{$link-class} !optional;
+            }
+            @if $link-font {
+                @extend .f--font-#{$link-font} !optional;
             }
         }
     }

@@ -4,84 +4,105 @@
 
 ![alt text][card-07]
 
-[card-07]: /src/img/global-components/card/card-07.png
+[card-07]: /src/img/global-components/card/card-07.jpg
 
 ## Html for a card
 
 ```html
 <div class="g--card-07">
     <div class="g--card-07__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-07__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-07__media-wrapper__media g--lazy-01"
+        />
     </div>
     <h3 class="g--card-07__title">Lorem ipsum</h3>
-    <p class="g--card-07__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-07__link">This is a link</a>
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
+
 ```html
 <div class="g--card-07">
     <div class="g--card-07__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-07__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-07__media-wrapper__media g--lazy-01"
+        />
     </div>
-    <h3 class="g--card-07__title">Lorem ipsum</h3>
-    <div class="g--card-07__subtitle c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-07__link">This is a link</a>
+    <div class="g--card-07__title c--content-a">Lorem ipsum</div>
 </div>
 ```
 
 ##### \*Aspect Ratio
 
-It is not necessary to add aspect-ratio.
+It is not necessary to add aspect-ratio because the images have height in the css.
 
 ## Editable variables
 
-- $hover-img-zoom
-- $hover-title-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $img-size
-- $img-width
-- $link-class
-- $link-font
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $subtitle-max-lines
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-img-border-radius
+-   $hover-img-zoom
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-fit
+-   $img-height
+-   $img-position
+-   $img-width
+-   $shadow
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 ```scss
-.g--card-07{
+.g--card-07 {
     @include make-card-07();
     @include make-card-07-modifier(
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $link-class: false,
-        // $link-font: false,
-        // $subtitle-color: false,
-        // $subtitle-font: false,
-        // $subtitle-font-weight: false,
-        // $subtitle-max-lines: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $background-color: lighten(map-get($color-options, a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-radius: $measure,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $card-min-height: 500px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-img-border-radius: $measure * 4,
+        // $hover-img-zoom: 1.2,
+        // $hover-shadow: 0 0 $measure * 4 map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $img-aspect-ratio: 1.7,
+        // $img-fit: cover,
+        // $img-height: 340px,
+        // $img-position: center,
+        // $img-width: auto,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
+        // $title-max-lines: 3
     );
 }
 ```

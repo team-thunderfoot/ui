@@ -1,124 +1,150 @@
-@mixin make-card-54(
-    $pill-class,
-    $title-font,
-    $border-radius: false,
-    $title-font-weight: false,
-) {
-    overflow: hidden;
+@mixin make-card-54() {
+    padding: $measure * 3;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    
-    @if $border-radius {
-        border-radius: $border-radius;
-    }
+    text-decoration: none;
+    justify-content: space-between;
 
-    &__media {
-        aspect-ratio: 16 / 9;
-        display: block;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        @media all and ($viewport-type: $tablets) {
-            aspect-ratio: 4 / 3;
+    &__bd {
+        &__title {
+            margin-bottom: $measure;
+            // width: fit-content;
         }
     }
 
     &__wrapper {
-        padding: $measure * 6 $measure * 5;
-
-        &__title {
-            @extend .f--font-#{$title-font} !optional;
-            @if $title-font-weight {
-                font-weight: $title-font-weight;
-            }
-            margin-bottom: $measure * 3;
+        margin-left: $measure * 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__artwork {
+            width: 50%;
+            height: 60%;
         }
-
-        &__list-group {
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: $measure;
-            &__list-item{
-                @extend .#{$pill-class} !optional;
-    
-                &:not(:last-child) {
-                    margin-right: $measure * 2;
-                }
-            }
-        }
-
     }
 }
 
 @mixin make-card-54-modifier(
-    $background-color,
-    $title-color,
-    $background-color-hover: false,
-    $pill-class-modifier: false,
+    $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $card-min-height: false,
+    $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-icon-background: false,
+    $hover-icon-border-color: false,
+    $hover-icon-color: false,
+    $hover-icon-transform: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $icon-align: false,
+    $icon-background: false,
+    $icon-border-color: false,
+    $icon-border-radius: false,
+    $icon-border-style: false,
+    $icon-border-width: false,
+    $icon-color-fill: false,
+    $icon-color-stroke: false,
+    $icon-top: false,
+    $icon-width: false,
+    $shadow: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
     $text-align: false,
-    $title-color-hover: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false
 ) {
-    background: $background-color;
-
-    @if $background-color-hover or $title-color-hover {
-        text-decoration: none !important;
+    @if $background-color {
+        background: $background-color;
     }
-    @if $background-color-hover and $title-color-hover {
-        transition: background $time-b $ease-standard-a;
-        
-        .g--card-54 {
-            &__wrapper {
-                &__title {
-                    transition: color $time-b $ease-standard-a;
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "background-color": $hover-background-color,
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
                 }
             }
+            // Apply the transitions
+            transition: $hover-transition-list;
         }
+    }
 
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $background-color-hover;
-
-                .g--card-54 {
-                    &__wrapper {
-                        &__title {
-                            color: $title-color-hover;
-                        }
-                    }
-                }
-            }
-        }
-
-    } @else if $background-color-hover {
-        transition: background $time-b $ease-standard-a;
-
-        @media all and (hover : hover) {
-            &:hover,
-            &:focus,
-            &:active {
-                background: $background-color-hover;
-            }
-        }
-    } @else if $title-color-hover {
-
-        .g--card-54  {
-            &__wrapper {
-                &__title {
-                    transition: color $time-b $ease-standard-a;
-                }
-            }
-        }
-
-        @media all and (hover : hover) {
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
             &:hover,
             &:focus,
             &:active {
                 .g--card-54 {
-                    &__wrapper {
+                    &__bd {
                         &__title {
-                            color: $title-color-hover;
+                            color: $hover-title-color;
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__bd {
+                        &__title {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__bd {
+                        &__title {
+                            text-decoration-color: $hover-title-underline-color;
                         }
                     }
                 }
@@ -126,100 +152,260 @@
         }
     }
 
-    @if $text-align == "center" {
-
-        .g--card-54 {
-            &__wrapper{
-                text-align: center;
-                &__list-group {
-                    justify-content: center;
-                    &__list-item{
-                        margin-left: $measure;
-                        margin-right: $measure;
-                        &:first-child{
-                            margin-left: $measure;
-                        }
-                        &:last-child{
-                            margin-right: $measure;
-                        }
-                        &:not(:first-child){
-                            margin-left: $measure;
-                        }
-                        &:not(:last-child){
-                            margin-right: $measure;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @if $text-align == "left" {
-
-        .g--card-54 {
-            &__wrapper{
-                text-align: left;
-                &__list-group {
-                    justify-content: flex-start;
-                    &__list-item{
-                        margin-left: 0;
-                        &:first-child{
-                            margin-left: 0;
-                        }
-                        &:last-child{
-                            margin-right: 0;
-                        }
-                        &:not(:first-child){
-                            margin-left: 0;
-                        }
-                        &:not(:last-child){
-                            margin-right: $measure*2;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @if $text-align == "right" {
-
-        .g--card-54 {
-            &__wrapper{
-                text-align: right;
-                &__list-group {
-                    justify-content: flex-end;
-                    &__list-item{
-                        margin-right: 0;
-                        &:first-child{
-                            margin-left: 0;
-                        }
-                        &:last-child{
-                            margin-right: 0;
-                        }
-                        &:not(:first-child){
-                            margin-left: $measure*2;
-                        }
-                        &:not(:last-child){
-                            margin-right: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .g--card-54 {
+    @if $hover-icon-color and $icon-color-fill {
         &__wrapper {
-            &__title {
-                color: $title-color;
+            &__artwork {
+                * {
+                    transition: fill $time-b $ease-standard-a;
+                }
             }
         }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        &__artwork {
+                            * {
+                                fill: $hover-icon-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @if $hover-icon-color and $icon-color-stroke {
+        &__wrapper {
+            &__artwork {
+                * {
+                    transition: stroke $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        &__artwork {
+                            * {
+                                stroke: $hover-icon-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-        @if $pill-class-modifier {
-            &__wrapper {
-                &__list-group {
-                    &__list-item{
-                        @extend .#{$pill-class-modifier} !optional;
+    @if $hover-icon-transform and $hover-icon-border-color and $hover-icon-background {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a, border-color $time-b $ease-standard-a,
+                background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                        background: $hover-icon-background;
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-transform and $hover-icon-border-color {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-transform and $hover-icon-background {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                        background: $hover-icon-background;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-transform {
+        &__wrapper {
+            transition: transform $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        transform: $hover-icon-transform;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-border-color and $hover-icon-background {
+        &__wrapper {
+            transition: border-color $time-b $ease-standard-a, background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        background: $hover-icon-background;
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-border-color {
+        &__wrapper {
+            transition: border-color $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        border-color: $hover-icon-border-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-icon-background {
+        &__wrapper {
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-54 {
+                    &__wrapper {
+                        background: $hover-icon-background;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $text-align == "center" {
+        text-align: center;
+    }
+    @if $text-align == "left" {
+        text-align: left;
+    }
+    @if $text-align == "right" {
+        text-align: right;
+    }
+    @if $icon-align == "center" {
+        align-items: center;
+    }
+    @if $icon-align == "top" {
+        align-items: flex-start;
+    }
+    @if $icon-align == "bottom" {
+        align-items: flex-end;
+    }
+    .g--card-54 {
+        &__bd {
+            @if $icon-width {
+                width: calc(100% - #{$icon-width} - #{$measure * 4});
+            }
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration $time-b $ease-standard-a;
+                }
+            }
+
+            &__subtitle {
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+            }
+        }
+        &__wrapper {
+            @if $icon-background {
+                background: $icon-background;
+            }
+            @if $icon-width {
+                width: $icon-width;
+                height: $icon-width;
+            }
+            @if $icon-border-color {
+                border-color: $icon-border-color;
+            }
+            @if $icon-border-radius {
+                border-radius: $icon-border-radius;
+            }
+            @if $icon-border-style {
+                border-style: $icon-border-style;
+            }
+            @if $icon-border-width {
+                border-width: $icon-border-width;
+            }
+            @if $icon-top {
+                margin-top: $icon-top;
+            }
+            &__artwork {
+                * {
+                    @if $icon-color-fill {
+                        fill: $icon-color-fill;
+                    }
+                    @if $icon-color-stroke {
+                        stroke: $icon-color-stroke;
                     }
                 }
             }

@@ -1,16 +1,35 @@
 .g--card-55 {
-    @include make-card-55(
-        $pill-class: g--pill-01,
-        $title-font: c,
-        // $border-radius: default
-    );
+    @include make-card-55();
     @include make-card-55-modifier(
-        $background-color: map-get($color-options, e),
+        $content-font: c,
+        $title-font: f,
+        $person-font: f,
+        $position-font: f,
+        $border-radius: 1rem,
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
+        $content-font-weight: 400,
+        $title-font-weight: 600,
+        $hover-background-color: map-get($color-options, g),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
+        $hover-img-zoom: 1.2,
+        $hover-shadow: 0 0 $measure * 2 map-get($color-options, g),
+        $hover-title-color: map-get($color-options, h),
+        $hover-transform: translateY(-$measure),
+        $img-aspect-ratio-responsive: 1.7,
+        // $img-height-responsive: 1300px,
+        $img-position: center,
+        $person-font-weight: 600,
+        $position-font-weight: 400,
+        $change-order-reponsive: true,
+        $content-color: map-get($color-options, a),
         $title-color: map-get($color-options, a),
-        // $background-color-hover: default,
-        // $full-image-height: default,
-        // $pill-class-modifier: default,
-        // $text-align: default,
-        // $title-color-hover: default
+        $person-color: map-get($color-options, a),
+        $position-color: map-get($color-options, a),
+        $background-color: lighten(map-get($color-options, a), 82%),
+        $text-align: left,
+        $breakpoint: $tablets
     );
 }

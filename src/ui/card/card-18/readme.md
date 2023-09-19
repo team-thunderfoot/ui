@@ -10,40 +10,73 @@
 
 ```html
 <div class="g--card-18">
-    <div class="g--card-18__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-18__media-wrapper__media g--lazy-01 f--ar" width="604" height="340">
-    </div>
-    <div class="g--card-18__wrapper">
-        <p class="g--card-18__wrapper__meta">Lorem ipsum</p>
-        <p class="g--card-18__wrapper__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div
+        class="g--card-18__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+    ></div>
+    <div class="g--card-18__ft-items">
+        <h3 class="g--card-18__ft-items__title">Lorem ipsum</h3>
+        <p class="g--card-18__ft-items__subtitle">Lorem ipsum dolor sit amet.</p>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-18__ft-items__link"
+            >This is a link</a
+        >
     </div>
 </div>
 ```
 
+If you want the subtitle to be a c--content, the HTML should be:
+
+```html
+<div class="g--card-18">
+    <div
+        class="g--card-18__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+    ></div>
+    <div class="g--card-18__ft-items">
+        <h3 class="g--card-18__ft-items__title">Lorem ipsum</h3>
+        <div class="g--card-18__ft-items__subtitle c--content-a">Lorem ipsum dolor sit amet.</div>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-18__ft-items__link"
+            >This is a link</a
+        >
+    </div>
+</div>
+```
+
+##### \*Aspect Ratio
+
+It is not necessary to add aspect-ratio because the images have height in the css.
+
 ## Editable variables
 
-- $background-color
-- $border-color
-- $border-style
-- $border-width
-- $border-radius
-- $full-image-height
-- $hover-background-color
-- $hover-img-zoom
-- $hover-shadow
-- $hover-title-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $meta-color
-- $meta-font
-- $meta-font-weight
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $background-color
+-   $background-position
+-   $background-size
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   $card-min-height
+-   $hover-background-color
+-   $hover-background-img-zoom
+-   $hover-border-radius
+-   $hover-mask-color
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $link-class
+-   $link-font
+-   $mask-color
+-   $shadow
+-   $subtitle-color
+-   $subtitle-font
+-   $subtitle-font-weight
+-   $subtitle-max-lines
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## use
 
@@ -51,28 +84,36 @@
 .g--card-18 {
     @include make-card-18();
     @include make-card-18-modifier(
-        // $background-color: false,
-        // $border-color: false,
-        // $border-style: false,
-        // $border-width: false,
-        // $border-radius: false,
-        // $full-image-height: false,
-        // $hover-background-color: false,
-        // $hover-img-zoom: false,
-        // $hover-shadow: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $meta-color: false,
-        // $meta-font: false,
-        // $meta-font-weight: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $background-color: map-get($color-options, f),
+        // $background-position: center
+        // $background-size: cover,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $card-min-height: 500px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-background-img-zoom: 2,
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-mask-color: rgba(map-get($color-options, a), .5),
+        // $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $link-class: g--link-01,
+        // $link-font: f,
+        // $mask-color: rgba(map-get($color-options, a), .2),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $subtitle-color: map-get($color-options, a)
+        // $subtitle-font-weight: 400,
+        // $subtitle-font: f,
+        // $subtitle-max-lines: 3,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: 400,
+        // $title-font: c,
+        // $title-max-lines:
     );
 }
 ```

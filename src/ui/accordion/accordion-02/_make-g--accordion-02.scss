@@ -11,7 +11,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        cursor: pointer;
         position: relative;
         padding: $measure * 3 0;
         width: 100%;
@@ -24,12 +23,22 @@
         }
 
         &__icon {
-            display: inline-block;
-            height: 2px;
-            min-width: $measure * 2 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            width: $measure * 2;
 
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                width: 50%;
+                transition: opacity $time-b $ease-standard-a;
+            }
             &::after {
                 content: '';
                 display: block;
@@ -38,8 +47,7 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
                 opacity: 1;
-                height: $measure * 2;
-                width: 2px;
+                height: 50%;
                 transition: opacity $time-b $ease-standard-a;
             }
         }
@@ -72,11 +80,29 @@
     }
 }
 
-@mixin make-accordion-02-modifier(
+@mixin make-accordion-02-modifier (
+    $active-background-color: false,
+    $active-icon-background: false,
+    $active-icon-border-color: false,
+    $active-icon-border-radius: false,
+    $active-icon-color: false,
+    $active-title-color: false,
     $border-color: false,
     $border-style: false,
     $border-width: false,
+    $hover-icon-background: false,
+    $hover-icon-border-color: false,
+    $hover-icon-border-radius: false,
+    $hover-icon-color: false,
+    $hover-title-color: false,
+    $icon-background: false,
     $icon-color: false,
+    $icon-border-color: false,
+    $icon-border-radius: false,
+    $icon-border-style: false,
+    $icon-border-width: false,
+    $icon-height: false,
+    $icon-width: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
@@ -93,9 +119,12 @@
         border-bottom-color: $border-color;
     }
 
+    @if $active-background-color {
+        transition: background $time-b $ease-standard-a;
+    }
+
     .g--accordion-02 {
         &__hd {
-
             &__title {
                 @if $title-color {
                     color: $title-color;
@@ -108,14 +137,175 @@
                 @if $title-font-weight {
                     font-weight: $title-font-weight;
                 }
+                @if $hover-title-color or $active-title-color{
+                    transition: color $time-b $ease-standard-a;
+                }
             }
 
             &__icon {
                 @if $icon-color {
-                    background: $icon-color;
-
+                    &::before,
                     &::after {
                         background: $icon-color;
+                    }
+                }
+
+                @if $icon-background {
+                    background: $icon-background;
+                }
+                @if $hover-icon-color or $active-icon-color{
+                    &::before,
+                    &::after {
+                        transition: background $time-b $ease-standard-a;
+                    }
+                }
+                @if $icon-border-color {
+                    border-color: $icon-border-color;
+                }
+                @if $icon-border-radius {
+                    border-radius: $icon-border-radius;
+                }
+                @if $icon-border-style {
+                    border-style: $icon-border-style;
+                }
+                @if $icon-border-width {
+                    border-width: $icon-border-width;
+                }
+                @if $icon-width {
+                    width: $icon-width*2;
+                    height: $icon-width*2;
+                }
+                @if $icon-height {
+                    &::before {
+                        height: $icon-height;
+                    }
+                    &::after {
+                        width: $icon-height;
+                    }
+                }
+                @if $hover-icon-background and $hover-icon-border-color and $hover-icon-border-radius {
+                    transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+                } @else if $hover-icon-background and $hover-icon-border-color{
+                    transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
+                } @else if $hover-icon-background and $hover-icon-border-radius{
+                    transition: background $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+                } @else if $hover-icon-border-color and $hover-icon-border-radius {
+                    transition: border-color $time-b $ease-standard-a, border-radius $time-b $ease-standard-a;
+                } @else if $hover-icon-background {
+                    transition: background $time-b $ease-standard-a;
+                } @else if $hover-icon-border-color {
+                    transition: border-color $time-b $ease-standard-a;
+                } @else if $hover-icon-border-radius {
+                    transition: border-radius $time-b $ease-standard-a;
+                }
+            }
+            @if $hover-title-color{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__title{
+                                    color: $hover-title-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @if $hover-icon-background{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus-visible,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__icon{
+                                    background: $hover-icon-background;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @if $hover-icon-border-color{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus-visible,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__icon{
+                                    border-color: $hover-icon-border-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @if $hover-icon-border-radius{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus-visible,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__icon{
+                                    border-radius: $hover-icon-border-radius;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @if $hover-icon-color{
+                @media all and (hover : hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--accordion-02{
+                            &__hd{
+                                &__icon{
+                                    &::before,
+                                    &::after {
+                                        background: $hover-icon-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.g--accordion-02--is-active {
+        @if $active-background-color{
+            background: $active-background-color;
+        }
+        .g--accordion-02{
+            &__hd {
+                @if $active-title-color{
+                    &__title{
+                        color: $active-title-color;
+                    }
+                }
+                &__icon{
+                    @if $active-icon-background {
+                        background: $active-icon-background;
+                    }
+                    @if $active-icon-border-color {
+                        border-color: $active-icon-border-color;
+                    }
+                    @if $active-icon-border-radius {
+                        border-radius: $active-icon-border-radius;
+                    }
+                    @if $active-icon-color{
+                        &::before,
+                        &::after {
+                            background: $active-icon-color;
+                        }
                     }
                 }
             }

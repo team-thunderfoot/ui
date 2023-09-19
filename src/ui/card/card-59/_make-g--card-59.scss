@@ -1,207 +1,292 @@
-@mixin make-card-59(
-    $btn-class,
-    $content-font,
-    $heading-font,
-    $person-font,
-    $position-font,
-    $border-radius: false,
-    $content-font-weight: false,
-    $heading-font-weight: false,
-    $person-font-weight: false,
-    $position-font-weight: false,
-    $change-order-reponsive: false,
-) {
-    display: flex;
-    flex-wrap: wrap;
+@mixin make-card-59() {
+    padding: $measure * 7 $measure * 5;
     width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
 
-    @if $border-radius {
-        border-radius: $border-radius;
-        overflow: hidden;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
     }
 
-    &__wrapper{
-        width: 50%;
-        padding: $measure*10;
-
-        @media all and ($viewport-type: $tabletm) {
-            padding: $measure*10 $measure*4;
-        }
-
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
-            @if $change-order-reponsive{
-                order: 1;
-            }
-        }
-
-        &__hd{
-            @extend .f--font-#{$heading-font} !optional;
-            @if $heading-font-weight {
-                font-weight: $heading-font-weight;
-            }
-            margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
-        }
-
-        &__bd{
-            @extend .f--font-#{$content-font} !optional;
-            @if $content-font-weight {
-                font-weight: $content-font-weight;
-            }
-            margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
-        }
-        &__ft{
-            &__title{
-                @extend .f--font-#{$person-font} !optional;
-                @if $person-font-weight {
-                    font-weight: $person-font-weight;
-                }
-            }
-            &__subtitle{
-                @extend .f--font-#{$position-font} !optional;
-                @if $position-font-weight {
-                    font-weight: $position-font-weight;
-                }
-            }
-        }
-
-        &__btn{
-            @extend .#{$btn-class} !optional;
-            margin-top: $measure * 4;
-            display: inline-block;
-            @media all and ($viewport-type: $tablets) {
-                margin-top: $measure * 3;
-            }
-        }
+    &__bg-items {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-repeat: no-repeat;
     }
 
-    &__media-wrapper{
+    &__ft-items {
+        width: 100%;
         position: relative;
-        width: 50%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
-            padding: $measure*14 $measure*4;
+        &__title {
+            margin-bottom: $measure * 2;
+            @media all and ($viewport-type: $tablets) {
+                margin-bottom: $measure;
+            }
         }
 
-        &__media{
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 65%;
-            height: 52%;
-            max-width: 400px;
-            max-height: 300px;
-            object-fit: contain;
-            object-position: center center;
-
-            @media all and ($viewport-type: $tablets) {
-                position: relative;
-                top: auto;
-                left: auto;
-                height: auto;
-                transform: none;
-                width: 100%;
-                height: auto;
-                max-width: 275px;
-                max-height: 275px;
-                margin: 0 auto;
-            }
+        &__link {
+            margin-top: auto;
         }
     }
 }
 
 @mixin make-card-59-modifier(
-    $content-color,
-    $heading-color,
-    $person-color,
-    $position-color,
     $background-color: false,
-    $btn-class-modifier: false,
-    $img-background-color: false,
+    $background-position: false,
+    $background-size: false,
+    $border-color: false,
+    $border-style: false,
+    $border-width: false,
+    $border-radius: false,
+    $card-min-height: false,
+    $hover-background-img-zoom: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-mask-color: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $link-class: false,
+    $link-font: false,
+    $mask-color: false,
+    $shadow: false,
     $text-align: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+    $title-max-lines: false
 ) {
     @if $background-color {
-        background: $background-color;   
+        background: $background-color;
+    }
+
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    @if $hover-shadow and $hover-transform {
+        transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+                transform: $hover-transform;
+            }
+        }
+    } @else if $hover-shadow {
+        transition: box-shadow $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $hover-shadow;
+            }
+        }
+    } @else if $hover-transform {
+        transition: transform $time-b $ease-standard-a;
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                transform: $hover-transform;
+            }
+        }
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-background-img-zoom {
+        .g--card-59 {
+            &__bg-items {
+                transition: transform $time-b $ease-standard-a;
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-59 {
+                    &__bg-items {
+                        transform: scale($hover-background-img-zoom);
+                    }
+                }
+            }
+        }
+    }
+
+    @if $background-position {
+        .g--card-59 {
+            &__bg-items {
+                background-position: $background-position;
+            }
+        }
+    }
+
+    @if $background-size {
+        .g--card-59 {
+            &__bg-items {
+                background-size: $background-size;
+            }
+        }
+    }
+
+    @if $mask-color {
+        &::after {
+            background: $mask-color;
+        }
+    }
+
+    @if $hover-mask-color {
+        &::after {
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                &::after {
+                    background: $hover-mask-color;
+                }
+            }
+        }
     }
 
     @if $text-align == "center" {
-        text-align: center;
-        
         .g--card-59 {
-            &__wrapper{
-                &__btn{
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+            &__ft-items {
+                text-align: center;
+                align-items: center;
             }
         }
     }
 
     @if $text-align == "left" {
-        text-align: left;
-
         .g--card-59 {
-            &__wrapper{
-                &__btn{
-                    margin-left: 0;
-                    margin-right: auto;
-                }
+            &__ft-items {
+                text-align: left;
+                align-items: flex-start;
             }
         }
     }
 
     @if $text-align == "right" {
-        text-align: right;
-
         .g--card-59 {
-            &__wrapper{
-                &__btn{
-                    margin-left: auto;
-                    margin-right: 0;
-                }
+            &__ft-items {
+                text-align: right;
+                align-items: flex-end;
             }
         }
     }
-    
+
     .g--card-59 {
-        &__wrapper{
-            &__hd{
-                color: $heading-color;
+        &__ft-items {
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+
+                @if $title-max-lines {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: $title-max-lines;
+                    -webkit-box-orient: vertical;
+                }
+
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
+                }
             }
 
-            &__bd{
-                color: $content-color;
-            }
+            &__link {
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
 
-            &__ft{
-                &__title{
-                    color: $person-color;
+                @if $link-font {
+                    @extend .f--font-#{$link-font} !optional;
                 }
-                &__subtitle{
-                    color: $position-color;
-                }
-            }
-
-            @if $btn-class-modifier {
-                &__btn{
-                    @extend .#{$btn-class-modifier} !optional;
-                }
-            }
-        }
-        @if $img-background-color {
-            &__media-wrapper{
-                background: $img-background-color;
             }
         }
     }

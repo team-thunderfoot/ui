@@ -1,15 +1,22 @@
-.g--layout-06{
-    @include make-layout-06(
-        $meta-font: f,
-        $subtitle-font: f,
-        $title-font: b,
-        // $img-border-radius: $measure*4,
-        $change-order-reponsive: true
-    );
+.g--layout-06 {
+    @include make-layout-06();
     @include make-layout-06-modifier(
-        $background-color: map-get($color-options, d),
-        $meta-color: map-get($color-options, f),
+        $align-text-img: center,
+        $img-height: 200px,
+        $meta-font: f,
+        $meta-font-weight: 400,
+        $meta-color: map-get($color-options, a),
+        $subtitle-font: f,
+        $subtitle-font-weight: 400,
         $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, c),
+        $title-font: c,
+        $title-font-weight: 400,
+        $title-color: map-get($color-options, a),
+        $object-fit: cover,
+        $img-position: false,
+        // $img-border-radius: $measure * 4,
+        $change-order-reponsive: true,
+        $breakpoint: $tablets,
+        // $background-color: map-get($color-options, e),
     );
 }

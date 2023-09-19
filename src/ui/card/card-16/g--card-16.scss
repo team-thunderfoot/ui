@@ -1,36 +1,36 @@
-.g--card-16{
+.g--card-16 {
     @include make-card-16();
     @include make-card-16-modifier(
-        $background-position: center,
-        $background-size: cover,
+        $background-color: rgba(map-get($color-options, a), 0.1),
+        $border-color: map-get($color-options, a),
+        $border-style: solid,
+        $border-width: 1px,
         $link-class: g--link-01,
-        $link-font: d,
-        $mask-color: rgba(map-get($color-options, b), .5),
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c,
+        $title-font-weight: 400
     );
-    &--second{
+    &--second {
         @include make-card-16-modifier(
-            $background-position: bottom right,
-            $background-size: cover,
-            $link-font: e,
-            $mask-color: rgba(map-get($color-options, g), .5),
-            $title-color: map-get($color-options, d),
+            $background-color: rgba(map-get($color-options, g), 0.7),
+            $card-min-height: 500px,
+            $subtitle-color: map-get($color-options, a),
+            $title-color: map-get($color-options, a),
             $title-font: c,
-            $border-radius: $measure*2,
-            $hover-background-img-zoom: 2,
-            $hover-img-zoom: 1.2,
-            $hover-shadow: 0 0 $measure*4 map-get($color-options, a),
+            // $border-radius: false,
+            $hover-background-color: map-get($color-options, g),
+            $hover-border-color: map-get($color-options, f),
+            $hover-border-radius: $measure * 4,
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
-            $img-aspect-ratio: calc(1 / 1),
-            $img-height: 50px,
-            $img-size: cover,
-            $img-position: center,
-            $img-width: auto,
-            $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            $link-font: f,
+            $subtitle-font: f,
+            $subtitle-font-weight: 400,
+            $subtitle-max-lines: 3,
+            $text-align: left,
+            $title-font-weight: 400,
+            $title-max-lines: 3
         );
     }
 }

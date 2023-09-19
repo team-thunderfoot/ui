@@ -1,15 +1,31 @@
-.g--card-25{
-    @include make-card-25(
-        // $border-radius: default
-    );
+.g--card-25 {
+    @include make-card-25();
     @include make-card-25-modifier(
-        $background-color: map-get($color-options, d),
-        $subtitle-color: map-get($color-options, a),
-        $subtitle-font: f,
-        // $subtitle-font-weight: default,
-        $title-color: map-get($color-options, a),
-        $title-font: c,
-        // $title-font-weight: default,
-        // $text-align: default
+        $background-color: lighten(map-get($color-options, a), 82%),
+        $img-aspect-ratio: calc(16 / 9),
+        $img-height: 340px
     );
+    &--second {
+        @include make-card-25-modifier(
+            $background-color: rgba(map-get($color-options, a), 5),
+            // $border-radius: $measure * 2 $measure * 4,
+            $full-image-height: false,
+            $hover-background-color: map-get($color-options, h),
+            // $hover-border-color: map-get($color-options, f),
+            // $hover-border-radius: 0px,
+            $hover-img-border-radius: $measure * 4,
+            $hover-img-zoom: 1.2,
+            $hover-shadow: 0 0 $measure * 4 map-get($color-options, h),
+            $hover-title-color: map-get($color-options, a),
+            // $img-aspect-ratio: false,
+            $img-height: false,
+            $img-position: false,
+            $text-align: left,
+            $title-color: map-get($color-options, b),
+            $title-font: false,
+            $title-font-weight: false,
+            $title-max-lines: 6,
+            $hover-transform: translateY(-5%)
+        );
+    }
 }

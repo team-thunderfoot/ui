@@ -1,0 +1,173 @@
+@mixin make-hero-03() {
+    display: block;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    &__bg-items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        &__media {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__ft-items {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: $measure * 15 0;
+        width: 50%;
+
+        @media all and ($viewport-type: $tablets) {
+            padding: $measure * 10 0;
+        }
+        &__title {
+            margin-bottom: $measure * 3;
+        }
+        &__subtitle {
+            margin-bottom: $measure * 4;
+        }
+
+        &__wrapper {
+            &__link {
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@mixin make-hero-03-modifier(
+    $breakpoint: false,
+    $header-height: false,
+    $img-object-fit: false,
+    $img-position: false,
+    $link-class: false,
+    $link-font: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false,
+) {
+    @if $text-align == "center" {
+        text-align: center;
+        .g--hero-03 {
+            &__ft-items {
+                margin-left: auto;
+                margin-right: auto;
+                &__wrapper {
+                    &__link {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+        .g--hero-03 {
+            &__ft-items {
+                margin-left: 0;
+                margin-right: auto;
+                &__wrapper {
+                    &__link {
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+        .g--hero-03 {
+            &__ft-items {
+                margin-left: auto;
+                margin-right: 0;
+                &__wrapper {
+                    &__link {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $header-height {
+        margin-top: $header-height;
+    }
+
+    .g--hero-03 {
+        &__bg-items {
+            &__media {
+                @if $img-position {
+                    object-position: $img-position;
+                }
+
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
+                }
+            }
+        }
+
+        &__ft-items {
+            @if $header-height {
+                min-height: calc(100vh - #{$header-height});
+            }
+
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                }
+            }
+            &__title {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+            }
+
+            &__subtitle {
+                @if $subtitle-color {
+                    color: $subtitle-color;
+                }
+                @if $subtitle-font {
+                    @extend .f--font-#{$subtitle-font} !optional;
+                }
+                @if $subtitle-font-weight {
+                    font-weight: $subtitle-font-weight;
+                }
+            }
+
+            &__wrapper {
+                &__link {
+                    @if $link-class {
+                        @extend .#{$link-class} !optional;
+                    }
+                    @if $link-font {
+                        @extend .f--font-#{$link-font} !optional;
+                    }
+                }
+            }
+        }
+    }
+}

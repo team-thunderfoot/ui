@@ -1,33 +1,95 @@
-@mixin make-message-01(
-    $text-font,
-    $text-font-weight: false,
-) {
+@mixin make-message-01() {
+    display: block;
     padding: $measure * 10 $measure * 15;
     text-align: center;
+    width: 100%;
 
     @media all and ($viewport-type: $tabletm) {
         padding: $measure * 10 $measure * 5;
     }
-
-    &__content {
-        @extend .f--font-#{$text-font} !optional;
-        @if $text-font-weight {
-            font-weight: $text-font-weight;
-        }
-    }
 }
 
 @mixin make-message-01-modifier(
-    $text-color,
     $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $message-min-height: false,
+    $shadow: false,
+    $text-align: false,
+    $text-color: false,
+    $text-font: false,
+    $text-font-weight: false,
+    $text-max-lines: false,
 ) {
     @if $background-color {
         background: $background-color;
     }
 
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $border-style {
+        border-style: $border-style;
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+    @if $message-min-height {
+        min-height: $message-min-height;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .g--message-01 {
+            &__content {
+                width: 100%;
+            }
+        }
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
     .g--message-01 {
         &__content {
-            color: $text-color;
+            @if $text-color {
+                color: $text-color;
+            }
+            
+            @if $text-font {
+                @extend .f--font-#{$text-font} !optional;
+            }
+
+            @if $text-font-weight {
+                font-weight: $text-font-weight;
+            }
+
+            @if $text-max-lines {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: $text-max-lines;
+                -webkit-box-orient: vertical;
+            }
         }
     }
 }

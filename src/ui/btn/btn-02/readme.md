@@ -1,4 +1,4 @@
-# Btn-02
+# btn-02
 
 ## Layout
 
@@ -9,27 +9,35 @@
 ## Html for a button
 
 ```html
-<button class="g--btn-02">button 02</button>
+<button class="g--btn-02">btn 03
+    <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
+    </svg>
+</button>
 ```
 
-## Html for a link
+## Html for a btn
 
 ```html
-<a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">button 02</a>
+<a href="#" class="g--btn-02" target="_blank" rel="noopener noreferrer">btn 03 btn
+    <svg viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 9.5L5 5.5L1 1.5" stroke="#4D49F3" stroke-width="1.5"/>
+    </svg>
+</a>
 ```
 
 ## Editable variables
 
-- $border-width
-- $border-color
-- $border-color-hover
-- $border-style
-- $font
-- $font-weight
+- $artwork-color-fill
+- $artwork-color-stroke
+- $btn-font
+- $btn-font-weight
+- $hover-artwork-color
+- $hover-text-color
+- $hover-transform-icon
+- $icon-top
+- $icon-width
 - $text-color
-- $text-color-hover
-- $background-color
-- $background-color-hover
 
 ## Use
 
@@ -37,16 +45,16 @@
 .g--btn-02{
     @include make-btn-02();
     @include make-btn-02-modifier(
-        $border-width: 2px,
-        $border-color: map-get($color-options, a),
-        $border-color-hover: map-get($color-options, g),
-        $border-style: solid,
-        $font: c,
-        $font-weight: 600,
-        $text-color: map-get($color-options, b),
-        $text-color-hover: map-get($color-options, a),
-        $background-color: map-get($color-options, f),
-        $background-color-hover: map-get($color-options, g)
+        // $artwork-color-fill: map-get($color-options, a),
+        // $artwork-color-stroke: map-get($color-options, a),
+        // $btn-font: f,
+        // $btn-font-weight: 600,
+        // $hover-artwork-color: map-get($color-options, g),
+        // $hover-text-color: map-get($color-options, g),
+        // $hover-transform-icon: translateX($measure,)
+        // $icon-top: 0px,
+        // $icon-width: $measure,
+        // $text-color: map-get($color-options, a),
     );
 }
 ```

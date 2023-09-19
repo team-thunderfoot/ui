@@ -13,8 +13,7 @@
         .f--col-#{$size}-#{$i} {
             
           @media all and ($viewport-type: #{$bkpt}) {
-            // $value: (100% / $columns) * $i;
-            $value: 0.6944444444444% * ($columns * $i);
+            $value: calc((100% / $columns) * $i);
             flex: 0 0 $value;
             max-width: $value;
             transition: $time-b;

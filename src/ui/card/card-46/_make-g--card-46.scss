@@ -1,0 +1,369 @@
+@mixin make-card-46() {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-decoration: none;
+
+    &__wrapper {
+        width: 50%;
+        padding: $measure * 10;
+
+        @media all and ($viewport-type: $tabletm) {
+            padding: $measure * 5;
+        }
+
+        &__hd {
+            margin-bottom: $measure * 3;
+        }
+
+        &__bd {
+            margin-bottom: $measure * 3;
+        }
+
+        &__link {
+            margin-top: $measure * 4;
+            display: inline-block;
+        }
+    }
+
+    &__media-wrapper {
+        position: relative;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        &__media {
+            display: block;
+        }
+    }
+}
+
+@mixin make-card-46-modifier(
+    $background-color: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $breakpoint: false,
+    $card-min-height: false,
+    $change-order-reponsive: false,
+    $content-color: false,
+    $content-font: false,
+    $content-font-weight: false,
+    $hover-background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-img-zoom: false,
+    $hover-shadow: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $img-aspect-ratio: false,
+    $img-background-color: false,
+    $img-fit: false,
+    $img-height: false,
+    $img-position: false,
+    $img-width: false,
+    $link-class: false,
+    $person-color: false,
+    $person-font: false,
+    $person-font-weight: false,
+    $position-color: false,
+    $position-font: false,
+    $position-font-weight: false,
+    $shadow: false,
+    $text-align: false,
+    $title-color: false,
+    $title-font: false,
+    $title-font-weight: false
+) {
+    @if $card-min-height {
+        min-height: $card-min-height;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+    @if $background-color {
+        .g--card-46 {
+            &__wrapper {
+                background: $background-color;
+            }
+        }
+    }
+
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+        overflow: hidden;
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "box-shadow": $hover-shadow,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-46 {
+                            &__wrapper {
+                                &__hd {
+                                    color: $hover-title-color;
+                                    text-decoration-color: $hover-title-underline-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-46 {
+                    &__wrapper {
+                        &__hd {
+                            color: $hover-title-color;
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-46 {
+                    &__wrapper {
+                        &__hd {
+                            text-decoration-color: $hover-title-underline-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
+        .g--card-46 {
+            &__media-wrapper {
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-46 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-background-color {
+        &__wrapper {
+            transition: background $time-b $ease-standard-a;
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-46 {
+                    &__wrapper {
+                        background: $hover-background-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $text-align == "center" {
+        text-align: center;
+    }
+
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    .g--card-46 {
+        &__wrapper {
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    @if $change-order-reponsive {
+                        order: 1;
+                    }
+                }
+            }
+            &__hd {
+                @if $title-color {
+                    color: $title-color;
+                }
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
+                @if $hover-title-underline-color {
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                }
+                @if $hover-title-color and $hover-title-underline-color {
+                    transition: color $time-b $ease-standard-a,
+                        text-decoration-color $time-b $ease-standard-a;
+                } @else if $hover-title-color {
+                    transition: color $time-b $ease-standard-a;
+                } @else if $hover-title-underline-color {
+                    transition: text-decoration-color $time-b $ease-standard-a;
+                }
+            }
+
+            &__bd {
+                @if $content-color {
+                    color: $content-color;
+                }
+                @if $content-font {
+                    @extend .f--font-#{$content-font} !optional;
+                }
+                @if $content-font-weight {
+                    font-weight: $content-font-weight;
+                }
+
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-bottom: $measure * 2;
+                    }
+                }
+            }
+
+            &__ft {
+                &__title {
+                    @if $person-color {
+                        color: $person-color;
+                    }
+                    @if $person-font {
+                        @extend .f--font-#{$person-font} !optional;
+                    }
+                    @if $person-font-weight {
+                        font-weight: $person-font-weight;
+                    }
+                }
+                &__subtitle {
+                    @if $position-color {
+                        color: $position-color;
+                    }
+                    @if $position-font {
+                        @extend .f--font-#{$position-font} !optional;
+                    }
+                    @if $position-font-weight {
+                        font-weight: $position-font-weight;
+                    }
+                }
+            }
+
+            &__link {
+                @if $link-class {
+                    @extend .#{$link-class} !optional;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin-top: $measure * 3;
+                    }
+                }
+            }
+        }
+        &__media-wrapper {
+            @if $img-background-color {
+                background: $img-background-color;
+            }
+
+            @if $breakpoint {
+                @media all and ($viewport-type: $breakpoint) {
+                    width: 100%;
+                    padding: $measure * 14 $measure * 4;
+                }
+            }
+
+            &__media {
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-width {
+                    width: $img-width;
+                }
+                @if $img-height {
+                    height: $img-height;
+                }
+                @if $img-fit {
+                    object-fit: $img-fit;
+                }
+                @if $img-position {
+                    object-position: $img-position;
+                }
+                @if $breakpoint {
+                    @media all and ($viewport-type: $breakpoint) {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,12 +1,80 @@
-.g--card-50{
-    @include make-card-50(
-        // $change-order-reponsive: default
-        // $border-radius: default,
-    );
+.g--card-50 {
+    @include make-card-50();
     @include make-card-50-modifier(
-        $background-color: rgba(map-get($color-options, a), .1),
-        $title-color: map-get($color-options, a),
-        $title-font: d,
-        // title-font-weight: default
+        $background-position: center,
+        $background-repeat: no-repeat,
+        $background-size: cover,
+        $card-aspect-ratio: calc(3 / 4),
+        $hover-background-color: map-get($color-options, a),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
+        $hover-meta-color: map-get($color-options, b),
+        $hover-title-color: map-get($color-options, b),
+        $link-class: g--link-02--second,
+        $link-hide-by-default: true,
+        $mask-background-color: rgba(map-get($color-options, a), 0.15),
+        $meta-color: map-get($color-options, b),
+        $meta-font-weight: 600,
+        $meta-font: f,
+        $pill-class: g--pill-01,
+        $title-color: map-get($color-options, b),
+        $title-font: c,
+        $title-max-lines: 4
     );
+    &--second {
+        @include make-card-50-modifier(
+            $background-color: lighten(map-get($color-options, a), 82%),
+            $hover-background-position: center,
+            $hover-background-repeat: no-repeat,
+            $hover-background-size: cover,
+            $hover-mask-background-color:
+                linear-gradient(
+                    rgba(map-get($color-options, e), 0.2),
+                    rgba(map-get($color-options, h), 0.2)
+                ),
+            $hover-meta-color: map-get($color-options, a),
+            $hover-title-color: map-get($color-options, a),
+            $meta-font-weight: 400,
+            $link-class: g--link-01--second,
+            $link-hide-by-default: no,
+            $text-align: left,
+            $shadow: 0 0 $measure * 2 map-get($color-options, g)
+        );
+    }
+    &--third {
+        @include make-card-50-modifier(
+            // $background-color: false,
+            $background-position: center,
+            // $background-repeat: false,
+            // $background-size: false,
+            $border-color: map-get($color-options, f),
+            $border-radius: $measure * 4,
+            $border-style: solid,
+            $border-width: 6px,
+            $card-aspect-ratio: initial,
+            $card-min-height: 200px,
+            // $hover-background-color: false,
+            $hover-border-color: map-get($color-options, g),
+            $hover-border-radius: $measure,
+            $hover-background-position: top left,
+            $hover-background-repeat: no-repeat,
+            $hover-background-size: cover,
+            $hover-mask-background-color: rgba(map-get($color-options, f), 0.3),
+            // $hover-meta-color: false,
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, f),
+            // $hover-title-color: false,
+            $hover-transform: translateY($measure),
+            $meta-color: map-get($color-options, b),
+            // $meta-font: false,
+            // $meta-font-weight: false,
+            $link-class: g--link-01--second,
+            $mask-background-color: rgba(map-get($color-options, a), 0.3),
+            $pill-class: g--pill-01--second,
+            $text-align: left,
+            $title-color: map-get($color-options, b),
+            // $title-font: false,
+            $title-font-weight: 800,
+            $title-max-lines: initial
+        );
+    }
 }

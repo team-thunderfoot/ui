@@ -1,17 +1,24 @@
 .g--form-input-01{
-    @include make-form-input-01(
-        $font: f,
-        $border-width: 1px,
-        $border-radius: 0,
-        // $font-weight: default
-    );
+    @include make-form-input-01();
     @include make-form-input-01-modifier(
         $border-color: rgba(map-get($color-options, a), .2),
         $border-color-focus: map-get($color-options, a),
+        $border-style: solid,
         $background-color: transparent,
         $background-color-autofill: transparent,
-        $error-border-color: map-get($color-options, g),
+        $error-border-color: map-get($color-options, f),
         $placeholder-color: transparent,
         $text-color: map-get($color-options, a),
+        $font: f,
+        $border-width: 1px,
+        $border-radius: 0,
+        // $font-weight: default,
+        // $font-size-mobile: false,
     );
+    &--second{
+        @include make-form-input-01-modifier(
+            $border-width: 0 0 1px,
+            $border-color: map-get($color-options, a),
+        );
+    }
 }

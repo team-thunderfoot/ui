@@ -4,26 +4,45 @@
 
 ![alt text][card-11]
 
-[card-11]: /src/img/global-components/card/card-11.png
+[card-11]: /src/img/global-components/card/card-11.jpg
 
 ## Html for a card
 
 ```html
 <div class="g--card-11">
     <div class="g--card-11__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-11__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-11__media-wrapper__media g--lazy-01"
+        />
     </div>
     <h3 class="g--card-11__title">Lorem ipsum</h3>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-11__link"
+        >This is a link</a
+    >
 </div>
 ```
 
 If you want the subtitle to be a c--content, the HTML should be:
+
 ```html
 <div class="g--card-11">
     <div class="g--card-11__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-11__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-11__media-wrapper__media g--lazy-01"
+        />
     </div>
-    <div class="g--card-11__title c--content-a">Solution description lorem ipsum dolor sit amet consectetur.</div>
+    <div class="g--card-11__title c--content-a">
+        Solution description lorem ipsum dolor sit amet consectetur.
+    </div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-11__link"
+        >This is a link</a
+    >
 </div>
 ```
 
@@ -33,39 +52,47 @@ It is not necessary to add aspect-ratio.
 
 ## Editable variables
 
-- $hover-img-zoom
-- $hover-title-color
-- $hover-transform
-- $img-aspect-ratio
-- $img-height
-- $img-position
-- $img-size
-- $img-width
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-- $title-max-lines
+-   $hover-img-border-radius
+-   $hover-img-zoom
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-height
+-   $img-position
+-   $img-fit
+-   $img-width
+-   $link-class
+-   $link-font
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## Use
 
 ```scss
-.g--card-11{
+.g--card-11 {
     @include make-card-11();
     @include make-card-11-modifier(
-        // $hover-img-zoom: false,
-        // $hover-title-color: false,
-        // $hover-transform: false,
-        // $img-aspect-ratio: false,
-        // $img-height: false,
-        // $img-position: false,
-        // $img-size: false,
-        // $img-width: false,
-        // $text-align: false,
-        // $title-color: false,
-        // $title-font: false,
-        // $title-font-weight: false,
-        // $title-max-lines: false,
+        // $hover-img-border-radius: $measure,
+        // $hover-img-zoom: 1.2,
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $img-aspect-ratio: 1.7,
+        // $img-height: 340px,
+        // $img-position: center,
+        // $img-fit: cover,
+        // $img-width: auto,
+        // $link-class: g--link-01,
+        // $link-font: f,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3,
     );
 }
 ```

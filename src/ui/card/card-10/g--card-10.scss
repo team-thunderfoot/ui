@@ -1,34 +1,81 @@
-.g--card-10{
+.g--card-10 {
     @include make-card-10();
     @include make-card-10-modifier(
-        $border-color: map-get($color-options, e) map-get($color-options, a),
-        $border-style: dashed,
-        $border-width: 4px 8px,
+        $background-color: lighten(map-get($color-options, a), 82%),
+        $link-class: g--link-01,
         $title-color: map-get($color-options, a),
-        $title-font: b,
+        $title-font: c
     );
-    &--second{
+    &--second {
         @include make-card-10-modifier(
-            $background-color: rgba(map-get($color-options, g), .7),
-            $border-color: map-get($color-options, h),
-            $border-style: solid,
-            $border-width: 2px,
-            $title-color: map-get($color-options, d),
+            $card-min-height: 500px,
+            $background-color:
+                linear-gradient(
+                    217deg,
+                    map-get($color-options, e),
+                    map-get($color-options, g) 70.71%
+                ),
+            $border-color: map-get($color-options, a),
+            $border-style: dotted,
+            $border-width: 1px,
+            $title-color: map-get($color-options, a),
             $title-font: c,
-            $border-radius: $measure*2,
+            $border-radius: false,
             $hover-background-color: map-get($color-options, g),
+            $hover-border-color: map-get($color-options, f),
+            $hover-border-radius: $measure * 4,
+            $hover-img-border-radius: $measure * 4,
             $hover-img-zoom: 1.2,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
             $hover-title-color: map-get($color-options, h),
+            $hover-title-underline-color: map-get($color-options, h),
             $hover-transform: translateY(-$measure),
             $img-aspect-ratio: calc(1 / 1),
-            $img-height: 50px,
-            $img-size: cover,
+            $img-height: 100px,
+            $img-fit: cover,
             $img-position: center,
             $img-width: auto,
-            $text-align: center,
-            $title-font-weight: 700,
-            $title-max-lines: 2,
+            // $link-class: g--btn-01--second,
+            // $link-font: false,
+            $shadow: 0 0 $measure * 2 map-get($color-options, g),
+            $text-align: left,
+            $title-font-weight: 400,
+            $title-max-lines: 3
+        );
+    }
+    &--third {
+        @include make-card-10-modifier(
+            $border-color: map-get($color-options, a),
+            $border-style: solid,
+            $border-width: 1px,
+            $link-class: g--link-01,
+            $title-color: map-get($color-options, a),
+            $title-font: c
+        );
+    }
+    &--fourth {
+        @include make-card-10-modifier(
+            $background-color: rgba(map-get($color-options, g), 0.7),
+            $border-color: map-get($color-options, a),
+            $border-style: solid,
+            $border-width: 8px,
+            $title-color: map-get($color-options, a),
+            // $border-radius: false,
+            $hover-background-color: map-get($color-options, g),
+            $hover-img-zoom: 1.2,
+            $hover-shadow: 0 0 $measure * 2 map-get($color-options, a),
+            $hover-title-color: map-get($color-options, a),
+            $hover-transform: translateY(-$measure),
+            $img-aspect-ratio: calc(1 / 1),
+            $img-height: 100px,
+            $img-fit: cover,
+            $img-position: center,
+            $img-width: auto,
+            $link-class: g--btn-01--third,
+            // $link-font: false,
+            $text-align: left,
+            $title-font-weight: 400,
+            $title-max-lines: 3
         );
     }
 }

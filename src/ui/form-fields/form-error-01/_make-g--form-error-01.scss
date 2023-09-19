@@ -1,17 +1,31 @@
 @mixin make-form-error-01(
-    $font,
-    $font-weight: false,
 ) {
-    @extend .f--font-#{$font} !optional;
-    @if $font-weight {
-        font-weight: $font-weight;
-    }
     margin-top: $measure*.5;
     display: block;
 }
 
 @mixin make-form-error-01-modifier(
-    $text-color
+    $font: false,
+    $font-weight: false,
+    $position-absolute: false,
+    $text-color: false,
 ) {
-    color: $text-color;
+    @if $font {
+        @extend .f--font-#{$font} !optional;
+    }
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+    @if $text-color {
+        color: $text-color;
+    }
+    @if $position-absolute {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    } @else{
+        position: relative;
+        top: auto;
+        left: auto;
+    }
 }

@@ -1,19 +1,40 @@
-.g--card-30{
-    @include make-card-30(
-        $link-class: g--link-01,
-        $border-width: 1px,
-        // $border-radius: default
-    );
+.g--card-30 {
+    @include make-card-30();
     @include make-card-30-modifier(
-        $border-color: map-get($color-options, a),
-        $background-color: transparent,
-        $subtitle-color: map-get($color-options, a),
+        $hover-img-border-radius: $measure * 2,
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, e),
+        $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        $img-height: 300px,
+        $img-position: center,
+        $meta-color: map-get($color-options, a),
+        $meta-font: f,
+        $meta-font-weight: 400,
+        $text-align: left,
         $title-color: map-get($color-options, a),
-        $subtitle-font: f,
         $title-font: c,
-        // $title-font-weight: default
-        // $subtitle-font-weight: default
-        // $link-class-modifier: default
-        // $text-align: default
+        $title-font-weight: 400,
+        $title-max-lines: 3
     );
+
+    &--second {
+        @include make-card-30-modifier(
+            $hover-img-zoom: 1.5,
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: 2,
+            $img-border-radius: $measure * 2,
+            $img-height: auto,
+            $img-position: center,
+            $meta-color: map-get($color-options, a),
+            $meta-font-weight: 400,
+            $meta-font: f,
+            $text-align: left,
+            $title-color: map-get($color-options, a),
+            $title-font-weight: 400,
+            $title-font: c,
+            $title-max-lines: 3
+        );
+    }
 }

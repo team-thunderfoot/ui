@@ -8,86 +8,97 @@
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-59">
-    <div class="g--card-59__wrapper">
-        <h2 class="g--card-59__wrapper__hd">Card 59</h2>
-        <p class="g--card-59__wrapper__bd">Lorem ipsum dolor sit amet consectetur. Vulputate facilisi ultrices pellentesque elit vel sit eu nascetur vitae.</p>
-        <div class="g--card-59__wrapper__ft">
-            <p class="g--card-59__wrapper__ft__title">Person Name</p>
-            <p class="g--card-59__wrapper__ft__subtitle">Job Position</p>
-        </div>
-        <a href="#" class="g--card-59__wrapper__btn" target="_blank" rel="noopener noreferrer">This is a link</a>
-    </div>
-    <div class="g--card-59__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/logo-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="img alt" class="g--card-59__media-wrapper__media g--lazy-01 f--ar" width="254" height="254" style="aspect-ratio: 254 / 254">
+    <div
+        class="g--card-59__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+    ></div>
+    <div class="g--card-59__ft-items">
+        <h3 class="g--card-59__ft-items__title">Solution Name</h3>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-59__ft-items__link"
+            >This is a link</a
+        >
     </div>
 </div>
 ```
 
-##### \*Aspect Ratio
+If you want the subtitle to be a c--content, the HTML should be:
 
-For the image, we have to add width, height and aspect ratio dynamically.
+```html
+<div class="g--card-59">
+    <div
+        class="g--card-59__bg-items g--lazy-01"
+        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+    ></div>
+    <div class="g--card-59__ft-items">
+        <div class="g--card-59__ft-items__title c--content-a">Lorem ipsum dolor sit amet.</div>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="g--card-59__ft-items__link"
+            >This is a link</a
+        >
+    </div>
+</div>
+```
 
 ## Editable variables
 
-- $background-color: false by default
-- $btn-class
-- $btn-class-modifier: false by default
-- $content-color
-- $content-font
-- $heading-color
-- $heading-font
-- $img-background-color: false by default
-- $person-color
-- $person-font
-- $position-color
-- $position-font
-- $border-radius: false by default
-- $change-order-reponsive: false by default
-- $content-font-weight: false by default
-- $heading-font-weight: false by default
-- $person-font-weight: false by default
-- $position-font-weight: false by default
-- $text-align: false
-
-### For modifiers
-
-- $background-color
-- $btn-class-modifier
-- $content-color
-- $heading-color
-- $img-background-color
-- $person-color
-- $position-color
-- $text-align
+-   background-color
+-   background-position
+-   background-size
+-   $border-color
+-   $border-radius
+-   $border-style
+-   $border-width
+-   card-min-height
+-   hover-background-img-zoom
+-   hover-border-color
+-   hover-border-radius
+-   hover-mask-color
+-   hover-shadow
+-   hover-title-color
+-   hover-title-underline-color
+-   hover-transform
+-   link-class
+-   link-font
+-   mask-color
+-   shadow
+-   text-align
+-   title-color
+-   title-font-weight
+-   title-font
+-   title-max-lines
 
 ## use
 
-```sh
-.g--card-59{
-    @include make-card-59(
-        $content-font: c,
-        $heading-font: f,
-        $person-font: d,
-        $position-font: d,
-        $btn-class: g--link-01,
-        // $border-radius: default,
-        // $heading-font-weight: default,
-        // $person-font-weight: default,
-        // $position-font-weight: default,
-        // $change-order-reponsive: default,
-        // $content-font-weight: default,
-    );
+```scss
+.g--card-59 {
+    @include make-card-59();
     @include make-card-59-modifier(
-        $content-color: map-get($color-options, a),
-        $heading-color: map-get($color-options, a),
-        $person-color: map-get($color-options, a),
-        $position-color: map-get($color-options, a),
-        // $background-color: default,
-        // $img-background-color: default,
-        // $text-align: default,
-        // $btn-class-modifier: default
+        // $background-color: map-get($color-options, a),
+        // $background-position: center,
+        // $background-size: cover,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $card-min-height: 100px,
+        // $hover-background-img-zoom: 1.2,
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-mask-color: rgba(map-get($color-options, b), 0.8),
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-title-color: rgba(map-get($color-options, e), 0.8),
+        // $hover-title-underline-color: rgba(map-get($color-options, e), 0.8),
+        // $hover-transform: translateY(-$measure),
+        // $link-class: g--link-01,
+        // $link-font: f,
+        // $mask-color: rgba(map-get($color-options, b), 0.5),
+        // $shadow: 0 0 $measure * 2 map-get($color-options, a),
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font-weight: bold,
+        // $title-font: d,
+        // $title-max-lines: 3
     );
 }
 ```

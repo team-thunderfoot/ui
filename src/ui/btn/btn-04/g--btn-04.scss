@@ -1,0 +1,36 @@
+.g--btn-04{
+    @include make-btn-04();
+    @include make-btn-04-modifier(
+        // $artwork-color-fill: map-get($color-options, a),
+        $artwork-color-stroke: map-get($color-options, a),
+        $btn-font-weight: 600,
+        $btn-font: f,
+        $hover-artwork-color: map-get($color-options, g),
+        $hover-text-color: map-get($color-options, g),
+        $icon-top: 0px,
+        $icon-width: $measure,
+        $text-color: map-get($color-options, a),
+        $underline-color: map-get($color-options, a),
+        $underline-gradient: false,
+        $underline-height: 2px,
+    );
+    &--second{
+        @include make-btn-04-modifier(
+            $underline-gradient: linear-gradient(to right, map-get($color-options, a), map-get($color-options, g)),
+            $underline-height: 3px,
+        );
+    }
+    &--third{
+        @include make-btn-04-modifier(
+            $artwork-color-stroke: map-get($color-options, a),
+            $hover-artwork-color: map-get($color-options, a),
+            $hover-icon-transform: translate($measure, -$measure),
+            $hover-text-color: map-get($color-options, a),
+            // $icon-top: 0px,
+            $icon-width: $measure*2,
+            $text-color: map-get($color-options, a),
+            $underline-gradient: linear-gradient(to top, map-get($color-options, g), map-get($color-options, b)),
+            $underline-height: 100%,
+        );
+    }
+}

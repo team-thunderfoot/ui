@@ -16,71 +16,79 @@
         <div class="f--row">
           <div class="f--col-12">
             <a href="./index.html" class="f--font-f g--link-01 f--sp-c display--inline-block">Back to Index</a>
-            <h1 class="f--font-b f--sp-b">Global 404</h1>
+            <h1 class="f--font-b f--sp-a">Global 404</h1>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a" style="overflow-wrap: break-word">
+                <strong>Note:</strong> To go to any 404 we can add "#404-404Number" in the url. For example, to go to 404-01 add "#404-01", the url will be
+                "https://globalcomponents.netlify.app/404.html#404-01"
+            </p>
+            <p class="f--font-f f--background-a f--p-3 f--sp-a">
+                <strong>Note variables:</strong> For 404 modifiers we can edit any variable. We can change any variable at any breakpoint using the mixin modifier except variables
+                that depend on an existing class (btns, fonts, pills...). If we want to change a font in a modifier, the default font must be the first one (starting with a).
+            </p>
+            <p class="f--font-f f--background-a f--p-3"><strong>Note button/links/pills:</strong> In all places where there is a link, pill or a button it can be any of them</p>
           </div>
         </div>
       </div>
     </section>
-    <section>
+
+    <!-- 404-01 -->
+    <section class="f--section-c" id="404-01">
       <div class="f--container">
         <div class="f--row">
           <div class="f--col-12">
-            <h2 class="f--font-c f--sp-b">404-01</h2>
+            <h2 class="f--font-c">404-01</h2>
           </div>
         </div>
       </div>
     </section>
+
     <div class="g--404-01">
         <div class="f--container">
             <div class="f--row justify-content--center">
                 <div class="f--col-8 f--col-tablets-12">
-                    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--404-01__media g--lazy-01">
+                    <div class="g--404-01__media-wrapper">
+                      <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/rounded-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--404-01__media-wrapper__media g--lazy-01">
+                    </div>
                     <h1 class="g--404-01__title">Page not found</h1>
                     <div class="g--404-01__subtitle c--content-a">
-                        <p>This is a b--content. The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
+                        <p>This is a c--content. The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
                     </div>
                     <a href="#" class="g--404-01__btn">Button Label</a>
                 </div>
             </div>
         </div>
     </div>
+
     <section class="f--section-c">
-      <div class="f--container">
-        <div class="f--row">
-          <div class="f--col-12">
-            <h2 class="f--font-c f--sp-a">Editable variables</h2>
-            <div class="f--row">
-              <div class="f--col-6 f--col-mobile-12">
-                <ul class="f--sp-c" style="list-style: inside;">
-                  <li class="f--color-g">$background-color: false by default</li>
-                  <li>$btn-class</li>
-                  <li class="f--color-g">$btn-class-modifier: false by default</li>
-                  <li>$min-height</li>
-                  <li class="f--color-g">$title-font-weight: false by default</li>
-                  <li class="f--color-g">$min-height-desktop: false by default</li>
-                  <li class="f--color-g">$min-height-tabletl: false by default</li>
-                  <li class="f--color-g">$min-height-tabletm: false by default</li>
-                  <li class="f--color-g">$min-height-tablets: false by default</li>
-                  <li class="f--color-g">$min-height-mobile: false by default</li>
-                  <li class="f--color-g">$text-align: false by default</li>
-                  <li>$title-color</li>
-                  <li>$title-font</li>
-                </ul>
-              </div>
-              <div class="f--col-6 f--col-mobile-12">
-                <h3 class="f--font-d f--sp-a">For modifiers</h3>
-                <ul style="list-style: inside;">
-                  <li>$background-color</li>
-                  <li>$btn-class-modifier</li>
-                  <li>$text-align</li>
-                  <li>$title-color</li>
-                </ul>
+        <div class="f--container">
+          <div class="f--row">
+            <div class="f--col-12">
+              <h2 class="f--font-c f--sp-a">Editable variables</h2>
+              <div class="f--row">
+                <div class="f--col-6 f--col-tablets-8 f--col-mobile-12 display--flex justify-content--space-between">
+                  <ul class="f--sp-c" style="list-style: inside;">
+                    <li>$background-color</li>
+                    <li>$btn-class</li>
+                    <li>$btn-font</li>
+                    <li>$img-aspect-ratio</li>
+                    <li>$img-fit</li>
+                    <li>$img-height</li>
+                    <li>$img-position</li>
+                  </ul>
+                  <ul class="f--sp-c" style="list-style: inside;">
+                    <li>$img-width</li>
+                    <li>$min-height</li>
+                    <li>$text-align</li>
+                    <li>$title-color</li>
+                    <li>$title-font-weight</li>
+                    <li>$title-font</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
   <script type="module" src="./index.js"></script>
 </body>

@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--hero-02">
     <div class="g--hero-02__wrapper">
         <div class="f--container">
@@ -21,44 +21,51 @@
         </div>
     </div>
     <div class="g--hero-02__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg" src="/src/img/global-components/card/card-bg-placeholder.jpg" alt="alt text" class="g--hero-02__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+            src="/src/img/global-components/bg-placeholder.jpg"
+            alt="alt text"
+            class="g--hero-02__media-wrapper__media g--lazy-01"
+        />
     </div>
 </section>
 ```
 
 ## Editable variables
 
-- $background-color,
-- $header-height,
-- $img-height,
-- $img-position,
-- $img-object-fit,
-- $tagline-color,
-- $tagline-font,
-- $tagline-font-weight,
-- $title-color,
-- $title-font,
-- $title-font-weight,
+- $background-color
+- $header-height
+- $img-border-radius
+- $img-height
+- $img-object-fit
+- $img-position
+- $tagline-color
+- $tagline-font
+- $tagline-font-weight
 - $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
-```sh
+```scss
 .g--hero-02 {
     @include make-hero-02();
     @include make-hero-02-modifier(
-        $background-color:  map-get($color-options, d),
-        $header-height: 96px,
-        $img-height: 500px,
-        $img-position: center,
-        $img-object-fit: cover,
-        $tagline-color: map-get($color-options, f),
-        $tagline-font: d,
-        $tagline-font-weight: medium,
-        $title-color: map-get($color-options, a),
-        $title-font: a,
-        $title-font-weight: bold,
-        // $text-align: false
+        // $background-color: map-get($color-options, d),
+        // $header-height: 96px,
+        // $img-border-radius: $measure*2,
+        // $img-height: 500px,
+        // $img-object-fit: cover,
+        // $img-position: center,
+        // $tagline-color: map-get($color-options, f),
+        // $tagline-font: d,
+        // $tagline-font-weight: medium,
+        // $text-align: left
+        // $title-color: map-get($color-options, a),
+        // $title-font: a,
+        // $title-font-weight: bold,
     );
 }
 ```

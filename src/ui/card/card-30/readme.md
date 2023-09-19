@@ -4,66 +4,73 @@
 
 ![alt text][card-30]
 
-[card-30]: /src/img/global-components/card/card-30.png
+[card-30]: /src/img/global-components/card/card-30.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-30">
-    <h3 class="g--card-30__title">Card 30</h3>
-    <p class="g--card-30__subtitle">Solution description lorem ipsum dolor sit amet consectetur.</p>
-    <a href="" class="g--card-30__link">This is a link</a>
+    <div class="g--card-30__media-wrapper">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+            src="/src/img/global-components/placeholder.jpg"
+            alt="alt text"
+            class="g--card-30__media-wrapper__media g--lazy-01"
+        />
+    </div>
+    <div class="g--card-30__wrapper">
+        <p class="g--card-30__wrapper__meta">Lorem ipsum | Lorem ipsum</p>
+        <p class="g--card-30__wrapper__title">
+            Card-30 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam
+            consectetur pretium fringilla metus.
+        </p>
+    </div>
 </div>
 ```
 
 ## Editable variables
 
-- $background-color
-- $border-width
-- $border-radius: false by default
-- $link-class
-- $link-class-modifier: false by default
-- $subtitle-color
-- $subtitle-font: false by default
-- $subtitle-font-weight: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
+-   $hover-img-border-radius
+-   $hover-img-zoom
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $img-aspect-ratio
+-   $img-border-radius
+-   $img-height
+-   $img-position
+-   $meta-color
+-   $meta-font
+-   $meta-font-weight
+-   $text-align
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
-### For modifiers
+## use
 
-- $background-color
-- $border-color
-- $link-class-modifier
-- $subtitle-color
-- $subtitle-font
-- $subtitle-font-weight
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
-
-## Use
-
-```sh
-.g--card-30{
-    @include make-card-30(
-        $link-class: g--link-01,
-        $border-width: 1px,
-        // $border-radius: default
-    );
+```scss
+.g--card-30 {
+    @include make-card-30();
     @include make-card-30-modifier(
-        $border-color: map-get($color-options, a),
-        $background-color: transparent,
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $subtitle-font: default,
-        // $title-font: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $link-class-modifier: default,
-        // $text-align: default
+        // $hover-img-border-radius: $measure * 2,
+        // $hover-img-zoom: 1.1,
+        // $hover-title-color: map-get($color-options, e),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        // $img-border-radius: $measure,
+        // $img-height: 340px,
+        // $img-position: center,
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
+        // $text-align: left,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

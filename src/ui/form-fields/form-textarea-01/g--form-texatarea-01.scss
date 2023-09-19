@@ -1,18 +1,19 @@
 .g--form-textarea-01{
-    @include make-form-textarea-01(
-        $font: f,
-        $border-width: 1px,
-        $border-radius: 0,
-        $textarea-height: $measure*10,
-        // $font-weight: default
-    );
+    @include make-form-textarea-01();
     @include make-form-textarea-01-modifier(
         $background-color: transparent,
         $background-color-autofill: transparent,
         $border-color: rgba(map-get($color-options, a), .2),
         $border-color-focus: map-get($color-options, a),
-        $error-border-color: map-get($color-options, g),
+        $error-border-color: map-get($color-options, f),
         $placeholder-color: transparent,
         $text-color: map-get($color-options, a),
+        $font: f,
+        $border-width: 1px,
+        $border-style: solid,
+        $border-radius: 0,
+        $textarea-height: $measure*10,
+        // $font-weight: default,
+        // $mobile-font-size: false,
     );
 }

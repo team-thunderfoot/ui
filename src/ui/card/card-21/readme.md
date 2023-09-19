@@ -4,57 +4,86 @@
 
 ![alt text][card-21]
 
-[card-21]: /src/img/global-components/card/card-21.png
+[card-21]: /src/img/global-components/card/card-21.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-21">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-21__media g--lazy-01">
-    <p class="g--card-21__title">Card 21 lorem ipsum dolor sit amet consectetur.</p>
-    <a href="" class="g--card-21__link">This is a link</a>
+    <div class="g--card-21__hd">
+        <p class="g--card-21__hd__meta">Lorem ipsum | Lorem ipsum</p>
+        <p class="g--card-21__hd__author">By Author</p>
+    </div>
+    <p class="g--card-21__title">
+        Card-21 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam
+        consectetur pretium fringilla metus.
+    </p>
+    <div class="g--card-21__list-group">
+        <div class="g--card-21__list-group__list-item">Category</div>
+        <div class="g--card-21__list-group__list-item">Category</div>
+    </div>
 </div>
 ```
 
-##### \*Aspect Ratio
-
-It is not necessary to add aspect-ratio because the images have height in the css.
-
 ## Editable variables
 
-- $background-color
-- $border-radius: false by default
-- $link-class
-- $link-class-modifier: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $background-color
-- $link-class-modifier
-- $text-align
-- $title-color
-- $title-font
-- $title-font-weight
+-   $author-font
+-   $author-font-weight
+-   $author-color
+-   $background-color
+-   $border-color
+-   $border-style
+-   $border-width
+-   $border-radius
+-   $card-min-height
+-   $hover-background-color
+-   $hover-border-color
+-   $hover-border-radius
+-   $hover-shadow
+-   $hover-title-color
+-   $hover-title-underline-color
+-   $hover-transform
+-   $meta-color
+-   $meta-font
+-   $meta-font-weight
+-   $pill-class
+-   $shadow
+-   $title-color
+-   $title-font
+-   $title-font-weight
+-   $title-max-lines
 
 ## use
 
-```sh
-.g--card-21{
-    @include make-card-21(
-        $link-class: g--link-01,
-        // $border-radius: default
-    );
+```scss
+.g--card-21 {
+    @include make-card-21();
     @include make-card-21-modifier(
-        $background-color: map-get($color-options, f),
-        $title-color: map-get($color-options, a),
-        // $link-class-modifier: default
-        // $text-align: default,
-        // $title-font: default,
-        // $title-font-weight: default
+        // $author-font: f,
+        // $author-font-weight: 400,
+        // $author-color: map-get($color-options, a),
+        // $background-color: lighten(map-get($color-options,a), 82%),
+        // $border-color: map-get($color-options, a),
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $border-radius: 0,
+        // $card-min-height: 500px,
+        // $hover-background-color: map-get($color-options, g),
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-shadow: 0 0 16px 0 rgba(map-get($color-options, a), 0.5),
+        // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-5%),
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
+        // $pill-class: g--pill-01,
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

@@ -1,19 +1,28 @@
-.g--cta-02{
+.g--cta-02 {
     @include make-cta-02();
     @include make-cta-02-modifier(
         $background-position: center,
         $background-size: cover,
-        $hover-background-img-zoom: 1.2,
-        $btn-class: g--btn-02,
+        // $border-color: transparent,
+        // $border-radius: 0,
+        // $border-style: solid,
+        // $border-width: 1px,
+        $btn-class: g--btn-01,
+        $mask-color: rgba(map-get($color-options, a), 0.1),
+        $title-color: map-get($color-options, a),
+        $title-font: a,
         // $btn-font: false,
-        $mask-color: rgba(map-get($color-options, a), .5),
-        $title-color: map-get($color-options, b),
-        $hover-title-color: map-get($color-options, a),
+        // $hover-background-color: map-get($color-options, h),
+        // $hover-background-img-zoom: 1.2,
+        // $hover-border-color: map-get($color-options, f),
+        // $hover-border-radius: $measure * 4,
+        // $hover-mask-color: rgba(map-get($color-options, a), .5),
+        // $hover-shadow: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
         // $text-align: false,
-        $title-font: b,
         // $title-font-weight: false,
-        $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-        $hover-transform: translateY(-$measure),
         // $title-max-lines: false,
     );
+    @include make-cta-02-modifier($btn-class: g--btn-01--second);
 }

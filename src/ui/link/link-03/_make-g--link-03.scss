@@ -3,7 +3,10 @@
     width: fit-content;
 }
 
-@mixin make-link-03-modifier($text-color: false, $text-color-hover: false) {
+@mixin make-link-03-modifier(
+    $hover-text-color: false,
+    $text-color: false,
+) {
     @if $text-color {
         color: $text-color;
     }
@@ -12,8 +15,8 @@
         &:hover,
         &:focus,
         &:active {
-            @if $text-color-hover {
-                color: $text-color-hover;
+            @if $hover-text-color {
+                color: $hover-text-color;
             }
         }
     }

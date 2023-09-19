@@ -4,61 +4,61 @@
 
 ![alt text][card-22]
 
-[card-22]: /src/img/global-components/card/card-22.png
+[card-22]: /src/img/global-components/card/card-22.jpg
 
 ## Html for a card
 
-```sh
+```html
 <div class="g--card-22">
-    <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-img-placeholder.png" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--card-22__media g--lazy-01">
-    <p class="g--card-22__title">Card 22 Solution description lorem ipsum dolor sit amet consectetur.</p>
-    <a href="" class="g--card-22__link">This is a link</a>
+    <div class="g--card-22__hd">
+        <p class="g--card-22__hd__meta">Lorem ipsum | Lorem ipsum</p>
+        <p class="g--card-22__hd__author">By Author</p>
+    </div>
+    <p class="g--card-22__title">Card-22 Lorem ipsum dolor sit amet consectetur. Sed pulvinar odio velit fermentum etiam consectetur pretium fringilla metus.</p>
+    <div class="g--card-22__list-group">
+        <div class="g--card-22__list-group__list-item">Category</div>
+        <div class="g--card-22__list-group__list-item">Category</div>
+    </div>
 </div>
 ```
 
-##### \*Aspect Ratio
-
-It is not necessary to add aspect-ratio because the images have height in the css.
-
 ## Editable variables
 
-- $background-color: false by default
-- $border-color
-- $border-radius: false by default
-- $border-width,
-- $link-class
-- $link-class-modifier: false by default
-- $text-align: false by default
-- $title-color
-- $title-font: false by default
-- $title-font-weight: false by default
-
-### For modifiers
-
-- $background-color
-- $link-class-modifier
-- $text-align
+- $author-font
+- $author-font-weight
+- $author-color
+- $hover-title-color
+- $hover-title-underline-color
+- $hover-transform
+- $meta-color
+- $meta-font
+- $meta-font-weight
+- $pill-class
 - $title-color
 - $title-font
 - $title-font-weight
+- $title-max-lines
 
-## Use
+## use
 
-```sh
-.g--card-22{
-    @include make-card-22(
-        $link-class: g--link-01,
-        $border-width: 1px,
-        // $border-radius: default,
-    );
+```scss
+.g--card-22 {
+    @include make-card-22();
     @include make-card-22-modifier(
-        $border-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $link-class-modifier: default
-        // $background-color: default,
-        // $text-align: default,
-        // $title-font: default,
-        // $title-font-weight: default,
+        // $author-font: f,
+        // $author-font-weight: 400,
+        // $author-color: map-get($color-options, a),
+        // $hover-title-color: map-get($color-options, b),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-5%),
+        // $meta-color: map-get($color-options, a),
+        // $meta-font: f,
+        // $meta-font-weight: 400,
+        // $pill-class: g--pill-01,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
+        // $title-max-lines: 3
     );
 }
 ```

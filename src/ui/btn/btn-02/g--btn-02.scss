@@ -1,45 +1,15 @@
 .g--btn-02{
     @include make-btn-02();
     @include make-btn-02-modifier(
-        $border-width: 2px,
-        $border-color: map-get($color-options, a),
-        $border-color-hover: map-get($color-options, g),
-        $border-style: solid,
-        $font: c,
-        $font-weight: 600,
-        $text-color: map-get($color-options, b),
-        $text-color-hover: map-get($color-options, a),
-        $background-color: map-get($color-options, f),
-        $background-color-hover: map-get($color-options, g)
+        // $artwork-color-fill: map-get($color-options, a),
+        $artwork-color-stroke: map-get($color-options, a),
+        $btn-font-weight: 600,
+        $btn-font: f,
+        $hover-artwork-color: map-get($color-options, g),
+        $hover-text-color: map-get($color-options, g),
+        $icon-top: 0px,
+        $icon-width: $measure,
+        $hover-icon-transform: translateX($measure),
+        $text-color: map-get($color-options, a),
     );
-
-    &--second {
-        @include make-btn-02-modifier(
-            $border-width: 4px 10px,
-            $border-color: map-get($color-options, g),
-            $border-color-hover: map-get($color-options, a),
-            $border-style: solid,
-            $font: c,
-            $font-weight: 600,
-            $text-color: map-get($color-options, b),
-            $text-color-hover: map-get($color-options, g),
-            $background-color: map-get($color-options, a),
-            $background-color-hover: map-get($color-options, f)
-        );
-    }
-
-    &--third {
-        @include make-btn-02-modifier(
-            $border-width: 2px,
-            $border-color: map-get($color-options, a),
-            $border-color-hover: map-get($color-options, g),
-            $border-style: solid,
-            $font: c,
-            $font-weight: 600,
-            $text-color: map-get($color-options, b),
-            $text-color-hover: map-get($color-options, a),
-            $background-color: map-get($color-options, f),
-            $background-color-hover: map-get($color-options, g)
-        );
-    }
 }

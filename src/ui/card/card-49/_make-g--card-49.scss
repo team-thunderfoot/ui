@@ -1,89 +1,293 @@
-@mixin make-card-49(
-    $border-radius: false,
-    $change-order-reponsive: false,
-    $img-position: false,
-) {
-    display: flex;
-    flex-wrap: wrap;
+@mixin make-card-49() {
+    padding: 0 $measure * 2;
     width: 100%;
+    text-decoration: none;
+    display: block;
 
-    @if $border-radius {
-        border-radius: $border-radius;
-        overflow: hidden;
+    @media all and ($viewport-type: $tabletm) {
+        padding: 0;
     }
-    &__wrapper {
-        padding: $measure*10;
-        width: 50%;
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
-            padding: $measure*5;
-            @if $change-order-reponsive {
-                order: 2;
-            }
-        }
 
-        &__title {
-            margin-bottom: $measure * 3;
-
-            @media all and ($viewport-type: $tablets) {
-                margin-bottom: $measure * 2;
-            }
-        }
-
-
-    }
     &__media-wrapper {
-        position: relative;
-        width: 50%;
+        margin-bottom: $measure * 1.5;
+        width: 100%;
 
-        @media all and ($viewport-type: $tablets) {
-            width: 100%;
-            @if $change-order-reponsive {
-                order: 1;
-            }
+        @media all and ($viewport-type: $mobile) {
+            height: auto;
         }
 
         &__media {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            @if $img-position {
-                object-position: $img-position;
-            }
-            @media all and ($viewport-type: $tablets) {
-                position: relative;
-                top: auto;
-                left: auto;
-                height: auto;
-            }
+            display: block;
         }
+    }
+
+    &__title {
+        margin-bottom: $measure * 0.5;
+    }
+
+    &__link {
+        margin-top: $measure * 1.5;
+        display: inline-block;
     }
 }
 
 @mixin make-card-49-modifier(
-    $title-color,
-    $background-color: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-img-background-color: false,
+    $hover-img-border-radius: false,
+    $hover-img-zoom: false,
+    $hover-title-color: false,
+    $hover-title-underline-color: false,
+    $hover-transform: false,
+    $icon-class: false,
+    $img-align: false,
+    $img-aspect-ratio: false,
+    $img-background-color: false,
+    $img-border-radius: false,
+    $img-height: false,
+    $img-object-fit: false,
+    $img-position: false,
+    $img-width: false,
+    $subtitle-color: false,
+    $subtitle-font: false,
+    $subtitle-font-weight: false,
+    $text-align: false,
+    $title-color: false,
     $title-font: false,
-    $title-font-weight: false,
+    $title-font-weight: false
 ) {
-    @if $background-color {
-        background: $background-color;   
+    @if $text-align == "center" {
+        text-align: center;
     }
 
-    .g--card-49{
-        &__wrapper{
-            &__title{
-                color: $title-color;
-                @if $title-font {
-                    @extend .f--font-#{$title-font} !optional;
-                }
-                @if $title-font-weight {
-                    font-weight: $title-font-weight;
+    @if $text-align == "left" {
+        text-align: left;
+    }
+
+    @if $text-align == "right" {
+        text-align: right;
+    }
+
+    @if $hover-img-background-color {
+        .g--card-49 {
+            &__media-wrapper {
+                transition: background $time-b $ease-standard-a;
+            }
+        }
+
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__media-wrapper {
+                        background: $hover-img-background-color;
+                    }
                 }
             }
-            
+        }
+    }
+
+    @if $hover-title-color and $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @media all and (hover: hover) {
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .g--card-49 {
+                            &__title {
+                                color: $hover-title-color;
+                                text-decoration-color: $hover-title-underline-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__title {
+                        color: $hover-title-color;
+                    }
+                }
+            }
+        }
+    } @else if $hover-title-underline-color {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__title {
+                        text-decoration-color: $hover-title-underline-color;
+                    }
+                }
+            }
+        }
+    }
+
+    // Handling hover styles
+    $hover-options: (
+        "border-color": $hover-border-color,
+        "border-radius": $hover-border-radius,
+        "transform": $hover-transform,
+    );
+
+    $hover-transition-list: (); // Initialize an empty list for transitions
+
+    @each $property, $value in $hover-options {
+        @if $value {
+            $transition: unquote("#{$property} #{$time-b} #{$ease-standard-a}");
+            $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
+            @media all and (hover: hover) {
+                &:hover,
+                &:focus,
+                &:active {
+                    #{$property}: $value;
+                }
+            }
+            // Apply the transitions
+            transition: $hover-transition-list;
+        }
+    }
+
+    @if $hover-img-border-radius {
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__media-wrapper {
+                        border-radius: $hover-img-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover-img-zoom {
+        .g--card-49 {
+            &__media-wrapper {
+                overflow: hidden;
+                &__media {
+                    transition: transform $time-b $ease-standard-a;
+                }
+            }
+        }
+        @media all and (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                .g--card-49 {
+                    &__media-wrapper {
+                        &__media {
+                            transform: scale($hover-img-zoom);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .g--card-49 {
+        &__media-wrapper {
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
+                overflow: hidden;
+            }
+            @if $img-background-color {
+                background: $img-background-color;
+            }
+            @if $hover-img-border-radius {
+                transition: border-radius $time-b $ease-standard-a;
+            }
+
+            &__media {
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
+                }
+
+                @if $img-position {
+                    object-position: $img-position;
+                }
+
+                @if $img-width {
+                    width: $img-width;
+                }
+
+                @if $img-height {
+                    height: $img-height;
+                }
+
+                @if $img-aspect-ratio {
+                    aspect-ratio: $img-aspect-ratio;
+                }
+
+                @if $img-align == "center" {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @if $img-align == "left" {
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+
+                @if $img-align == "right" {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__title {
+            @if $title-color {
+                color: $title-color;
+            }
+            @if $title-font {
+                @extend .f--font-#{$title-font} !optional;
+            }
+            @if $title-font-weight {
+                font-weight: $title-font-weight;
+            }
+            @if $hover-title-underline-color {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+            }
+            @if $hover-title-color and $hover-title-underline-color {
+                transition: color $time-b $ease-standard-a,
+                    text-decoration-color $time-b $ease-standard-a;
+            } @else if $hover-title-color {
+                transition: color $time-b $ease-standard-a;
+            } @else if $hover-title-underline-color {
+                transition: text-decoration-color $time-b $ease-standard-a;
+            }
+        }
+
+        &__subtitle {
+            @if $subtitle-color {
+                color: $subtitle-color;
+            }
+            @if $subtitle-font {
+                @extend .f--font-#{$subtitle-font} !optional;
+            }
+            @if $subtitle-font-weight {
+                font-weight: $subtitle-font-weight;
+            }
+        }
+
+        &__link {
+            @if $icon-class {
+                @extend .#{$icon-class} !optional;
+            }
         }
     }
 }

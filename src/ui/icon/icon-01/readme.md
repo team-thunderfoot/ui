@@ -14,9 +14,9 @@
 
 ## Html for an icon as a button
 
-```sh
+```html
 <button class="g--icon-01">
-    <svg class="g--icon-01__artwork" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="g--icon-01__artwork" viewBox="0 0 16 17" fill="none">
         <path d="M8 16.5L0 8.5L8 0.5L9.425 1.9L3.825 7.5H16V9.5H3.825L9.425 15.1L8 16.5Z" fill="#1A191D"/>
     </svg>
 </button>
@@ -24,9 +24,9 @@
 
 ## Html for an icon as a link
 
-```sh
+```html
 <a href="#" class="g--icon-01 g--icon-01--fourth">
-    <svg class="g--icon-01__artwork" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="g--icon-01__artwork" viewBox="0 0 17 16" fill="none">
         <path d="M0.5 8L8.5 -3.49691e-07L16.5 8L15.1 9.425L9.5 3.825L9.5 16L7.5 16L7.5 3.825L1.9 9.425L0.5 8Z" fill="#1A191D"/>
     </svg>
 </a>
@@ -34,42 +34,48 @@
 
 ## Editable variables
 
-- $background-color:
-- $background-color-hover: false by default
+- $artwork-height
+- $artwork-width
+- $background-color
 - $border-color
-- $border-color-hover
+- $border-radius
+- $border-style
 - $border-width
 - $height
+- $hover-background-color
+- $hover-border-color
+- $hover-border-radius
+- $hover-path-fill-color
+- $hover-shadow
+- $hover-transform
 - $path-fill-color
-- $path-fill-color-hover
+- $shadow
 - $width
-
-### For Modifiers
-
-- $background-color
-- $background-color-hover
-- $border-color
-- $border-color-hover
-- $path-fill-color
-- $path-fill-color-hover
 
 ## Use
 
-```sh
-.g--icon-01{
-    @include make-icon-01(
-        $border-width: 1px,
-        $width: $measure * 6,
-        $height: $measure * 6
-    );
+```scss
+.g--icon-01 {
+    @include make-icon-01();
 
     @include make-icon-01-modifier(
-        $background-color: transparent,
-        $border-color: map-get($color-options, a ),
-        $path-fill-color: map-get($color-options, a ),
-        $border-color-hover: map-get($color-options, g ),
-        $path-fill-color-hover: map-get($color-options, g ),
-        // $background-color-hover: default,
+        // $artwork-height: $measure * 2,
+        // $artwork-width: $measure*3,
+        // $background-color: transparent,
+        // $border-color: map-get($color-options, a),
+        // $border-radius: 100%,
+        // $border-style: solid,
+        // $border-width: 1px,
+        // $height: $measure * 6,
+        // $hover-background-color: map-get($color-options, a),
+        // $hover-border-color: map-get($color-options, g),
+        // $hover-border-radius: $measure,
+        // $hover-path-fill-color: map-get($color-options, g),
+        // $hover-shadow: 0 0 $measure * 2 map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        // $path-fill-color: map-get($color-options, a),
+        // $shadow: 0 0 $measure*2 map-get($color-options, g),
+        // $width: $measure * 6,
     );
 }
 ```

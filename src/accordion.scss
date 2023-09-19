@@ -1,22 +1,28 @@
 //* project vars/mixins
-@import './scss/_var/vars.scss';
-@import './scss/_mixins/mixins.scss';
+@import "./scss/_var/vars.scss";
+@import "./scss/_mixins/mixins.scss";
 
 //* project foundations
-@import './scss/foundation/foundation.scss';
+@import "./scss/foundation/foundation.scss";
 
 //* project utilities
-@import './scss/utilities/utilities.scss';
+@import "./scss/utilities/utilities.scss";
 
 //* global components mixins
-@import './mixins.scss';
+@import "./mixins.scss";
 
 //* lazy
-@import './ui/lazy/lazy-01/g--lazy-01.scss';
+@import "./ui/lazy/lazy-01/g--lazy-01.scss";
+
+//* back-top
+@import "./ui/back-top/back-top-01/g--back-top-01.scss";
+
+//* icon
+@import "./ui/icon/icon-01/g--icon-01.scss";
 
 //* link
-@import './ui/link/link-01/g--link-01.scss';
+@import "./ui/link/link-01/g--link-01.scss";
 
 //* accordion
-@import './ui/accordion/accordion-01/g--accordion-01.scss';
-@import './ui/accordion/accordion-02/g--accordion-02.scss';
+@import "./ui/accordion/accordion-01/g--accordion-01.scss";
+@import "./ui/accordion/accordion-02/g--accordion-02.scss";

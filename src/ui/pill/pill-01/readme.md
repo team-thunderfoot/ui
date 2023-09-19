@@ -8,49 +8,55 @@
 
 ## Html for a pill
 
-```sh
+```html
 <div class="g--pill-01">pill 01</div>
 ```
 
 ## Html for a link
 
-```sh
+```html
 <a href="#" class="g--pill-01" target="_blank" rel="noopener noreferrer">pill 01</a>
 ```
 
 ## Editable variables
 
 - $background-color
-- $hover-background-color
-- $border-width
-- $border-style
 - $border-color
+- $border-radius
+- $border-style
+- $border-width
+- $hover-background-color
 - $hover-border-color
-- $text-color
+- $hover-border-radius
+- $hover-shadow
 - $hover-text-color
+- $hover-transform
+- $shadow
+- $text-color
 - $text-font
 - $text-font-weight
-- $hover-shadow
-- $hover-transform
 
 ## Use
 
-```sh
+```scss
 .g--pill-01{
     @include make-pill-01();
     @include make-pill-01-modifier(
-            $background-color: map-get($color-options, g),
-            $hover-background-color: map-get($color-options, f),
-            $border-width: 3px,
-            $border-style: dotted,
-            $border-color: map-get($color-options, e),
-            $hover-border-color: map-get($color-options, b),
-            $text-color: map-get($color-options, a),
-            $hover-text-color: map-get($color-options, b),
-            $text-font: f,
-            // $text-font-weight: false,
-            $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
-            $hover-transform: translateY(-$measure),
-        );
+    // $background-color: lighten(map-get($color-options, a), 75%),
+    // $border-color: map-get($color-options, e),
+    // $border-radius: 100px,
+    // $border-style: solid,
+    // $border-width: 1px,
+    // $hover-background-color: map-get($color-options, a),
+    // $hover-border-color: map-get($color-options, a),
+    // $hover-border-radius: 8px,
+    // $hover-shadow: 0 0 $measure*2 map-get($color-options, h),
+    // $hover-text-color: map-get($color-options, b),
+    // $hover-transform: translateY(-$measure),
+    // $shadow: 0 0 $measure*2 map-get($color-options, g),
+    // $text-color: map-get($color-options, a),
+    // $text-font: f,
+    // $text-font-weight: 600,
+    );
 }
 ```

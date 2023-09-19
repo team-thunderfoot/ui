@@ -1,8 +1,6 @@
 .g--social-01{
-    @include make-social-01(
-        $icon-class: g--icon-01
-    );
+    @include make-social-01();
     @include make-social-01-modifier(
-        // $icon-class-modifier: default
+        $icon-class: g--icon-01
     );
 }

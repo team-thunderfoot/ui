@@ -1,0 +1,25 @@
+//* project vars/mixins
+@import "./scss/_var/vars.scss";
+@import "./scss/_mixins/mixins.scss";
+
+//* project foundations
+@import "./scss/foundation/foundation.scss";
+
+//* project utilities
+@import "./scss/utilities/utilities.scss";
+
+//* global components mixins
+@import "./mixins.scss";
+
+//* lazy
+@import "./ui/lazy/lazy-01/g--lazy-01.scss";
+
+//* link
+@import "./ui/link/link-01/g--link-01.scss";
+
+//* card
+@import "./ui/card/card-53/g--card-53.scss";
+
+//* slider
+@import "./scss/components/slider/tiny-slider";
+@import "./ui/slider/slider-01/g--slider-01.scss";

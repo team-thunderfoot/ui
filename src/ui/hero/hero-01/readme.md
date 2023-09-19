@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <section class="g--hero-01">
     <div class="g--hero-01__wrapper">
         <div class="f--container">
@@ -20,51 +20,45 @@
         </div>
     </div>
     <div class="g--hero-01__media-wrapper">
-        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/card/card-bg-placeholder.jpg" src="/src/img/global-components/card/card-bg-placeholder.jpg" alt="alt text" class="g--hero-01__media-wrapper__media g--lazy-01">
+        <img
+            data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/bg-placeholder.jpg"
+            src="/src/img/global-components/bg-placeholder.jpg"
+            alt="alt text"
+            class="g--hero-01__media-wrapper__media g--lazy-01"
+        />
     </div>
 </section>
 ```
 
 ## Editable variables
 
-- $background-color,
-- $header-height,
-- $img-height,
-- $img-position,
-- $img-object-fit,
-- $title-color,
-- $title-font,
-- $title-font-weight,
+- $background-color
+- $header-height
+- $img-border-radius
+- $img-height
+- $img-object-fit
+- $img-position
 - $text-align
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
-```sh
+```scss
 .g--hero-01 {
     @include make-hero-01();
     @include make-hero-01-modifier(
-        $background-color: map-get($color-options, f),
-        $header-height: 96px,
-        $img-height: 500px,
-        $img-position: center,
-        $img-object-fit: cover,
-        $title-color: map-get($color-options, a),
-        $title-font: a,
-        $title-font-weight: bold,
-        // $text-align: false
+        // $background-color: map-get($color-options, f),
+        // $header-height: 96px,
+        // $img-border-radius: $measure*10,
+        // $img-height: 500px,
+        // $img-object-fit: cover,
+        // $img-position: center,
+        // $text-align: left
+        // $title-color: map-get($color-options, a),
+        // $title-font: a,
+        // $title-font-weight: bold,
     );
-
-    @media all and ( $viewport-type: $tabletm) {
-        @include make-hero-01-modifier(
-            $img-height: 400px,
-        );
-    }
-
-    @media all and ( $viewport-type: $tablets) {
-        @include make-hero-01-modifier(
-            $header-height: 86px,
-            $img-height: 300px,
-        );
-    }
 }
 ```

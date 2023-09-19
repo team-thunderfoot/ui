@@ -1,0 +1,63 @@
+@mixin make-banner-02() {
+    padding: $measure * 3 0;
+    text-align: center;
+
+    &__wrapper {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: $measure * 2;
+        column-gap: $measure * 3;
+    }
+}
+
+@mixin make-banner-02-modifier(
+    $background-color: false,
+    $btn-class: false,
+    $btn-font: false,
+    $min-height: false,
+    $shadow: false,
+    $title-color: false,
+    $title-font-weight: false,
+    $title-font: false,
+) {
+    @if $background-color {
+        background-color: $background-color;
+    }
+    @if $min-height {
+        min-height: $min-height;
+        display: flex;
+        align-items: center;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
+
+    .g--banner-02 {
+        &__wrapper {
+
+            &__title {
+                @if $title-font {
+                    @extend .f--font-#{$title-font} !optional;
+                }
+                @if $title-font-weight {
+                    font-weight: $title-font-weight;
+                }
+                @if $title-color {
+                    color: $title-color;
+                }
+            }
+
+            &__btn {
+                @if $btn-class {
+                    @extend .#{$btn-class} !optional;
+                }
+
+                @if $btn-font {
+                    @extend .f--font-#{$btn-font} !optional;
+                }
+            }
+        }
+    }
+}

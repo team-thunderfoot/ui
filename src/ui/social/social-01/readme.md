@@ -8,7 +8,7 @@
 
 ## Html
 
-```sh
+```html
 <ul class="g--social-01">
     <li class="g--social-01__item">
         <a href="#" target="_blank" class="g--social-01__item__link">
@@ -51,23 +51,16 @@
 ## Editable variables
 
 - $icon-class
-- $icon-class-modifier: false by default
-
-### For Modifiers
-
-- $icon-class-modifier
 
 ## Use
 
 To use it we have to import the css of the $icon-class in the entry
 
-```sh
+```scss
 .g--social-01{
-    @include make-social-01(
-        $icon-class: g--icon-01
-    );
+    @include make-social-01();
     @include make-social-01-modifier(
-        // $icon-class-modifier: default
+        // $icon-class: g--icon-01
     );
 }
 ```

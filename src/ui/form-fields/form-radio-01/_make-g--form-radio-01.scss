@@ -1,9 +1,4 @@
-@mixin make-form-radio-01(
-    $circle-border-width,
-    $circle-width,
-    $font,
-    $font-weight: false,
-) {
+@mixin make-form-radio-01() {
     position: relative;
     &__item{
         position: absolute;
@@ -20,13 +15,9 @@
         }
     }
     &__title{
-        @extend .f--font-#{$font} !optional;
-        @if $font-weight {
-            font-weight: $font-weight;
-        }
         position: relative;
         display: block;
-        padding-left: calc(#{$measure} + #{$circle-width});
+        padding-left: $measure;
         cursor: pointer;
         &::before{
             content: '';
@@ -34,18 +25,12 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            height: $circle-width;
-            width: $circle-width;
-            border: $circle-border-width solid;
             border-radius: 50%;
         }
         &::after{
             content: '';
             position: absolute;
-            width: $circle-width*.75;
-            height: $circle-width*.75;
             top: 50%;
-            left: $circle-width*.5;
             transform: translate(-50%, -50%);
             background-repeat: no-repeat;
             background-size: contain;
@@ -58,40 +43,87 @@
 }
 
 @mixin make-form-radio-01-modifier(
-    $artwork-color,
-    $circle-color,
-    $circle-color-focus,
-    $error-border-color,
-    $text-color,
+    $artwork-color: false,
+    $circle-border-style: false,
+    $circle-border-width: false,
+    $circle-color: false,
+    $circle-color-focus: false,
+    $circle-width: false,
+    $error-border-color: false,
+    $font: false,
+    $font-weight: false,
+    $text-color: false,
 ) {
     .g--form-radio-01{
         &__item{
-            &:focus + .g--form-radio-01__title::before,
-            &:checked + .g--form-radio-01__title::before{
-                border-color: $circle-color-focus;
+            @if $circle-color-focus {
+                &:focus + .g--form-radio-01__title::before,
+                &:checked + .g--form-radio-01__title::before{
+                    border-color: $circle-color-focus;
+                }
             }
         }
         &__title{
-            color: $text-color;
-            &::before{
-                border-color: $circle-color;
+            @if $font {
+                @extend .f--font-#{$font} !optional;
             }
-            &::after{
-                background: $artwork-color;
+            @if $font-weight {
+                font-weight: $font-weight;
+            }
+            @if $text-color {
+                color: $text-color;
+            }
+            @if $circle-width {
+                padding-left: calc(#{$measure} + #{$circle-width});
+            }
+            @if $circle-color {
+                &::before{
+                    border-color: $circle-color;
+                }
+            }
+            @if $circle-width {
+                &::before{
+                    height: $circle-width;
+                    width: $circle-width;
+                }
+            }
+            @if $circle-border-width {
+                &::before{
+                    border-width: $circle-border-width;
+                }
+            }
+            @if $circle-border-style {
+                &::before{
+                    border-style: $circle-border-style;
+                }
+            }
+            @if $artwork-color {
+                &::after{
+                    background: $artwork-color;
+                }
+            }
+            @if $circle-width {
+                &::after{
+                    width: $circle-width*.75;
+                    height: $circle-width*.75;
+                    left: $circle-width*.5;
+                }
             }
         }
     }
-    &.g--form-radio-01--error{
-        .g--form-radio-01{
-            &__item{
-                &:focus + .g--form-radio-01__title::before,
-                &:checked + .g--form-radio-01__title::before{
-                    border-color: $error-border-color;
+    @if $error-border-color {
+        &.g--form-radio-01--error{
+            .g--form-radio-01{
+                &__item{
+                    &:focus + .g--form-radio-01__title::before,
+                    &:checked + .g--form-radio-01__title::before{
+                        border-color: $error-border-color;
+                    }
                 }
-            }
-            &__title{
-                &::before {
-                    border-color: $error-border-color;
+                &__title{
+                    &::before {
+                        border-color: $error-border-color;
+                    }
                 }
             }
         }

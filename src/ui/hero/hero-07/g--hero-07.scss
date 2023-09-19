@@ -1,0 +1,18 @@
+.g--hero-07 {
+    @include make-hero-07();
+    @include make-hero-07-modifier(
+        $background-color: lighten(map-get($color-options, a), 82%),
+        $breakpoint: $tablets,
+        // $img-border-radius: $measure*8 0 0 $measure*8,
+        $img-height: 200px,
+        $img-object-fit: cover,
+        $img-position: center,
+        $subtitle-color: map-get($color-options, a),
+        $subtitle-font: d,
+        $title-color: map-get($color-options, a),
+        $title-font: a,
+        // $subtitle-font-weight: false,
+        // $text-align: center
+        // $title-font-weight: false,
+    );
+}

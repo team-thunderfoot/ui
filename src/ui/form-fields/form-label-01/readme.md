@@ -8,30 +8,25 @@
 
 ## Html
 
-```sh
+```html
 <label for="text-01" class="g--form-label-01">This is the text input *</label>
 ```
 
 ## Editable variables
 
 - $label-color
-- $label-font,
-- $label-font-weight: false by default
-
-### For Modifiers
-
-- $label-color
+- $label-font
+- $label-font-weight
 
 ## Use
 
-```sh
-.g--form-label-01{
-    @include make-form-label-01(
-        $label-font: f,
-        // $label-font-weight: default,
-    );
+```scss
+.g--form-label-01 {
+    @include make-form-label-01();
     @include make-form-label-01-modifier(
-        $label-color: map-get($color-options, a),
+        // $label-color: map-get($color-options, a),
+        // $label-font: f,
+        // $label-font-weight: 800,
     );
 }
 ```

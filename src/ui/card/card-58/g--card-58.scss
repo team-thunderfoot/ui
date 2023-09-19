@@ -1,15 +1,32 @@
-.g--card-58{
-    @include make-card-58(
-        // $img-border-radius: default,
-        $title-font: d,
-        $subtitle-font: f,
-    );
+.g--card-58 {
+    @include make-card-58();
     @include make-card-58-modifier(
-        // $text-align: default,
+        // $card-min-height: 300px,
+        // $hover-title-color: map-get($color-options, h),
+        // $hover-title-underline-color: map-get($color-options, h),
+        // $hover-transform: translateY(-$measure),
+        $link-class: g--link-01,
+        // $link-font: f,
+        // $text-align: left,
         $title-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
-        $img-background-color: map-get($color-options, f),
-        // $img-background-color-hover: map-get($color-options, e),
-        // $title-color-hover: map-get($color-options, g)
+        // $title-font-weight: bold,
+        $title-font: c,
+        // $title-max-lines: 2
     );
+
+    &--second {
+        @include make-card-58-modifier(
+            $card-min-height: 300px,
+            $hover-title-color: map-get($color-options, h),
+            // $hover-title-underline-color: false,
+            $hover-transform: translateY(-$measure),
+            // $link-class: false,
+            $link-font: f,
+            $text-align: left,
+            $title-color: map-get($color-options, g),
+            $title-font-weight: 400,
+            // $title-font: false,
+            $title-max-lines: 3
+        );
+    }
 }

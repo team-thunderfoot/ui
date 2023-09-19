@@ -1,0 +1,17 @@
+.g--banner-01 {
+    @include make-banner-01();
+    @include make-banner-01-modifier(
+        $background-color: map-get($color-options, a),
+        $title-font:f,
+        $title-font-weight: 400,
+        $title-color: map-get($color-options, b)
+    );
+    &--second{
+        @include make-banner-01-modifier(
+            $background-color: map-get($color-options, g),
+            $min-height: 100px,
+            $shadow: 0 $measure $measure*2 map-get($color-options, a),
+            $title-color: map-get($color-options, a)
+        );
+    }
+}

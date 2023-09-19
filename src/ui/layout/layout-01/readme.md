@@ -25,15 +25,14 @@
 ## Editable variables
 
 - $background-color
-- $title-font
-- $title-font-weight
-- $title-color
-- $subtitle-font
-- $subtitle-font-weight,
-- $subtitle-color
 - $btn-class
 - $btn-font
-- $btn-class-modifier
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight,
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -43,14 +42,15 @@ To use it we have to import the css of the $btn-class in the entry
 .g--layout-01 {
     @include make-layout-01();
     @include make-layout-01-modifier(
-        $subtitle-font: d,
-        $title-font: b,
-        $background-color: map-get($color-options, d),
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        $btn-class: g--btn-01,
-        //$btn-font: d,
-        //$btn-class-modifier: g--btn-02--second,
+        // $background-color: map-get($color-options, d),
+        // $btn-class: g--btn-01,
+        // $btn-font: d,
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

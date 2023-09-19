@@ -1,17 +1,36 @@
-.g--card-28{
-    @include make-card-28(
-        $background-size: cover,
-        $background-position: center,
-        // $border-radius: default,
-    );
+.g--card-28 {
+    @include make-card-28();
     @include make-card-28-modifier(
-        $mask-color: rgba(map-get($color-options, b), .5),
+        $hover-img-border-radius: $measure * 2,
+        $hover-img-zoom: 1.1,
+        $hover-title-color: map-get($color-options, e),
+        $hover-transform: translateY(-5%),
+        // $img-aspect-ratio: 1.7,
+        $img-height: 300px,
+        $img-position: center,
+        $pill-class: g--pill-01,
+        $text-align: left,
         $title-color: map-get($color-options, a),
-        $subtitle-color: map-get($color-options, a),
-        $title-font: d,
-        $subtitle-font: f,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $text-align: default
+        $title-font: c,
+        $title-font-weight: 400,
+        $title-max-lines: 3
     );
+
+    &--second {
+        @include make-card-28-modifier(
+            $hover-img-zoom: 1.5,
+            $hover-title-color: map-get($color-options, e),
+            $hover-transform: scale(105%),
+            $img-aspect-ratio: 2,
+            $img-border-radius: 20px,
+            $img-height: auto,
+            $img-position: center,
+            $pill-class: g--pill-01,
+            $text-align: left,
+            $title-color: map-get($color-options, a),
+            $title-font-weight: 400,
+            $title-font: c,
+            $title-max-lines: 3
+        );
+    }
 }

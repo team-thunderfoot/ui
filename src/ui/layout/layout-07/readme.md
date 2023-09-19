@@ -1,59 +1,69 @@
-# Layout-04
+# Layout-07
 
 ## Layout
 
-![alt text][layout-04]
+![alt text][layout-07]
 
-[layout-04]: /src/img/global-components/layout/layout-04.png
+[layout-07]: /src/img/global-components/layout/layout-07.png
 
 ## Html
+
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
-```sh
-<section class="f--section-c">
-    <section class="g--layout-07">
-        <div class="f--container">
-            <div class="f--row">
-                <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
-                    <div class="g--layout-07__media-wrapper">
-                        <img data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg" src="/src/img/global-components/placeholder.jpg" alt="alt text" class="g--layout-07__media-wrapper__media g--lazy-01 f--ar" width="1000" height="1000" style="aspect-ratio: 1000 / 1000">
-                    </div>
+```html
+<section class="g--layout-07">
+    <div class="f--container">
+        <div class="f--row">
+            <div class="f--col-5 f--col-tabletl-6 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex f--order-tablets-1">
+                <div class="g--layout-07__media-wrapper">
+                    <img
+                        data-src="https://raw.githubusercontent.com/team-thunderfoot/ui/main/src/img/global-components/img-placeholder.jpg"
+                        src="/src/img/global-components/placeholder.jpg"
+                        alt="alt text"
+                        class="g--layout-07__media-wrapper__media g--lazy-01 f--ar"
+                        width="1000"
+                        height="1000"
+                        style="aspect-ratio: 1000 / 1000"
+                    />
                 </div>
-                <div class="f--col-5 f--offset-1 f--col-tabletm-6 f--offset-tabletm-0 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
-                    <div class="g--layout-07__wrapper">
-                        <h2 class="g--layout-07__wrapper__title">Layout-07 Lorem ipsum dolor sit amet consectetur. Eu risus pulvinar.</h2>
-                        <p class="g--layout-07__wrapper__subtitle">Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie vulputate venenatis velit.</p>
-                        <a href="" class="g--layout-07__wrapper__link">Button</a>
+            </div>
+            <div class="f--col-5 f--offset-1 f--col-tabletm-6 f--offset-tabletm-0 f--col-tablets-10 f--offset-tablets-1 f--col-mobile-12 f--offset-mobile-0 display--flex">
+                <div class="g--layout-07__wrapper">
+                    <h2 class="g--layout-07__wrapper__title">Lorem ipsum dolor sit amet consectetur.</h2>
+                    <p class="g--layout-07__wrapper__subtitle">
+                        Lorem ipsum dolor sit amet consectetur. Etiam lectus pretium nisl volutpat urna. Id orci neque sit eget morbi sed in suspendisse. In lectus pellentesque neque molestie
+                        vulputate venenatis velit.
+                    </p>
+                    <div class="g--layout-07__wrapper__ft">
+                        <a href="#" class="g--layout-07__wrapper__ft__btn" target="_blank" rel="noopener noreferrer">Button</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </section>
 ```
 
 ## Editable variables
 
-- $btn-class
-- $subtitle-font
-- $title-font
-- $btn-font: false by default
-- $img-border-radius: false by default
-- $img-position: false by default
-- $title-font-weight: false by default
-- $subtitle-font-weight: false by default
-- $change-order-reponsive: false by default
-- $subtitle-color
-- $title-color
-- $background-color: false by default
-- $btn-class-modifier: false by default
-
-### For Modifiers
-
-- $subtitle-color
-- $title-color
+- $align-text-img
 - $background-color
-- $btn-class-modifier
+- $breakpoint
+- $btn-class
+- $btn-font
+- $change-order-reponsive
+- $img-border-radius
+- $img-height
+- $img-max-height
+- $img-min-height
+- $img-position
+- $object-fit
+- $subtitle-color
+- $subtitle-font
+- $subtitle-font-weight
+- $title-color
+- $title-font
+- $title-font-weight
 
 ## Use
 
@@ -61,25 +71,28 @@ To see it correctly we have to make sure display--flex in utilities is included 
 For the image, we have to add width, height and aspect ratio dynamically.
 If we change the order in responsive we have to add "f--order-tablets-1" class to the media-wrapper column.
 
-```sh
-.g--layout-07{
-    @include make-layout-07(
-        $btn-class: g--btn-01,
-        $subtitle-font: d,
-        $title-font: c,
-        // $object-fit: cover,
-        // $btn-font: default,
-        // $img-border-radius: default,
-        // $img-position: default,
-        // $title-font-weight: default,
-        // $subtitle-font-weight: default,
-        // $change-order-reponsive: default,
-    );
+```scss
+.g--layout-07 {
+    @include make-layout-07();
     @include make-layout-07-modifier(
-        $background-color: map-get($color-options, d),
-        $subtitle-color: map-get($color-options, a),
-        $title-color: map-get($color-options, a),
-        // $btn-class-modifier: default
+        // $align-text-img: center,
+        // $background-color: map-get($color-options, e),
+        // $breakpoint: $tablets,
+        // $btn-class: g--btn-01,
+        // $btn-font: f,
+        // $change-order-reponsive: true,
+        // $img-border-radius: $measure * 4,
+        // $img-height: 600px,
+        // $img-max-height: 600px,
+        // $img-min-height: 600px,
+        // $img-position: center,
+        // $object-fit: cover,
+        // $subtitle-color: map-get($color-options, a),
+        // $subtitle-font: f,
+        // $subtitle-font-weight: 400,
+        // $title-color: map-get($color-options, a),
+        // $title-font: c,
+        // $title-font-weight: 400,
     );
 }
 ```

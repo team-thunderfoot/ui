@@ -1,0 +1,109 @@
+@mixin make-btn-04() {
+    text-decoration: none;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    transition: background-size $ease-standard-a $time-b;
+    svg {
+        height: auto;
+        margin-left: $measure;
+    }
+}
+
+@mixin make-btn-04-modifier(
+    $artwork-color-fill: false,
+    $artwork-color-stroke: false,
+    $btn-font: false,
+    $btn-font-weight: false,
+    $hover-artwork-color: false,
+    $hover-text-color: false,
+    $hover-icon-transform: false,
+    $icon-top: false,
+    $icon-width: false,
+    $text-color: false,
+    $underline-color: false,
+    $underline-gradient: false,
+    $underline-height: false,
+) {
+    @if $text-color {
+        color: $text-color;
+    }
+    @if $hover-text-color {
+        transition: color $ease-standard-a $time-b, background-size $ease-standard-a $time-b;
+    }
+    @if $btn-font {
+        @extend .f--font-#{$btn-font} !optional;
+    }
+    @if $btn-font-weight {
+        font-weight: $btn-font-weight;
+    }
+    @if $underline-color {
+        background-image: linear-gradient($underline-color, $underline-color);
+    }
+    @if $underline-gradient {
+        background-image: $underline-gradient;
+    }
+    @if $underline-height {
+        background-size: calc(100% - #{$measure} - #{$icon-width}) $underline-height;
+    }
+    svg {
+        @if $icon-width {
+            width: $icon-width;
+        }
+
+        @if $icon-top {
+            position: relative;
+            top: $icon-top;
+        }
+        @if $hover-icon-transform {
+            transition: transform $ease-standard-a $time-b;
+        }
+        * {
+            @if $artwork-color-fill {
+                fill: $artwork-color-fill;
+            }
+            @if $artwork-color-stroke {
+                stroke: $artwork-color-stroke;
+            }
+            @if $hover-artwork-color and $artwork-color-fill {
+                transition: fill $ease-standard-a $time-b;
+            }
+            @if $hover-artwork-color and $artwork-color-stroke {
+                transition: stroke $ease-standard-a $time-b;
+            }
+        }
+    }
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            @if $hover-text-color {
+                color: $hover-text-color;
+            }
+            @if $underline-height {
+                background-size: 0 $underline-height;
+            }
+        }
+    }
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            svg {
+                @if $hover-icon-transform {
+                    transform: $hover-icon-transform;
+                }
+                path {
+                    @if $hover-artwork-color and $artwork-color-fill {
+                        fill: $hover-artwork-color;
+                    }
+                    @if $hover-artwork-color and $artwork-color-stroke {
+                        stroke: $hover-artwork-color;
+                    }
+                }
+            }
+        }
+    }
+}

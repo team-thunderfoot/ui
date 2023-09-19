@@ -17,7 +17,8 @@
                 margin-bottom: $measure * 3;
             }
         }
-        &__title {}
+        &__title {
+        }
     }
 
     &__media-wrapper {
@@ -35,16 +36,17 @@
 @mixin make-hero-02-modifier(
     $background-color: false,
     $header-height: false,
+    $img-border-radius: false,
     $img-height: false,
-    $img-position: false,
     $img-object-fit: false,
+    $img-position: false,
     $tagline-color: false,
     $tagline-font: false,
     $tagline-font-weight: false,
+    $text-align: false,
     $title-color: false,
     $title-font: false,
     $title-font-weight: false,
-    $text-align: false
 ) {
     @if $background-color {
         background: $background-color;
@@ -66,7 +68,7 @@
         &__wrapper {
             @if $header-height {
                 padding-top: calc(#{$measure} * 14 + #{$header-height});
-    
+
                 @media all and ($viewport-type: $tablets) {
                     padding-top: calc(#{$measure} * 7 + #{$header-height});
                 }
@@ -99,20 +101,23 @@
                     font-weight: $tagline-font-weight;
                 }
             }
+        }
 
-            &__media-wrapper {
-                @if $img-height {
-                    height: $img-height;
+        &__media-wrapper {
+            @if $img-height {
+                height: $img-height;
+            }
+            @if $img-border-radius {
+                border-radius: $img-border-radius;
+            }
+
+            &__media {
+                @if $img-position {
+                    object-position: $img-position;
                 }
-    
-                &__media {
-                    @if $img-position {
-                        object-position: $img-position;
-                    }
-    
-                    @if $img-object-fit {
-                        object-fit: $img-object-fit;
-                    }
+
+                @if $img-object-fit {
+                    object-fit: $img-object-fit;
                 }
             }
         }

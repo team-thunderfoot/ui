@@ -1,80 +1,156 @@
 @mixin make-btn-03() {
-    text-decoration: none;
-    width: fit-content;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: $measure $measure * 3;
+    text-align: center;
+    text-decoration: none;
+    column-gap: $measure;
 
+    @media all and ($viewport-type: $mobile) {
+        width: 100%;
+    }
     svg {
-        width: $measure;
-        height: auto;
-        margin-left: $measure;
+        display: block;
     }
 }
 
 @mixin make-btn-03-modifier(
-    $text-color: false,
-    $text-color-hover: false,
-    $icon-top: false,
-    $btn-font: false,
-    $btn-font-weight: false,
     $artwork-color-fill: false,
     $artwork-color-stroke: false,
-    $artwork-color-hover: false
+    $artwork-height: false,
+    $artwork-top: false,
+    $artwork-width: false,
+    $background-color: false,
+    $background-position: false,
+    $background-repeat: false,
+    $background-size: false,
+    $border-color: false,
+    $border-radius: false,
+    $border-style: false,
+    $border-width: false,
+    $font-weight: false,
+    $font: false,
+    $hover-artwork-color: false,
+    $hover-background-color: false,
+    $hover-background-position: false,
+    $hover-background-size: false,
+    $hover-border-color: false,
+    $hover-border-radius: false,
+    $hover-shadow: false,
+    $hover-text-color: false,
+    $shadow: false,
+    $text-color: false,
+    $transition: false
 ) {
+    @if $background-color {
+        background: $background-color;
+    }
+    @if $background-repeat {
+        background-repeat: $background-repeat;
+    }
+    @if $background-size {
+        background-size: $background-size;
+    }
+    @if $background-position {
+        background-position: $background-position;
+    }
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+    @if $border-color {
+        border-color: $border-color;
+    }
+    @if $border-width {
+        border-width: $border-width;
+    }
+    @if $border-style {
+        border-style: $border-style;
+    }
+    @if $shadow {
+        box-shadow: $shadow;
+    }
     @if $text-color {
         color: $text-color;
     }
-    @if $text-color-hover {
-        transition: color $ease-standard-a $time-b;
+    @if $font {
+        @extend .f--font-#{$font} !optional;
     }
-    @if $btn-font {
-        @extend .f--font-#{$btn-font} !optional;
+    @if $font-weight {
+        font-weight: $font-weight;
     }
-    @if $btn-font-weight {
-        font-weight: $btn-font-weight;
-    }
+
     svg {
-        @if $icon-top {
-            position: relative;
-            top: $icon-top;
+        @if $artwork-top {
+            margin-top: $artwork-top;
         }
-        transition: transform $ease-standard-a $time-b;
-        path {
+        @if $artwork-width {
+            width: $artwork-width;
+        }
+        @if $artwork-height {
+            height: $artwork-height;
+        }
+        * {
             @if $artwork-color-fill {
                 fill: $artwork-color-fill;
             }
             @if $artwork-color-stroke {
                 stroke: $artwork-color-stroke;
             }
-            @if $artwork-color-hover and $artwork-color-fill {
+            @if $hover-artwork-color and $artwork-color-fill {
                 transition: fill $ease-standard-a $time-b;
             }
-            @if $artwork-color-hover and $artwork-color-stroke {
+            @if $hover-artwork-color and $artwork-color-stroke {
                 transition: stroke $ease-standard-a $time-b;
             }
         }
     }
-    @media (hover: hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            @if $text-color-hover {
-                color: $text-color-hover;
-            }
+
+    @if $hover-background-color or
+        $hover-border-color or
+        $hover-border-radius or
+        $hover-text-color or
+        $hover-background-size or
+        $hover-background-position or
+        $hover-shadow
+    {
+        @if $transition {
+            transition: $transition;
         }
-    }
-    @media (hover: hover) {
-        &:hover,
-        &:focus,
-        &:active {
-            svg {
-                transform: translateX($measure);
-                path {
-                    @if $artwork-color-hover and $artwork-color-fill {
-                        fill: $artwork-color-hover;
-                    }
-                    @if $artwork-color-hover and $artwork-color-stroke {
-                        stroke: $artwork-color-hover;
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                @if $hover-background-color {
+                    background: $hover-background-color;
+                }
+                @if $hover-background-size {
+                    background-size: $hover-background-size;
+                }
+                @if $hover-background-position {
+                    background-position: $hover-background-position;
+                }
+                @if $hover-border-color {
+                    border-color: $hover-border-color;
+                }
+                @if $hover-border-radius {
+                    border-radius: $hover-border-radius;
+                }
+                @if $hover-shadow {
+                    box-shadow: $hover-shadow;
+                }
+                @if $hover-text-color {
+                    color: $hover-text-color;
+                }
+                svg {
+                    * {
+                        @if $hover-artwork-color and $artwork-color-fill {
+                            fill: $hover-artwork-color;
+                        }
+                        @if $hover-artwork-color and $artwork-color-stroke {
+                            stroke: $hover-artwork-color;
+                        }
                     }
                 }
             }

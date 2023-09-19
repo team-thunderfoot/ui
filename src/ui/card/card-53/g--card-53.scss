@@ -1,0 +1,55 @@
+.g--card-53 {
+    @include make-card-53();
+    @include make-card-53-modifier(
+        $author-color: map-get($color-options, d),
+        // $author-font-weight: false,
+        $author-font: d,
+        // $author-max-lines: false,
+        $background-color: map-get($color-options, a),
+        $hover-border-color: map-get($color-options, f),
+        $hover-border-radius: $measure * 4,
+        $background-position: -3% -28%,
+        $background-size: 20%,
+        // $hover-author-color: false,
+        // $hover-background-color: false,
+        // $hover-shadow: false,
+        // $hover-subtitle-color: false,
+        // $hover-title-color: false,
+        // $hover-transform: false,
+        $link-class: g--link-01,
+        $link-font: f,
+        $mask-color: rgba(map-get($color-options, b), 0.5),
+        $subtitle-color: map-get($color-options, d),
+        $subtitle-font-weight: false,
+        $subtitle-font: f,
+        // $subtitle-max-lines: false,
+        // $text-align: false,
+        $title-color: map-get($color-options, d),
+        // $title-font-weight: false,
+        $title-font: b,
+        // $title-max-lines: false
+    );
+
+    @include make-card-53-modifier($link-class: g--link-01--third);
+
+    @media all and ($viewport-type: $tablets) {
+        @include make-card-53-modifier($background-size: 30%, $background-position: -3% -18%);
+    }
+
+    &--second {
+        @include make-card-53-modifier($background-position: -24px -24px);
+    }
+    &--third {
+        @include make-card-53-modifier(
+            $background-position: top left,
+            $background-size: cover,
+            $border-color: map-get($color-options, f),
+            $border-radius: $measure * 4,
+            $border-style: solid,
+            $border-width: 2px,
+            $mask-color: rgba(map-get($color-options, e), 0.4),
+            $card-min-height: 500px,
+            $shadow: 0 0 $measure * 2 map-get($color-options, g)
+        );
+    }
+}

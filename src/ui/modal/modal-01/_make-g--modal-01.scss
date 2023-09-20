@@ -21,7 +21,7 @@
     &__wrapper {
         max-height: calc(90vh - (#{$padding} * 2));
         overflow-y: auto;
-        padding-right: calc((#{$padding} * 0.5) + (#{$measure}));
+        // padding-right: calc((#{$padding} * 0.5) + (#{$measure}));
     }
 
     &--is-active {

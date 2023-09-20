@@ -3,315 +3,6 @@
     form {
         fieldset {
             max-width: none;
-            .field,
-            .hs-form-field {
-                position: relative;
-                margin-bottom: $measure * 2;
-                width: 100%;
-                label {
-                    margin-bottom: $measure;
-                    display: block;
-                }
-
-                //* generic input, textarea, radio, checkbox
-                .input {
-                    //* generic input
-                    input {
-                        display: block;
-                        padding: $measure * 0.5 $measure;
-                        width: 100%;
-                        transition: border-color $time-b $ease-standard-a;
-                    }
-
-                    //* textarea
-                    textarea {
-                        display: block;
-                        resize: vertical;
-                        padding: $measure * 0.5 $measure;
-                        width: 100%;
-                        transition: border-color $time-b $ease-standard-a;
-                    }
-
-                    //* radio and checkbox
-                    .inputs-list {
-                        list-style: none;
-                        display: flex;
-                        flex-wrap: wrap;
-
-                        //* multiple radio
-                        .hs-form-radio {
-                            margin-bottom: $measure;
-                            &:not(:last-child) {
-                                margin-right: $measure * 3;
-                            }
-                            label {
-                                position: relative;
-                                margin-bottom: 0;
-                                input {
-                                    position: absolute;
-                                    opacity: 0;
-                                    cursor: pointer;
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 0;
-                                    padding: 0;
-                                    &:checked ~ span::after {
-                                        opacity: 1;
-                                    }
-                                }
-                                span {
-                                    position: relative;
-                                    display: block;
-                                    cursor: pointer;
-                                    .hs-form-required,
-                                    span {
-                                        display: inline;
-                                        padding-left: 0;
-                                        &::before {
-                                            content: none;
-                                        }
-                                    }
-                                    &::before {
-                                        content: "";
-                                        position: absolute;
-                                        left: 0;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        border-radius: 50%;
-                                    }
-                                    &::after {
-                                        content: "";
-                                        position: absolute;
-                                        top: 50%;
-                                        transform: translate(-50%, -50%);
-                                        background-repeat: no-repeat;
-                                        background-size: contain;
-                                        background-position: center;
-                                        opacity: 0;
-                                        border-radius: 50%;
-                                        transition: opacity $time-b $ease-standard-a;
-                                    }
-                                }
-                            }
-                        }
-
-                        //* multiple checkbox
-                        .hs-form-checkbox {
-                            margin-bottom: $measure;
-                            label {
-                                position: relative;
-                                margin-bottom: 0;
-                                input {
-                                    position: absolute;
-                                    opacity: 0;
-                                    cursor: pointer;
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 0;
-                                    padding: 0;
-                                    &:checked ~ span::after {
-                                        opacity: 1;
-                                    }
-                                }
-                                span {
-                                    position: relative;
-                                    cursor: pointer;
-                                    display: flex;
-                                    align-items: center;
-                                    .hs-form-required,
-                                    span {
-                                        display: inline;
-                                        padding-left: 0;
-                                        &::before {
-                                            content: none;
-                                        }
-                                    }
-                                    &::before {
-                                        content: "";
-                                        position: absolute;
-                                        left: 0;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        border-style: solid;
-                                    }
-                                    &::after {
-                                        content: "";
-                                        opacity: 0;
-                                        position: absolute;
-                                        top: 50%;
-                                        transform: translate(-50%, -50%);
-                                        background-size: contain !important;
-                                        background-position: center !important;
-                                        background-repeat: no-repeat !important;
-                                        transition: opacity $time-b $ease-standard-a;
-                                    }
-                                }
-                            }
-                            &:not(:last-child) {
-                                margin-right: $measure * 3;
-                            }
-                        }
-
-                        //* single checkbox
-                        .hs-form-booleancheckbox {
-                            label {
-                                position: relative;
-                                margin-bottom: 0;
-                                input {
-                                    position: absolute;
-                                    opacity: 0;
-                                    cursor: pointer;
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 0;
-                                    padding: 0;
-                                    &:checked ~ span::after {
-                                        opacity: 1;
-                                    }
-                                }
-                                span {
-                                    position: relative;
-                                    cursor: pointer;
-                                    display: flex;
-                                    align-items: center;
-                                    .hs-form-required,
-                                    span {
-                                        display: inline;
-                                        padding-left: 0;
-                                        &::before {
-                                            content: none;
-                                        }
-                                    }
-                                    &::before {
-                                        content: "";
-                                        position: absolute;
-                                        left: 0;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        border-style: solid;
-                                    }
-                                    &::after {
-                                        content: "";
-                                        opacity: 0;
-                                        position: absolute;
-                                        top: 50%;
-                                        transform: translate(-50%, -50%);
-                                        background-size: contain !important;
-                                        background-position: center !important;
-                                        background-repeat: no-repeat !important;
-                                        transition: opacity $time-b $ease-standard-a;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                //* radio label, checkbox label
-                &.hs-fieldtype-radio,
-                &.hs-fieldtype-checkbox,
-                &.hs-fieldtype-booleancheckbox {
-                    label {
-                        cursor: pointer;
-                    }
-                }
-
-                //* select
-                &.hs-fieldtype-select {
-                    .input {
-                        position: relative;
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            right: $measure;
-                            width: $measure * 1.5;
-                            height: $measure * 1.5;
-                            transform: translateY(-50%);
-                            pointer-events: none;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: contain;
-                        }
-                        select {
-                            display: block;
-                            padding: $measure * 0.5 $measure;
-                            width: 100%;
-                            transition: border-color $time-b $ease-standard-a;
-                        }
-                    }
-                }
-
-                //* file
-                &.hs-fieldtype-file {
-                    .input {
-                        input {
-                            cursor: pointer;
-                            position: relative;
-                            -webkit-padding-before: 0 !important;
-                            -webkit-padding-after: 0 !important;
-                            -webkit-padding-start: 0 !important;
-                            display: block;
-                            padding: $measure * 0.5 $measure;
-                            width: 100%;
-                            transition: border-color $time-b $ease-standard-a;
-                            &::-webkit-file-upload-button {
-                                cursor: pointer;
-                                height: 100%;
-                                padding: $measure * 0.5 $measure * 3;
-                                appearance: none;
-                                -webkit-appearance: none;
-                                border: none;
-                                margin-right: $measure;
-                                transition: all $time-b ease-in-out;
-                            }
-                        }
-                    }
-                }
-
-                //* date
-                &.hs-fieldtype-date {
-                    .input {
-                        position: relative;
-                        &::after {
-                            content: "";
-                            height: $measure * 3;
-                            width: $measure * 3;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: contain;
-                            position: absolute;
-                            top: 50%;
-                            right: $measure;
-                            transform: translateY(-50%);
-                            pointer-events: none;
-                        }
-                        input {
-                            display: block;
-                            padding: $measure * 0.5 $measure;
-                            width: 100%;
-                            transition: border-color $time-b $ease-standard-a;
-                        }
-                    }
-                }
-
-                //* error message after each input
-                .hs-error-msgs {
-                    list-style: none;
-                    label {
-                        margin-top: $measure * 0.5;
-                        margin-bottom: 0;
-                        display: block;
-                        border: none;
-                    }
-                }
-            }
 
             &.form-columns-2 {
                 display: flex;
@@ -323,6 +14,316 @@
                     @media all and ($viewport-type: $tablets) {
                         width: 100%;
                     }
+                }
+            }
+        }
+
+        .hs-form-field,
+        .field {
+            position: relative;
+            margin-bottom: $measure * 2;
+            width: 100%;
+            label {
+                margin-bottom: $measure;
+                display: block;
+            }
+
+            //* generic input, textarea, radio, checkbox
+            .input {
+                //* generic input
+                input {
+                    display: block;
+                    padding: $measure * 0.5 $measure;
+                    width: 100%;
+                    transition: border-color $time-b $ease-standard-a;
+                }
+
+                //* textarea
+                textarea {
+                    display: block;
+                    resize: vertical;
+                    padding: $measure * 0.5 $measure;
+                    width: 100%;
+                    transition: border-color $time-b $ease-standard-a;
+                }
+
+                //* radio and checkbox
+                .inputs-list {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    //* multiple radio
+                    .hs-form-radio {
+                        margin-bottom: $measure;
+                        &:not(:last-child) {
+                            margin-right: $measure * 3;
+                        }
+                        label {
+                            position: relative;
+                            margin-bottom: 0;
+                            input {
+                                position: absolute;
+                                opacity: 0;
+                                cursor: pointer;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
+                                padding: 0;
+                                &:checked ~ span::after {
+                                    opacity: 1;
+                                }
+                            }
+                            span {
+                                position: relative;
+                                display: block;
+                                cursor: pointer;
+                                .hs-form-required,
+                                span {
+                                    display: inline;
+                                    padding-left: 0;
+                                    &::before {
+                                        content: none;
+                                    }
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    border-radius: 50%;
+                                }
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    background-position: center;
+                                    opacity: 0;
+                                    border-radius: 50%;
+                                    transition: opacity $time-b $ease-standard-a;
+                                }
+                            }
+                        }
+                    }
+
+                    //* multiple checkbox
+                    .hs-form-checkbox {
+                        margin-bottom: $measure;
+                        label {
+                            position: relative;
+                            margin-bottom: 0;
+                            input {
+                                position: absolute;
+                                opacity: 0;
+                                cursor: pointer;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
+                                padding: 0;
+                                &:checked ~ span::after {
+                                    opacity: 1;
+                                }
+                            }
+                            span {
+                                position: relative;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                .hs-form-required,
+                                span {
+                                    display: inline;
+                                    padding-left: 0;
+                                    &::before {
+                                        content: none;
+                                    }
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    border-style: solid;
+                                }
+                                &::after {
+                                    content: "";
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background-size: contain !important;
+                                    background-position: center !important;
+                                    background-repeat: no-repeat !important;
+                                    transition: opacity $time-b $ease-standard-a;
+                                }
+                            }
+                        }
+                        &:not(:last-child) {
+                            margin-right: $measure * 3;
+                        }
+                    }
+
+                    //* single checkbox
+                    .hs-form-booleancheckbox {
+                        label {
+                            position: relative;
+                            margin-bottom: 0;
+                            input {
+                                position: absolute;
+                                opacity: 0;
+                                cursor: pointer;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
+                                padding: 0;
+                                &:checked ~ span::after {
+                                    opacity: 1;
+                                }
+                            }
+                            span {
+                                position: relative;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                .hs-form-required,
+                                span {
+                                    display: inline;
+                                    padding-left: 0;
+                                    &::before {
+                                        content: none;
+                                    }
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    border-style: solid;
+                                }
+                                &::after {
+                                    content: "";
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background-size: contain !important;
+                                    background-position: center !important;
+                                    background-repeat: no-repeat !important;
+                                    transition: opacity $time-b $ease-standard-a;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //* radio label, checkbox label
+            &.hs-fieldtype-radio,
+            &.hs-fieldtype-checkbox,
+            &.hs-fieldtype-booleancheckbox {
+                label {
+                    cursor: pointer;
+                }
+            }
+
+            //* select
+            &.hs-fieldtype-select {
+                .input {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: $measure;
+                        width: $measure * 1.5;
+                        height: $measure * 1.5;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                    select {
+                        display: block;
+                        padding: $measure * 0.5 $measure;
+                        width: 100%;
+                        transition: border-color $time-b $ease-standard-a;
+                    }
+                }
+            }
+
+            //* file
+            &.hs-fieldtype-file {
+                .input {
+                    input {
+                        cursor: pointer;
+                        position: relative;
+                        -webkit-padding-before: 0 !important;
+                        -webkit-padding-after: 0 !important;
+                        -webkit-padding-start: 0 !important;
+                        display: block;
+                        padding: $measure * 0.5 $measure;
+                        width: 100%;
+                        transition: border-color $time-b $ease-standard-a;
+                        &::-webkit-file-upload-button {
+                            cursor: pointer;
+                            height: 100%;
+                            padding: $measure * 0.5 $measure * 3;
+                            appearance: none;
+                            -webkit-appearance: none;
+                            border: none;
+                            margin-right: $measure;
+                            transition: all $time-b ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            //* date
+            &.hs-fieldtype-date {
+                .input {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        height: $measure * 3;
+                        width: $measure * 3;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        position: absolute;
+                        top: 50%;
+                        right: $measure;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                    }
+                    input {
+                        display: block;
+                        padding: $measure * 0.5 $measure;
+                        width: 100%;
+                        transition: border-color $time-b $ease-standard-a;
+                    }
+                }
+            }
+
+            //* error message after each input
+            .hs-error-msgs {
+                list-style: none;
+                label {
+                    margin-top: $measure * 0.5;
+                    margin-bottom: 0;
+                    display: block;
+                    border: none;
                 }
             }
         }
@@ -403,7 +404,6 @@
     $textarea-height: false,
 ) {
     .hs-form {
-        fieldset {
             .field,
             .hs-form-field {
                 label {
@@ -1005,7 +1005,7 @@
                     }
                 }
             }
-        }
+        
 
         @if $submit-btn-class {
             //* submit btn

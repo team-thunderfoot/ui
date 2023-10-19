@@ -51,7 +51,7 @@
         &__list-group {
             display: flex;
             flex-wrap: wrap;
-            gap: $measure $measure * 2;
+            gap: $measure;
             margin-bottom: $measure * 3;
             &__badge {
             }

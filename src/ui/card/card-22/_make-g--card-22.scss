@@ -28,7 +28,7 @@
     &__list-group {
         display: flex;
         flex-wrap: wrap;
-        column-gap: $measure * 2;
+        column-gap: $measure;
         row-gap: $measure;
     }
 }

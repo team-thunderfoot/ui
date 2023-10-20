@@ -23,7 +23,6 @@
 
     @media (hover: hover) {
         &:hover,
-        &:focus,
         &:active {
             @if $underline-height {
                 background-size: 0% $underline-height;

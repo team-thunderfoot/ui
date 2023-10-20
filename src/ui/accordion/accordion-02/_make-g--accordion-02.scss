@@ -202,7 +202,6 @@
             @if $hover-title-color{
                 @media all and (hover : hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--accordion-02{
                             &__hd{
@@ -218,7 +217,6 @@
             @if $hover-icon-background{
                 @media all and (hover : hover) {
                     &:hover,
-                    &:focus-visible,
                     &:active {
                         .g--accordion-02{
                             &__hd{
@@ -233,7 +231,6 @@
             @if $hover-icon-border-color{
                 @media all and (hover : hover) {
                     &:hover,
-                    &:focus-visible,
                     &:active {
                         .g--accordion-02{
                             &__hd{
@@ -248,7 +245,6 @@
             @if $hover-icon-border-radius{
                 @media all and (hover : hover) {
                     &:hover,
-                    &:focus-visible,
                     &:active {
                         .g--accordion-02{
                             &__hd{
@@ -263,7 +259,6 @@
             @if $hover-icon-color{
                 @media all and (hover : hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--accordion-02{
                             &__hd{

@@ -117,7 +117,6 @@
             $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
             @media all and (hover: hover) {
                 &:hover,
-                &:focus,
                 &:active {
                     #{$property}: $value;
                 }
@@ -130,11 +129,9 @@
     @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--cta-08 {
                             &__title {
@@ -149,7 +146,6 @@
     } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--cta-08 {
                     &__title {
@@ -161,7 +157,6 @@
     } @else if $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--cta-08 {
                     &__title {
@@ -175,7 +170,6 @@
     @if $hover-subtitle-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--cta-08 {
                     &__subtitle {

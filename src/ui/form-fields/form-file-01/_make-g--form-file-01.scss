@@ -118,14 +118,12 @@
         }
       }
       &:hover,
-      &:focus,
       &:valid {
         @if $border-color-focus {
             border-color: $border-color-focus;
         }
       }
-      &:hover,
-      &:focus {
+      &:hover {
         &::-webkit-file-upload-button {
           @if $hover-btn-background-color {
               background-color: $hover-btn-background-color;
@@ -151,7 +149,6 @@
       &__item {
         @if $error-border-color {
             border-color: $error-border-color;
-            &:focus,
             &:valid {
               border-color: $error-border-color;
             }

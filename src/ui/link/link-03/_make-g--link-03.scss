@@ -13,7 +13,6 @@
     transition: color $ease-standard-a $time-b;
     @media (hover: hover) {
         &:hover,
-        &:focus,
         &:active {
             @if $hover-text-color {
                 color: $hover-text-color;

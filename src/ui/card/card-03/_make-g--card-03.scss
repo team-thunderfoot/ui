@@ -151,7 +151,6 @@
             $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
             @media all and (hover: hover) {
                 &:hover,
-                &:focus,
                 &:active {
                     #{$property}: $value;
                 }
@@ -164,11 +163,9 @@
     @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--card-03 {
                             &__ft-items {
@@ -185,7 +182,6 @@
     } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-03 {
                     &__ft-items {
@@ -199,7 +195,6 @@
     } @else if $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-03 {
                     &__ft-items {
@@ -215,7 +210,6 @@
     @if $hover-img-border-radius {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-03 {
                     &__media-wrapper {
@@ -229,7 +223,6 @@
     @if $hover-img-zoom {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-03 {
                     &__media-wrapper {
@@ -250,7 +243,6 @@
         }
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-03 {
                     &__bg-items {
@@ -267,7 +259,6 @@
         }
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 &::after {
                     background: $hover-mask-color;

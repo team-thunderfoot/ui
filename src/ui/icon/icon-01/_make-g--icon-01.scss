@@ -50,7 +50,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -63,7 +62,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -75,7 +73,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -87,7 +84,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -99,7 +95,6 @@
         transition: border-radius $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 border-color: $hover-border-color;
@@ -111,7 +106,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -122,7 +116,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -133,7 +126,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -144,7 +136,6 @@
         transition: border-radius $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 border-color: $hover-border-color;
@@ -156,7 +147,6 @@
         transition: border-radius $time-b $ease-standard-a, background $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 background: $hover-background-color;
@@ -166,7 +156,6 @@
         transition: border-radius $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 border-color: $hover-border-color;
@@ -176,7 +165,6 @@
         transition: border-radius $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 box-shadow: $hover-shadow;
@@ -186,7 +174,6 @@
         transition: border-radius $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
                 transform: $hover-transform;
@@ -196,7 +183,6 @@
         transition: border-radius $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-radius: $hover-border-radius;
             }
@@ -205,7 +191,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -217,7 +202,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -228,7 +212,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -239,7 +222,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -251,7 +233,6 @@
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 box-shadow: $hover-shadow;
@@ -262,7 +243,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -273,7 +253,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -284,7 +263,6 @@
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 box-shadow: $hover-shadow;
@@ -295,7 +273,6 @@
         transition: background $time-b $ease-standard-a, border-color $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 border-color: $hover-border-color;
@@ -305,7 +282,6 @@
         transition: background $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 box-shadow: $hover-shadow;
@@ -315,7 +291,6 @@
         transition: background $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
                 transform: $hover-transform;
@@ -326,7 +301,6 @@
 
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background: $hover-background-color;
             }
@@ -335,7 +309,6 @@
         transition: border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-color: $hover-border-color;
                 box-shadow: $hover-shadow;
@@ -346,7 +319,6 @@
         transition: border-color $time-b $ease-standard-a, box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-color: $hover-border-color;
                 box-shadow: $hover-shadow;
@@ -356,7 +328,6 @@
         transition: border-color $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-color: $hover-border-color;
                 transform: $hover-transform;
@@ -366,7 +337,6 @@
         transition: border-color $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 border-color: $hover-border-color;
             }
@@ -375,7 +345,6 @@
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 box-shadow: $hover-shadow;
                 transform: $hover-transform;
@@ -385,7 +354,6 @@
         transition: box-shadow $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 box-shadow: $hover-shadow;
             }
@@ -394,7 +362,6 @@
         transition: transform $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 transform: $hover-transform;
             }
@@ -424,7 +391,6 @@
     @if $hover-icon-color and $icon-fill-color {
         @media (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 svg {
                     * {
@@ -436,7 +402,6 @@
     }@else if $hover-icon-color and $icon-stroke-color {
         @media (hover : hover) {
             &:hover,
-            &:focus,
             &:active {
                 svg {
                     * {

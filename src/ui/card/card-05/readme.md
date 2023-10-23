@@ -60,6 +60,7 @@ It is not necessary to add aspect-ratio.
 -   $hover-title-underline-color
 -   $hover-transform
 -   $img-aspect-ratio
+-   $img-border-radius
 -   $img-fit
 -   $img-height
 -   $img-position
@@ -88,6 +89,7 @@ It is not necessary to add aspect-ratio.
         // $hover-title-underline-color: map-get($color-options, h),
         // $hover-transform: translateY(-$measure),
         // $img-aspect-ratio: 1.7,
+        // $img-border-radius: 50%,
         // $img-fit: cover,
         // $img-height: 340px,
         // $img-position: center,

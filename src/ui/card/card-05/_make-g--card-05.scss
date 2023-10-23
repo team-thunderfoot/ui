@@ -35,6 +35,7 @@
     $hover-title-underline-color: false,
     $hover-transform: false,
     $img-aspect-ratio: false,
+    $img-border-radius: false,
     $img-height: false,
     $img-position: false,
     $img-fit: false,
@@ -196,6 +197,9 @@
             &__media {
                 @if $img-aspect-ratio {
                     aspect-ratio: $img-aspect-ratio;
+                }
+                @if $img-border-radius {
+                    border-radius: $img-border-radius;
                 }
                 @if $img-width {
                     width: 100%;

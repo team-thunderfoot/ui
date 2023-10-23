@@ -25,10 +25,6 @@
                 font-size: 1rem;
             }
 
-            &::placeholder{}
-
-            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {}
-
             &::-webkit-search-decoration{
                 display: none;
             }

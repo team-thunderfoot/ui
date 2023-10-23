@@ -101,7 +101,6 @@
     @if $hover-img-border-radius {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-48 {
                     &__media-wrapper {
@@ -121,7 +120,6 @@
 
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-48 {
                     &__media-wrapper {
@@ -135,11 +133,9 @@
     @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--card-48 {
                             &__title {
@@ -154,7 +150,6 @@
     } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-48 {
                     &__title {
@@ -166,7 +161,6 @@
     } @else if $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-48 {
                     &__title {
@@ -181,7 +175,6 @@
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 transform: $hover-transform;
             }
@@ -199,7 +192,6 @@
         }
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-48 {
                     &__media-wrapper {

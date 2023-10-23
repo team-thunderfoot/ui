@@ -23,7 +23,6 @@
         transition: background-size $time-b $ease-standard-a, color $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 color: $hover-text-color;
                 background-size: 100% $underline-height;
@@ -36,7 +35,6 @@
         transition: background-size $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 background-size: 100% $underline-height;
             }
@@ -46,7 +44,6 @@
         transition: color $time-b $ease-standard-a;
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 color: $hover-text-color;
             }

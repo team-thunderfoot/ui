@@ -59,7 +59,6 @@
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 transform: $hover-transform;
             }
@@ -69,11 +68,9 @@
     @if $hover-title-color and $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--card-36 {
                             &__wrapper {
@@ -90,7 +87,6 @@
     } @else if $hover-title-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-36 {
                     &__wrapper {
@@ -104,7 +100,6 @@
     } @else if $hover-title-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-36 {
                     &__wrapper {
@@ -120,7 +115,6 @@
     @if $hover-img-border-radius {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-36 {
                     &__media-wrapper {
@@ -141,7 +135,6 @@
         }
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-36 {
                     &__media-wrapper {

@@ -106,7 +106,6 @@
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 box-shadow: $hover-shadow;
                 transform: $hover-transform;
@@ -116,7 +115,6 @@
         transition: box-shadow $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 box-shadow: $hover-shadow;
             }
@@ -125,7 +123,6 @@
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 transform: $hover-transform;
             }
@@ -148,7 +145,6 @@
             $hover-transition-list: append($hover-transition-list, $transition, $separator: comma);
             @media all and (hover: hover) {
                 &:hover,
-                &:focus,
                 &:active {
                     #{$property}: $value;
                 }
@@ -166,7 +162,6 @@
         }
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-59 {
                     &__bg-items {
@@ -205,7 +200,6 @@
         }
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 &::after {
                     background: $hover-mask-color;

@@ -57,7 +57,6 @@
     .g--form-radio-01{
         &__item{
             @if $circle-color-focus {
-                &:focus + .g--form-radio-01__title::before,
                 &:checked + .g--form-radio-01__title::before{
                     border-color: $circle-color-focus;
                 }
@@ -115,7 +114,6 @@
         &.g--form-radio-01--error{
             .g--form-radio-01{
                 &__item{
-                    &:focus + .g--form-radio-01__title::before,
                     &:checked + .g--form-radio-01__title::before{
                         border-color: $error-border-color;
                     }

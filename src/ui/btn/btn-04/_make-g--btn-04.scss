@@ -77,7 +77,6 @@
     }
     @media (hover: hover) {
         &:hover,
-        &:focus,
         &:active {
             @if $hover-text-color {
                 color: $hover-text-color;
@@ -89,7 +88,6 @@
     }
     @media (hover: hover) {
         &:hover,
-        &:focus,
         &:active {
             svg {
                 @if $hover-icon-transform {

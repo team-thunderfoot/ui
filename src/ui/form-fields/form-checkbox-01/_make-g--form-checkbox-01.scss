@@ -61,7 +61,6 @@
 ) {
     .g--form-checkbox-01{
         &__item{
-            &:focus + .g--form-checkbox-01__title::before,
             &:checked + .g--form-checkbox-01__title::before{
                 border-color: $square-color-focus;
             }
@@ -128,7 +127,6 @@
     &.g--form-checkbox-01--error{
         .g--form-checkbox-01{
             &__item{
-                &:focus + .g--form-checkbox-01__title::before,
                 &:checked + .g--form-checkbox-01__title::before{
                     @if $error-border-color {
                         border-color: $error-border-color;

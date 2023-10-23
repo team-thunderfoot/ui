@@ -76,7 +76,6 @@
         }
         @media (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @if $hover-background-color {
                     background: $hover-background-color;

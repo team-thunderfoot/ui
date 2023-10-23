@@ -111,7 +111,6 @@
         transition: box-shadow $time-b $ease-standard-a, transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 box-shadow: $hover-shadow;
                 transform: $hover-transform;
@@ -121,7 +120,6 @@
         transition: box-shadow $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 box-shadow: $hover-shadow;
             }
@@ -130,7 +128,6 @@
         transition: transform $time-b $ease-standard-a;
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 transform: $hover-transform;
             }
@@ -140,11 +137,9 @@
     @if $hover-quote-color and $hover-quote-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--card-56 {
                             &__wrapper {
@@ -161,7 +156,6 @@
     } @else if $hover-quote-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__wrapper {
@@ -175,7 +169,6 @@
     } @else if $hover-quote-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__wrapper {
@@ -191,11 +184,9 @@
     @if $hover-person-color and $hover-person-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--card-56 {
                             &__wrapper {
@@ -214,7 +205,6 @@
     } @else if $hover-person-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__wrapper {
@@ -230,7 +220,6 @@
     } @else if $hover-person-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__wrapper {
@@ -248,11 +237,9 @@
     @if $hover-company-color and $hover-company-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 @media all and (hover: hover) {
                     &:hover,
-                    &:focus,
                     &:active {
                         .g--card-56 {
                             &__wrapper {
@@ -271,7 +258,6 @@
     } @else if $hover-company-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__wrapper {
@@ -287,7 +273,6 @@
     } @else if $hover-company-underline-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__wrapper {
@@ -305,7 +290,6 @@
     @if $hover-img-border-radius {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__media-wrapper {
@@ -319,7 +303,6 @@
     @if $hover-img-zoom {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__media-wrapper {
@@ -335,7 +318,6 @@
     @if $hover-mask-color {
         @media all and (hover: hover) {
             &:hover,
-            &:focus,
             &:active {
                 .g--card-56 {
                     &__media-wrapper {
